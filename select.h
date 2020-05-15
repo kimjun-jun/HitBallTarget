@@ -1,0 +1,57 @@
+///*******************************************************************************
+//* タイトル:		キムジュンデンセツ(3)
+//* プログラム名:	select.h
+//* 作成者:			GP11B292 08 キムラジュン
+//********************************************************************************/
+#pragma once
+
+//*****************************************************************************
+// マクロ定義
+//*****************************************************************************
+#define	TEXTURE_EASY		_T("data/TEXTURE/sozai/select/easy.png")			// 読み込むテクスチャファイル名
+#define TEXTURE_EASY_SIZE_X		(200)										// タイトルロゴの幅
+#define TEXTURE_EASY_SIZE_Y		(100)										// タイトルロゴの高さ
+
+#define	TEXTURE_NORMAL		_T("data/TEXTURE/sozai/select/normal.png")		
+#define	TEXTURE_HARD		_T("data/TEXTURE/sozai/select/hard.png")			
+#define	TEXTURE_LEVEL		_T("data/TEXTURE/sozai/level.png")			
+#define	TEXTURE_RANKING 		_T("data/TEXTURE/sozai/select/ranking.png")		
+
+
+#define EASY_POS_Y					(SCREEN_H-650)		// ポリゴンの初期位置X
+#define NORMAL_POS_Y				(SCREEN_H-400)		// ポリゴンの初期位置X
+#define HRAD_POS_Y					(SCREEN_H-150)		// ポリゴンの初期位置X
+#define LEVEL_POS_Y					(SCREEN_H-850)		// ポリゴンの初期位置X
+
+
+#define EASY_POS_X					(SCREEN_W-900)		// 同上
+#define LEVEL_POS_X					(SCREEN_W-1000)		// ポリゴンの初期位置X
+
+
+#define	TEXTURE_ENTER		_T("data/TEXTURE/sozai/enterstart.png")			
+#define	TEXTURE_ENTER_SIZE_X		(300)					
+#define	TEXTURE_ENTER_SIZE_Y		(200)					
+#define ENTERorSTART_POS_Y			(SCREEN_H-400)		// ポリゴンの初期位置X
+#define ENTERorSTART_POS_X			(SCREEN_W-350)		// 同上
+
+
+#define	SMAX		(5)													//選択肢の数
+
+typedef struct
+{
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			// テクス?ャへの?リゴン 
+	VERTEX_2D				vertexWk[NUM_VERTEX];		// 頂?情報格?ワ?ク
+
+	D3DXVECTOR3				pos;						// ?リゴンの移動量
+}SELECT;
+
+//*****************************************************************************
+// プロトタイプ宣言
+//*****************************************************************************
+HRESULT InitSelect(int type);
+void UninitSelect(void);
+void UpdateSelect(void);
+void DrawSelect(void);
+void SetTextureSelect(void);
+void SetVertexSelect(void);
+int GetSpos(void);

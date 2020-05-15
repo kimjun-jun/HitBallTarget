@@ -115,6 +115,65 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ball.cpp" />
+    <ClCompile Include="balleffect.cpp" />
+    <ClCompile Include="bg.cpp" />
+    <ClCompile Include="collision.cpp" />
+    <ClCompile Include="controltype.cpp" />
+    <ClCompile Include="countdown.cpp" />
+    <ClCompile Include="effect.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="enemycpp.cpp" />
+    <ClCompile Include="fade.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="input.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mosaic.cpp" />
+    <ClCompile Include="option.cpp" />
+    <ClCompile Include="pause.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="R18.cpp" />
+    <ClCompile Include="ranking.cpp" />
+    <ClCompile Include="register.cpp" />
+    <ClCompile Include="result.cpp" />
+    <ClCompile Include="score.cpp" />
+    <ClCompile Include="select.cpp" />
+    <ClCompile Include="sensitivity.cpp" />
+    <ClCompile Include="sound.cpp" />
+    <ClCompile Include="title.cpp" />
+    <ClCompile Include="tutomenu.cpp" />
+    <ClCompile Include="tutorial.cpp" />
+    <ClCompile Include="ui.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ball.h" />
+    <ClInclude Include="balleffect.h" />
+    <ClInclude Include="bg.h" />
+    <ClInclude Include="collision.h" />
+    <ClInclude Include="controltype.h" />
+    <ClInclude Include="countdown.h" />
+    <ClInclude Include="effect.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="fade.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="input.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="mosaic.h" />
+    <ClInclude Include="option.h" />
+    <ClInclude Include="pause.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="R18.h" />
+    <ClInclude Include="ranking.h" />
+    <ClInclude Include="register.h" />
+    <ClInclude Include="result.h" />
+    <ClInclude Include="score.h" />
+    <ClInclude Include="select.h" />
+    <ClInclude Include="sensitivity.h" />
+    <ClInclude Include="sound.h" />
+    <ClInclude Include="title.h" />
+    <ClInclude Include="tutomenu.h" />
+    <ClInclude Include="tutorial.h" />
+    <ClInclude Include="ui.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

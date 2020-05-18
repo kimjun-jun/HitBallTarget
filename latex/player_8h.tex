@@ -1,0 +1,181 @@
+\hypertarget{player_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/player.h ファイル}
+\label{player_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/player.h@{C:/Users/HP/source/Repos/HitBallTarget/player.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_p_l_a_y_e_r___p_i_t}{P\+L\+A\+Y\+E\+R\+\_\+\+P\+IT}}
+\item 
+struct \mbox{\hyperlink{struct_p_l_a_y_e_r___b_a_t}{P\+L\+A\+Y\+E\+R\+\_\+\+B\+AT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{player_8h_ab37db7bbc65824b1c98f4514747c7c25}{Init\+Player}} (int type)
+\item 
+void \mbox{\hyperlink{player_8h_aec81addf7089fd7ec8344da9df5cbcc1}{Re\+Init\+Player}} (void)
+\item 
+void \mbox{\hyperlink{player_8h_ad50044e423acab81254da2bca8597cad}{Uninit\+Player}} (void)
+\item 
+void \mbox{\hyperlink{player_8h_ab3a456d791fc2bd6c2bd0b1bc44fd6c6}{Update\+Player}} (void)
+\item 
+void \mbox{\hyperlink{player_8h_a79eb0d0b3febd0f47c5c1959cc85e33a}{Draw\+Player}} (void)
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{player_8h_a2de60a2e9122a5286fe6a3a3c67d0a6f}{Make\+Vertex\+Player}} (int i)
+\item 
+void \mbox{\hyperlink{player_8h_a2fadda7fdfcff7f35f596fbffa729796}{Set\+Texture\+Player}} (int cnt\+Pattern, int i)
+\item 
+void \mbox{\hyperlink{player_8h_a01aad82d3cb01c79b486912fcc5c0cde}{Set\+Vertex\+Player}} (int i)
+\item 
+\mbox{\hyperlink{struct_p_l_a_y_e_r___p_i_t}{P\+L\+A\+Y\+E\+R\+\_\+\+P\+IT}} $\ast$ \mbox{\hyperlink{player_8h_a33e108ae2585bd33cc1bbc965a00ee95}{Get\+Player\+Pit}} (void)
+\item 
+\mbox{\hyperlink{struct_p_l_a_y_e_r___b_a_t}{P\+L\+A\+Y\+E\+R\+\_\+\+B\+AT}} $\ast$ \mbox{\hyperlink{player_8h_a2406a202cc0c601004fe35fb56e57f7c}{Get\+Player\+Bat}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{player_8h_a79eb0d0b3febd0f47c5c1959cc85e33a}\label{player_8h_a79eb0d0b3febd0f47c5c1959cc85e33a}} 
+\index{player.h@{player.h}!DrawPlayer@{DrawPlayer}}
+\index{DrawPlayer@{DrawPlayer}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{DrawPlayer()}{DrawPlayer()}}
+{\footnotesize\ttfamily void Draw\+Player (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 163 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{player_8h_a2406a202cc0c601004fe35fb56e57f7c}\label{player_8h_a2406a202cc0c601004fe35fb56e57f7c}} 
+\index{player.h@{player.h}!GetPlayerBat@{GetPlayerBat}}
+\index{GetPlayerBat@{GetPlayerBat}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{GetPlayerBat()}{GetPlayerBat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_l_a_y_e_r___b_a_t}{P\+L\+A\+Y\+E\+R\+\_\+\+B\+AT}}$\ast$ Get\+Player\+Bat (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 343 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{player_8h_a33e108ae2585bd33cc1bbc965a00ee95}\label{player_8h_a33e108ae2585bd33cc1bbc965a00ee95}} 
+\index{player.h@{player.h}!GetPlayerPit@{GetPlayerPit}}
+\index{GetPlayerPit@{GetPlayerPit}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{GetPlayerPit()}{GetPlayerPit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_l_a_y_e_r___p_i_t}{P\+L\+A\+Y\+E\+R\+\_\+\+P\+IT}}$\ast$ Get\+Player\+Pit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 339 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{player_8h_ab37db7bbc65824b1c98f4514747c7c25}\label{player_8h_ab37db7bbc65824b1c98f4514747c7c25}} 
+\index{player.h@{player.h}!InitPlayer@{InitPlayer}}
+\index{InitPlayer@{InitPlayer}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{InitPlayer()}{InitPlayer()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Player (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 37 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{player_8h_a2de60a2e9122a5286fe6a3a3c67d0a6f}\label{player_8h_a2de60a2e9122a5286fe6a3a3c67d0a6f}} 
+\index{player.h@{player.h}!MakeVertexPlayer@{MakeVertexPlayer}}
+\index{MakeVertexPlayer@{MakeVertexPlayer}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{MakeVertexPlayer()}{MakeVertexPlayer()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+Player (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 183 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{player_8h_aec81addf7089fd7ec8344da9df5cbcc1}\label{player_8h_aec81addf7089fd7ec8344da9df5cbcc1}} 
+\index{player.h@{player.h}!ReInitPlayer@{ReInitPlayer}}
+\index{ReInitPlayer@{ReInitPlayer}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{ReInitPlayer()}{ReInitPlayer()}}
+{\footnotesize\ttfamily void Re\+Init\+Player (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 99 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{player_8h_a2fadda7fdfcff7f35f596fbffa729796}\label{player_8h_a2fadda7fdfcff7f35f596fbffa729796}} 
+\index{player.h@{player.h}!SetTexturePlayer@{SetTexturePlayer}}
+\index{SetTexturePlayer@{SetTexturePlayer}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{SetTexturePlayer()}{SetTexturePlayer()}}
+{\footnotesize\ttfamily void Set\+Texture\+Player (\begin{DoxyParamCaption}\item[{int}]{cnt\+Pattern,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 247 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{player_8h_a01aad82d3cb01c79b486912fcc5c0cde}\label{player_8h_a01aad82d3cb01c79b486912fcc5c0cde}} 
+\index{player.h@{player.h}!SetVertexPlayer@{SetVertexPlayer}}
+\index{SetVertexPlayer@{SetVertexPlayer}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{SetVertexPlayer()}{SetVertexPlayer()}}
+{\footnotesize\ttfamily void Set\+Vertex\+Player (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 287 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 11
+\mbox{\Hypertarget{player_8h_ad50044e423acab81254da2bca8597cad}\label{player_8h_ad50044e423acab81254da2bca8597cad}} 
+\index{player.h@{player.h}!UninitPlayer@{UninitPlayer}}
+\index{UninitPlayer@{UninitPlayer}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{UninitPlayer()}{UninitPlayer()}}
+{\footnotesize\ttfamily void Uninit\+Player (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 126 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{player_8h_ab3a456d791fc2bd6c2bd0b1bc44fd6c6}\label{player_8h_ab3a456d791fc2bd6c2bd0b1bc44fd6c6}} 
+\index{player.h@{player.h}!UpdatePlayer@{UpdatePlayer}}
+\index{UpdatePlayer@{UpdatePlayer}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{UpdatePlayer()}{UpdatePlayer()}}
+{\footnotesize\ttfamily void Update\+Player (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ player.\+cpp の 148 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 13
+被呼び出し関係図\+:
+% FIG 14

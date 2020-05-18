@@ -1,0 +1,525 @@
+\hypertarget{score_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/score.h ファイル}
+\label{score_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/score.h@{C:/Users/HP/source/Repos/HitBallTarget/score.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_i_m_e}{T\+I\+ME}}
+\item 
+struct \mbox{\hyperlink{struct_s_c_o_r_e}{S\+C\+O\+RE}}
+\item 
+struct \mbox{\hyperlink{struct_d_o_t}{D\+OT}}
+\item 
+struct \mbox{\hyperlink{struct_t_i_m_e_l_o_g_o}{T\+I\+M\+E\+L\+O\+GO}}
+\item 
+struct \mbox{\hyperlink{struct_s_c_o_r_e_l_o_g_o}{S\+C\+O\+R\+E\+L\+O\+GO}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{score_8h_a46c1539e522f22aa9b48d8da7646d144}{T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+D\+OT}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/\mbox{\hyperlink{struct_b_g}{BG}}/dot.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{score_8h_a5493407c24eee4af6248211b30c0d0f2}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(50)
+\item 
+\#define \mbox{\hyperlink{score_8h_a4fbd04bc5084371f862bb30b90838937}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(50)
+\item 
+\#define \mbox{\hyperlink{score_8h_adc9bdc3e4d71ba096c9acb30e4ecec14}{S\+C\+O\+R\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X}}~(10)
+\item 
+\#define \mbox{\hyperlink{score_8h_a00c00d7561d1db94072b536f57b885cc}{S\+C\+O\+R\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y}}~(1)
+\item 
+\#define \mbox{\hyperlink{score_8h_ae0622f42726959474181a2a9217e9a86}{S\+C\+O\+R\+E\+\_\+\+A\+N\+I\+M\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+N\+UM}}~(\mbox{\hyperlink{score_8h_adc9bdc3e4d71ba096c9acb30e4ecec14}{S\+C\+O\+R\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X}}$\ast$\mbox{\hyperlink{score_8h_a00c00d7561d1db94072b536f57b885cc}{S\+C\+O\+R\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y}})
+\item 
+\#define \mbox{\hyperlink{score_8h_afd85936afed635b000394a945ae79cb3}{S\+C\+O\+R\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON}}~(4)
+\item 
+\#define \mbox{\hyperlink{score_8h_aacddeafff3a3d102a0df62a7d4dc027d}{T\+E\+X\+T\+U\+R\+E\+\_\+\+D\+O\+T\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(7)
+\item 
+\#define \mbox{\hyperlink{score_8h_a87a84387013cd5feb67d5ee4ff452c34}{T\+E\+X\+T\+U\+R\+E\+\_\+\+D\+O\+T\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(7)
+\item 
+\#define \mbox{\hyperlink{score_8h_a589bdeea512fa487010660d020153426}{D\+O\+T\+\_\+\+G\+O\+U\+K\+EI}}~(2)
+\item 
+\#define \mbox{\hyperlink{score_8h_a64c20ae631400d8bebd9fd0559d1fb4d}{T\+I\+M\+E\+\_\+\+D\+I\+G\+IT}}~(3)
+\item 
+\#define \mbox{\hyperlink{score_8h_a2fe7763249f54da202997adb4aadaa62}{S\+C\+O\+R\+E\+\_\+\+D\+I\+G\+IT}}~(4)
+\item 
+\#define \mbox{\hyperlink{score_8h_addfd5a9497bc0597b10743024c402539}{S\+C\+O\+R\+E\+\_\+\+G\+O\+U\+K\+EI}}~(60)
+\item 
+\#define \mbox{\hyperlink{score_8h_a444399702a68364cd53382a6c9b93291}{F\+P\+S\+\_\+\+T\+I\+M\+E\+\_\+\+C\+O\+U\+NT}}~(4200)
+\item 
+\#define \mbox{\hyperlink{score_8h_ada39b18fc11691fb8664515a5617b920}{T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+GO}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/S\+C\+O\+R\+E.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{score_8h_add0023b0670237c83b6315c35fdd99db}{T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+T\+I\+M\+E\+L\+O\+GO}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/T\+I\+M\+E.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{score_8h_a18acd4b5fcf8bddbf9f7c67caf4953cd}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(100)
+\item 
+\#define \mbox{\hyperlink{score_8h_a8fe85b104a907a8b2e3156e74b3cde52}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(75)
+\item 
+\#define \mbox{\hyperlink{score_8h_a11bf75aff77ed4d95c8a9fae1396a55e}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(100)
+\item 
+\#define \mbox{\hyperlink{score_8h_acab6c790c9f3278777cb878da7168ac5}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(75)
+\item 
+\#define \mbox{\hyperlink{score_8h_afaa9e93cf735e18ecdba35f248a0a5b3}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/430.\+0f)
+\item 
+\#define \mbox{\hyperlink{score_8h_aa37a8c559bbcebbc08ebf92a68a5d0ff}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+400.\+0f)
+\item 
+\#define \mbox{\hyperlink{score_8h_acafba79083a2c46f4cb3a25e48f8fc8e}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+570.\+0f)
+\item 
+\#define \mbox{\hyperlink{score_8h_a2bbd29f995e501339c68c8cd5e02a500}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{score_8h_aa37a8c559bbcebbc08ebf92a68a5d0ff}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+\_\+Y}})
+\item 
+\#define \mbox{\hyperlink{score_8h_a619ea83b2525f360100a58f94334f7d8}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/520.\+0f)
+\item 
+\#define \mbox{\hyperlink{score_8h_ae9d01bd32158f211bc0372c4578e0f07}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{score_8h_aa37a8c559bbcebbc08ebf92a68a5d0ff}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+\_\+Y}}-\/120.\+0f)
+\item 
+\#define \mbox{\hyperlink{score_8h_a332c11df8856eb9da7d81aec742ca1a4}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+520.\+0f)
+\item 
+\#define \mbox{\hyperlink{score_8h_aebdda5811e854c8516ec2557ec7bdd50}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{score_8h_a2bbd29f995e501339c68c8cd5e02a500}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+\_\+\+P\+O\+S\+\_\+Y}}-\/100.\+0f)
+\item 
+\#define \mbox{\hyperlink{score_8h_a231322bf01946c67ed75b081618648f7}{N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+X}}~(60.\+0f)
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{score_8h_a2877d8d2165bef980ae915b2cd05dac8}{Init\+Score}} (int type)
+\item 
+void \mbox{\hyperlink{score_8h_a12066b84969d7a689e032b34d7f1faf3}{Re\+Init\+Score}} (void)
+\item 
+void \mbox{\hyperlink{score_8h_abe9d5c9be78c919ed6b5f5ae03785508}{Uninit\+Score}} (void)
+\item 
+void \mbox{\hyperlink{score_8h_a854a35bb5d10f7a8e594bff07093dcb5}{Update\+Score}} (void)
+\item 
+void \mbox{\hyperlink{score_8h_a5adcab0b538029aa93ac79c08adc129c}{Draw\+Score}} (void)
+\item 
+\mbox{\hyperlink{struct_s_c_o_r_e}{S\+C\+O\+RE}} $\ast$ \mbox{\hyperlink{score_8h_abf881b5949ff5ff570eb4ff26519a9c5}{Get\+Score}} (void)
+\item 
+int $\ast$ \mbox{\hyperlink{score_8h_a304c0c929097e9206ae67a956a636a45}{Get\+Timemaneger}} (void)
+\item 
+int $\ast$ \mbox{\hyperlink{score_8h_a4eb216429e6806ebd6c6f45d39a451e8}{Get\+Scoremaneger}} (void)
+\item 
+void \mbox{\hyperlink{score_8h_a6b8b13aa2229d83d41f914a326101050}{Add\+Score}} (int val, int type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{score_8h_a589bdeea512fa487010660d020153426}\label{score_8h_a589bdeea512fa487010660d020153426}} 
+\index{score.h@{score.h}!DOT\_GOUKEI@{DOT\_GOUKEI}}
+\index{DOT\_GOUKEI@{DOT\_GOUKEI}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{DOT\_GOUKEI}{DOT\_GOUKEI}}
+{\footnotesize\ttfamily \#define D\+O\+T\+\_\+\+G\+O\+U\+K\+EI~(2)}
+
+
+
+ score.\+h の 23 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a444399702a68364cd53382a6c9b93291}\label{score_8h_a444399702a68364cd53382a6c9b93291}} 
+\index{score.h@{score.h}!FPS\_TIME\_COUNT@{FPS\_TIME\_COUNT}}
+\index{FPS\_TIME\_COUNT@{FPS\_TIME\_COUNT}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{FPS\_TIME\_COUNT}{FPS\_TIME\_COUNT}}
+{\footnotesize\ttfamily \#define F\+P\+S\+\_\+\+T\+I\+M\+E\+\_\+\+C\+O\+U\+NT~(4200)}
+
+
+
+ score.\+h の 27 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a231322bf01946c67ed75b081618648f7}\label{score_8h_a231322bf01946c67ed75b081618648f7}} 
+\index{score.h@{score.h}!NUM\_INTERVAL\_X@{NUM\_INTERVAL\_X}}
+\index{NUM\_INTERVAL\_X@{NUM\_INTERVAL\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_INTERVAL\_X}{NUM\_INTERVAL\_X}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+X~(60.\+0f)}
+
+
+
+ score.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_ae0622f42726959474181a2a9217e9a86}\label{score_8h_ae0622f42726959474181a2a9217e9a86}} 
+\index{score.h@{score.h}!SCORE\_ANIM\_PATTERN\_NUM@{SCORE\_ANIM\_PATTERN\_NUM}}
+\index{SCORE\_ANIM\_PATTERN\_NUM@{SCORE\_ANIM\_PATTERN\_NUM}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{SCORE\_ANIM\_PATTERN\_NUM}{SCORE\_ANIM\_PATTERN\_NUM}}
+{\footnotesize\ttfamily \#define S\+C\+O\+R\+E\+\_\+\+A\+N\+I\+M\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+N\+UM~(\mbox{\hyperlink{score_8h_adc9bdc3e4d71ba096c9acb30e4ecec14}{S\+C\+O\+R\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X}}$\ast$\mbox{\hyperlink{score_8h_a00c00d7561d1db94072b536f57b885cc}{S\+C\+O\+R\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y}})}
+
+
+
+ score.\+h の 17 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a2fe7763249f54da202997adb4aadaa62}\label{score_8h_a2fe7763249f54da202997adb4aadaa62}} 
+\index{score.h@{score.h}!SCORE\_DIGIT@{SCORE\_DIGIT}}
+\index{SCORE\_DIGIT@{SCORE\_DIGIT}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{SCORE\_DIGIT}{SCORE\_DIGIT}}
+{\footnotesize\ttfamily \#define S\+C\+O\+R\+E\+\_\+\+D\+I\+G\+IT~(4)}
+
+
+
+ score.\+h の 25 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_addfd5a9497bc0597b10743024c402539}\label{score_8h_addfd5a9497bc0597b10743024c402539}} 
+\index{score.h@{score.h}!SCORE\_GOUKEI@{SCORE\_GOUKEI}}
+\index{SCORE\_GOUKEI@{SCORE\_GOUKEI}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{SCORE\_GOUKEI}{SCORE\_GOUKEI}}
+{\footnotesize\ttfamily \#define S\+C\+O\+R\+E\+\_\+\+G\+O\+U\+K\+EI~(60)}
+
+
+
+ score.\+h の 26 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_adc9bdc3e4d71ba096c9acb30e4ecec14}\label{score_8h_adc9bdc3e4d71ba096c9acb30e4ecec14}} 
+\index{score.h@{score.h}!SCORE\_TEXTURE\_PATTERN\_DIVIDE\_X@{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_X}}
+\index{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_X@{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_X}{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_X}}
+{\footnotesize\ttfamily \#define S\+C\+O\+R\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X~(10)}
+
+
+
+ score.\+h の 15 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a00c00d7561d1db94072b536f57b885cc}\label{score_8h_a00c00d7561d1db94072b536f57b885cc}} 
+\index{score.h@{score.h}!SCORE\_TEXTURE\_PATTERN\_DIVIDE\_Y@{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_Y}}
+\index{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_Y@{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_Y}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_Y}{SCORE\_TEXTURE\_PATTERN\_DIVIDE\_Y}}
+{\footnotesize\ttfamily \#define S\+C\+O\+R\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y~(1)}
+
+
+
+ score.\+h の 16 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_afd85936afed635b000394a945ae79cb3}\label{score_8h_afd85936afed635b000394a945ae79cb3}} 
+\index{score.h@{score.h}!SCORE\_TIME\_ANIMATION@{SCORE\_TIME\_ANIMATION}}
+\index{SCORE\_TIME\_ANIMATION@{SCORE\_TIME\_ANIMATION}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{SCORE\_TIME\_ANIMATION}{SCORE\_TIME\_ANIMATION}}
+{\footnotesize\ttfamily \#define S\+C\+O\+R\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON~(4)}
+
+
+
+ score.\+h の 18 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_aacddeafff3a3d102a0df62a7d4dc027d}\label{score_8h_aacddeafff3a3d102a0df62a7d4dc027d}} 
+\index{score.h@{score.h}!TEXTURE\_DOT\_SIZE\_X@{TEXTURE\_DOT\_SIZE\_X}}
+\index{TEXTURE\_DOT\_SIZE\_X@{TEXTURE\_DOT\_SIZE\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_DOT\_SIZE\_X}{TEXTURE\_DOT\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+D\+O\+T\+\_\+\+S\+I\+Z\+E\+\_\+X~(7)}
+
+
+
+ score.\+h の 19 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a87a84387013cd5feb67d5ee4ff452c34}\label{score_8h_a87a84387013cd5feb67d5ee4ff452c34}} 
+\index{score.h@{score.h}!TEXTURE\_DOT\_SIZE\_Y@{TEXTURE\_DOT\_SIZE\_Y}}
+\index{TEXTURE\_DOT\_SIZE\_Y@{TEXTURE\_DOT\_SIZE\_Y}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_DOT\_SIZE\_Y}{TEXTURE\_DOT\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+D\+O\+T\+\_\+\+S\+I\+Z\+E\+\_\+Y~(7)}
+
+
+
+ score.\+h の 20 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a46c1539e522f22aa9b48d8da7646d144}\label{score_8h_a46c1539e522f22aa9b48d8da7646d144}} 
+\index{score.h@{score.h}!TEXTURE\_GAME\_DOT@{TEXTURE\_GAME\_DOT}}
+\index{TEXTURE\_GAME\_DOT@{TEXTURE\_GAME\_DOT}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_GAME\_DOT}{TEXTURE\_GAME\_DOT}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+D\+OT~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/\mbox{\hyperlink{struct_b_g}{BG}}/dot.\+png\char`\"{})}
+
+
+
+ score.\+h の 12 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_ada39b18fc11691fb8664515a5617b920}\label{score_8h_ada39b18fc11691fb8664515a5617b920}} 
+\index{score.h@{score.h}!TEXTURE\_GAME\_SCORELOGO@{TEXTURE\_GAME\_SCORELOGO}}
+\index{TEXTURE\_GAME\_SCORELOGO@{TEXTURE\_GAME\_SCORELOGO}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_GAME\_SCORELOGO}{TEXTURE\_GAME\_SCORELOGO}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+GO~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/S\+C\+O\+R\+E.\+png\char`\"{})}
+
+
+
+ score.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_add0023b0670237c83b6315c35fdd99db}\label{score_8h_add0023b0670237c83b6315c35fdd99db}} 
+\index{score.h@{score.h}!TEXTURE\_GAME\_TIMELOGO@{TEXTURE\_GAME\_TIMELOGO}}
+\index{TEXTURE\_GAME\_TIMELOGO@{TEXTURE\_GAME\_TIMELOGO}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_GAME\_TIMELOGO}{TEXTURE\_GAME\_TIMELOGO}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+T\+I\+M\+E\+L\+O\+GO~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/T\+I\+M\+E.\+png\char`\"{})}
+
+
+
+ score.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_afaa9e93cf735e18ecdba35f248a0a5b3}\label{score_8h_afaa9e93cf735e18ecdba35f248a0a5b3}} 
+\index{score.h@{score.h}!TEXTURE\_SCORE\_POS\_X@{TEXTURE\_SCORE\_POS\_X}}
+\index{TEXTURE\_SCORE\_POS\_X@{TEXTURE\_SCORE\_POS\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SCORE\_POS\_X}{TEXTURE\_SCORE\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/430.\+0f)}
+
+
+
+ score.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_aa37a8c559bbcebbc08ebf92a68a5d0ff}\label{score_8h_aa37a8c559bbcebbc08ebf92a68a5d0ff}} 
+\index{score.h@{score.h}!TEXTURE\_SCORE\_POS\_Y@{TEXTURE\_SCORE\_POS\_Y}}
+\index{TEXTURE\_SCORE\_POS\_Y@{TEXTURE\_SCORE\_POS\_Y}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SCORE\_POS\_Y}{TEXTURE\_SCORE\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+400.\+0f)}
+
+
+
+ score.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a5493407c24eee4af6248211b30c0d0f2}\label{score_8h_a5493407c24eee4af6248211b30c0d0f2}} 
+\index{score.h@{score.h}!TEXTURE\_SCORE\_SIZE\_X@{TEXTURE\_SCORE\_SIZE\_X}}
+\index{TEXTURE\_SCORE\_SIZE\_X@{TEXTURE\_SCORE\_SIZE\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SCORE\_SIZE\_X}{TEXTURE\_SCORE\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+X~(50)}
+
+
+
+ score.\+h の 13 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a4fbd04bc5084371f862bb30b90838937}\label{score_8h_a4fbd04bc5084371f862bb30b90838937}} 
+\index{score.h@{score.h}!TEXTURE\_SCORE\_SIZE\_Y@{TEXTURE\_SCORE\_SIZE\_Y}}
+\index{TEXTURE\_SCORE\_SIZE\_Y@{TEXTURE\_SCORE\_SIZE\_Y}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SCORE\_SIZE\_Y}{TEXTURE\_SCORE\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y~(50)}
+
+
+
+ score.\+h の 14 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a619ea83b2525f360100a58f94334f7d8}\label{score_8h_a619ea83b2525f360100a58f94334f7d8}} 
+\index{score.h@{score.h}!TEXTURE\_SCORELOGO\_POS\_X@{TEXTURE\_SCORELOGO\_POS\_X}}
+\index{TEXTURE\_SCORELOGO\_POS\_X@{TEXTURE\_SCORELOGO\_POS\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SCORELOGO\_POS\_X}{TEXTURE\_SCORELOGO\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/520.\+0f)}
+
+
+
+ score.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_ae9d01bd32158f211bc0372c4578e0f07}\label{score_8h_ae9d01bd32158f211bc0372c4578e0f07}} 
+\index{score.h@{score.h}!TEXTURE\_SCORELOGO\_POS\_Y@{TEXTURE\_SCORELOGO\_POS\_Y}}
+\index{TEXTURE\_SCORELOGO\_POS\_Y@{TEXTURE\_SCORELOGO\_POS\_Y}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SCORELOGO\_POS\_Y}{TEXTURE\_SCORELOGO\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{score_8h_aa37a8c559bbcebbc08ebf92a68a5d0ff}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+\_\+Y}}-\/120.\+0f)}
+
+
+
+ score.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a18acd4b5fcf8bddbf9f7c67caf4953cd}\label{score_8h_a18acd4b5fcf8bddbf9f7c67caf4953cd}} 
+\index{score.h@{score.h}!TEXTURE\_SCORELOGO\_SIZE\_X@{TEXTURE\_SCORELOGO\_SIZE\_X}}
+\index{TEXTURE\_SCORELOGO\_SIZE\_X@{TEXTURE\_SCORELOGO\_SIZE\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SCORELOGO\_SIZE\_X}{TEXTURE\_SCORELOGO\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+X~(100)}
+
+
+
+ score.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a8fe85b104a907a8b2e3156e74b3cde52}\label{score_8h_a8fe85b104a907a8b2e3156e74b3cde52}} 
+\index{score.h@{score.h}!TEXTURE\_SCORELOGO\_SIZE\_Y@{TEXTURE\_SCORELOGO\_SIZE\_Y}}
+\index{TEXTURE\_SCORELOGO\_SIZE\_Y@{TEXTURE\_SCORELOGO\_SIZE\_Y}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SCORELOGO\_SIZE\_Y}{TEXTURE\_SCORELOGO\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+Y~(75)}
+
+
+
+ score.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_acafba79083a2c46f4cb3a25e48f8fc8e}\label{score_8h_acafba79083a2c46f4cb3a25e48f8fc8e}} 
+\index{score.h@{score.h}!TEXTURE\_TIME\_POS\_X@{TEXTURE\_TIME\_POS\_X}}
+\index{TEXTURE\_TIME\_POS\_X@{TEXTURE\_TIME\_POS\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_TIME\_POS\_X}{TEXTURE\_TIME\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+570.\+0f)}
+
+
+
+ score.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a2bbd29f995e501339c68c8cd5e02a500}\label{score_8h_a2bbd29f995e501339c68c8cd5e02a500}} 
+\index{score.h@{score.h}!TEXTURE\_TIME\_POS\_Y@{TEXTURE\_TIME\_POS\_Y}}
+\index{TEXTURE\_TIME\_POS\_Y@{TEXTURE\_TIME\_POS\_Y}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_TIME\_POS\_Y}{TEXTURE\_TIME\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{score_8h_aa37a8c559bbcebbc08ebf92a68a5d0ff}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+C\+O\+R\+E\+\_\+\+P\+O\+S\+\_\+Y}})}
+
+
+
+ score.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a332c11df8856eb9da7d81aec742ca1a4}\label{score_8h_a332c11df8856eb9da7d81aec742ca1a4}} 
+\index{score.h@{score.h}!TEXTURE\_TIMELOGO\_POS\_X@{TEXTURE\_TIMELOGO\_POS\_X}}
+\index{TEXTURE\_TIMELOGO\_POS\_X@{TEXTURE\_TIMELOGO\_POS\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_TIMELOGO\_POS\_X}{TEXTURE\_TIMELOGO\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+520.\+0f)}
+
+
+
+ score.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_aebdda5811e854c8516ec2557ec7bdd50}\label{score_8h_aebdda5811e854c8516ec2557ec7bdd50}} 
+\index{score.h@{score.h}!TEXTURE\_TIMELOGO\_POS\_Y@{TEXTURE\_TIMELOGO\_POS\_Y}}
+\index{TEXTURE\_TIMELOGO\_POS\_Y@{TEXTURE\_TIMELOGO\_POS\_Y}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_TIMELOGO\_POS\_Y}{TEXTURE\_TIMELOGO\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{score_8h_a2bbd29f995e501339c68c8cd5e02a500}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+\_\+\+P\+O\+S\+\_\+Y}}-\/100.\+0f)}
+
+
+
+ score.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a11bf75aff77ed4d95c8a9fae1396a55e}\label{score_8h_a11bf75aff77ed4d95c8a9fae1396a55e}} 
+\index{score.h@{score.h}!TEXTURE\_TIMELOGO\_SIZE\_X@{TEXTURE\_TIMELOGO\_SIZE\_X}}
+\index{TEXTURE\_TIMELOGO\_SIZE\_X@{TEXTURE\_TIMELOGO\_SIZE\_X}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_TIMELOGO\_SIZE\_X}{TEXTURE\_TIMELOGO\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+X~(100)}
+
+
+
+ score.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_acab6c790c9f3278777cb878da7168ac5}\label{score_8h_acab6c790c9f3278777cb878da7168ac5}} 
+\index{score.h@{score.h}!TEXTURE\_TIMELOGO\_SIZE\_Y@{TEXTURE\_TIMELOGO\_SIZE\_Y}}
+\index{TEXTURE\_TIMELOGO\_SIZE\_Y@{TEXTURE\_TIMELOGO\_SIZE\_Y}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_TIMELOGO\_SIZE\_Y}{TEXTURE\_TIMELOGO\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+Y~(75)}
+
+
+
+ score.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{score_8h_a64c20ae631400d8bebd9fd0559d1fb4d}\label{score_8h_a64c20ae631400d8bebd9fd0559d1fb4d}} 
+\index{score.h@{score.h}!TIME\_DIGIT@{TIME\_DIGIT}}
+\index{TIME\_DIGIT@{TIME\_DIGIT}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{TIME\_DIGIT}{TIME\_DIGIT}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+\_\+\+D\+I\+G\+IT~(3)}
+
+
+
+ score.\+h の 24 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{score_8h_a6b8b13aa2229d83d41f914a326101050}\label{score_8h_a6b8b13aa2229d83d41f914a326101050}} 
+\index{score.h@{score.h}!AddScore@{AddScore}}
+\index{AddScore@{AddScore}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{AddScore()}{AddScore()}}
+{\footnotesize\ttfamily void Add\+Score (\begin{DoxyParamCaption}\item[{int}]{val,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ score.\+cpp の 476 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{score_8h_a5adcab0b538029aa93ac79c08adc129c}\label{score_8h_a5adcab0b538029aa93ac79c08adc129c}} 
+\index{score.h@{score.h}!DrawScore@{DrawScore}}
+\index{DrawScore@{DrawScore}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{DrawScore()}{DrawScore()}}
+{\footnotesize\ttfamily void Draw\+Score (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ score.\+cpp の 186 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 2
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{score_8h_abf881b5949ff5ff570eb4ff26519a9c5}\label{score_8h_abf881b5949ff5ff570eb4ff26519a9c5}} 
+\index{score.h@{score.h}!GetScore@{GetScore}}
+\index{GetScore@{GetScore}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{GetScore()}{GetScore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_c_o_r_e}{S\+C\+O\+RE}}$\ast$ Get\+Score (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ score.\+cpp の 451 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{score_8h_a4eb216429e6806ebd6c6f45d39a451e8}\label{score_8h_a4eb216429e6806ebd6c6f45d39a451e8}} 
+\index{score.h@{score.h}!GetScoremaneger@{GetScoremaneger}}
+\index{GetScoremaneger@{GetScoremaneger}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{GetScoremaneger()}{GetScoremaneger()}}
+{\footnotesize\ttfamily int$\ast$ Get\+Scoremaneger (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ score.\+cpp の 468 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{score_8h_a304c0c929097e9206ae67a956a636a45}\label{score_8h_a304c0c929097e9206ae67a956a636a45}} 
+\index{score.h@{score.h}!GetTimemaneger@{GetTimemaneger}}
+\index{GetTimemaneger@{GetTimemaneger}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{GetTimemaneger()}{GetTimemaneger()}}
+{\footnotesize\ttfamily int$\ast$ Get\+Timemaneger (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ score.\+cpp の 460 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{score_8h_a2877d8d2165bef980ae915b2cd05dac8}\label{score_8h_a2877d8d2165bef980ae915b2cd05dac8}} 
+\index{score.h@{score.h}!InitScore@{InitScore}}
+\index{InitScore@{InitScore}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{InitScore()}{InitScore()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Score (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ score.\+cpp の 42 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{score_8h_a12066b84969d7a689e032b34d7f1faf3}\label{score_8h_a12066b84969d7a689e032b34d7f1faf3}} 
+\index{score.h@{score.h}!ReInitScore@{ReInitScore}}
+\index{ReInitScore@{ReInitScore}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{ReInitScore()}{ReInitScore()}}
+{\footnotesize\ttfamily void Re\+Init\+Score (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ score.\+cpp の 109 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{score_8h_abe9d5c9be78c919ed6b5f5ae03785508}\label{score_8h_abe9d5c9be78c919ed6b5f5ae03785508}} 
+\index{score.h@{score.h}!UninitScore@{UninitScore}}
+\index{UninitScore@{UninitScore}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{UninitScore()}{UninitScore()}}
+{\footnotesize\ttfamily void Uninit\+Score (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ score.\+cpp の 138 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{score_8h_a854a35bb5d10f7a8e594bff07093dcb5}\label{score_8h_a854a35bb5d10f7a8e594bff07093dcb5}} 
+\index{score.h@{score.h}!UpdateScore@{UpdateScore}}
+\index{UpdateScore@{UpdateScore}!score.h@{score.h}}
+\doxysubsubsection{\texorpdfstring{UpdateScore()}{UpdateScore()}}
+{\footnotesize\ttfamily void Update\+Score (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ score.\+cpp の 178 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12

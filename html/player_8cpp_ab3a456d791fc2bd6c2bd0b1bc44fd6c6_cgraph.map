@@ -1,0 +1,22 @@
+<map id="UpdatePlayer" name="UpdatePlayer">
+<area shape="rect" id="node1" title=" " alt="" coords="5,461,105,488"/>
+<area shape="rect" id="node2" href="$game_8cpp.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title=" " alt="" coords="167,335,210,361"/>
+<area shape="rect" id="node5" href="$input_8cpp.html#a9d43b9f7772ae1c0a5c1f7e6a0c0adc4" title=" " alt="" coords="285,5,417,32"/>
+<area shape="rect" id="node16" href="$game_8cpp.html#a13b39c1bd65ea2255b0910a03f19de8f" title=" " alt="" coords="169,588,208,615"/>
+<area shape="rect" id="node20" href="$fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d" title=" " alt="" coords="153,639,224,665"/>
+<area shape="rect" id="node3" href="$ui_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title=" " alt="" coords="307,208,395,235"/>
+<area shape="rect" id="node4" href="$ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title=" " alt="" coords="319,512,384,539"/>
+<area shape="rect" id="node6" href="$input_8cpp.html#a51329aebf57af8767b502a8b111fa577" title=" " alt="" coords="283,259,420,285"/>
+<area shape="rect" id="node7" href="$player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title=" " alt="" coords="301,309,401,336"/>
+<area shape="rect" id="node8" href="$controltype_8cpp.html#ad72284daff16eaa051c2cb705750f440" title=" " alt="" coords="290,360,413,387"/>
+<area shape="rect" id="node9" href="$sensitivity_8cpp.html#aa8041cdc6e4826513785bbc0d26a7671" title=" " alt="" coords="295,411,407,437"/>
+<area shape="rect" id="node10" href="$input_8cpp.html#ae73d9f5f454c89246853f39fdd2d20d5" title=" " alt="" coords="272,461,431,488"/>
+<area shape="rect" id="node11" href="$input_8cpp.html#ac697173603d80e79dbaac2b319cca44c" title=" " alt="" coords="274,56,429,83"/>
+<area shape="rect" id="node12" href="$input_8cpp.html#a7951056484ea4c474b1a5f783a1472b2" title=" " alt="" coords="290,107,413,133"/>
+<area shape="rect" id="node13" href="$player_8cpp.html#a2fadda7fdfcff7f35f596fbffa729796" title=" " alt="" coords="290,563,413,589"/>
+<area shape="rect" id="node14" href="$player_8cpp.html#a01aad82d3cb01c79b486912fcc5c0cde" title=" " alt="" coords="293,613,410,640"/>
+<area shape="rect" id="node15" href="$ui_8cpp.html#aad8c0b6bd1326b4aea24bbf5c6590fcb" title=" " alt="" coords="305,157,397,184"/>
+<area shape="rect" id="node17" href="$player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title=" " alt="" coords="303,664,399,691"/>
+<area shape="rect" id="node18" href="$sound_8cpp.html#a35c57e56563987d661008dbf450de87f" title=" " alt="" coords="309,715,394,741"/>
+<area shape="rect" id="node19" href="$ball_8cpp.html#afb1ecd37c1b5d7730424879558dc4d2a" title=" " alt="" coords="319,765,383,792"/>
+</map>

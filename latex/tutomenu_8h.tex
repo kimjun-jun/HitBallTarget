@@ -1,0 +1,189 @@
+\hypertarget{tutomenu_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/tutomenu.h ファイル}
+\label{tutomenu_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/tutomenu.h@{C:/Users/HP/source/Repos/HitBallTarget/tutomenu.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_u_t_o_m_e_n_u}{T\+U\+T\+O\+M\+E\+NU}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tutomenu_8h_ab33b50f465d34a59d00535fb7439fa6c}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+U\+T\+O\+M\+E\+N\+U\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(200)
+\item 
+\#define \mbox{\hyperlink{tutomenu_8h_a7d552890bfbd1f50a8770d21cb40d314}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+U\+T\+O\+M\+E\+N\+U\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(100)
+\item 
+\#define \mbox{\hyperlink{tutomenu_8h_a0714a475e9e5f0563b1a7c113e81f76f}{T\+U\+T\+O\+M\+E\+N\+U\+M\+AX}}~(2)
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{tutomenu_8h_a03803c4500674c7032621d3c4ce252e8}{Init\+Tutomenu}} (int type)
+\item 
+void \mbox{\hyperlink{tutomenu_8h_af56322473c6154c8b72d1fa732699f70}{Re\+Init\+Tutomenu}} (void)
+\item 
+void \mbox{\hyperlink{tutomenu_8h_a1e15db587392bc35bfc41da69dff7f6a}{Uninit\+Tutomenu}} (void)
+\item 
+void \mbox{\hyperlink{tutomenu_8h_a869ff4a10965429f52625f46122fd8f8}{Update\+Tutomenu}} (void)
+\item 
+void \mbox{\hyperlink{tutomenu_8h_a2232a2b7227cef6db126605345d85bbb}{Update\+In\+Tutomenu}} (void)
+\item 
+void \mbox{\hyperlink{tutomenu_8h_ac32da7323a9e7c4a35c5ba259e46cb95}{Draw\+Tutomenu}} (void)
+\item 
+void \mbox{\hyperlink{tutomenu_8h_a9c7a334ad0557075f3272d4bf7610119}{Set\+Vertex\+Tutomenu}} (void)
+\item 
+\mbox{\hyperlink{struct_t_u_t_o_m_e_n_u}{T\+U\+T\+O\+M\+E\+NU}} $\ast$ \mbox{\hyperlink{tutomenu_8h_a2d36f1e2dae8de9c9ae68b7928900870}{Get\+Tutomenu}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{tutomenu_8h_ab33b50f465d34a59d00535fb7439fa6c}\label{tutomenu_8h_ab33b50f465d34a59d00535fb7439fa6c}} 
+\index{tutomenu.h@{tutomenu.h}!TEXTURE\_TUTOMENU\_SIZE\_X@{TEXTURE\_TUTOMENU\_SIZE\_X}}
+\index{TEXTURE\_TUTOMENU\_SIZE\_X@{TEXTURE\_TUTOMENU\_SIZE\_X}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_TUTOMENU\_SIZE\_X}{TEXTURE\_TUTOMENU\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+U\+T\+O\+M\+E\+N\+U\+\_\+\+S\+I\+Z\+E\+\_\+X~(200)}
+
+
+
+ tutomenu.\+h の 13 行目に定義があります。
+
+\mbox{\Hypertarget{tutomenu_8h_a7d552890bfbd1f50a8770d21cb40d314}\label{tutomenu_8h_a7d552890bfbd1f50a8770d21cb40d314}} 
+\index{tutomenu.h@{tutomenu.h}!TEXTURE\_TUTOMENU\_SIZE\_Y@{TEXTURE\_TUTOMENU\_SIZE\_Y}}
+\index{TEXTURE\_TUTOMENU\_SIZE\_Y@{TEXTURE\_TUTOMENU\_SIZE\_Y}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_TUTOMENU\_SIZE\_Y}{TEXTURE\_TUTOMENU\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+U\+T\+O\+M\+E\+N\+U\+\_\+\+S\+I\+Z\+E\+\_\+Y~(100)}
+
+
+
+ tutomenu.\+h の 14 行目に定義があります。
+
+\mbox{\Hypertarget{tutomenu_8h_a0714a475e9e5f0563b1a7c113e81f76f}\label{tutomenu_8h_a0714a475e9e5f0563b1a7c113e81f76f}} 
+\index{tutomenu.h@{tutomenu.h}!TUTOMENUMAX@{TUTOMENUMAX}}
+\index{TUTOMENUMAX@{TUTOMENUMAX}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{TUTOMENUMAX}{TUTOMENUMAX}}
+{\footnotesize\ttfamily \#define T\+U\+T\+O\+M\+E\+N\+U\+M\+AX~(2)}
+
+
+
+ tutomenu.\+h の 17 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{tutomenu_8h_ac32da7323a9e7c4a35c5ba259e46cb95}\label{tutomenu_8h_ac32da7323a9e7c4a35c5ba259e46cb95}} 
+\index{tutomenu.h@{tutomenu.h}!DrawTutomenu@{DrawTutomenu}}
+\index{DrawTutomenu@{DrawTutomenu}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{DrawTutomenu()}{DrawTutomenu()}}
+{\footnotesize\ttfamily void Draw\+Tutomenu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ tutomenu.\+cpp の 140 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{tutomenu_8h_a2d36f1e2dae8de9c9ae68b7928900870}\label{tutomenu_8h_a2d36f1e2dae8de9c9ae68b7928900870}} 
+\index{tutomenu.h@{tutomenu.h}!GetTutomenu@{GetTutomenu}}
+\index{GetTutomenu@{GetTutomenu}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{GetTutomenu()}{GetTutomenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_u_t_o_m_e_n_u}{T\+U\+T\+O\+M\+E\+NU}}$\ast$ Get\+Tutomenu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ tutomenu.\+cpp の 252 行目に定義があります。
+
+\mbox{\Hypertarget{tutomenu_8h_a03803c4500674c7032621d3c4ce252e8}\label{tutomenu_8h_a03803c4500674c7032621d3c4ce252e8}} 
+\index{tutomenu.h@{tutomenu.h}!InitTutomenu@{InitTutomenu}}
+\index{InitTutomenu@{InitTutomenu}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{InitTutomenu()}{InitTutomenu()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Tutomenu (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ tutomenu.\+cpp の 28 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{tutomenu_8h_af56322473c6154c8b72d1fa732699f70}\label{tutomenu_8h_af56322473c6154c8b72d1fa732699f70}} 
+\index{tutomenu.h@{tutomenu.h}!ReInitTutomenu@{ReInitTutomenu}}
+\index{ReInitTutomenu@{ReInitTutomenu}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{ReInitTutomenu()}{ReInitTutomenu()}}
+{\footnotesize\ttfamily void Re\+Init\+Tutomenu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ tutomenu.\+cpp の 55 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{tutomenu_8h_a9c7a334ad0557075f3272d4bf7610119}\label{tutomenu_8h_a9c7a334ad0557075f3272d4bf7610119}} 
+\index{tutomenu.h@{tutomenu.h}!SetVertexTutomenu@{SetVertexTutomenu}}
+\index{SetVertexTutomenu@{SetVertexTutomenu}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{SetVertexTutomenu()}{SetVertexTutomenu()}}
+{\footnotesize\ttfamily void Set\+Vertex\+Tutomenu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ tutomenu.\+cpp の 201 行目に定義があります。
+
+\mbox{\Hypertarget{tutomenu_8h_a1e15db587392bc35bfc41da69dff7f6a}\label{tutomenu_8h_a1e15db587392bc35bfc41da69dff7f6a}} 
+\index{tutomenu.h@{tutomenu.h}!UninitTutomenu@{UninitTutomenu}}
+\index{UninitTutomenu@{UninitTutomenu}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{UninitTutomenu()}{UninitTutomenu()}}
+{\footnotesize\ttfamily void Uninit\+Tutomenu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ tutomenu.\+cpp の 65 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{tutomenu_8h_a2232a2b7227cef6db126605345d85bbb}\label{tutomenu_8h_a2232a2b7227cef6db126605345d85bbb}} 
+\index{tutomenu.h@{tutomenu.h}!UpdateInTutomenu@{UpdateInTutomenu}}
+\index{UpdateInTutomenu@{UpdateInTutomenu}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{UpdateInTutomenu()}{UpdateInTutomenu()}}
+{\footnotesize\ttfamily void Update\+In\+Tutomenu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ tutomenu.\+cpp の 129 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{tutomenu_8h_a869ff4a10965429f52625f46122fd8f8}\label{tutomenu_8h_a869ff4a10965429f52625f46122fd8f8}} 
+\index{tutomenu.h@{tutomenu.h}!UpdateTutomenu@{UpdateTutomenu}}
+\index{UpdateTutomenu@{UpdateTutomenu}!tutomenu.h@{tutomenu.h}}
+\doxysubsubsection{\texorpdfstring{UpdateTutomenu()}{UpdateTutomenu()}}
+{\footnotesize\ttfamily void Update\+Tutomenu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ tutomenu.\+cpp の 80 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10

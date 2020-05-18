@@ -1,0 +1,236 @@
+\hypertarget{sound_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/sound.h ファイル}
+\label{sound_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/sound.h@{C:/Users/HP/source/Repos/HitBallTarget/sound.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xaudio2.\+h\char`\"{}}\newline
+sound.\+h の依存先関係図\+:
+% FIG 0
+被依存関係図\+:
+% FIG 1
+\doxysubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac233476101b095e5af189b0f9ef26446}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+title01}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba9406c4d61d281fd8af7aa677c5c978b2}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+tutorial01}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac768cbc815c5ace2fa7e515ea6c1b38f}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+select01}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba699c598b940724d1ce50ff1ae5d62d54}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+normal01}}, 
+\newline
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55baeb41bd06bb2a7f4c42d78277a3bd783c}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+boss01}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac4c0b1c205ef364c8127cb8b7841825b}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+gameclear01}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba5cd25a48539e39d6c5bdfb33d2ad4adb}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+gameover01}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba6136ab0dd3385400c5cfbe4e3b1a81b2}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+attack01}}, 
+\newline
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55baf34d78cdaa2b9f12d69197da33c2d32f}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+attack02}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55badd6ca0e74f4c65e0a4f483846bcf53a4}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+attack03}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba2d155c428614b526a6b6e3e71f49d3cc}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+damage}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55baa97c9292f72e7968cac1ea63881b6aae}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+enter01}}, 
+\newline
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba88df93d0f590cb52f6927899cb2f2682}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+enter02}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba361a435f3da3d7cfd4e4e880ace0c220}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+enter03}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bae6786c6672bfd1f91b488703e75b3672}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+strat}}, 
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bae600b110d264157d9bc5430dd3462efe}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+swing}}, 
+\newline
+\mbox{\hyperlink{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac59b31531183465523dc22af3c17977d}{S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{sound_8h_a47147a8327be62d9dc3dd05db4752ff8}{Init\+Sound}} (H\+W\+ND h\+Wnd)
+\item 
+void \mbox{\hyperlink{sound_8h_adb0c5965a285c4f34d2051cbc71b3691}{Uninit\+Sound}} (void)
+\item 
+void \mbox{\hyperlink{sound_8h_a35c57e56563987d661008dbf450de87f}{Play\+Sound}} (int label)
+\item 
+void \mbox{\hyperlink{sound_8h_ae5df25309eadfa7b724d87ba341a7dde}{Stop\+Sound}} (int label)
+\item 
+void \mbox{\hyperlink{sound_8h_a87987088d93388a993739bbb8bc823b7}{Stop\+Sound}} (void)
+\item 
+void \mbox{\hyperlink{sound_8h_af9c2ae2ac796213689a12012f647b03a}{Master\+Volume\+Change}} (float num)
+\item 
+void \mbox{\hyperlink{sound_8h_a879ef8e59dd179761583110898c9931c}{Source\+Volume\+Change}} (float num, int sno)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{列挙型詳解}
+\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55b}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_BGM\_title01@{SOUND\_LABEL\_BGM\_title01}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_BGM\_title01@{SOUND\_LABEL\_BGM\_title01}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac233476101b095e5af189b0f9ef26446}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac233476101b095e5af189b0f9ef26446}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+title01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_BGM\_tutorial01@{SOUND\_LABEL\_BGM\_tutorial01}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_BGM\_tutorial01@{SOUND\_LABEL\_BGM\_tutorial01}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba9406c4d61d281fd8af7aa677c5c978b2}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba9406c4d61d281fd8af7aa677c5c978b2}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+tutorial01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_BGM\_select01@{SOUND\_LABEL\_BGM\_select01}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_BGM\_select01@{SOUND\_LABEL\_BGM\_select01}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac768cbc815c5ace2fa7e515ea6c1b38f}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac768cbc815c5ace2fa7e515ea6c1b38f}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+select01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_BGM\_normal01@{SOUND\_LABEL\_BGM\_normal01}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_BGM\_normal01@{SOUND\_LABEL\_BGM\_normal01}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba699c598b940724d1ce50ff1ae5d62d54}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba699c598b940724d1ce50ff1ae5d62d54}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+normal01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_BGM\_boss01@{SOUND\_LABEL\_BGM\_boss01}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_BGM\_boss01@{SOUND\_LABEL\_BGM\_boss01}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55baeb41bd06bb2a7f4c42d78277a3bd783c}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55baeb41bd06bb2a7f4c42d78277a3bd783c}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+boss01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_BGM\_gameclear01@{SOUND\_LABEL\_BGM\_gameclear01}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_BGM\_gameclear01@{SOUND\_LABEL\_BGM\_gameclear01}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac4c0b1c205ef364c8127cb8b7841825b}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac4c0b1c205ef364c8127cb8b7841825b}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+gameclear01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_BGM\_gameover01@{SOUND\_LABEL\_BGM\_gameover01}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_BGM\_gameover01@{SOUND\_LABEL\_BGM\_gameover01}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba5cd25a48539e39d6c5bdfb33d2ad4adb}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba5cd25a48539e39d6c5bdfb33d2ad4adb}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+B\+G\+M\+\_\+gameover01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_SE\_attack01@{SOUND\_LABEL\_SE\_attack01}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_SE\_attack01@{SOUND\_LABEL\_SE\_attack01}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba6136ab0dd3385400c5cfbe4e3b1a81b2}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba6136ab0dd3385400c5cfbe4e3b1a81b2}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+attack01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_SE\_attack02@{SOUND\_LABEL\_SE\_attack02}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_SE\_attack02@{SOUND\_LABEL\_SE\_attack02}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55baf34d78cdaa2b9f12d69197da33c2d32f}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55baf34d78cdaa2b9f12d69197da33c2d32f}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+attack02&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_SE\_attack03@{SOUND\_LABEL\_SE\_attack03}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_SE\_attack03@{SOUND\_LABEL\_SE\_attack03}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55badd6ca0e74f4c65e0a4f483846bcf53a4}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55badd6ca0e74f4c65e0a4f483846bcf53a4}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+attack03&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_SE\_damage@{SOUND\_LABEL\_SE\_damage}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_SE\_damage@{SOUND\_LABEL\_SE\_damage}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba2d155c428614b526a6b6e3e71f49d3cc}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba2d155c428614b526a6b6e3e71f49d3cc}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+damage&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_SE\_enter01@{SOUND\_LABEL\_SE\_enter01}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_SE\_enter01@{SOUND\_LABEL\_SE\_enter01}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55baa97c9292f72e7968cac1ea63881b6aae}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55baa97c9292f72e7968cac1ea63881b6aae}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+enter01&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_SE\_enter02@{SOUND\_LABEL\_SE\_enter02}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_SE\_enter02@{SOUND\_LABEL\_SE\_enter02}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba88df93d0f590cb52f6927899cb2f2682}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba88df93d0f590cb52f6927899cb2f2682}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+enter02&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_SE\_enter03@{SOUND\_LABEL\_SE\_enter03}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_SE\_enter03@{SOUND\_LABEL\_SE\_enter03}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba361a435f3da3d7cfd4e4e880ace0c220}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55ba361a435f3da3d7cfd4e4e880ace0c220}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+enter03&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_SE\_strat@{SOUND\_LABEL\_SE\_strat}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_SE\_strat@{SOUND\_LABEL\_SE\_strat}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bae6786c6672bfd1f91b488703e75b3672}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bae6786c6672bfd1f91b488703e75b3672}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+strat&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_SE\_swing@{SOUND\_LABEL\_SE\_swing}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_SE\_swing@{SOUND\_LABEL\_SE\_swing}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bae600b110d264157d9bc5430dd3462efe}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bae600b110d264157d9bc5430dd3462efe}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+S\+E\+\_\+swing&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_LABEL\_MAX@{SOUND\_LABEL\_MAX}!sound.h@{sound.h}}\index{sound.h@{sound.h}!SOUND\_LABEL\_MAX@{SOUND\_LABEL\_MAX}}}\mbox{\Hypertarget{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac59b31531183465523dc22af3c17977d}\label{sound_8h_a06fc87d81c62e9abb8790b6e5713c55bac59b31531183465523dc22af3c17977d}} 
+S\+O\+U\+N\+D\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ sound.\+h の 15 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{sound_8h_a47147a8327be62d9dc3dd05db4752ff8}\label{sound_8h_a47147a8327be62d9dc3dd05db4752ff8}} 
+\index{sound.h@{sound.h}!InitSound@{InitSound}}
+\index{InitSound@{InitSound}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{InitSound()}{InitSound()}}
+{\footnotesize\ttfamily bool Init\+Sound (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{h\+Wnd }\end{DoxyParamCaption})}
+
+
+
+ sound.\+cpp の 58 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 2
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{sound_8h_af9c2ae2ac796213689a12012f647b03a}\label{sound_8h_af9c2ae2ac796213689a12012f647b03a}} 
+\index{sound.h@{sound.h}!MasterVolumeChange@{MasterVolumeChange}}
+\index{MasterVolumeChange@{MasterVolumeChange}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{MasterVolumeChange()}{MasterVolumeChange()}}
+{\footnotesize\ttfamily void Master\+Volume\+Change (\begin{DoxyParamCaption}\item[{float}]{num }\end{DoxyParamCaption})}
+
+
+
+ sound.\+cpp の 402 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{sound_8h_a35c57e56563987d661008dbf450de87f}\label{sound_8h_a35c57e56563987d661008dbf450de87f}} 
+\index{sound.h@{sound.h}!PlaySound@{PlaySound}}
+\index{PlaySound@{PlaySound}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{PlaySound()}{PlaySound()}}
+{\footnotesize\ttfamily void Play\+Sound (\begin{DoxyParamCaption}\item[{int}]{label }\end{DoxyParamCaption})}
+
+
+
+ sound.\+cpp の 244 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{sound_8h_a879ef8e59dd179761583110898c9931c}\label{sound_8h_a879ef8e59dd179761583110898c9931c}} 
+\index{sound.h@{sound.h}!SourceVolumeChange@{SourceVolumeChange}}
+\index{SourceVolumeChange@{SourceVolumeChange}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{SourceVolumeChange()}{SourceVolumeChange()}}
+{\footnotesize\ttfamily void Source\+Volume\+Change (\begin{DoxyParamCaption}\item[{float}]{num,  }\item[{int}]{sno }\end{DoxyParamCaption})}
+
+
+
+ sound.\+cpp の 410 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{sound_8h_ae5df25309eadfa7b724d87ba341a7dde}\label{sound_8h_ae5df25309eadfa7b724d87ba341a7dde}} 
+\index{sound.h@{sound.h}!StopSound@{StopSound}}
+\index{StopSound@{StopSound}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{StopSound()}{StopSound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Stop\+Sound (\begin{DoxyParamCaption}\item[{int}]{label }\end{DoxyParamCaption})}
+
+
+
+ sound.\+cpp の 278 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{sound_8h_a87987088d93388a993739bbb8bc823b7}\label{sound_8h_a87987088d93388a993739bbb8bc823b7}} 
+\index{sound.h@{sound.h}!StopSound@{StopSound}}
+\index{StopSound@{StopSound}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{StopSound()}{StopSound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Stop\+Sound (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ sound.\+cpp の 297 行目に定義があります。
+
+\mbox{\Hypertarget{sound_8h_adb0c5965a285c4f34d2051cbc71b3691}\label{sound_8h_adb0c5965a285c4f34d2051cbc71b3691}} 
+\index{sound.h@{sound.h}!UninitSound@{UninitSound}}
+\index{UninitSound@{UninitSound}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{UninitSound()}{UninitSound()}}
+{\footnotesize\ttfamily void Uninit\+Sound (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ sound.\+cpp の 206 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8

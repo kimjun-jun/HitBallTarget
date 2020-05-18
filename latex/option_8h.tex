@@ -1,0 +1,245 @@
+\hypertarget{option_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/option.h ファイル}
+\label{option_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/option.h@{C:/Users/HP/source/Repos/HitBallTarget/option.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_o_p_t_i_o_n}{O\+P\+T\+I\+ON}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{option_8h_a2df741a8cb2fd0e8b3604af9f4fc479d}{T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+E\+S\+E\+L\+E\+CT}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/Mode\+Set.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{option_8h_a6e3f1cdbffdcd60b35828238b5f1d3bb}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R18}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/r18.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{option_8h_ad1de3f3148c8824b921542cd2af55b2b}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(200)
+\item 
+\#define \mbox{\hyperlink{option_8h_a74404e3dbc4b51e644831a4397998481}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(100)
+\item 
+\#define \mbox{\hyperlink{option_8h_a500b47bb2498e67d9ea011e0fa6e2abf}{O\+P\+T\+I\+O\+N\+\_\+\+P\+Y1\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/150)
+\item 
+\#define \mbox{\hyperlink{option_8h_af9cba56ea4f12e3b3ef4a53cc4643ae7}{O\+P\+T\+I\+O\+N\+\_\+\+P\+Y2\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+100)
+\item 
+\#define \mbox{\hyperlink{option_8h_a41cf622846579251d8ba4cb1d8c08998}{O\+P\+T\+I\+O\+N\+\_\+\+P\+X1\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/250)
+\item 
+\#define \mbox{\hyperlink{option_8h_a58f2389896b4f5a85f021cc1f6abde8a}{O\+P\+T\+I\+O\+N\+\_\+\+P\+X2\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+250)
+\item 
+\#define \mbox{\hyperlink{option_8h_a20852185ee3005b18824d855366ba646}{O\+P\+T\+I\+O\+N\+M\+AX}}~(4)
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{option_8h_aa5a5636d544181f16ac7efc611887592}{Init\+Option}} (int type)
+\item 
+void \mbox{\hyperlink{option_8h_a5ac3758e958820d11205e5f43c3dd271}{Re\+Init\+Option}} (void)
+\item 
+void \mbox{\hyperlink{option_8h_a40f48c120490c4b280a160ed0f74438f}{Uninit\+Option}} (void)
+\item 
+void \mbox{\hyperlink{option_8h_ae82309e83a51a2936b16f708c9941d6e}{Update\+Option}} (void)
+\item 
+void \mbox{\hyperlink{option_8h_af1875dc2ebff5b842eb9e0c3d46998d4}{Draw\+Option}} (void)
+\item 
+void \mbox{\hyperlink{option_8h_ab28c320e9b240ecfd9231c0bdc9e8466}{Set\+Vertex\+Option}} (void)
+\item 
+\mbox{\hyperlink{struct_o_p_t_i_o_n}{O\+P\+T\+I\+ON}} $\ast$ \mbox{\hyperlink{option_8h_ab6ea7ee5e480723e654392613b2a8dff}{Get\+Option}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{option_8h_a41cf622846579251d8ba4cb1d8c08998}\label{option_8h_a41cf622846579251d8ba4cb1d8c08998}} 
+\index{option.h@{option.h}!OPTION\_PX1\_POS\_X@{OPTION\_PX1\_POS\_X}}
+\index{OPTION\_PX1\_POS\_X@{OPTION\_PX1\_POS\_X}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{OPTION\_PX1\_POS\_X}{OPTION\_PX1\_POS\_X}}
+{\footnotesize\ttfamily \#define O\+P\+T\+I\+O\+N\+\_\+\+P\+X1\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/250)}
+
+
+
+ option.\+h の 23 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_a58f2389896b4f5a85f021cc1f6abde8a}\label{option_8h_a58f2389896b4f5a85f021cc1f6abde8a}} 
+\index{option.h@{option.h}!OPTION\_PX2\_POS\_X@{OPTION\_PX2\_POS\_X}}
+\index{OPTION\_PX2\_POS\_X@{OPTION\_PX2\_POS\_X}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{OPTION\_PX2\_POS\_X}{OPTION\_PX2\_POS\_X}}
+{\footnotesize\ttfamily \#define O\+P\+T\+I\+O\+N\+\_\+\+P\+X2\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+250)}
+
+
+
+ option.\+h の 24 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_a500b47bb2498e67d9ea011e0fa6e2abf}\label{option_8h_a500b47bb2498e67d9ea011e0fa6e2abf}} 
+\index{option.h@{option.h}!OPTION\_PY1\_POS\_Y@{OPTION\_PY1\_POS\_Y}}
+\index{OPTION\_PY1\_POS\_Y@{OPTION\_PY1\_POS\_Y}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{OPTION\_PY1\_POS\_Y}{OPTION\_PY1\_POS\_Y}}
+{\footnotesize\ttfamily \#define O\+P\+T\+I\+O\+N\+\_\+\+P\+Y1\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/150)}
+
+
+
+ option.\+h の 20 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_af9cba56ea4f12e3b3ef4a53cc4643ae7}\label{option_8h_af9cba56ea4f12e3b3ef4a53cc4643ae7}} 
+\index{option.h@{option.h}!OPTION\_PY2\_POS\_Y@{OPTION\_PY2\_POS\_Y}}
+\index{OPTION\_PY2\_POS\_Y@{OPTION\_PY2\_POS\_Y}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{OPTION\_PY2\_POS\_Y}{OPTION\_PY2\_POS\_Y}}
+{\footnotesize\ttfamily \#define O\+P\+T\+I\+O\+N\+\_\+\+P\+Y2\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+100)}
+
+
+
+ option.\+h の 21 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_a20852185ee3005b18824d855366ba646}\label{option_8h_a20852185ee3005b18824d855366ba646}} 
+\index{option.h@{option.h}!OPTIONMAX@{OPTIONMAX}}
+\index{OPTIONMAX@{OPTIONMAX}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{OPTIONMAX}{OPTIONMAX}}
+{\footnotesize\ttfamily \#define O\+P\+T\+I\+O\+N\+M\+AX~(4)}
+
+
+
+ option.\+h の 27 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_a2df741a8cb2fd0e8b3604af9f4fc479d}\label{option_8h_a2df741a8cb2fd0e8b3604af9f4fc479d}} 
+\index{option.h@{option.h}!TEXTURE\_MODESELECT@{TEXTURE\_MODESELECT}}
+\index{TEXTURE\_MODESELECT@{TEXTURE\_MODESELECT}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_MODESELECT}{TEXTURE\_MODESELECT}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+M\+O\+D\+E\+S\+E\+L\+E\+CT~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/Mode\+Set.\+png\char`\"{})}
+
+
+
+ option.\+h の 13 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_a6e3f1cdbffdcd60b35828238b5f1d3bb}\label{option_8h_a6e3f1cdbffdcd60b35828238b5f1d3bb}} 
+\index{option.h@{option.h}!TEXTURE\_R18@{TEXTURE\_R18}}
+\index{TEXTURE\_R18@{TEXTURE\_R18}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_R18}{TEXTURE\_R18}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R18~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/r18.\+png\char`\"{})}
+
+
+
+ option.\+h の 14 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_ad1de3f3148c8824b921542cd2af55b2b}\label{option_8h_ad1de3f3148c8824b921542cd2af55b2b}} 
+\index{option.h@{option.h}!TEXTURE\_SENSITIV\_SIZE\_X@{TEXTURE\_SENSITIV\_SIZE\_X}}
+\index{TEXTURE\_SENSITIV\_SIZE\_X@{TEXTURE\_SENSITIV\_SIZE\_X}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SENSITIV\_SIZE\_X}{TEXTURE\_SENSITIV\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+\_\+\+S\+I\+Z\+E\+\_\+X~(200)}
+
+
+
+ option.\+h の 17 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_a74404e3dbc4b51e644831a4397998481}\label{option_8h_a74404e3dbc4b51e644831a4397998481}} 
+\index{option.h@{option.h}!TEXTURE\_SENSITIV\_SIZE\_Y@{TEXTURE\_SENSITIV\_SIZE\_Y}}
+\index{TEXTURE\_SENSITIV\_SIZE\_Y@{TEXTURE\_SENSITIV\_SIZE\_Y}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_SENSITIV\_SIZE\_Y}{TEXTURE\_SENSITIV\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+\_\+\+S\+I\+Z\+E\+\_\+Y~(100)}
+
+
+
+ option.\+h の 18 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{option_8h_af1875dc2ebff5b842eb9e0c3d46998d4}\label{option_8h_af1875dc2ebff5b842eb9e0c3d46998d4}} 
+\index{option.h@{option.h}!DrawOption@{DrawOption}}
+\index{DrawOption@{DrawOption}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{DrawOption()}{DrawOption()}}
+{\footnotesize\ttfamily void Draw\+Option (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ option.\+cpp の 167 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{option_8h_ab6ea7ee5e480723e654392613b2a8dff}\label{option_8h_ab6ea7ee5e480723e654392613b2a8dff}} 
+\index{option.h@{option.h}!GetOption@{GetOption}}
+\index{GetOption@{GetOption}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{GetOption()}{GetOption()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_o_p_t_i_o_n}{O\+P\+T\+I\+ON}}$\ast$ Get\+Option (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ option.\+cpp の 350 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_aa5a5636d544181f16ac7efc611887592}\label{option_8h_aa5a5636d544181f16ac7efc611887592}} 
+\index{option.h@{option.h}!InitOption@{InitOption}}
+\index{InitOption@{InitOption}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{InitOption()}{InitOption()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Option (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ option.\+cpp の 30 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{option_8h_a5ac3758e958820d11205e5f43c3dd271}\label{option_8h_a5ac3758e958820d11205e5f43c3dd271}} 
+\index{option.h@{option.h}!ReInitOption@{ReInitOption}}
+\index{ReInitOption@{ReInitOption}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{ReInitOption()}{ReInitOption()}}
+{\footnotesize\ttfamily void Re\+Init\+Option (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ option.\+cpp の 65 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{option_8h_ab28c320e9b240ecfd9231c0bdc9e8466}\label{option_8h_ab28c320e9b240ecfd9231c0bdc9e8466}} 
+\index{option.h@{option.h}!SetVertexOption@{SetVertexOption}}
+\index{SetVertexOption@{SetVertexOption}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{SetVertexOption()}{SetVertexOption()}}
+{\footnotesize\ttfamily void Set\+Vertex\+Option (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ option.\+cpp の 251 行目に定義があります。
+
+\mbox{\Hypertarget{option_8h_a40f48c120490c4b280a160ed0f74438f}\label{option_8h_a40f48c120490c4b280a160ed0f74438f}} 
+\index{option.h@{option.h}!UninitOption@{UninitOption}}
+\index{UninitOption@{UninitOption}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{UninitOption()}{UninitOption()}}
+{\footnotesize\ttfamily void Uninit\+Option (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ option.\+cpp の 75 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{option_8h_ae82309e83a51a2936b16f708c9941d6e}\label{option_8h_ae82309e83a51a2936b16f708c9941d6e}} 
+\index{option.h@{option.h}!UpdateOption@{UpdateOption}}
+\index{UpdateOption@{UpdateOption}!option.h@{option.h}}
+\doxysubsubsection{\texorpdfstring{UpdateOption()}{UpdateOption()}}
+{\footnotesize\ttfamily void Update\+Option (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ option.\+cpp の 90 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8

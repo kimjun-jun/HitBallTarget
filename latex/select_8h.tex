@@ -1,0 +1,367 @@
+\hypertarget{select_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/select.h ファイル}
+\label{select_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/select.h@{C:/Users/HP/source/Repos/HitBallTarget/select.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_e_l_e_c_t}{S\+E\+L\+E\+CT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{select_8h_a0a27fc26bb5d911a3d0f78691fb28c1b}{T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+A\+SY}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/easy.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{select_8h_a469a44f994ac335aa8e9b7da3f60be0e}{T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+A\+S\+Y\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(200)
+\item 
+\#define \mbox{\hyperlink{select_8h_a16e637cbdea53d9c1f6610a4d3587a7e}{T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+A\+S\+Y\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(100)
+\item 
+\#define \mbox{\hyperlink{select_8h_af23f5451fbbb95d622c210f7471a7855}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+O\+R\+M\+AL}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/normal.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{select_8h_a6fd46bf0efaef6058a4cbcca8a95ca48}{T\+E\+X\+T\+U\+R\+E\+\_\+\+H\+A\+RD}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/hard.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{select_8h_a78d076a4b0e4181f36075ebcb757b722}{T\+E\+X\+T\+U\+R\+E\+\_\+\+L\+E\+V\+EL}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/level.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{select_8h_a8f08ad64fa9eb0ebf6da0a26f8c71438}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+NG}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/ranking.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{select_8h_a808e629ab7b8646856ab4cc69996cab9}{E\+A\+S\+Y\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/650)
+\item 
+\#define \mbox{\hyperlink{select_8h_a093a537c683ee05975e2357a3425cf1b}{N\+O\+R\+M\+A\+L\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/400)
+\item 
+\#define \mbox{\hyperlink{select_8h_aa25ba44f2aa817900d72bb9aa993f68b}{H\+R\+A\+D\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/150)
+\item 
+\#define \mbox{\hyperlink{select_8h_a96bb2a951c48dc4f50bf8236c3140a5d}{L\+E\+V\+E\+L\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/850)
+\item 
+\#define \mbox{\hyperlink{select_8h_af07dfcd86a6118ad51466a926471ccb1}{E\+A\+S\+Y\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a9b6bc9242882d1e758e06ed751a2e8ec}{S\+C\+R\+E\+E\+N\+\_\+W}}-\/900)
+\item 
+\#define \mbox{\hyperlink{select_8h_adcf4cc44dc988b106e58f743abf172c0}{L\+E\+V\+E\+L\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a9b6bc9242882d1e758e06ed751a2e8ec}{S\+C\+R\+E\+E\+N\+\_\+W}}-\/1000)
+\item 
+\#define \mbox{\hyperlink{select_8h_a05b35ff04c16d9281f3e1592bb5e9630}{T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+N\+T\+ER}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/enterstart.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{select_8h_a8d318e46f0681eb279b8686393b88b0d}{T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(300)
+\item 
+\#define \mbox{\hyperlink{select_8h_a68b68c71531db04a0307a066357fd684}{T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(200)
+\item 
+\#define \mbox{\hyperlink{select_8h_ae185af5b3fa9be86622d9adc9fc7a548}{E\+N\+T\+E\+Ror\+S\+T\+A\+R\+T\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/400)
+\item 
+\#define \mbox{\hyperlink{select_8h_a8edbc0baa111454c672b06b12e19c0e9}{E\+N\+T\+E\+Ror\+S\+T\+A\+R\+T\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a9b6bc9242882d1e758e06ed751a2e8ec}{S\+C\+R\+E\+E\+N\+\_\+W}}-\/350)
+\item 
+\#define \mbox{\hyperlink{select_8h_a217878fa84ef5b04d2455a05f58cf8fc}{S\+M\+AX}}~(5)
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{select_8h_a268119fc30b523a85496a7e32e121380}{Init\+Select}} (int type)
+\item 
+void \mbox{\hyperlink{select_8h_aa27a475fe926e3124e9e8d11a168ee99}{Uninit\+Select}} (void)
+\item 
+void \mbox{\hyperlink{select_8h_a2ab6639c2a09570c7005849604dfd590}{Update\+Select}} (void)
+\item 
+void \mbox{\hyperlink{select_8h_afaea90b82cec79025a08fc62eaea0073}{Draw\+Select}} (void)
+\item 
+void \mbox{\hyperlink{select_8h_a47676653fd95e235339715825a44b184}{Set\+Texture\+Select}} (void)
+\item 
+void \mbox{\hyperlink{select_8h_aa1a1735224035decf294f7b7f1662132}{Set\+Vertex\+Select}} (void)
+\item 
+int \mbox{\hyperlink{select_8h_a1a3e897892ccc68c190802d7bfc1771e}{Get\+Spos}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{select_8h_af07dfcd86a6118ad51466a926471ccb1}\label{select_8h_af07dfcd86a6118ad51466a926471ccb1}} 
+\index{select.h@{select.h}!EASY\_POS\_X@{EASY\_POS\_X}}
+\index{EASY\_POS\_X@{EASY\_POS\_X}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{EASY\_POS\_X}{EASY\_POS\_X}}
+{\footnotesize\ttfamily \#define E\+A\+S\+Y\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a9b6bc9242882d1e758e06ed751a2e8ec}{S\+C\+R\+E\+E\+N\+\_\+W}}-\/900)}
+
+
+
+ select.\+h の 29 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a808e629ab7b8646856ab4cc69996cab9}\label{select_8h_a808e629ab7b8646856ab4cc69996cab9}} 
+\index{select.h@{select.h}!EASY\_POS\_Y@{EASY\_POS\_Y}}
+\index{EASY\_POS\_Y@{EASY\_POS\_Y}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{EASY\_POS\_Y}{EASY\_POS\_Y}}
+{\footnotesize\ttfamily \#define E\+A\+S\+Y\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/650)}
+
+
+
+ select.\+h の 23 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a8edbc0baa111454c672b06b12e19c0e9}\label{select_8h_a8edbc0baa111454c672b06b12e19c0e9}} 
+\index{select.h@{select.h}!ENTERorSTART\_POS\_X@{ENTERorSTART\_POS\_X}}
+\index{ENTERorSTART\_POS\_X@{ENTERorSTART\_POS\_X}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{ENTERorSTART\_POS\_X}{ENTERorSTART\_POS\_X}}
+{\footnotesize\ttfamily \#define E\+N\+T\+E\+Ror\+S\+T\+A\+R\+T\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a9b6bc9242882d1e758e06ed751a2e8ec}{S\+C\+R\+E\+E\+N\+\_\+W}}-\/350)}
+
+
+
+ select.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_ae185af5b3fa9be86622d9adc9fc7a548}\label{select_8h_ae185af5b3fa9be86622d9adc9fc7a548}} 
+\index{select.h@{select.h}!ENTERorSTART\_POS\_Y@{ENTERorSTART\_POS\_Y}}
+\index{ENTERorSTART\_POS\_Y@{ENTERorSTART\_POS\_Y}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{ENTERorSTART\_POS\_Y}{ENTERorSTART\_POS\_Y}}
+{\footnotesize\ttfamily \#define E\+N\+T\+E\+Ror\+S\+T\+A\+R\+T\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/400)}
+
+
+
+ select.\+h の 36 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_aa25ba44f2aa817900d72bb9aa993f68b}\label{select_8h_aa25ba44f2aa817900d72bb9aa993f68b}} 
+\index{select.h@{select.h}!HRAD\_POS\_Y@{HRAD\_POS\_Y}}
+\index{HRAD\_POS\_Y@{HRAD\_POS\_Y}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{HRAD\_POS\_Y}{HRAD\_POS\_Y}}
+{\footnotesize\ttfamily \#define H\+R\+A\+D\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/150)}
+
+
+
+ select.\+h の 25 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_adcf4cc44dc988b106e58f743abf172c0}\label{select_8h_adcf4cc44dc988b106e58f743abf172c0}} 
+\index{select.h@{select.h}!LEVEL\_POS\_X@{LEVEL\_POS\_X}}
+\index{LEVEL\_POS\_X@{LEVEL\_POS\_X}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{LEVEL\_POS\_X}{LEVEL\_POS\_X}}
+{\footnotesize\ttfamily \#define L\+E\+V\+E\+L\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a9b6bc9242882d1e758e06ed751a2e8ec}{S\+C\+R\+E\+E\+N\+\_\+W}}-\/1000)}
+
+
+
+ select.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a96bb2a951c48dc4f50bf8236c3140a5d}\label{select_8h_a96bb2a951c48dc4f50bf8236c3140a5d}} 
+\index{select.h@{select.h}!LEVEL\_POS\_Y@{LEVEL\_POS\_Y}}
+\index{LEVEL\_POS\_Y@{LEVEL\_POS\_Y}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{LEVEL\_POS\_Y}{LEVEL\_POS\_Y}}
+{\footnotesize\ttfamily \#define L\+E\+V\+E\+L\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/850)}
+
+
+
+ select.\+h の 26 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a093a537c683ee05975e2357a3425cf1b}\label{select_8h_a093a537c683ee05975e2357a3425cf1b}} 
+\index{select.h@{select.h}!NORMAL\_POS\_Y@{NORMAL\_POS\_Y}}
+\index{NORMAL\_POS\_Y@{NORMAL\_POS\_Y}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{NORMAL\_POS\_Y}{NORMAL\_POS\_Y}}
+{\footnotesize\ttfamily \#define N\+O\+R\+M\+A\+L\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a27cddfd509d28b4b2b0b44c093fac090}{S\+C\+R\+E\+E\+N\+\_\+H}}-\/400)}
+
+
+
+ select.\+h の 24 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a217878fa84ef5b04d2455a05f58cf8fc}\label{select_8h_a217878fa84ef5b04d2455a05f58cf8fc}} 
+\index{select.h@{select.h}!SMAX@{SMAX}}
+\index{SMAX@{SMAX}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{SMAX}{SMAX}}
+{\footnotesize\ttfamily \#define S\+M\+AX~(5)}
+
+
+
+ select.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a0a27fc26bb5d911a3d0f78691fb28c1b}\label{select_8h_a0a27fc26bb5d911a3d0f78691fb28c1b}} 
+\index{select.h@{select.h}!TEXTURE\_EASY@{TEXTURE\_EASY}}
+\index{TEXTURE\_EASY@{TEXTURE\_EASY}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_EASY}{TEXTURE\_EASY}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+A\+SY~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/easy.\+png\char`\"{})}
+
+
+
+ select.\+h の 13 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a469a44f994ac335aa8e9b7da3f60be0e}\label{select_8h_a469a44f994ac335aa8e9b7da3f60be0e}} 
+\index{select.h@{select.h}!TEXTURE\_EASY\_SIZE\_X@{TEXTURE\_EASY\_SIZE\_X}}
+\index{TEXTURE\_EASY\_SIZE\_X@{TEXTURE\_EASY\_SIZE\_X}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_EASY\_SIZE\_X}{TEXTURE\_EASY\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+A\+S\+Y\+\_\+\+S\+I\+Z\+E\+\_\+X~(200)}
+
+
+
+ select.\+h の 14 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a16e637cbdea53d9c1f6610a4d3587a7e}\label{select_8h_a16e637cbdea53d9c1f6610a4d3587a7e}} 
+\index{select.h@{select.h}!TEXTURE\_EASY\_SIZE\_Y@{TEXTURE\_EASY\_SIZE\_Y}}
+\index{TEXTURE\_EASY\_SIZE\_Y@{TEXTURE\_EASY\_SIZE\_Y}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_EASY\_SIZE\_Y}{TEXTURE\_EASY\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+A\+S\+Y\+\_\+\+S\+I\+Z\+E\+\_\+Y~(100)}
+
+
+
+ select.\+h の 15 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a05b35ff04c16d9281f3e1592bb5e9630}\label{select_8h_a05b35ff04c16d9281f3e1592bb5e9630}} 
+\index{select.h@{select.h}!TEXTURE\_ENTER@{TEXTURE\_ENTER}}
+\index{TEXTURE\_ENTER@{TEXTURE\_ENTER}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_ENTER}{TEXTURE\_ENTER}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+N\+T\+ER~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/enterstart.\+png\char`\"{})}
+
+
+
+ select.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a8d318e46f0681eb279b8686393b88b0d}\label{select_8h_a8d318e46f0681eb279b8686393b88b0d}} 
+\index{select.h@{select.h}!TEXTURE\_ENTER\_SIZE\_X@{TEXTURE\_ENTER\_SIZE\_X}}
+\index{TEXTURE\_ENTER\_SIZE\_X@{TEXTURE\_ENTER\_SIZE\_X}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_ENTER\_SIZE\_X}{TEXTURE\_ENTER\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+X~(300)}
+
+
+
+ select.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a68b68c71531db04a0307a066357fd684}\label{select_8h_a68b68c71531db04a0307a066357fd684}} 
+\index{select.h@{select.h}!TEXTURE\_ENTER\_SIZE\_Y@{TEXTURE\_ENTER\_SIZE\_Y}}
+\index{TEXTURE\_ENTER\_SIZE\_Y@{TEXTURE\_ENTER\_SIZE\_Y}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_ENTER\_SIZE\_Y}{TEXTURE\_ENTER\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+E\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+Y~(200)}
+
+
+
+ select.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a6fd46bf0efaef6058a4cbcca8a95ca48}\label{select_8h_a6fd46bf0efaef6058a4cbcca8a95ca48}} 
+\index{select.h@{select.h}!TEXTURE\_HARD@{TEXTURE\_HARD}}
+\index{TEXTURE\_HARD@{TEXTURE\_HARD}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_HARD}{TEXTURE\_HARD}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+H\+A\+RD~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/hard.\+png\char`\"{})}
+
+
+
+ select.\+h の 18 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a78d076a4b0e4181f36075ebcb757b722}\label{select_8h_a78d076a4b0e4181f36075ebcb757b722}} 
+\index{select.h@{select.h}!TEXTURE\_LEVEL@{TEXTURE\_LEVEL}}
+\index{TEXTURE\_LEVEL@{TEXTURE\_LEVEL}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_LEVEL}{TEXTURE\_LEVEL}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+L\+E\+V\+EL~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/level.\+png\char`\"{})}
+
+
+
+ select.\+h の 19 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_af23f5451fbbb95d622c210f7471a7855}\label{select_8h_af23f5451fbbb95d622c210f7471a7855}} 
+\index{select.h@{select.h}!TEXTURE\_NORMAL@{TEXTURE\_NORMAL}}
+\index{TEXTURE\_NORMAL@{TEXTURE\_NORMAL}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_NORMAL}{TEXTURE\_NORMAL}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+O\+R\+M\+AL~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/normal.\+png\char`\"{})}
+
+
+
+ select.\+h の 17 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_a8f08ad64fa9eb0ebf6da0a26f8c71438}\label{select_8h_a8f08ad64fa9eb0ebf6da0a26f8c71438}} 
+\index{select.h@{select.h}!TEXTURE\_RANKING@{TEXTURE\_RANKING}}
+\index{TEXTURE\_RANKING@{TEXTURE\_RANKING}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING}{TEXTURE\_RANKING}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+NG~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/ranking.\+png\char`\"{})}
+
+
+
+ select.\+h の 20 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{select_8h_afaea90b82cec79025a08fc62eaea0073}\label{select_8h_afaea90b82cec79025a08fc62eaea0073}} 
+\index{select.h@{select.h}!DrawSelect@{DrawSelect}}
+\index{DrawSelect@{DrawSelect}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{DrawSelect()}{DrawSelect()}}
+{\footnotesize\ttfamily void Draw\+Select (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ select.\+cpp の 149 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{select_8h_a1a3e897892ccc68c190802d7bfc1771e}\label{select_8h_a1a3e897892ccc68c190802d7bfc1771e}} 
+\index{select.h@{select.h}!GetSpos@{GetSpos}}
+\index{GetSpos@{GetSpos}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{GetSpos()}{GetSpos()}}
+{\footnotesize\ttfamily int Get\+Spos (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ select.\+cpp の 366 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{select_8h_a268119fc30b523a85496a7e32e121380}\label{select_8h_a268119fc30b523a85496a7e32e121380}} 
+\index{select.h@{select.h}!InitSelect@{InitSelect}}
+\index{InitSelect@{InitSelect}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{InitSelect()}{InitSelect()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Select (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ select.\+cpp の 30 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 4
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{select_8h_a47676653fd95e235339715825a44b184}\label{select_8h_a47676653fd95e235339715825a44b184}} 
+\index{select.h@{select.h}!SetTextureSelect@{SetTextureSelect}}
+\index{SetTextureSelect@{SetTextureSelect}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{SetTextureSelect()}{SetTextureSelect()}}
+{\footnotesize\ttfamily void Set\+Texture\+Select (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ select.\+cpp の 247 行目に定義があります。
+
+\mbox{\Hypertarget{select_8h_aa1a1735224035decf294f7b7f1662132}\label{select_8h_aa1a1735224035decf294f7b7f1662132}} 
+\index{select.h@{select.h}!SetVertexSelect@{SetVertexSelect}}
+\index{SetVertexSelect@{SetVertexSelect}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{SetVertexSelect()}{SetVertexSelect()}}
+{\footnotesize\ttfamily void Set\+Vertex\+Select (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ select.\+cpp の 280 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{select_8h_aa27a475fe926e3124e9e8d11a168ee99}\label{select_8h_aa27a475fe926e3124e9e8d11a168ee99}} 
+\index{select.h@{select.h}!UninitSelect@{UninitSelect}}
+\index{UninitSelect@{UninitSelect}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{UninitSelect()}{UninitSelect()}}
+{\footnotesize\ttfamily void Uninit\+Select (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ select.\+cpp の 72 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{select_8h_a2ab6639c2a09570c7005849604dfd590}\label{select_8h_a2ab6639c2a09570c7005849604dfd590}} 
+\index{select.h@{select.h}!UpdateSelect@{UpdateSelect}}
+\index{UpdateSelect@{UpdateSelect}!select.h@{select.h}}
+\doxysubsubsection{\texorpdfstring{UpdateSelect()}{UpdateSelect()}}
+{\footnotesize\ttfamily void Update\+Select (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ select.\+cpp の 87 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9

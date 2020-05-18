@@ -1,0 +1,499 @@
+\hypertarget{ui_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/ui.h ファイル}
+\label{ui_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/ui.h@{C:/Users/HP/source/Repos/HitBallTarget/ui.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_ui}{Ui}}
+\item 
+struct \mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}}
+\item 
+struct \mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ui_8h_adf3883bc403d4d58d1e43c3a3aa108e0}{U\+I\+\_\+\+G\+O\+U\+K\+EI}}~(2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a98bf4fefbc61439407eca9f40b5e4157}{T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+R\+I\+KE}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/item/strike.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{ui_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(150/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_ad0bde38dcf19ee2758f77670d4e65077}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(180/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_ab0422264886541e4099450820f1f28e5}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+B\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(150/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a47d8ecdc3c90232fa1059bcb1f413452}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+B\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(180/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a419aa744e11ecd8c7126133eb15894fb}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE}}~((\mbox{\hyperlink{ui_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{ui_8h_ad0bde38dcf19ee2758f77670d4e65077}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_ae724969cd6e934a3199d5edec8cb1950}{S\+T\+R\+I\+K\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X}}~(1)
+\item 
+\#define \mbox{\hyperlink{ui_8h_ace7436658700f540f2ac5bfa7f724a38}{S\+T\+R\+I\+K\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y}}~(1)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a9666e8958c8beefb3f17d83a195c718b}{S\+T\+R\+I\+K\+E\+\_\+\+A\+N\+I\+M\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+N\+UM}}~(\mbox{\hyperlink{ui_8h_ae724969cd6e934a3199d5edec8cb1950}{S\+T\+R\+I\+K\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X}}$\ast$\mbox{\hyperlink{ui_8h_ace7436658700f540f2ac5bfa7f724a38}{S\+T\+R\+I\+K\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y}})
+\item 
+\#define \mbox{\hyperlink{ui_8h_ad5aff3ff5729e289a429f028cd9d0726}{S\+T\+R\+I\+K\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON}}~(4)
+\item 
+\#define \mbox{\hyperlink{ui_8h_aef1364577e8d161ec8823caa37d9828e}{S\+T\+R\+I\+K\+E\+\_\+\+G\+O\+U\+K\+EI}}~(1)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a7395cb7a89548f2b84ad8c1fd2cb1ef8}{S\+T\+R\+I\+K\+E\+\_\+\+NO}}~(0)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a6f2bca575ed5e97bef629b28ff8d4a32}{T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+C\+U\+R\+S\+OR}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/item/batcursor.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{ui_8h_a38194695d5b610404dc05ceb4d4cc498}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(75/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a2911fb2f68e9b1908f501ec407c5f4c1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(75/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_aee439a0fbbd6d9b42a9a0408845cb5ca}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE}}~((\mbox{\hyperlink{ui_8h_a38194695d5b610404dc05ceb4d4cc498}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{ui_8h_a2911fb2f68e9b1908f501ec407c5f4c1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a967b4d49de60d2e28116fcbccfa19542}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(30/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a12f3b5c83fcc875e19ec0553284c119a}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(30/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_acce142b21cc095d401f48f72d12872b3}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE}}~((\mbox{\hyperlink{ui_8h_a967b4d49de60d2e28116fcbccfa19542}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{ui_8h_a12f3b5c83fcc875e19ec0553284c119a}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)
+\item 
+\#define \mbox{\hyperlink{ui_8h_ae89c44ad43d96b7423c399fbc23afaf4}{C\+U\+R\+S\+O\+R\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X}}~(1)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a17bebd442c802fbc5e4a31b4c82262aa}{C\+U\+R\+S\+O\+R\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y}}~(1)
+\item 
+\#define \mbox{\hyperlink{ui_8h_ad69b2c1c8ebd6d0c56558ff8e9ede20c}{C\+U\+R\+S\+O\+R\+\_\+\+A\+N\+I\+M\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+N\+UM}}~(\mbox{\hyperlink{ui_8h_ae89c44ad43d96b7423c399fbc23afaf4}{C\+U\+R\+S\+O\+R\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X}}$\ast$\mbox{\hyperlink{ui_8h_a17bebd442c802fbc5e4a31b4c82262aa}{C\+U\+R\+S\+O\+R\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y}})
+\item 
+\#define \mbox{\hyperlink{ui_8h_a3730c8194c69ed5d0389500077a25fe0}{C\+U\+R\+S\+O\+R\+\_\+\+T\+I\+M\+E\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON}}~(4)
+\item 
+\#define \mbox{\hyperlink{ui_8h_a2b946dae9307d5bbf004183e2aad8dde}{C\+U\+R\+S\+O\+R\+\_\+\+G\+O\+U\+K\+EI}}~(1)
+\item 
+\#define \mbox{\hyperlink{ui_8h_abb6daccf7d74f8f869b746be83754665}{C\+U\+R\+S\+O\+R\+\_\+\+NO}}~(1)
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{ui_8h_accae1e726bfc998ff6df9736d5400585}{Init\+Ui}} (int type)
+\item 
+void \mbox{\hyperlink{ui_8h_a693e48dd0a10a6958c8854a9a39ec3da}{Re\+Init\+Ui}} (void)
+\item 
+void \mbox{\hyperlink{ui_8h_ad78b009c4ed7deda9a09263261f34e00}{Uninit\+Ui}} (void)
+\item 
+void \mbox{\hyperlink{ui_8h_a014481bffd4b282975575ed486cbd1a2}{Update\+Ui}} (void)
+\item 
+void \mbox{\hyperlink{ui_8h_ae3df37429d2c82413d292a1e775b98e4}{Draw\+Ui}} (void)
+\item 
+\mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}} $\ast$ \mbox{\hyperlink{ui_8h_a64378fa1372297d3c72ce483c18d10fe}{Get\+Strike}} (void)
+\item 
+\mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}} $\ast$ \mbox{\hyperlink{ui_8h_a7c9aa56d772450fdb3be7f367988a355}{Get\+\_\+\+Cursor}} (void)
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{ui_8h_a5097066d134843b098a060000c069472}{Make\+Vertex\+Ui}} (int i)
+\item 
+void \mbox{\hyperlink{ui_8h_a909589cd191353783f68784df1b83c18}{Set\+Texture\+Ui}} (int cnt\+Pattern, int i)
+\item 
+void \mbox{\hyperlink{ui_8h_aad8c0b6bd1326b4aea24bbf5c6590fcb}{Set\+Vertex\+Ui}} (int i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{ui_8h_ad69b2c1c8ebd6d0c56558ff8e9ede20c}\label{ui_8h_ad69b2c1c8ebd6d0c56558ff8e9ede20c}} 
+\index{ui.h@{ui.h}!CURSOR\_ANIM\_PATTERN\_NUM@{CURSOR\_ANIM\_PATTERN\_NUM}}
+\index{CURSOR\_ANIM\_PATTERN\_NUM@{CURSOR\_ANIM\_PATTERN\_NUM}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_ANIM\_PATTERN\_NUM}{CURSOR\_ANIM\_PATTERN\_NUM}}
+{\footnotesize\ttfamily \#define C\+U\+R\+S\+O\+R\+\_\+\+A\+N\+I\+M\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+N\+UM~(\mbox{\hyperlink{ui_8h_ae89c44ad43d96b7423c399fbc23afaf4}{C\+U\+R\+S\+O\+R\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X}}$\ast$\mbox{\hyperlink{ui_8h_a17bebd442c802fbc5e4a31b4c82262aa}{C\+U\+R\+S\+O\+R\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y}})}
+
+
+
+ ui.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a2b946dae9307d5bbf004183e2aad8dde}\label{ui_8h_a2b946dae9307d5bbf004183e2aad8dde}} 
+\index{ui.h@{ui.h}!CURSOR\_GOUKEI@{CURSOR\_GOUKEI}}
+\index{CURSOR\_GOUKEI@{CURSOR\_GOUKEI}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_GOUKEI}{CURSOR\_GOUKEI}}
+{\footnotesize\ttfamily \#define C\+U\+R\+S\+O\+R\+\_\+\+G\+O\+U\+K\+EI~(1)}
+
+
+
+ ui.\+h の 54 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_abb6daccf7d74f8f869b746be83754665}\label{ui_8h_abb6daccf7d74f8f869b746be83754665}} 
+\index{ui.h@{ui.h}!CURSOR\_NO@{CURSOR\_NO}}
+\index{CURSOR\_NO@{CURSOR\_NO}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_NO}{CURSOR\_NO}}
+{\footnotesize\ttfamily \#define C\+U\+R\+S\+O\+R\+\_\+\+NO~(1)}
+
+
+
+ ui.\+h の 56 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_ae89c44ad43d96b7423c399fbc23afaf4}\label{ui_8h_ae89c44ad43d96b7423c399fbc23afaf4}} 
+\index{ui.h@{ui.h}!CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_X@{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_X}}
+\index{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_X@{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_X}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_X}{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_X}}
+{\footnotesize\ttfamily \#define C\+U\+R\+S\+O\+R\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X~(1)}
+
+
+
+ ui.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a17bebd442c802fbc5e4a31b4c82262aa}\label{ui_8h_a17bebd442c802fbc5e4a31b4c82262aa}} 
+\index{ui.h@{ui.h}!CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_Y@{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_Y}}
+\index{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_Y@{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_Y}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_Y}{CURSOR\_TEXTURE\_PATTERN\_DIVIDE\_Y}}
+{\footnotesize\ttfamily \#define C\+U\+R\+S\+O\+R\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y~(1)}
+
+
+
+ ui.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a3730c8194c69ed5d0389500077a25fe0}\label{ui_8h_a3730c8194c69ed5d0389500077a25fe0}} 
+\index{ui.h@{ui.h}!CURSOR\_TIME\_ANIMATION@{CURSOR\_TIME\_ANIMATION}}
+\index{CURSOR\_TIME\_ANIMATION@{CURSOR\_TIME\_ANIMATION}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_TIME\_ANIMATION}{CURSOR\_TIME\_ANIMATION}}
+{\footnotesize\ttfamily \#define C\+U\+R\+S\+O\+R\+\_\+\+T\+I\+M\+E\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON~(4)}
+
+
+
+ ui.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a9666e8958c8beefb3f17d83a195c718b}\label{ui_8h_a9666e8958c8beefb3f17d83a195c718b}} 
+\index{ui.h@{ui.h}!STRIKE\_ANIM\_PATTERN\_NUM@{STRIKE\_ANIM\_PATTERN\_NUM}}
+\index{STRIKE\_ANIM\_PATTERN\_NUM@{STRIKE\_ANIM\_PATTERN\_NUM}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{STRIKE\_ANIM\_PATTERN\_NUM}{STRIKE\_ANIM\_PATTERN\_NUM}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+K\+E\+\_\+\+A\+N\+I\+M\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+N\+UM~(\mbox{\hyperlink{ui_8h_ae724969cd6e934a3199d5edec8cb1950}{S\+T\+R\+I\+K\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X}}$\ast$\mbox{\hyperlink{ui_8h_ace7436658700f540f2ac5bfa7f724a38}{S\+T\+R\+I\+K\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y}})}
+
+
+
+ ui.\+h の 29 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_aef1364577e8d161ec8823caa37d9828e}\label{ui_8h_aef1364577e8d161ec8823caa37d9828e}} 
+\index{ui.h@{ui.h}!STRIKE\_GOUKEI@{STRIKE\_GOUKEI}}
+\index{STRIKE\_GOUKEI@{STRIKE\_GOUKEI}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{STRIKE\_GOUKEI}{STRIKE\_GOUKEI}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+K\+E\+\_\+\+G\+O\+U\+K\+EI~(1)}
+
+
+
+ ui.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a7395cb7a89548f2b84ad8c1fd2cb1ef8}\label{ui_8h_a7395cb7a89548f2b84ad8c1fd2cb1ef8}} 
+\index{ui.h@{ui.h}!STRIKE\_NO@{STRIKE\_NO}}
+\index{STRIKE\_NO@{STRIKE\_NO}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{STRIKE\_NO}{STRIKE\_NO}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+K\+E\+\_\+\+NO~(0)}
+
+
+
+ ui.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_ae724969cd6e934a3199d5edec8cb1950}\label{ui_8h_ae724969cd6e934a3199d5edec8cb1950}} 
+\index{ui.h@{ui.h}!STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_X@{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_X}}
+\index{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_X@{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_X}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_X}{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_X}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+K\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+X~(1)}
+
+
+
+ ui.\+h の 27 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_ace7436658700f540f2ac5bfa7f724a38}\label{ui_8h_ace7436658700f540f2ac5bfa7f724a38}} 
+\index{ui.h@{ui.h}!STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_Y@{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_Y}}
+\index{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_Y@{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_Y}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_Y}{STRIKE\_TEXTURE\_PATTERN\_DIVIDE\_Y}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+K\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+P\+A\+T\+T\+E\+R\+N\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+Y~(1)}
+
+
+
+ ui.\+h の 28 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_ad5aff3ff5729e289a429f028cd9d0726}\label{ui_8h_ad5aff3ff5729e289a429f028cd9d0726}} 
+\index{ui.h@{ui.h}!STRIKE\_TIME\_ANIMATION@{STRIKE\_TIME\_ANIMATION}}
+\index{STRIKE\_TIME\_ANIMATION@{STRIKE\_TIME\_ANIMATION}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{STRIKE\_TIME\_ANIMATION}{STRIKE\_TIME\_ANIMATION}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+K\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON~(4)}
+
+
+
+ ui.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_aee439a0fbbd6d9b42a9a0408845cb5ca}\label{ui_8h_aee439a0fbbd6d9b42a9a0408845cb5ca}} 
+\index{ui.h@{ui.h}!TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE@{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE}}
+\index{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE@{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE}{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE~((\mbox{\hyperlink{ui_8h_a38194695d5b610404dc05ceb4d4cc498}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{ui_8h_a2911fb2f68e9b1908f501ec407c5f4c1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)}
+
+
+
+ ui.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a38194695d5b610404dc05ceb4d4cc498}\label{ui_8h_a38194695d5b610404dc05ceb4d4cc498}} 
+\index{ui.h@{ui.h}!TEXTURE\_CURSOR\_BIG\_SIZE\_X@{TEXTURE\_CURSOR\_BIG\_SIZE\_X}}
+\index{TEXTURE\_CURSOR\_BIG\_SIZE\_X@{TEXTURE\_CURSOR\_BIG\_SIZE\_X}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_BIG\_SIZE\_X}{TEXTURE\_CURSOR\_BIG\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+X~(75/2)}
+
+
+
+ ui.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a2911fb2f68e9b1908f501ec407c5f4c1}\label{ui_8h_a2911fb2f68e9b1908f501ec407c5f4c1}} 
+\index{ui.h@{ui.h}!TEXTURE\_CURSOR\_BIG\_SIZE\_Y@{TEXTURE\_CURSOR\_BIG\_SIZE\_Y}}
+\index{TEXTURE\_CURSOR\_BIG\_SIZE\_Y@{TEXTURE\_CURSOR\_BIG\_SIZE\_Y}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_BIG\_SIZE\_Y}{TEXTURE\_CURSOR\_BIG\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+Y~(75/2)}
+
+
+
+ ui.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_acce142b21cc095d401f48f72d12872b3}\label{ui_8h_acce142b21cc095d401f48f72d12872b3}} 
+\index{ui.h@{ui.h}!TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE@{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE}}
+\index{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE@{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE}{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE~((\mbox{\hyperlink{ui_8h_a967b4d49de60d2e28116fcbccfa19542}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{ui_8h_a12f3b5c83fcc875e19ec0553284c119a}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)}
+
+
+
+ ui.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a967b4d49de60d2e28116fcbccfa19542}\label{ui_8h_a967b4d49de60d2e28116fcbccfa19542}} 
+\index{ui.h@{ui.h}!TEXTURE\_CURSOR\_SMALL\_SIZE\_X@{TEXTURE\_CURSOR\_SMALL\_SIZE\_X}}
+\index{TEXTURE\_CURSOR\_SMALL\_SIZE\_X@{TEXTURE\_CURSOR\_SMALL\_SIZE\_X}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_SMALL\_SIZE\_X}{TEXTURE\_CURSOR\_SMALL\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+X~(30/2)}
+
+
+
+ ui.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a12f3b5c83fcc875e19ec0553284c119a}\label{ui_8h_a12f3b5c83fcc875e19ec0553284c119a}} 
+\index{ui.h@{ui.h}!TEXTURE\_CURSOR\_SMALL\_SIZE\_Y@{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y}}
+\index{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y@{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y}{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+Y~(30/2)}
+
+
+
+ ui.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a6f2bca575ed5e97bef629b28ff8d4a32}\label{ui_8h_a6f2bca575ed5e97bef629b28ff8d4a32}} 
+\index{ui.h@{ui.h}!TEXTURE\_GAME\_CURSOR@{TEXTURE\_GAME\_CURSOR}}
+\index{TEXTURE\_GAME\_CURSOR@{TEXTURE\_GAME\_CURSOR}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_GAME\_CURSOR}{TEXTURE\_GAME\_CURSOR}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+C\+U\+R\+S\+OR~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/item/batcursor.\+png\char`\"{})}
+
+
+
+ ui.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a98bf4fefbc61439407eca9f40b5e4157}\label{ui_8h_a98bf4fefbc61439407eca9f40b5e4157}} 
+\index{ui.h@{ui.h}!TEXTURE\_GAME\_STRIKE@{TEXTURE\_GAME\_STRIKE}}
+\index{TEXTURE\_GAME\_STRIKE@{TEXTURE\_GAME\_STRIKE}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_GAME\_STRIKE}{TEXTURE\_GAME\_STRIKE}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+R\+I\+KE~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/item/strike.\+png\char`\"{})}
+
+
+
+ ui.\+h の 16 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_ab0422264886541e4099450820f1f28e5}\label{ui_8h_ab0422264886541e4099450820f1f28e5}} 
+\index{ui.h@{ui.h}!TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X@{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X}}
+\index{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X@{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X}{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+B\+\_\+\+S\+I\+Z\+E\+\_\+X~(150/2)}
+
+
+
+ ui.\+h の 21 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a47d8ecdc3c90232fa1059bcb1f413452}\label{ui_8h_a47d8ecdc3c90232fa1059bcb1f413452}} 
+\index{ui.h@{ui.h}!TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y@{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y}}
+\index{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y@{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y}{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+B\+\_\+\+S\+I\+Z\+E\+\_\+Y~(180/2)}
+
+
+
+ ui.\+h の 22 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a419aa744e11ecd8c7126133eb15894fb}\label{ui_8h_a419aa744e11ecd8c7126133eb15894fb}} 
+\index{ui.h@{ui.h}!TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE@{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE}}
+\index{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE@{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE}{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE~((\mbox{\hyperlink{ui_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{ui_8h_ad0bde38dcf19ee2758f77670d4e65077}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)}
+
+
+
+ ui.\+h の 24 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}\label{ui_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}} 
+\index{ui.h@{ui.h}!TEXTURE\_STRIKE\_SIZE\_X@{TEXTURE\_STRIKE\_SIZE\_X}}
+\index{TEXTURE\_STRIKE\_SIZE\_X@{TEXTURE\_STRIKE\_SIZE\_X}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_SIZE\_X}{TEXTURE\_STRIKE\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+X~(150/2)}
+
+
+
+ ui.\+h の 18 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_ad0bde38dcf19ee2758f77670d4e65077}\label{ui_8h_ad0bde38dcf19ee2758f77670d4e65077}} 
+\index{ui.h@{ui.h}!TEXTURE\_STRIKE\_SIZE\_Y@{TEXTURE\_STRIKE\_SIZE\_Y}}
+\index{TEXTURE\_STRIKE\_SIZE\_Y@{TEXTURE\_STRIKE\_SIZE\_Y}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_SIZE\_Y}{TEXTURE\_STRIKE\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y~(180/2)}
+
+
+
+ ui.\+h の 19 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_adf3883bc403d4d58d1e43c3a3aa108e0}\label{ui_8h_adf3883bc403d4d58d1e43c3a3aa108e0}} 
+\index{ui.h@{ui.h}!UI\_GOUKEI@{UI\_GOUKEI}}
+\index{UI\_GOUKEI@{UI\_GOUKEI}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{UI\_GOUKEI}{UI\_GOUKEI}}
+{\footnotesize\ttfamily \#define U\+I\+\_\+\+G\+O\+U\+K\+EI~(2)}
+
+
+
+ ui.\+h の 13 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{ui_8h_ae3df37429d2c82413d292a1e775b98e4}\label{ui_8h_ae3df37429d2c82413d292a1e775b98e4}} 
+\index{ui.h@{ui.h}!DrawUi@{DrawUi}}
+\index{DrawUi@{DrawUi}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{DrawUi()}{DrawUi()}}
+{\footnotesize\ttfamily void Draw\+Ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 125 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{ui_8h_a7c9aa56d772450fdb3be7f367988a355}\label{ui_8h_a7c9aa56d772450fdb3be7f367988a355}} 
+\index{ui.h@{ui.h}!Get\_Cursor@{Get\_Cursor}}
+\index{Get\_Cursor@{Get\_Cursor}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{Get\_Cursor()}{Get\_Cursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}}$\ast$ Get\+\_\+\+Cursor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 301 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{ui_8h_a64378fa1372297d3c72ce483c18d10fe}\label{ui_8h_a64378fa1372297d3c72ce483c18d10fe}} 
+\index{ui.h@{ui.h}!GetStrike@{GetStrike}}
+\index{GetStrike@{GetStrike}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{GetStrike()}{GetStrike()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}}$\ast$ Get\+Strike (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 293 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{ui_8h_accae1e726bfc998ff6df9736d5400585}\label{ui_8h_accae1e726bfc998ff6df9736d5400585}} 
+\index{ui.h@{ui.h}!InitUi@{InitUi}}
+\index{InitUi@{InitUi}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{InitUi()}{InitUi()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Ui (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 30 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{ui_8h_a5097066d134843b098a060000c069472}\label{ui_8h_a5097066d134843b098a060000c069472}} 
+\index{ui.h@{ui.h}!MakeVertexUi@{MakeVertexUi}}
+\index{MakeVertexUi@{MakeVertexUi}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{MakeVertexUi()}{MakeVertexUi()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+Ui (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 148 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{ui_8h_a693e48dd0a10a6958c8854a9a39ec3da}\label{ui_8h_a693e48dd0a10a6958c8854a9a39ec3da}} 
+\index{ui.h@{ui.h}!ReInitUi@{ReInitUi}}
+\index{ReInitUi@{ReInitUi}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{ReInitUi()}{ReInitUi()}}
+{\footnotesize\ttfamily void Re\+Init\+Ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 81 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{ui_8h_a909589cd191353783f68784df1b83c18}\label{ui_8h_a909589cd191353783f68784df1b83c18}} 
+\index{ui.h@{ui.h}!SetTextureUi@{SetTextureUi}}
+\index{SetTextureUi@{SetTextureUi}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{SetTextureUi()}{SetTextureUi()}}
+{\footnotesize\ttfamily void Set\+Texture\+Ui (\begin{DoxyParamCaption}\item[{int}]{cnt\+Pattern,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 199 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8h_aad8c0b6bd1326b4aea24bbf5c6590fcb}\label{ui_8h_aad8c0b6bd1326b4aea24bbf5c6590fcb}} 
+\index{ui.h@{ui.h}!SetVertexUi@{SetVertexUi}}
+\index{SetVertexUi@{SetVertexUi}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{SetVertexUi()}{SetVertexUi()}}
+{\footnotesize\ttfamily void Set\+Vertex\+Ui (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 238 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{ui_8h_ad78b009c4ed7deda9a09263261f34e00}\label{ui_8h_ad78b009c4ed7deda9a09263261f34e00}} 
+\index{ui.h@{ui.h}!UninitUi@{UninitUi}}
+\index{UninitUi@{UninitUi}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{UninitUi()}{UninitUi()}}
+{\footnotesize\ttfamily void Uninit\+Ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 95 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 11
+\mbox{\Hypertarget{ui_8h_a014481bffd4b282975575ed486cbd1a2}\label{ui_8h_a014481bffd4b282975575ed486cbd1a2}} 
+\index{ui.h@{ui.h}!UpdateUi@{UpdateUi}}
+\index{UpdateUi@{UpdateUi}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{UpdateUi()}{UpdateUi()}}
+{\footnotesize\ttfamily void Update\+Ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 112 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 12
+被呼び出し関係図\+:
+% FIG 13

@@ -1,0 +1,206 @@
+\hypertarget{ui_8cpp}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/ui.cpp ファイル}
+\label{ui_8cpp}\index{C:/Users/HP/source/Repos/HitBallTarget/ui.cpp@{C:/Users/HP/source/Repos/HitBallTarget/ui.cpp}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui.\+h\char`\"{}}\newline
+ui.\+cpp の依存先関係図\+:
+% FIG 0
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{ui_8cpp_accae1e726bfc998ff6df9736d5400585}{Init\+Ui}} (int type)
+\item 
+void \mbox{\hyperlink{ui_8cpp_a693e48dd0a10a6958c8854a9a39ec3da}{Re\+Init\+Ui}} (void)
+\item 
+void \mbox{\hyperlink{ui_8cpp_ad78b009c4ed7deda9a09263261f34e00}{Uninit\+Ui}} (void)
+\item 
+void \mbox{\hyperlink{ui_8cpp_a014481bffd4b282975575ed486cbd1a2}{Update\+Ui}} (void)
+\item 
+void \mbox{\hyperlink{ui_8cpp_ae3df37429d2c82413d292a1e775b98e4}{Draw\+Ui}} (void)
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{ui_8cpp_a5097066d134843b098a060000c069472}{Make\+Vertex\+Ui}} (int i)
+\item 
+void \mbox{\hyperlink{ui_8cpp_a909589cd191353783f68784df1b83c18}{Set\+Texture\+Ui}} (int cnt\+Pattern, int i)
+\item 
+void \mbox{\hyperlink{ui_8cpp_aad8c0b6bd1326b4aea24bbf5c6590fcb}{Set\+Vertex\+Ui}} (int i)
+\item 
+\mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}} $\ast$ \mbox{\hyperlink{ui_8cpp_a64378fa1372297d3c72ce483c18d10fe}{Get\+Strike}} (void)
+\item 
+\mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}} $\ast$ \mbox{\hyperlink{ui_8cpp_a7c9aa56d772450fdb3be7f367988a355}{Get\+\_\+\+Cursor}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}} \mbox{\hyperlink{ui_8cpp_a236372a29bf672ade4d7b8ccdf8b8ab8}{g\+\_\+strike}}
+\item 
+\mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}} \mbox{\hyperlink{ui_8cpp_af9ac6b06c654f5554391c86ab26ef3d2}{g\+\_\+cursor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{ui_8cpp_ae3df37429d2c82413d292a1e775b98e4}\label{ui_8cpp_ae3df37429d2c82413d292a1e775b98e4}} 
+\index{ui.cpp@{ui.cpp}!DrawUi@{DrawUi}}
+\index{DrawUi@{DrawUi}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawUi()}{DrawUi()}}
+{\footnotesize\ttfamily void Draw\+Ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 125 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{ui_8cpp_a7c9aa56d772450fdb3be7f367988a355}\label{ui_8cpp_a7c9aa56d772450fdb3be7f367988a355}} 
+\index{ui.cpp@{ui.cpp}!Get\_Cursor@{Get\_Cursor}}
+\index{Get\_Cursor@{Get\_Cursor}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{Get\_Cursor()}{Get\_Cursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}}$\ast$ Get\+\_\+\+Cursor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 301 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{ui_8cpp_a64378fa1372297d3c72ce483c18d10fe}\label{ui_8cpp_a64378fa1372297d3c72ce483c18d10fe}} 
+\index{ui.cpp@{ui.cpp}!GetStrike@{GetStrike}}
+\index{GetStrike@{GetStrike}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{GetStrike()}{GetStrike()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}}$\ast$ Get\+Strike (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 293 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{ui_8cpp_accae1e726bfc998ff6df9736d5400585}\label{ui_8cpp_accae1e726bfc998ff6df9736d5400585}} 
+\index{ui.cpp@{ui.cpp}!InitUi@{InitUi}}
+\index{InitUi@{InitUi}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{InitUi()}{InitUi()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Ui (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 30 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{ui_8cpp_a5097066d134843b098a060000c069472}\label{ui_8cpp_a5097066d134843b098a060000c069472}} 
+\index{ui.cpp@{ui.cpp}!MakeVertexUi@{MakeVertexUi}}
+\index{MakeVertexUi@{MakeVertexUi}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeVertexUi()}{MakeVertexUi()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+Ui (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 148 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{ui_8cpp_a693e48dd0a10a6958c8854a9a39ec3da}\label{ui_8cpp_a693e48dd0a10a6958c8854a9a39ec3da}} 
+\index{ui.cpp@{ui.cpp}!ReInitUi@{ReInitUi}}
+\index{ReInitUi@{ReInitUi}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{ReInitUi()}{ReInitUi()}}
+{\footnotesize\ttfamily void Re\+Init\+Ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 81 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{ui_8cpp_a909589cd191353783f68784df1b83c18}\label{ui_8cpp_a909589cd191353783f68784df1b83c18}} 
+\index{ui.cpp@{ui.cpp}!SetTextureUi@{SetTextureUi}}
+\index{SetTextureUi@{SetTextureUi}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{SetTextureUi()}{SetTextureUi()}}
+{\footnotesize\ttfamily void Set\+Texture\+Ui (\begin{DoxyParamCaption}\item[{int}]{cnt\+Pattern,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 199 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8cpp_aad8c0b6bd1326b4aea24bbf5c6590fcb}\label{ui_8cpp_aad8c0b6bd1326b4aea24bbf5c6590fcb}} 
+\index{ui.cpp@{ui.cpp}!SetVertexUi@{SetVertexUi}}
+\index{SetVertexUi@{SetVertexUi}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{SetVertexUi()}{SetVertexUi()}}
+{\footnotesize\ttfamily void Set\+Vertex\+Ui (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 238 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{ui_8cpp_ad78b009c4ed7deda9a09263261f34e00}\label{ui_8cpp_ad78b009c4ed7deda9a09263261f34e00}} 
+\index{ui.cpp@{ui.cpp}!UninitUi@{UninitUi}}
+\index{UninitUi@{UninitUi}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{UninitUi()}{UninitUi()}}
+{\footnotesize\ttfamily void Uninit\+Ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 95 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 11
+\mbox{\Hypertarget{ui_8cpp_a014481bffd4b282975575ed486cbd1a2}\label{ui_8cpp_a014481bffd4b282975575ed486cbd1a2}} 
+\index{ui.cpp@{ui.cpp}!UpdateUi@{UpdateUi}}
+\index{UpdateUi@{UpdateUi}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateUi()}{UpdateUi()}}
+{\footnotesize\ttfamily void Update\+Ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ui.\+cpp の 112 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 12
+被呼び出し関係図\+:
+% FIG 13
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{ui_8cpp_af9ac6b06c654f5554391c86ab26ef3d2}\label{ui_8cpp_af9ac6b06c654f5554391c86ab26ef3d2}} 
+\index{ui.cpp@{ui.cpp}!g\_cursor@{g\_cursor}}
+\index{g\_cursor@{g\_cursor}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_cursor}{g\_cursor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}} g\+\_\+cursor}
+
+
+
+ ui.\+cpp の 25 行目に定義があります。
+
+\mbox{\Hypertarget{ui_8cpp_a236372a29bf672ade4d7b8ccdf8b8ab8}\label{ui_8cpp_a236372a29bf672ade4d7b8ccdf8b8ab8}} 
+\index{ui.cpp@{ui.cpp}!g\_strike@{g\_strike}}
+\index{g\_strike@{g\_strike}!ui.cpp@{ui.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_strike}{g\_strike}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}} g\+\_\+strike}
+
+
+
+ ui.\+cpp の 24 行目に定義があります。
+

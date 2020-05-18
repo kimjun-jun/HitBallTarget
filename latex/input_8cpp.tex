@@ -1,0 +1,596 @@
+\hypertarget{input_8cpp}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/input.cpp ファイル}
+\label{input_8cpp}\index{C:/Users/HP/source/Repos/HitBallTarget/input.cpp@{C:/Users/HP/source/Repos/HitBallTarget/input.cpp}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}input.\+h\char`\"{}}\newline
+input.\+cpp の依存先関係図\+:
+% FIG 0
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}~(256)
+\item 
+\#define \mbox{\hyperlink{input_8cpp_a08308e05fa7bbbfcf4ffb7a08aa68fa1}{D\+E\+A\+D\+Z\+O\+NE}}~2500
+\item 
+\#define \mbox{\hyperlink{input_8cpp_a4f69b94680563056aed9fd60e5e28788}{R\+A\+N\+G\+E\+\_\+\+M\+AX}}~1000
+\item 
+\#define \mbox{\hyperlink{input_8cpp_a3c983eeadd733105fb0fea8729a9f2db}{R\+A\+N\+G\+E\+\_\+\+M\+IN}}~-\/1000
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{input_8cpp_ab45d5ae1a82ebf30bad1af84cc391052}{Init\+Keyboard}} (H\+I\+N\+S\+T\+A\+N\+CE h\+Inst, H\+W\+ND h\+Wnd)
+\item 
+void \mbox{\hyperlink{input_8cpp_acffdec32c8240d863bcca339cce38ea1}{Uninit\+Keyboard}} (void)
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{input_8cpp_a7f9e35100bea94e3adb296803d71d0b5}{Update\+Keyboard}} (void)
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{input_8cpp_a3c5c25de2796ff40c1d5d24bed00ac66}{Initialize\+Mouse}} (H\+I\+N\+S\+T\+A\+N\+CE h\+Inst, H\+W\+ND h\+Window)
+\item 
+void \mbox{\hyperlink{input_8cpp_af33a96a7320c2c9dbcf876ff22301a41}{Uninit\+Mouse}} ()
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{input_8cpp_a8ff4747a563eaa95eb1f9a1529ee381f}{Update\+Mouse}} ()
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{input_8cpp_ab270d8b3296acbba9149c614c552b40d}{Initialize\+Pad}} (void)
+\item 
+void \mbox{\hyperlink{input_8cpp_aff6b507e27330523ccf91d6a54c11168}{Update\+Pad}} (void)
+\item 
+void \mbox{\hyperlink{input_8cpp_a6b991763b50ab85e07361b6daea4c74b}{Uninit\+Pad}} (void)
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{input_8cpp_a47be2ef4096c7e7e1c35687d86ff7a85}{Init\+Input}} (H\+I\+N\+S\+T\+A\+N\+CE h\+Inst, H\+W\+ND h\+Wnd)
+\item 
+void \mbox{\hyperlink{input_8cpp_abf030db97d84146b69da0d263ef721e5}{Uninit\+Input}} (void)
+\item 
+void \mbox{\hyperlink{input_8cpp_a386e80233eb4db9ec30e94fc317392dc}{Update\+Input}} (void)
+\item 
+bool \mbox{\hyperlink{input_8cpp_a9d43b9f7772ae1c0a5c1f7e6a0c0adc4}{Get\+Keyboard\+Press}} (int key)
+\item 
+bool \mbox{\hyperlink{input_8cpp_a51329aebf57af8767b502a8b111fa577}{Get\+Keyboard\+Trigger}} (int key)
+\item 
+bool \mbox{\hyperlink{input_8cpp_ae9d9919e7b44eafe1b5eca32f7e5128d}{Get\+Keyboard\+Repeat}} (int key)
+\item 
+bool \mbox{\hyperlink{input_8cpp_a2f35da893bca40e9299aa1ef9d3698b1}{Get\+Keyboard\+Release}} (int key)
+\item 
+B\+O\+OL \mbox{\hyperlink{input_8cpp_ae670973e6160aed64e844f40f74da03d}{Is\+Mouse\+Left\+Pressed}} (void)
+\item 
+B\+O\+OL \mbox{\hyperlink{input_8cpp_a26c01206d66245a6cf2c4f5019ecbf64}{Is\+Mouse\+Left\+Triggered}} (void)
+\item 
+B\+O\+OL \mbox{\hyperlink{input_8cpp_a676f6837882c0716c58afef4caba080d}{Is\+Mouse\+Right\+Pressed}} (void)
+\item 
+B\+O\+OL \mbox{\hyperlink{input_8cpp_af7d4a71320b6987238baec19e58b59df}{Is\+Mouse\+Right\+Triggered}} (void)
+\item 
+B\+O\+OL \mbox{\hyperlink{input_8cpp_af10880e5394adf50562336bbd855b4a0}{Is\+Mouse\+Center\+Pressed}} (void)
+\item 
+B\+O\+OL \mbox{\hyperlink{input_8cpp_a7219595f0e29b6458fda98f06e27e5cd}{Is\+Mouse\+Center\+Triggered}} (void)
+\item 
+long \mbox{\hyperlink{input_8cpp_abde281ea48a4350b9db28e0aeaffdaa5}{Get\+MouseX}} (void)
+\item 
+long \mbox{\hyperlink{input_8cpp_aeb6b3cb52e091f8ec9bef46ec6aed838}{Get\+MouseY}} (void)
+\item 
+long \mbox{\hyperlink{input_8cpp_af6f9c47521f6fe5fb0421774ab14a32a}{Get\+MouseZ}} (void)
+\item 
+B\+O\+OL C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{input_8cpp_ae68b48865ca4bcdc2c58eb9320089aae}{Search\+Game\+Pad\+Callback}} (L\+P\+D\+I\+D\+E\+V\+I\+C\+E\+I\+N\+S\+T\+A\+N\+CE lpddi, L\+P\+V\+O\+ID)
+\item 
+int \mbox{\hyperlink{input_8cpp_a3099565e30e2fef7507b51903c42ce2c}{Get\+Pad\+Data}} (int no)
+\item 
+B\+O\+OL \mbox{\hyperlink{input_8cpp_ac697173603d80e79dbaac2b319cca44c}{Is\+Button\+Pressed\+Digital}} (int pad\+No, D\+W\+O\+RD button)
+\item 
+B\+O\+OL \mbox{\hyperlink{input_8cpp_ae73d9f5f454c89246853f39fdd2d20d5}{Is\+Button\+Pressed\+Analog}} (int pad\+No, D\+W\+O\+RD button)
+\item 
+D\+I\+J\+O\+Y\+S\+T\+A\+T\+E2 $\ast$ \mbox{\hyperlink{input_8cpp_abe43e75fa79b038de06c845abd9c895e}{Is\+Button\+Pressed\+Analog}} (void)
+\item 
+B\+O\+OL \mbox{\hyperlink{input_8cpp_a7951056484ea4c474b1a5f783a1472b2}{Is\+Button\+Triggered}} (int pad\+No, D\+W\+O\+RD button)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T8 \mbox{\hyperlink{input_8cpp_a5f0cbd46047751e517a16bf55f38d031}{g\+\_\+p\+D\+Input}} = N\+U\+LL
+\item 
+L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T\+D\+E\+V\+I\+C\+E8 \mbox{\hyperlink{input_8cpp_a800ec6565c40c5d6bd50252ba3aea58b}{g\+\_\+p\+D\+I\+Dev\+Keyboard}} = N\+U\+LL
+\item 
+B\+Y\+TE \mbox{\hyperlink{input_8cpp_a5b9a3b2f8fbd61d56ab38e40221c52d3}{g\+\_\+key\+State}} \mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}
+\item 
+B\+Y\+TE \mbox{\hyperlink{input_8cpp_a71972c250eee50d3c29e21dc4b85ac3c}{g\+\_\+key\+State\+Trigger}} \mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}
+\item 
+B\+Y\+TE \mbox{\hyperlink{input_8cpp_a1bfca736c56ae2cf3ea95efd2643ca52}{g\+\_\+key\+State\+Repeat}} \mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}
+\item 
+B\+Y\+TE \mbox{\hyperlink{input_8cpp_ada33b6106aa131e9793a609bc67c16e4}{g\+\_\+key\+State\+Release}} \mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}
+\item 
+int \mbox{\hyperlink{input_8cpp_add3955b82390d94f565c5f337dd8ea62}{g\+\_\+key\+State\+Repeat\+Cnt}} \mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}
+\item 
+D\+I\+J\+O\+Y\+S\+T\+A\+T\+E2 \mbox{\hyperlink{input_8cpp_ab076b29c513491f750e42fcddea41b97}{dijs2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{input_8cpp_a08308e05fa7bbbfcf4ffb7a08aa68fa1}\label{input_8cpp_a08308e05fa7bbbfcf4ffb7a08aa68fa1}} 
+\index{input.cpp@{input.cpp}!DEADZONE@{DEADZONE}}
+\index{DEADZONE@{DEADZONE}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{DEADZONE}{DEADZONE}}
+{\footnotesize\ttfamily \#define D\+E\+A\+D\+Z\+O\+NE~2500}
+
+
+
+ input.\+cpp の 17 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_afd005bb5824026329ad3445123d0c712}\label{input_8cpp_afd005bb5824026329ad3445123d0c712}} 
+\index{input.cpp@{input.cpp}!NUM\_KEY\_MAX@{NUM\_KEY\_MAX}}
+\index{NUM\_KEY\_MAX@{NUM\_KEY\_MAX}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{NUM\_KEY\_MAX}{NUM\_KEY\_MAX}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX~(256)}
+
+
+
+ input.\+cpp の 14 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a4f69b94680563056aed9fd60e5e28788}\label{input_8cpp_a4f69b94680563056aed9fd60e5e28788}} 
+\index{input.cpp@{input.cpp}!RANGE\_MAX@{RANGE\_MAX}}
+\index{RANGE\_MAX@{RANGE\_MAX}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{RANGE\_MAX}{RANGE\_MAX}}
+{\footnotesize\ttfamily \#define R\+A\+N\+G\+E\+\_\+\+M\+AX~1000}
+
+
+
+ input.\+cpp の 18 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a3c983eeadd733105fb0fea8729a9f2db}\label{input_8cpp_a3c983eeadd733105fb0fea8729a9f2db}} 
+\index{input.cpp@{input.cpp}!RANGE\_MIN@{RANGE\_MIN}}
+\index{RANGE\_MIN@{RANGE\_MIN}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{RANGE\_MIN}{RANGE\_MIN}}
+{\footnotesize\ttfamily \#define R\+A\+N\+G\+E\+\_\+\+M\+IN~-\/1000}
+
+
+
+ input.\+cpp の 19 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{input_8cpp_a9d43b9f7772ae1c0a5c1f7e6a0c0adc4}\label{input_8cpp_a9d43b9f7772ae1c0a5c1f7e6a0c0adc4}} 
+\index{input.cpp@{input.cpp}!GetKeyboardPress@{GetKeyboardPress}}
+\index{GetKeyboardPress@{GetKeyboardPress}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{GetKeyboardPress()}{GetKeyboardPress()}}
+{\footnotesize\ttfamily bool Get\+Keyboard\+Press (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 226 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{input_8cpp_a2f35da893bca40e9299aa1ef9d3698b1}\label{input_8cpp_a2f35da893bca40e9299aa1ef9d3698b1}} 
+\index{input.cpp@{input.cpp}!GetKeyboardRelease@{GetKeyboardRelease}}
+\index{GetKeyboardRelease@{GetKeyboardRelease}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{GetKeyboardRelease()}{GetKeyboardRelease()}}
+{\footnotesize\ttfamily bool Get\+Keyboard\+Release (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 250 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_ae9d9919e7b44eafe1b5eca32f7e5128d}\label{input_8cpp_ae9d9919e7b44eafe1b5eca32f7e5128d}} 
+\index{input.cpp@{input.cpp}!GetKeyboardRepeat@{GetKeyboardRepeat}}
+\index{GetKeyboardRepeat@{GetKeyboardRepeat}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{GetKeyboardRepeat()}{GetKeyboardRepeat()}}
+{\footnotesize\ttfamily bool Get\+Keyboard\+Repeat (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 242 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a51329aebf57af8767b502a8b111fa577}\label{input_8cpp_a51329aebf57af8767b502a8b111fa577}} 
+\index{input.cpp@{input.cpp}!GetKeyboardTrigger@{GetKeyboardTrigger}}
+\index{GetKeyboardTrigger@{GetKeyboardTrigger}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{GetKeyboardTrigger()}{GetKeyboardTrigger()}}
+{\footnotesize\ttfamily bool Get\+Keyboard\+Trigger (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 234 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{input_8cpp_abde281ea48a4350b9db28e0aeaffdaa5}\label{input_8cpp_abde281ea48a4350b9db28e0aeaffdaa5}} 
+\index{input.cpp@{input.cpp}!GetMouseX@{GetMouseX}}
+\index{GetMouseX@{GetMouseX}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{GetMouseX()}{GetMouseX()}}
+{\footnotesize\ttfamily long Get\+MouseX (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 371 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_aeb6b3cb52e091f8ec9bef46ec6aed838}\label{input_8cpp_aeb6b3cb52e091f8ec9bef46ec6aed838}} 
+\index{input.cpp@{input.cpp}!GetMouseY@{GetMouseY}}
+\index{GetMouseY@{GetMouseY}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{GetMouseY()}{GetMouseY()}}
+{\footnotesize\ttfamily long Get\+MouseY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 375 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_af6f9c47521f6fe5fb0421774ab14a32a}\label{input_8cpp_af6f9c47521f6fe5fb0421774ab14a32a}} 
+\index{input.cpp@{input.cpp}!GetMouseZ@{GetMouseZ}}
+\index{GetMouseZ@{GetMouseZ}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{GetMouseZ()}{GetMouseZ()}}
+{\footnotesize\ttfamily long Get\+MouseZ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 379 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a3099565e30e2fef7507b51903c42ce2c}\label{input_8cpp_a3099565e30e2fef7507b51903c42ce2c}} 
+\index{input.cpp@{input.cpp}!GetPadData@{GetPadData}}
+\index{GetPadData@{GetPadData}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{GetPadData()}{GetPadData()}}
+{\footnotesize\ttfamily int Get\+Pad\+Data (\begin{DoxyParamCaption}\item[{int}]{no }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 585 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a3c5c25de2796ff40c1d5d24bed00ac66}\label{input_8cpp_a3c5c25de2796ff40c1d5d24bed00ac66}} 
+\index{input.cpp@{input.cpp}!InitializeMouse@{InitializeMouse}}
+\index{InitializeMouse@{InitializeMouse}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{InitializeMouse()}{InitializeMouse()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Initialize\+Mouse (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Inst,  }\item[{H\+W\+ND}]{h\+Window }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 260 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{input_8cpp_ab270d8b3296acbba9149c614c552b40d}\label{input_8cpp_ab270d8b3296acbba9149c614c552b40d}} 
+\index{input.cpp@{input.cpp}!InitializePad@{InitializePad}}
+\index{InitializePad@{InitializePad}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{InitializePad()}{InitializePad()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Initialize\+Pad (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 394 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{input_8cpp_a47be2ef4096c7e7e1c35687d86ff7a85}\label{input_8cpp_a47be2ef4096c7e7e1c35687d86ff7a85}} 
+\index{input.cpp@{input.cpp}!InitInput@{InitInput}}
+\index{InitInput@{InitInput}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{InitInput()}{InitInput()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Input (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Inst,  }\item[{H\+W\+ND}]{h\+Wnd }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 69 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{input_8cpp_ab45d5ae1a82ebf30bad1af84cc391052}\label{input_8cpp_ab45d5ae1a82ebf30bad1af84cc391052}} 
+\index{input.cpp@{input.cpp}!InitKeyboard@{InitKeyboard}}
+\index{InitKeyboard@{InitKeyboard}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{InitKeyboard()}{InitKeyboard()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Keyboard (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Inst,  }\item[{H\+W\+ND}]{h\+Wnd }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 132 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{input_8cpp_ae73d9f5f454c89246853f39fdd2d20d5}\label{input_8cpp_ae73d9f5f454c89246853f39fdd2d20d5}} 
+\index{input.cpp@{input.cpp}!IsButtonPressedAnalog@{IsButtonPressedAnalog}}
+\index{IsButtonPressedAnalog@{IsButtonPressedAnalog}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsButtonPressedAnalog()}{IsButtonPressedAnalog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily B\+O\+OL Is\+Button\+Pressed\+Analog (\begin{DoxyParamCaption}\item[{int}]{pad\+No,  }\item[{D\+W\+O\+RD}]{button }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 596 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{input_8cpp_abe43e75fa79b038de06c845abd9c895e}\label{input_8cpp_abe43e75fa79b038de06c845abd9c895e}} 
+\index{input.cpp@{input.cpp}!IsButtonPressedAnalog@{IsButtonPressedAnalog}}
+\index{IsButtonPressedAnalog@{IsButtonPressedAnalog}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsButtonPressedAnalog()}{IsButtonPressedAnalog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily D\+I\+J\+O\+Y\+S\+T\+A\+T\+E2$\ast$ Is\+Button\+Pressed\+Analog (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 601 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_ac697173603d80e79dbaac2b319cca44c}\label{input_8cpp_ac697173603d80e79dbaac2b319cca44c}} 
+\index{input.cpp@{input.cpp}!IsButtonPressedDigital@{IsButtonPressedDigital}}
+\index{IsButtonPressedDigital@{IsButtonPressedDigital}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsButtonPressedDigital()}{IsButtonPressedDigital()}}
+{\footnotesize\ttfamily B\+O\+OL Is\+Button\+Pressed\+Digital (\begin{DoxyParamCaption}\item[{int}]{pad\+No,  }\item[{D\+W\+O\+RD}]{button }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 591 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{input_8cpp_a7951056484ea4c474b1a5f783a1472b2}\label{input_8cpp_a7951056484ea4c474b1a5f783a1472b2}} 
+\index{input.cpp@{input.cpp}!IsButtonTriggered@{IsButtonTriggered}}
+\index{IsButtonTriggered@{IsButtonTriggered}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsButtonTriggered()}{IsButtonTriggered()}}
+{\footnotesize\ttfamily B\+O\+OL Is\+Button\+Triggered (\begin{DoxyParamCaption}\item[{int}]{pad\+No,  }\item[{D\+W\+O\+RD}]{button }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 606 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{input_8cpp_af10880e5394adf50562336bbd855b4a0}\label{input_8cpp_af10880e5394adf50562336bbd855b4a0}} 
+\index{input.cpp@{input.cpp}!IsMouseCenterPressed@{IsMouseCenterPressed}}
+\index{IsMouseCenterPressed@{IsMouseCenterPressed}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsMouseCenterPressed()}{IsMouseCenterPressed()}}
+{\footnotesize\ttfamily B\+O\+OL Is\+Mouse\+Center\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 362 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a7219595f0e29b6458fda98f06e27e5cd}\label{input_8cpp_a7219595f0e29b6458fda98f06e27e5cd}} 
+\index{input.cpp@{input.cpp}!IsMouseCenterTriggered@{IsMouseCenterTriggered}}
+\index{IsMouseCenterTriggered@{IsMouseCenterTriggered}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsMouseCenterTriggered()}{IsMouseCenterTriggered()}}
+{\footnotesize\ttfamily B\+O\+OL Is\+Mouse\+Center\+Triggered (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 366 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_ae670973e6160aed64e844f40f74da03d}\label{input_8cpp_ae670973e6160aed64e844f40f74da03d}} 
+\index{input.cpp@{input.cpp}!IsMouseLeftPressed@{IsMouseLeftPressed}}
+\index{IsMouseLeftPressed@{IsMouseLeftPressed}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsMouseLeftPressed()}{IsMouseLeftPressed()}}
+{\footnotesize\ttfamily B\+O\+OL Is\+Mouse\+Left\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 346 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a26c01206d66245a6cf2c4f5019ecbf64}\label{input_8cpp_a26c01206d66245a6cf2c4f5019ecbf64}} 
+\index{input.cpp@{input.cpp}!IsMouseLeftTriggered@{IsMouseLeftTriggered}}
+\index{IsMouseLeftTriggered@{IsMouseLeftTriggered}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsMouseLeftTriggered()}{IsMouseLeftTriggered()}}
+{\footnotesize\ttfamily B\+O\+OL Is\+Mouse\+Left\+Triggered (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 350 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a676f6837882c0716c58afef4caba080d}\label{input_8cpp_a676f6837882c0716c58afef4caba080d}} 
+\index{input.cpp@{input.cpp}!IsMouseRightPressed@{IsMouseRightPressed}}
+\index{IsMouseRightPressed@{IsMouseRightPressed}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsMouseRightPressed()}{IsMouseRightPressed()}}
+{\footnotesize\ttfamily B\+O\+OL Is\+Mouse\+Right\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 354 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_af7d4a71320b6987238baec19e58b59df}\label{input_8cpp_af7d4a71320b6987238baec19e58b59df}} 
+\index{input.cpp@{input.cpp}!IsMouseRightTriggered@{IsMouseRightTriggered}}
+\index{IsMouseRightTriggered@{IsMouseRightTriggered}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{IsMouseRightTriggered()}{IsMouseRightTriggered()}}
+{\footnotesize\ttfamily B\+O\+OL Is\+Mouse\+Right\+Triggered (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 358 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_ae68b48865ca4bcdc2c58eb9320089aae}\label{input_8cpp_ae68b48865ca4bcdc2c58eb9320089aae}} 
+\index{input.cpp@{input.cpp}!SearchGamePadCallback@{SearchGamePadCallback}}
+\index{SearchGamePadCallback@{SearchGamePadCallback}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{SearchGamePadCallback()}{SearchGamePadCallback()}}
+{\footnotesize\ttfamily B\+O\+OL C\+A\+L\+L\+B\+A\+CK Search\+Game\+Pad\+Callback (\begin{DoxyParamCaption}\item[{L\+P\+D\+I\+D\+E\+V\+I\+C\+E\+I\+N\+S\+T\+A\+N\+CE}]{lpddi,  }\item[{L\+P\+V\+O\+ID}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 385 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_abf030db97d84146b69da0d263ef721e5}\label{input_8cpp_abf030db97d84146b69da0d263ef721e5}} 
+\index{input.cpp@{input.cpp}!UninitInput@{UninitInput}}
+\index{UninitInput@{UninitInput}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{UninitInput()}{UninitInput()}}
+{\footnotesize\ttfamily void Uninit\+Input (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 95 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{input_8cpp_acffdec32c8240d863bcca339cce38ea1}\label{input_8cpp_acffdec32c8240d863bcca339cce38ea1}} 
+\index{input.cpp@{input.cpp}!UninitKeyboard@{UninitKeyboard}}
+\index{UninitKeyboard@{UninitKeyboard}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{UninitKeyboard()}{UninitKeyboard()}}
+{\footnotesize\ttfamily void Uninit\+Keyboard (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 169 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 13
+\mbox{\Hypertarget{input_8cpp_af33a96a7320c2c9dbcf876ff22301a41}\label{input_8cpp_af33a96a7320c2c9dbcf876ff22301a41}} 
+\index{input.cpp@{input.cpp}!UninitMouse@{UninitMouse}}
+\index{UninitMouse@{UninitMouse}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{UninitMouse()}{UninitMouse()}}
+{\footnotesize\ttfamily void Uninit\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 306 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 14
+\mbox{\Hypertarget{input_8cpp_a6b991763b50ab85e07361b6daea4c74b}\label{input_8cpp_a6b991763b50ab85e07361b6daea4c74b}} 
+\index{input.cpp@{input.cpp}!UninitPad@{UninitPad}}
+\index{UninitPad@{UninitPad}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{UninitPad()}{UninitPad()}}
+{\footnotesize\ttfamily void Uninit\+Pad (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 456 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 15
+\mbox{\Hypertarget{input_8cpp_a386e80233eb4db9ec30e94fc317392dc}\label{input_8cpp_a386e80233eb4db9ec30e94fc317392dc}} 
+\index{input.cpp@{input.cpp}!UpdateInput@{UpdateInput}}
+\index{UpdateInput@{UpdateInput}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateInput()}{UpdateInput()}}
+{\footnotesize\ttfamily void Update\+Input (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 116 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 16
+被呼び出し関係図\+:
+% FIG 17
+\mbox{\Hypertarget{input_8cpp_a7f9e35100bea94e3adb296803d71d0b5}\label{input_8cpp_a7f9e35100bea94e3adb296803d71d0b5}} 
+\index{input.cpp@{input.cpp}!UpdateKeyboard@{UpdateKeyboard}}
+\index{UpdateKeyboard@{UpdateKeyboard}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateKeyboard()}{UpdateKeyboard()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Update\+Keyboard (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 181 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 18
+\mbox{\Hypertarget{input_8cpp_a8ff4747a563eaa95eb1f9a1529ee381f}\label{input_8cpp_a8ff4747a563eaa95eb1f9a1529ee381f}} 
+\index{input.cpp@{input.cpp}!UpdateMouse@{UpdateMouse}}
+\index{UpdateMouse@{UpdateMouse}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateMouse()}{UpdateMouse()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Update\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 317 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 19
+\mbox{\Hypertarget{input_8cpp_aff6b507e27330523ccf91d6a54c11168}\label{input_8cpp_aff6b507e27330523ccf91d6a54c11168}} 
+\index{input.cpp@{input.cpp}!UpdatePad@{UpdatePad}}
+\index{UpdatePad@{UpdatePad}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdatePad()}{UpdatePad()}}
+{\footnotesize\ttfamily void Update\+Pad (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ input.\+cpp の 471 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 20
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{input_8cpp_ab076b29c513491f750e42fcddea41b97}\label{input_8cpp_ab076b29c513491f750e42fcddea41b97}} 
+\index{input.cpp@{input.cpp}!dijs2@{dijs2}}
+\index{dijs2@{dijs2}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{dijs2}{dijs2}}
+{\footnotesize\ttfamily D\+I\+J\+O\+Y\+S\+T\+A\+T\+E2 dijs2}
+
+
+
+ input.\+cpp の 469 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a5b9a3b2f8fbd61d56ab38e40221c52d3}\label{input_8cpp_a5b9a3b2f8fbd61d56ab38e40221c52d3}} 
+\index{input.cpp@{input.cpp}!g\_keyState@{g\_keyState}}
+\index{g\_keyState@{g\_keyState}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_keyState}{g\_keyState}}
+{\footnotesize\ttfamily B\+Y\+TE g\+\_\+key\+State\mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}}
+
+
+
+ input.\+cpp の 45 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_ada33b6106aa131e9793a609bc67c16e4}\label{input_8cpp_ada33b6106aa131e9793a609bc67c16e4}} 
+\index{input.cpp@{input.cpp}!g\_keyStateRelease@{g\_keyStateRelease}}
+\index{g\_keyStateRelease@{g\_keyStateRelease}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_keyStateRelease}{g\_keyStateRelease}}
+{\footnotesize\ttfamily B\+Y\+TE g\+\_\+key\+State\+Release\mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}}
+
+
+
+ input.\+cpp の 48 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a1bfca736c56ae2cf3ea95efd2643ca52}\label{input_8cpp_a1bfca736c56ae2cf3ea95efd2643ca52}} 
+\index{input.cpp@{input.cpp}!g\_keyStateRepeat@{g\_keyStateRepeat}}
+\index{g\_keyStateRepeat@{g\_keyStateRepeat}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_keyStateRepeat}{g\_keyStateRepeat}}
+{\footnotesize\ttfamily B\+Y\+TE g\+\_\+key\+State\+Repeat\mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}}
+
+
+
+ input.\+cpp の 47 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_add3955b82390d94f565c5f337dd8ea62}\label{input_8cpp_add3955b82390d94f565c5f337dd8ea62}} 
+\index{input.cpp@{input.cpp}!g\_keyStateRepeatCnt@{g\_keyStateRepeatCnt}}
+\index{g\_keyStateRepeatCnt@{g\_keyStateRepeatCnt}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_keyStateRepeatCnt}{g\_keyStateRepeatCnt}}
+{\footnotesize\ttfamily int g\+\_\+key\+State\+Repeat\+Cnt\mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}}
+
+
+
+ input.\+cpp の 49 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a71972c250eee50d3c29e21dc4b85ac3c}\label{input_8cpp_a71972c250eee50d3c29e21dc4b85ac3c}} 
+\index{input.cpp@{input.cpp}!g\_keyStateTrigger@{g\_keyStateTrigger}}
+\index{g\_keyStateTrigger@{g\_keyStateTrigger}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_keyStateTrigger}{g\_keyStateTrigger}}
+{\footnotesize\ttfamily B\+Y\+TE g\+\_\+key\+State\+Trigger\mbox{[}\mbox{\hyperlink{input_8cpp_afd005bb5824026329ad3445123d0c712}{N\+U\+M\+\_\+\+K\+E\+Y\+\_\+\+M\+AX}}\mbox{]}}
+
+
+
+ input.\+cpp の 46 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a800ec6565c40c5d6bd50252ba3aea58b}\label{input_8cpp_a800ec6565c40c5d6bd50252ba3aea58b}} 
+\index{input.cpp@{input.cpp}!g\_pDIDevKeyboard@{g\_pDIDevKeyboard}}
+\index{g\_pDIDevKeyboard@{g\_pDIDevKeyboard}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_pDIDevKeyboard}{g\_pDIDevKeyboard}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T\+D\+E\+V\+I\+C\+E8 g\+\_\+p\+D\+I\+Dev\+Keyboard = N\+U\+LL}
+
+
+
+ input.\+cpp の 44 行目に定義があります。
+
+\mbox{\Hypertarget{input_8cpp_a5f0cbd46047751e517a16bf55f38d031}\label{input_8cpp_a5f0cbd46047751e517a16bf55f38d031}} 
+\index{input.cpp@{input.cpp}!g\_pDInput@{g\_pDInput}}
+\index{g\_pDInput@{g\_pDInput}!input.cpp@{input.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_pDInput}{g\_pDInput}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T8 g\+\_\+p\+D\+Input = N\+U\+LL}
+
+
+
+ input.\+cpp の 43 行目に定義があります。
+

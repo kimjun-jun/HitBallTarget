@@ -1,0 +1,571 @@
+\hypertarget{ranking_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/ranking.h ファイル}
+\label{ranking_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/ranking.h@{C:/Users/HP/source/Repos/HitBallTarget/ranking.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_r_a_n_k_i_n_g}{R\+A\+N\+K\+I\+NG}}
+\item 
+struct \mbox{\hyperlink{struct_r_a_n_k_i_n_g_l_o_g_o}{R\+A\+N\+K\+I\+N\+G\+L\+O\+GO}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ranking_8h_ae271c7a9a34e2eaf99642b33c2c9827f}{T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+UM}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/\mbox{\hyperlink{struct_b_g}{BG}}/0-\/9.png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a56811296515027f74d9a25cdbe565d68}{T\+E\+X\+T\+U\+R\+E\+\_\+\+A\+L\+P\+HA}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/keyborad.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a7c3e91ee173039d400731792f6c7a9b9}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+L\+O\+GO}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/ranklogo.\+png\char`\"{})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_af0cc963b67b6623250f4bc14a6c5effe}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(200)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_ab36ffa4916b764dc84a1f3335895ad2b}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(100)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a051abe0d782ad8134c17a47f07bc889e}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(200)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_ac4b01bf8e5c2bb687db133f6a130e129}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(100)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_acb106a65a89d5a9406a8782fcacb3bf0}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(20)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a8f29b19803d771110c156d9e902215fb}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(20)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a8784e6ec142761fab01b787ca8ca1aca}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(200)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_aa45fbf88d39d3a0e1456517f9d5b0af1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(100)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a3f23b9eb018498448d4e59ecbf15ee80}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_ac70bc6c00e7b0ab373ba129eef0aee04}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/300.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a0b4606ce4f988efd1d59c74ddb94b937}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K147\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/300.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a268fb9d83ebaa706590a80414e143308}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K258\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a661ed4db9017306436d996bb334d63b7}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K369\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+300.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_af8fc9f83581d4dbb24e98ae6090b47d2}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K123\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/300.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a069ddd1ea848a701c4e9a427260fcbe0}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K456\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a5650122e71d5d536cb68941f6553e8be}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K789\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+300.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_ab3e61affa7ad5b8b7ebc7883172bf344}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E147\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/200.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a025cd74a6fa68c2ac35dba338a4634be}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E258\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a66add0a0ffb4445c9a03ab395ab07cff}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E369\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+200.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_aaebfb65ae60661cb016f8dc7c5ff9587}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E123\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/300.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_ae304d3929420a99ab98af01437ff0a50}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E456\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_ae35270d5c1e56fb8df7115b6836e6139}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E789\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+300.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_aac45e55b8f2ead40d8df6a28de574924}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E147\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/100.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a6ebe5bb67a672b942c05213fb5f91c58}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E258\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a46a015e294ac91be398bf522d67e3098}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E369\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+100.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a2fe5283ffb678e7a2f8529be3485e2ec}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E123\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/300.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a5be3e992650e79c5a01de012380d810c}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E456\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}})
+\item 
+\#define \mbox{\hyperlink{ranking_8h_aec68dce45d4dee21549b93abe29759ae}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E789\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+300.\+0f)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a5b5e0a91ed4c16285b9e451cd0990f30}{R\+A\+N\+K\+I\+N\+G\+S\+O\+C\+R\+ED}}~(4)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_af7eeca6b600d62871a7de15d6f2f0eec}{R\+A\+N\+K\+I\+N\+G\+M\+AX}}~(9)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a31631e9b0f0e3199a6453e8366f5aead}{R\+A\+N\+K\+I\+N\+G\+L\+O\+G\+O\+\_\+\+M\+AX}}~(1)
+\item 
+\#define \mbox{\hyperlink{ranking_8h_a7d15e893d2877efaa60ccdeb8915b22f}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+P\+O\+S\+\_\+X}}~(10.\+0f)
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{ranking_8h_aaa0a3f0fadae8d1ab301f42f17a80bae}{Init\+Ranking}} (int type)
+\item 
+void \mbox{\hyperlink{ranking_8h_a75b5253b5f9a2921746495375e751ea2}{Re\+Init\+Ranking}} (int type)
+\item 
+void \mbox{\hyperlink{ranking_8h_a952aea440eef2e42ee71374d82361e0d}{Uninit\+Ranking}} (void)
+\item 
+void \mbox{\hyperlink{ranking_8h_aea2da7dab67af9f498440ac174b46046}{Update\+Ranking}} (void)
+\item 
+void \mbox{\hyperlink{ranking_8h_a250019a762db2b97469156a4a3468835}{Updatein\+Ranking}} (void)
+\item 
+void \mbox{\hyperlink{ranking_8h_a27b4ef09e18b0847adf6744322eb79a6}{Draw\+Ranking}} (void)
+\item 
+void \mbox{\hyperlink{ranking_8h_acb2e3a765e69540be6921bf3fd2bc53c}{Set\+Texture\+Ranking}} (void)
+\item 
+void \mbox{\hyperlink{ranking_8h_a264b27c7fa804a0a517a9b2e92753881}{Set\+Vertex\+Ranking}} (void)
+\item 
+\mbox{\hyperlink{struct_r_a_n_k_i_n_g}{R\+A\+N\+K\+I\+NG}} $\ast$ \mbox{\hyperlink{ranking_8h_ad4acd0a1769cc7f0876d85293719467f}{Get\+Ranking}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{ranking_8h_a31631e9b0f0e3199a6453e8366f5aead}\label{ranking_8h_a31631e9b0f0e3199a6453e8366f5aead}} 
+\index{ranking.h@{ranking.h}!RANKINGLOGO\_MAX@{RANKINGLOGO\_MAX}}
+\index{RANKINGLOGO\_MAX@{RANKINGLOGO\_MAX}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{RANKINGLOGO\_MAX}{RANKINGLOGO\_MAX}}
+{\footnotesize\ttfamily \#define R\+A\+N\+K\+I\+N\+G\+L\+O\+G\+O\+\_\+\+M\+AX~(1)}
+
+
+
+ ranking.\+h の 54 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_af7eeca6b600d62871a7de15d6f2f0eec}\label{ranking_8h_af7eeca6b600d62871a7de15d6f2f0eec}} 
+\index{ranking.h@{ranking.h}!RANKINGMAX@{RANKINGMAX}}
+\index{RANKINGMAX@{RANKINGMAX}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{RANKINGMAX}{RANKINGMAX}}
+{\footnotesize\ttfamily \#define R\+A\+N\+K\+I\+N\+G\+M\+AX~(9)}
+
+
+
+ ranking.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a5b5e0a91ed4c16285b9e451cd0990f30}\label{ranking_8h_a5b5e0a91ed4c16285b9e451cd0990f30}} 
+\index{ranking.h@{ranking.h}!RANKINGSOCRED@{RANKINGSOCRED}}
+\index{RANKINGSOCRED@{RANKINGSOCRED}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{RANKINGSOCRED}{RANKINGSOCRED}}
+{\footnotesize\ttfamily \#define R\+A\+N\+K\+I\+N\+G\+S\+O\+C\+R\+ED~(4)}
+
+
+
+ ranking.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a56811296515027f74d9a25cdbe565d68}\label{ranking_8h_a56811296515027f74d9a25cdbe565d68}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_ALPHA@{TEXTURE\_ALPHA}}
+\index{TEXTURE\_ALPHA@{TEXTURE\_ALPHA}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_ALPHA}{TEXTURE\_ALPHA}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+A\+L\+P\+HA~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/keyborad.\+png\char`\"{})}
+
+
+
+ ranking.\+h の 14 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_ae271c7a9a34e2eaf99642b33c2c9827f}\label{ranking_8h_ae271c7a9a34e2eaf99642b33c2c9827f}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_NUM@{TEXTURE\_NUM}}
+\index{TEXTURE\_NUM@{TEXTURE\_NUM}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_NUM}{TEXTURE\_NUM}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+UM~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/\mbox{\hyperlink{struct_b_g}{BG}}/0-\/9.png\char`\"{})}
+
+
+
+ ranking.\+h の 13 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a3f23b9eb018498448d4e59ecbf15ee80}\label{ranking_8h_a3f23b9eb018498448d4e59ecbf15ee80}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_LOGO\_POS\_X@{TEXTURE\_RANKING\_LOGO\_POS\_X}}
+\index{TEXTURE\_RANKING\_LOGO\_POS\_X@{TEXTURE\_RANKING\_LOGO\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_LOGO\_POS\_X}{TEXTURE\_RANKING\_LOGO\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})}
+
+
+
+ ranking.\+h の 27 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_ac70bc6c00e7b0ab373ba129eef0aee04}\label{ranking_8h_ac70bc6c00e7b0ab373ba129eef0aee04}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_LOGO\_POS\_Y@{TEXTURE\_RANKING\_LOGO\_POS\_Y}}
+\index{TEXTURE\_RANKING\_LOGO\_POS\_Y@{TEXTURE\_RANKING\_LOGO\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_LOGO\_POS\_Y}{TEXTURE\_RANKING\_LOGO\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/300.\+0f)}
+
+
+
+ ranking.\+h の 28 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_af0cc963b67b6623250f4bc14a6c5effe}\label{ranking_8h_af0cc963b67b6623250f4bc14a6c5effe}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_LOGO\_SIZE\_X@{TEXTURE\_RANKING\_LOGO\_SIZE\_X}}
+\index{TEXTURE\_RANKING\_LOGO\_SIZE\_X@{TEXTURE\_RANKING\_LOGO\_SIZE\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_LOGO\_SIZE\_X}{TEXTURE\_RANKING\_LOGO\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+X~(200)}
+
+
+
+ ranking.\+h の 17 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_ab36ffa4916b764dc84a1f3335895ad2b}\label{ranking_8h_ab36ffa4916b764dc84a1f3335895ad2b}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_LOGO\_SIZE\_Y@{TEXTURE\_RANKING\_LOGO\_SIZE\_Y}}
+\index{TEXTURE\_RANKING\_LOGO\_SIZE\_Y@{TEXTURE\_RANKING\_LOGO\_SIZE\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_LOGO\_SIZE\_Y}{TEXTURE\_RANKING\_LOGO\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+Y~(100)}
+
+
+
+ ranking.\+h の 18 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a2fe5283ffb678e7a2f8529be3485e2ec}\label{ranking_8h_a2fe5283ffb678e7a2f8529be3485e2ec}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_NAME123\_POS\_Y@{TEXTURE\_RANKING\_NAME123\_POS\_Y}}
+\index{TEXTURE\_RANKING\_NAME123\_POS\_Y@{TEXTURE\_RANKING\_NAME123\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_NAME123\_POS\_Y}{TEXTURE\_RANKING\_NAME123\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E123\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/300.\+0f)}
+
+
+
+ ranking.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_aac45e55b8f2ead40d8df6a28de574924}\label{ranking_8h_aac45e55b8f2ead40d8df6a28de574924}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_NAME147\_POS\_X@{TEXTURE\_RANKING\_NAME147\_POS\_X}}
+\index{TEXTURE\_RANKING\_NAME147\_POS\_X@{TEXTURE\_RANKING\_NAME147\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_NAME147\_POS\_X}{TEXTURE\_RANKING\_NAME147\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E147\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/100.\+0f)}
+
+
+
+ ranking.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a6ebe5bb67a672b942c05213fb5f91c58}\label{ranking_8h_a6ebe5bb67a672b942c05213fb5f91c58}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_NAME258\_POS\_X@{TEXTURE\_RANKING\_NAME258\_POS\_X}}
+\index{TEXTURE\_RANKING\_NAME258\_POS\_X@{TEXTURE\_RANKING\_NAME258\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_NAME258\_POS\_X}{TEXTURE\_RANKING\_NAME258\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E258\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})}
+
+
+
+ ranking.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a46a015e294ac91be398bf522d67e3098}\label{ranking_8h_a46a015e294ac91be398bf522d67e3098}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_NAME369\_POS\_X@{TEXTURE\_RANKING\_NAME369\_POS\_X}}
+\index{TEXTURE\_RANKING\_NAME369\_POS\_X@{TEXTURE\_RANKING\_NAME369\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_NAME369\_POS\_X}{TEXTURE\_RANKING\_NAME369\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E369\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+100.\+0f)}
+
+
+
+ ranking.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a5be3e992650e79c5a01de012380d810c}\label{ranking_8h_a5be3e992650e79c5a01de012380d810c}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_NAME456\_POS\_Y@{TEXTURE\_RANKING\_NAME456\_POS\_Y}}
+\index{TEXTURE\_RANKING\_NAME456\_POS\_Y@{TEXTURE\_RANKING\_NAME456\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_NAME456\_POS\_Y}{TEXTURE\_RANKING\_NAME456\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E456\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}})}
+
+
+
+ ranking.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_aec68dce45d4dee21549b93abe29759ae}\label{ranking_8h_aec68dce45d4dee21549b93abe29759ae}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_NAME789\_POS\_Y@{TEXTURE\_RANKING\_NAME789\_POS\_Y}}
+\index{TEXTURE\_RANKING\_NAME789\_POS\_Y@{TEXTURE\_RANKING\_NAME789\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_NAME789\_POS\_Y}{TEXTURE\_RANKING\_NAME789\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E789\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+300.\+0f)}
+
+
+
+ ranking.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a8784e6ec142761fab01b787ca8ca1aca}\label{ranking_8h_a8784e6ec142761fab01b787ca8ca1aca}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_NAME\_SIZE\_X@{TEXTURE\_RANKING\_NAME\_SIZE\_X}}
+\index{TEXTURE\_RANKING\_NAME\_SIZE\_X@{TEXTURE\_RANKING\_NAME\_SIZE\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_NAME\_SIZE\_X}{TEXTURE\_RANKING\_NAME\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E\+\_\+X~(200)}
+
+
+
+ ranking.\+h の 23 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_aa45fbf88d39d3a0e1456517f9d5b0af1}\label{ranking_8h_aa45fbf88d39d3a0e1456517f9d5b0af1}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_NAME\_SIZE\_Y@{TEXTURE\_RANKING\_NAME\_SIZE\_Y}}
+\index{TEXTURE\_RANKING\_NAME\_SIZE\_Y@{TEXTURE\_RANKING\_NAME\_SIZE\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_NAME\_SIZE\_Y}{TEXTURE\_RANKING\_NAME\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y~(100)}
+
+
+
+ ranking.\+h の 24 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_af8fc9f83581d4dbb24e98ae6090b47d2}\label{ranking_8h_af8fc9f83581d4dbb24e98ae6090b47d2}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_RANK123\_POS\_Y@{TEXTURE\_RANKING\_RANK123\_POS\_Y}}
+\index{TEXTURE\_RANKING\_RANK123\_POS\_Y@{TEXTURE\_RANKING\_RANK123\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_RANK123\_POS\_Y}{TEXTURE\_RANKING\_RANK123\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K123\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/300.\+0f)}
+
+
+
+ ranking.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a0b4606ce4f988efd1d59c74ddb94b937}\label{ranking_8h_a0b4606ce4f988efd1d59c74ddb94b937}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_RANK147\_POS\_X@{TEXTURE\_RANKING\_RANK147\_POS\_X}}
+\index{TEXTURE\_RANKING\_RANK147\_POS\_X@{TEXTURE\_RANKING\_RANK147\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_RANK147\_POS\_X}{TEXTURE\_RANKING\_RANK147\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K147\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/300.\+0f)}
+
+
+
+ ranking.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a268fb9d83ebaa706590a80414e143308}\label{ranking_8h_a268fb9d83ebaa706590a80414e143308}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_RANK258\_POS\_X@{TEXTURE\_RANKING\_RANK258\_POS\_X}}
+\index{TEXTURE\_RANKING\_RANK258\_POS\_X@{TEXTURE\_RANKING\_RANK258\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_RANK258\_POS\_X}{TEXTURE\_RANKING\_RANK258\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K258\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})}
+
+
+
+ ranking.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a661ed4db9017306436d996bb334d63b7}\label{ranking_8h_a661ed4db9017306436d996bb334d63b7}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_RANK369\_POS\_X@{TEXTURE\_RANKING\_RANK369\_POS\_X}}
+\index{TEXTURE\_RANKING\_RANK369\_POS\_X@{TEXTURE\_RANKING\_RANK369\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_RANK369\_POS\_X}{TEXTURE\_RANKING\_RANK369\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K369\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+300.\+0f)}
+
+
+
+ ranking.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a069ddd1ea848a701c4e9a427260fcbe0}\label{ranking_8h_a069ddd1ea848a701c4e9a427260fcbe0}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_RANK456\_POS\_Y@{TEXTURE\_RANKING\_RANK456\_POS\_Y}}
+\index{TEXTURE\_RANKING\_RANK456\_POS\_Y@{TEXTURE\_RANKING\_RANK456\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_RANK456\_POS\_Y}{TEXTURE\_RANKING\_RANK456\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K456\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}})}
+
+
+
+ ranking.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a5650122e71d5d536cb68941f6553e8be}\label{ranking_8h_a5650122e71d5d536cb68941f6553e8be}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_RANK789\_POS\_Y@{TEXTURE\_RANKING\_RANK789\_POS\_Y}}
+\index{TEXTURE\_RANKING\_RANK789\_POS\_Y@{TEXTURE\_RANKING\_RANK789\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_RANK789\_POS\_Y}{TEXTURE\_RANKING\_RANK789\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K789\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+300.\+0f)}
+
+
+
+ ranking.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a051abe0d782ad8134c17a47f07bc889e}\label{ranking_8h_a051abe0d782ad8134c17a47f07bc889e}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_RANK\_SIZE\_X@{TEXTURE\_RANKING\_RANK\_SIZE\_X}}
+\index{TEXTURE\_RANKING\_RANK\_SIZE\_X@{TEXTURE\_RANKING\_RANK\_SIZE\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_RANK\_SIZE\_X}{TEXTURE\_RANKING\_RANK\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K\+\_\+\+S\+I\+Z\+E\+\_\+X~(200)}
+
+
+
+ ranking.\+h の 19 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_ac4b01bf8e5c2bb687db133f6a130e129}\label{ranking_8h_ac4b01bf8e5c2bb687db133f6a130e129}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_RANK\_SIZE\_Y@{TEXTURE\_RANKING\_RANK\_SIZE\_Y}}
+\index{TEXTURE\_RANKING\_RANK\_SIZE\_Y@{TEXTURE\_RANKING\_RANK\_SIZE\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_RANK\_SIZE\_Y}{TEXTURE\_RANKING\_RANK\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+R\+A\+N\+K\+\_\+\+S\+I\+Z\+E\+\_\+Y~(100)}
+
+
+
+ ranking.\+h の 20 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_aaebfb65ae60661cb016f8dc7c5ff9587}\label{ranking_8h_aaebfb65ae60661cb016f8dc7c5ff9587}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_SCORE123\_POS\_Y@{TEXTURE\_RANKING\_SCORE123\_POS\_Y}}
+\index{TEXTURE\_RANKING\_SCORE123\_POS\_Y@{TEXTURE\_RANKING\_SCORE123\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_SCORE123\_POS\_Y}{TEXTURE\_RANKING\_SCORE123\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E123\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/300.\+0f)}
+
+
+
+ ranking.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_ab3e61affa7ad5b8b7ebc7883172bf344}\label{ranking_8h_ab3e61affa7ad5b8b7ebc7883172bf344}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_SCORE147\_POS\_X@{TEXTURE\_RANKING\_SCORE147\_POS\_X}}
+\index{TEXTURE\_RANKING\_SCORE147\_POS\_X@{TEXTURE\_RANKING\_SCORE147\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_SCORE147\_POS\_X}{TEXTURE\_RANKING\_SCORE147\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E147\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/200.\+0f)}
+
+
+
+ ranking.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a025cd74a6fa68c2ac35dba338a4634be}\label{ranking_8h_a025cd74a6fa68c2ac35dba338a4634be}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_SCORE258\_POS\_X@{TEXTURE\_RANKING\_SCORE258\_POS\_X}}
+\index{TEXTURE\_RANKING\_SCORE258\_POS\_X@{TEXTURE\_RANKING\_SCORE258\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_SCORE258\_POS\_X}{TEXTURE\_RANKING\_SCORE258\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E258\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})}
+
+
+
+ ranking.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a66add0a0ffb4445c9a03ab395ab07cff}\label{ranking_8h_a66add0a0ffb4445c9a03ab395ab07cff}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_SCORE369\_POS\_X@{TEXTURE\_RANKING\_SCORE369\_POS\_X}}
+\index{TEXTURE\_RANKING\_SCORE369\_POS\_X@{TEXTURE\_RANKING\_SCORE369\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_SCORE369\_POS\_X}{TEXTURE\_RANKING\_SCORE369\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E369\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+200.\+0f)}
+
+
+
+ ranking.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_ae304d3929420a99ab98af01437ff0a50}\label{ranking_8h_ae304d3929420a99ab98af01437ff0a50}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_SCORE456\_POS\_Y@{TEXTURE\_RANKING\_SCORE456\_POS\_Y}}
+\index{TEXTURE\_RANKING\_SCORE456\_POS\_Y@{TEXTURE\_RANKING\_SCORE456\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_SCORE456\_POS\_Y}{TEXTURE\_RANKING\_SCORE456\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E456\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}})}
+
+
+
+ ranking.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_ae35270d5c1e56fb8df7115b6836e6139}\label{ranking_8h_ae35270d5c1e56fb8df7115b6836e6139}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_SCORE789\_POS\_Y@{TEXTURE\_RANKING\_SCORE789\_POS\_Y}}
+\index{TEXTURE\_RANKING\_SCORE789\_POS\_Y@{TEXTURE\_RANKING\_SCORE789\_POS\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_SCORE789\_POS\_Y}{TEXTURE\_RANKING\_SCORE789\_POS\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E789\+\_\+\+P\+O\+S\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+300.\+0f)}
+
+
+
+ ranking.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a7d15e893d2877efaa60ccdeb8915b22f}\label{ranking_8h_a7d15e893d2877efaa60ccdeb8915b22f}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_SCORE\_OFFSET\_POS\_X@{TEXTURE\_RANKING\_SCORE\_OFFSET\_POS\_X}}
+\index{TEXTURE\_RANKING\_SCORE\_OFFSET\_POS\_X@{TEXTURE\_RANKING\_SCORE\_OFFSET\_POS\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_SCORE\_OFFSET\_POS\_X}{TEXTURE\_RANKING\_SCORE\_OFFSET\_POS\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+P\+O\+S\+\_\+X~(10.\+0f)}
+
+
+
+ ranking.\+h の 56 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_acb106a65a89d5a9406a8782fcacb3bf0}\label{ranking_8h_acb106a65a89d5a9406a8782fcacb3bf0}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_SCORE\_SIZE\_X@{TEXTURE\_RANKING\_SCORE\_SIZE\_X}}
+\index{TEXTURE\_RANKING\_SCORE\_SIZE\_X@{TEXTURE\_RANKING\_SCORE\_SIZE\_X}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_SCORE\_SIZE\_X}{TEXTURE\_RANKING\_SCORE\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+X~(20)}
+
+
+
+ ranking.\+h の 21 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a8f29b19803d771110c156d9e902215fb}\label{ranking_8h_a8f29b19803d771110c156d9e902215fb}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKING\_SCORE\_SIZE\_Y@{TEXTURE\_RANKING\_SCORE\_SIZE\_Y}}
+\index{TEXTURE\_RANKING\_SCORE\_SIZE\_Y@{TEXTURE\_RANKING\_SCORE\_SIZE\_Y}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKING\_SCORE\_SIZE\_Y}{TEXTURE\_RANKING\_SCORE\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+\_\+\+S\+C\+O\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y~(20)}
+
+
+
+ ranking.\+h の 22 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a7c3e91ee173039d400731792f6c7a9b9}\label{ranking_8h_a7c3e91ee173039d400731792f6c7a9b9}} 
+\index{ranking.h@{ranking.h}!TEXTURE\_RANKINGLOGO@{TEXTURE\_RANKINGLOGO}}
+\index{TEXTURE\_RANKINGLOGO@{TEXTURE\_RANKINGLOGO}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_RANKINGLOGO}{TEXTURE\_RANKINGLOGO}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+A\+N\+K\+I\+N\+G\+L\+O\+GO~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/ranklogo.\+png\char`\"{})}
+
+
+
+ ranking.\+h の 15 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{ranking_8h_a27b4ef09e18b0847adf6744322eb79a6}\label{ranking_8h_a27b4ef09e18b0847adf6744322eb79a6}} 
+\index{ranking.h@{ranking.h}!DrawRanking@{DrawRanking}}
+\index{DrawRanking@{DrawRanking}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{DrawRanking()}{DrawRanking()}}
+{\footnotesize\ttfamily void Draw\+Ranking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ranking.\+cpp の 150 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{ranking_8h_ad4acd0a1769cc7f0876d85293719467f}\label{ranking_8h_ad4acd0a1769cc7f0876d85293719467f}} 
+\index{ranking.h@{ranking.h}!GetRanking@{GetRanking}}
+\index{GetRanking@{GetRanking}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{GetRanking()}{GetRanking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_r_a_n_k_i_n_g}{R\+A\+N\+K\+I\+NG}}$\ast$ Get\+Ranking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ranking.\+cpp の 350 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_aaa0a3f0fadae8d1ab301f42f17a80bae}\label{ranking_8h_aaa0a3f0fadae8d1ab301f42f17a80bae}} 
+\index{ranking.h@{ranking.h}!InitRanking@{InitRanking}}
+\index{InitRanking@{InitRanking}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{InitRanking()}{InitRanking()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Ranking (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ ranking.\+cpp の 29 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{ranking_8h_a75b5253b5f9a2921746495375e751ea2}\label{ranking_8h_a75b5253b5f9a2921746495375e751ea2}} 
+\index{ranking.h@{ranking.h}!ReInitRanking@{ReInitRanking}}
+\index{ReInitRanking@{ReInitRanking}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{ReInitRanking()}{ReInitRanking()}}
+{\footnotesize\ttfamily void Re\+Init\+Ranking (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ ranking.\+cpp の 100 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_acb2e3a765e69540be6921bf3fd2bc53c}\label{ranking_8h_acb2e3a765e69540be6921bf3fd2bc53c}} 
+\index{ranking.h@{ranking.h}!SetTextureRanking@{SetTextureRanking}}
+\index{SetTextureRanking@{SetTextureRanking}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{SetTextureRanking()}{SetTextureRanking()}}
+{\footnotesize\ttfamily void Set\+Texture\+Ranking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ranking.\+cpp の 258 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a264b27c7fa804a0a517a9b2e92753881}\label{ranking_8h_a264b27c7fa804a0a517a9b2e92753881}} 
+\index{ranking.h@{ranking.h}!SetVertexRanking@{SetVertexRanking}}
+\index{SetVertexRanking@{SetVertexRanking}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{SetVertexRanking()}{SetVertexRanking()}}
+{\footnotesize\ttfamily void Set\+Vertex\+Ranking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ranking.\+cpp の 292 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a952aea440eef2e42ee71374d82361e0d}\label{ranking_8h_a952aea440eef2e42ee71374d82361e0d}} 
+\index{ranking.h@{ranking.h}!UninitRanking@{UninitRanking}}
+\index{UninitRanking@{UninitRanking}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{UninitRanking()}{UninitRanking()}}
+{\footnotesize\ttfamily void Uninit\+Ranking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ranking.\+cpp の 108 行目に定義があります。
+
+\mbox{\Hypertarget{ranking_8h_a250019a762db2b97469156a4a3468835}\label{ranking_8h_a250019a762db2b97469156a4a3468835}} 
+\index{ranking.h@{ranking.h}!UpdateinRanking@{UpdateinRanking}}
+\index{UpdateinRanking@{UpdateinRanking}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{UpdateinRanking()}{UpdateinRanking()}}
+{\footnotesize\ttfamily void Updatein\+Ranking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ranking_8h_aea2da7dab67af9f498440ac174b46046}\label{ranking_8h_aea2da7dab67af9f498440ac174b46046}} 
+\index{ranking.h@{ranking.h}!UpdateRanking@{UpdateRanking}}
+\index{UpdateRanking@{UpdateRanking}!ranking.h@{ranking.h}}
+\doxysubsubsection{\texorpdfstring{UpdateRanking()}{UpdateRanking()}}
+{\footnotesize\ttfamily void Update\+Ranking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ ranking.\+cpp の 142 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4

@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['r18select_5fpx1_5fpos_5fx_1820',['R18SELECT_PX1_POS_X',['../_r18_8h.html#aa2a2bdf8431d2ea18564f001991110f3',1,'R18.h']]],
+  ['r18select_5fpx2_5fpos_5fx_1821',['R18SELECT_PX2_POS_X',['../_r18_8h.html#a51c26fb102f6c6c600878ce2e39c4d83',1,'R18.h']]],
+  ['r18select_5fpy1_5fpos_5fy_1822',['R18SELECT_PY1_POS_Y',['../_r18_8h.html#aa4015e346828ca7105b6e9dc13912564',1,'R18.h']]],
+  ['r18select_5fpy2_5fpos_5fy_1823',['R18SELECT_PY2_POS_Y',['../_r18_8h.html#a4a315ff157923b23ddd8b5f4b8cf9b96',1,'R18.h']]],
+  ['r18selectmax_1824',['R18SELECTMAX',['../_r18_8h.html#a2b4f1408bedff89a255ffa02a928ba72',1,'R18.h']]],
+  ['range_5fmax_1825',['RANGE_MAX',['../input_8cpp.html#a4f69b94680563056aed9fd60e5e28788',1,'input.cpp']]],
+  ['range_5fmin_1826',['RANGE_MIN',['../input_8cpp.html#a3c983eeadd733105fb0fea8729a9f2db',1,'input.cpp']]],
+  ['rankinglogo_5fmax_1827',['RANKINGLOGO_MAX',['../ranking_8h.html#a31631e9b0f0e3199a6453e8366f5aead',1,'ranking.h']]],
+  ['rankingmax_1828',['RANKINGMAX',['../ranking_8h.html#af7eeca6b600d62871a7de15d6f2f0eec',1,'ranking.h']]],
+  ['rankingsocred_1829',['RANKINGSOCRED',['../ranking_8h.html#a5b5e0a91ed4c16285b9e451cd0990f30',1,'ranking.h']]],
+  ['result_5fno_5fpos_5fx_1830',['RESULT_NO_POS_X',['../result_8h.html#a78c2fe6490dad3ade26c1ff51e068c63',1,'result.h']]],
+  ['result_5fno_5fpos_5fy_1831',['RESULT_NO_POS_Y',['../result_8h.html#a4b30f2d2db52449900b2b83ef50d5fe9',1,'result.h']]],
+  ['result_5fno_5fsize_5fx_1832',['RESULT_NO_SIZE_X',['../result_8h.html#af7768a366e2ce9ecd2fe7b00e4fde0ca',1,'result.h']]],
+  ['result_5fno_5fsize_5fy_1833',['RESULT_NO_SIZE_Y',['../result_8h.html#a299aacfd0cb214742cfe1ca7850e7a87',1,'result.h']]],
+  ['result_5fok_5fpos_5fx_1834',['RESULT_OK_POS_X',['../result_8h.html#a67975c9a126a12d6fa934443a1d01595',1,'result.h']]],
+  ['result_5fok_5fpos_5fy_1835',['RESULT_OK_POS_Y',['../result_8h.html#a53855ebfaf4d775219ebe8dcd357a402',1,'result.h']]],
+  ['result_5fok_5fsize_5fx_1836',['RESULT_OK_SIZE_X',['../result_8h.html#a237057ac9b8d73b133e953973b3d8f71',1,'result.h']]],
+  ['result_5fok_5fsize_5fy_1837',['RESULT_OK_SIZE_Y',['../result_8h.html#a4802b2599dda4ca1f4341bd4d35313da',1,'result.h']]]
+];

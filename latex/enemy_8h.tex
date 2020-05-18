@@ -1,0 +1,199 @@
+\hypertarget{enemy_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/enemy.h ファイル}
+\label{enemy_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/enemy.h@{C:/Users/HP/source/Repos/HitBallTarget/enemy.h}}
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_c_a_t}{C\+AT}}
+\item 
+struct \mbox{\hyperlink{struct_s_u_r_a_i_m_u}{S\+U\+R\+A\+I\+MU}}
+\item 
+struct \mbox{\hyperlink{struct_h_i_n_o_t_a_m_a}{H\+I\+N\+O\+T\+A\+MA}}
+\item 
+struct \mbox{\hyperlink{struct_u_f_o}{U\+FO}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{enemy_8h_a2fca2e181266a139bc9f793a449718c8}{Init\+Enemy}} (int type)
+\item 
+void \mbox{\hyperlink{enemy_8h_aa4cc6674e21c8a9374fbd4c06ed46cf3}{Re\+Init\+Enemy}} (void)
+\item 
+void \mbox{\hyperlink{enemy_8h_a8516befbbbd31c6fd6b987573a2c46f0}{Uninit\+Enemy}} (void)
+\item 
+void \mbox{\hyperlink{enemy_8h_adfb104c41674f038a1f395041670b1f1}{Update\+Enemy}} (void)
+\item 
+void \mbox{\hyperlink{enemy_8h_ae2f569f9ca315a7ca1a924bca86cf574}{Draw\+Enemy}} (void)
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{enemy_8h_a77df063189b82e66f7c7834f07e0519d}{Make\+Vertex\+Enemy}} (int i, int type)
+\item 
+void \mbox{\hyperlink{enemy_8h_ac0514dda2a81a53310583c4e53cc155c}{Set\+Texture\+Enemy}} (int cnt\+Pattern, int i, int type)
+\item 
+void \mbox{\hyperlink{enemy_8h_a646d02d9b20df56edb99b9ff3c7a4890}{Set\+Vertex\+Enemy}} (int i, int type)
+\item 
+\mbox{\hyperlink{struct_c_a_t}{C\+AT}} $\ast$ \mbox{\hyperlink{enemy_8h_a2f85c07c236b613aab7f84d1caa59714}{Get\+Cat}} (int i)
+\item 
+\mbox{\hyperlink{struct_s_u_r_a_i_m_u}{S\+U\+R\+A\+I\+MU}} $\ast$ \mbox{\hyperlink{enemy_8h_a11c35fc5d2b47b2b3cfff834f31d7e55}{Get\+Suraimu}} (int i)
+\item 
+\mbox{\hyperlink{struct_h_i_n_o_t_a_m_a}{H\+I\+N\+O\+T\+A\+MA}} $\ast$ \mbox{\hyperlink{enemy_8h_a4365841971b350b100867e258b90889c}{Get\+Hinotama}} (int i)
+\item 
+\mbox{\hyperlink{struct_u_f_o}{U\+FO}} $\ast$ \mbox{\hyperlink{enemy_8h_aadc4a714942b66dfb74ae0a42d169a69}{Get\+Ufo}} (int i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{enemy_8h_ae2f569f9ca315a7ca1a924bca86cf574}\label{enemy_8h_ae2f569f9ca315a7ca1a924bca86cf574}} 
+\index{enemy.h@{enemy.h}!DrawEnemy@{DrawEnemy}}
+\index{DrawEnemy@{DrawEnemy}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{DrawEnemy()}{DrawEnemy()}}
+{\footnotesize\ttfamily void Draw\+Enemy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 817 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{enemy_8h_a2f85c07c236b613aab7f84d1caa59714}\label{enemy_8h_a2f85c07c236b613aab7f84d1caa59714}} 
+\index{enemy.h@{enemy.h}!GetCat@{GetCat}}
+\index{GetCat@{GetCat}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{GetCat()}{GetCat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_a_t}{C\+AT}}$\ast$ Get\+Cat (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 1531 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{enemy_8h_a4365841971b350b100867e258b90889c}\label{enemy_8h_a4365841971b350b100867e258b90889c}} 
+\index{enemy.h@{enemy.h}!GetHinotama@{GetHinotama}}
+\index{GetHinotama@{GetHinotama}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{GetHinotama()}{GetHinotama()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_h_i_n_o_t_a_m_a}{H\+I\+N\+O\+T\+A\+MA}}$\ast$ Get\+Hinotama (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 1539 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{enemy_8h_a11c35fc5d2b47b2b3cfff834f31d7e55}\label{enemy_8h_a11c35fc5d2b47b2b3cfff834f31d7e55}} 
+\index{enemy.h@{enemy.h}!GetSuraimu@{GetSuraimu}}
+\index{GetSuraimu@{GetSuraimu}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{GetSuraimu()}{GetSuraimu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_u_r_a_i_m_u}{S\+U\+R\+A\+I\+MU}}$\ast$ Get\+Suraimu (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 1535 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{enemy_8h_aadc4a714942b66dfb74ae0a42d169a69}\label{enemy_8h_aadc4a714942b66dfb74ae0a42d169a69}} 
+\index{enemy.h@{enemy.h}!GetUfo@{GetUfo}}
+\index{GetUfo@{GetUfo}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{GetUfo()}{GetUfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_u_f_o}{U\+FO}}$\ast$ Get\+Ufo (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 1543 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{enemy_8h_a2fca2e181266a139bc9f793a449718c8}\label{enemy_8h_a2fca2e181266a139bc9f793a449718c8}} 
+\index{enemy.h@{enemy.h}!InitEnemy@{InitEnemy}}
+\index{InitEnemy@{InitEnemy}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{InitEnemy()}{InitEnemy()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Enemy (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 39 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{enemy_8h_a77df063189b82e66f7c7834f07e0519d}\label{enemy_8h_a77df063189b82e66f7c7834f07e0519d}} 
+\index{enemy.h@{enemy.h}!MakeVertexEnemy@{MakeVertexEnemy}}
+\index{MakeVertexEnemy@{MakeVertexEnemy}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{MakeVertexEnemy()}{MakeVertexEnemy()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+Enemy (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 884 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{enemy_8h_aa4cc6674e21c8a9374fbd4c06ed46cf3}\label{enemy_8h_aa4cc6674e21c8a9374fbd4c06ed46cf3}} 
+\index{enemy.h@{enemy.h}!ReInitEnemy@{ReInitEnemy}}
+\index{ReInitEnemy@{ReInitEnemy}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{ReInitEnemy()}{ReInitEnemy()}}
+{\footnotesize\ttfamily void Re\+Init\+Enemy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 193 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{enemy_8h_ac0514dda2a81a53310583c4e53cc155c}\label{enemy_8h_ac0514dda2a81a53310583c4e53cc155c}} 
+\index{enemy.h@{enemy.h}!SetTextureEnemy@{SetTextureEnemy}}
+\index{SetTextureEnemy@{SetTextureEnemy}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{SetTextureEnemy()}{SetTextureEnemy()}}
+{\footnotesize\ttfamily void Set\+Texture\+Enemy (\begin{DoxyParamCaption}\item[{int}]{cnt\+Pattern,  }\item[{int}]{i,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 1118 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 13
+\mbox{\Hypertarget{enemy_8h_a646d02d9b20df56edb99b9ff3c7a4890}\label{enemy_8h_a646d02d9b20df56edb99b9ff3c7a4890}} 
+\index{enemy.h@{enemy.h}!SetVertexEnemy@{SetVertexEnemy}}
+\index{SetVertexEnemy@{SetVertexEnemy}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{SetVertexEnemy()}{SetVertexEnemy()}}
+{\footnotesize\ttfamily void Set\+Vertex\+Enemy (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 1309 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 14
+\mbox{\Hypertarget{enemy_8h_a8516befbbbd31c6fd6b987573a2c46f0}\label{enemy_8h_a8516befbbbd31c6fd6b987573a2c46f0}} 
+\index{enemy.h@{enemy.h}!UninitEnemy@{UninitEnemy}}
+\index{UninitEnemy@{UninitEnemy}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{UninitEnemy()}{UninitEnemy()}}
+{\footnotesize\ttfamily void Uninit\+Enemy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 351 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 15
+\mbox{\Hypertarget{enemy_8h_adfb104c41674f038a1f395041670b1f1}\label{enemy_8h_adfb104c41674f038a1f395041670b1f1}} 
+\index{enemy.h@{enemy.h}!UpdateEnemy@{UpdateEnemy}}
+\index{UpdateEnemy@{UpdateEnemy}!enemy.h@{enemy.h}}
+\doxysubsubsection{\texorpdfstring{UpdateEnemy()}{UpdateEnemy()}}
+{\footnotesize\ttfamily void Update\+Enemy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ enemy.\+cpp の 391 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 16
+被呼び出し関係図\+:
+% FIG 17

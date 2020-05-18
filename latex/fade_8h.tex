@@ -1,0 +1,159 @@
+\hypertarget{fade_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/fade.h ファイル}
+\label{fade_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/fade.h@{C:/Users/HP/source/Repos/HitBallTarget/fade.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} \{ \newline
+\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6}{F\+A\+D\+E\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f}{F\+A\+D\+E\+\_\+\+IN}}, 
+\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f}{F\+A\+D\+E\+\_\+\+M\+U\+S\+I\+C\+\_\+\+S\+T\+OP}}, 
+\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3}{F\+A\+D\+E\+\_\+\+O\+UT}}, 
+\newline
+\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a26bc6b6684f32056033f7429057a189c}{F\+A\+D\+E\+\_\+\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{fade_8h_a00f23dbde310ac88a2c2cc41a410d328}{Init\+Fade}} (int type)
+\item 
+void \mbox{\hyperlink{fade_8h_ae2dfa8d8b36033b4351aa88227c8c4dd}{Uninit\+Fade}} (void)
+\item 
+void \mbox{\hyperlink{fade_8h_a527c4f6a38007a98f667afcdd9e9c8b3}{Update\+Fade}} (void)
+\item 
+void \mbox{\hyperlink{fade_8h_a949fa5fe0973987c1f6063de5468daf0}{Draw\+Fade}} (void)
+\item 
+void \mbox{\hyperlink{fade_8h_a85daf6279275e49d1eee12459cfada0d}{Set\+Fade}} (\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} fade, \mbox{\hyperlink{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5}{E\+\_\+\+S\+T\+A\+GE}} next, int sno)
+\item 
+\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} \mbox{\hyperlink{fade_8h_af15959ae7aa2a4e2bea206607aafbfd7}{Get\+Fade}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{列挙型詳解}
+\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}} 
+\index{fade.h@{fade.h}!FADE@{FADE}}
+\index{FADE@{FADE}!fade.h@{fade.h}}
+\doxysubsubsection{\texorpdfstring{FADE}{FADE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_NONE@{FADE\_NONE}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_NONE@{FADE\_NONE}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6}} 
+F\+A\+D\+E\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_IN@{FADE\_IN}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_IN@{FADE\_IN}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f}} 
+F\+A\+D\+E\+\_\+\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_MUSIC\_STOP@{FADE\_MUSIC\_STOP}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_MUSIC\_STOP@{FADE\_MUSIC\_STOP}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f}} 
+F\+A\+D\+E\+\_\+\+M\+U\+S\+I\+C\+\_\+\+S\+T\+OP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_OUT@{FADE\_OUT}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_OUT@{FADE\_OUT}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3}} 
+F\+A\+D\+E\+\_\+\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_MAX@{FADE\_MAX}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_MAX@{FADE\_MAX}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a26bc6b6684f32056033f7429057a189c}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a26bc6b6684f32056033f7429057a189c}} 
+F\+A\+D\+E\+\_\+\+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fade.\+h の 13 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{fade_8h_a949fa5fe0973987c1f6063de5468daf0}\label{fade_8h_a949fa5fe0973987c1f6063de5468daf0}} 
+\index{fade.h@{fade.h}!DrawFade@{DrawFade}}
+\index{DrawFade@{DrawFade}!fade.h@{fade.h}}
+\doxysubsubsection{\texorpdfstring{DrawFade()}{DrawFade()}}
+{\footnotesize\ttfamily void Draw\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 113 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{fade_8h_af15959ae7aa2a4e2bea206607aafbfd7}\label{fade_8h_af15959ae7aa2a4e2bea206607aafbfd7}} 
+\index{fade.h@{fade.h}!GetFade@{GetFade}}
+\index{GetFade@{GetFade}!fade.h@{fade.h}}
+\doxysubsubsection{\texorpdfstring{GetFade()}{GetFade()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} Get\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 188 行目に定義があります。
+
+\mbox{\Hypertarget{fade_8h_a00f23dbde310ac88a2c2cc41a410d328}\label{fade_8h_a00f23dbde310ac88a2c2cc41a410d328}} 
+\index{fade.h@{fade.h}!InitFade@{InitFade}}
+\index{InitFade@{InitFade}!fade.h@{fade.h}}
+\doxysubsubsection{\texorpdfstring{InitFade()}{InitFade()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Fade (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 36 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{fade_8h_a85daf6279275e49d1eee12459cfada0d}\label{fade_8h_a85daf6279275e49d1eee12459cfada0d}} 
+\index{fade.h@{fade.h}!SetFade@{SetFade}}
+\index{SetFade@{SetFade}!fade.h@{fade.h}}
+\doxysubsubsection{\texorpdfstring{SetFade()}{SetFade()}}
+{\footnotesize\ttfamily void Set\+Fade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}}}]{fade,  }\item[{\mbox{\hyperlink{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5}{E\+\_\+\+S\+T\+A\+GE}}}]{next,  }\item[{int}]{sno }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 177 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{fade_8h_ae2dfa8d8b36033b4351aa88227c8c4dd}\label{fade_8h_ae2dfa8d8b36033b4351aa88227c8c4dd}} 
+\index{fade.h@{fade.h}!UninitFade@{UninitFade}}
+\index{UninitFade@{UninitFade}!fade.h@{fade.h}}
+\doxysubsubsection{\texorpdfstring{UninitFade()}{UninitFade()}}
+{\footnotesize\ttfamily void Uninit\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 49 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{fade_8h_a527c4f6a38007a98f667afcdd9e9c8b3}\label{fade_8h_a527c4f6a38007a98f667afcdd9e9c8b3}} 
+\index{fade.h@{fade.h}!UpdateFade@{UpdateFade}}
+\index{UpdateFade@{UpdateFade}!fade.h@{fade.h}}
+\doxysubsubsection{\texorpdfstring{UpdateFade()}{UpdateFade()}}
+{\footnotesize\ttfamily void Update\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 60 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7

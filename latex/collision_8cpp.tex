@@ -1,0 +1,96 @@
+\hypertarget{collision_8cpp}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/collision.cpp ファイル}
+\label{collision_8cpp}\index{C:/Users/HP/source/Repos/HitBallTarget/collision.cpp@{C:/Users/HP/source/Repos/HitBallTarget/collision.cpp}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}enemy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fade.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}score.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}effect.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}collision.\+h\char`\"{}}\newline
+collision.\+cpp の依存先関係図\+:
+% FIG 0
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{collision_8cpp_a95f2043194966afc193cb3c2f84b972c}{Collision\+BB}} (D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos1, float h1, float w1, D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos2, float h2, float w2)
+\item 
+bool \mbox{\hyperlink{collision_8cpp_a6045e538566a6d5fc2519a01d636f6ec}{Collision\+BC}} (D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos1, float r1, D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos2, float r2)
+\item 
+void \mbox{\hyperlink{collision_8cpp_a102771cfc2ed7cee53e1d05ff7b34d53}{Cheak\+Hit}} (void)
+\item 
+void \mbox{\hyperlink{collision_8cpp_a32a68d055020250a22ce0d35107377d3}{Loop\+Init}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{collision_8cpp_a102771cfc2ed7cee53e1d05ff7b34d53}\label{collision_8cpp_a102771cfc2ed7cee53e1d05ff7b34d53}} 
+\index{collision.cpp@{collision.cpp}!CheakHit@{CheakHit}}
+\index{CheakHit@{CheakHit}!collision.cpp@{collision.cpp}}
+\doxysubsubsection{\texorpdfstring{CheakHit()}{CheakHit()}}
+{\footnotesize\ttfamily void Cheak\+Hit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ collision.\+cpp の 70 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{collision_8cpp_a95f2043194966afc193cb3c2f84b972c}\label{collision_8cpp_a95f2043194966afc193cb3c2f84b972c}} 
+\index{collision.cpp@{collision.cpp}!CollisionBB@{CollisionBB}}
+\index{CollisionBB@{CollisionBB}!collision.cpp@{collision.cpp}}
+\doxysubsubsection{\texorpdfstring{CollisionBB()}{CollisionBB()}}
+{\footnotesize\ttfamily bool Collision\+BB (\begin{DoxyParamCaption}\item[{D3\+D\+X\+V\+E\+C\+T\+O\+R3}]{pos1,  }\item[{float}]{h1,  }\item[{float}]{w1,  }\item[{D3\+D\+X\+V\+E\+C\+T\+O\+R3}]{pos2,  }\item[{float}]{h2,  }\item[{float}]{w2 }\end{DoxyParamCaption})}
+
+
+
+ collision.\+cpp の 22 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{collision_8cpp_a6045e538566a6d5fc2519a01d636f6ec}\label{collision_8cpp_a6045e538566a6d5fc2519a01d636f6ec}} 
+\index{collision.cpp@{collision.cpp}!CollisionBC@{CollisionBC}}
+\index{CollisionBC@{CollisionBC}!collision.cpp@{collision.cpp}}
+\doxysubsubsection{\texorpdfstring{CollisionBC()}{CollisionBC()}}
+{\footnotesize\ttfamily bool Collision\+BC (\begin{DoxyParamCaption}\item[{D3\+D\+X\+V\+E\+C\+T\+O\+R3}]{pos1,  }\item[{float}]{r1,  }\item[{D3\+D\+X\+V\+E\+C\+T\+O\+R3}]{pos2,  }\item[{float}]{r2 }\end{DoxyParamCaption})}
+
+
+
+ collision.\+cpp の 39 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{collision_8cpp_a32a68d055020250a22ce0d35107377d3}\label{collision_8cpp_a32a68d055020250a22ce0d35107377d3}} 
+\index{collision.cpp@{collision.cpp}!LoopInit@{LoopInit}}
+\index{LoopInit@{LoopInit}!collision.cpp@{collision.cpp}}
+\doxysubsubsection{\texorpdfstring{LoopInit()}{LoopInit()}}
+{\footnotesize\ttfamily void Loop\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ collision.\+cpp の 538 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6

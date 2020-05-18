@@ -1,0 +1,161 @@
+\hypertarget{fade_8cpp}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/fade.cpp ファイル}
+\label{fade_8cpp}\index{C:/Users/HP/source/Repos/HitBallTarget/fade.cpp@{C:/Users/HP/source/Repos/HitBallTarget/fade.cpp}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fade.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
+fade.\+cpp の依存先関係図\+:
+% FIG 0
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fade_8cpp_a15228f6ba94ab7352f4fcb31e6e7274c}{F\+A\+D\+E\+\_\+\+R\+A\+TE}}~(0.\+02f)
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{fade_8cpp_a4a1d94214c70866b5cbda894700674b2}{Make\+Vertex\+Fade}} (void)
+\item 
+void \mbox{\hyperlink{fade_8cpp_a3fe9846c8fbf02d66e5a1b6989f0b45e}{Set\+Color}} (D3\+D\+C\+O\+L\+OR col)
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{fade_8cpp_a00f23dbde310ac88a2c2cc41a410d328}{Init\+Fade}} (int type)
+\item 
+void \mbox{\hyperlink{fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd}{Uninit\+Fade}} (void)
+\item 
+void \mbox{\hyperlink{fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3}{Update\+Fade}} (void)
+\item 
+void \mbox{\hyperlink{fade_8cpp_a366aedf71d0d057d6df9988b0d38f000}{Draw\+Fade}} ()
+\item 
+void \mbox{\hyperlink{fade_8cpp_a85daf6279275e49d1eee12459cfada0d}{Set\+Fade}} (\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} fade, \mbox{\hyperlink{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5}{E\+\_\+\+S\+T\+A\+GE}} next, int sno)
+\item 
+\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} \mbox{\hyperlink{fade_8cpp_af15959ae7aa2a4e2bea206607aafbfd7}{Get\+Fade}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{fade_8cpp_a15228f6ba94ab7352f4fcb31e6e7274c}\label{fade_8cpp_a15228f6ba94ab7352f4fcb31e6e7274c}} 
+\index{fade.cpp@{fade.cpp}!FADE\_RATE@{FADE\_RATE}}
+\index{FADE\_RATE@{FADE\_RATE}!fade.cpp@{fade.cpp}}
+\doxysubsubsection{\texorpdfstring{FADE\_RATE}{FADE\_RATE}}
+{\footnotesize\ttfamily \#define F\+A\+D\+E\+\_\+\+R\+A\+TE~(0.\+02f)}
+
+
+
+ fade.\+cpp の 15 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{fade_8cpp_a366aedf71d0d057d6df9988b0d38f000}\label{fade_8cpp_a366aedf71d0d057d6df9988b0d38f000}} 
+\index{fade.cpp@{fade.cpp}!DrawFade@{DrawFade}}
+\index{DrawFade@{DrawFade}!fade.cpp@{fade.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawFade()}{DrawFade()}}
+{\footnotesize\ttfamily void Draw\+Fade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 113 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{fade_8cpp_af15959ae7aa2a4e2bea206607aafbfd7}\label{fade_8cpp_af15959ae7aa2a4e2bea206607aafbfd7}} 
+\index{fade.cpp@{fade.cpp}!GetFade@{GetFade}}
+\index{GetFade@{GetFade}!fade.cpp@{fade.cpp}}
+\doxysubsubsection{\texorpdfstring{GetFade()}{GetFade()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} Get\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 188 行目に定義があります。
+
+\mbox{\Hypertarget{fade_8cpp_a00f23dbde310ac88a2c2cc41a410d328}\label{fade_8cpp_a00f23dbde310ac88a2c2cc41a410d328}} 
+\index{fade.cpp@{fade.cpp}!InitFade@{InitFade}}
+\index{InitFade@{InitFade}!fade.cpp@{fade.cpp}}
+\doxysubsubsection{\texorpdfstring{InitFade()}{InitFade()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Fade (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 36 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{fade_8cpp_a4a1d94214c70866b5cbda894700674b2}\label{fade_8cpp_a4a1d94214c70866b5cbda894700674b2}} 
+\index{fade.cpp@{fade.cpp}!MakeVertexFade@{MakeVertexFade}}
+\index{MakeVertexFade@{MakeVertexFade}!fade.cpp@{fade.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeVertexFade()}{MakeVertexFade()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 130 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{fade_8cpp_a3fe9846c8fbf02d66e5a1b6989f0b45e}\label{fade_8cpp_a3fe9846c8fbf02d66e5a1b6989f0b45e}} 
+\index{fade.cpp@{fade.cpp}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!fade.cpp@{fade.cpp}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void Set\+Color (\begin{DoxyParamCaption}\item[{D3\+D\+C\+O\+L\+OR}]{col }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 165 行目に定義があります。
+
+\mbox{\Hypertarget{fade_8cpp_a85daf6279275e49d1eee12459cfada0d}\label{fade_8cpp_a85daf6279275e49d1eee12459cfada0d}} 
+\index{fade.cpp@{fade.cpp}!SetFade@{SetFade}}
+\index{SetFade@{SetFade}!fade.cpp@{fade.cpp}}
+\doxysubsubsection{\texorpdfstring{SetFade()}{SetFade()}}
+{\footnotesize\ttfamily void Set\+Fade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}}}]{fade,  }\item[{\mbox{\hyperlink{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5}{E\+\_\+\+S\+T\+A\+GE}}}]{next,  }\item[{int}]{sno }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 177 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd}\label{fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd}} 
+\index{fade.cpp@{fade.cpp}!UninitFade@{UninitFade}}
+\index{UninitFade@{UninitFade}!fade.cpp@{fade.cpp}}
+\doxysubsubsection{\texorpdfstring{UninitFade()}{UninitFade()}}
+{\footnotesize\ttfamily void Uninit\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 49 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3}\label{fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3}} 
+\index{fade.cpp@{fade.cpp}!UpdateFade@{UpdateFade}}
+\index{UpdateFade@{UpdateFade}!fade.cpp@{fade.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateFade()}{UpdateFade()}}
+{\footnotesize\ttfamily void Update\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ fade.\+cpp の 60 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9

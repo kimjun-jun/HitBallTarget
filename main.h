@@ -412,7 +412,7 @@ typedef struct
 
 typedef struct // キャラクター構造体
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			// テクス?ャへの?リゴン 
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			//! テクス?ャへの?リゴン 
 	VERTEX_2D				vertexWk[NUM_VERTEX];		// 頂?情報格?ワ?ク
 
 	D3DXVECTOR3				pos;						// ?リゴンの移動量

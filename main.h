@@ -1,8 +1,9 @@
-///*******************************************************************************
-//* タイトル:		キムジュンデンセツ(3)
-//* プログラム名:	main.h
-//* 作成者:			GP11B292 08 キムラジュン
-//********************************************************************************/
+/**
+* @file main.h
+* @brief HitBallTarget(2D)的当てゲーム
+* @author キムラジュン 
+* @date 2019/09/01
+*/
 #pragma once
 
 #define _CRT_SECURE_NO_WARNINGS			// scanf のwarning防止
@@ -27,43 +28,34 @@
 #pragma comment (lib, "winmm.lib")
 #endif
 
-//#define SCREEN_WIDTH		(640)				// ウインドウの幅
-//#define SCREEN_HEIGHT		(480)				// ウインドウの高さ
+/**
+* @def _TEST
+* @brief 簡単な説明
+* @details 詳細な説明
+*/
+#define SCREEN_W			(1280)						// ウインドウの幅
+#define SCREEN_H			(960)						// ウインドウの高さ
+#define SCREEN_CENTER_X	(SCREEN_W / 2)					// ウインドウの中心Ｘ座標
+#define SCREEN_CENTER_Y	(SCREEN_H / 2)					// ウインドウの中心Ｙ座標
 
-//#define SCREEN_W		(800)				// ウインドウの幅
-//#define SCREEN_H		(600)				// ウインドウの高さ
 
-#define SCREEN_W		(1280)				// ウインドウの幅
-#define SCREEN_H		(960)				// ウインドウの高さ
+#define BG_SIZE_H_TTOP		(240)						// BG奥行制限座標上部
+#define BG_SIZE_H_TOP		(300)						// BG奥行制限座標上部
+#define BG_SIZE_H_MID		(400)						// 　　　　　　　中部
+#define BG_SIZE_H_UNDER		(480)						// 　　　　　　　下部
+#define BG_SIZE_H_UUNDER	(600)						// 　　　　　　　下部
+#define BG_SIZE_W_TOP		(120)						// BG左右制限座標
+#define BG_SIZE_W_MID		(250)						// 　　　　　　　
+#define BG_SIZE_W_UNDER		(450)						// 　　　　　　　
 
-//#define BG_SIZE_H_TTOP	(150)			// BG奥行制限座標上部
-//#define BG_SIZE_H_TOP		(180)				// BG奥行制限座標上部
-//#define BG_SIZE_H_MID		(250)				// 　　　　　　　中部
-//#define BG_SIZE_H_UNDER	(300)			// 　　　　　　　下部
-//#define BG_SIZE_H_UUNDER	(400)				// 　　　　　　　下部
-//#define BG_SIZE_W_TOP		(70)				// BG左右制限座標
-//#define BG_SIZE_W_MID		(170)				// 　　　　　　　
-//#define BG_SIZE_W_UNDER	(270)			// 　　　　　　　
 
-#define BG_SIZE_H_TTOP		(240)				// BG奥行制限座標上部
-#define BG_SIZE_H_TOP		(300)				// BG奥行制限座標上部
-#define BG_SIZE_H_MID		(400)				// 　　　　　　　中部
-#define BG_SIZE_H_UNDER		(480)				// 　　　　　　　下部
-#define BG_SIZE_H_UUNDER	(600)				// 　　　　　　　下部
-#define BG_SIZE_W_TOP		(120)				// BG左右制限座標
-#define BG_SIZE_W_MID		(250)				// 　　　　　　　
-#define BG_SIZE_W_UNDER		(450)				// 　　　　　　　
-
-#define PY1_POS_Y						(SCREEN_CENTER_Y-150)		// ポリゴンの初期位置X
-#define PY2_POS_Y						(SCREEN_CENTER_Y+100)		// ポリゴンの初期位置X
-
-#define PX1_POS_X						(SCREEN_CENTER_X-250)		// 同上
-#define PX2_POS_X						(SCREEN_CENTER_X+250)		// 同上
+#define PY1_POS_Y			(SCREEN_CENTER_Y-150)		// ポリゴンの初期位置X
+#define PY2_POS_Y			(SCREEN_CENTER_Y+100)		// ポリゴンの初期位置X
+#define PX1_POS_X			(SCREEN_CENTER_X-250)		// 同上
+#define PX2_POS_X			(SCREEN_CENTER_X+250)		// 同上
 
 
 
-#define SCREEN_CENTER_X	(SCREEN_W / 2)	// ウインドウの中心Ｘ座標
-#define SCREEN_CENTER_Y	(SCREEN_H / 2)	// ウインドウの中心Ｙ座標
 
 // 画面遷移定数
 enum E_STAGE//列挙型。defineの番号を自動で割り当ててくれる。
@@ -85,7 +77,7 @@ enum E_STAGE//列挙型。defineの番号を自動で割り当ててくれる。
 	SCENE_RESULT_FIELD,				//14失敗スコア
 	SCENE_REGISTER,					//15ランキング登録
 	SCENE_RANKING,					//16ランキング表示
-	SCENE_MAX						//16個
+	SCENE_MAX						//17個
 };
 
 //ゲームクリアの種類
@@ -156,8 +148,6 @@ enum BGTYPE
 	OBG,				//投打背景
 	DBG					//守足背景
 };
-
-
 
 //ボールエフェクトの種類
 enum BETYPE
@@ -237,8 +227,8 @@ enum DIRECTION
 #define TEXTURE_GAME_SURAIMU			_T("data/TEXTURE/CHAR/suraimu.png") 
 #define TEXTURE_GAME_HINOTAMA			_T("data/TEXTURE/CHAR/hinotama.png") 
 #define TEXTURE_GAME_SCORE				_T("data/TEXTURE/BG/0-9.png")	
-#define	TEXTURE_SENSITIV			_T("data/TEXTURE/sozai/select/kando.png")		
-#define	TEXTURE_CONTROLTYPE			_T("data/TEXTURE/sozai/select/ADset.png")		
+#define	TEXTURE_SENSITIV				_T("data/TEXTURE/sozai/select/kando.png")		
+#define	TEXTURE_CONTROLTYPE				_T("data/TEXTURE/sozai/select/ADset.png")		
 
 //各々のテクスチャサイズX,Y
 #define TEXTURE_PITCHER_SIZE_X	(60)
@@ -253,10 +243,8 @@ enum DIRECTION
 #define TEXTURE_HINOTAMA_SIZE_Y	(50)
 #define TEXTURE_UFO_SIZE_X		(50)
 #define TEXTURE_UFO_SIZE_Y		(50)
-
 #define TEXTURE_CAT_SIZE_X_HALF		(TEXTURE_CAT_SIZE_X/2)
 #define TEXTURE_CAT_SIZE_Y_HALF		(TEXTURE_CAT_SIZE_Y/2)
-
 
 //各々のコリジョン用サイズ
 #define TEXTURE_BATTER_COLLISION_BB_SIZE_X					(TEXTURE_BATTER_SIZE_X/2)
@@ -279,35 +267,34 @@ enum DIRECTION
 //バッター
 #define TEXTURE_BATTER_PATTERN_DIVIDE_X		(5)
 #define TEXTURE_BATTER_PATTERN_DIVIDE_Y		(1)
-#define ANIM_BATTER_PATTERN_NUM			(TEXTURE_BATTER_PATTERN_DIVIDE_X*TEXTURE_BATTER_PATTERN_DIVIDE_Y)
+#define ANIM_BATTER_PATTERN_NUM				(TEXTURE_BATTER_PATTERN_DIVIDE_X*TEXTURE_BATTER_PATTERN_DIVIDE_Y)
 #define TIME_BATTER_ANIMATION_SLOW			(9)
 #define TIME_BATTER_ANIMATION_MID			(7)
 #define TIME_BATTER_ANIMATION_FAST			(5)
 //猫
 #define TEXTURE_CAT_PATTERN_DIVIDE_X		(3)
 #define TEXTURE_CAT_PATTERN_DIVIDE_Y		(4)
-#define ANIM_CAT_PATTERN_NUM			(TEXTURE_CAT_PATTERN_DIVIDE_X*TEXTURE_CAT_PATTERN_DIVIDE_Y)
+#define ANIM_CAT_PATTERN_NUM				(TEXTURE_CAT_PATTERN_DIVIDE_X*TEXTURE_CAT_PATTERN_DIVIDE_Y)
 #define TIME_CAT_ANIMATION_MID				(10)
 #define TIME_CAT_MOVECOUNT_MID				(60)
-
 //UFO
 #define TEXTURE_UFO_PATTERN_DIVIDE_X		(1)
 #define TEXTURE_UFO_PATTERN_DIVIDE_Y		(1)
-#define ANIM_UFO_PATTERN_NUM			(TEXTURE_UFO_PATTERN_DIVIDE_X*TEXTURE_UFO_PATTERN_DIVIDE_Y)
+#define ANIM_UFO_PATTERN_NUM				(TEXTURE_UFO_PATTERN_DIVIDE_X*TEXTURE_UFO_PATTERN_DIVIDE_Y)
 #define TIME_UFO_ANIMATION_MID				(10)
 #define TIME_UFO_MOVECOUNT_MID				(40)
 //スライム
 #define TEXTURE_SURAIMU_PATTERN_DIVIDE_X	(3)
 #define TEXTURE_SURAIMU_PATTERN_DIVIDE_Y	(4)
 #define ANIM_SURAIMU_PATTERN_NUM			(TEXTURE_SURAIMU_PATTERN_DIVIDE_X*TEXTURE_SURAIMU_PATTERN_DIVIDE_Y)
-#define TIME_SURAIMU_ANIMATION_MID				(10)
-#define TIME_SURAIMU_MOVECOUNT_MID				(40)
+#define TIME_SURAIMU_ANIMATION_MID			(10)
+#define TIME_SURAIMU_MOVECOUNT_MID			(40)
 //火の玉
 #define TEXTURE_HINOTAMA_PATTERN_DIVIDE_X	(3)
 #define TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y	(4)
 #define ANIM_HINOTAMA_PATTERN_NUM			(TEXTURE_HINOTAMA_PATTERN_DIVIDE_X*TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y)
-#define TIME_HINOTAMA_ANIMATION_MID				(10)
-#define TIME_HINOTAMA_MOVECOUNT_MID				(40)
+#define TIME_HINOTAMA_ANIMATION_MID			(10)
+#define TIME_HINOTAMA_MOVECOUNT_MID			(40)
 
 //エネミー変色スピード
 #define TEXTURE_COROLSPEED				(5)
@@ -319,21 +306,12 @@ enum DIRECTION
 #define BAT_MOTION_SPEED_MID						(8.0f)
 #define BAT_MOTION_ROOT_SPEED_MID					(7.41f)
 
-////ストライクゾーンの基準座標
-//#define STRIKE_REFERENCE_X		(SCREEN_W-400.0f);
-//#define STRIKE_REFERENCE_Y		(SCREEN_H-500.0f);
-////ボールの基準座標
-//#define BALL_SHADOW_REFARENCE_X			(SCREEN_W-410.0f)//投球開始時のボール影基準座標X
-//#define BALL_SHADOW_REFARENCE_Y			(SCREEN_H-230.0f)//投球開始時のボール影基準座標Y
-
 //ストライクゾーンの基準座標
 #define STRIKE_REFERENCE_X		(SCREEN_CENTER_X);
 #define STRIKE_REFERENCE_Y		(SCREEN_CENTER_Y+250.0f);
 //ボールの基準座標
 #define BALL_SHADOW_REFARENCE_X			(SCREEN_CENTER_X)//投球開始時のボール影基準座標X
 #define BALL_SHADOW_REFARENCE_Y			(SCREEN_CENTER_Y-200.0f)//投球開始時のボール影基準座標Y
-
-
 //投球されたボールがバッティングタイミングで赤くなる時のデクリメントされる座標
 #define BALL_JUST_TIMING_RED			(50.0f) 
 
@@ -341,7 +319,6 @@ enum DIRECTION
 #define BALL_CHENGEVAL_SIZE				(0.01f)//ボールが向かってくるとき徐々にサイズが変化する
 #define BALL_CHENGEVAL_MAX				(1.05f)//ボールが向かってくるとき徐々にサイズが変化する
 #define BALL_CHENGEVAL_MIN				(0.95f)//ボールが向かってくるとき徐々にサイズが変化する
-
 #define BALL_CHENGEVALTYPEA_SIZE		(0.1f)//ボールが向かってくるとき徐々にサイズが変化する
 #define BALL_CHENGEVALTYPEA_MAX			(5.0f)//ボールが向かってくるとき徐々にサイズが変化する
 #define BALL_CHENGEVALTYPEA_MIN			(-5.0f)//ボールが向かってくるとき徐々にサイズが変化する
@@ -454,6 +431,13 @@ typedef struct // キャラクター構造体
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief 簡単な説明（～する関数）
+* @param[in] a(引数名) 引数の説明
+* @param[out] b(引数名) 引数の説明
+* @return bool 戻り値の説明
+* @details 詳細な説明
+*/
 LPDIRECT3DDEVICE9 GetDevice(void);		// デバイス取得関数
 void SelectText(char *moji);
 void DrawTextType(void);
@@ -462,10 +446,5 @@ void InitGame(void);
 void ReInitTuto(void);
 void UpdateReInit(void);
 int GetScene(void);
-//void InitKey(void);
-//bool *GetGameSet(void);
-//bool *GetGameODloop(void);
-//void UpdateGameSet(int type);
-//void UpdateGameODloop(int type);
 float Random(int type);
 DWORD GetFPS(void);

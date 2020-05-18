@@ -252,18 +252,30 @@ typedef struct
 // キャラクター構造体
 typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			//! テクスチャへのポリゴン 
-	VERTEX_2D				vertexWk[NUM_VERTEX];		//! 頂点情報格納ワーク
-	D3DXVECTOR3				pos;						//! 座標
-	D3DXVECTOR3				rot;						//! 回転量
-	D3DXVECTOR3				move;						//! 移動量
-	D3DXVECTOR3				oldmove;					//! 古い移動量
-	int						fps;						//! バッティングのタイミング値
-	int						nCountAnim;					//! アニメカウント
-	int						nPatternAnim;				//! アニメパターンナンバー 
-	int						direction;					//! 移動方向
-	bool					motion;						//! 動いてるかどうか
-	bool					use;						//! 使用しているかどうか
+	//! テクスチャへのポリゴン
+		LPDIRECT3DTEXTURE9		pD3DTexture = NULL;
+	//! 頂点情報格納ワーク
+		VERTEX_2D				vertexWk[NUM_VERTEX];
+	//! 座標
+		D3DXVECTOR3				pos;
+	//! 回転量
+		D3DXVECTOR3				rot;
+	//! 移動量
+		D3DXVECTOR3				move;
+	//! 古い移動量
+		D3DXVECTOR3				oldmove;
+	//! バッティングのタイミング値
+		int						fps;
+	//! アニメカウント
+		int						nCountAnim;
+	//! アニメパターンナンバー
+		int						nPatternAnim;
+	//! 移動方向
+		int						direction;
+	//! 動いてるかどうか
+		bool					motion;
+	//! 使用しているかどうか
+		bool					use;						
 } CHARACTER;
 
 
@@ -415,14 +427,6 @@ typedef struct
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
-/**
-* @brief 簡単な説明（～する関数）
-* @param[in] a(引数名) 引数の説明
-* @param[out] b(引数名) 引数の説明
-* @return bool 戻り値の説明
-* @details 詳細な説明
-*/
-
 /**
 * @brief デバイス取得関数
 * @return LPDIRECT3DDEVICE9

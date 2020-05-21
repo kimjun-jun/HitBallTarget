@@ -35,8 +35,8 @@
 */
 #define SCREEN_W							(1280)						// ウインドウの幅
 #define SCREEN_H							(960)						// ウインドウの高さ
-#define SCREEN_CENTER_X						(SCREEN_W / 2)					// ウインドウの中心Ｘ座標
-#define SCREEN_CENTER_Y						(SCREEN_H / 2)					// ウインドウの中心Ｙ座標
+#define SCREEN_CENTER_X						(SCREEN_W / 2)				// ウインドウの中心Ｘ座標
+#define SCREEN_CENTER_Y						(SCREEN_H / 2)				// ウインドウの中心Ｙ座標
 
 
 #define BG_SIZE_H_TTOP						(240)						// BG奥行制限座標上部

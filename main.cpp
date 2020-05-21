@@ -36,17 +36,46 @@
 // マクロ定義
 //*****************************************************************************
 #define CLASS_NAME			_T("AppClass")				// ウインドウのクラス名
-#define WINDOW_NAME			_T("HitBallTarget")	// ウインドウのキャプション名
+#define WINDOW_NAME			_T("HitBallTarget")			// ウインドウのキャプション名
 
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief 文字セットする関数
+* @param[in] moji 表示したい文字を入力
+* @details 打球方向判定用 Debugのみで使用
+*/
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+
+/**
+* @brief デバイス取得関数
+* @return LPDIRECT3DDEVICE9
+*/
 HRESULT Init(HWND hWnd, BOOL bWindow);
+
+/**
+* @brief 文字を表示する関数
+* @details 打球方向判定用 Debugのみで使用
+*/
 void Uninit(void);
+
+/**
+* @brief 文字を表示する関数
+* @details 打球方向判定用 Debugのみで使用
+*/
 void Update(void);
+
+/**
+* @brief 文字を表示する関数
+* @details 打球方向判定用 Debugのみで使用
+*/
 void Draw(void);
 
+/**
+* @brief 文字を表示する関数
+* @details 打球方向判定用 Debugのみで使用
+*/
 #ifdef _DEBUG
 void DrawFPS(void);
 #endif
@@ -60,14 +89,13 @@ LPDIRECT3DDEVICE9		g_pD3DDevice = NULL;		// Deviceオブジェクト(描画に必要)
 #ifdef _DEBUG
 LPD3DXFONT				g_pD3DXFont = NULL;			// フォントへのポインタ
 int						g_nCountFPS;				// FPSカウンタ
+int						stop = 0;
 #endif
 
-char g_text[256] = { 0 };										//表示させるテキスト
+char					g_text[256] = { 0 };		//表示させるテキスト
 int						g_nScene = SCENE_TITLE;		// ステージ番号
-float g_random;										// エネミーの初期座標をランダムで決める
-DWORD dwFrameCount;// 時間計測用
-
-int stop = 0;
+float					g_random;					// エネミーの初期座標をランダムで決める
+DWORD					dwFrameCount;				// 時間計測用
 //=============================================================================
 // メイン関数
 //=============================================================================

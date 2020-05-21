@@ -170,11 +170,10 @@ void DrawPlayer(void)
 	// テクスチャの設定  
 	pDevice->SetTexture(0, g_player_bat.pb.pD3DTexture);
 	// ポリゴンの描画
-	pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_PLAYER, g_player_bat.pb.vertexWk, sizeof(VERTEX_2D));
-
+	pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_player_bat.pb.vertexWk, sizeof(VERTEX_2D));
 	//ピッチャー表示
 	pDevice->SetTexture(0, g_player_pit.pp.pD3DTexture);
-	pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_PLAYER, g_player_pit.pp.vertexWk, sizeof(VERTEX_2D));
+	pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_player_pit.pp.vertexWk, sizeof(VERTEX_2D));
 }
 
 //=============================================================================

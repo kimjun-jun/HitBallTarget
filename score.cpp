@@ -475,9 +475,9 @@ int *GetScoremaneger(void)
 //=============================================================================
 void AddScore(int val,int type)
 {
-	if (type == TIMEV) g_time_maneger += val;
-	else if (type == E) g_e_defeat++;
-	else if(type ==SCOREVAL) g_score_maneger += val;
+	if (type == TIME_VAL) g_time_maneger += val;
+	else if (type == ENEMY_VAL) g_e_defeat++;
+	else if(type ==SCORE_VAL) g_score_maneger += val;
 	if (g_time_maneger == 0)
 	{
 		SetFade(FADE_OUT, SCENE_RESULT_FIELD, SOUND_LABEL_BGM_gameover01);

@@ -349,7 +349,7 @@ void Ball(void)
 		}
 
 		//バッティング可能でボールカーソルを赤色に変更。ここをZ軸で判定するかY軸で判定するか
-		if (b->pos.y >= bc->pos.y - BALL_TIMING_PULL_KARABURI)
+		if (b->pos.y >= bc->pos.y - BALL_TIMING_PULL1)
 		{
 			bc->vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 0, 0, 255);
 			bc->vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 0, 0, 255);

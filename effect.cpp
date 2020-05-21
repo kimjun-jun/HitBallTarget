@@ -191,8 +191,8 @@ void SetVertexBE(void)
 //=============================================================================
 void SelectBE(int type)
 {
-	if (type == BE1) g_type = BE1;
-	else if (type == BE2)g_type = BE2;
+	if (type == BALL_EFFECT1) g_type = BALL_EFFECT1;
+	else if (type == BALL_EFFECT2)g_type = BALL_EFFECT2;
 }
 
 
@@ -231,8 +231,8 @@ void DeadEffect(int i,int type)
 		if (cat->use == true && cat->colori <= 0)
 		{
 			cat->use = false;
-			AddScore(1, E);
-			AddScore(cat->point, SCOREVAL);
+			AddScore(1, ENEMY_VAL);
+			AddScore(cat->point, SCORE_VAL);
 		}
 		break;
 	}
@@ -264,8 +264,8 @@ void DeadEffect(int i,int type)
 		if (suraimu->use == true && suraimu->colori <= 0)
 		{
 			suraimu->use = false;
-			AddScore(1, E);
-			AddScore(suraimu->point, SCOREVAL);
+			AddScore(1, ENEMY_VAL);
+			AddScore(suraimu->point, SCORE_VAL);
 		}
 		break;
 	}
@@ -297,8 +297,8 @@ void DeadEffect(int i,int type)
 		if (hinotama->use == true && hinotama->colori <= 0)
 		{
 			hinotama->use = false;
-			AddScore(1, E);
-			AddScore(hinotama->point, SCOREVAL);
+			AddScore(1, ENEMY_VAL);
+			AddScore(hinotama->point, SCORE_VAL);
 		}
 		break;
 	}

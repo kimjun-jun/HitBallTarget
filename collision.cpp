@@ -112,7 +112,7 @@ void CheakHit(void)
 				//打球処理 タイミングはパターンとカウントで判定する
 				if (pb->pb.motion == true && b->pos.y >= bc->pos.y - BALL_JUST_TIMING_RED && pb->pb.nPatternAnim >= BAT_PATTERN2 && pb->pb.nPatternAnim <= BAT_PATTERN3)
 				{
-					if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL_KARABURI && b->pos.y <= cursor->c.pos.y - BALL_TIMING_PULL_FOUL)
+					if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL1 && b->pos.y <= cursor->c.pos.y - BALL_TIMING_PULL2)
 					{
 #ifdef _DEBUG
 						sprintf(str, "1");
@@ -124,7 +124,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_PULL_KARABURI;
 					}
-					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL_FOUL && b->pos.y <= cursor->c.pos.y - BALL_TIMING_PULL_MAX)
+					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL2 && b->pos.y <= cursor->c.pos.y - BALL_TIMING_PULL3)
 					{
 #ifdef _DEBUG
 						sprintf(str, "2");
@@ -136,7 +136,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_PULL_FOUL;
 					}
-					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL_MAX && b->pos.y <= cursor->c.pos.y - BALL_TIMING_PULL_MID)
+					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL3 && b->pos.y <= cursor->c.pos.y - BALL_TIMING_PULL4)
 					{
 #ifdef _DEBUG
 						sprintf(str, "3");
@@ -148,7 +148,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_PULL_MAX;
 					}
-					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL_MID && b->pos.y <= cursor->c.pos.y - BALL_TIMING_PULL_MIN)
+					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL4 && b->pos.y <= cursor->c.pos.y - BALL_TIMING_PULL5)
 					{
 #ifdef _DEBUG
 						sprintf(str, "4");
@@ -160,7 +160,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_PULL_MID;
 					}
-					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL_MIN && b->pos.y <= cursor->c.pos.y - BALL_TIMING_JUST_MAX)
+					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_PULL5 && b->pos.y <= cursor->c.pos.y - BALL_TIMING_JUST1)
 					{
 #ifdef _DEBUG
 						sprintf(str, "5");
@@ -172,7 +172,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_PULL_MIN;
 					}
-					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_JUST_MAX && b->pos.y <= cursor->c.pos.y - BALL_TIMING_JUST)
+					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_JUST1 && b->pos.y <= cursor->c.pos.y - BALL_TIMING_JUST2)
 					{
 #ifdef _DEBUG
 						sprintf(str, "6");
@@ -184,7 +184,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_JUST_MAX;
 					}
-					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_JUST && b->pos.y <= cursor->c.pos.y + BALL_TIMING_JUST)
+					else if (b->pos.y > cursor->c.pos.y - BALL_TIMING_JUST2 && b->pos.y <= cursor->c.pos.y + BALL_TIMING_JUST2)
 					{
 #ifdef _DEBUG
 						sprintf(str, "7");
@@ -196,7 +196,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_JUST;
 					}
-					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_JUST && b->pos.y <= cursor->c.pos.y + BALL_TIMING_JUST_MIN)
+					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_JUST2 && b->pos.y <= cursor->c.pos.y + BALL_TIMING_JUST3)
 					{
 #ifdef _DEBUG
 						sprintf(str, "8");
@@ -208,7 +208,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_JUST_MIN;
 					}
-					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_JUST_MIN && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE_MAX)
+					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_JUST3 && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE1)
 					{
 #ifdef _DEBUG
 						sprintf(str, "9");
@@ -220,7 +220,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_OPPO_MAX;
 					}
-					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_OPPOSITE_MAX && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE_MID)
+					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_OPPOSITE1 && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE2)
 					{
 #ifdef _DEBUG
 						sprintf(str, "10");
@@ -232,7 +232,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_OPPO_MID;
 					}
-					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_OPPOSITE_MID && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE_MIN)
+					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_OPPOSITE2 && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE3)
 					{
 #ifdef _DEBUG
 						sprintf(str, "11");
@@ -244,7 +244,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_OPPO_MIN;
 					}
-					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_OPPOSITE_MIN && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE_FOUL)
+					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_OPPOSITE3 && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE4)
 					{
 #ifdef _DEBUG
 						sprintf(str, "12");
@@ -256,7 +256,7 @@ void CheakHit(void)
 						if (cursor->c.meet % 2 == SMALL) b[0].effect = b[1].effect = b[2].effect = true;
 						b->direction = BALL_DIRECTION_OPPO_FOUL;
 					}
-					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_OPPOSITE_FOUL && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE_KARABURI)
+					else if (b->pos.y > cursor->c.pos.y + BALL_TIMING_OPPOSITE4 && b->pos.y <= cursor->c.pos.y + BALL_TIMING_OPPOSITE5)
 					{
 #ifdef _DEBUG
 						sprintf(str, "13");

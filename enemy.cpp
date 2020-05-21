@@ -71,7 +71,7 @@ HRESULT InitEnemy(int type)
 				if (type == 0)													// 初回のみ読み込む
 				{
 					D3DXCreateTextureFromFile(pDevice,							// デバイスのポインタ
-						TEXTURE_GAME_CAT1,										// ファイルの名前
+						TEXTURE_GAME_CAT,										// ファイルの名前
 						&g_cat[j].pD3DTexture);								// 読み込むメモリのポインタ
 				}
 				// 頂点情報の作成

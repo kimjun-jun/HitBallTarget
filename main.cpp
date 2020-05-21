@@ -35,70 +35,92 @@
 //*****************************************************************************
 // マクロ定義
 //*****************************************************************************
-#define CLASS_NAME			_T("AppClass")				// ウインドウのクラス名
-#define WINDOW_NAME			_T("HitBallTarget")			// ウインドウのキャプション名
+/** @def
+*　ウインドウのクラス名
+*/
+#define CLASS_NAME			_T("AppClass")				
+
+/** @def
+*　ウインドウのキャプション名
+*/
+#define WINDOW_NAME			_T("HitBallTarget")			
 
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
-/**
-* @brief 文字セットする関数
-* @param[in] moji 表示したい文字を入力
-* @details 打球方向判定用 Debugのみで使用
-*/
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
 /**
-* @brief デバイス取得関数
-* @return LPDIRECT3DDEVICE9
+* @brief 初期化関数
+* @param[in]　HWND hWnd, BOOL bWindow
+* @return HRESULT
+* @details 起動時の初期化
 */
 HRESULT Init(HWND hWnd, BOOL bWindow);
 
 /**
-* @brief 文字を表示する関数
-* @details 打球方向判定用 Debugのみで使用
+* @brief メモリ開放関数
+* @details ゲーム終了時にメモリ開放する
 */
 void Uninit(void);
 
 /**
-* @brief 文字を表示する関数
-* @details 打球方向判定用 Debugのみで使用
+* @brief アップデート関数
+* @details オブジェクトを更新する
 */
 void Update(void);
 
 /**
-* @brief 文字を表示する関数
-* @details 打球方向判定用 Debugのみで使用
+* @brief 描画関数
+* @details オブジェクトを描画する
 */
 void Draw(void);
 
-/**
-* @brief 文字を表示する関数
-* @details 打球方向判定用 Debugのみで使用
-*/
 #ifdef _DEBUG
+/**
+* @brief FPS表示関数
+* @details デバッグ実行時FPSを表示する
+*/
 void DrawFPS(void);
 #endif
 
 //*****************************************************************************
 // グローバル変数:
 //*****************************************************************************
-LPDIRECT3D9				g_pD3D = NULL;				// Direct3Dオブジェクト
-LPDIRECT3DDEVICE9		g_pD3DDevice = NULL;		// Deviceオブジェクト(描画に必要)
+
+//! Direct3Dオブジェクト
+LPDIRECT3D9				g_pD3D = NULL;			
+
+//!  Deviceオブジェクト(描画に必要)
+LPDIRECT3DDEVICE9		g_pD3DDevice = NULL;	
 
 #ifdef _DEBUG
-LPD3DXFONT				g_pD3DXFont = NULL;			// フォントへのポインタ
-int						g_nCountFPS;				// FPSカウンタ
+//! フォントへのポインタ
+LPD3DXFONT				g_pD3DXFont = NULL;		
+//! FPSカウンタ
+int						g_nCountFPS;			
+//! 一時停止変数
 int						stop = 0;
 #endif
 
-char					g_text[256] = { 0 };		//表示させるテキスト
-int						g_nScene = SCENE_TITLE;		// ステージ番号
-float					g_random;					// エネミーの初期座標をランダムで決める
-DWORD					dwFrameCount;				// 時間計測用
-//=============================================================================
-// メイン関数
-//=============================================================================
+//! 表示させるテキスト
+char					g_text[256] = { 0 };	
+
+//! ゲームシーン番号
+int						g_nScene = SCENE_TITLE;	
+
+//! ランダム変数
+float					g_random;				
+
+//! 時間計測用
+DWORD					dwFrameCount;			
+
+
+/**
+* @brief メイン関数
+* @param[in] HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow
+* @return int
+*/
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	srand((unsigned)time(NULL));
@@ -237,9 +259,11 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	return (int)msg.wParam;
 }
 
-//=============================================================================
-// プロシージャ
-//=============================================================================
+/**
+* @brief プロシージャ関数
+* @param[in] HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam
+* @return LRESULT
+*/
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	switch (message)
@@ -654,7 +678,7 @@ LPDIRECT3DDEVICE9 GetDevice(void)
 
 #ifdef _DEBUG
 //=============================================================================
-// デバッグ時にどの制御になったかゲーム画面で判断する文字描画関数
+// デバッグ時に表示させる文字列をg_textに書き込む
 //=============================================================================
 void SelectText(char *moji)
 {
@@ -662,7 +686,7 @@ void SelectText(char *moji)
 }
 
 //=============================================================================
-// デバッグ時にどの制御になったかゲーム画面で判断する文字描画関数
+// デバッグ時にg_textの中身を描画
 //=============================================================================
 void DrawTextType(void)
 {
@@ -673,13 +697,13 @@ void DrawTextType(void)
 }
 
 //=============================================================================
-// FPS表示処理
+// デバッグ時にFPS表示処理　ついでにゲームパッドの対応ボタンも入力されるとビットを立てて表示
 //=============================================================================
-int GetPadData(int no);
-
 void DrawFPS(void)
 {
 	TCHAR str[256];
+	int GetPadData(int no);
+
 	//ここのセットを加えることでデバッグ時の表示項目を増やせる
 	{
 		RECT rect = { 0, 0, SCREEN_W, SCREEN_H };
@@ -722,13 +746,10 @@ int GetScene(void)
 }
 
 //=============================================================================
-// ゲームループ時の再初期化処理処理
-// 戻り値：無し
+// ゲームループ時の再初期化処理
 //=============================================================================
 void InitGame(void)
 {
-	//再初期化
-	//InitKey();
 	InitPlayer(1);
 	InitEnemy(1);
 	InitBall(1);		
@@ -744,12 +765,10 @@ void InitGame(void)
 }
 
 //=============================================================================
-// ゲーム中の再初期化処理処理
-// 戻り値：無し
+// チュートリアル後の最初期化
 //=============================================================================
 void ReInitTuto(void)
 {
-	//チュートリアル後の最初期化
 	ReInitPlayer();
 	ReInitEnemy();
 	ReInitBall();
@@ -758,12 +777,10 @@ void ReInitTuto(void)
 }
 
 //=============================================================================
-// ゲーム中の再初期化処理処理
-// 戻り値：無し
+// はじめからの最初期化
 //=============================================================================
 void UpdateReInit(void)
 {
-	//はじめからの最初期化
 	ReInitPlayer();
 	ReInitScore();
 	ReInitEnemy();
@@ -780,8 +797,7 @@ void UpdateReInit(void)
 }
 
 //=============================================================================
-// 攻後の
-// 戻り値：(true)offence or (false)defence
+// ランダム関数
 //=============================================================================
 float Random(int type)
 {

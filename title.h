@@ -10,8 +10,6 @@
 // マクロ定義
 //*****************************************************************************
 #define	TEXTURE_TITLE_LOGO	_T("data/TEXTURE/title/title_logo.png")			// 読み込むテクスチャファイル名
-
-
 #define	TITLELOGO_POS_X		(SCREEN_CENTER_X)								// タイトルロゴの表示位置
 #define	TITLELOGO_POS_Y		(SCREEN_CENTER_Y)								// タイトルロゴの表示位置
 #define	TITLELOGO_SIZE_X	(SCREEN_CENTER_X/2)								// タイトルロゴの幅

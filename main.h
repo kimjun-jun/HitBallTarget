@@ -6,8 +6,8 @@
 */
 #pragma once
 
-/** @def
-* scanf ÇÃwarningñhé~
+/** 
+*Å@@brief fscanf ÇÃwarningñhé~
 */
 #define _CRT_SECURE_NO_WARNINGS
 

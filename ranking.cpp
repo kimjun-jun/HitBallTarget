@@ -15,13 +15,27 @@
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief 頂点生成関数 MakeVertexRanking
+* @return HRESULT
+*/
 HRESULT MakeVertexRanking(void);
+
+/**
+* @brief テクスチャ設定関数 SetTextureRanking
+*/
+void SetTextureRanking(void);
+
+/**
+* @brief 頂点設定関数 SetVertexRanking
+*/
+void SetVertexRanking(void);
 
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-RANKING g_ranking[RANKINGMAX];//ランキング
-RANKINGLOGO g_rankinglogo[RANKINGLOGO_MAX];//ランキングロゴ
+RANKING g_ranking[RANKINGMAX];						//!< ランキング
+RANKINGLOGO g_rankinglogo[RANKINGLOGO_MAX];			//!< ランキングロゴ
 
 //=============================================================================
 // 初期化処理
@@ -46,47 +60,6 @@ HRESULT InitRanking(int type)
 				&g_ranking[i].scorepD3DTexture);
 		}
 	}
-
-	g_ranking[0].namepos = D3DXVECTOR3(TEXTURE_RANKING_NAME147_POS_X, TEXTURE_RANKING_NAME123_POS_Y, 0.0f);
-	g_ranking[1].namepos = D3DXVECTOR3(TEXTURE_RANKING_NAME258_POS_X, TEXTURE_RANKING_NAME123_POS_Y, 0.0f);
-	g_ranking[2].namepos = D3DXVECTOR3(TEXTURE_RANKING_NAME369_POS_X, TEXTURE_RANKING_NAME123_POS_Y, 0.0f);
-	g_ranking[3].namepos = D3DXVECTOR3(TEXTURE_RANKING_NAME147_POS_X, TEXTURE_RANKING_NAME456_POS_Y, 0.0f);
-	g_ranking[4].namepos = D3DXVECTOR3(TEXTURE_RANKING_NAME258_POS_X, TEXTURE_RANKING_NAME456_POS_Y, 0.0f);
-	g_ranking[5].namepos = D3DXVECTOR3(TEXTURE_RANKING_NAME369_POS_X, TEXTURE_RANKING_NAME456_POS_Y, 0.0f);
-	g_ranking[6].namepos = D3DXVECTOR3(TEXTURE_RANKING_NAME147_POS_X, TEXTURE_RANKING_NAME789_POS_Y, 0.0f);
-	g_ranking[7].namepos = D3DXVECTOR3(TEXTURE_RANKING_NAME258_POS_X, TEXTURE_RANKING_NAME789_POS_Y, 0.0f);
-	g_ranking[8].namepos = D3DXVECTOR3(TEXTURE_RANKING_NAME369_POS_X, TEXTURE_RANKING_NAME789_POS_Y, 0.0f);
-
-	g_ranking[0].numpos = D3DXVECTOR3(TEXTURE_RANKING_RANK147_POS_X, TEXTURE_RANKING_RANK123_POS_Y, 0.0f);
-	g_ranking[1].numpos = D3DXVECTOR3(TEXTURE_RANKING_RANK258_POS_X, TEXTURE_RANKING_RANK123_POS_Y, 0.0f);
-	g_ranking[2].numpos = D3DXVECTOR3(TEXTURE_RANKING_RANK369_POS_X, TEXTURE_RANKING_RANK123_POS_Y, 0.0f);
-	g_ranking[3].numpos = D3DXVECTOR3(TEXTURE_RANKING_RANK147_POS_X, TEXTURE_RANKING_RANK456_POS_Y, 0.0f);
-	g_ranking[4].numpos = D3DXVECTOR3(TEXTURE_RANKING_RANK258_POS_X, TEXTURE_RANKING_RANK456_POS_Y, 0.0f);
-	g_ranking[5].numpos = D3DXVECTOR3(TEXTURE_RANKING_RANK369_POS_X, TEXTURE_RANKING_RANK456_POS_Y, 0.0f);
-	g_ranking[6].numpos = D3DXVECTOR3(TEXTURE_RANKING_RANK147_POS_X, TEXTURE_RANKING_RANK789_POS_Y, 0.0f);
-	g_ranking[7].numpos = D3DXVECTOR3(TEXTURE_RANKING_RANK258_POS_X, TEXTURE_RANKING_RANK789_POS_Y, 0.0f);
-	g_ranking[8].numpos = D3DXVECTOR3(TEXTURE_RANKING_RANK369_POS_X, TEXTURE_RANKING_RANK789_POS_Y, 0.0f);
-
-	for (int i = 0; i < RANKINGSOCRED; i++)
-	{
-		g_ranking[0].scorepos[i] = D3DXVECTOR3(TEXTURE_RANKING_SCORE147_POS_X + (i* TEXTURE_RANKING_SCORE_OFFSET_POS_X), TEXTURE_RANKING_SCORE123_POS_Y, 0.0f);
-		g_ranking[1].scorepos[i] = D3DXVECTOR3(TEXTURE_RANKING_SCORE258_POS_X + (i* TEXTURE_RANKING_SCORE_OFFSET_POS_X), TEXTURE_RANKING_SCORE123_POS_Y, 0.0f);
-		g_ranking[2].scorepos[i] = D3DXVECTOR3(TEXTURE_RANKING_SCORE369_POS_X + (i* TEXTURE_RANKING_SCORE_OFFSET_POS_X), TEXTURE_RANKING_SCORE123_POS_Y, 0.0f);
-		g_ranking[3].scorepos[i] = D3DXVECTOR3(TEXTURE_RANKING_SCORE147_POS_X + (i* TEXTURE_RANKING_SCORE_OFFSET_POS_X), TEXTURE_RANKING_SCORE456_POS_Y, 0.0f);
-		g_ranking[4].scorepos[i] = D3DXVECTOR3(TEXTURE_RANKING_SCORE258_POS_X + (i* TEXTURE_RANKING_SCORE_OFFSET_POS_X), TEXTURE_RANKING_SCORE456_POS_Y, 0.0f);
-		g_ranking[5].scorepos[i] = D3DXVECTOR3(TEXTURE_RANKING_SCORE369_POS_X + (i* TEXTURE_RANKING_SCORE_OFFSET_POS_X), TEXTURE_RANKING_SCORE456_POS_Y, 0.0f);
-		g_ranking[6].scorepos[i] = D3DXVECTOR3(TEXTURE_RANKING_SCORE147_POS_X + (i* TEXTURE_RANKING_SCORE_OFFSET_POS_X), TEXTURE_RANKING_SCORE789_POS_Y, 0.0f);
-		g_ranking[7].scorepos[i] = D3DXVECTOR3(TEXTURE_RANKING_SCORE258_POS_X + (i* TEXTURE_RANKING_SCORE_OFFSET_POS_X), TEXTURE_RANKING_SCORE789_POS_Y, 0.0f);
-		g_ranking[8].scorepos[i] = D3DXVECTOR3(TEXTURE_RANKING_SCORE369_POS_X + (i* TEXTURE_RANKING_SCORE_OFFSET_POS_X), TEXTURE_RANKING_SCORE789_POS_Y, 0.0f);
-	}
-
-	//logoがまだ
-
-
-
-
-
-
 
 	// 頂点情報の作成
 	MakeVertexRanking();
@@ -346,7 +319,9 @@ void SetVertexRanking(void)
 
 }
 
-
+//=============================================================================
+// ランクのアドレスを返す
+//=============================================================================
 RANKING *GetRanking(void)
 {
 	return &g_ranking[0];

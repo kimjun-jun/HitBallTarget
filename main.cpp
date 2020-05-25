@@ -408,7 +408,7 @@ HRESULT Init(HWND hWnd, BOOL bWindow)
 	InitBG(0);
 	InitTitle(0);
 	InitResult(0);
-	InitFade(0);
+	InitFade();
 	InitTutorial(0);
 	InitSelect(0);
 	InitPause(0);
@@ -758,7 +758,7 @@ void InitGame(void)
 	InitUi(1);
 	InitTitle(1);
 	InitResult(1);
-	InitFade(1);
+	InitFade();
 	InitTutorial(1);
 	InitSelect(1);
 	InitCountdown(1);

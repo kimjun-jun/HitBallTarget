@@ -122,24 +122,24 @@
  */
 enum E_STAGE//列挙型。defineの番号を自動で割り当ててくれる。
 {
-	SCENE_TITLE,					//! <0。1つめだから0。列挙型の列挙定数名。定義した名前をシンボルっていうのが一般らしい。
-	SCENE_TUTORIAL,					//! <1チュートリアル
-	SCENE_TUTORIALMENU,				//! <2チュートリアル
-	SCENE_SELECT,					//! <3難易度選択
-	SCENE_GAMECOUNTDOWN,			//! <4ゲーム開始前のカウントダウン
-	SCENE_GAME,						//! <5ゲーム
-	SCENE_PAUSE,					//! <6ポーズ
-	SCENE_OPTION,					//! <7オプション
-	SCENE_R18SELECT,				//! <8R18画像選択
-	SCENE_SENSITIVITY,				//! <9オプション
-	SCENE_TUTOSENSITIVITY,			//! <10オプション
-	SCENE_CONTYPE,					//! <11オプション
-	SCENE_TUTOCONTYPE,				//! <12チュートリアル中A/D設定
-	SCENE_RESULT_CLEAR,				//! <13クリアスコア
-	SCENE_RESULT_FIELD,				//! <14失敗スコア
-	SCENE_REGISTER,					//! <15ランキング登録
-	SCENE_RANKING,					//! <16ランキング表示
-	SCENE_MAX						//! <17個
+	SCENE_TITLE,					//!< 0。1つめだから0。列挙型の列挙定数名。定義した名前をシンボルっていうのが一般らしい。
+	SCENE_TUTORIAL,					//!< 1チュートリアル
+	SCENE_TUTORIALMENU,				//!< 2チュートリアル
+	SCENE_SELECT,					//!< 3難易度選択
+	SCENE_GAMECOUNTDOWN,			//!< 4ゲーム開始前のカウントダウン
+	SCENE_GAME,						//!< 5ゲーム
+	SCENE_PAUSE,					//!< 6ポーズ
+	SCENE_OPTION,					//!< 7オプション
+	SCENE_R18SELECT,				//!< 8R18画像選択
+	SCENE_SENSITIVITY,				//!< 9オプション
+	SCENE_TUTOSENSITIVITY,			//!< 10オプション
+	SCENE_CONTYPE,					//!< 11オプション
+	SCENE_TUTOCONTYPE,				//!< 12チュートリアル中A/D設定
+	SCENE_RESULT_CLEAR,				//!< 13クリアスコア
+	SCENE_RESULT_FIELD,				//!< 14失敗スコア
+	SCENE_REGISTER,					//!< 15ランキング登録
+	SCENE_RANKING,					//!< 16ランキング表示
+	SCENE_MAX						//!< 17個
 };
 
 /**
@@ -234,8 +234,8 @@ enum TEXT
  */
 enum BETYPE
 {
-	BALL_EFFECT1,				//! <ボールエフェクト1
-	BALL_EFFECT2				//! <ボールエフェクト2
+	BALL_EFFECT1,				//!< ボールエフェクト1
+	BALL_EFFECT2				//!< ボールエフェクト2
 };
 
 /**
@@ -266,11 +266,11 @@ enum ENEMY_TYPE
  */
 enum BATTERPATTERN
 {
-	BAT_PATTERN0,	//! <通常
-	BAT_PATTERN1,	//! <スイング1
-	BAT_PATTERN2,	//! <スイング2
-	BAT_PATTERN3,	//! <スイング3
-	BAT_PATTERN4	//! <アイドリング
+	BAT_PATTERN0,	//!< 通常
+	BAT_PATTERN1,	//!< スイング1
+	BAT_PATTERN2,	//!< スイング2
+	BAT_PATTERN3,	//!< スイング3
+	BAT_PATTERN4	//!< アイドリング
 };
 
 /**
@@ -279,18 +279,18 @@ enum BATTERPATTERN
  */
 enum ENEMYRPATTERN
 {
-	ENEMY_PATTERN0,		//! <下向き1
-	ENEMY_PATTERN1,		//! <下向き2
-	ENEMY_PATTERN2,		//! <下向き3
-	ENEMY_PATTERN3,		//! <左向き1
-	ENEMY_PATTERN4,		//! <左向き2
-	ENEMY_PATTERN5,		//! <左向き3
-	ENEMY_PATTERN6,		//! <右向き1
-	ENEMY_PATTERN7,		//! <右向き2
-	ENEMY_PATTERN8,		//! <右向き3
-	ENEMY_PATTERN9,		//! <上向き1
-	ENEMY_PATTERN10,	//! <上向き2
-	ENEMY_PATTERN11		//! <上向き3
+	ENEMY_PATTERN0,		//!< 下向き1
+	ENEMY_PATTERN1,		//!< 下向き2
+	ENEMY_PATTERN2,		//!< 下向き3
+	ENEMY_PATTERN3,		//!< 左向き1
+	ENEMY_PATTERN4,		//!< 左向き2
+	ENEMY_PATTERN5,		//!< 左向き3
+	ENEMY_PATTERN6,		//!< 右向き1
+	ENEMY_PATTERN7,		//!< 右向き2
+	ENEMY_PATTERN8,		//!< 右向き3
+	ENEMY_PATTERN9,		//!< 上向き1
+	ENEMY_PATTERN10,	//!< 上向き2
+	ENEMY_PATTERN11		//!< 上向き3
 };
 
 /**
@@ -385,7 +385,7 @@ typedef struct
 		VERTEX_2D				vertexWk[NUM_VERTEX];
 	//! 座標
 		D3DXVECTOR3				pos;
-	//! 回転量
+	//! 回転角
 		D3DXVECTOR3				rot;
 	//! 移動量
 		D3DXVECTOR3				move;

@@ -13,16 +13,19 @@
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief 頂点生成関数 MakeVertexResult
+* @return HRESULT
+*/
 HRESULT MakeVertexResult(void);
 
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-LPDIRECT3DTEXTURE9		g_pD3DTextureResultok = NULL;		// テクスチャへのポインタ
-LPDIRECT3DTEXTURE9		g_pD3DTextureResultno = NULL;	// テクスチャへのポインタ
-
-VERTEX_2D				g_vertexWkResultok[NUM_VERTEX];			// 頂点情報格納ワーク
-VERTEX_2D				g_vertexWkResultno[NUM_VERTEX];		// 頂点情報格納ワーク
+LPDIRECT3DTEXTURE9		g_pD3DTextureResultok = NULL;			//!< テクスチャへのポインタ
+LPDIRECT3DTEXTURE9		g_pD3DTextureResultno = NULL;			//!< テクスチャへのポインタ
+VERTEX_2D				g_vertexWkResultok[NUM_VERTEX];			//!< 頂点情報格納ワーク
+VERTEX_2D				g_vertexWkResultno[NUM_VERTEX];			//!< 頂点情報格納ワーク
 
 //=============================================================================
 // 初期化処理
@@ -35,12 +38,12 @@ HRESULT InitResult(int type)
 	{
 		// テクスチャの読み込み
 		D3DXCreateTextureFromFile(pDevice,						// デバイスへのポインタ
-			TEXTURE_RESULT_OK,				// ファイルの名前
-			&g_pD3DTextureResultok);		// 読み込むメモリー
+			TEXTURE_RESULT_OK,									// ファイルの名前
+			&g_pD3DTextureResultok);							// 読み込むメモリー
 
 		D3DXCreateTextureFromFile(pDevice,						// デバイスへのポインタ
-			TEXTURE_RESULT_NO,		// ファイルの名前
-			&g_pD3DTextureResultno);	// 読み込むメモリー
+			TEXTURE_RESULT_NO,									// ファイルの名前
+			&g_pD3DTextureResultno);							// 読み込むメモリー
 	}
 
 	// 頂点情報の作成
@@ -96,10 +99,8 @@ void DrawResult(int type)
 	{
 		// 頂点フォーマットの設定
 		pDevice->SetFVF(FVF_VERTEX_2D);
-
 		// テクスチャの設定
 		pDevice->SetTexture(0, g_pD3DTextureResultok);
-
 		// ポリゴンの描画
 		pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_vertexWkResultok, sizeof(VERTEX_2D));
 	}
@@ -117,10 +118,10 @@ void DrawResult(int type)
 HRESULT MakeVertexResult(void)
 {
 	// 頂点座標の設定
-	g_vertexWkResultok[0].vtx = D3DXVECTOR3(RESULT_OK_POS_X, RESULT_OK_POS_Y, 0.0f);
-	g_vertexWkResultok[1].vtx = D3DXVECTOR3(RESULT_OK_POS_X + RESULT_OK_SIZE_X, RESULT_OK_POS_Y, 0.0f);
-	g_vertexWkResultok[2].vtx = D3DXVECTOR3(RESULT_OK_POS_X, RESULT_OK_POS_Y + RESULT_OK_SIZE_Y, 0.0f);
-	g_vertexWkResultok[3].vtx = D3DXVECTOR3(RESULT_OK_POS_X + RESULT_OK_SIZE_X, RESULT_OK_POS_Y + RESULT_OK_SIZE_Y, 0.0f);
+	g_vertexWkResultok[0].vtx = D3DXVECTOR3(RESULT_POS_X, RESULT_POS_Y, 0.0f);
+	g_vertexWkResultok[1].vtx = D3DXVECTOR3(RESULT_POS_X + RESULT_SIZE_X, RESULT_POS_Y, 0.0f);
+	g_vertexWkResultok[2].vtx = D3DXVECTOR3(RESULT_POS_X, RESULT_POS_Y + RESULT_SIZE_Y, 0.0f);
+	g_vertexWkResultok[3].vtx = D3DXVECTOR3(RESULT_POS_X + RESULT_SIZE_X, RESULT_POS_Y + RESULT_SIZE_Y, 0.0f);
 
 	// テクスチャのパースペクティブコレクト用
 	g_vertexWkResultok[0].rhw =
@@ -141,10 +142,10 @@ HRESULT MakeVertexResult(void)
 	g_vertexWkResultok[3].tex = D3DXVECTOR2(1.0f, 1.0f);
 
 	// 頂点座標の設定
-	g_vertexWkResultno[0].vtx = D3DXVECTOR3(RESULT_NO_POS_X, RESULT_NO_POS_Y, 0.0f);
-	g_vertexWkResultno[1].vtx = D3DXVECTOR3(RESULT_NO_POS_X + RESULT_NO_SIZE_X, RESULT_NO_POS_Y, 0.0f);
-	g_vertexWkResultno[2].vtx = D3DXVECTOR3(RESULT_NO_POS_X, RESULT_NO_POS_Y + RESULT_NO_SIZE_Y, 0.0f);
-	g_vertexWkResultno[3].vtx = D3DXVECTOR3(RESULT_NO_POS_X + RESULT_NO_SIZE_X, RESULT_NO_POS_Y + RESULT_NO_SIZE_Y, 0.0f);
+	g_vertexWkResultno[0].vtx = D3DXVECTOR3(RESULT_POS_X, RESULT_POS_Y, 0.0f);
+	g_vertexWkResultno[1].vtx = D3DXVECTOR3(RESULT_POS_X + RESULT_SIZE_X, RESULT_POS_Y, 0.0f);
+	g_vertexWkResultno[2].vtx = D3DXVECTOR3(RESULT_POS_X, RESULT_POS_Y + RESULT_SIZE_Y, 0.0f);
+	g_vertexWkResultno[3].vtx = D3DXVECTOR3(RESULT_POS_X + RESULT_SIZE_X, RESULT_POS_Y + RESULT_SIZE_Y, 0.0f);
 
 	// テクスチャのパースペクティブコレクト用
 	g_vertexWkResultno[0].rhw =

@@ -38,6 +38,10 @@
 
 #define	SMAX		(5)													//選択肢の数
 
+/**
+*　@struct TITLE
+*　@brief 2Dポリゴンを定義する構造体
+*/
 typedef struct
 {
 	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			// テクス?ャへの?リゴン 
@@ -49,10 +53,27 @@ typedef struct
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief R18初期化関数 InitR18select
+* @param[in] type 初期化タイプ
+* @return HRESULT
+*/
 HRESULT InitSelect(int type);
+/**
+* @brief R18開放関数 UninitR18select
+*/
 void UninitSelect(void);
+/**
+* @brief R18更新関数 UpdateR18select
+*/
 void UpdateSelect(void);
+/**
+* @brief R18描画関数 DrawR18select
+*/
 void DrawSelect(void);
 void SetTextureSelect(void);
 void SetVertexSelect(void);
+/**
+* @brief R18取得関数 GetR18select
+*/
 int GetSpos(void);

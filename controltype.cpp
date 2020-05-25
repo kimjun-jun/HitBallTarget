@@ -14,16 +14,25 @@
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief 頂点生成関数 MakeVertexContype
+* @return HRESULT
+*/
 HRESULT MakeVertexContype(void);
+
+/**
+* @brief ポリゴン頂点設定関数 SetVertexContype
+*/
+void SetVertexContype(void);
 
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-CONTYPE g_contype[CONTYPEMAX];//0はじめから、1あきらめる、2オプション
-static int SCONposy;			//ポーズカーソルのposy
-static int SCONkeypos;			//これがA/Dキー
-static int diffsec;			//点滅タイム
-static int diffnum;				//diffuse倍率
+CONTYPE g_contype[CONTYPEMAX];			//!< 0はじめから、1あきらめる、2オプション
+static int SCONposy;					//!< ポーズカーソルのposy
+static int SCONkeypos;					//!< これがA/Dキー
+static int diffsec;						//!< 点滅タイム
+static int diffnum;						//!< diffuse倍率
 
 //=============================================================================
 // 初期化処理
@@ -130,7 +139,6 @@ void UpdateContype(void)
 	}
 	SetVertexContype();
 }
-
 
 //=============================================================================
 // 更新処理　シーンTUTOCONTYPEのアップデート
@@ -302,6 +310,9 @@ void SetVertexContype(void)
 	g_contype[2].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255*diffnum);
 }
 
+//=============================================================================
+// 現在のコントローラータイプを取得
+//=============================================================================
 int GetSCONkeypos(void)
 {
 	return SCONkeypos;

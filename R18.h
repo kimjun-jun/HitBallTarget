@@ -9,39 +9,60 @@
 //*****************************************************************************
 // マクロ定義
 //*****************************************************************************
-#define	TEXTURE_R18SELECT01		_T("data/TEXTURE/sozai/select/heart01.png")			
-#define	TEXTURE_R18SELECT02		_T("data/TEXTURE/sozai/select/heart02.png")			
-#define	TEXTURE_R18SELECT03		_T("data/TEXTURE/sozai/select/NotR18.png")			
+#define	TEXTURE_R18SELECT01						_T("data/TEXTURE/sozai/select/heart01.png")	//!< 読み込むテクスチャファイル名		
+#define	TEXTURE_R18SELECT02						_T("data/TEXTURE/sozai/select/heart02.png")	//!< 読み込むテクスチャファイル名		
+#define	TEXTURE_R18SELECT03						_T("data/TEXTURE/sozai/select/NotR18.png")	//!< 読み込むテクスチャファイル名		
+#define TEXTURE_R18SELECT_SIZE_X				(200)										//!< ポリゴンの幅
+#define TEXTURE_R18SELECT_SIZE_Y				(100)										//!< ポリゴンの高さ
+#define R18SELECT_PY1_POS_Y						(SCREEN_CENTER_Y-150)						//!< ポリゴンの初期位置Y1
+#define R18SELECT_PY2_POS_Y						(SCREEN_CENTER_Y+100)						//!< ポリゴンの初期位置Y2
+#define R18SELECT_PX1_POS_X						(SCREEN_CENTER_X-250)						//!< ポリゴンの初期位置X1
+#define R18SELECT_PX2_POS_X						(SCREEN_CENTER_X+250)						//!< ポリゴンの初期位置X2
+#define	R18SELECTMAX							(3)											//!< 画面の選択肢数
 
-
-#define TEXTURE_R18SELECT_SIZE_X		(200)								// タイトルロゴの幅
-#define TEXTURE_R18SELECT_SIZE_Y		(100)								// タイトルロゴの高さ
-
-
-
-#define R18SELECT_PY1_POS_Y						(SCREEN_CENTER_Y-150)		// ポリゴンの初期位置X
-#define R18SELECT_PY2_POS_Y						(SCREEN_CENTER_Y+100)		// ポリゴンの初期位置X
-
-#define R18SELECT_PX1_POS_X						(SCREEN_CENTER_X-250)		// 同上
-#define R18SELECT_PX2_POS_X						(SCREEN_CENTER_X+250)		// 同上
-
-#define	R18SELECTMAX		(3)						//ポーズ画面の選択肢数
-
+/**
+*　@struct R18SELECT
+*　@brief 2Dポリゴンを定義する構造体
+*/
 typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			// テクス?ャへの?リゴン 
-	VERTEX_2D				vertexWk[NUM_VERTEX];		// 頂?情報格?ワ?ク
-
-	D3DXVECTOR3				pos;						// ?リゴンの移動量
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;												//!< テクスチャへのポリゴン 
+	VERTEX_2D				vertexWk[NUM_VERTEX];											//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;															//!< ポリゴンの移動量
 }R18SELECT;
 
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief R18初期化関数 InitR18select
+* @param[in] type 初期化タイプ
+* @return HRESULT
+*/
 HRESULT InitR18select(int type);
+
+/**
+* @brief R18再初期化関数 ReInitR18select
+*/
 void ReInitR18select(void);
+
+/**
+* @brief R18開放関数 UninitR18select
+*/
 void UninitR18select(void);
+
+/**
+* @brief R18更新関数 UpdateR18select
+*/
 void UpdateR18select(void);
+
+/**
+* @brief R18描画関数 DrawR18select
+*/
 void DrawR18select(void);
-void SetVertexR18select(void);
+
+/**
+* @brief R18取得関数 GetR18select
+* @return R18SELECT
+*/
 R18SELECT *GetR18select(void);

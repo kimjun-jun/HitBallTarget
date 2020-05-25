@@ -14,13 +14,27 @@
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief ポリゴン頂点生成関数 MakeVertexSensitivity
+* @return HRESULT
+*/
 HRESULT MakeVertexSensitivity(void);
+
+/**
+* @brief テクスチャ設定関数 SetTextureSensitivity
+*/
+void SetTextureSensitivity(void);
+
+/**
+* @brief 頂点設定関数 SetVertexSensitivity
+*/
+void SetVertexSensitivity(void);
 
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-SENSITIVITY g_sensitivity[SENSITIVITYMAX];//0はじめから、1あきらめる、2オプション
-static int SSENSIkey;			//これが感度の値
+SENSITIVITY g_sensitivity[SENSITIVITYMAX];			//!< 0はじめから、1あきらめる、2オプション
+static int SSENSIkey;								//!< これが感度の値
 
 //=============================================================================
 // 初期化処理
@@ -228,6 +242,9 @@ void SetVertexSensitivity(void)
 	}
 }
 
+//=============================================================================
+// 現在の感度取得
+//=============================================================================
 int GetSSENSIkey(void)
 {
 	return SSENSIkey;

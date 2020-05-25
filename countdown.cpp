@@ -18,6 +18,10 @@
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief 頂点生成関数 MakeVertexFade
+* @return HRESULT
+*/
 HRESULT MakeVertexCountdown(void);
 void SetTextureCountdown(void);	// 
 void SetVertexCountdown(void);					// 

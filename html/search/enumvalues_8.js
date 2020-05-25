@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['obg_1574',['OBG',['../main_8h.html#aa8c356ae2b5398973c34a024e974d4baa7c05dcc3d9e56d202982c1da4dde3681',1,'main.h']]]
+  ['pause_5fcancel_1565',['PAUSE_CANCEL',['../main_8h.html#aa4336248c92dcd64e58cdc8cf57c32f6a4c4977ae0996a8d704b7ced5fb7094d2',1,'main.h']]],
+  ['pause_5fend_1566',['PAUSE_END',['../main_8h.html#aa4336248c92dcd64e58cdc8cf57c32f6aa13fde35c5cb84d6fb224fe0a071b72f',1,'main.h']]],
+  ['pause_5fhajimekara_1567',['PAUSE_HAJIMEKARA',['../main_8h.html#aa4336248c92dcd64e58cdc8cf57c32f6ac9993b5c5f2c496ef941f5318bae0697',1,'main.h']]],
+  ['pause_5fmodeselect_1568',['PAUSE_MODESELECT',['../main_8h.html#aa4336248c92dcd64e58cdc8cf57c32f6a8fb6ba26ca900a4aace3f944194684f0',1,'main.h']]],
+  ['pause_5foption_1569',['PAUSE_OPTION',['../main_8h.html#aa4336248c92dcd64e58cdc8cf57c32f6a6a790016911ea6da946c61e16d68c33a',1,'main.h']]]
 ];

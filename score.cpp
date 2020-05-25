@@ -11,30 +11,36 @@
 #include "sound.h"
 
 //*****************************************************************************
-// マクロ定義
-//*****************************************************************************
-
-
-//*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief 頂点生成関数 MakeVertexScore
+* @return HRESULT
+*/
 HRESULT MakeVertexScore(void);
-void SetTextureScore(void);	// 
-void SetVertexScore(void);					// 
+
+/**
+* @brief テクスチャ設定関数 SetTextureScore
+*/
+void SetTextureScore(void);
+
+/**
+* @brief 頂点設定関数 SetVertexScore
+*/
+void SetVertexScore(void);
+
 
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-SCORE g_score[SCORE_DIGIT];
-static TIME  g_time[TIME_DIGIT];
-static DOT g_dot;
-static TIMELOGO g_timelogo;
-static SCORELOGO g_scorelogo;
-
-
-static int g_score_maneger;//ゲットしたスコア
-static int g_time_maneger;//残り時間
-static int g_e_defeat;//エネミーを倒した数
+SCORE g_score[SCORE_DIGIT];					//!< スコアのカウント
+static TIME  g_time[TIME_DIGIT];			//!< タイムのカウント
+static DOT g_dot;							//!< 小数点
+static TIMELOGO g_timelogo;					//!< タイムロゴ
+static SCORELOGO g_scorelogo;				//!< スコアロゴ
+static int g_score_maneger;					//!< ゲットしたスコア
+static int g_time_maneger;					//!< 残り時間
+static int g_e_defeat;						//!< エネミーを倒した数
 
 //=============================================================================
 // 初期化処理
@@ -54,8 +60,8 @@ HRESULT InitScore(int type)
 		if (type == 0)	// 初回のみ読み込む
 		{
 			D3DXCreateTextureFromFile(pDevice,		// デバイスのポインタ
-				TEXTURE_GAME_SCORE,				// ファイルの名前
-				&time->pD3DTexture);			// 読み込むメモリのポインタ
+				TEXTURE_GAME_SCORE,					// ファイルの名前
+				&time->pD3DTexture);				// 読み込むメモリのポインタ
 		}
 	}
 
@@ -71,13 +77,11 @@ HRESULT InitScore(int type)
 		if (type == 0)	// 初回のみ読み込む
 		{
 			D3DXCreateTextureFromFile(pDevice,		// デバイスのポインタ
-				TEXTURE_GAME_SCORE,				// ファイルの名前
-				&score->pD3DTexture);			// 読み込むメモリのポインタ
+				TEXTURE_GAME_SCORE,					// ファイルの名前
+				&score->pD3DTexture);				// 読み込むメモリのポインタ
 		}
 	}
 	g_dot.pos = D3DXVECTOR3(g_time[0].pos.x-30.0f, TEXTURE_TIMELOGO_POS_Y+130.0f, 0.0f);
-	g_dot.nCountAnim = 0;
-	g_dot.nPatternAnim = 0;
 	g_timelogo.pos = D3DXVECTOR3(TEXTURE_TIMELOGO_POS_X, TEXTURE_TIMELOGO_POS_Y, 0.0f);
 	g_scorelogo.pos = D3DXVECTOR3(TEXTURE_SCORELOGO_POS_X, TEXTURE_SCORELOGO_POS_Y, 0.0f);
 	// テクスチャの読み込み  
@@ -123,8 +127,6 @@ void ReInitScore(void)
 		score->nPatternAnim = 0;
 		score->level = 0;
 	}
-	g_dot.nCountAnim = 0;
-	g_dot.nPatternAnim = 0;
 	g_score_maneger = 0;
 	g_e_defeat = 0;
 	g_time_maneger = FPS_TIME_COUNT;
@@ -453,9 +455,8 @@ SCORE *GetScore(void)
 	return &g_score[0];
 }
 
-
 //=============================================================================
-// タイムのアドレスを返す
+// タイムの値を返す
 //=============================================================================
 int *GetTimemaneger(void)
 {
@@ -463,7 +464,7 @@ int *GetTimemaneger(void)
 }
 
 //=============================================================================
-// スコアのアドレスを返す
+// スコアの値を返す
 //=============================================================================
 int *GetScoremaneger(void)
 {
@@ -471,16 +472,22 @@ int *GetScoremaneger(void)
 }
 
 //=============================================================================
-// スコア加算処理
+// スコア、タイムを加減算する関数
 //=============================================================================
 void AddScore(int val,int type)
 {
+	//タイムを減算
 	if (type == TIME_VAL) g_time_maneger += val;
+	
+	//エネミーの生きてる数を減算
 	else if (type == ENEMY_VAL) g_e_defeat++;
+	
+	//スコアを加算
 	else if(type ==SCORE_VAL) g_score_maneger += val;
-	if (g_time_maneger == 0)
-	{
-		SetFade(FADE_OUT, SCENE_RESULT_FIELD, SOUND_LABEL_BGM_gameover01);
-	}
+	
+	//時間切れで終了　失敗
+	if (g_time_maneger == 0) SetFade(FADE_OUT, SCENE_RESULT_FIELD, SOUND_LABEL_BGM_gameover01);
+
+	//エネミー全部倒して終了　成功
 	if (g_e_defeat >= ENEMY_GOUKEI + g_score[0].level) SetFade(FADE_OUT, SCENE_RESULT_CLEAR, SOUND_LABEL_BGM_gameclear01);
 }

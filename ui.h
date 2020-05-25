@@ -58,6 +58,10 @@
 //*****************************************************************************
 //* 構造体定義
 //******************************************************************************* /
+/**
+*　@struct TITLE
+*　@brief 2Dポリゴンを定義する構造体
+*/
 typedef struct // バレット構造体
 {
 	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;		// テクスチャへのポリゴン 
@@ -73,11 +77,19 @@ typedef struct // バレット構造体
 	bool					use;
 } Ui;
 
+/**
+*　@struct TITLE
+*　@brief 2Dポリゴンを定義する構造体
+*/
 typedef struct // バレット構造体
 {
 	Ui s;
 }STRIKE;
 
+/**
+*　@struct TITLE
+*　@brief 2Dポリゴンを定義する構造体
+*/
 typedef struct // バレット構造体
 {
 	Ui c;
@@ -86,13 +98,36 @@ typedef struct // バレット構造体
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief R18初期化関数 InitR18select
+* @param[in] type 初期化タイプ
+* @return HRESULT
+*/
 HRESULT InitUi(int type);
+/**
+* @brief R18再初期化関数 ReInitR18select
+*/
 void ReInitUi(void);
+/**
+* @brief R18開放関数 UninitR18select
+*/
 void UninitUi(void);
+/**
+* @brief R18更新関数 UpdateR18select
+*/
 void UpdateUi(void);
+/**
+* @brief R18描画関数 DrawR18select
+*/
 void DrawUi(void);
 
+/**
+* @brief R18取得関数 GetR18select
+*/
 STRIKE *GetStrike(void);
+/**
+* @brief R18取得関数 GetR18select
+*/
 CURSOR *Get_Cursor(void);
 
 HRESULT MakeVertexUi(int i);

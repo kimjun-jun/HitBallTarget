@@ -9,29 +9,45 @@
 //*****************************************************************************
 // マクロ定義
 //*****************************************************************************
-#define	TEXTURE_TUTORIALF1		_T("data/TEXTURE/tutorial/tutorialF1.png")			
-#define	TEXTURE_TUTORIALF2		_T("data/TEXTURE/tutorial/tutorialF2.png")			
-#define	TEXTURE_TUTORIALF3		_T("data/TEXTURE/tutorial/tutorialF3.png")
-#define	TUTORIAL_POS_X			(0)													// チュートリアルの表示位置
-#define	TUTORIAL_POS_Y			(0)													// チュートリアルの表示位置
-#define	TUTORIAL_SIZE_X			(SCREEN_W)												// チュートリアルの幅
-#define	TUTORIAL_SIZE_Y			(SCREEN_H)												// チュートリアルの高さ
+#define	TEXTURE_TUTORIALF1		_T("data/TEXTURE/tutorial/tutorialF1.png")			//!< 読み込むテクスチャファイル名
+#define	TEXTURE_TUTORIALF2		_T("data/TEXTURE/tutorial/tutorialF2.png")			//!< 読み込むテクスチャファイル名
+#define	TEXTURE_TUTORIALF3		_T("data/TEXTURE/tutorial/tutorialF3.png")			//!< 読み込むテクスチャファイル名
+#define	TUTORIAL_POS_X			(0)													//!< タイトルの表示位置X
+#define	TUTORIAL_POS_Y			(0)													//!< タイトルの表示位置Y
+#define	TUTORIAL_SIZE_X			(SCREEN_W)											//!< タイトルの幅X
+#define	TUTORIAL_SIZE_Y			(SCREEN_H)											//!< タイトルの高さY
+#define TUTORIAL_GOUKEI			(3)													//!< タイトルの合計
 
-#define TUTORIAL_GOUKEI			(3)
-
+/**
+*　@struct TITLE
+*　@brief 2Dポリゴンを定義する構造体
+*/
 typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			// テクス?ャへの?リゴン 
-	VERTEX_2D				vertexWk[NUM_VERTEX];		// 頂?情報格?ワ?ク
-
-	D3DXVECTOR3				pos;						// ?リゴンの移動量
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;										//!< テクスチャへのポリゴン
+	VERTEX_2D				vertexWk[NUM_VERTEX];									//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;													//!< テクスチャへのポリゴン
 }TUTO;
 
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief R18初期化関数 InitR18select
+* @param[in] type 初期化タイプ
+* @return HRESULT
+*/
 HRESULT InitTutorial(int type);
+/**
+* @brief R18開放関数 UninitR18select
+*/
 void UninitTutorial(void);
+/**
+* @brief R18更新関数 UpdateR18select
+*/
 void UpdateTutorial(void);
+/**
+* @brief R18描画関数 DrawR18select
+*/
 void DrawTutorial(void);
 

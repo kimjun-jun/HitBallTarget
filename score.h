@@ -6,110 +6,154 @@
 */
 #pragma once
 
-
+//=============================================================================
 // マクロ定義
-#define TEXTURE_GAME_DOT	_T("data/TEXTURE/BG/dot.png")	
-#define TEXTURE_SCORE_SIZE_X	(50) // テクスチャサイズ 
-#define TEXTURE_SCORE_SIZE_Y	(50) // 同上  
-#define SCORE_TEXTURE_PATTERN_DIVIDE_X	(10)	// アニメパターンのテクスチャ内分割数（X)  
-#define SCORE_TEXTURE_PATTERN_DIVIDE_Y	(1)	// アニメパターンのテクスチャ内分割数（Y)  
-#define SCORE_ANIM_PATTERN_NUM			(SCORE_TEXTURE_PATTERN_DIVIDE_X*SCORE_TEXTURE_PATTERN_DIVIDE_Y)	// アニメーションパターン数  
-#define SCORE_TIME_ANIMATION			(4)	// アニメーションの切り替わるカウント  
-#define TEXTURE_DOT_SIZE_X	(7) // テクスチャサイズ 
-#define TEXTURE_DOT_SIZE_Y	(7) // 同上  
-
-
-#define DOT_GOUKEI					(2)
-#define TIME_DIGIT					(3)
-#define SCORE_DIGIT					(4)
-#define SCORE_GOUKEI				(60) //スコアの合計
-#define FPS_TIME_COUNT				(4200) //毎フレームカウントしてタイム計測
-
-
-#define TEXTURE_GAME_SCORELOGO	_T("data/TEXTURE/sozai/SCORE.png") 
-#define TEXTURE_GAME_TIMELOGO	_T("data/TEXTURE/sozai/TIME.png") 
-#define TEXTURE_SCORELOGO_SIZE_X	(100) // テクスチャサイズ
-#define TEXTURE_SCORELOGO_SIZE_Y	(75) // 同上  
-#define TEXTURE_TIMELOGO_SIZE_X	(100) // テクスチャサイズ 
-#define TEXTURE_TIMELOGO_SIZE_Y	(75) // 同上  
-
-#define TEXTURE_SCORE_POS_X	(SCREEN_CENTER_X-430.0f) // テクスチャサイズ
-#define TEXTURE_SCORE_POS_Y	(SCREEN_CENTER_Y+400.0f) // 同上  
-#define TEXTURE_TIME_POS_X	(SCREEN_CENTER_X+570.0f) // テクスチャサイズ 
-#define TEXTURE_TIME_POS_Y	(TEXTURE_SCORE_POS_Y) // 同上  
-
-
-#define TEXTURE_SCORELOGO_POS_X	(SCREEN_CENTER_X-520.0f) // テクスチャサイズ
-#define TEXTURE_SCORELOGO_POS_Y	(TEXTURE_SCORE_POS_Y-120.0f) // 同上  
-#define TEXTURE_TIMELOGO_POS_X	(SCREEN_CENTER_X+520.0f) // テクスチャサイズ 
-#define TEXTURE_TIMELOGO_POS_Y	(TEXTURE_TIME_POS_Y-100.0f) // 同上  
-
-#define NUM_INTERVAL_X	(60.0f) // 同上  
+//=============================================================================
+#define TEXTURE_GAME_DOT					_T("data/TEXTURE/BG/dot.png")										//!< 読み込むテクスチャファイル名
+#define TEXTURE_SCORE_SIZE_X				(50)																//!< テクスチャサイズY
+#define TEXTURE_SCORE_SIZE_Y				(50)																//!< テクスチャサイズX  
+#define SCORE_TEXTURE_PATTERN_DIVIDE_X		(10)																//!< アニメパターンのテクスチャ内分割数（X)  
+#define SCORE_TEXTURE_PATTERN_DIVIDE_Y		(1)																	//!< アニメパターンのテクスチャ内分割数（Y)  
+#define SCORE_ANIM_PATTERN_NUM				(SCORE_TEXTURE_PATTERN_DIVIDE_X*SCORE_TEXTURE_PATTERN_DIVIDE_Y)		//!< アニメーションパターン数  
+#define SCORE_TIME_ANIMATION				(4)																	//!< アニメーションの切り替わるカウント  
+#define TEXTURE_DOT_SIZE_X					(7)																	//!< テクスチャサイズX
+#define TEXTURE_DOT_SIZE_Y					(7)																	//!< テクスチャサイズY  
+#define TIME_DIGIT							(3)																	//!< タイムの桁数
+#define SCORE_DIGIT							(4)																	//!< スコアの桁数
+#define SCORE_GOUKEI						(60)																//!< スコアの合計
+#define FPS_TIME_COUNT						(4200)																//!< タイムの合計
+#define TEXTURE_GAME_SCORELOGO				_T("data/TEXTURE/sozai/SCORE.png") 									//!< 読み込むテクスチャファイル名
+#define TEXTURE_GAME_TIMELOGO				_T("data/TEXTURE/sozai/TIME.png") 									//!< 読み込むテクスチャファイル名
+#define TEXTURE_SCORELOGO_SIZE_X			(100)																//!< テクスチャサイズX
+#define TEXTURE_SCORELOGO_SIZE_Y			(75)																//!< テクスチャサイズY
+#define TEXTURE_TIMELOGO_SIZE_X				(100)																//!< テクスチャサイズX
+#define TEXTURE_TIMELOGO_SIZE_Y				(75)																//!< テクスチャサイズY
+#define TEXTURE_SCORE_POS_X					(SCREEN_CENTER_X-430.0f)											//!< テクスチャ座標X
+#define TEXTURE_SCORE_POS_Y					(SCREEN_CENTER_Y+400.0f)											//!< テクスチャ座標Y
+#define TEXTURE_TIME_POS_X					(SCREEN_CENTER_X+570.0f)											//!< テクスチャ座標X
+#define TEXTURE_TIME_POS_Y					(TEXTURE_SCORE_POS_Y)												//!< テクスチャ座標Y
+#define TEXTURE_SCORELOGO_POS_X				(SCREEN_CENTER_X-520.0f)											//!< テクスチャ座標X
+#define TEXTURE_SCORELOGO_POS_Y				(TEXTURE_SCORE_POS_Y-120.0f)										//!< テクスチャ座標Y
+#define TEXTURE_TIMELOGO_POS_X				(SCREEN_CENTER_X+520.0f)											//!< テクスチャ座標X
+#define TEXTURE_TIMELOGO_POS_Y				(TEXTURE_TIME_POS_Y-100.0f)											//!< テクスチャ座標Y
+#define NUM_INTERVAL_X						(60.0f)																//!< 数値間の間隔
 
 //*****************************************************************************
 //* 構造体定義
 //******************************************************************************* /
-typedef struct // エネミー構造体
+/**
+*　@struct TIME
+*　@brief 2Dポリゴンを定義する構造体
+*/
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;		
-
-	VERTEX_2D				texture[NUM_VERTEX];
-
-	D3DXVECTOR3				pos;					
-	D3DXVECTOR3				rot;					
-	int						nCountAnim;				
-	int						nPatternAnim;
-	bool					use;
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																	//!< テクスチャへのポリゴン 
+	VERTEX_2D				texture[NUM_VERTEX];																//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;																				//!< ポリゴンの移動量
+	D3DXVECTOR3				rot;																				//!< 回転角
+	int						nCountAnim;																			//!< アニメカウント
+	int						nPatternAnim;																		//!< アニメパターン
+	bool					use;																				//!< 使用しているかどうか
 } TIME;
 
-typedef struct // エネミー構造体
+/**
+*　@struct SCORE
+*　@brief 2Dポリゴンを定義する構造体
+*/
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;		
-
-	VERTEX_2D				texture[NUM_VERTEX];
-
-	D3DXVECTOR3				pos;					
-	D3DXVECTOR3				rot;					
-	int						nCountAnim;				
-	int						nPatternAnim;
-	int						level;
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																	//!< テクスチャへのポリゴン 
+	VERTEX_2D				texture[NUM_VERTEX];																//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;																				//!< ポリゴンの移動量
+	D3DXVECTOR3				rot;																				//!< ポリゴンの回転角
+	int						nCountAnim;																			//!< アニメカウント
+	int						nPatternAnim;																		//!< アニメパターン
+	int						level;																				//!< 生きてるエネミーの数
 } SCORE;
 
-typedef struct // エネミー構造体
+/**
+*　@struct DOT
+*　@brief 2Dポリゴンを定義する構造体
+*/
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;		
-
-	VERTEX_2D				texture[NUM_VERTEX];
-
-	D3DXVECTOR3				pos;					
-	int						nCountAnim;				
-	int						nPatternAnim;			
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																	//!< テクスチャへのポリゴン 
+	VERTEX_2D				texture[NUM_VERTEX];																//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;																				//!< ポリゴンの移動量
 } DOT;
 
-typedef struct // エネミー構造体
+/**
+*　@struct TIMELOGO
+*　@brief 2Dポリゴンを定義する構造体
+*/
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;
-	VERTEX_2D				texture[NUM_VERTEX];
-	D3DXVECTOR3				pos;
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																	//!< テクスチャへのポリゴン 
+	VERTEX_2D				texture[NUM_VERTEX];																//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;																				//!< ポリゴンの移動量
 } TIMELOGO;
 
-typedef struct // エネミー構造体
+/**
+*　@struct SCORELOGO
+*　@brief 2Dポリゴンを定義する構造体
+*/
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;
-	VERTEX_2D				texture[NUM_VERTEX];
-	D3DXVECTOR3				pos;
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																	//!< テクスチャへのポリゴン 
+	VERTEX_2D				texture[NUM_VERTEX];																//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;																				//!< ポリゴンの移動量
 } SCORELOGO;
 
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief Score初期化関数 InitScore
+* @param[in] type 初期化タイプ
+* @return HRESULT
+*/
 HRESULT InitScore(int type);
+
+/**
+* @brief Score再初期化関数 ReInitScore
+*/
 void ReInitScore(void);
+
+/**
+* @brief Score開放関数 UninitScore
+*/
 void UninitScore(void);
+
+/**
+* @brief Score更新関数 UpdateScore
+*/
 void UpdateScore(void);
+
+/**
+* @brief Score描画関数 DrawScore
+*/
 void DrawScore(void);
+
+/**
+* @brief Score取得関数 GetScore
+*/
 SCORE *GetScore(void);
+
+/**
+* @brief Timemaneger取得関数 GetTimemaneger
+* @return int
+*/
 int *GetTimemaneger(void);
+
+/**
+* @brief Scoremaneger取得関数 GetScoremaneger
+* @return int
+*/
 int *GetScoremaneger(void);
+
+/**
+* @brief スコア、タイムを加減算する関数 AddScore
+* @param[in] type 加算するタイプ
+*/
 void AddScore(int val,int type);
 

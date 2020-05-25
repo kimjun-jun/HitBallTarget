@@ -27,6 +27,10 @@
 //*****************************************************************************
 //* 構造体定義
 //******************************************************************************* /
+/**
+*　@struct TITLE
+*　@brief 2Dポリゴンを定義する構造体
+*/
 typedef struct // エネミー構造体
 {
 	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;
@@ -43,11 +47,31 @@ typedef struct // エネミー構造体
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief R18初期化関数 InitR18select
+* @param[in] type 初期化タイプ
+* @return HRESULT
+*/
 HRESULT InitCountdown(int type);
+/**
+* @brief R18再初期化関数 ReInitR18select
+*/
 void ReInitCountdown(void);
+/**
+* @brief R18開放関数 UninitR18select
+*/
 void UninitCountdown(void);
+/**
+* @brief R18更新関数 UpdateR18select
+*/
 void UpdateCountdown(void);
+/**
+* @brief R18描画関数 DrawR18select
+*/
 void DrawCountdown(void);
+/**
+* @brief R18取得関数 GetR18select
+*/
 COUNTDOWN *GetCountdown(void);
 void AddCountdown(int val);
 

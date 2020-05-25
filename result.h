@@ -9,22 +9,36 @@
 //*****************************************************************************
 // マクロ定義
 //*****************************************************************************
-#define	TEXTURE_RESULT_OK		_T("data/TEXTURE/result/result_gameclear.png")			// 読み込むテクスチャファイル名
-#define	TEXTURE_RESULT_NO		_T("data/TEXTURE/result/result_gameover.png")		// 読み込むテクスチャファイル名
-#define	RESULT_OK_POS_X			(0)							// タイトルの表示位置
-#define	RESULT_OK_POS_Y			(0)							// タイトルの表示位置
-#define	RESULT_OK_SIZE_X		(SCREEN_W)						// タイトルの幅
-#define	RESULT_OK_SIZE_Y		(SCREEN_H)						// タイトルの高さ
-#define	RESULT_NO_POS_X			(0)						
-#define	RESULT_NO_POS_Y			(0)						
-#define	RESULT_NO_SIZE_X		(SCREEN_W)					
-#define	RESULT_NO_SIZE_Y		(SCREEN_H)					
+#define	TEXTURE_RESULT_OK		_T("data/TEXTURE/result/result_gameclear.png")			//!< 読み込むテクスチャファイル名
+#define	TEXTURE_RESULT_NO		_T("data/TEXTURE/result/result_gameover.png")			//!< 読み込むテクスチャファイル名
+#define	RESULT_POS_X			(0)														//!< ポリゴンの表示位置X
+#define	RESULT_POS_Y			(0)														//!< ポリゴンの表示位置Y
+#define	RESULT_SIZE_X			(SCREEN_W)												//!< ポリゴンの幅
+#define	RESULT_SIZE_Y			(SCREEN_H)												//!< ポリゴンの高さ
 
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief Result初期化関数 InitResult
+* @param[in] type 初期化タイプ
+* @return HRESULT
+*/
 HRESULT InitResult(int type);
+
+/**
+* @brief Result開放関数 UninitResult
+*/
 void UninitResult(void);
+
+/**
+* @brief Result更新関数 UpdateResult
+*/
 void UpdateResult(void);
+
+/**
+* @brief Result描画関数 DrawResult
+* @param[in] type 描画タイプ
+*/
 void DrawResult(int type);
 

@@ -26,11 +26,11 @@ HRESULT InitKeyboard(HINSTANCE hInst, HWND hWnd);
 void UninitKeyboard(void);
 HRESULT UpdateKeyboard(void);
 
-HRESULT InitializeMouse(HINSTANCE hInst, HWND hWindow); // マウスの初期化
-void UninitMouse();						// マウスの終了処理
-HRESULT UpdateMouse();					// マウスの更新処理
+HRESULT InitializeMouse(HINSTANCE hInst, HWND hWindow);				// マウスの初期化
+void UninitMouse();													// マウスの終了処理
+HRESULT UpdateMouse();												// マウスの更新処理
 
-HRESULT InitializePad(void);			// パッド初期化
+HRESULT InitializePad(void);										// パッド初期化
 //BOOL CALLBACK SearchPadCallback(LPDIDEVICEINSTANCE lpddi, LPVOID);	// パッド検査コールバック
 void UpdatePad(void);
 void UninitPad(void);
@@ -49,18 +49,18 @@ BYTE					g_keyStateRelease[NUM_KEY_MAX];		// キーボードの状態を受け取るワーク
 int						g_keyStateRepeatCnt[NUM_KEY_MAX];	// キーボードのリピートカウンタ
 
 //--------------------------------- mouse
-static LPDIRECTINPUTDEVICE8 pMouse = NULL; // mouse
+static LPDIRECTINPUTDEVICE8 pMouse = NULL;	// mouse
 
-static DIMOUSESTATE2   mouseState;		// マウスのダイレクトな状態
-static DIMOUSESTATE2   mouseTrigger;	// 押された瞬間だけON
+static DIMOUSESTATE2   mouseState;			// マウスのダイレクトな状態
+static DIMOUSESTATE2   mouseTrigger;		// 押された瞬間だけON
 
 //--------------------------------- game pad
 
 static LPDIRECTINPUTDEVICE8	pGamePad[GAMEPADMAX] = { NULL,NULL,NULL,NULL };// パッドデバイス
 
-static DWORD	padState[GAMEPADMAX];	// パッド情報（複数対応）
+static DWORD	padState[GAMEPADMAX];					// パッド情報（複数対応）
 static DWORD	padTrigger[GAMEPADMAX];
-static int		padCount = 0;			// 検出したパッドの数
+static int		padCount = 0;							// 検出したパッドの数
 
 
 //=============================================================================

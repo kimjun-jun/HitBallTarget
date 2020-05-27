@@ -7,116 +7,174 @@
 #pragma once
 
 //*****************************************************************************
-//* ?造体定?
+//* 構造体定義
 //******************************************************************************* /
-typedef struct // プレイヤ??造体
+/**
+*　@struct CAT
+*　@brief 2Dポリゴンを定義する構造体(enemy)
+*/
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			// テクス?ャへの?リゴン 
-	VERTEX_2D				vertexWk[NUM_ENEMY];		// 頂?情報格?ワ?ク
-	D3DXVECTOR3				pos;						// ?リゴンの移動量
-	D3DXVECTOR3				rot;						// ?リゴンの回?量
-	D3DXVECTOR3				move;						//移動量
-	D3DXVECTOR3				oldmove;					//移動量
-	D3DXVECTOR3				oldpos;
-	D3DXVECTOR3				ppos[4];
-	int						colori;
-	int						nCountAnim;					// アニメ?ションカウント 
-	int						nPatternAnim;				// アニメ?ションパ??ンナンバ? 
-	int						direction;					// ?リゴンの移動方向
-	int						movecount;
-	int						point;
-	float					chengeval;
-	float					oldchengeval;
-	bool					motion;						// ?投球している 偽投球していない
-	bool					use;						// 使用しているかどうか
-	bool					color;
-	bool					effect;
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			//!< テクスチャへのポインタ 
+	VERTEX_2D				vertexWk[NUM_ENEMY];		//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;						//!< 座標
+	D3DXVECTOR3				rot;						//!< 回転角
+	D3DXVECTOR3				move;						//!< 移動量
+	D3DXVECTOR3				oldmove;					//!< 古い移動量
+	D3DXVECTOR3				oldpos;						//!< 古い座標
+	D3DXVECTOR3				ppos[4];					//!< 4分割ポリゴンの各ポリゴン中心座標
+	int						colori;						//!< 変色値(int)
+	int						nCountAnim;					//!< アニメカウント 
+	int						nPatternAnim;				//!< アニメパターン 
+	int						direction;					//!< 移動方向
+	int						movecount;					//!< 移動カウント
+	int						point;						//!< 得点
+	float					chengeval;					//!< 変化量
+	float					oldchengeval;				//!< 古い変化量
+	bool					motion;						//!< モーションしているかどうか
+	bool					use;						//!< 使用しているかどうか
+	bool					color;						//!< 変色判定
+	bool					effect;						//!< エフェクト判定
 } CAT;
 
-typedef struct // プレイヤ??造体
+/**
+*　@struct SURAIMU
+*　@brief 2Dポリゴンを定義する構造体(enemy)
+*/
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;	
-	VERTEX_2D				vertexWk[NUM_ENEMY];
-	D3DXVECTOR3				pos;				
-	D3DXVECTOR3				rot;				
-	D3DXVECTOR3				move;				
-	D3DXVECTOR3				oldmove;			
-	D3DXVECTOR3				oldpos;
-	D3DXVECTOR3				ppos[4];
-	int						colori;
-	int						nCountAnim;			
-	int						nPatternAnim;		
-	int						direction;	
-	int						movecount;
-	int						point;
-	float					chengeval;
-	float					oldchengeval;
-	bool					motion;
-	bool					use;
-	bool					color;
-	bool					effect;
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			//!< テクスチャへのポインタ 
+	VERTEX_2D				vertexWk[NUM_ENEMY];		//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;						//!< 座標
+	D3DXVECTOR3				rot;						//!< 回転角
+	D3DXVECTOR3				move;						//!< 移動量
+	D3DXVECTOR3				oldmove;					//!< 古い移動量
+	D3DXVECTOR3				oldpos;						//!< 古い座標
+	D3DXVECTOR3				ppos[4];					//!< 4分割ポリゴンの各ポリゴン中心座標
+	int						colori;						//!< 変色値(int)
+	int						nCountAnim;					//!< アニメカウント 
+	int						nPatternAnim;				//!< アニメパターン 
+	int						direction;					//!< 移動方向
+	int						movecount;					//!< 移動カウント
+	int						point;						//!< 得点
+	float					chengeval;					//!< 変化量
+	float					oldchengeval;				//!< 古い変化量
+	bool					motion;						//!< モーションしているかどうか
+	bool					use;						//!< 使用しているかどうか
+	bool					color;						//!< 変色判定
+	bool					effect;						//!< エフェクト判定
 } SURAIMU;
 
-typedef struct // プレイヤ??造体
+/**
+*　@struct HINOTAMA
+*　@brief 2Dポリゴンを定義する構造体(enemy)
+*/
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;
-	VERTEX_2D				vertexWk[NUM_ENEMY];
-	D3DXVECTOR3				pos;
-	D3DXVECTOR3				rot;
-	D3DXVECTOR3				move;
-	D3DXVECTOR3				oldmove;
-	D3DXVECTOR3				oldpos;
-	D3DXVECTOR3				ppos[4];
-	int						colori;
-	int						nCountAnim;
-	int						nPatternAnim;
-	int						direction;
-	int						movecount;
-	int						point;
-	float					chengeval;
-	float					oldchengeval;
-	bool					motion;
-	bool					use;
-	bool					color;
-	bool					effect;
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			//!< テクスチャへのポインタ 
+	VERTEX_2D				vertexWk[NUM_ENEMY];		//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;						//!< 座標
+	D3DXVECTOR3				rot;						//!< 回転角
+	D3DXVECTOR3				move;						//!< 移動量
+	D3DXVECTOR3				oldmove;					//!< 古い移動量
+	D3DXVECTOR3				oldpos;						//!< 古い座標
+	D3DXVECTOR3				ppos[4];					//!< 4分割ポリゴンの各ポリゴン中心座標
+	int						colori;						//!< 変色値(int)
+	int						nCountAnim;					//!< アニメカウント 
+	int						nPatternAnim;				//!< アニメパターン 
+	int						direction;					//!< 移動方向
+	int						movecount;					//!< 移動カウント
+	int						point;						//!< 得点
+	float					chengeval;					//!< 変化量
+	float					oldchengeval;				//!< 古い変化量
+	bool					motion;						//!< モーションしているかどうか
+	bool					use;						//!< 使用しているかどうか
+	bool					color;						//!< 変色判定
+	bool					effect;						//!< エフェクト判定
 } HINOTAMA;
 
-typedef struct // プレイヤ??造体
+/**
+*　@struct UFO
+*　@brief 2Dポリゴンを定義する構造体(enemy)
+*/
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			
-	VERTEX_2D				vertexWk[NUM_ENEMY];		
-	D3DXVECTOR3				pos;						
-	D3DXVECTOR3				rot;						
-	D3DXVECTOR3				move;						
-	D3DXVECTOR3				oldmove;			
-	D3DXVECTOR3				ppos[4];
-	D3DXVECTOR3				oldpos;
-	int						nCountAnim;					
-	int						nPatternAnim;				
-	int						direction;	
-	int						colori;
-	int						point;
-	float					movecount;
-	float					rad;
-	float					angle;
-	bool					motion;
-	bool					use;
-	bool					color;
-	bool					effect;
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			//!< テクスチャへのポインタ 
+	VERTEX_2D				vertexWk[NUM_ENEMY];		//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;						//!< 座標
+	D3DXVECTOR3				rot;						//!< 回転角
+	D3DXVECTOR3				move;						//!< 移動量
+	D3DXVECTOR3				oldmove;					//!< 古い移動量
+	D3DXVECTOR3				ppos[4];					//!< 古い座標
+	D3DXVECTOR3				oldpos;						//!< 4分割ポリゴンの各ポリゴン中心座標
+	int						nCountAnim;					//!< 変色値(int)
+	int						nPatternAnim;				//!< アニメカウント 
+	int						direction;					//!< アニメパターン 
+	int						colori;						//!< 移動方向
+	int						point;						//!< 移動カウント
+	float					movecount;					//!< 得点
+	float					rad;						//!< 変化量
+	float					angle;						//!< 古い変化量
+	bool					motion;						//!< モーションしているかどうか
+	bool					use;						//!< 使用しているかどうか
+	bool					color;						//!< 変色判定
+	bool					effect;						//!< エフェクト判定
 } UFO;
 
 //*****************************************************************************
-// プロト?イプ宣言
+// プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief Enemy初期化関数 InitEnemy
+* @param[in] type 初期化タイプ
+* @return HRESULT
+*/
 HRESULT InitEnemy(int type);
+
+/**
+* @brief Enemy再初期化関数 ReInitEnemy
+*/
 void ReInitEnemy(void);
+
+/**
+* @brief Enemy開放関数 UninitEnemy
+*/
 void UninitEnemy(void);
+
+/**
+* @brief Enemy更新関数 UpdateEnemy
+*/
 void UpdateEnemy(void);
+
+/**
+* @brief Enemy描画関数 DrawEnemy
+*/
 void DrawEnemy(void);
-HRESULT MakeVertexEnemy(int i,int type);
-void SetTextureEnemy(int cntPattern, int i,int type);	
-void SetVertexEnemy(int i,int type);					
+
+/**
+* @brief Enemy取得関数 GetCat
+* @param[in] int i アドレス番地指定
+* @return CAT
+*/
 CAT *GetCat(int i);
+
+/**
+* @brief Enemy取得関数 GetSuraimu
+* @param[in] int i アドレス番地指定
+* @return SURAIMU
+*/
 SURAIMU *GetSuraimu(int i);
+
+/**
+* @brief Enemy取得関数 GetHinotama
+* @param[in] int i アドレス番地指定
+* @return HINOTAMA
+*/
 HINOTAMA *GetHinotama(int i);
+
+/**
+* @brief Enemy取得関数 GetUfo
+* @param[in] int i アドレス番地指定
+* @return UFO
+*/
 UFO *GetUfo(int i);

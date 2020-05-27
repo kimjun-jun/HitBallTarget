@@ -34,7 +34,7 @@
 */
 typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																				//!< テクスチャへのポリゴン
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																				//!< テクスチャへのポインタ
 	VERTEX_2D				texture[NUM_VERTEX];																		  	//!< 頂点情報格納ワーク
 	D3DXVECTOR3				pos;																						  	//!< ポリゴンの座標
 	int						nCountAnim;																					  	//!< アニメカウント

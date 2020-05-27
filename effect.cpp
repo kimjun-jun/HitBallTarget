@@ -7,205 +7,18 @@
 #include "main.h"
 #include "enemy.h"
 #include "score.h"
-#include "meetstrike.h"
-#include "ball.h"
 #include "effect.h"
-
-
-//*****************************************************************************
-// グローバル変数
-//*****************************************************************************
-BE g_be[BALL_COUNT_MAX];
-static int g_type;
-
-//=============================================================================
-// 初期化処理
-//=============================================================================
-HRESULT InitBE(int type)
-{
-	LPDIRECT3DDEVICE9 pDevice = GetDevice();
-	for (int i = 0; i < BALL_COUNT_MAX; i++)
-	{
-		// テクスチャーの初期化を行う？
-		if (type == 0)
-		{
-			// テクスチャの読み込み
-			D3DXCreateTextureFromFile(pDevice,					// デバイスへのポインタ
-				BE_TEXTURE_FILE_00,		// ファイルの名前
-				&g_be[i].pD3DTexture);		// 読み込むメモリー
-
-		}
-		g_be[i].nCountAnim = 0;
-		g_be[i].nPatternAnim = 0;
-		g_be[i].motion = false;
-		g_be[i].use = false;
-		g_be[i].pos = D3DXVECTOR3(-100.0f, -100.0f, 0.0f);
-		g_type = 0;
-	}
-	// 頂点情報の作成
-	MakeVertexBE();
-
-	return S_OK;
-}
-
-//=============================================================================
-// 再初期化処理
-//=============================================================================
-void ReInitBE(void)
-{
-	for (int i = 0; i < BALL_COUNT_MAX; i++)
-	{
-		g_be[i].nCountAnim = 0;
-		g_be[i].nPatternAnim = 0;
-		g_be[i].motion = false;
-		g_be[i].use = false;
-		g_be[i].pos = D3DXVECTOR3(-100.0f, -100.0f, 0.0f);
-		g_type = 0;
-	}
-}
-
-//=============================================================================
-// 終了処理
-//=============================================================================
-void UninitBE(void)
-{
-	for (int i = 0; i < BALL_COUNT_MAX; i++)
-	{
-		if (g_be[i].pD3DTexture != NULL)
-		{	// テクスチャの開放
-			g_be[i].pD3DTexture->Release();
-			g_be[i].pD3DTexture = NULL;
-		}
-	}
-}
-
-//=============================================================================
-// 更新処理
-//=============================================================================
-void UpdateBE(void)
-{
-	for (int i = 0; i < BALL_COUNT_MAX; i++)
-	{
-		if (g_be[i].use==true)
-		{
-			g_be[i].nCountAnim++;
-			if (g_be[i].nCountAnim % BE_TIME_ANIMATION == 0) g_be[i].nPatternAnim++;
-			if (g_be[i].nPatternAnim > BE_ANIM_PATTERN_NUM)
-			{
-				g_be[i].nPatternAnim = 0;
-				g_be[i].use = false;
-			}
-		}
-	}
-}
-
-//=============================================================================
-// 描画処理
-//=============================================================================
-void DrawBE(void)
-{
-	BALL *b = GetBall();
-	for (int i = 0; i < BALL_COUNT_MAX; i++)
-	{
-		if (g_be[i].use == true)
-		{
-			LPDIRECT3DDEVICE9 pDevice = GetDevice();
-			// 頂点フォーマットの設定
-			pDevice->SetFVF(FVF_VERTEX_2D);
-			// テクスチャの設定
-			pDevice->SetTexture(0, g_be[i].pD3DTexture);
-			// ポリゴンの描画
-			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_be[i].vertexWk, sizeof(VERTEX_2D));
-		}
-	}
-}
-
-//=============================================================================
-// 頂点の作成
-//=============================================================================
-HRESULT MakeVertexBE(void)
-{
-	// 頂点座標の設定
-	SetVertexBE();
-
-	// rhwの設定
-	g_be[0].vertexWk[0].rhw =
-		g_be[0].vertexWk[1].rhw =
-		g_be[0].vertexWk[2].rhw =
-		g_be[0].vertexWk[3].rhw = 1.0f;
-
-	// 反射光の設定
-	g_be[0].vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-	g_be[0].vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-	g_be[0].vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-	g_be[0].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-
-	// テクスチャ座標の設定
-	g_be[0].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
-	g_be[0].vertexWk[1].tex = D3DXVECTOR2(1.0f, 0.0f);
-	g_be[0].vertexWk[2].tex = D3DXVECTOR2(0.0f, 1.0f);
-	g_be[0].vertexWk[3].tex = D3DXVECTOR2(1.0f, 1.0f);
-
-	return S_OK;
-}
-
-//=============================================================================
-// テクスチャ座標の設定
-//=============================================================================
-void SetTextureBe(int cntPattern)
-{
-		// テクスチャ座標の設定
-		int x = cntPattern % TEXTURE_PITCHER_PATTERN_DIVIDE_X;
-		int y = cntPattern / TEXTURE_PITCHER_PATTERN_DIVIDE_X;
-		float sizeX = 1.0f / TEXTURE_PITCHER_PATTERN_DIVIDE_X;
-		float sizeY = 1.0f / TEXTURE_PITCHER_PATTERN_DIVIDE_Y;
-
-		g_be[0].vertexWk[0].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY);
-		g_be[0].vertexWk[1].tex = D3DXVECTOR2((float)(x)* sizeX + sizeX, (float)(y)* sizeY);
-		g_be[0].vertexWk[2].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeY);
-		g_be[0].vertexWk[3].tex = D3DXVECTOR2((float)(x)* sizeX + sizeX, (float)(y)* sizeY + sizeY);
-}
-
-//=============================================================================
-// 頂点座標の設定
-//=============================================================================
-void SetVertexBE(void)
-{
-	// 頂点座標の設定 
-	g_be[0].vertexWk[0].vtx.x = g_be[0].pos.x - BE_SIZE_W;
-	g_be[0].vertexWk[0].vtx.y = g_be[0].pos.y - BE_SIZE_H;
-	g_be[0].vertexWk[0].vtx.z = 0.0f;
-	g_be[0].vertexWk[1].vtx.x = g_be[0].pos.x + BE_SIZE_W;
-	g_be[0].vertexWk[1].vtx.y = g_be[0].pos.y - BE_SIZE_H;
-	g_be[0].vertexWk[1].vtx.z = 0.0f;
-	g_be[0].vertexWk[2].vtx.x = g_be[0].pos.x - BE_SIZE_W;
-	g_be[0].vertexWk[2].vtx.y = g_be[0].pos.y + BE_SIZE_H;
-	g_be[0].vertexWk[2].vtx.z = 0.0f;
-	g_be[0].vertexWk[3].vtx.x = g_be[0].pos.x + BE_SIZE_W;
-	g_be[0].vertexWk[3].vtx.y = g_be[0].pos.y + BE_SIZE_H;
-	g_be[0].vertexWk[3].vtx.z = 0.0f;
-}
-
-//=============================================================================
-// 描画させる背景を変更
-//=============================================================================
-void SelectBE(int type)
-{
-	if (type == BALL_EFFECT1) g_type = BALL_EFFECT1;
-	else if (type == BALL_EFFECT2)g_type = BALL_EFFECT2;
-}
-
 
 //=============================================================================
 // エフェクト関数(update)
 //=============================================================================
-void DeadEffect(int i,int type)
+void DeadEffect(int EnemyNum,int type)
 {
 	switch (type)
 	{
 	case TYPE_CAT:
 	{
-		CAT *cat = GetCat(i);
+		CAT *cat = GetCat(EnemyNum);
 		cat->colori -= TEXTURE_COROLSPEED;
 		cat->ppos[0] += D3DXVECTOR3(MOTION_EFFECT_SPEED_MID, MOTION_EFFECT_SPEED_MID, 0.0f);
 		cat->ppos[1] += D3DXVECTOR3(MOTION_EFFECT_SPEED_MID, MOTION_EFFECT_SPEED_MID, 0.0f);
@@ -238,7 +51,7 @@ void DeadEffect(int i,int type)
 	}
 	case TYPE_SURAIMU:
 	{
-		SURAIMU *suraimu = GetSuraimu(i);
+		SURAIMU *suraimu = GetSuraimu(EnemyNum);
 		suraimu->colori -= TEXTURE_COROLSPEED;
 		suraimu->ppos[0] += D3DXVECTOR3(MOTION_EFFECT_SPEED_MID, MOTION_EFFECT_SPEED_MID, 0.0f);
 		suraimu->ppos[1] += D3DXVECTOR3(MOTION_EFFECT_SPEED_MID, MOTION_EFFECT_SPEED_MID, 0.0f);
@@ -271,7 +84,7 @@ void DeadEffect(int i,int type)
 	}
 	case TYPE_HINOTAMA:
 	{
-		HINOTAMA *hinotama = GetHinotama(i);
+		HINOTAMA *hinotama = GetHinotama(EnemyNum);
 		hinotama->colori -= TEXTURE_COROLSPEED;
 		hinotama->ppos[0] += D3DXVECTOR3(MOTION_EFFECT_SPEED_MID, MOTION_EFFECT_SPEED_MID, 0.0f);
 		hinotama->ppos[1] += D3DXVECTOR3(MOTION_EFFECT_SPEED_MID, MOTION_EFFECT_SPEED_MID, 0.0f);
@@ -304,7 +117,7 @@ void DeadEffect(int i,int type)
 	}
 	case TYPE_UFO:
 	{
-		UFO *ufo = GetUfo(i);
+		UFO *ufo = GetUfo(EnemyNum);
 		ufo->colori -= TEXTURE_COROLSPEED;
 		ufo->ppos[0] += D3DXVECTOR3(MOTION_EFFECT_SPEED_MID, MOTION_EFFECT_SPEED_MID, 0.0f);
 		ufo->ppos[1] += D3DXVECTOR3(MOTION_EFFECT_SPEED_MID, MOTION_EFFECT_SPEED_MID, 0.0f);
@@ -336,7 +149,3 @@ void DeadEffect(int i,int type)
 	}
 }
 
-BE *GetBE(int i)
-{
-	return &g_be[i];
-}

@@ -1,6 +1,6 @@
 /**
 * @file balleffect.h
-* @brief HitBallTarget(2D)的当てゲーム
+* @brief HitBallTarget(2D)的当てゲーム(調整中)
 * @author キムラジュン
 * @date 2019/09/01
 */
@@ -29,17 +29,14 @@
 
 typedef struct	// エフェクト構造体
 {
-	D3DXVECTOR3		pos;						// ポリゴンの移動量
-	D3DXVECTOR3		move;						// 移動量
-	int				PatternAnim;				// アニメーションパターンナンバー
-	int				CountAnim;					// アニメーションカウント
-
-	int				liveTime;
-
-	LPDIRECT3DTEXTURE9	Texture;				// テクスチャ情報
-	VERTEX_2D		vertexWk[NUM_VERTEX];		// 頂点情報格納ワーク
-
-	bool			isFinish;
+	D3DXVECTOR3				pos;						// ポリゴンの移動量
+	D3DXVECTOR3				move;						// 移動量
+	int						PatternAnim;				// アニメーションパターンナンバー
+	int						CountAnim;					// アニメーションカウント
+	int						liveTime;
+	LPDIRECT3DTEXTURE9		Texture;					// テクスチャ情報
+	VERTEX_2D				vertexWk[NUM_VERTEX];		// 頂点情報格納ワーク
+	bool					isFinish;
 }PARTICLE;
 
 typedef struct	// エフェクト構造体
@@ -47,16 +44,12 @@ typedef struct	// エフェクト構造体
 	int				use;
 	int				isEnding;
 	bool			isRemoveOnFinish;
-
 	D3DXVECTOR3		pos;						// ポリゴンの移動量
-
 	int				duration;
 	int				elapsed;
 	int				numFinish;
-
 	int				balleffectCount;
 	int				emitCounter;
-
 	PARTICLE		pParticle[BALLEFFECT_NUM_PARTS];
 
 }BALLEFFECT;
@@ -65,8 +58,30 @@ typedef struct	// エフェクト構造体
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief Balleffect初期化関数 InitBalleffect
+* @param[in] type 初期化タイプ
+* @return HRESULT
+*/
 HRESULT InitBalleffect(int type);
+
+/**
+* @brief Balleffect開放関数 UninitBalleffect
+*/
 void UninitBalleffect(void);
+
+/**
+* @brief Balleffect更新関数 UpdateBalleffect
+*/
 void UpdateBalleffect(void);
+
+/**
+* @brief Balleffect描画関数 DrawBalleffect
+*/
 void DrawBalleffect(void);
+
+/**
+* @brief Balleffect設定関数 SetBalleffect
+* @param[in] D3DXVECTOR3 pos, int duration
+*/
 void SetBalleffect(D3DXVECTOR3 pos, int duration);

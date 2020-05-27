@@ -13,25 +13,36 @@
 #include "enemy.h"
 
 
-
-//*****************************************************************************
-// マクロ定義
-//*****************************************************************************
-
-
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief ポリゴン頂点生成関数 MakeVertexEnemy
+* @param[in] int EnemyNum エネミー添え字, int EnemyType エネミータイプ
+* @return HRESULT
+*/
+HRESULT MakeVertexEnemy(int EnemyNum, int EnemyType);
 
+/**
+* @brief テクスチャ設定関数 SetTextureEnemy
+* @param[in] int cntPattern アニメパターン, int EnemyNum エネミー添え字, int EnemyType エネミータイプ
+*/
+void SetTextureEnemy(int cntPattern, int EnemyNum, int EnemyType);
+
+/**
+* @brief ポリゴン頂点設定関数 SetVertexEnemy
+* @param[in] int EnemyNum エネミー添え字, int EnemyType エネミータイプ
+*/
+void SetVertexEnemy(int EnemyNum, int EnemyType);
 
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-int catmax;
-CAT g_cat[CAT_GOUKEI];
-SURAIMU g_suraimu[SURAIMU_GOUKEI];
-HINOTAMA g_hinotama[HINOTAMA_GOUKEI];
-UFO g_ufo[UFO_GOUKEI];
+int catmax;												  //!< ネコの合計
+CAT g_cat[CAT_GOUKEI];									  //!< ネコ構造体変数
+SURAIMU g_suraimu[SURAIMU_GOUKEI];						  //!< スライム構造体変数
+HINOTAMA g_hinotama[HINOTAMA_GOUKEI];					  //!< 火の玉構造体変数
+UFO g_ufo[UFO_GOUKEI];									  //!< UFO構造体変数
 
 //=============================================================================
 // 初期化処理
@@ -39,144 +50,140 @@ UFO g_ufo[UFO_GOUKEI];
 HRESULT InitEnemy(int type)
 {
 	LPDIRECT3DDEVICE9 pDevice = GetDevice();
-	for (int i = 0; i < ENEMY_TYPE; i++)
+	for (int EnemyType = 0; EnemyType < ENEMY_TYPE; EnemyType++)
 	{
-		switch (i)
+		switch (EnemyType)
 		{
 		case TYPE_CAT:
 		{
-			for (int j = 0; j < CAT_GOUKEI; j++)
+			for (int CatNum = 0; CatNum < CAT_GOUKEI; CatNum++)
 			{
-				g_cat[j].pos = D3DXVECTOR3(150.0f + Random(X), 150.0f + Random(Y), 0.0f);
-				g_cat[j].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].point = 0;
-				g_cat[j].nPatternAnim = 0;
-				g_cat[j].nCountAnim = 0;
-				g_cat[j].colori = 255;
-				g_cat[j].motion = false;										//真アニメしている 偽アニメしていない
-				g_cat[j].color = false;											//真透明色A値が最大　偽最大でない
-				g_cat[j].effect = false;										//真エフェクトしている　偽していない
-				g_cat[j].chengeval = 0;											//テクスチャサイズを座標位置で変化させる
-				g_cat[j].oldchengeval = 0;										//進入禁止座標に行くとこれ以上サイズが変化しない
-				g_cat[j].use = true;											//真使用している(表示描画する) 偽使用していない
-				//g_cat[j].use = false;
+				g_cat[CatNum].pos = D3DXVECTOR3(150.0f + Random(X), 150.0f + Random(Y), 0.0f);
+				g_cat[CatNum].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].point = 0;
+				g_cat[CatNum].nPatternAnim = 0;
+				g_cat[CatNum].nCountAnim = 0;
+				g_cat[CatNum].colori = 255;
+				g_cat[CatNum].motion = false;										//真アニメしている 偽アニメしていない
+				g_cat[CatNum].color = false;										//真透明色A値が最大　偽最大でない
+				g_cat[CatNum].effect = false;										//真エフェクトしている　偽していない
+				g_cat[CatNum].chengeval = 0;										//テクスチャサイズを座標位置で変化させる
+				g_cat[CatNum].oldchengeval = 0;										//進入禁止座標に行くとこれ以上サイズが変化しない
+				g_cat[CatNum].use = true;											//真使用している(表示描画する) 偽使用していない
 
 				// テクスチャの読み込み  
 				if (type == 0)													// 初回のみ読み込む
 				{
 					D3DXCreateTextureFromFile(pDevice,							// デバイスのポインタ
 						TEXTURE_GAME_CAT,										// ファイルの名前
-						&g_cat[j].pD3DTexture);								// 読み込むメモリのポインタ
+						&g_cat[CatNum].pD3DTexture);								// 読み込むメモリのポインタ
 				}
 				// 頂点情報の作成
-				MakeVertexEnemy(j, i);
+				MakeVertexEnemy(EnemyType, CatNum);
 			}
 			break;
 		}
 		case TYPE_SURAIMU:
 		{
-			for (int j = 0; j < SURAIMU_GOUKEI; j++)
+			for (int SuraimuNum = 0; SuraimuNum < SURAIMU_GOUKEI; SuraimuNum++)
 			{
-				g_suraimu[j].pos = D3DXVECTOR3(200.0f+Random(X), 160.0f + Random(Y), 0.0f);
-				g_suraimu[j].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].colori = 255;
-				g_suraimu[j].nCountAnim = 0;
-				g_suraimu[j].nPatternAnim = 0;
-				g_suraimu[j].point = 0;
-				g_suraimu[j].motion = false;									
-				g_suraimu[j].color = false;
-				g_suraimu[j].use = true;		
-				//g_suraimu[j].use = false;
-				g_suraimu[j].effect = false;
-				g_suraimu[j].chengeval = 0;
-				g_suraimu[j].oldchengeval = 0;
+				g_suraimu[SuraimuNum].pos = D3DXVECTOR3(200.0f+Random(X), 160.0f + Random(Y), 0.0f);
+				g_suraimu[SuraimuNum].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].colori = 255;
+				g_suraimu[SuraimuNum].nCountAnim = 0;
+				g_suraimu[SuraimuNum].nPatternAnim = 0;
+				g_suraimu[SuraimuNum].point = 0;
+				g_suraimu[SuraimuNum].motion = false;									
+				g_suraimu[SuraimuNum].color = false;
+				g_suraimu[SuraimuNum].use = true;		
+				g_suraimu[SuraimuNum].effect = false;
+				g_suraimu[SuraimuNum].chengeval = 0;
+				g_suraimu[SuraimuNum].oldchengeval = 0;
 				if (type == 0)
 				{
 					D3DXCreateTextureFromFile(pDevice,
 						TEXTURE_GAME_SURAIMU,
-						&g_suraimu[j].pD3DTexture);
+						&g_suraimu[SuraimuNum].pD3DTexture);
 				}
-				MakeVertexEnemy(j, i);
+				MakeVertexEnemy(SuraimuNum, EnemyType);
 			}
 			break;
 		}
 		case TYPE_HINOTAMA:
 		{
-			for (int j = 0; j < HINOTAMA_GOUKEI; j++)
+			for (int HinotamaNum = 0; HinotamaNum < HINOTAMA_GOUKEI; HinotamaNum++)
 			{
-				g_hinotama[j].pos = D3DXVECTOR3(200.0f+Random(X), 155.0f + Random(Y), 0.0f);
-				g_hinotama[j].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].colori = 255;
-				g_hinotama[j].nCountAnim = 0;
-				g_hinotama[j].nPatternAnim = 0;
-				g_hinotama[j].point = 0;
-				g_hinotama[j].motion = false;
-				g_hinotama[j].color = false;
-				g_hinotama[j].use = true;		
-				//g_hinotama[j].use = false;
-				g_hinotama[j].effect = false;
-				g_hinotama[j].chengeval = 0;
-				g_hinotama[j].oldchengeval = 0;
+				g_hinotama[HinotamaNum].pos = D3DXVECTOR3(200.0f+Random(X), 155.0f + Random(Y), 0.0f);
+				g_hinotama[HinotamaNum].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].colori = 255;
+				g_hinotama[HinotamaNum].nCountAnim = 0;
+				g_hinotama[HinotamaNum].nPatternAnim = 0;
+				g_hinotama[HinotamaNum].point = 0;
+				g_hinotama[HinotamaNum].motion = false;
+				g_hinotama[HinotamaNum].color = false;
+				g_hinotama[HinotamaNum].use = true;		
+				g_hinotama[HinotamaNum].effect = false;
+				g_hinotama[HinotamaNum].chengeval = 0;
+				g_hinotama[HinotamaNum].oldchengeval = 0;
 				if (type == 0)
 				{
 					D3DXCreateTextureFromFile(pDevice,
 							TEXTURE_GAME_HINOTAMA,
-							&g_hinotama[j].pD3DTexture);
+							&g_hinotama[HinotamaNum].pD3DTexture);
 				}
-				MakeVertexEnemy(j, i);
+				MakeVertexEnemy(HinotamaNum, EnemyType);
 			}
 			break;
 		}
 		case TYPE_UFO:
 		{
-			for (int j = 0; j < UFO_GOUKEI; j++)
+			for (int UFONum = 0; UFONum < UFO_GOUKEI; UFONum++)
 			{
-				g_ufo[j].pos = D3DXVECTOR3(250.0f+Random(X), 100.0f + Random(Y), 0.0f);
-				g_ufo[j].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].colori = 255;
-				g_ufo[j].nCountAnim = 0;
-				g_ufo[j].point = 0;
-				g_ufo[j].nPatternAnim = 0;
-				g_ufo[j].motion = false;
-				g_ufo[j].color = false;
-				g_ufo[j].use = true;		
-				//g_ufo[j].use = false;
-				g_ufo[j].effect = false;
+				g_ufo[UFONum].pos = D3DXVECTOR3(250.0f+Random(X), 100.0f + Random(Y), 0.0f);
+				g_ufo[UFONum].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].colori = 255;
+				g_ufo[UFONum].nCountAnim = 0;
+				g_ufo[UFONum].point = 0;
+				g_ufo[UFONum].nPatternAnim = 0;
+				g_ufo[UFONum].motion = false;
+				g_ufo[UFONum].color = false;
+				g_ufo[UFONum].use = true;		
+				g_ufo[UFONum].effect = false;
 				D3DXVECTOR2 temp = D3DXVECTOR2(TEXTURE_UFO_SIZE_X, TEXTURE_UFO_SIZE_Y);
-				g_ufo[j].rad = D3DXVec2Length(&temp);
-				g_ufo[j].angle = atan2f(TEXTURE_UFO_SIZE_Y, TEXTURE_UFO_SIZE_X);
-				g_ufo[j].movecount = BALL_MOTION_SPEED_FAST;
+				g_ufo[UFONum].rad = D3DXVec2Length(&temp);
+				g_ufo[UFONum].angle = atan2f(TEXTURE_UFO_SIZE_Y, TEXTURE_UFO_SIZE_X);
+				g_ufo[UFONum].movecount = BALL_MOTION_SPEED_FAST;
 				if (type == 0)
 				{
 					D3DXCreateTextureFromFile(pDevice,
 						TEXTURE_GAME_UFO,
-						&g_ufo[j].pD3DTexture);
+						&g_ufo[UFONum].pD3DTexture);
 				}
-				MakeVertexEnemy(j,i);
+				MakeVertexEnemy(UFONum, EnemyType);
 			}
 			break;
 		}
@@ -192,33 +199,33 @@ HRESULT InitEnemy(int type)
 //=============================================================================
 void ReInitEnemy(void)
 {
-	for (int i = 0; i < ENEMY_TYPE; i++)
+	for (int EnemyType = 0; EnemyType < ENEMY_TYPE; EnemyType++)
 	{
-		switch (i)
+		switch (EnemyType)
 		{
 		case TYPE_CAT:
 		{
-			for (int j = 0; j < CAT_GOUKEI; j++)
+			for (int CatNum = 0; CatNum < CAT_GOUKEI; CatNum++)
 			{
-				g_cat[j].pos = D3DXVECTOR3(150.0f + Random(X), 150.0f + Random(Y), 0.0f);
-				g_cat[j].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_cat[j].point = 0;
-				g_cat[j].nPatternAnim = 0;
-				g_cat[j].nCountAnim = 0;
-				g_cat[j].colori = 255;
-				g_cat[j].motion = false;										//真アニメしている 偽アニメしていない
-				g_cat[j].color = false;											//真透明色A値が最大　偽最大でない
-				g_cat[j].effect = false;										//真エフェクトしている　偽していない
-				g_cat[j].chengeval = 0;											//テクスチャサイズを座標位置で変化させる
-				g_cat[j].oldchengeval = 0;										//進入禁止座標に行くとこれ以上サイズが変化しない
-				MakeVertexEnemy(j, i);
-				SetTextureEnemy(g_cat[j].nPatternAnim, j, TYPE_CAT);
+				g_cat[CatNum].pos = D3DXVECTOR3(150.0f + Random(X), 150.0f + Random(Y), 0.0f);
+				g_cat[CatNum].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_cat[CatNum].point = 0;
+				g_cat[CatNum].nPatternAnim = 0;
+				g_cat[CatNum].nCountAnim = 0;
+				g_cat[CatNum].colori = 255;
+				g_cat[CatNum].motion = false;										//真アニメしている 偽アニメしていない
+				g_cat[CatNum].color = false;											//真透明色A値が最大　偽最大でない
+				g_cat[CatNum].effect = false;										//真エフェクトしている　偽していない
+				g_cat[CatNum].chengeval = 0;											//テクスチャサイズを座標位置で変化させる
+				g_cat[CatNum].oldchengeval = 0;										//進入禁止座標に行くとこれ以上サイズが変化しない
+				MakeVertexEnemy(CatNum, EnemyType);
+				SetTextureEnemy(g_cat[CatNum].nPatternAnim, CatNum, TYPE_CAT);
 			}
 
 			SCORE * score = GetScore();
@@ -255,87 +262,84 @@ void ReInitEnemy(void)
 		}
 		case TYPE_SURAIMU:
 		{
-			for (int j = 0; j < SURAIMU_GOUKEI; j++)
+			for (int SuraimuNum = 0; SuraimuNum < SURAIMU_GOUKEI; SuraimuNum++)
 			{
-				g_suraimu[j].pos = D3DXVECTOR3(200.0f + Random(X), 160.0f + Random(Y), 0.0f);
-				g_suraimu[j].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_suraimu[j].colori = 255;
-				g_suraimu[j].nCountAnim = 0;
-				g_suraimu[j].nPatternAnim = 0;
-				g_suraimu[j].point = 0;
-				g_suraimu[j].motion = false;
-				g_suraimu[j].color = false;
-				g_suraimu[j].use = true;
-				//g_suraimu[j].use = false;
-				g_suraimu[j].effect = false;
-				g_suraimu[j].chengeval = 0;
-				g_suraimu[j].oldchengeval = 0;
-				MakeVertexEnemy(j, i);
-				SetTextureEnemy(g_suraimu[j].nPatternAnim, j, TYPE_SURAIMU);
+				g_suraimu[SuraimuNum].pos = D3DXVECTOR3(200.0f + Random(X), 160.0f + Random(Y), 0.0f);
+				g_suraimu[SuraimuNum].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_suraimu[SuraimuNum].colori = 255;
+				g_suraimu[SuraimuNum].nCountAnim = 0;
+				g_suraimu[SuraimuNum].nPatternAnim = 0;
+				g_suraimu[SuraimuNum].point = 0;
+				g_suraimu[SuraimuNum].motion = false;
+				g_suraimu[SuraimuNum].color = false;
+				g_suraimu[SuraimuNum].use = true;
+				g_suraimu[SuraimuNum].effect = false;
+				g_suraimu[SuraimuNum].chengeval = 0;
+				g_suraimu[SuraimuNum].oldchengeval = 0;
+				MakeVertexEnemy(SuraimuNum, EnemyType);
+				SetTextureEnemy(g_suraimu[SuraimuNum].nPatternAnim, SuraimuNum, TYPE_SURAIMU);
 			}
 			break;
 		}
 		case TYPE_HINOTAMA:
 		{
-			for (int j = 0; j < HINOTAMA_GOUKEI; j++)
+			for (int HinotamaNum = 0; HinotamaNum < HINOTAMA_GOUKEI; HinotamaNum++)
 			{
-				g_hinotama[j].pos = D3DXVECTOR3(200.0f + Random(X), 155.0f + Random(Y), 0.0f);
-				g_hinotama[j].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_hinotama[j].colori = 255;
-				g_hinotama[j].nCountAnim = 0;
-				g_hinotama[j].nPatternAnim = 0;
-				g_hinotama[j].point = 0;
-				g_hinotama[j].motion = false;
-				g_hinotama[j].color = false;
-				g_hinotama[j].use = true;
-				//g_hinotama[j].use = false;
-				g_hinotama[j].effect = false;
-				g_hinotama[j].chengeval = 0;
-				g_hinotama[j].oldchengeval = 0;
-				MakeVertexEnemy(j, i);
-				SetTextureEnemy(g_hinotama[j].nPatternAnim, j, TYPE_HINOTAMA);
+				g_hinotama[HinotamaNum].pos = D3DXVECTOR3(200.0f + Random(X), 155.0f + Random(Y), 0.0f);
+				g_hinotama[HinotamaNum].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_hinotama[HinotamaNum].colori = 255;
+				g_hinotama[HinotamaNum].nCountAnim = 0;
+				g_hinotama[HinotamaNum].nPatternAnim = 0;
+				g_hinotama[HinotamaNum].point = 0;
+				g_hinotama[HinotamaNum].motion = false;
+				g_hinotama[HinotamaNum].color = false;
+				g_hinotama[HinotamaNum].use = true;
+				g_hinotama[HinotamaNum].effect = false;
+				g_hinotama[HinotamaNum].chengeval = 0;
+				g_hinotama[HinotamaNum].oldchengeval = 0;
+				MakeVertexEnemy(HinotamaNum, EnemyType);
+				SetTextureEnemy(g_hinotama[HinotamaNum].nPatternAnim, HinotamaNum, TYPE_HINOTAMA);
 			}
 			break;
 		}
 		case TYPE_UFO:
 		{
-			for (int j = 0; j < UFO_GOUKEI; j++)
+			for (int UFONum = 0; UFONum < UFO_GOUKEI; UFONum++)
 			{
-				g_ufo[j].pos = D3DXVECTOR3(250.0f + Random(X), 100.0f + Random(Y), 0.0f);
-				g_ufo[j].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-				g_ufo[j].colori = 255;
-				g_ufo[j].nCountAnim = 0;
-				g_ufo[j].point = 0;
-				g_ufo[j].nPatternAnim = 0;
-				g_ufo[j].motion = false;
-				g_ufo[j].color = false;
-				g_ufo[j].use = true;
-				//g_ufo[j].use = false;
-				g_ufo[j].effect = false;
+				g_ufo[UFONum].pos = D3DXVECTOR3(250.0f + Random(X), 100.0f + Random(Y), 0.0f);
+				g_ufo[UFONum].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].move = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].ppos[0] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].ppos[1] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].ppos[2] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].ppos[3] = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+				g_ufo[UFONum].colori = 255;
+				g_ufo[UFONum].nCountAnim = 0;
+				g_ufo[UFONum].point = 0;
+				g_ufo[UFONum].nPatternAnim = 0;
+				g_ufo[UFONum].motion = false;
+				g_ufo[UFONum].color = false;
+				g_ufo[UFONum].use = true;
+				g_ufo[UFONum].effect = false;
 				D3DXVECTOR2 temp = D3DXVECTOR2(TEXTURE_UFO_SIZE_X, TEXTURE_UFO_SIZE_Y);
-				g_ufo[j].rad = D3DXVec2Length(&temp);
-				g_ufo[j].angle = atan2f(TEXTURE_UFO_SIZE_Y, TEXTURE_UFO_SIZE_X);
-				g_ufo[j].movecount = BALL_MOTION_SPEED_FAST;
-				MakeVertexEnemy(j, i);
-				SetTextureEnemy(g_ufo[j].nPatternAnim, j, TYPE_UFO);
+				g_ufo[UFONum].rad = D3DXVec2Length(&temp);
+				g_ufo[UFONum].angle = atan2f(TEXTURE_UFO_SIZE_Y, TEXTURE_UFO_SIZE_X);
+				g_ufo[UFONum].movecount = BALL_MOTION_SPEED_FAST;
+				MakeVertexEnemy(UFONum, EnemyType);
+				SetTextureEnemy(g_ufo[UFONum].nPatternAnim, UFONum, TYPE_UFO);
 			}
 			break;
 		}
@@ -383,7 +387,6 @@ void UninitEnemy(void)
 		}
 	}
 }
-
 
 //=============================================================================
 // 更新処理
@@ -826,8 +829,6 @@ void DrawEnemy(void)
 				// テクスチャの設定  
 				pDevice->SetTexture(0, g_cat[i].pD3DTexture);
 				// ポリゴンの描画
-				//pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_ENEMY, g_cat[i].vertexWk, sizeof(VERTEX_2D));
-
 				pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_cat[i].vertexWk[0], sizeof(VERTEX_2D));
 				pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_cat[i].vertexWk[4], sizeof(VERTEX_2D));
 				pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_cat[i].vertexWk[8], sizeof(VERTEX_2D));
@@ -840,8 +841,6 @@ void DrawEnemy(void)
 		{
 			pDevice->SetFVF(FVF_VERTEX_2D);
 			pDevice->SetTexture(0, g_suraimu[i].pD3DTexture);
-			//pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_ENEMY, g_suraimu[i].vertexWk, sizeof(VERTEX_2D));
-
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_suraimu[i].vertexWk[0], sizeof(VERTEX_2D));
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_suraimu[i].vertexWk[4], sizeof(VERTEX_2D));
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_suraimu[i].vertexWk[8], sizeof(VERTEX_2D));
@@ -854,8 +853,6 @@ void DrawEnemy(void)
 		{
 			pDevice->SetFVF(FVF_VERTEX_2D);
 			pDevice->SetTexture(0, g_hinotama[i].pD3DTexture);
-			//pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_ENEMY, g_hinotama[i].vertexWk, sizeof(VERTEX_2D));
-
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_hinotama[i].vertexWk[0], sizeof(VERTEX_2D));
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_hinotama[i].vertexWk[4], sizeof(VERTEX_2D));
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_hinotama[i].vertexWk[8], sizeof(VERTEX_2D));
@@ -868,8 +865,6 @@ void DrawEnemy(void)
 		{
 			pDevice->SetFVF(FVF_VERTEX_2D);
 			pDevice->SetTexture(0, g_ufo[i].pD3DTexture);
-			//pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_ENEMY, g_ufo[i].vertexWk, sizeof(VERTEX_2D));
-
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_ufo[i].vertexWk[0], sizeof(VERTEX_2D));
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_ufo[i].vertexWk[4], sizeof(VERTEX_2D));
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, &g_ufo[i].vertexWk[8], sizeof(VERTEX_2D));
@@ -881,229 +876,229 @@ void DrawEnemy(void)
 //=============================================================================
 // 頂点の作成
 //=============================================================================
-HRESULT MakeVertexEnemy(int i, int type)
+HRESULT MakeVertexEnemy(int EnemyNum, int EnemyType)
 {
 	LPDIRECT3DDEVICE9 pDevice = GetDevice();
-	switch (type)
+	switch (EnemyType)
 	{
 	case TYPE_CAT:
 	{
 		// rhwの設定　頂点が重なった時の描画順番
-		g_cat[i].vertexWk[0].rhw =
-			g_cat[i].vertexWk[1].rhw =
-			g_cat[i].vertexWk[2].rhw =
-			g_cat[i].vertexWk[3].rhw =
-			g_cat[i].vertexWk[4].rhw =
-			g_cat[i].vertexWk[5].rhw =
-			g_cat[i].vertexWk[6].rhw =
-			g_cat[i].vertexWk[7].rhw =
-			g_cat[i].vertexWk[8].rhw =
-			g_cat[i].vertexWk[9].rhw =
-			g_cat[i].vertexWk[10].rhw =
-			g_cat[i].vertexWk[11].rhw =
-			g_cat[i].vertexWk[12].rhw =
-			g_cat[i].vertexWk[13].rhw =
-			g_cat[i].vertexWk[14].rhw =
-			g_cat[i].vertexWk[15].rhw = 1.0f;
+		g_cat[EnemyNum].vertexWk[0].rhw =
+			g_cat[EnemyNum].vertexWk[1].rhw =
+			g_cat[EnemyNum].vertexWk[2].rhw =
+			g_cat[EnemyNum].vertexWk[3].rhw =
+			g_cat[EnemyNum].vertexWk[4].rhw =
+			g_cat[EnemyNum].vertexWk[5].rhw =
+			g_cat[EnemyNum].vertexWk[6].rhw =
+			g_cat[EnemyNum].vertexWk[7].rhw =
+			g_cat[EnemyNum].vertexWk[8].rhw =
+			g_cat[EnemyNum].vertexWk[9].rhw =
+			g_cat[EnemyNum].vertexWk[10].rhw =
+			g_cat[EnemyNum].vertexWk[11].rhw =
+			g_cat[EnemyNum].vertexWk[12].rhw =
+			g_cat[EnemyNum].vertexWk[13].rhw =
+			g_cat[EnemyNum].vertexWk[14].rhw =
+			g_cat[EnemyNum].vertexWk[15].rhw = 1.0f;
 		// 反射光の設定  頂点カラー指定した色とテクスチャの色が混ざってカラーリングされる
 		// フェードインは始めに表示したテクスチャの上に透明なテクスチャを表示。RGBAのAを徐々に不透明にしていく
-		g_cat[i].vertexWk[0].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[1].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[2].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[3].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[4].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[5].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[6].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[7].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[8].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[9].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[10].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[11].diffuse = D3DCOLOR_RGBA(255,255,255,255);
-		g_cat[i].vertexWk[12].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_cat[i].vertexWk[13].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_cat[i].vertexWk[14].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_cat[i].vertexWk[15].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_cat[EnemyNum].vertexWk[0].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[1].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[2].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[3].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[4].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[5].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[6].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[7].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[8].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[9].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[10].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[11].diffuse = D3DCOLOR_RGBA(255,255,255,255);
+		g_cat[EnemyNum].vertexWk[12].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_cat[EnemyNum].vertexWk[13].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_cat[EnemyNum].vertexWk[14].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_cat[EnemyNum].vertexWk[15].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
 		// テクスチャ座標の設定  
-		g_cat[i].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
-		g_cat[i].vertexWk[1].tex = D3DXVECTOR2(0.5f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.0f);
-		g_cat[i].vertexWk[2].tex = D3DXVECTOR2(0.0f, 0.5f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
-		g_cat[i].vertexWk[3].tex = D3DXVECTOR2(0.5f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.5f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
+		g_cat[EnemyNum].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
+		g_cat[EnemyNum].vertexWk[1].tex = D3DXVECTOR2(0.5f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.0f);
+		g_cat[EnemyNum].vertexWk[2].tex = D3DXVECTOR2(0.0f, 0.5f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
+		g_cat[EnemyNum].vertexWk[3].tex = D3DXVECTOR2(0.5f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.5f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
 
-		g_cat[i].vertexWk[4].tex = D3DXVECTOR2(0.5f, 0.0f);
-		g_cat[i].vertexWk[5].tex = D3DXVECTOR2(1.0f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.0f);
-		g_cat[i].vertexWk[6].tex = D3DXVECTOR2(0.5f, 0.5f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
-		g_cat[i].vertexWk[7].tex = D3DXVECTOR2(1.0f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.5f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
+		g_cat[EnemyNum].vertexWk[4].tex = D3DXVECTOR2(0.5f, 0.0f);
+		g_cat[EnemyNum].vertexWk[5].tex = D3DXVECTOR2(1.0f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.0f);
+		g_cat[EnemyNum].vertexWk[6].tex = D3DXVECTOR2(0.5f, 0.5f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
+		g_cat[EnemyNum].vertexWk[7].tex = D3DXVECTOR2(1.0f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.5f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
 
-		g_cat[i].vertexWk[8].tex = D3DXVECTOR2(0.0f, 0.5f);
-		g_cat[i].vertexWk[9].tex = D3DXVECTOR2(0.5f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.5f);
-		g_cat[i].vertexWk[10].tex = D3DXVECTOR2(0.0f, 1.0f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
-		g_cat[i].vertexWk[11].tex = D3DXVECTOR2(0.5f / TEXTURE_CAT_PATTERN_DIVIDE_X, 1.0f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
+		g_cat[EnemyNum].vertexWk[8].tex = D3DXVECTOR2(0.0f, 0.5f);
+		g_cat[EnemyNum].vertexWk[9].tex = D3DXVECTOR2(0.5f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.5f);
+		g_cat[EnemyNum].vertexWk[10].tex = D3DXVECTOR2(0.0f, 1.0f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
+		g_cat[EnemyNum].vertexWk[11].tex = D3DXVECTOR2(0.5f / TEXTURE_CAT_PATTERN_DIVIDE_X, 1.0f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
 
-		g_cat[i].vertexWk[12].tex = D3DXVECTOR2(0.5f, 0.5f);
-		g_cat[i].vertexWk[13].tex = D3DXVECTOR2(1.0f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.5f);
-		g_cat[i].vertexWk[14].tex = D3DXVECTOR2(0.5f, 1.0f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
-		g_cat[i].vertexWk[15].tex = D3DXVECTOR2(1.0f / TEXTURE_CAT_PATTERN_DIVIDE_X, 1.0f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
+		g_cat[EnemyNum].vertexWk[12].tex = D3DXVECTOR2(0.5f, 0.5f);
+		g_cat[EnemyNum].vertexWk[13].tex = D3DXVECTOR2(1.0f / TEXTURE_CAT_PATTERN_DIVIDE_X, 0.5f);
+		g_cat[EnemyNum].vertexWk[14].tex = D3DXVECTOR2(0.5f, 1.0f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
+		g_cat[EnemyNum].vertexWk[15].tex = D3DXVECTOR2(1.0f / TEXTURE_CAT_PATTERN_DIVIDE_X, 1.0f / TEXTURE_CAT_PATTERN_DIVIDE_Y);
 		// 頂点座標の設定
-		SetVertexEnemy(i, type);
+		SetVertexEnemy(EnemyNum, EnemyType);
 		break;
 	}
 	case TYPE_SURAIMU:
 	{
-		g_suraimu[i].vertexWk[0].rhw =
-			g_suraimu[i].vertexWk[1].rhw =
-			g_suraimu[i].vertexWk[2].rhw =
-			g_suraimu[i].vertexWk[3].rhw =
-			g_suraimu[i].vertexWk[4].rhw =
-			g_suraimu[i].vertexWk[5].rhw =
-			g_suraimu[i].vertexWk[6].rhw =
-			g_suraimu[i].vertexWk[7].rhw =
-			g_suraimu[i].vertexWk[8].rhw =
-			g_suraimu[i].vertexWk[9].rhw =
-			g_suraimu[i].vertexWk[10].rhw =
-			g_suraimu[i].vertexWk[11].rhw =
-			g_suraimu[i].vertexWk[12].rhw =
-			g_suraimu[i].vertexWk[13].rhw =
-			g_suraimu[i].vertexWk[14].rhw =
-			g_suraimu[i].vertexWk[15].rhw = 1.0f;
-		g_suraimu[i].vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[4].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[5].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[6].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[7].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[8].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[9].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[10].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[11].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[12].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[13].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[14].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[15].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_suraimu[i].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
-		g_suraimu[i].vertexWk[1].tex = D3DXVECTOR2(0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.0f);
-		g_suraimu[i].vertexWk[2].tex = D3DXVECTOR2(0.0f, 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
-		g_suraimu[i].vertexWk[3].tex = D3DXVECTOR2(0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
-		g_suraimu[i].vertexWk[4].tex = D3DXVECTOR2(0.5f, 0.0f);
-		g_suraimu[i].vertexWk[5].tex = D3DXVECTOR2(1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.0f);
-		g_suraimu[i].vertexWk[6].tex = D3DXVECTOR2(0.5f, 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
-		g_suraimu[i].vertexWk[7].tex = D3DXVECTOR2(1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
-		g_suraimu[i].vertexWk[8].tex = D3DXVECTOR2(0.0f, 0.5f);
-		g_suraimu[i].vertexWk[9].tex = D3DXVECTOR2(0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.5f);
-		g_suraimu[i].vertexWk[10].tex = D3DXVECTOR2(0.0f, 1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
-		g_suraimu[i].vertexWk[11].tex = D3DXVECTOR2(0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
-		g_suraimu[i].vertexWk[12].tex = D3DXVECTOR2(0.5f, 0.5f);
-		g_suraimu[i].vertexWk[13].tex = D3DXVECTOR2(1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.5f);
-		g_suraimu[i].vertexWk[14].tex = D3DXVECTOR2(0.5f, 1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
-		g_suraimu[i].vertexWk[15].tex = D3DXVECTOR2(1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
-		SetVertexEnemy(i, type);
+		g_suraimu[EnemyNum].vertexWk[0].rhw =
+			g_suraimu[EnemyNum].vertexWk[1].rhw =
+			g_suraimu[EnemyNum].vertexWk[2].rhw =
+			g_suraimu[EnemyNum].vertexWk[3].rhw =
+			g_suraimu[EnemyNum].vertexWk[4].rhw =
+			g_suraimu[EnemyNum].vertexWk[5].rhw =
+			g_suraimu[EnemyNum].vertexWk[6].rhw =
+			g_suraimu[EnemyNum].vertexWk[7].rhw =
+			g_suraimu[EnemyNum].vertexWk[8].rhw =
+			g_suraimu[EnemyNum].vertexWk[9].rhw =
+			g_suraimu[EnemyNum].vertexWk[10].rhw =
+			g_suraimu[EnemyNum].vertexWk[11].rhw =
+			g_suraimu[EnemyNum].vertexWk[12].rhw =
+			g_suraimu[EnemyNum].vertexWk[13].rhw =
+			g_suraimu[EnemyNum].vertexWk[14].rhw =
+			g_suraimu[EnemyNum].vertexWk[15].rhw = 1.0f;
+		g_suraimu[EnemyNum].vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[4].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[5].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[6].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[7].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[8].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[9].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[10].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[11].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[12].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[13].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[14].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[15].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_suraimu[EnemyNum].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
+		g_suraimu[EnemyNum].vertexWk[1].tex = D3DXVECTOR2(0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.0f);
+		g_suraimu[EnemyNum].vertexWk[2].tex = D3DXVECTOR2(0.0f, 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
+		g_suraimu[EnemyNum].vertexWk[3].tex = D3DXVECTOR2(0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
+		g_suraimu[EnemyNum].vertexWk[4].tex = D3DXVECTOR2(0.5f, 0.0f);
+		g_suraimu[EnemyNum].vertexWk[5].tex = D3DXVECTOR2(1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.0f);
+		g_suraimu[EnemyNum].vertexWk[6].tex = D3DXVECTOR2(0.5f, 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
+		g_suraimu[EnemyNum].vertexWk[7].tex = D3DXVECTOR2(1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
+		g_suraimu[EnemyNum].vertexWk[8].tex = D3DXVECTOR2(0.0f, 0.5f);
+		g_suraimu[EnemyNum].vertexWk[9].tex = D3DXVECTOR2(0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.5f);
+		g_suraimu[EnemyNum].vertexWk[10].tex = D3DXVECTOR2(0.0f, 1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
+		g_suraimu[EnemyNum].vertexWk[11].tex = D3DXVECTOR2(0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
+		g_suraimu[EnemyNum].vertexWk[12].tex = D3DXVECTOR2(0.5f, 0.5f);
+		g_suraimu[EnemyNum].vertexWk[13].tex = D3DXVECTOR2(1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 0.5f);
+		g_suraimu[EnemyNum].vertexWk[14].tex = D3DXVECTOR2(0.5f, 1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
+		g_suraimu[EnemyNum].vertexWk[15].tex = D3DXVECTOR2(1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X, 1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y);
+		SetVertexEnemy(EnemyNum, EnemyType);
 		break;
 	}
 	case TYPE_HINOTAMA:
 	{
-		g_hinotama[i].vertexWk[0].rhw =
-			g_hinotama[i].vertexWk[1].rhw =
-			g_hinotama[i].vertexWk[2].rhw =
-			g_hinotama[i].vertexWk[3].rhw =
-			g_hinotama[i].vertexWk[4].rhw =
-			g_hinotama[i].vertexWk[5].rhw =
-			g_hinotama[i].vertexWk[6].rhw =
-			g_hinotama[i].vertexWk[7].rhw =
-			g_hinotama[i].vertexWk[8].rhw =
-			g_hinotama[i].vertexWk[9].rhw =
-			g_hinotama[i].vertexWk[10].rhw =
-			g_hinotama[i].vertexWk[11].rhw =
-			g_hinotama[i].vertexWk[12].rhw =
-			g_hinotama[i].vertexWk[13].rhw =
-			g_hinotama[i].vertexWk[14].rhw =
-			g_hinotama[i].vertexWk[15].rhw = 1.0f;
-		g_hinotama[i].vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[4].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[5].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[6].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[7].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[8].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[9].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[10].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[11].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[12].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[13].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[14].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[15].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_hinotama[i].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
-		g_hinotama[i].vertexWk[1].tex = D3DXVECTOR2(0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.0f);
-		g_hinotama[i].vertexWk[2].tex = D3DXVECTOR2(0.0f, 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
-		g_hinotama[i].vertexWk[3].tex = D3DXVECTOR2(0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
-		g_hinotama[i].vertexWk[4].tex = D3DXVECTOR2(0.5f, 0.0f);
-		g_hinotama[i].vertexWk[5].tex = D3DXVECTOR2(1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.0f);
-		g_hinotama[i].vertexWk[6].tex = D3DXVECTOR2(0.5f, 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
-		g_hinotama[i].vertexWk[7].tex = D3DXVECTOR2(1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
-		g_hinotama[i].vertexWk[8].tex = D3DXVECTOR2(0.0f, 0.5f);
-		g_hinotama[i].vertexWk[9].tex = D3DXVECTOR2(0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.5f);
-		g_hinotama[i].vertexWk[10].tex = D3DXVECTOR2(0.0f, 1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
-		g_hinotama[i].vertexWk[11].tex = D3DXVECTOR2(0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
-		g_hinotama[i].vertexWk[12].tex = D3DXVECTOR2(0.5f, 0.5f);
-		g_hinotama[i].vertexWk[13].tex = D3DXVECTOR2(1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.5f);
-		g_hinotama[i].vertexWk[14].tex = D3DXVECTOR2(0.5f, 1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
-		g_hinotama[i].vertexWk[15].tex = D3DXVECTOR2(1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
-		SetVertexEnemy(i, type);
+		g_hinotama[EnemyNum].vertexWk[0].rhw =
+			g_hinotama[EnemyNum].vertexWk[1].rhw =
+			g_hinotama[EnemyNum].vertexWk[2].rhw =
+			g_hinotama[EnemyNum].vertexWk[3].rhw =
+			g_hinotama[EnemyNum].vertexWk[4].rhw =
+			g_hinotama[EnemyNum].vertexWk[5].rhw =
+			g_hinotama[EnemyNum].vertexWk[6].rhw =
+			g_hinotama[EnemyNum].vertexWk[7].rhw =
+			g_hinotama[EnemyNum].vertexWk[8].rhw =
+			g_hinotama[EnemyNum].vertexWk[9].rhw =
+			g_hinotama[EnemyNum].vertexWk[10].rhw =
+			g_hinotama[EnemyNum].vertexWk[11].rhw =
+			g_hinotama[EnemyNum].vertexWk[12].rhw =
+			g_hinotama[EnemyNum].vertexWk[13].rhw =
+			g_hinotama[EnemyNum].vertexWk[14].rhw =
+			g_hinotama[EnemyNum].vertexWk[15].rhw = 1.0f;
+		g_hinotama[EnemyNum].vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[4].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[5].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[6].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[7].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[8].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[9].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[10].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[11].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[12].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[13].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[14].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[15].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_hinotama[EnemyNum].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
+		g_hinotama[EnemyNum].vertexWk[1].tex = D3DXVECTOR2(0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.0f);
+		g_hinotama[EnemyNum].vertexWk[2].tex = D3DXVECTOR2(0.0f, 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
+		g_hinotama[EnemyNum].vertexWk[3].tex = D3DXVECTOR2(0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
+		g_hinotama[EnemyNum].vertexWk[4].tex = D3DXVECTOR2(0.5f, 0.0f);
+		g_hinotama[EnemyNum].vertexWk[5].tex = D3DXVECTOR2(1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.0f);
+		g_hinotama[EnemyNum].vertexWk[6].tex = D3DXVECTOR2(0.5f, 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
+		g_hinotama[EnemyNum].vertexWk[7].tex = D3DXVECTOR2(1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
+		g_hinotama[EnemyNum].vertexWk[8].tex = D3DXVECTOR2(0.0f, 0.5f);
+		g_hinotama[EnemyNum].vertexWk[9].tex = D3DXVECTOR2(0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.5f);
+		g_hinotama[EnemyNum].vertexWk[10].tex = D3DXVECTOR2(0.0f, 1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
+		g_hinotama[EnemyNum].vertexWk[11].tex = D3DXVECTOR2(0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
+		g_hinotama[EnemyNum].vertexWk[12].tex = D3DXVECTOR2(0.5f, 0.5f);
+		g_hinotama[EnemyNum].vertexWk[13].tex = D3DXVECTOR2(1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 0.5f);
+		g_hinotama[EnemyNum].vertexWk[14].tex = D3DXVECTOR2(0.5f, 1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
+		g_hinotama[EnemyNum].vertexWk[15].tex = D3DXVECTOR2(1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X, 1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y);
+		SetVertexEnemy(EnemyNum, EnemyType);
 		break;
 	}
 	case TYPE_UFO:
 	{
-		g_ufo[i].vertexWk[0].rhw =
-			g_ufo[i].vertexWk[1].rhw =
-			g_ufo[i].vertexWk[2].rhw =
-			g_ufo[i].vertexWk[3].rhw =
-			g_ufo[i].vertexWk[4].rhw =
-			g_ufo[i].vertexWk[5].rhw =
-			g_ufo[i].vertexWk[6].rhw =
-			g_ufo[i].vertexWk[7].rhw =
-			g_ufo[i].vertexWk[8].rhw =
-			g_ufo[i].vertexWk[9].rhw =
-			g_ufo[i].vertexWk[10].rhw =
-			g_ufo[i].vertexWk[11].rhw =
-			g_ufo[i].vertexWk[12].rhw =
-			g_ufo[i].vertexWk[13].rhw =
-			g_ufo[i].vertexWk[14].rhw =
-			g_ufo[i].vertexWk[15].rhw = 1.0f;
-		g_ufo[i].vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[4].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[5].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[6].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[7].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[8].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[9].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[10].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[11].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[12].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[13].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[14].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[15].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-		g_ufo[i].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
-		g_ufo[i].vertexWk[1].tex = D3DXVECTOR2(0.5f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.0f);
-		g_ufo[i].vertexWk[2].tex = D3DXVECTOR2(0.0f, 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
-		g_ufo[i].vertexWk[3].tex = D3DXVECTOR2(0.5f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
-		g_ufo[i].vertexWk[4].tex = D3DXVECTOR2(0.5f, 0.0f);
-		g_ufo[i].vertexWk[5].tex = D3DXVECTOR2(1.0f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.0f);
-		g_ufo[i].vertexWk[6].tex = D3DXVECTOR2(0.5f, 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
-		g_ufo[i].vertexWk[7].tex = D3DXVECTOR2(1.0f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
-		g_ufo[i].vertexWk[8].tex = D3DXVECTOR2(0.0f, 0.5f);
-		g_ufo[i].vertexWk[9].tex = D3DXVECTOR2(0.5f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.5f);
-		g_ufo[i].vertexWk[10].tex = D3DXVECTOR2(0.0f, 1.0f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
-		g_ufo[i].vertexWk[11].tex = D3DXVECTOR2(0.5f / TEXTURE_UFO_PATTERN_DIVIDE_X, 1.0f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
-		g_ufo[i].vertexWk[12].tex = D3DXVECTOR2(0.5f, 0.5f);
-		g_ufo[i].vertexWk[13].tex = D3DXVECTOR2(1.0f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.5f);
-		g_ufo[i].vertexWk[14].tex = D3DXVECTOR2(0.5f, 1.0f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
-		g_ufo[i].vertexWk[15].tex = D3DXVECTOR2(1.0f / TEXTURE_UFO_PATTERN_DIVIDE_X, 1.0f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
-		SetVertexEnemy(i, type);
+		g_ufo[EnemyNum].vertexWk[0].rhw =
+			g_ufo[EnemyNum].vertexWk[1].rhw =
+			g_ufo[EnemyNum].vertexWk[2].rhw =
+			g_ufo[EnemyNum].vertexWk[3].rhw =
+			g_ufo[EnemyNum].vertexWk[4].rhw =
+			g_ufo[EnemyNum].vertexWk[5].rhw =
+			g_ufo[EnemyNum].vertexWk[6].rhw =
+			g_ufo[EnemyNum].vertexWk[7].rhw =
+			g_ufo[EnemyNum].vertexWk[8].rhw =
+			g_ufo[EnemyNum].vertexWk[9].rhw =
+			g_ufo[EnemyNum].vertexWk[10].rhw =
+			g_ufo[EnemyNum].vertexWk[11].rhw =
+			g_ufo[EnemyNum].vertexWk[12].rhw =
+			g_ufo[EnemyNum].vertexWk[13].rhw =
+			g_ufo[EnemyNum].vertexWk[14].rhw =
+			g_ufo[EnemyNum].vertexWk[15].rhw = 1.0f;
+		g_ufo[EnemyNum].vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[4].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[5].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[6].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[7].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[8].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[9].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[10].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[11].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[12].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[13].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[14].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[15].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+		g_ufo[EnemyNum].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
+		g_ufo[EnemyNum].vertexWk[1].tex = D3DXVECTOR2(0.5f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.0f);
+		g_ufo[EnemyNum].vertexWk[2].tex = D3DXVECTOR2(0.0f, 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
+		g_ufo[EnemyNum].vertexWk[3].tex = D3DXVECTOR2(0.5f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
+		g_ufo[EnemyNum].vertexWk[4].tex = D3DXVECTOR2(0.5f, 0.0f);
+		g_ufo[EnemyNum].vertexWk[5].tex = D3DXVECTOR2(1.0f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.0f);
+		g_ufo[EnemyNum].vertexWk[6].tex = D3DXVECTOR2(0.5f, 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
+		g_ufo[EnemyNum].vertexWk[7].tex = D3DXVECTOR2(1.0f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
+		g_ufo[EnemyNum].vertexWk[8].tex = D3DXVECTOR2(0.0f, 0.5f);
+		g_ufo[EnemyNum].vertexWk[9].tex = D3DXVECTOR2(0.5f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.5f);
+		g_ufo[EnemyNum].vertexWk[10].tex = D3DXVECTOR2(0.0f, 1.0f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
+		g_ufo[EnemyNum].vertexWk[11].tex = D3DXVECTOR2(0.5f / TEXTURE_UFO_PATTERN_DIVIDE_X, 1.0f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
+		g_ufo[EnemyNum].vertexWk[12].tex = D3DXVECTOR2(0.5f, 0.5f);
+		g_ufo[EnemyNum].vertexWk[13].tex = D3DXVECTOR2(1.0f / TEXTURE_UFO_PATTERN_DIVIDE_X, 0.5f);
+		g_ufo[EnemyNum].vertexWk[14].tex = D3DXVECTOR2(0.5f, 1.0f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
+		g_ufo[EnemyNum].vertexWk[15].tex = D3DXVECTOR2(1.0f / TEXTURE_UFO_PATTERN_DIVIDE_X, 1.0f / TEXTURE_UFO_PATTERN_DIVIDE_Y);
+		SetVertexEnemy(EnemyNum, EnemyType);
 		break;
 	}
 	default:
@@ -1115,9 +1110,9 @@ HRESULT MakeVertexEnemy(int i, int type)
 //=============================================================================
 // テクスチャ座標の設定
 //=============================================================================
-void SetTextureEnemy(int cntPattern, int i, int type)
+void SetTextureEnemy(int cntPattern, int EnemyNum, int EnemyType)
 {
-	switch (type)
+	switch (EnemyType)
 	{
 	case TYPE_CAT:
 	{
@@ -1199,25 +1194,25 @@ void SetTextureEnemy(int cntPattern, int i, int type)
 
 
 
-		g_cat[i].vertexWk[0].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY);												//0.0,0.0
-		g_cat[i].vertexWk[1].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);									//0.5,0.0
-		g_cat[i].vertexWk[2].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);									//0.0,0.5
-		g_cat[i].vertexWk[3].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);							//0.5,0.5
+		g_cat[EnemyNum].vertexWk[0].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY);												//0.0,0.0
+		g_cat[EnemyNum].vertexWk[1].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);									//0.5,0.0
+		g_cat[EnemyNum].vertexWk[2].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);									//0.0,0.5
+		g_cat[EnemyNum].vertexWk[3].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);							//0.5,0.5
 																															
-		g_cat[i].vertexWk[4].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);									//0.5,0.0
-		g_cat[i].vertexWk[5].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY);							//1.0,0.0
-		g_cat[i].vertexWk[6].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);							//0.5,0.5
-		g_cat[i].vertexWk[7].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);				//1.0,0.5
+		g_cat[EnemyNum].vertexWk[4].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);									//0.5,0.0
+		g_cat[EnemyNum].vertexWk[5].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY);							//1.0,0.0
+		g_cat[EnemyNum].vertexWk[6].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);							//0.5,0.5
+		g_cat[EnemyNum].vertexWk[7].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);				//1.0,0.5
 																															
-		g_cat[i].vertexWk[8].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);									//0.0,0.5
-		g_cat[i].vertexWk[9].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);							//0.5,0.5
-		g_cat[i].vertexWk[10].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs + sizeYofs);						//0.0,1.0
-		g_cat[i].vertexWk[11].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);				//0.5,1.0
+		g_cat[EnemyNum].vertexWk[8].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);									//0.0,0.5
+		g_cat[EnemyNum].vertexWk[9].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);							//0.5,0.5
+		g_cat[EnemyNum].vertexWk[10].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs + sizeYofs);						//0.0,1.0
+		g_cat[EnemyNum].vertexWk[11].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);				//0.5,1.0
 																															
-		g_cat[i].vertexWk[12].tex = D3DXVECTOR2((float)(x)* sizeX+ sizeXofs, (float)(y)* sizeY + sizeYofs);							//0.5,0.5
-		g_cat[i].vertexWk[13].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);				//1.0,0.5
-		g_cat[i].vertexWk[14].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);				//0.5,1.0
-		g_cat[i].vertexWk[15].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);	//1.0,1.0
+		g_cat[EnemyNum].vertexWk[12].tex = D3DXVECTOR2((float)(x)* sizeX+ sizeXofs, (float)(y)* sizeY + sizeYofs);							//0.5,0.5
+		g_cat[EnemyNum].vertexWk[13].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);				//1.0,0.5
+		g_cat[EnemyNum].vertexWk[14].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);				//0.5,1.0
+		g_cat[EnemyNum].vertexWk[15].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);	//1.0,1.0
 		break;
 	}
 	case TYPE_SURAIMU:
@@ -1228,22 +1223,22 @@ void SetTextureEnemy(int cntPattern, int i, int type)
 		float sizeY = 1.0f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y;
 		float sizeXofs = 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_X;
 		float sizeYofs = 0.5f / TEXTURE_SURAIMU_PATTERN_DIVIDE_Y;
-		g_suraimu[i].vertexWk[0].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY);
-		g_suraimu[i].vertexWk[1].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
-		g_suraimu[i].vertexWk[2].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
-		g_suraimu[i].vertexWk[3].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_suraimu[i].vertexWk[4].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
-		g_suraimu[i].vertexWk[5].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY);
-		g_suraimu[i].vertexWk[6].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_suraimu[i].vertexWk[7].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_suraimu[i].vertexWk[8].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
-		g_suraimu[i].vertexWk[9].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_suraimu[i].vertexWk[10].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs + sizeYofs);
-		g_suraimu[i].vertexWk[11].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
-		g_suraimu[i].vertexWk[12].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_suraimu[i].vertexWk[13].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_suraimu[i].vertexWk[14].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
-		g_suraimu[i].vertexWk[15].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[0].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY);
+		g_suraimu[EnemyNum].vertexWk[1].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
+		g_suraimu[EnemyNum].vertexWk[2].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[3].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[4].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
+		g_suraimu[EnemyNum].vertexWk[5].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY);
+		g_suraimu[EnemyNum].vertexWk[6].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[7].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[8].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[9].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[10].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[11].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[12].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[13].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[14].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_suraimu[EnemyNum].vertexWk[15].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
 		break;
 	}
 	case TYPE_HINOTAMA:
@@ -1254,22 +1249,22 @@ void SetTextureEnemy(int cntPattern, int i, int type)
 		float sizeY = 1.0f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y;
 		float sizeXofs = 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_X;
 		float sizeYofs = 0.5f / TEXTURE_HINOTAMA_PATTERN_DIVIDE_Y;
-		g_hinotama[i].vertexWk[0].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY);
-		g_hinotama[i].vertexWk[1].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
-		g_hinotama[i].vertexWk[2].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
-		g_hinotama[i].vertexWk[3].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_hinotama[i].vertexWk[4].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
-		g_hinotama[i].vertexWk[5].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY);
-		g_hinotama[i].vertexWk[6].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_hinotama[i].vertexWk[7].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_hinotama[i].vertexWk[8].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
-		g_hinotama[i].vertexWk[9].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_hinotama[i].vertexWk[10].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs + sizeYofs);
-		g_hinotama[i].vertexWk[11].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
-		g_hinotama[i].vertexWk[12].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_hinotama[i].vertexWk[13].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_hinotama[i].vertexWk[14].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
-		g_hinotama[i].vertexWk[15].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[0].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY);
+		g_hinotama[EnemyNum].vertexWk[1].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
+		g_hinotama[EnemyNum].vertexWk[2].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[3].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[4].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
+		g_hinotama[EnemyNum].vertexWk[5].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY);
+		g_hinotama[EnemyNum].vertexWk[6].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[7].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[8].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[9].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[10].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[11].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[12].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[13].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[14].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_hinotama[EnemyNum].vertexWk[15].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
 		break;
 	}
 	case TYPE_UFO:
@@ -1280,22 +1275,22 @@ void SetTextureEnemy(int cntPattern, int i, int type)
 		float sizeY = 1.0f / TEXTURE_UFO_PATTERN_DIVIDE_Y;
 		float sizeXofs = 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_X;
 		float sizeYofs = 0.5f / TEXTURE_UFO_PATTERN_DIVIDE_Y;
-		g_ufo[i].vertexWk[0].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY);
-		g_ufo[i].vertexWk[1].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
-		g_ufo[i].vertexWk[2].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
-		g_ufo[i].vertexWk[3].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_ufo[i].vertexWk[4].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
-		g_ufo[i].vertexWk[5].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY);
-		g_ufo[i].vertexWk[6].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_ufo[i].vertexWk[7].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_ufo[i].vertexWk[8].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
-		g_ufo[i].vertexWk[9].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_ufo[i].vertexWk[10].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs + sizeYofs);
-		g_ufo[i].vertexWk[11].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
-		g_ufo[i].vertexWk[12].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_ufo[i].vertexWk[13].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
-		g_ufo[i].vertexWk[14].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
-		g_ufo[i].vertexWk[15].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[0].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY);
+		g_ufo[EnemyNum].vertexWk[1].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
+		g_ufo[EnemyNum].vertexWk[2].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[3].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[4].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY);
+		g_ufo[EnemyNum].vertexWk[5].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY);
+		g_ufo[EnemyNum].vertexWk[6].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[7].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[8].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[9].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[10].tex = D3DXVECTOR2((float)(x)* sizeX, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[11].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[12].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[13].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[14].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
+		g_ufo[EnemyNum].vertexWk[15].tex = D3DXVECTOR2((float)(x)* sizeX + sizeXofs + sizeXofs, (float)(y)* sizeY + sizeYofs + sizeYofs);
 		break;
 	}
 	default:
@@ -1306,218 +1301,218 @@ void SetTextureEnemy(int cntPattern, int i, int type)
 //=============================================================================
 // 頂点座標の設定
 //=============================================================================
-void SetVertexEnemy(int i, int type)
+void SetVertexEnemy(int EnemyNum, int EnemyType)
 {
-	switch (type)
+	switch (EnemyType)
 	{
 	case TYPE_CAT:
 	{
 		// 頂点座標の設定 
-		g_cat[i].vertexWk[0].vtx.x = g_cat[i].pos.x - TEXTURE_CAT_SIZE_X - g_cat[i].chengeval - g_cat[i].ppos[0].x;
-		g_cat[i].vertexWk[0].vtx.y = g_cat[i].pos.y - TEXTURE_CAT_SIZE_Y - g_cat[i].chengeval - g_cat[i].ppos[0].y;
-		g_cat[i].vertexWk[0].vtx.z = 0.0f;
-		g_cat[i].vertexWk[1].vtx.x = g_cat[i].pos.x - g_cat[i].ppos[0].x;
-		g_cat[i].vertexWk[1].vtx.y = g_cat[i].pos.y - TEXTURE_CAT_SIZE_Y - g_cat[i].chengeval - g_cat[i].ppos[0].y;
-		g_cat[i].vertexWk[1].vtx.z = 0.0f;
-		g_cat[i].vertexWk[2].vtx.x = g_cat[i].pos.x - TEXTURE_CAT_SIZE_X - g_cat[i].chengeval - g_cat[i].ppos[0].x;
-		g_cat[i].vertexWk[2].vtx.y = g_cat[i].pos.y - g_cat[i].ppos[0].y;
-		g_cat[i].vertexWk[2].vtx.z = 0.0f;
-		g_cat[i].vertexWk[3].vtx.x = g_cat[i].pos.x - g_cat[i].ppos[0].x;
-		g_cat[i].vertexWk[3].vtx.y = g_cat[i].pos.y - g_cat[i].ppos[0].y;
-		g_cat[i].vertexWk[3].vtx.z = 0.0f;
-		g_cat[i].vertexWk[4].vtx.x = g_cat[i].pos.x + g_cat[i].ppos[1].x;
-		g_cat[i].vertexWk[4].vtx.y = g_cat[i].pos.y - TEXTURE_CAT_SIZE_Y - g_cat[i].chengeval + g_cat[i].ppos[1].y;
-		g_cat[i].vertexWk[4].vtx.z = 0.0f;
-		g_cat[i].vertexWk[5].vtx.x = g_cat[i].pos.x + TEXTURE_CAT_SIZE_X + g_cat[i].chengeval + g_cat[i].ppos[1].x;
-		g_cat[i].vertexWk[5].vtx.y = g_cat[i].pos.y - TEXTURE_CAT_SIZE_Y - g_cat[i].chengeval + g_cat[i].ppos[1].y;
-		g_cat[i].vertexWk[5].vtx.z = 0.0f;
-		g_cat[i].vertexWk[6].vtx.x = g_cat[i].pos.x + g_cat[i].ppos[1].x;
-		g_cat[i].vertexWk[6].vtx.y = g_cat[i].pos.y + g_cat[i].ppos[1].y;
-		g_cat[i].vertexWk[6].vtx.z = 0.0f;
-		g_cat[i].vertexWk[7].vtx.x = g_cat[i].pos.x + TEXTURE_CAT_SIZE_X + g_cat[i].chengeval + g_cat[i].ppos[1].x;
-		g_cat[i].vertexWk[7].vtx.y = g_cat[i].pos.y + g_cat[i].ppos[1].y;
-		g_cat[i].vertexWk[7].vtx.z = 0.0f;
-		g_cat[i].vertexWk[8].vtx.x = g_cat[i].pos.x - TEXTURE_CAT_SIZE_X - g_cat[i].chengeval - g_cat[i].ppos[2].x;
-		g_cat[i].vertexWk[8].vtx.y = g_cat[i].pos.y - g_cat[i].ppos[2].y;
-		g_cat[i].vertexWk[8].vtx.z = 0.0f;
-		g_cat[i].vertexWk[9].vtx.x = g_cat[i].pos.x - g_cat[i].ppos[2].x;
-		g_cat[i].vertexWk[9].vtx.y = g_cat[i].pos.y - g_cat[i].ppos[2].y;
-		g_cat[i].vertexWk[9].vtx.z = 0.0f;
-		g_cat[i].vertexWk[10].vtx.x = g_cat[i].pos.x - TEXTURE_CAT_SIZE_X - g_cat[i].chengeval - g_cat[i].ppos[2].x;
-		g_cat[i].vertexWk[10].vtx.y = g_cat[i].pos.y + TEXTURE_CAT_SIZE_Y + g_cat[i].chengeval - g_cat[i].ppos[2].y;
-		g_cat[i].vertexWk[10].vtx.z = 0.0f;
-		g_cat[i].vertexWk[11].vtx.x = g_cat[i].pos.x - g_cat[i].ppos[2].x;
-		g_cat[i].vertexWk[11].vtx.y = g_cat[i].pos.y + TEXTURE_CAT_SIZE_Y + g_cat[i].chengeval - g_cat[i].ppos[2].y;
-		g_cat[i].vertexWk[11].vtx.z = 0.0f;
-		g_cat[i].vertexWk[12].vtx.x = g_cat[i].pos.x + g_cat[i].ppos[3].x;
-		g_cat[i].vertexWk[12].vtx.y = g_cat[i].pos.y + g_cat[i].ppos[3].y;
-		g_cat[i].vertexWk[12].vtx.z = 0.0f;
-		g_cat[i].vertexWk[13].vtx.x = g_cat[i].pos.x + TEXTURE_CAT_SIZE_X + g_cat[i].chengeval + g_cat[i].ppos[3].x;
-		g_cat[i].vertexWk[13].vtx.y = g_cat[i].pos.y + g_cat[i].ppos[3].y;
-		g_cat[i].vertexWk[13].vtx.z = 0.0f;
-		g_cat[i].vertexWk[14].vtx.x = g_cat[i].pos.x + g_cat[i].ppos[3].x;
-		g_cat[i].vertexWk[14].vtx.y = g_cat[i].pos.y + TEXTURE_CAT_SIZE_Y + g_cat[i].chengeval + g_cat[i].ppos[3].y;
-		g_cat[i].vertexWk[14].vtx.z = 0.0f;
-		g_cat[i].vertexWk[15].vtx.x = g_cat[i].pos.x + TEXTURE_CAT_SIZE_X + g_cat[i].chengeval + g_cat[i].ppos[3].x;
-		g_cat[i].vertexWk[15].vtx.y = g_cat[i].pos.y + TEXTURE_CAT_SIZE_Y + g_cat[i].chengeval + g_cat[i].ppos[3].y;
-		g_cat[i].vertexWk[15].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[0].vtx.x = g_cat[EnemyNum].pos.x - TEXTURE_CAT_SIZE_X - g_cat[EnemyNum].chengeval - g_cat[EnemyNum].ppos[0].x;
+		g_cat[EnemyNum].vertexWk[0].vtx.y = g_cat[EnemyNum].pos.y - TEXTURE_CAT_SIZE_Y - g_cat[EnemyNum].chengeval - g_cat[EnemyNum].ppos[0].y;
+		g_cat[EnemyNum].vertexWk[0].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[1].vtx.x = g_cat[EnemyNum].pos.x - g_cat[EnemyNum].ppos[0].x;
+		g_cat[EnemyNum].vertexWk[1].vtx.y = g_cat[EnemyNum].pos.y - TEXTURE_CAT_SIZE_Y - g_cat[EnemyNum].chengeval - g_cat[EnemyNum].ppos[0].y;
+		g_cat[EnemyNum].vertexWk[1].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[2].vtx.x = g_cat[EnemyNum].pos.x - TEXTURE_CAT_SIZE_X - g_cat[EnemyNum].chengeval - g_cat[EnemyNum].ppos[0].x;
+		g_cat[EnemyNum].vertexWk[2].vtx.y = g_cat[EnemyNum].pos.y - g_cat[EnemyNum].ppos[0].y;
+		g_cat[EnemyNum].vertexWk[2].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[3].vtx.x = g_cat[EnemyNum].pos.x - g_cat[EnemyNum].ppos[0].x;
+		g_cat[EnemyNum].vertexWk[3].vtx.y = g_cat[EnemyNum].pos.y - g_cat[EnemyNum].ppos[0].y;
+		g_cat[EnemyNum].vertexWk[3].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[4].vtx.x = g_cat[EnemyNum].pos.x + g_cat[EnemyNum].ppos[1].x;
+		g_cat[EnemyNum].vertexWk[4].vtx.y = g_cat[EnemyNum].pos.y - TEXTURE_CAT_SIZE_Y - g_cat[EnemyNum].chengeval + g_cat[EnemyNum].ppos[1].y;
+		g_cat[EnemyNum].vertexWk[4].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[5].vtx.x = g_cat[EnemyNum].pos.x + TEXTURE_CAT_SIZE_X + g_cat[EnemyNum].chengeval + g_cat[EnemyNum].ppos[1].x;
+		g_cat[EnemyNum].vertexWk[5].vtx.y = g_cat[EnemyNum].pos.y - TEXTURE_CAT_SIZE_Y - g_cat[EnemyNum].chengeval + g_cat[EnemyNum].ppos[1].y;
+		g_cat[EnemyNum].vertexWk[5].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[6].vtx.x = g_cat[EnemyNum].pos.x + g_cat[EnemyNum].ppos[1].x;
+		g_cat[EnemyNum].vertexWk[6].vtx.y = g_cat[EnemyNum].pos.y + g_cat[EnemyNum].ppos[1].y;
+		g_cat[EnemyNum].vertexWk[6].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[7].vtx.x = g_cat[EnemyNum].pos.x + TEXTURE_CAT_SIZE_X + g_cat[EnemyNum].chengeval + g_cat[EnemyNum].ppos[1].x;
+		g_cat[EnemyNum].vertexWk[7].vtx.y = g_cat[EnemyNum].pos.y + g_cat[EnemyNum].ppos[1].y;
+		g_cat[EnemyNum].vertexWk[7].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[8].vtx.x = g_cat[EnemyNum].pos.x - TEXTURE_CAT_SIZE_X - g_cat[EnemyNum].chengeval - g_cat[EnemyNum].ppos[2].x;
+		g_cat[EnemyNum].vertexWk[8].vtx.y = g_cat[EnemyNum].pos.y - g_cat[EnemyNum].ppos[2].y;
+		g_cat[EnemyNum].vertexWk[8].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[9].vtx.x = g_cat[EnemyNum].pos.x - g_cat[EnemyNum].ppos[2].x;
+		g_cat[EnemyNum].vertexWk[9].vtx.y = g_cat[EnemyNum].pos.y - g_cat[EnemyNum].ppos[2].y;
+		g_cat[EnemyNum].vertexWk[9].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[10].vtx.x = g_cat[EnemyNum].pos.x - TEXTURE_CAT_SIZE_X - g_cat[EnemyNum].chengeval - g_cat[EnemyNum].ppos[2].x;
+		g_cat[EnemyNum].vertexWk[10].vtx.y = g_cat[EnemyNum].pos.y + TEXTURE_CAT_SIZE_Y + g_cat[EnemyNum].chengeval - g_cat[EnemyNum].ppos[2].y;
+		g_cat[EnemyNum].vertexWk[10].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[11].vtx.x = g_cat[EnemyNum].pos.x - g_cat[EnemyNum].ppos[2].x;
+		g_cat[EnemyNum].vertexWk[11].vtx.y = g_cat[EnemyNum].pos.y + TEXTURE_CAT_SIZE_Y + g_cat[EnemyNum].chengeval - g_cat[EnemyNum].ppos[2].y;
+		g_cat[EnemyNum].vertexWk[11].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[12].vtx.x = g_cat[EnemyNum].pos.x + g_cat[EnemyNum].ppos[3].x;
+		g_cat[EnemyNum].vertexWk[12].vtx.y = g_cat[EnemyNum].pos.y + g_cat[EnemyNum].ppos[3].y;
+		g_cat[EnemyNum].vertexWk[12].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[13].vtx.x = g_cat[EnemyNum].pos.x + TEXTURE_CAT_SIZE_X + g_cat[EnemyNum].chengeval + g_cat[EnemyNum].ppos[3].x;
+		g_cat[EnemyNum].vertexWk[13].vtx.y = g_cat[EnemyNum].pos.y + g_cat[EnemyNum].ppos[3].y;
+		g_cat[EnemyNum].vertexWk[13].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[14].vtx.x = g_cat[EnemyNum].pos.x + g_cat[EnemyNum].ppos[3].x;
+		g_cat[EnemyNum].vertexWk[14].vtx.y = g_cat[EnemyNum].pos.y + TEXTURE_CAT_SIZE_Y + g_cat[EnemyNum].chengeval + g_cat[EnemyNum].ppos[3].y;
+		g_cat[EnemyNum].vertexWk[14].vtx.z = 0.0f;
+		g_cat[EnemyNum].vertexWk[15].vtx.x = g_cat[EnemyNum].pos.x + TEXTURE_CAT_SIZE_X + g_cat[EnemyNum].chengeval + g_cat[EnemyNum].ppos[3].x;
+		g_cat[EnemyNum].vertexWk[15].vtx.y = g_cat[EnemyNum].pos.y + TEXTURE_CAT_SIZE_Y + g_cat[EnemyNum].chengeval + g_cat[EnemyNum].ppos[3].y;
+		g_cat[EnemyNum].vertexWk[15].vtx.z = 0.0f;
 
 		break;
 	}
 	case TYPE_SURAIMU:
 	{
-		g_suraimu[i].vertexWk[0].vtx.x = g_suraimu[i].pos.x - TEXTURE_SURAIMU_SIZE_X - g_suraimu[i].chengeval - g_suraimu[i].ppos[0].x;
-		g_suraimu[i].vertexWk[0].vtx.y = g_suraimu[i].pos.y - TEXTURE_SURAIMU_SIZE_Y - g_suraimu[i].chengeval - g_suraimu[i].ppos[0].y;
-		g_suraimu[i].vertexWk[0].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[1].vtx.x = g_suraimu[i].pos.x - g_suraimu[i].ppos[0].x;
-		g_suraimu[i].vertexWk[1].vtx.y = g_suraimu[i].pos.y - TEXTURE_SURAIMU_SIZE_Y - g_suraimu[i].chengeval - g_suraimu[i].ppos[0].y;
-		g_suraimu[i].vertexWk[1].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[2].vtx.x = g_suraimu[i].pos.x - TEXTURE_SURAIMU_SIZE_X - g_suraimu[i].chengeval - g_suraimu[i].ppos[0].x;
-		g_suraimu[i].vertexWk[2].vtx.y = g_suraimu[i].pos.y - g_suraimu[i].ppos[0].y;
-		g_suraimu[i].vertexWk[2].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[3].vtx.x = g_suraimu[i].pos.x - g_suraimu[i].ppos[0].x;
-		g_suraimu[i].vertexWk[3].vtx.y = g_suraimu[i].pos.y - g_suraimu[i].ppos[0].y;
-		g_suraimu[i].vertexWk[3].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[4].vtx.x = g_suraimu[i].pos.x + g_suraimu[i].ppos[1].x;
-		g_suraimu[i].vertexWk[4].vtx.y = g_suraimu[i].pos.y - TEXTURE_SURAIMU_SIZE_Y - g_suraimu[i].chengeval + g_suraimu[i].ppos[1].y;
-		g_suraimu[i].vertexWk[4].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[5].vtx.x = g_suraimu[i].pos.x + TEXTURE_SURAIMU_SIZE_X + g_suraimu[i].chengeval + g_suraimu[i].ppos[1].x;
-		g_suraimu[i].vertexWk[5].vtx.y = g_suraimu[i].pos.y - TEXTURE_SURAIMU_SIZE_Y - g_suraimu[i].chengeval + g_suraimu[i].ppos[1].y;
-		g_suraimu[i].vertexWk[5].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[6].vtx.x = g_suraimu[i].pos.x + g_suraimu[i].ppos[1].x;
-		g_suraimu[i].vertexWk[6].vtx.y = g_suraimu[i].pos.y + g_suraimu[i].ppos[1].y;
-		g_suraimu[i].vertexWk[6].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[7].vtx.x = g_suraimu[i].pos.x + TEXTURE_SURAIMU_SIZE_X + g_suraimu[i].chengeval + g_suraimu[i].ppos[1].x;
-		g_suraimu[i].vertexWk[7].vtx.y = g_suraimu[i].pos.y + g_suraimu[i].ppos[1].y;
-		g_suraimu[i].vertexWk[7].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[8].vtx.x = g_suraimu[i].pos.x - TEXTURE_SURAIMU_SIZE_X - g_suraimu[i].chengeval - g_suraimu[i].ppos[2].x;
-		g_suraimu[i].vertexWk[8].vtx.y = g_suraimu[i].pos.y - g_suraimu[i].ppos[2].y;
-		g_suraimu[i].vertexWk[8].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[9].vtx.x = g_suraimu[i].pos.x - g_suraimu[i].ppos[2].x;
-		g_suraimu[i].vertexWk[9].vtx.y = g_suraimu[i].pos.y - g_suraimu[i].ppos[2].y;
-		g_suraimu[i].vertexWk[9].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[10].vtx.x = g_suraimu[i].pos.x - TEXTURE_SURAIMU_SIZE_X - g_suraimu[i].chengeval - g_suraimu[i].ppos[2].x;
-		g_suraimu[i].vertexWk[10].vtx.y = g_suraimu[i].pos.y + TEXTURE_SURAIMU_SIZE_Y + g_suraimu[i].chengeval - g_suraimu[i].ppos[2].y;
-		g_suraimu[i].vertexWk[10].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[11].vtx.x = g_suraimu[i].pos.x - g_suraimu[i].ppos[2].x;
-		g_suraimu[i].vertexWk[11].vtx.y = g_suraimu[i].pos.y + TEXTURE_SURAIMU_SIZE_Y + g_suraimu[i].chengeval - g_suraimu[i].ppos[2].y;
-		g_suraimu[i].vertexWk[11].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[12].vtx.x = g_suraimu[i].pos.x + g_suraimu[i].ppos[3].x;
-		g_suraimu[i].vertexWk[12].vtx.y = g_suraimu[i].pos.y + g_suraimu[i].ppos[3].y;
-		g_suraimu[i].vertexWk[12].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[13].vtx.x = g_suraimu[i].pos.x + TEXTURE_SURAIMU_SIZE_X + g_suraimu[i].chengeval + g_suraimu[i].ppos[3].x;
-		g_suraimu[i].vertexWk[13].vtx.y = g_suraimu[i].pos.y + g_suraimu[i].ppos[3].y;
-		g_suraimu[i].vertexWk[13].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[14].vtx.x = g_suraimu[i].pos.x + g_suraimu[i].ppos[3].x;
-		g_suraimu[i].vertexWk[14].vtx.y = g_suraimu[i].pos.y + TEXTURE_SURAIMU_SIZE_Y + g_suraimu[i].chengeval + g_suraimu[i].ppos[3].y;
-		g_suraimu[i].vertexWk[14].vtx.z = 0.0f;
-		g_suraimu[i].vertexWk[15].vtx.x = g_suraimu[i].pos.x + TEXTURE_SURAIMU_SIZE_X + g_suraimu[i].chengeval + g_suraimu[i].ppos[3].x;
-		g_suraimu[i].vertexWk[15].vtx.y = g_suraimu[i].pos.y + TEXTURE_SURAIMU_SIZE_Y + g_suraimu[i].chengeval + g_suraimu[i].ppos[3].y;
-		g_suraimu[i].vertexWk[15].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[0].vtx.x = g_suraimu[EnemyNum].pos.x - TEXTURE_SURAIMU_SIZE_X - g_suraimu[EnemyNum].chengeval - g_suraimu[EnemyNum].ppos[0].x;
+		g_suraimu[EnemyNum].vertexWk[0].vtx.y = g_suraimu[EnemyNum].pos.y - TEXTURE_SURAIMU_SIZE_Y - g_suraimu[EnemyNum].chengeval - g_suraimu[EnemyNum].ppos[0].y;
+		g_suraimu[EnemyNum].vertexWk[0].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[1].vtx.x = g_suraimu[EnemyNum].pos.x - g_suraimu[EnemyNum].ppos[0].x;
+		g_suraimu[EnemyNum].vertexWk[1].vtx.y = g_suraimu[EnemyNum].pos.y - TEXTURE_SURAIMU_SIZE_Y - g_suraimu[EnemyNum].chengeval - g_suraimu[EnemyNum].ppos[0].y;
+		g_suraimu[EnemyNum].vertexWk[1].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[2].vtx.x = g_suraimu[EnemyNum].pos.x - TEXTURE_SURAIMU_SIZE_X - g_suraimu[EnemyNum].chengeval - g_suraimu[EnemyNum].ppos[0].x;
+		g_suraimu[EnemyNum].vertexWk[2].vtx.y = g_suraimu[EnemyNum].pos.y - g_suraimu[EnemyNum].ppos[0].y;
+		g_suraimu[EnemyNum].vertexWk[2].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[3].vtx.x = g_suraimu[EnemyNum].pos.x - g_suraimu[EnemyNum].ppos[0].x;
+		g_suraimu[EnemyNum].vertexWk[3].vtx.y = g_suraimu[EnemyNum].pos.y - g_suraimu[EnemyNum].ppos[0].y;
+		g_suraimu[EnemyNum].vertexWk[3].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[4].vtx.x = g_suraimu[EnemyNum].pos.x + g_suraimu[EnemyNum].ppos[1].x;
+		g_suraimu[EnemyNum].vertexWk[4].vtx.y = g_suraimu[EnemyNum].pos.y - TEXTURE_SURAIMU_SIZE_Y - g_suraimu[EnemyNum].chengeval + g_suraimu[EnemyNum].ppos[1].y;
+		g_suraimu[EnemyNum].vertexWk[4].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[5].vtx.x = g_suraimu[EnemyNum].pos.x + TEXTURE_SURAIMU_SIZE_X + g_suraimu[EnemyNum].chengeval + g_suraimu[EnemyNum].ppos[1].x;
+		g_suraimu[EnemyNum].vertexWk[5].vtx.y = g_suraimu[EnemyNum].pos.y - TEXTURE_SURAIMU_SIZE_Y - g_suraimu[EnemyNum].chengeval + g_suraimu[EnemyNum].ppos[1].y;
+		g_suraimu[EnemyNum].vertexWk[5].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[6].vtx.x = g_suraimu[EnemyNum].pos.x + g_suraimu[EnemyNum].ppos[1].x;
+		g_suraimu[EnemyNum].vertexWk[6].vtx.y = g_suraimu[EnemyNum].pos.y + g_suraimu[EnemyNum].ppos[1].y;
+		g_suraimu[EnemyNum].vertexWk[6].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[7].vtx.x = g_suraimu[EnemyNum].pos.x + TEXTURE_SURAIMU_SIZE_X + g_suraimu[EnemyNum].chengeval + g_suraimu[EnemyNum].ppos[1].x;
+		g_suraimu[EnemyNum].vertexWk[7].vtx.y = g_suraimu[EnemyNum].pos.y + g_suraimu[EnemyNum].ppos[1].y;
+		g_suraimu[EnemyNum].vertexWk[7].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[8].vtx.x = g_suraimu[EnemyNum].pos.x - TEXTURE_SURAIMU_SIZE_X - g_suraimu[EnemyNum].chengeval - g_suraimu[EnemyNum].ppos[2].x;
+		g_suraimu[EnemyNum].vertexWk[8].vtx.y = g_suraimu[EnemyNum].pos.y - g_suraimu[EnemyNum].ppos[2].y;
+		g_suraimu[EnemyNum].vertexWk[8].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[9].vtx.x = g_suraimu[EnemyNum].pos.x - g_suraimu[EnemyNum].ppos[2].x;
+		g_suraimu[EnemyNum].vertexWk[9].vtx.y = g_suraimu[EnemyNum].pos.y - g_suraimu[EnemyNum].ppos[2].y;
+		g_suraimu[EnemyNum].vertexWk[9].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[10].vtx.x = g_suraimu[EnemyNum].pos.x - TEXTURE_SURAIMU_SIZE_X - g_suraimu[EnemyNum].chengeval - g_suraimu[EnemyNum].ppos[2].x;
+		g_suraimu[EnemyNum].vertexWk[10].vtx.y = g_suraimu[EnemyNum].pos.y + TEXTURE_SURAIMU_SIZE_Y + g_suraimu[EnemyNum].chengeval - g_suraimu[EnemyNum].ppos[2].y;
+		g_suraimu[EnemyNum].vertexWk[10].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[11].vtx.x = g_suraimu[EnemyNum].pos.x - g_suraimu[EnemyNum].ppos[2].x;
+		g_suraimu[EnemyNum].vertexWk[11].vtx.y = g_suraimu[EnemyNum].pos.y + TEXTURE_SURAIMU_SIZE_Y + g_suraimu[EnemyNum].chengeval - g_suraimu[EnemyNum].ppos[2].y;
+		g_suraimu[EnemyNum].vertexWk[11].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[12].vtx.x = g_suraimu[EnemyNum].pos.x + g_suraimu[EnemyNum].ppos[3].x;
+		g_suraimu[EnemyNum].vertexWk[12].vtx.y = g_suraimu[EnemyNum].pos.y + g_suraimu[EnemyNum].ppos[3].y;
+		g_suraimu[EnemyNum].vertexWk[12].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[13].vtx.x = g_suraimu[EnemyNum].pos.x + TEXTURE_SURAIMU_SIZE_X + g_suraimu[EnemyNum].chengeval + g_suraimu[EnemyNum].ppos[3].x;
+		g_suraimu[EnemyNum].vertexWk[13].vtx.y = g_suraimu[EnemyNum].pos.y + g_suraimu[EnemyNum].ppos[3].y;
+		g_suraimu[EnemyNum].vertexWk[13].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[14].vtx.x = g_suraimu[EnemyNum].pos.x + g_suraimu[EnemyNum].ppos[3].x;
+		g_suraimu[EnemyNum].vertexWk[14].vtx.y = g_suraimu[EnemyNum].pos.y + TEXTURE_SURAIMU_SIZE_Y + g_suraimu[EnemyNum].chengeval + g_suraimu[EnemyNum].ppos[3].y;
+		g_suraimu[EnemyNum].vertexWk[14].vtx.z = 0.0f;
+		g_suraimu[EnemyNum].vertexWk[15].vtx.x = g_suraimu[EnemyNum].pos.x + TEXTURE_SURAIMU_SIZE_X + g_suraimu[EnemyNum].chengeval + g_suraimu[EnemyNum].ppos[3].x;
+		g_suraimu[EnemyNum].vertexWk[15].vtx.y = g_suraimu[EnemyNum].pos.y + TEXTURE_SURAIMU_SIZE_Y + g_suraimu[EnemyNum].chengeval + g_suraimu[EnemyNum].ppos[3].y;
+		g_suraimu[EnemyNum].vertexWk[15].vtx.z = 0.0f;
 		break;
 	}
 	case TYPE_HINOTAMA:
 	{
-		g_hinotama[i].vertexWk[0].vtx.x = g_hinotama[i].pos.x - TEXTURE_HINOTAMA_SIZE_X - g_hinotama[i].chengeval - g_hinotama[i].ppos[0].x;
-		g_hinotama[i].vertexWk[0].vtx.y = g_hinotama[i].pos.y - TEXTURE_HINOTAMA_SIZE_Y - g_hinotama[i].chengeval - g_hinotama[i].ppos[0].y;
-		g_hinotama[i].vertexWk[0].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[1].vtx.x = g_hinotama[i].pos.x - g_hinotama[i].ppos[0].x;
-		g_hinotama[i].vertexWk[1].vtx.y = g_hinotama[i].pos.y - TEXTURE_HINOTAMA_SIZE_Y - g_hinotama[i].chengeval - g_hinotama[i].ppos[0].y;
-		g_hinotama[i].vertexWk[1].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[2].vtx.x = g_hinotama[i].pos.x - TEXTURE_HINOTAMA_SIZE_X - g_hinotama[i].chengeval - g_hinotama[i].ppos[0].x;
-		g_hinotama[i].vertexWk[2].vtx.y = g_hinotama[i].pos.y - g_hinotama[i].ppos[0].y;
-		g_hinotama[i].vertexWk[2].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[3].vtx.x = g_hinotama[i].pos.x - g_hinotama[i].ppos[0].x;
-		g_hinotama[i].vertexWk[3].vtx.y = g_hinotama[i].pos.y - g_hinotama[i].ppos[0].y;
-		g_hinotama[i].vertexWk[3].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[4].vtx.x = g_hinotama[i].pos.x + g_hinotama[i].ppos[1].x;
-		g_hinotama[i].vertexWk[4].vtx.y = g_hinotama[i].pos.y - TEXTURE_HINOTAMA_SIZE_Y - g_hinotama[i].chengeval + g_hinotama[i].ppos[1].y;
-		g_hinotama[i].vertexWk[4].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[5].vtx.x = g_hinotama[i].pos.x + TEXTURE_HINOTAMA_SIZE_X + g_hinotama[i].chengeval + g_hinotama[i].ppos[1].x;
-		g_hinotama[i].vertexWk[5].vtx.y = g_hinotama[i].pos.y - TEXTURE_HINOTAMA_SIZE_Y - g_hinotama[i].chengeval + g_hinotama[i].ppos[1].y;
-		g_hinotama[i].vertexWk[5].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[6].vtx.x = g_hinotama[i].pos.x + g_hinotama[i].ppos[1].x;
-		g_hinotama[i].vertexWk[6].vtx.y = g_hinotama[i].pos.y + g_hinotama[i].ppos[1].y;
-		g_hinotama[i].vertexWk[6].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[7].vtx.x = g_hinotama[i].pos.x + TEXTURE_HINOTAMA_SIZE_X + g_hinotama[i].chengeval + g_hinotama[i].ppos[1].x;
-		g_hinotama[i].vertexWk[7].vtx.y = g_hinotama[i].pos.y + g_hinotama[i].ppos[1].y;
-		g_hinotama[i].vertexWk[7].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[8].vtx.x = g_hinotama[i].pos.x - TEXTURE_HINOTAMA_SIZE_X - g_hinotama[i].chengeval - g_hinotama[i].ppos[2].x;
-		g_hinotama[i].vertexWk[8].vtx.y = g_hinotama[i].pos.y - g_hinotama[i].ppos[2].y;
-		g_hinotama[i].vertexWk[8].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[9].vtx.x = g_hinotama[i].pos.x - g_hinotama[i].ppos[2].x;
-		g_hinotama[i].vertexWk[9].vtx.y = g_hinotama[i].pos.y - g_hinotama[i].ppos[2].y;
-		g_hinotama[i].vertexWk[9].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[10].vtx.x = g_hinotama[i].pos.x - TEXTURE_HINOTAMA_SIZE_X - g_hinotama[i].chengeval - g_hinotama[i].ppos[2].x;
-		g_hinotama[i].vertexWk[10].vtx.y = g_hinotama[i].pos.y + TEXTURE_HINOTAMA_SIZE_Y + g_hinotama[i].chengeval - g_hinotama[i].ppos[2].y;
-		g_hinotama[i].vertexWk[10].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[11].vtx.x = g_hinotama[i].pos.x - g_hinotama[i].ppos[2].x;
-		g_hinotama[i].vertexWk[11].vtx.y = g_hinotama[i].pos.y + TEXTURE_HINOTAMA_SIZE_Y + g_hinotama[i].chengeval - g_hinotama[i].ppos[2].y;
-		g_hinotama[i].vertexWk[11].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[12].vtx.x = g_hinotama[i].pos.x + g_hinotama[i].ppos[3].x;
-		g_hinotama[i].vertexWk[12].vtx.y = g_hinotama[i].pos.y + g_hinotama[i].ppos[3].y;
-		g_hinotama[i].vertexWk[12].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[13].vtx.x = g_hinotama[i].pos.x + TEXTURE_HINOTAMA_SIZE_X + g_hinotama[i].chengeval + g_hinotama[i].ppos[3].x;
-		g_hinotama[i].vertexWk[13].vtx.y = g_hinotama[i].pos.y + g_hinotama[i].ppos[3].y;
-		g_hinotama[i].vertexWk[13].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[14].vtx.x = g_hinotama[i].pos.x + g_hinotama[i].ppos[3].x;
-		g_hinotama[i].vertexWk[14].vtx.y = g_hinotama[i].pos.y + TEXTURE_HINOTAMA_SIZE_Y + g_hinotama[i].chengeval + g_hinotama[i].ppos[3].y;
-		g_hinotama[i].vertexWk[14].vtx.z = 0.0f;
-		g_hinotama[i].vertexWk[15].vtx.x = g_hinotama[i].pos.x + TEXTURE_HINOTAMA_SIZE_X + g_hinotama[i].chengeval + g_hinotama[i].ppos[3].x;
-		g_hinotama[i].vertexWk[15].vtx.y = g_hinotama[i].pos.y + TEXTURE_HINOTAMA_SIZE_Y + g_hinotama[i].chengeval + g_hinotama[i].ppos[3].y;
-		g_hinotama[i].vertexWk[15].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[0].vtx.x = g_hinotama[EnemyNum].pos.x - TEXTURE_HINOTAMA_SIZE_X - g_hinotama[EnemyNum].chengeval - g_hinotama[EnemyNum].ppos[0].x;
+		g_hinotama[EnemyNum].vertexWk[0].vtx.y = g_hinotama[EnemyNum].pos.y - TEXTURE_HINOTAMA_SIZE_Y - g_hinotama[EnemyNum].chengeval - g_hinotama[EnemyNum].ppos[0].y;
+		g_hinotama[EnemyNum].vertexWk[0].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[1].vtx.x = g_hinotama[EnemyNum].pos.x - g_hinotama[EnemyNum].ppos[0].x;
+		g_hinotama[EnemyNum].vertexWk[1].vtx.y = g_hinotama[EnemyNum].pos.y - TEXTURE_HINOTAMA_SIZE_Y - g_hinotama[EnemyNum].chengeval - g_hinotama[EnemyNum].ppos[0].y;
+		g_hinotama[EnemyNum].vertexWk[1].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[2].vtx.x = g_hinotama[EnemyNum].pos.x - TEXTURE_HINOTAMA_SIZE_X - g_hinotama[EnemyNum].chengeval - g_hinotama[EnemyNum].ppos[0].x;
+		g_hinotama[EnemyNum].vertexWk[2].vtx.y = g_hinotama[EnemyNum].pos.y - g_hinotama[EnemyNum].ppos[0].y;
+		g_hinotama[EnemyNum].vertexWk[2].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[3].vtx.x = g_hinotama[EnemyNum].pos.x - g_hinotama[EnemyNum].ppos[0].x;
+		g_hinotama[EnemyNum].vertexWk[3].vtx.y = g_hinotama[EnemyNum].pos.y - g_hinotama[EnemyNum].ppos[0].y;
+		g_hinotama[EnemyNum].vertexWk[3].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[4].vtx.x = g_hinotama[EnemyNum].pos.x + g_hinotama[EnemyNum].ppos[1].x;
+		g_hinotama[EnemyNum].vertexWk[4].vtx.y = g_hinotama[EnemyNum].pos.y - TEXTURE_HINOTAMA_SIZE_Y - g_hinotama[EnemyNum].chengeval + g_hinotama[EnemyNum].ppos[1].y;
+		g_hinotama[EnemyNum].vertexWk[4].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[5].vtx.x = g_hinotama[EnemyNum].pos.x + TEXTURE_HINOTAMA_SIZE_X + g_hinotama[EnemyNum].chengeval + g_hinotama[EnemyNum].ppos[1].x;
+		g_hinotama[EnemyNum].vertexWk[5].vtx.y = g_hinotama[EnemyNum].pos.y - TEXTURE_HINOTAMA_SIZE_Y - g_hinotama[EnemyNum].chengeval + g_hinotama[EnemyNum].ppos[1].y;
+		g_hinotama[EnemyNum].vertexWk[5].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[6].vtx.x = g_hinotama[EnemyNum].pos.x + g_hinotama[EnemyNum].ppos[1].x;
+		g_hinotama[EnemyNum].vertexWk[6].vtx.y = g_hinotama[EnemyNum].pos.y + g_hinotama[EnemyNum].ppos[1].y;
+		g_hinotama[EnemyNum].vertexWk[6].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[7].vtx.x = g_hinotama[EnemyNum].pos.x + TEXTURE_HINOTAMA_SIZE_X + g_hinotama[EnemyNum].chengeval + g_hinotama[EnemyNum].ppos[1].x;
+		g_hinotama[EnemyNum].vertexWk[7].vtx.y = g_hinotama[EnemyNum].pos.y + g_hinotama[EnemyNum].ppos[1].y;
+		g_hinotama[EnemyNum].vertexWk[7].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[8].vtx.x = g_hinotama[EnemyNum].pos.x - TEXTURE_HINOTAMA_SIZE_X - g_hinotama[EnemyNum].chengeval - g_hinotama[EnemyNum].ppos[2].x;
+		g_hinotama[EnemyNum].vertexWk[8].vtx.y = g_hinotama[EnemyNum].pos.y - g_hinotama[EnemyNum].ppos[2].y;
+		g_hinotama[EnemyNum].vertexWk[8].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[9].vtx.x = g_hinotama[EnemyNum].pos.x - g_hinotama[EnemyNum].ppos[2].x;
+		g_hinotama[EnemyNum].vertexWk[9].vtx.y = g_hinotama[EnemyNum].pos.y - g_hinotama[EnemyNum].ppos[2].y;
+		g_hinotama[EnemyNum].vertexWk[9].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[10].vtx.x = g_hinotama[EnemyNum].pos.x - TEXTURE_HINOTAMA_SIZE_X - g_hinotama[EnemyNum].chengeval - g_hinotama[EnemyNum].ppos[2].x;
+		g_hinotama[EnemyNum].vertexWk[10].vtx.y = g_hinotama[EnemyNum].pos.y + TEXTURE_HINOTAMA_SIZE_Y + g_hinotama[EnemyNum].chengeval - g_hinotama[EnemyNum].ppos[2].y;
+		g_hinotama[EnemyNum].vertexWk[10].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[11].vtx.x = g_hinotama[EnemyNum].pos.x - g_hinotama[EnemyNum].ppos[2].x;
+		g_hinotama[EnemyNum].vertexWk[11].vtx.y = g_hinotama[EnemyNum].pos.y + TEXTURE_HINOTAMA_SIZE_Y + g_hinotama[EnemyNum].chengeval - g_hinotama[EnemyNum].ppos[2].y;
+		g_hinotama[EnemyNum].vertexWk[11].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[12].vtx.x = g_hinotama[EnemyNum].pos.x + g_hinotama[EnemyNum].ppos[3].x;
+		g_hinotama[EnemyNum].vertexWk[12].vtx.y = g_hinotama[EnemyNum].pos.y + g_hinotama[EnemyNum].ppos[3].y;
+		g_hinotama[EnemyNum].vertexWk[12].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[13].vtx.x = g_hinotama[EnemyNum].pos.x + TEXTURE_HINOTAMA_SIZE_X + g_hinotama[EnemyNum].chengeval + g_hinotama[EnemyNum].ppos[3].x;
+		g_hinotama[EnemyNum].vertexWk[13].vtx.y = g_hinotama[EnemyNum].pos.y + g_hinotama[EnemyNum].ppos[3].y;
+		g_hinotama[EnemyNum].vertexWk[13].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[14].vtx.x = g_hinotama[EnemyNum].pos.x + g_hinotama[EnemyNum].ppos[3].x;
+		g_hinotama[EnemyNum].vertexWk[14].vtx.y = g_hinotama[EnemyNum].pos.y + TEXTURE_HINOTAMA_SIZE_Y + g_hinotama[EnemyNum].chengeval + g_hinotama[EnemyNum].ppos[3].y;
+		g_hinotama[EnemyNum].vertexWk[14].vtx.z = 0.0f;
+		g_hinotama[EnemyNum].vertexWk[15].vtx.x = g_hinotama[EnemyNum].pos.x + TEXTURE_HINOTAMA_SIZE_X + g_hinotama[EnemyNum].chengeval + g_hinotama[EnemyNum].ppos[3].x;
+		g_hinotama[EnemyNum].vertexWk[15].vtx.y = g_hinotama[EnemyNum].pos.y + TEXTURE_HINOTAMA_SIZE_Y + g_hinotama[EnemyNum].chengeval + g_hinotama[EnemyNum].ppos[3].y;
+		g_hinotama[EnemyNum].vertexWk[15].vtx.z = 0.0f;
 		break;
 	}
 	case TYPE_UFO:
 	{
-		g_ufo[i].vertexWk[0].vtx.x = g_ufo[i].pos.x - TEXTURE_UFO_SIZE_X  - g_ufo[i].ppos[0].x;
-		g_ufo[i].vertexWk[0].vtx.y = g_ufo[i].pos.y - TEXTURE_UFO_SIZE_Y  - g_ufo[i].ppos[0].y;
-		g_ufo[i].vertexWk[0].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[1].vtx.x = g_ufo[i].pos.x - g_ufo[i].ppos[0].x;
-		g_ufo[i].vertexWk[1].vtx.y = g_ufo[i].pos.y - TEXTURE_UFO_SIZE_Y  - g_ufo[i].ppos[0].y;
-		g_ufo[i].vertexWk[1].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[2].vtx.x = g_ufo[i].pos.x - TEXTURE_UFO_SIZE_X  - g_ufo[i].ppos[0].x;
-		g_ufo[i].vertexWk[2].vtx.y = g_ufo[i].pos.y - g_ufo[i].ppos[0].y;
-		g_ufo[i].vertexWk[2].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[3].vtx.x = g_ufo[i].pos.x - g_ufo[i].ppos[0].x;
-		g_ufo[i].vertexWk[3].vtx.y = g_ufo[i].pos.y - g_ufo[i].ppos[0].y;
-		g_ufo[i].vertexWk[3].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[4].vtx.x = g_ufo[i].pos.x + g_ufo[i].ppos[1].x;
-		g_ufo[i].vertexWk[4].vtx.y = g_ufo[i].pos.y - TEXTURE_UFO_SIZE_Y + g_ufo[i].ppos[1].y;
-		g_ufo[i].vertexWk[4].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[5].vtx.x = g_ufo[i].pos.x + TEXTURE_UFO_SIZE_X + g_ufo[i].ppos[1].x;
-		g_ufo[i].vertexWk[5].vtx.y = g_ufo[i].pos.y - TEXTURE_UFO_SIZE_Y + g_ufo[i].ppos[1].y;
-		g_ufo[i].vertexWk[5].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[6].vtx.x = g_ufo[i].pos.x + g_ufo[i].ppos[1].x;
-		g_ufo[i].vertexWk[6].vtx.y = g_ufo[i].pos.y + g_ufo[i].ppos[1].y;
-		g_ufo[i].vertexWk[6].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[7].vtx.x = g_ufo[i].pos.x + TEXTURE_UFO_SIZE_X + g_ufo[i].ppos[1].x;
-		g_ufo[i].vertexWk[7].vtx.y = g_ufo[i].pos.y + g_ufo[i].ppos[1].y;
-		g_ufo[i].vertexWk[7].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[8].vtx.x = g_ufo[i].pos.x - TEXTURE_UFO_SIZE_X - g_ufo[i].ppos[2].x;
-		g_ufo[i].vertexWk[8].vtx.y = g_ufo[i].pos.y - g_ufo[i].ppos[2].y;
-		g_ufo[i].vertexWk[8].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[9].vtx.x = g_ufo[i].pos.x - g_ufo[i].ppos[2].x;
-		g_ufo[i].vertexWk[9].vtx.y = g_ufo[i].pos.y - g_ufo[i].ppos[2].y;
-		g_ufo[i].vertexWk[9].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[10].vtx.x = g_ufo[i].pos.x - TEXTURE_UFO_SIZE_X - g_ufo[i].ppos[2].x;
-		g_ufo[i].vertexWk[10].vtx.y = g_ufo[i].pos.y + TEXTURE_UFO_SIZE_Y - g_ufo[i].ppos[2].y;
-		g_ufo[i].vertexWk[10].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[11].vtx.x = g_ufo[i].pos.x - g_ufo[i].ppos[2].x;
-		g_ufo[i].vertexWk[11].vtx.y = g_ufo[i].pos.y + TEXTURE_UFO_SIZE_Y  - g_ufo[i].ppos[2].y;
-		g_ufo[i].vertexWk[11].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[12].vtx.x = g_ufo[i].pos.x + g_ufo[i].ppos[3].x;
-		g_ufo[i].vertexWk[12].vtx.y = g_ufo[i].pos.y + g_ufo[i].ppos[3].y;
-		g_ufo[i].vertexWk[12].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[13].vtx.x = g_ufo[i].pos.x + TEXTURE_UFO_SIZE_X  + g_ufo[i].ppos[3].x;
-		g_ufo[i].vertexWk[13].vtx.y = g_ufo[i].pos.y + g_ufo[i].ppos[3].y;
-		g_ufo[i].vertexWk[13].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[14].vtx.x = g_ufo[i].pos.x + g_ufo[i].ppos[3].x;
-		g_ufo[i].vertexWk[14].vtx.y = g_ufo[i].pos.y + TEXTURE_UFO_SIZE_Y  + g_ufo[i].ppos[3].y;
-		g_ufo[i].vertexWk[14].vtx.z = 0.0f;
-		g_ufo[i].vertexWk[15].vtx.x = g_ufo[i].pos.x + TEXTURE_UFO_SIZE_X  + g_ufo[i].ppos[3].x;
-		g_ufo[i].vertexWk[15].vtx.y = g_ufo[i].pos.y + TEXTURE_UFO_SIZE_Y  + g_ufo[i].ppos[3].y;
-		g_ufo[i].vertexWk[15].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[0].vtx.x = g_ufo[EnemyNum].pos.x - TEXTURE_UFO_SIZE_X  - g_ufo[EnemyNum].ppos[0].x;
+		g_ufo[EnemyNum].vertexWk[0].vtx.y = g_ufo[EnemyNum].pos.y - TEXTURE_UFO_SIZE_Y  - g_ufo[EnemyNum].ppos[0].y;
+		g_ufo[EnemyNum].vertexWk[0].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[1].vtx.x = g_ufo[EnemyNum].pos.x - g_ufo[EnemyNum].ppos[0].x;
+		g_ufo[EnemyNum].vertexWk[1].vtx.y = g_ufo[EnemyNum].pos.y - TEXTURE_UFO_SIZE_Y  - g_ufo[EnemyNum].ppos[0].y;
+		g_ufo[EnemyNum].vertexWk[1].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[2].vtx.x = g_ufo[EnemyNum].pos.x - TEXTURE_UFO_SIZE_X  - g_ufo[EnemyNum].ppos[0].x;
+		g_ufo[EnemyNum].vertexWk[2].vtx.y = g_ufo[EnemyNum].pos.y - g_ufo[EnemyNum].ppos[0].y;
+		g_ufo[EnemyNum].vertexWk[2].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[3].vtx.x = g_ufo[EnemyNum].pos.x - g_ufo[EnemyNum].ppos[0].x;
+		g_ufo[EnemyNum].vertexWk[3].vtx.y = g_ufo[EnemyNum].pos.y - g_ufo[EnemyNum].ppos[0].y;
+		g_ufo[EnemyNum].vertexWk[3].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[4].vtx.x = g_ufo[EnemyNum].pos.x + g_ufo[EnemyNum].ppos[1].x;
+		g_ufo[EnemyNum].vertexWk[4].vtx.y = g_ufo[EnemyNum].pos.y - TEXTURE_UFO_SIZE_Y + g_ufo[EnemyNum].ppos[1].y;
+		g_ufo[EnemyNum].vertexWk[4].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[5].vtx.x = g_ufo[EnemyNum].pos.x + TEXTURE_UFO_SIZE_X + g_ufo[EnemyNum].ppos[1].x;
+		g_ufo[EnemyNum].vertexWk[5].vtx.y = g_ufo[EnemyNum].pos.y - TEXTURE_UFO_SIZE_Y + g_ufo[EnemyNum].ppos[1].y;
+		g_ufo[EnemyNum].vertexWk[5].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[6].vtx.x = g_ufo[EnemyNum].pos.x + g_ufo[EnemyNum].ppos[1].x;
+		g_ufo[EnemyNum].vertexWk[6].vtx.y = g_ufo[EnemyNum].pos.y + g_ufo[EnemyNum].ppos[1].y;
+		g_ufo[EnemyNum].vertexWk[6].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[7].vtx.x = g_ufo[EnemyNum].pos.x + TEXTURE_UFO_SIZE_X + g_ufo[EnemyNum].ppos[1].x;
+		g_ufo[EnemyNum].vertexWk[7].vtx.y = g_ufo[EnemyNum].pos.y + g_ufo[EnemyNum].ppos[1].y;
+		g_ufo[EnemyNum].vertexWk[7].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[8].vtx.x = g_ufo[EnemyNum].pos.x - TEXTURE_UFO_SIZE_X - g_ufo[EnemyNum].ppos[2].x;
+		g_ufo[EnemyNum].vertexWk[8].vtx.y = g_ufo[EnemyNum].pos.y - g_ufo[EnemyNum].ppos[2].y;
+		g_ufo[EnemyNum].vertexWk[8].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[9].vtx.x = g_ufo[EnemyNum].pos.x - g_ufo[EnemyNum].ppos[2].x;
+		g_ufo[EnemyNum].vertexWk[9].vtx.y = g_ufo[EnemyNum].pos.y - g_ufo[EnemyNum].ppos[2].y;
+		g_ufo[EnemyNum].vertexWk[9].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[10].vtx.x = g_ufo[EnemyNum].pos.x - TEXTURE_UFO_SIZE_X - g_ufo[EnemyNum].ppos[2].x;
+		g_ufo[EnemyNum].vertexWk[10].vtx.y = g_ufo[EnemyNum].pos.y + TEXTURE_UFO_SIZE_Y - g_ufo[EnemyNum].ppos[2].y;
+		g_ufo[EnemyNum].vertexWk[10].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[11].vtx.x = g_ufo[EnemyNum].pos.x - g_ufo[EnemyNum].ppos[2].x;
+		g_ufo[EnemyNum].vertexWk[11].vtx.y = g_ufo[EnemyNum].pos.y + TEXTURE_UFO_SIZE_Y  - g_ufo[EnemyNum].ppos[2].y;
+		g_ufo[EnemyNum].vertexWk[11].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[12].vtx.x = g_ufo[EnemyNum].pos.x + g_ufo[EnemyNum].ppos[3].x;
+		g_ufo[EnemyNum].vertexWk[12].vtx.y = g_ufo[EnemyNum].pos.y + g_ufo[EnemyNum].ppos[3].y;
+		g_ufo[EnemyNum].vertexWk[12].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[13].vtx.x = g_ufo[EnemyNum].pos.x + TEXTURE_UFO_SIZE_X  + g_ufo[EnemyNum].ppos[3].x;
+		g_ufo[EnemyNum].vertexWk[13].vtx.y = g_ufo[EnemyNum].pos.y + g_ufo[EnemyNum].ppos[3].y;
+		g_ufo[EnemyNum].vertexWk[13].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[14].vtx.x = g_ufo[EnemyNum].pos.x + g_ufo[EnemyNum].ppos[3].x;
+		g_ufo[EnemyNum].vertexWk[14].vtx.y = g_ufo[EnemyNum].pos.y + TEXTURE_UFO_SIZE_Y  + g_ufo[EnemyNum].ppos[3].y;
+		g_ufo[EnemyNum].vertexWk[14].vtx.z = 0.0f;
+		g_ufo[EnemyNum].vertexWk[15].vtx.x = g_ufo[EnemyNum].pos.x + TEXTURE_UFO_SIZE_X  + g_ufo[EnemyNum].ppos[3].x;
+		g_ufo[EnemyNum].vertexWk[15].vtx.y = g_ufo[EnemyNum].pos.y + TEXTURE_UFO_SIZE_Y  + g_ufo[EnemyNum].ppos[3].y;
+		g_ufo[EnemyNum].vertexWk[15].vtx.z = 0.0f;
 		break;
 	}
 	default :

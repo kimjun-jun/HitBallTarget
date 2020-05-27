@@ -22,7 +22,7 @@
 */
 typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;													//!< テクスチャへのポリゴン 
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;													//!< テクスチャへのポインタ
 	VERTEX_2D				vertexWk[NUM_VERTEX];												//!< 頂点情報格納ワーク
 	D3DXVECTOR3				pos;																//!< ポリゴンの座標
 	bool					use;																//!< 使用しているかどうか

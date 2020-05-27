@@ -494,7 +494,6 @@ void Update(void)
 			CheakHit();
 			Hitball();
 			//UpdateBalleffect();
-			UpdateBE();
 			UpdateInTutomenu();
 			break;
 		case SCENE_TUTORIALMENU:
@@ -519,7 +518,6 @@ void Update(void)
 			CheakHit();		// “–‚½‚è”»’è
 			Hitball();
 			//UpdateBalleffect();
-			UpdateBE();
 			AddScore(-1, 0);
 			UpdateInPause();
 			break;
@@ -583,7 +581,7 @@ void Draw(void)
 			break;
 		case SCENE_TUTORIAL:
 			DrawBall();
-			DrawBE();
+			//DrawEffect();
 			DrawMeetStrike();
 			DrawPlayer();
 			DrawBalleffect();
@@ -601,7 +599,7 @@ void Draw(void)
 			DrawPlayer();
 			DrawEnemy();
 			DrawBall();
-			DrawBE();
+			//DrawEffect();
 			DrawCountdown();
 			break;
 		case SCENE_GAME:
@@ -610,7 +608,7 @@ void Draw(void)
 			DrawScore();
 			DrawPlayer();
 			DrawBall();
-			DrawBE();
+			//DrawEffect();
 			DrawBalleffect();
 			DrawMeetStrike();
 			break;

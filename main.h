@@ -379,7 +379,7 @@ typedef struct
 */
 typedef struct
 {
-	//! テクスチャへのポリゴン
+	//! テクスチャへのポインタ
 		LPDIRECT3DTEXTURE9		pD3DTexture = NULL;
 	//! 頂点情報格納ワーク
 		VERTEX_2D				vertexWk[NUM_VERTEX];

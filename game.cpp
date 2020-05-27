@@ -274,7 +274,7 @@ void Ball(void)
 	BALLSHADOW *bs = GetBallshadow();
 	PLAYER_BAT *pb = GetPlayerBat();
 	//ランダム投球
-			//左右にホーミング。old移動量を控えといて、yが基準点になったらそれ以降はold移動量で動かす
+	//左右にホーミング。old移動量を控えといて、yが基準点になったらそれ以降はold移動量で動かす
 	if (b->OorD == true)
 	{
 		bc->movecount++;
@@ -374,7 +374,7 @@ void Ball(void)
 }
 
 //=============================================================================
-// 打たれた打球が投打画面で飛んでいく関数(update)
+// 打たれた打球が飛んでいく関数(update)
 //=============================================================================
 void Hitball(void)
 {
@@ -520,7 +520,6 @@ void Hitball(void)
 			}
 			b[i].pos += b[i].move;
 			bs[i].pos += bs[i].move;
-			//tuto用　これがないとtutoでボールのloopかけれない
 			if (b[i].pos.x <= SCREEN_W - SCREEN_W || b[i].pos.x >= SCREEN_W ||
 				b[i].pos.y <= SCREEN_H - SCREEN_H || b[i].pos.y >= SCREEN_H) b[i].use = false;
 			if (b[0].use == false && b[1].use == false && b[2].use == false) LoopInit();

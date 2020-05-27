@@ -9,21 +9,22 @@
 #include "collision.h"
 #include "ball.h"
 
-//*****************************************************************************
-// ?クロ定?
-//*****************************************************************************
-
 
 //*****************************************************************************
-// プロト?イプ宣言
+// プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief ポリゴン頂点生成関数 MakeVertexBall
+* @return HRESULT
+*/
+HRESULT MakeVertexBall(void);
 
 //*****************************************************************************
-// グロ?バル変数
+// グローバル変数
 //*****************************************************************************
-BALL g_ball[BALL_MAX];
-BALLCURSOR g_ballcursor;
-BALLSHADOW g_ballshadow[BALL_MAX];
+BALL g_ball[BALL_MAX];							 //!< ボール構造体変数
+BALLCURSOR g_ballcursor;						 //!< ボール着地点構造体変数
+BALLSHADOW g_ballshadow[BALL_MAX];				 //!< ボール影構造体変数
 
 //=============================================================================
 // 初期化処理
@@ -31,33 +32,33 @@ BALLSHADOW g_ballshadow[BALL_MAX];
 HRESULT InitBall(int type)
 {
 	LPDIRECT3DDEVICE9 pDevice = GetDevice();
-	// テクス?ャの読み込み  
+	// テクスチャの読み込み  
 	if (type == 0)	// 初回のみ読み込む
 	{
 		for (int i = 0; i < BALL_MAX; i++)
 		{
-			D3DXCreateTextureFromFile(pDevice,		// デバイスの?イン?
-				TEXTURE_GAME_BALLTYPE0,				// フ?イルの名前
-				&g_ball[i].pD3DTexture);			// 読み込むメモリの?イン?
+			D3DXCreateTextureFromFile(pDevice,		// デバイスのポインタ
+				TEXTURE_GAME_BALLTYPE0,				// ファイルの名前
+				&g_ball[i].pD3DTexture);			// 読み込むメモリのポインタ
 		}
 		for (int i = 0; i < BALL_MAX; i++)
 		{
-			D3DXCreateTextureFromFile(pDevice,		// デバイスの?イン?
-				TEXTURE_GAME_BALLTYPE1,				// フ?イルの名前
-				&g_ball[i].pD3DTextureEffect);			// 読み込むメモリの?イン?
+			D3DXCreateTextureFromFile(pDevice,	
+				TEXTURE_GAME_BALLTYPE1,			
+				&g_ball[i].pD3DTextureEffect);	
 		}
-		D3DXCreateTextureFromFile(pDevice,		// デバイスの?イン?
-			TEXTURE_GAME_BALLTYPE0,				// フ?イルの名前
-			&g_ballcursor.pD3DTexture);			// 読み込むメモリの?イン?
+		D3DXCreateTextureFromFile(pDevice,		
+			TEXTURE_GAME_BALLTYPE0,				
+			&g_ballcursor.pD3DTexture);			
 
-			D3DXCreateTextureFromFile(pDevice,		// デバイスの?イン?
-				TEXTURE_GAME_BALLTYPE0,				// フ?イルの名前
-				&g_ballshadow[0].pD3DTexture);			// 読み込むメモリの?イン?
+			D3DXCreateTextureFromFile(pDevice,		
+				TEXTURE_GAME_BALLTYPE0,				
+				&g_ballshadow[0].pD3DTexture);		
 		for (int i = 1; i < BALL_MAX; i++)
 		{
-			D3DXCreateTextureFromFile(pDevice,		// デバイスの?イン?
-				TEXTURE_GAME_BALLTYPE1,				// フ?イルの名前
-				&g_ballshadow[i].pD3DTextureEffect);			// 読み込むメモリの?イン?
+			D3DXCreateTextureFromFile(pDevice,		
+				TEXTURE_GAME_BALLTYPE1,				
+				&g_ballshadow[i].pD3DTextureEffect);
 		}
 	}
 
@@ -83,7 +84,6 @@ HRESULT InitBall(int type)
 		D3DXVECTOR2 temp = D3DXVECTOR2(TEXTURE_BALL_SIZE_X, TEXTURE_BALL_SIZE_Y);
 		g_ball[i].rad = D3DXVec2Length(&temp);
 		g_ball[i].BaseAngle = atan2f(TEXTURE_BALL_SIZE_Y, TEXTURE_BALL_SIZE_X);
-
 		g_ball[i].changeVal = 1.0f;
 		g_ball[i].changeValTypeA = 0;
 		g_ball[i].penetcount = 0;
@@ -172,31 +172,25 @@ void UninitBall(void)
 	for (int i = 0; i < BALL_MAX; i++)
 	{
 		if (g_ball[i].pD3DTexture != NULL)
-		{	// テクス?ャの開放
+		{	// テクスチャの開放
 			g_ball[i].pD3DTexture->Release();
 			g_ball[i].pD3DTexture = NULL;
 		}
-	}
-	for (int i = 0; i < BALL_MAX; i++)
-	{
 		if (g_ball[i].pD3DTextureEffect != NULL)
-		{	// テクス?ャの開放
+		{	// テクスチャの開放
 			g_ball[i].pD3DTextureEffect->Release();
 			g_ball[i].pD3DTextureEffect = NULL;
 		}
-	}
-	if (g_ballcursor.pD3DTexture != NULL)
-	{	// テクス?ャの開放
-		g_ballcursor.pD3DTexture->Release();
-		g_ballcursor.pD3DTexture = NULL;
-	}
-	for (int i = 0; i < BALL_MAX; i++)
-	{
 		if (g_ballshadow[i].pD3DTexture != NULL)
-		{	// テクス?ャの開放
+		{	// テクスチャの開放
 			g_ballshadow[i].pD3DTexture->Release();
 			g_ballshadow[i].pD3DTexture = NULL;
 		}
+	}
+	if (g_ballcursor.pD3DTexture != NULL)
+	{	// テクスチャの開放
+		g_ballcursor.pD3DTexture->Release();
+		g_ballcursor.pD3DTexture = NULL;
 	}
 }
 
@@ -225,16 +219,16 @@ void UpdateBall(void)
 	g_ball[0].rot.z += BALL_ROT;
 	g_ball[1].rot.z += BALL_ROT;
 	g_ball[2].rot.z += BALL_ROT;
-	SetVertexBall();	// 移動後の座標で頂?を設定
+	SetVertexBall();	// 移動後の座標で頂点を設定
 }
 
 //=============================================================================
-// ?画処理
+// 描画処理
 //=============================================================================
 void DrawBall(void)
 {
 	LPDIRECT3DDEVICE9 pDevice = GetDevice();
-	// 頂?フォ??ットの設定
+	// 頂点フォーマットの設定
 	pDevice->SetFVF(FVF_VERTEX_2D);
 	for (int i = 0; i < BALL_MAX; i++)
 	{
@@ -244,7 +238,6 @@ void DrawBall(void)
 			{
 				pDevice->SetTexture(0, g_ball[i].pD3DTextureEffect);
 				pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_ball[i].vertexWk, sizeof(VERTEX_2D));
-
 				pDevice->SetTexture(0, g_ballshadow[i].pD3DTextureEffect);
 				pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_ballshadow[i].vertexWk, sizeof(VERTEX_2D));
 			}
@@ -252,7 +245,6 @@ void DrawBall(void)
 			{
 				pDevice->SetTexture(0, g_ball[i].pD3DTexture);
 				pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_ball[i].vertexWk, sizeof(VERTEX_2D));
-
 				pDevice->SetTexture(0, g_ballshadow[i].pD3DTexture);
 				pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_ballshadow[i].vertexWk, sizeof(VERTEX_2D));
 			}
@@ -263,11 +255,11 @@ void DrawBall(void)
 }
 
 //=============================================================================
-// 頂?の作成
+// 頂点の作成
 //=============================================================================
 HRESULT MakeVertexBall(void)
 {
-	// 頂?座標の設定
+	// 頂点座標の設定
 	SetVertexBall();
 
 	for (int i = 0; i < BALL_MAX; i++)
@@ -282,7 +274,7 @@ HRESULT MakeVertexBall(void)
 		g_ball[i].vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 200);
 		g_ball[i].vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 200);
 		g_ball[i].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 200);
-		// テクス?ャ座標の設定  
+		// テクスチャ座標の設定  
 		g_ball[i].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
 		g_ball[i].vertexWk[1].tex = D3DXVECTOR2(1.0f , 0.0f);
 		g_ball[i].vertexWk[2].tex = D3DXVECTOR2(0.0f, 1.0f);
@@ -319,13 +311,12 @@ HRESULT MakeVertexBall(void)
 	return S_OK;
 }
 
-
 //=============================================================================
-// 頂?座標の設定
+// 頂点座標の設定
 //=============================================================================
 void SetVertexBall(void)
 {
-	// 頂?座標の設定 
+	// 頂点座標の設定 
 	for (int i = 0; i < BALL_MAX; i++)
 	{
 		//角度使うと回転が楽
@@ -341,21 +332,6 @@ void SetVertexBall(void)
 		g_ball[i].vertexWk[3].vtx.x = g_ball[i].pos.x +(cosf(g_ball[i].BaseAngle + g_ball[i].rot.z) * g_ball[i].rad)*g_ball[i].changeVal;
 		g_ball[i].vertexWk[3].vtx.y = g_ball[i].pos.y +(sinf(g_ball[i].BaseAngle + g_ball[i].rot.z) * g_ball[i].rad)*g_ball[i].changeVal;
 		g_ball[i].vertexWk[3].vtx.z = 0.0f;
-
-
-		//g_ball[i].vertexWk[0].vtx.x = g_ball[i].pos.x - TEXTURE_BALL_SIZE_X - g_ball[i].changeValTypeA;
-		//g_ball[i].vertexWk[0].vtx.y = g_ball[i].pos.y - TEXTURE_BALL_SIZE_Y - g_ball[i].changeValTypeA;
-		//g_ball[i].vertexWk[0].vtx.z = 0.0f;
-		//g_ball[i].vertexWk[1].vtx.x = g_ball[i].pos.x + TEXTURE_BALL_SIZE_X + g_ball[i].changeValTypeA;
-		//g_ball[i].vertexWk[1].vtx.y = g_ball[i].pos.y - TEXTURE_BALL_SIZE_Y - g_ball[i].changeValTypeA;
-		//g_ball[i].vertexWk[1].vtx.z = 0.0f;
-		//g_ball[i].vertexWk[2].vtx.x = g_ball[i].pos.x - TEXTURE_BALL_SIZE_X - g_ball[i].changeValTypeA;
-		//g_ball[i].vertexWk[2].vtx.y = g_ball[i].pos.y + TEXTURE_BALL_SIZE_Y + g_ball[i].changeValTypeA;
-		//g_ball[i].vertexWk[2].vtx.z = 0.0f;
-		//g_ball[i].vertexWk[3].vtx.x = g_ball[i].pos.x + TEXTURE_BALL_SIZE_X + g_ball[i].changeValTypeA;
-		//g_ball[i].vertexWk[3].vtx.y = g_ball[i].pos.y + TEXTURE_BALL_SIZE_Y + g_ball[i].changeValTypeA;
-		//g_ball[i].vertexWk[3].vtx.z = 0.0f;
-
 
 		g_ballshadow[i].vertexWk[0].vtx.x = g_ballshadow[i].pos.x - TEXTURE_BALLSHADOW_SIZE_X;
 		g_ballshadow[i].vertexWk[0].vtx.y = g_ballshadow[i].pos.y - TEXTURE_BALLSHADOW_SIZE_Y;
@@ -387,7 +363,7 @@ void SetVertexBall(void)
 }
 
 //=============================================================================
-// ??ルのアドレスを返す.
+// ボールのアドレスを返す
 //=============================================================================
 BALL *GetBall(void)
 {
@@ -395,7 +371,7 @@ BALL *GetBall(void)
 }
 
 //=============================================================================
-// ??ルのアドレスを返す.
+// ボール着地点のアドレスを返す
 //=============================================================================
 BALLCURSOR *GetBallcursor(void)
 {
@@ -403,7 +379,7 @@ BALLCURSOR *GetBallcursor(void)
 }
 
 //=============================================================================
-// ??ルのアドレスを返す.
+// ボール影のアドレスを返す
 //=============================================================================
 BALLSHADOW *GetBallshadow(void)
 {
@@ -411,7 +387,7 @@ BALLSHADOW *GetBallshadow(void)
 }
 
 //=============================================================================
-// ??ルの設定
+// ボールの設定
 //=============================================================================
 void SetBall(D3DXVECTOR3 pos)
 {

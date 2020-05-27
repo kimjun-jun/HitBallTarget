@@ -8,20 +8,26 @@
 #include "bg.h"
 
 //*****************************************************************************
-// マクロ定義
-//*****************************************************************************
-
-//*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
+/**
+* @brief ポリゴン頂点生成関数 MakeVertexBG
+* @return HRESULT
+*/
+HRESULT MakeVertexBG(void);
+
+/**
+* @brief ポリゴン頂点設定関数 SetVertexBG
+*/
+void SetVertexBG(void);
 
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-BG g_bg[BG_MAX];
-static int g_bgtype;
-static int g_gameRbgtype;
-static LPDIRECT3DTEXTURE9 g_gameRbg[GAMEBG_MAX];
+BG g_bg[BG_MAX];											//!< 通常背景構造体変数
+static int g_bgtype;										//!< 各シーン中の背景
+static int g_gameR18bgtype;									//!< -1標準,0魔女っ子,1スイーツ
+static LPDIRECT3DTEXTURE9 g_gameR18bg[GAMER18BG_MAX];		//!< R18用背景テクスチャ
 
 //=============================================================================
 // 初期化処理
@@ -30,13 +36,13 @@ HRESULT InitBG(int type)
 {
 	LPDIRECT3DDEVICE9 pDevice = GetDevice();
 
-	// テクスチャーの初期化を行う？
+	// テクスチャーの初期化を行う
 	if (type == 0)
 	{
 		// テクスチャの読み込み
 		D3DXCreateTextureFromFile(pDevice,					// デバイスへのポインタ
-			TEXTURE_TITLEBG,		// ファイルの名前
-			&g_bg[0].pD3DTexture);	// 読み込むメモリー
+			TEXTURE_TITLEBG,								// ファイルの名前
+			&g_bg[0].pD3DTexture);							// 読み込むメモリー
 		D3DXCreateTextureFromFile(pDevice,
 			TEXTURE_TUTORIALBG,
 			&g_bg[1].pD3DTexture);	
@@ -49,10 +55,10 @@ HRESULT InitBG(int type)
 
 		D3DXCreateTextureFromFile(pDevice,
 			TEXTURE_GAMEBGR1801,
-			&g_gameRbg[0]);
+			&g_gameR18bg[0]);
 		D3DXCreateTextureFromFile(pDevice,
 			TEXTURE_GAMEBGR1802,
-			&g_gameRbg[1]);
+			&g_gameR18bg[1]);
 	}
 
 	for (int i = 0; i < BG_MAX; i++)
@@ -60,7 +66,7 @@ HRESULT InitBG(int type)
 		g_bg[i].pos = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 	}
 	g_bgtype = 0;
-	g_gameRbgtype = -1;
+	g_gameR18bgtype = -1;
 	// 頂点情報の作成
 	MakeVertexBG();
 
@@ -88,7 +94,7 @@ void UninitBG(void)
 void ReInitBG(void)
 {
 	g_bgtype = 0;
-	g_gameRbgtype = -1;
+	g_gameR18bgtype = -1;
 }
 
 //=============================================================================
@@ -191,74 +197,74 @@ void DrawBG(void)
 		pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		break;
 	case SCENE_GAME:
-		if (g_gameRbgtype == -1)
+		if (g_gameR18bgtype == -1)
 		{
 			pDevice->SetTexture(0, g_bg[SCENE_GAME].pD3DTexture);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 0)
+		else if (g_gameR18bgtype == 0)
 		{
-			pDevice->SetTexture(0, g_gameRbg[0]);
+			pDevice->SetTexture(0, g_gameR18bg[0]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 1)
+		else if (g_gameR18bgtype == 1)
 		{
-			pDevice->SetTexture(0, g_gameRbg[1]);
+			pDevice->SetTexture(0, g_gameR18bg[1]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
 		break;
 	case SCENE_PAUSE:
-		if (g_gameRbgtype == -1)
+		if (g_gameR18bgtype == -1)
 		{
 			pDevice->SetTexture(0, g_bg[SCENE_GAME].pD3DTexture);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype== 0)
+		else if (g_gameR18bgtype== 0)
 		{
-			pDevice->SetTexture(0, g_gameRbg[0]);
+			pDevice->SetTexture(0, g_gameR18bg[0]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 1)
+		else if (g_gameR18bgtype == 1)
 		{
-			pDevice->SetTexture(0, g_gameRbg[1]);
+			pDevice->SetTexture(0, g_gameR18bg[1]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
 		pDevice->SetTexture(0, g_bg[g_bgtype].pD3DTexture);
 		pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[g_bgtype].vertexWk, sizeof(VERTEX_2D));
 		break;
 	case SCENE_OPTION:
-		if (g_gameRbgtype == -1)
+		if (g_gameR18bgtype == -1)
 		{
 			pDevice->SetTexture(0, g_bg[SCENE_GAME].pD3DTexture);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 0)
+		else if (g_gameR18bgtype == 0)
 		{
-			pDevice->SetTexture(0, g_gameRbg[0]);
+			pDevice->SetTexture(0, g_gameR18bg[0]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 1)
+		else if (g_gameR18bgtype == 1)
 		{
-			pDevice->SetTexture(0, g_gameRbg[1]);
+			pDevice->SetTexture(0, g_gameR18bg[1]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
 		pDevice->SetTexture(0, g_bg[SCENE_PAUSE].pD3DTexture);
 		pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_PAUSE].vertexWk, sizeof(VERTEX_2D));
 		break;
 	case SCENE_SENSITIVITY:
-		if (g_gameRbgtype == -1)
+		if (g_gameR18bgtype == -1)
 		{
 			pDevice->SetTexture(0, g_bg[SCENE_GAME].pD3DTexture);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 0)
+		else if (g_gameR18bgtype == 0)
 		{
-			pDevice->SetTexture(0, g_gameRbg[0]);
+			pDevice->SetTexture(0, g_gameR18bg[0]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 1)
+		else if (g_gameR18bgtype == 1)
 		{
-			pDevice->SetTexture(0, g_gameRbg[1]);
+			pDevice->SetTexture(0, g_gameR18bg[1]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
 		pDevice->SetTexture(0, g_bg[SCENE_PAUSE].pD3DTexture);
@@ -271,19 +277,19 @@ void DrawBG(void)
 		pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_PAUSE].vertexWk, sizeof(VERTEX_2D));
 		break;
 	case SCENE_CONTYPE:
-		if (g_gameRbgtype == -1)
+		if (g_gameR18bgtype == -1)
 		{
 			pDevice->SetTexture(0, g_bg[SCENE_GAME].pD3DTexture);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 0)
+		else if (g_gameR18bgtype == 0)
 		{
-			pDevice->SetTexture(0, g_gameRbg[0]);
+			pDevice->SetTexture(0, g_gameR18bg[0]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 1)
+		else if (g_gameR18bgtype == 1)
 		{
-			pDevice->SetTexture(0, g_gameRbg[1]);
+			pDevice->SetTexture(0, g_gameR18bg[1]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
 		pDevice->SetTexture(0, g_bg[SCENE_PAUSE].pD3DTexture);
@@ -296,19 +302,19 @@ void DrawBG(void)
 		pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_PAUSE].vertexWk, sizeof(VERTEX_2D));
 		break;
 	case SCENE_R18SELECT:
-		if (g_gameRbgtype == -1)
+		if (g_gameR18bgtype == -1)
 		{
 			pDevice->SetTexture(0, g_bg[SCENE_GAME].pD3DTexture);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 0)
+		else if (g_gameR18bgtype == 0)
 		{
-			pDevice->SetTexture(0, g_gameRbg[0]);
+			pDevice->SetTexture(0, g_gameR18bg[0]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
-		else if (g_gameRbgtype == 1)
+		else if (g_gameR18bgtype == 1)
 		{
-			pDevice->SetTexture(0, g_gameRbg[1]);
+			pDevice->SetTexture(0, g_gameR18bg[1]);
 			pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_bg[SCENE_GAME].vertexWk, sizeof(VERTEX_2D));
 		}
 		pDevice->SetTexture(0, g_bg[SCENE_PAUSE].pD3DTexture);
@@ -379,7 +385,10 @@ void SetVertexBG(void)
 	}
 }
 
+//=============================================================================
+// ゲーム中背景設定関数
+//=============================================================================
 void SetGameBGtype(int num)
 {
-	g_gameRbgtype = num;
+	g_gameR18bgtype = num;
 }

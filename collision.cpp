@@ -12,7 +12,6 @@
 #include "fade.h"
 #include "score.h"
 #include "sound.h"
-#include "effect.h"
 #include "collision.h"
 
 
@@ -80,7 +79,6 @@ void CheakHit(void)
 	BALLSHADOW *bs = GetBallshadow();
 	CURSOR *cursor = Get_Cursor();
 	STRIKE *strike = GetStrike();
-	BE *be = GetBE(0);
 	char str[256] = { 0 };
 
 	if (b->use == true)
@@ -302,8 +300,7 @@ void CheakHit(void)
 	}
 	if (b[0].use == true || b[1].use == true || b[2].use == true)
 	{
-		//continのほうがいい？
-			//打球とエネミーの当たり判定
+		//打球とエネミーの当たり判定
 		if (b[0].OorD == false && b[0].tuto == false)
 		{
 			if (b[0].diffsignal == true || b[1].use == true || b[2].use == true)
@@ -328,7 +325,6 @@ void CheakHit(void)
 								{
 									cat[i].point = 20;
 									b[j].penetcount++;
-									//be->use = true;
 									if (b[j].penetcount >= BALL_COUNT_MAX) b[j].use = false;
 								}
 							}
@@ -355,7 +351,6 @@ void CheakHit(void)
 								{
 									suraimu[i].point = 20;
 									b[j].penetcount++;
-									//be->use = true;
 									if (b[j].penetcount >= BALL_COUNT_MAX) b[j].use = false;
 								}
 							}
@@ -382,7 +377,6 @@ void CheakHit(void)
 								{
 									hinotama[i].point = 20;
 									b[j].penetcount++;
-									//be->use = true;
 									if (b[j].penetcount >= BALL_COUNT_MAX) b[j].use = false;
 								}
 							}
@@ -409,7 +403,6 @@ void CheakHit(void)
 								{
 									ufo[i].point = 20;
 									b[j].penetcount++;
-									//be->use = true;
 									if (b[j].penetcount >= BALL_COUNT_MAX) b[j].use = false;
 								}
 							}
@@ -440,7 +433,6 @@ void CheakHit(void)
 							{
 								cat[i].point = 20;
 								b[0].penetcount++;
-								be->use = true;
 								if (b[0].penetcount >= BALL_COUNT_MAX) LoopInit();
 							}
 						}
@@ -467,7 +459,6 @@ void CheakHit(void)
 							{
 								suraimu[i].point = 20;
 								b[0].penetcount++;
-								be->use = true;
 								if (b[0].penetcount >= BALL_COUNT_MAX) LoopInit();
 							}
 						}
@@ -494,7 +485,6 @@ void CheakHit(void)
 							{
 								hinotama[i].point = 20;
 								b[0].penetcount++;
-								be->use = true;
 								if (b[0].penetcount >= BALL_COUNT_MAX) LoopInit();
 							}
 						}
@@ -519,7 +509,6 @@ void CheakHit(void)
 							}
 							else if (cursor->c.meet % 2 == SMALL)
 							{
-								be->use = true;
 								b[0].penetcount++;
 								if (b[0].penetcount >= BALL_COUNT_MAX) LoopInit();
 							}
@@ -534,7 +523,9 @@ void CheakHit(void)
 	}
 }
 
+//=============================================================================
 //1球ループ後すべて初期化
+//=============================================================================
 void LoopInit(void)
 {
 	PLAYER_PIT *pp = GetPlayerPit();
@@ -573,5 +564,4 @@ void LoopInit(void)
 	bc->oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 	bs->oldmove = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 	cursor->c.pos = D3DXVECTOR3(SCREEN_CENTER_X, SCREEN_CENTER_Y + 250.0f, 0.0f);
-	//Sleep(100);
 }

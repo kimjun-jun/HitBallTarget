@@ -34,7 +34,7 @@
 *　@brief 2Dポリゴンを定義する構造体
 */
 typedef struct
-{																				//!< テクスチャへのポリゴン 
+{																				//!< テクスチャへのポインタ 
 	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;									//!< 頂点情報格納ワーク
 	VERTEX_2D				vertexWk[NUM_VERTEX];								//!< ポリゴンの座標
 	D3DXVECTOR3				pos;						

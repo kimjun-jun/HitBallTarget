@@ -8,7 +8,7 @@
 #include "player.h"
 #include "enemy.h"
 #include "ball.h"
-#include "ui.h"
+#include "meetstrike.h"
 #include "fade.h"
 #include "score.h"
 #include "sound.h"

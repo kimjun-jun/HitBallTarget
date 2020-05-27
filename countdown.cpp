@@ -11,29 +11,32 @@
 #include "countdown.h"
 
 //*****************************************************************************
-// マクロ定義
-//*****************************************************************************
-
-
-//*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
 /**
-* @brief 頂点生成関数 MakeVertexFade
+* @brief 頂点生成関数 MakeVertexCountdown
 * @return HRESULT
 */
 HRESULT MakeVertexCountdown(void);
-void SetTextureCountdown(void);	// 
-void SetVertexCountdown(void);					// 
+
+/**
+* @brief テクスチャ設定関数 SetTextureCountdown
+*/
+void SetTextureCountdown(void);
+
+/**
+* @brief 頂点設定関数 SetVertexCountdown
+*/
+void SetVertexCountdown(void);
 
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-COUNTDOWN g_countdown[COUNTDOWN_GOUKEI];
+COUNTDOWN g_countdown[COUNTDOWN_GOUKEI];		 //!< 0カウントダウン値,1スタートLOGO	構造体変数
+static int g_countdown_maneger;					 //!< カウントダウン数値	→毎フレーム減算される
+static int g_fps_maneger;						 //!< カウントダウン減算値	→[3,2,1]GO
 
 
-static int g_countdown_maneger;
-static int g_fps_maneger;
 //=============================================================================
 // 初期化処理
 //=============================================================================
@@ -64,7 +67,7 @@ HRESULT InitCountdown(int type)
 	g_countdown[0].use = true;
 	g_countdown[1].use = false;
 	g_countdown[0].signal = false;
-	g_countdown[1].color = 255;
+	g_countdown[1].alpha = 255;
 	g_countdown_maneger = FPS_TIME_COUNTDOWN;
 	g_fps_maneger = 4;
 	MakeVertexCountdown();
@@ -88,11 +91,10 @@ void ReInitCountdown(void)
 	g_countdown[0].use = true;
 	g_countdown[1].use = false;
 	g_countdown[0].signal = false;
-	g_countdown[1].color = 255;
+	g_countdown[1].alpha = 255;
 	g_fps_maneger = 4;
 	g_countdown_maneger = FPS_TIME_COUNTDOWN;
 }
-
 
 //=============================================================================
 // 終了処理
@@ -192,11 +194,9 @@ void SetTextureCountdown(void)
 		g_countdown[0].use = false;
 		g_countdown[1].use = true;
 	}
-	//else if (val == 120 || val == 60) g_countdown[0].changeval = 0;
-	//else if (val == FPS_TIME_COUNTDOWN*(2/3) || val == FPS_TIME_COUNTDOWN * (1 / 3)) 
-	
 	else g_countdown[1].use = false;
-	if (val % (FPS_TIME_COUNTDOWN/3) == 0)
+
+	if (val % (FPS_TIME_COUNTDOWN/ COUNTDOWN_NUM) == 0)
 	{
 		g_fps_maneger -= 1;
 		// テクスチャ座標の設定
@@ -208,12 +208,12 @@ void SetTextureCountdown(void)
 	}
 	if (g_countdown[1].use == true)
 	{
-		g_countdown[1].color -= COUNTDOWN_A;
-		g_countdown[1].texture[0].diffuse = D3DCOLOR_RGBA(255, 255, 255,g_countdown[1].color);
-		g_countdown[1].texture[1].diffuse = D3DCOLOR_RGBA(255, 255, 255,g_countdown[1].color);
-		g_countdown[1].texture[2].diffuse = D3DCOLOR_RGBA(255, 255, 255,g_countdown[1].color);
-		g_countdown[1].texture[3].diffuse = D3DCOLOR_RGBA(255, 255, 255,g_countdown[1].color);
-		if (g_countdown[1].color <= 0) g_countdown[0].signal = true;
+		g_countdown[1].alpha -= COUNTDOWN_ALPHA_SUB;
+		g_countdown[1].texture[0].diffuse = D3DCOLOR_RGBA(255, 255, 255,g_countdown[1].alpha);
+		g_countdown[1].texture[1].diffuse = D3DCOLOR_RGBA(255, 255, 255,g_countdown[1].alpha);
+		g_countdown[1].texture[2].diffuse = D3DCOLOR_RGBA(255, 255, 255,g_countdown[1].alpha);
+		g_countdown[1].texture[3].diffuse = D3DCOLOR_RGBA(255, 255, 255,g_countdown[1].alpha);
+		if (g_countdown[1].alpha <= 0) g_countdown[0].signal = true;
 	}
 	g_countdown[0].changeval += COUNTDOWN_CHANGESIZE;
 }
@@ -252,7 +252,7 @@ void SetVertexCountdown(void)
 }
 
 //=============================================================================
-// スコアのアドレスを返す
+// カウントダウンのアドレスを返す
 //=============================================================================
 COUNTDOWN *GetCountdown(void)
 {

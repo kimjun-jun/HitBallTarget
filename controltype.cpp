@@ -28,7 +28,7 @@ void SetVertexContype(void);
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-CONTYPE g_contype[CONTYPEMAX];			//!< 0はじめから、1あきらめる、2オプション
+CONTYPE g_contype[CONTYPEMAX];			//!< 0はじめから、1あきらめる、2オプション	構造体変数
 static int SCONposy;					//!< ポーズカーソルのposy
 static int SCONkeypos;					//!< これがA/Dキー
 static int diffsec;						//!< 点滅タイム

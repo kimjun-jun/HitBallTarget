@@ -7,7 +7,7 @@
 #include "main.h"
 #include "ball.h"
 #include "player.h"
-#include "ui.h"
+#include "meetstrike.h"
 #include "enemy.h"
 #include "input.h"
 #include "collision.h"
@@ -231,7 +231,6 @@ void Bat(void)
 	// 移動後の座標でテクスチャと頂点を設定
 	SetTexturePlayer(c->pb.nPatternAnim, TYPE_BAT);
 	SetVertexPlayer(TYPE_BAT);
-	SetVertexUi(CURSOR_NO);
 
 }
 

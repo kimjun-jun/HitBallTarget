@@ -33,11 +33,11 @@ void SetVertexScore(void);
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-SCORE g_score[SCORE_DIGIT];					//!< スコアのカウント
-static TIME  g_time[TIME_DIGIT];			//!< タイムのカウント
-static DOT g_dot;							//!< 小数点
-static TIMELOGO g_timelogo;					//!< タイムロゴ
-static SCORELOGO g_scorelogo;				//!< スコアロゴ
+SCORE g_score[SCORE_DIGIT];					//!< スコアのカウント構造体変数
+static TIME  g_time[TIME_DIGIT];			//!< タイムのカウント構造体変数
+static DOT g_dot;							//!< 小数点構造体変数
+static TIMELOGO g_timelogo;					//!< タイムロゴ構造体変数
+static SCORELOGO g_scorelogo;				//!< スコアロゴ構造体変数
 static int g_score_maneger;					//!< ゲットしたスコア
 static int g_time_maneger;					//!< 残り時間
 static int g_e_defeat;						//!< エネミーを倒した数

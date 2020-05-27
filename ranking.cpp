@@ -34,8 +34,8 @@ void SetVertexRanking(void);
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-RANKING g_ranking[RANKINGMAX];						//!< ランキング
-RANKINGLOGO g_rankinglogo[RANKINGLOGO_MAX];			//!< ランキングロゴ
+RANKING g_ranking[RANKINGMAX];						//!< ランキング	構造体変数
+RANKINGLOGO g_rankinglogo[RANKINGLOGO_MAX];			//!< ランキングロゴ	構造体変数
 
 //=============================================================================
 // 初期化処理

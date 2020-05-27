@@ -16,16 +16,21 @@
 //*****************************************************************************
 
 /**
-* @brief 頂点生成関数 MakeVertexFade
+* @brief 頂点生成関数 MakeVertexTutomenu
 * @return HRESULT
 */
 HRESULT MakeVertexTutomenu(void);
 
+/**
+* @brief 頂点設定関数 SetVertexTutomenu
+*/
+void SetVertexTutomenu(void);
+
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-TUTOMENU g_tutomenu[TUTOMENUMAX];//0感度、1A/D
-static int STUTOMENUposy;			//チュートリアルのメニュカーソルのposy
+TUTOMENU g_tutomenu[TUTOMENUMAX];				//!< 0感度,1Analog/Digital	構造体変数
+static int STUTOMENUposy;						//!< チュートリアルのメニュカーソルのposy
 
 //=============================================================================
 // 初期化処理
@@ -45,7 +50,6 @@ HRESULT InitTutomenu(int type)
 
 	g_tutomenu[0].pos = D3DXVECTOR3(PX1_POS_X, PY1_POS_Y, 0.0f);
 	g_tutomenu[1].pos = D3DXVECTOR3(PX1_POS_X, PY2_POS_Y, 0.0f);
-
 	g_tutomenu[0].use = false;
 	STUTOMENUposy = 0;
 	// 頂点情報の作成
@@ -126,7 +130,6 @@ void UpdateTutomenu(void)
 		}
 		SetVertexTutomenu();
 }
-
 
 //=============================================================================
 // 更新処理　シーンゲームのアップデート
@@ -253,7 +256,9 @@ void SetVertexTutomenu(void)
 	}
 }
 
-
+//=============================================================================
+// チュートリアル中メニューのアドレスを返す
+//=============================================================================
 TUTOMENU *GetTutomenu(void)
 {
 	return &g_tutomenu[0];

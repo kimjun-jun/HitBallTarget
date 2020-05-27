@@ -17,17 +17,27 @@
 // プロトタイプ宣言
 //*****************************************************************************
 /**
-* @brief 頂点生成関数 MakeVertexFade
+* @brief 頂点生成関数 MakeVertexSelect
 * @return HRESULT
 */
 HRESULT MakeVertexSelect(void);
 
+/**
+* @brief テクスチャ設定関数 SetTextureSelect
+*/
+void SetTextureSelect(void);
+
+/**
+* @brief 頂点設定関数 SetVertexSelect
+*/
+void SetVertexSelect(void);
+
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-SELECT g_select[SMAX];//0イージー1ノーマル2ハード3レベル4エンター
-int spos;			//セレクトカーソルのpos
-int cat;
+SELECT g_select[SMAX];					//!< 0イージー,1ノーマル,2ハード,3レベル,4エンター	構造体変数
+static int spos;						//!< セレクトカーソルのpos
+static int cat;							//!< 難易度ごとのネコの数
 //=============================================================================
 // 初期化処理
 //=============================================================================
@@ -38,8 +48,8 @@ HRESULT InitSelect(int type)
 	{
 		// テクスチャの読み込み
 		D3DXCreateTextureFromFile(pDevice,						// デバイスへのポインタ
-			TEXTURE_EASY,				// ファイルの名前
-			&g_select[0].pD3DTexture);		// 読み込むメモリー
+			TEXTURE_EASY,										// ファイルの名前
+			&g_select[0].pD3DTexture);							// 読み込むメモリー
 
 		D3DXCreateTextureFromFile(pDevice,
 			TEXTURE_NORMAL,
@@ -366,7 +376,9 @@ void SetVertexSelect(void)
 		}
 }
 
-
+//=============================================================================
+// セレクトしている難易度(ネコの数)を取得
+//=============================================================================
 int GetSpos(void)
 {
 	return spos;

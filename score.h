@@ -64,7 +64,7 @@ typedef struct
 {
 	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																	//!< テクスチャへのポリゴン 
 	VERTEX_2D				texture[NUM_VERTEX];																//!< 頂点情報格納ワーク
-	D3DXVECTOR3				pos;																				//!< ポリゴンの移動量
+	D3DXVECTOR3				pos;																				//!< ポリゴンの座標
 	D3DXVECTOR3				rot;																				//!< ポリゴンの回転角
 	int						nCountAnim;																			//!< アニメカウント
 	int						nPatternAnim;																		//!< アニメパターン
@@ -79,7 +79,7 @@ typedef struct
 {
 	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																	//!< テクスチャへのポリゴン 
 	VERTEX_2D				texture[NUM_VERTEX];																//!< 頂点情報格納ワーク
-	D3DXVECTOR3				pos;																				//!< ポリゴンの移動量
+	D3DXVECTOR3				pos;																				//!< ポリゴンの座標
 } DOT;
 
 /**
@@ -90,7 +90,7 @@ typedef struct
 {
 	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																	//!< テクスチャへのポリゴン 
 	VERTEX_2D				texture[NUM_VERTEX];																//!< 頂点情報格納ワーク
-	D3DXVECTOR3				pos;																				//!< ポリゴンの移動量
+	D3DXVECTOR3				pos;																				//!< ポリゴンの座標
 } TIMELOGO;
 
 /**
@@ -101,7 +101,7 @@ typedef struct
 {
 	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																	//!< テクスチャへのポリゴン 
 	VERTEX_2D				texture[NUM_VERTEX];																//!< 頂点情報格納ワーク
-	D3DXVECTOR3				pos;																				//!< ポリゴンの移動量
+	D3DXVECTOR3				pos;																				//!< ポリゴンの座標
 } SCORELOGO;
 
 //*****************************************************************************
@@ -153,7 +153,7 @@ int *GetScoremaneger(void);
 
 /**
 * @brief スコア、タイムを加減算する関数 AddScore
-* @param[in] type 加算するタイプ
+* @param[in] type 加算するタイプ,val 数値
 */
 void AddScore(int val,int type);
 

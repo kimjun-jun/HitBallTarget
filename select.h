@@ -9,71 +9,64 @@
 //*****************************************************************************
 // マクロ定義
 //*****************************************************************************
-#define	TEXTURE_EASY		_T("data/TEXTURE/sozai/select/easy.png")			// 読み込むテクスチャファイル名
-#define TEXTURE_EASY_SIZE_X		(200)										// タイトルロゴの幅
-#define TEXTURE_EASY_SIZE_Y		(100)										// タイトルロゴの高さ
-
-#define	TEXTURE_NORMAL		_T("data/TEXTURE/sozai/select/normal.png")		
-#define	TEXTURE_HARD		_T("data/TEXTURE/sozai/select/hard.png")			
-#define	TEXTURE_LEVEL		_T("data/TEXTURE/sozai/level.png")			
-#define	TEXTURE_RANKING 		_T("data/TEXTURE/sozai/select/ranking.png")		
-
-
-#define EASY_POS_Y					(SCREEN_H-650)		// ポリゴンの初期位置X
-#define NORMAL_POS_Y				(SCREEN_H-400)		// ポリゴンの初期位置X
-#define HRAD_POS_Y					(SCREEN_H-150)		// ポリゴンの初期位置X
-#define LEVEL_POS_Y					(SCREEN_H-850)		// ポリゴンの初期位置X
-
-
-#define EASY_POS_X					(SCREEN_W-900)		// 同上
-#define LEVEL_POS_X					(SCREEN_W-1000)		// ポリゴンの初期位置X
-
-
-#define	TEXTURE_ENTER		_T("data/TEXTURE/sozai/enterstart.png")			
-#define	TEXTURE_ENTER_SIZE_X		(300)					
-#define	TEXTURE_ENTER_SIZE_Y		(200)					
-#define ENTERorSTART_POS_Y			(SCREEN_H-400)		// ポリゴンの初期位置X
-#define ENTERorSTART_POS_X			(SCREEN_W-350)		// 同上
-
-
-#define	SMAX		(5)													//選択肢の数
+#define	TEXTURE_EASY				_T("data/TEXTURE/sozai/select/easy.png")	//!< 読み込むテクスチャファイル名
+#define	TEXTURE_NORMAL				_T("data/TEXTURE/sozai/select/normal.png")	//!< 読み込むテクスチャファイル名
+#define	TEXTURE_HARD				_T("data/TEXTURE/sozai/select/hard.png")	//!< 読み込むテクスチャファイル名
+#define	TEXTURE_LEVEL				_T("data/TEXTURE/sozai/level.png")			//!< 読み込むテクスチャファイル名
+#define	TEXTURE_RANKING 			_T("data/TEXTURE/sozai/select/ranking.png")	//!< 読み込むテクスチャファイル名
+#define	TEXTURE_ENTER				_T("data/TEXTURE/sozai/enterstart.png")		//!< 読み込むテクスチャファイル名
+#define TEXTURE_EASY_SIZE_X			(200)										//!< ポリゴンの幅	全難易度
+#define TEXTURE_EASY_SIZE_Y			(100)										//!< ポリゴンの高さ	全難易度
+#define	TEXTURE_ENTER_SIZE_X		(300)										//!< ポリゴンの幅	エンター
+#define	TEXTURE_ENTER_SIZE_Y		(200)										//!< ポリゴンの高さ	エンター
+#define EASY_POS_Y					(SCREEN_H-650)								//!< ポリゴンの初期位置Y	イージー
+#define NORMAL_POS_Y				(SCREEN_H-400)								//!< ポリゴンの初期位置Y	ノーマル
+#define HRAD_POS_Y					(SCREEN_H-150)								//!< ポリゴンの初期位置Y	ハード
+#define LEVEL_POS_Y					(SCREEN_H-850)								//!< ポリゴンの初期位置Y	レベル
+#define EASY_POS_X					(SCREEN_W-900)								//!< ポリゴンの初期位置X	全難易度
+#define LEVEL_POS_X					(SCREEN_W-1000)								//!< ポリゴンの初期位置X	レベル
+#define ENTERorSTART_POS_Y			(SCREEN_H-400)								//!< ポリゴンの初期位置Y	エンター
+#define ENTERorSTART_POS_X			(SCREEN_W-350)								//!< ポリゴンの初期位置X	エンター
+#define	SMAX						(5)											//!< 選択肢の構造体数
 
 /**
-*　@struct TITLE
+*　@struct SELECT
 *　@brief 2Dポリゴンを定義する構造体
 */
 typedef struct
-{
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;			// テクス?ャへの?リゴン 
-	VERTEX_2D				vertexWk[NUM_VERTEX];		// 頂?情報格?ワ?ク
-
-	D3DXVECTOR3				pos;						// ?リゴンの移動量
+{																				//!< テクスチャへのポリゴン 
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;									//!< 頂点情報格納ワーク
+	VERTEX_2D				vertexWk[NUM_VERTEX];								//!< ポリゴンの座標
+	D3DXVECTOR3				pos;						
 }SELECT;
 
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
 /**
-* @brief R18初期化関数 InitR18select
+* @brief Select初期化関数 InitSelect
 * @param[in] type 初期化タイプ
 * @return HRESULT
 */
 HRESULT InitSelect(int type);
+
 /**
-* @brief R18開放関数 UninitR18select
+* @brief Select開放関数 UninitSelect
 */
 void UninitSelect(void);
+
 /**
-* @brief R18更新関数 UpdateR18select
+* @brief Select更新関数 UpdateSelect
 */
 void UpdateSelect(void);
+
 /**
-* @brief R18描画関数 DrawR18select
+* @brief Select描画関数 DrawSelect
 */
 void DrawSelect(void);
-void SetTextureSelect(void);
-void SetVertexSelect(void);
+
 /**
-* @brief R18取得関数 GetR18select
+* @brief セレクトしている難易度(ネコの数)取得関数 GetSpos
+* @return int
 */
 int GetSpos(void);

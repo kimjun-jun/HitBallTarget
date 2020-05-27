@@ -8,70 +8,82 @@
 
 
 // マクロ定義
-#define TEXTURE_GAME_COUNTDOWNGO	_T("data/TEXTURE/sozai/go.png")	
-#define TEXTURE_COUNTDOWN_SIZE_X	(50) // テクスチャサイズ 
-#define TEXTURE_COUNTDOWN_SIZE_Y	(50) // 同上  
-#define TEXTURE_COUNTDOWNGO_SIZE_X	(200) // テクスチャサイズ 
-#define TEXTURE_COUNTDOWNGO_SIZE_Y	(200) // 同上  
-#define COUNTDOWN_TEXTURE_PATTERN_DIVIDE_X	(10)	// アニメパターンのテクスチャ内分割数（X)  
-#define COUNTDOWN_TEXTURE_PATTERN_DIVIDE_Y	(1)	// アニメパターンのテクスチャ内分割数（Y)  
-#define COUNTDOWN_ANIM_PATTERN_NUM			(COUNTDOWN_TEXTURE_PATTERN_DIVIDE_X*COUNTDOWN_TEXTURE_PATTERN_DIVIDE_Y)	// アニメーションパターン数  
-#define COUNTDOWN_TIME_ANIMATION			(4)	// アニメーションの切り替わるカウント  
-#define TEXTURE_COUNTDOWN_POS_X	(SCREEN_CENTER_X) // テクスチャサイズ
-#define TEXTURE_COUNTDOWN_POS_Y	(SCREEN_CENTER_Y) // 同上  
-#define COUNTDOWN_GOUKEI				(2) //スコアの合計
-#define FPS_TIME_COUNTDOWN				(240) //毎フレームカウントしてタイム計測
-#define COUNTDOWN_A						(10) //カウントダウンが0の時GOを描画してGOが薄くなるスピード
-#define COUNTDOWN_CHANGESIZE			(5) //カウントダウンが0の時GOを描画してGOが薄くなるスピード
+#define TEXTURE_GAME_COUNTDOWNGO					_T("data/TEXTURE/sozai/go.png")											//!< 読み込むテクスチャファイル名
+#define TEXTURE_COUNTDOWN_SIZE_X					(50)																	//!< テクスチャサイズX
+#define TEXTURE_COUNTDOWN_SIZE_Y					(50)																	//!< テクスチャサイズY
+#define TEXTURE_COUNTDOWNGO_SIZE_X					(200)																	//!< テクスチャサイズX
+#define TEXTURE_COUNTDOWNGO_SIZE_Y					(200)																	//!< テクスチャサイズY
+#define COUNTDOWN_TEXTURE_PATTERN_DIVIDE_X			(10)																	//!< アニメパターンのテクスチャ内分割数（X)  
+#define COUNTDOWN_TEXTURE_PATTERN_DIVIDE_Y			(1)																		//!< アニメパターンのテクスチャ内分割数（Y)  
+#define COUNTDOWN_ANIM_PATTERN_NUM					(COUNTDOWN_TEXTURE_PATTERN_DIVIDE_X*COUNTDOWN_TEXTURE_PATTERN_DIVIDE_Y)	//!< アニメーションパターン数  
+#define COUNTDOWN_TIME_ANIMATION					(4)																		//!< アニメーションの切り替わるカウント  
+#define TEXTURE_COUNTDOWN_POS_X						(SCREEN_CENTER_X)														//!< ポリゴンの初期座標X
+#define TEXTURE_COUNTDOWN_POS_Y						(SCREEN_CENTER_Y)														//!< ポリゴンの初期座標Y  
+#define COUNTDOWN_GOUKEI							(2)																		//!< カウントダウン構造体の合計
+#define COUNTDOWN_NUM								(3)																		//!< カウントダウン数値
+#define FPS_TIME_COUNTDOWN							(240)																	//!< カウントダウン合計値
+#define COUNTDOWN_ALPHA_SUB							(10)																	//!< スタートLOGOが透明になるスピード
+#define COUNTDOWN_CHANGESIZE						(5)																		//!< カウントダウン中の数値が大きくなるスピード
 
 //*****************************************************************************
 //* 構造体定義
 //******************************************************************************* /
 /**
-*　@struct TITLE
+*　@struct COUNTDOWN
 *　@brief 2Dポリゴンを定義する構造体
 */
-typedef struct // エネミー構造体
+typedef struct
 {
-	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;
-	VERTEX_2D				texture[NUM_VERTEX];
-	D3DXVECTOR3				pos;
-	int						nCountAnim;
-	int						nPatternAnim;
-	int						changeval;
-	int						color;
-	bool					use;
-	bool					signal;
+	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;																				//!< テクスチャへのポリゴン
+	VERTEX_2D				texture[NUM_VERTEX];																		  	//!< 頂点情報格納ワーク
+	D3DXVECTOR3				pos;																						  	//!< ポリゴンの座標
+	int						nCountAnim;																					  	//!< アニメカウント
+	int						nPatternAnim;																				  	//!< アニメパターン
+	int						changeval;																					  	//!< 変化量
+	int						alpha;																						  	//!< アルファ値
+	bool					use;																							//!< 使用しているかどうか
+	bool					signal;																							//!< 使用するか判定用フラグ
 } COUNTDOWN;
 
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
 /**
-* @brief R18初期化関数 InitR18select
+* @brief Countdown初期化関数 InitCountdown
 * @param[in] type 初期化タイプ
 * @return HRESULT
 */
 HRESULT InitCountdown(int type);
+
 /**
-* @brief R18再初期化関数 ReInitR18select
+* @brief Countdown再初期化関数 ReInitCountdown
 */
 void ReInitCountdown(void);
+
 /**
-* @brief R18開放関数 UninitR18select
+* @brief Countdown開放関数 UninitCountdown
 */
 void UninitCountdown(void);
+
 /**
-* @brief R18更新関数 UpdateR18select
+* @brief Countdown更新関数 UpdateCountdown
 */
 void UpdateCountdown(void);
+
 /**
-* @brief R18描画関数 DrawR18select
+* @brief Countdown描画関数 DrawCountdown
 */
 void DrawCountdown(void);
+
 /**
-* @brief R18取得関数 GetR18select
+* @brief Countdown取得関数 GetCountdown
+* @return COUNTDOWN
 */
 COUNTDOWN *GetCountdown(void);
+
+/**
+* @brief Countdown取得関数 AddCountdown
+* @param[in] val 減算値
+*/
 void AddCountdown(int val);
 

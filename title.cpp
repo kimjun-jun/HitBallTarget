@@ -7,15 +7,14 @@
 #include "main.h"
 #include "input.h"
 #include "fade.h"
-#include"sound.h"
+#include "sound.h"
 #include "title.h"
 
 //*****************************************************************************
 // プロトタイプ宣言
 //*****************************************************************************
-
 /**
-* @brief 頂点生成関数 MakeVertexFade
+* @brief 頂点生成関数 MakeVertexTitle
 * @return HRESULT
 */
 HRESULT MakeVertexTitle(void);
@@ -23,7 +22,7 @@ HRESULT MakeVertexTitle(void);
 //*****************************************************************************
 // グローバル変数
 //*****************************************************************************
-TITLE g_title[TITLE_GOUKEI];
+TITLE g_title;				//!< タイトル構造体変数
 
 //=============================================================================
 // 初期化処理
@@ -34,8 +33,8 @@ HRESULT InitTitle(int type)
 	if (type == 0)
 	{
 		D3DXCreateTextureFromFile(pDevice,						// デバイスへのポインタ
-			TEXTURE_TITLE_LOGO,			// ファイルの名前
-			&g_title[0].pD3DTexture);	// 読み込むメモリー
+			TEXTURE_TITLE_LOGO,									// ファイルの名前
+			&g_title.pD3DTexture);							// 読み込むメモリー
 	}
 
 	// 頂点情報の作成
@@ -51,10 +50,10 @@ void UninitTitle(void)
 {
 	for (int i = 0; i < TITLE_GOUKEI; i++)
 	{
-		if (g_title[i].pD3DTexture != NULL)
+		if (g_title.pD3DTexture != NULL)
 		{// テクスチャの開放
-			g_title[i].pD3DTexture->Release();
-			g_title[i].pD3DTexture = NULL;
+			g_title.pD3DTexture->Release();
+			g_title.pD3DTexture = NULL;
 		}
 	}
 }
@@ -83,9 +82,9 @@ void DrawTitle(void)
 	for (int i = 0; i < TITLE_GOUKEI; i++)
 	{
 		// テクスチャの設定
-		pDevice->SetTexture(0, g_title[i].pD3DTexture);
+		pDevice->SetTexture(0, g_title.pD3DTexture);
 		// ポリゴンの描画
-		pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_title[i].vertexWk, sizeof(VERTEX_2D));
+		pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, NUM_POLYGON, g_title.vertexWk, sizeof(VERTEX_2D));
 	}
 }
 
@@ -94,22 +93,25 @@ void DrawTitle(void)
 //=============================================================================
 HRESULT MakeVertexTitle(void)
 {
-	g_title[0].vertexWk[0].vtx = D3DXVECTOR3(TITLELOGO_POS_X - TITLELOGO_SIZE_X, TITLELOGO_POS_Y - TITLELOGO_SIZE_Y, 0.0f);
-	g_title[0].vertexWk[1].vtx = D3DXVECTOR3(TITLELOGO_POS_X + TITLELOGO_SIZE_X, TITLELOGO_POS_Y - TITLELOGO_SIZE_Y, 0.0f);
-	g_title[0].vertexWk[2].vtx = D3DXVECTOR3(TITLELOGO_POS_X - TITLELOGO_SIZE_X, TITLELOGO_POS_Y + TITLELOGO_SIZE_Y, 0.0f);
-	g_title[0].vertexWk[3].vtx = D3DXVECTOR3(TITLELOGO_POS_X + TITLELOGO_SIZE_X, TITLELOGO_POS_Y + TITLELOGO_SIZE_Y, 0.0f);
-	g_title[0].vertexWk[0].rhw =
-	g_title[0].vertexWk[1].rhw =
-	g_title[0].vertexWk[2].rhw =
-	g_title[0].vertexWk[3].rhw = 1.0f;
-	g_title[0].vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-	g_title[0].vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-	g_title[0].vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-	g_title[0].vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
-	g_title[0].vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
-	g_title[0].vertexWk[1].tex = D3DXVECTOR2(1.0f, 0.0f);
-	g_title[0].vertexWk[2].tex = D3DXVECTOR2(0.0f, 1.0f);
-	g_title[0].vertexWk[3].tex = D3DXVECTOR2(1.0f, 1.0f);
+	g_title.vertexWk[0].vtx = D3DXVECTOR3(TITLELOGO_POS_X - TITLELOGO_SIZE_X, TITLELOGO_POS_Y - TITLELOGO_SIZE_Y, 0.0f);
+	g_title.vertexWk[1].vtx = D3DXVECTOR3(TITLELOGO_POS_X + TITLELOGO_SIZE_X, TITLELOGO_POS_Y - TITLELOGO_SIZE_Y, 0.0f);
+	g_title.vertexWk[2].vtx = D3DXVECTOR3(TITLELOGO_POS_X - TITLELOGO_SIZE_X, TITLELOGO_POS_Y + TITLELOGO_SIZE_Y, 0.0f);
+	g_title.vertexWk[3].vtx = D3DXVECTOR3(TITLELOGO_POS_X + TITLELOGO_SIZE_X, TITLELOGO_POS_Y + TITLELOGO_SIZE_Y, 0.0f);
+
+	g_title.vertexWk[0].rhw =
+	g_title.vertexWk[1].rhw =
+	g_title.vertexWk[2].rhw =
+	g_title.vertexWk[3].rhw = 1.0f;
+
+	g_title.vertexWk[0].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+	g_title.vertexWk[1].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+	g_title.vertexWk[2].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+	g_title.vertexWk[3].diffuse = D3DCOLOR_RGBA(255, 255, 255, 255);
+
+	g_title.vertexWk[0].tex = D3DXVECTOR2(0.0f, 0.0f);
+	g_title.vertexWk[1].tex = D3DXVECTOR2(1.0f, 0.0f);
+	g_title.vertexWk[2].tex = D3DXVECTOR2(0.0f, 1.0f);
+	g_title.vertexWk[3].tex = D3DXVECTOR2(1.0f, 1.0f);
 
 	return S_OK;
 }

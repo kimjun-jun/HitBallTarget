@@ -8,7 +8,7 @@
 #include "player.h"
 #include "enemy.h"
 #include "ball.h"
-#include "ui.h"
+#include "meetstrike.h"
 #include "collision.h"
 #include "game.h"
 #include "score.h"
@@ -403,7 +403,7 @@ HRESULT Init(HWND hWnd, BOOL bWindow)
 	InitPlayer(0);
 	InitEnemy(0);
 	InitBall(0);
-	InitUi(0);
+	InitMeetStrike(0);
 	InitScore(0);
 	InitBG(0);
 	InitTitle(0);
@@ -444,7 +444,7 @@ void Uninit(void)
 	UninitInput();
 	UninitScore();
 	UninitBG();
-	UninitUi();
+	UninitMeetStrike();
 	UninitTitle();
 	UninitResult();
 	UninitFade();
@@ -489,7 +489,7 @@ void Update(void)
 		case SCENE_TUTORIAL:
 			UpdateTutorial();
 			UpdatePlayer();
-			UpdateUi();
+			UpdateMeetStrike();
 			UpdateBall();
 			CheakHit();
 			Hitball();
@@ -506,14 +506,14 @@ void Update(void)
 		case SCENE_GAMECOUNTDOWN:
 			UpdateCountdown();
 			UpdatePlayer();
-			UpdateUi();
+			UpdateMeetStrike();
 			AddCountdown(-1);
 			break;
 		case SCENE_GAME:
 			// É|ÉäÉSÉìÇÃçXêVèàóù
 			UpdateScore();
 			UpdatePlayer();
-			UpdateUi();
+			UpdateMeetStrike();
 			UpdateEnemy();
 			UpdateBall();
 			CheakHit();		// ìñÇΩÇËîªíË
@@ -584,7 +584,7 @@ void Draw(void)
 		case SCENE_TUTORIAL:
 			DrawBall();
 			DrawBE();
-			DrawUi();
+			DrawMeetStrike();
 			DrawPlayer();
 			DrawBalleffect();
 			DrawTutorial();
@@ -597,7 +597,7 @@ void Draw(void)
 			break;
 		case SCENE_GAMECOUNTDOWN:
 			DrawScore();
-			DrawUi();
+			DrawMeetStrike();
 			DrawPlayer();
 			DrawEnemy();
 			DrawBall();
@@ -612,7 +612,7 @@ void Draw(void)
 			DrawBall();
 			DrawBE();
 			DrawBalleffect();
-			DrawUi();
+			DrawMeetStrike();
 			break;
 		case SCENE_PAUSE:
 			DrawScore();
@@ -755,7 +755,7 @@ void InitGame(void)
 	InitBall(1);		
 	InitScore(1);		
 	InitBG(1);			
-	InitUi(1);
+	InitMeetStrike(1);
 	InitTitle(1);
 	InitResult(1);
 	InitFade();
@@ -772,7 +772,7 @@ void ReInitTuto(void)
 	ReInitPlayer();
 	ReInitEnemy();
 	ReInitBall();
-	ReInitUi();
+	ReInitMeetStrike();
 	ReInitCountdown();
 }
 
@@ -785,7 +785,7 @@ void UpdateReInit(void)
 	ReInitScore();
 	ReInitEnemy();
 	ReInitBall();
-	ReInitUi();
+	ReInitMeetStrike();
 	ReInitCountdown();
 	ReInitPause();
 	ReInitOption();

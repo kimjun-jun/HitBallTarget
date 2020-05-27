@@ -24,8 +24,8 @@ typedef struct
 {
 	LPDIRECT3DTEXTURE9		pD3DTexture = NULL;													//!< テクスチャへのポリゴン 
 	VERTEX_2D				vertexWk[NUM_VERTEX];												//!< 頂点情報格納ワーク
-	D3DXVECTOR3				pos;																//!< ポリゴンの移動量
-	bool					use;
+	D3DXVECTOR3				pos;																//!< ポリゴンの座標
+	bool					use;																//!< 使用しているかどうか
 }PAUSE;
 
 //*****************************************************************************

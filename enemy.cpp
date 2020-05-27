@@ -6,7 +6,7 @@
 */
 #include "main.h"
 #include "ball.h"
-#include "ui.h"
+#include "meetstrike.h"
 #include "effect.h"
 #include "score.h"
 #include "select.h"

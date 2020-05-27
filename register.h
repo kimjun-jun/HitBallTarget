@@ -22,7 +22,7 @@
 *　@struct SAVEDATA
 *　@brief 2Dポリゴンを定義する構造体
 */
-typedef struct					// セーブデータの構造体
+typedef struct
 {
 	int ftime;																	//!< タイムの保存
 	int fscore;																	//!< スコアの保存

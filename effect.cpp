@@ -7,7 +7,7 @@
 #include "main.h"
 #include "enemy.h"
 #include "score.h"
-#include "ui.h"
+#include "meetstrike.h"
 #include "ball.h"
 #include "effect.h"
 

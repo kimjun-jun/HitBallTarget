@@ -10,11 +10,11 @@
 // マクロ定義
 //*****************************************************************************
 #define	TEXTURE_TITLE_LOGO	_T("data/TEXTURE/title/title_logo.png")			//!< 読み込むテクスチャファイル名
-#define	TITLELOGO_POS_X		(SCREEN_CENTER_X)								//!< タイトルロゴの表示位置X
-#define	TITLELOGO_POS_Y		(SCREEN_CENTER_Y)								//!< タイトルロゴの表示位置Y
-#define	TITLELOGO_SIZE_X	(SCREEN_CENTER_X/2)								//!< タイトルロゴの幅X
-#define	TITLELOGO_SIZE_Y	(SCREEN_CENTER_Y/2)								//!< タイトルロゴの高さY
-#define	TITLE_GOUKEI		(1)												//!< タイトルの合計
+#define	TITLELOGO_POS_X		(SCREEN_CENTER_X)								//!< ポリゴンの表示位置X
+#define	TITLELOGO_POS_Y		(SCREEN_CENTER_Y)								//!< ポリゴンの表示位置Y
+#define	TITLELOGO_SIZE_X	(SCREEN_CENTER_X/2)								//!< ポリゴンの幅X
+#define	TITLELOGO_SIZE_Y	(SCREEN_CENTER_Y/2)								//!< ポリゴンの高さY
+#define	TITLE_GOUKEI		(1)												//!< タイトル構造体の合計
 
 /**
 *　@struct TITLE

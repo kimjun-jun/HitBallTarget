@@ -1,6 +1,6 @@
 <map id="InitBall" name="InitBall">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,67,57"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="簡単な説明（〜する関数）" alt="" coords="131,5,213,32"/>
-<area shape="rect" id="node3" href="$ball_8cpp.html#a70431ba1be68be65354d5c918c50de10" title=" " alt="" coords="115,56,229,83"/>
-<area shape="rect" id="node4" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title=" " alt="" coords="277,56,380,83"/>
+<area shape="rect" id="node1" title="Ball初期化関数 InitBall" alt="" coords="5,31,67,57"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="131,5,213,32"/>
+<area shape="rect" id="node3" href="$ball_8cpp.html#a70431ba1be68be65354d5c918c50de10" title="ポリゴン頂点生成関数 MakeVertexBall" alt="" coords="115,56,229,83"/>
+<area shape="rect" id="node4" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title="ポリゴン頂点設定関数 SetVertexBall" alt="" coords="277,56,380,83"/>
 </map>

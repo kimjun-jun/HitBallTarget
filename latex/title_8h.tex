@@ -5,37 +5,39 @@
 Hit\+Ball\+Target(2\+D)的当てゲーム  
 
 
+被依存関係図\+:
+% FIG 0
 \doxysubsection*{データ構造}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_t_i_t_l_e}{T\+I\+T\+LE}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 2Dポリゴンを定義する構造体 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{title_8h_ab945fe515ea26be88303406f9a47036d}{T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+I\+T\+L\+E\+\_\+\+L\+O\+GO}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/title/title\+\_\+logo.\+png\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em 読み込むテクスチャファイル名 \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{title_8h_a3f48685f868039af05a66bbdf2c37aeb}{T\+I\+T\+L\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの表示位置X \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{title_8h_a6eba0a6591b1c0e92190925675ac4493}{T\+I\+T\+L\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}})
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの表示位置Y \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{title_8h_a2757f371a1ce346b7281020f155142e3}{T\+I\+T\+L\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}/2)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの幅X \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{title_8h_a73ce807951dd2fa69264a960a1a67df6}{T\+I\+T\+L\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}/2)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの高さY \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{title_8h_a668ce556d27da2e4a6520731b6c12fd2}{T\+I\+T\+L\+E\+\_\+\+G\+O\+U\+K\+EI}}~(1)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em タイトル構造体の合計 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{title_8h_a61c5b4d5836f268cb5e6562b329a2f0e}{Init\+Title}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em タイトル初期化関数 Init\+Title \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{title_8h_a928c6270669342e0130c32178d323361}{Uninit\+Title}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em タイトル開放関数 Uninit\+Title \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{title_8h_aa354bb8b39f42a45e2f33fd54e40703b}{Update\+Title}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em タイトル更新関数 Update\+Title \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{title_8h_a2ce9092026f2c9c2d759702a47b953c7}{Draw\+Title}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em タイトル描画関数 Draw\+Title \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -58,6 +60,10 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
+読み込むテクスチャファイル名 
+
+
+
  title.\+h の 13 行目に定義があります。
 
 \mbox{\Hypertarget{title_8h_a668ce556d27da2e4a6520731b6c12fd2}\label{title_8h_a668ce556d27da2e4a6520731b6c12fd2}} 
@@ -68,13 +74,21 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+h の 19 行目に定義があります。
+タイトル構造体の合計 
+
+
+
+ title.\+h の 18 行目に定義があります。
 
 \mbox{\Hypertarget{title_8h_a3f48685f868039af05a66bbdf2c37aeb}\label{title_8h_a3f48685f868039af05a66bbdf2c37aeb}} 
 \index{title.h@{title.h}!TITLELOGO\_POS\_X@{TITLELOGO\_POS\_X}}
 \index{TITLELOGO\_POS\_X@{TITLELOGO\_POS\_X}!title.h@{title.h}}
 \doxysubsubsection{\texorpdfstring{TITLELOGO\_POS\_X}{TITLELOGO\_POS\_X}}
 {\footnotesize\ttfamily \#define T\+I\+T\+L\+E\+L\+O\+G\+O\+\_\+\+P\+O\+S\+\_\+X~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}})}
+
+
+
+ポリゴンの表示位置X 
 
 
 
@@ -88,6 +102,10 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
+ポリゴンの表示位置Y 
+
+
+
  title.\+h の 15 行目に定義があります。
 
 \mbox{\Hypertarget{title_8h_a2757f371a1ce346b7281020f155142e3}\label{title_8h_a2757f371a1ce346b7281020f155142e3}} 
@@ -98,6 +116,10 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
+ポリゴンの幅X 
+
+
+
  title.\+h の 16 行目に定義があります。
 
 \mbox{\Hypertarget{title_8h_a73ce807951dd2fa69264a960a1a67df6}\label{title_8h_a73ce807951dd2fa69264a960a1a67df6}} 
@@ -105,6 +127,10 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 \index{TITLELOGO\_SIZE\_Y@{TITLELOGO\_SIZE\_Y}!title.h@{title.h}}
 \doxysubsubsection{\texorpdfstring{TITLELOGO\_SIZE\_Y}{TITLELOGO\_SIZE\_Y}}
 {\footnotesize\ttfamily \#define T\+I\+T\+L\+E\+L\+O\+G\+O\+\_\+\+S\+I\+Z\+E\+\_\+Y~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}/2)}
+
+
+
+ポリゴンの高さY 
 
 
 
@@ -121,8 +147,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+cpp の 73 行目に定義があります。
+タイトル描画関数 Draw\+Title 
 
+
+
+ title.\+cpp の 77 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{title_8h_a61c5b4d5836f268cb5e6562b329a2f0e}\label{title_8h_a61c5b4d5836f268cb5e6562b329a2f0e}} 
 \index{title.h@{title.h}!InitTitle@{InitTitle}}
 \index{InitTitle@{InitTitle}!title.h@{title.h}}
@@ -131,8 +165,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+cpp の 26 行目に定義があります。
+タイトル初期化関数 Init\+Title 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ title.\+cpp の 30 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{title_8h_a928c6270669342e0130c32178d323361}\label{title_8h_a928c6270669342e0130c32178d323361}} 
 \index{title.h@{title.h}!UninitTitle@{UninitTitle}}
 \index{UninitTitle@{UninitTitle}!title.h@{title.h}}
@@ -141,8 +191,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+cpp の 45 行目に定義があります。
+タイトル開放関数 Uninit\+Title 
 
+
+
+ title.\+cpp の 49 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{title_8h_aa354bb8b39f42a45e2f33fd54e40703b}\label{title_8h_aa354bb8b39f42a45e2f33fd54e40703b}} 
 \index{title.h@{title.h}!UpdateTitle@{UpdateTitle}}
 \index{UpdateTitle@{UpdateTitle}!title.h@{title.h}}
@@ -151,5 +207,13 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+cpp の 60 行目に定義があります。
+タイトル更新関数 Update\+Title 
 
+
+
+ title.\+cpp の 64 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 6
+被呼び出し関係図\+:
+% FIG 7

@@ -8,7 +8,7 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}meetstrike.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}enemy.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}input.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}collision.\+h\char`\"{}}\newline
@@ -17,17 +17,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}sensitivity.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}balleffect.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+game.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55}{Bat}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em バッター処理関数 Bat \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f}{Pit}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em ピッチャー処理関数 Pit \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{game_8cpp_ae81d6a63aece63e1779d8bf648ccd582}{Ball}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 投球処理関数 Ball \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917}{Hitball}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 打球処理関数 Hitball \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -50,8 +52,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- game.\+cpp の 271 行目に定義があります。
+投球処理関数 Ball 
 
+投球されたボールの処理。変化や影、投球地点を処理 
+
+ game.\+cpp の 270 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55}\label{game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55}} 
 \index{game.cpp@{game.cpp}!Bat@{Bat}}
 \index{Bat@{Bat}!game.cpp@{game.cpp}}
@@ -60,8 +70,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
+バッター処理関数 Bat 
+
+バッターアニメーションとミートカーソルを処理する 
+
  game.\+cpp の 24 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917}\label{game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917}} 
 \index{game.cpp@{game.cpp}!Hitball@{Hitball}}
 \index{Hitball@{Hitball}!game.cpp@{game.cpp}}
@@ -70,8 +88,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- game.\+cpp の 380 行目に定義があります。
+打球処理関数 Hitball 
 
+打球方向や移動を処理 
+
+ game.\+cpp の 379 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f}\label{game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f}} 
 \index{game.cpp@{game.cpp}!Pit@{Pit}}
 \index{Pit@{Pit}!game.cpp@{game.cpp}}
@@ -80,5 +106,13 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- game.\+cpp の 241 行目に定義があります。
+ピッチャー処理関数 Pit 
 
+投球を制御→ボールを発射する 
+
+ game.\+cpp の 240 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8

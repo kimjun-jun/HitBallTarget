@@ -1,9 +1,9 @@
 <map id="UpdateCountdown" name="UpdateCountdown">
-<area shape="rect" id="node1" title=" " alt="" coords="5,132,132,159"/>
+<area shape="rect" id="node1" title="Countdown更新関数 UpdateCountdown" alt="" coords="5,132,132,159"/>
 <area shape="rect" id="node2" href="$sound_8cpp.html#af9c2ae2ac796213689a12012f647b03a" title=" " alt="" coords="180,5,331,32"/>
 <area shape="rect" id="node3" href="$sound_8cpp.html#a35c57e56563987d661008dbf450de87f" title=" " alt="" coords="213,56,298,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#aea6ddf2fe660e7a828633d13bf701837" title=" " alt="" coords="216,107,295,133"/>
-<area shape="rect" id="node5" href="$countdown_8cpp.html#ac6ff1fbe3abe9d43ea582102a75f3e35" title=" " alt="" coords="181,157,330,184"/>
-<area shape="rect" id="node6" href="$countdown_8cpp.html#a1ae8dbebea749b7cdd7b89bb974234ab" title=" " alt="" coords="183,208,327,235"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#aea6ddf2fe660e7a828633d13bf701837" title="ゲームシーンをセットする関数 SetScene" alt="" coords="216,107,295,133"/>
+<area shape="rect" id="node5" href="$countdown_8cpp.html#ac6ff1fbe3abe9d43ea582102a75f3e35" title="テクスチャ設定関数 SetTextureCountdown" alt="" coords="181,157,330,184"/>
+<area shape="rect" id="node6" href="$countdown_8cpp.html#a1ae8dbebea749b7cdd7b89bb974234ab" title="頂点設定関数 SetVertexCountdown" alt="" coords="183,208,327,235"/>
 <area shape="rect" id="node7" href="$sound_8cpp.html#ae5df25309eadfa7b724d87ba341a7dde" title=" " alt="" coords="212,259,299,285"/>
 </map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gamebg_5fmax_1758',['GAMEBG_MAX',['../bg_8h.html#ac9a55cd60921d8137206c72b7503ac41',1,'bg.h']]],
-  ['gamepadmax_1759',['GAMEPADMAX',['../input_8h.html#aabbcc0c379cb92535dfcd591367b7684',1,'input.h']]]
+  ['gamepadmax_1673',['GAMEPADMAX',['../input_8h.html#aabbcc0c379cb92535dfcd591367b7684',1,'input.h']]],
+  ['gamer18bg_5fmax_1674',['GAMER18BG_MAX',['../bg_8h.html#a424de7da8fc22057b8683f12c2ee773d',1,'bg.h']]]
 ];

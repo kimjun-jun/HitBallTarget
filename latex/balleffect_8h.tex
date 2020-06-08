@@ -2,9 +2,11 @@
 \label{balleffect_8h}\index{balleffect.h@{balleffect.h}}
 
 
-Hit\+Ball\+Target(2\+D)的当てゲーム  
+Hit\+Ball\+Target(2\+D)的当てゲーム(調整中)  
 
 
+被依存関係図\+:
+% FIG 0
 \doxysubsection*{データ構造}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,19 +41,19 @@ struct \mbox{\hyperlink{struct_b_a_l_l_e_f_f_e_c_t}{B\+A\+L\+L\+E\+F\+F\+E\+CT}}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{balleffect_8h_ae79dc5498dcb4c89274505afa0bf08cc}{Init\+Balleffect}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em Balleffect初期化関数 Init\+Balleffect \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{balleffect_8h_a9ec46b172dc258cd439971080ed0d41d}{Uninit\+Balleffect}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Balleffect開放関数 Uninit\+Balleffect \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{balleffect_8h_a10aa951137244d9cdb57cb5b84770bb4}{Update\+Balleffect}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Balleffect更新関数 Update\+Balleffect \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{balleffect_8h_a53027adc21cd2864c0d22d0b63a2346e}{Draw\+Balleffect}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Balleffect描画関数 Draw\+Balleffect \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{balleffect_8h_a0ddec6fc81c53b4a5f7b78dcd97bbcbb}{Set\+Balleffect}} (D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos, int duration)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Balleffect設定関数 Set\+Balleffect \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
-Hit\+Ball\+Target(2\+D)的当てゲーム 
+Hit\+Ball\+Target(2\+D)的当てゲーム(調整中) 
 
 \begin{DoxyAuthor}{著者}
 キムラジュン 
@@ -173,8 +175,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- balleffect.\+cpp の 216 行目に定義があります。
+Balleffect描画関数 Draw\+Balleffect 
 
+
+
+ balleffect.\+cpp の 215 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{balleffect_8h_ae79dc5498dcb4c89274505afa0bf08cc}\label{balleffect_8h_ae79dc5498dcb4c89274505afa0bf08cc}} 
 \index{balleffect.h@{balleffect.h}!InitBalleffect@{InitBalleffect}}
 \index{InitBalleffect@{InitBalleffect}!balleffect.h@{balleffect.h}}
@@ -183,8 +193,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- balleffect.\+cpp の 37 行目に定義があります。
+Balleffect初期化関数 Init\+Balleffect 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ balleffect.\+cpp の 36 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{balleffect_8h_a0ddec6fc81c53b4a5f7b78dcd97bbcbb}\label{balleffect_8h_a0ddec6fc81c53b4a5f7b78dcd97bbcbb}} 
 \index{balleffect.h@{balleffect.h}!SetBalleffect@{SetBalleffect}}
 \index{SetBalleffect@{SetBalleffect}!balleffect.h@{balleffect.h}}
@@ -193,7 +219,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- balleffect.\+cpp の 334 行目に定義があります。
+Balleffect設定関数 Set\+Balleffect 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em D3\+D\+X\+V\+E\+C\+T\+O\+R3} & pos, int duration \\
+\hline
+\end{DoxyParams}
+
+
+ balleffect.\+cpp の 333 行目に定義があります。
 
 \mbox{\Hypertarget{balleffect_8h_a9ec46b172dc258cd439971080ed0d41d}\label{balleffect_8h_a9ec46b172dc258cd439971080ed0d41d}} 
 \index{balleffect.h@{balleffect.h}!UninitBalleffect@{UninitBalleffect}}
@@ -203,8 +238,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- balleffect.\+cpp の 89 行目に定義があります。
+Balleffect開放関数 Uninit\+Balleffect 
 
+
+
+ balleffect.\+cpp の 88 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{balleffect_8h_a10aa951137244d9cdb57cb5b84770bb4}\label{balleffect_8h_a10aa951137244d9cdb57cb5b84770bb4}} 
 \index{balleffect.h@{balleffect.h}!UpdateBalleffect@{UpdateBalleffect}}
 \index{UpdateBalleffect@{UpdateBalleffect}!balleffect.h@{balleffect.h}}
@@ -213,5 +254,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- balleffect.\+cpp の 106 行目に定義があります。
+Balleffect更新関数 Update\+Balleffect 
+
+
+
+ balleffect.\+cpp の 105 行目に定義があります。
 

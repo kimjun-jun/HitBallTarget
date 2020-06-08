@@ -5,45 +5,43 @@
 Hit\+Ball\+Target(2\+D)的当てゲーム  
 
 
+被依存関係図\+:
+% FIG 0
 \doxysubsection*{データ構造}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_s_a_v_e_d_a_t_a}{S\+A\+V\+E\+D\+A\+TA}}
-\item 
+\begin{DoxyCompactList}\small\item\em 2Dポリゴンを定義する構造体 \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct_s_a_v_e}{S\+A\+VE}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 2Dポリゴンを定義する構造体 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{register_8h_aa314b346da784c6e150ca8baf5a56622}{S\+A\+V\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+L\+E\+\_\+00}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/\mbox{\hyperlink{struct_s_a_v_e}{S\+A\+VE}}/save.\+png\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em 読み込むテクスチャファイル名 \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{register_8h_a5a295720d07d6346b740ff9b13e435a5}{S\+A\+V\+E\+\_\+\+S\+I\+Z\+E\+\_\+W}}~(880)
-\item 
+\begin{DoxyCompactList}\small\item\em テクスチャサイズX \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{register_8h_a151d6d5ec74ead911a373960aa89c212}{S\+A\+V\+E\+\_\+\+S\+I\+Z\+E\+\_\+H}}~(660)
-\item 
+\begin{DoxyCompactList}\small\item\em テクスチャサイズY \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{register_8h_ac868f457e7ce34603b1d2e96bbdd8bed}{S\+A\+V\+E\+\_\+\+P\+O\+S\+\_\+X}}~(0)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの初期位置X \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{register_8h_afeb4886fa811097aedb0d4c55781693a}{S\+A\+V\+E\+\_\+\+P\+O\+S\+\_\+Y}}~(0)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ポリゴンの初期位置Y \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{register_8h_a39702c8c95af1879ed3d313cabb32193}{Init\+Save}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em Save初期化関数 Init\+Save \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{register_8h_a6039f601b1f6250448ca1dca7b628632}{Uninit\+Save}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Save開放関数 Uninit\+Save \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{register_8h_abea09b4e50189f42358fceaef61032ea}{Update\+Save}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Save更新関数 Update\+Save \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{register_8h_ad96c572bafbf0c76d9ab2c3a6c34f420}{Draw\+Save}} (void)
-\item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{register_8h_ab8c5f619e97fc6f6f959ac5032d3d0ab}{Make\+Vertex\+Save}} (void)
-\item 
-void \mbox{\hyperlink{register_8h_a0578d253fac509f0013b4e984678e3d8}{Set\+Vertex\+Save}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Save描画関数 Draw\+Save \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{register_8h_ab30ca9e96790fb091f084e1a11e82a95}{Save\+Data}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Save開放関数 Save\+Data \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{register_8h_ac57466ffb130191e7384ac05671afe2a}{Load\+Data}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Save開放関数 Load\+Data \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -66,7 +64,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+h の 14 行目に定義があります。
+ポリゴンの初期位置X 
+
+
+
+ register.\+h の 16 行目に定義があります。
 
 \mbox{\Hypertarget{register_8h_afeb4886fa811097aedb0d4c55781693a}\label{register_8h_afeb4886fa811097aedb0d4c55781693a}} 
 \index{register.h@{register.h}!SAVE\_POS\_Y@{SAVE\_POS\_Y}}
@@ -76,7 +78,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+h の 15 行目に定義があります。
+ポリゴンの初期位置Y 
+
+
+
+ register.\+h の 17 行目に定義があります。
 
 \mbox{\Hypertarget{register_8h_a151d6d5ec74ead911a373960aa89c212}\label{register_8h_a151d6d5ec74ead911a373960aa89c212}} 
 \index{register.h@{register.h}!SAVE\_SIZE\_H@{SAVE\_SIZE\_H}}
@@ -86,7 +92,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+h の 13 行目に定義があります。
+テクスチャサイズY 
+
+
+
+ register.\+h の 15 行目に定義があります。
 
 \mbox{\Hypertarget{register_8h_a5a295720d07d6346b740ff9b13e435a5}\label{register_8h_a5a295720d07d6346b740ff9b13e435a5}} 
 \index{register.h@{register.h}!SAVE\_SIZE\_W@{SAVE\_SIZE\_W}}
@@ -96,7 +106,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+h の 12 行目に定義があります。
+テクスチャサイズX 
+
+
+
+ register.\+h の 14 行目に定義があります。
 
 \mbox{\Hypertarget{register_8h_aa314b346da784c6e150ca8baf5a56622}\label{register_8h_aa314b346da784c6e150ca8baf5a56622}} 
 \index{register.h@{register.h}!SAVE\_TEXTURE\_FILE\_00@{SAVE\_TEXTURE\_FILE\_00}}
@@ -106,7 +120,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+h の 11 行目に定義があります。
+読み込むテクスチャファイル名 
+
+
+
+ register.\+h の 13 行目に定義があります。
 
 
 
@@ -119,8 +137,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+cpp の 65 行目に定義があります。
+Save描画関数 Draw\+Save 
 
+
+
+ register.\+cpp の 77 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{register_8h_a39702c8c95af1879ed3d313cabb32193}\label{register_8h_a39702c8c95af1879ed3d313cabb32193}} 
 \index{register.h@{register.h}!InitSave@{InitSave}}
 \index{InitSave@{InitSave}!register.h@{register.h}}
@@ -129,8 +155,22 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+cpp の 22 行目に定義があります。
+Save初期化関数 Init\+Save 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ register.\+cpp の 35 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
 \mbox{\Hypertarget{register_8h_ac57466ffb130191e7384ac05671afe2a}\label{register_8h_ac57466ffb130191e7384ac05671afe2a}} 
 \index{register.h@{register.h}!LoadData@{LoadData}}
 \index{LoadData@{LoadData}!register.h@{register.h}}
@@ -139,18 +179,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+cpp の 166 行目に定義があります。
+Save開放関数 Load\+Data 
 
-\mbox{\Hypertarget{register_8h_ab8c5f619e97fc6f6f959ac5032d3d0ab}\label{register_8h_ab8c5f619e97fc6f6f959ac5032d3d0ab}} 
-\index{register.h@{register.h}!MakeVertexSave@{MakeVertexSave}}
-\index{MakeVertexSave@{MakeVertexSave}!register.h@{register.h}}
-\doxysubsubsection{\texorpdfstring{MakeVertexSave()}{MakeVertexSave()}}
-{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+Save (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+セーブデータをファイルから読み込む 
 
+ register.\+cpp の 178 行目に定義があります。
 
-
- register.\+cpp の 81 行目に定義があります。
-
+呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{register_8h_ab30ca9e96790fb091f084e1a11e82a95}\label{register_8h_ab30ca9e96790fb091f084e1a11e82a95}} 
 \index{register.h@{register.h}!SaveData@{SaveData}}
 \index{SaveData@{SaveData}!register.h@{register.h}}
@@ -159,18 +195,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+cpp の 125 行目に定義があります。
+Save開放関数 Save\+Data 
 
-\mbox{\Hypertarget{register_8h_a0578d253fac509f0013b4e984678e3d8}\label{register_8h_a0578d253fac509f0013b4e984678e3d8}} 
-\index{register.h@{register.h}!SetVertexSave@{SetVertexSave}}
-\index{SetVertexSave@{SetVertexSave}!register.h@{register.h}}
-\doxysubsubsection{\texorpdfstring{SetVertexSave()}{SetVertexSave()}}
-{\footnotesize\ttfamily void Set\+Vertex\+Save (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+セーブデータを作成し、ファイルへ出力する 
 
+ register.\+cpp の 137 行目に定義があります。
 
-
- register.\+cpp の 110 行目に定義があります。
-
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{register_8h_a6039f601b1f6250448ca1dca7b628632}\label{register_8h_a6039f601b1f6250448ca1dca7b628632}} 
 \index{register.h@{register.h}!UninitSave@{UninitSave}}
 \index{UninitSave@{UninitSave}!register.h@{register.h}}
@@ -179,7 +213,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+cpp の 45 行目に定義があります。
+Save開放関数 Uninit\+Save 
+
+
+
+ register.\+cpp の 57 行目に定義があります。
 
 \mbox{\Hypertarget{register_8h_abea09b4e50189f42358fceaef61032ea}\label{register_8h_abea09b4e50189f42358fceaef61032ea}} 
 \index{register.h@{register.h}!UpdateSave@{UpdateSave}}
@@ -189,5 +227,13 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- register.\+cpp の 57 行目に定義があります。
+Save更新関数 Update\+Save 
 
+
+
+ register.\+cpp の 69 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8

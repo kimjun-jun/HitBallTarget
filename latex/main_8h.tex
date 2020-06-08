@@ -14,6 +14,10 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}dinput.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}mmsystem.\+h\char`\"{}}\newline
+main.\+h の依存先関係図\+:
+% FIG 0
+被依存関係図\+:
+% FIG 1
 \doxysubsection*{データ構造}
 \begin{DoxyCompactItemize}
 \item 
@@ -2363,23 +2367,23 @@ B\+A\+L\+L\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+O\+P\+P\+O\+\_\+\+B\+U\+FF&\\
 
 バッターの描画種類 \begin{DoxyEnumFields}{列挙値}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{BAT\_PATTERN0@{BAT\_PATTERN0}!main.h@{main.h}}\index{main.h@{main.h}!BAT\_PATTERN0@{BAT\_PATTERN0}}}\mbox{\Hypertarget{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3fa279e5ad109d6b46b4e36e35e8ca3f4bf}\label{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3fa279e5ad109d6b46b4e36e35e8ca3f4bf}} 
-B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N0&\\
+B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N0&通常 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{BAT\_PATTERN1@{BAT\_PATTERN1}!main.h@{main.h}}\index{main.h@{main.h}!BAT\_PATTERN1@{BAT\_PATTERN1}}}\mbox{\Hypertarget{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3facabbf2f74b5b5229338689179fcfadf0}\label{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3facabbf2f74b5b5229338689179fcfadf0}} 
-B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N1&$<$通常 \\
+B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N1&スイング1 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{BAT\_PATTERN2@{BAT\_PATTERN2}!main.h@{main.h}}\index{main.h@{main.h}!BAT\_PATTERN2@{BAT\_PATTERN2}}}\mbox{\Hypertarget{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3fa3c3b15b775a5c2ed0ea88cc2d931e633}\label{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3fa3c3b15b775a5c2ed0ea88cc2d931e633}} 
-B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N2&$<$スイング1 \\
+B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N2&スイング2 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{BAT\_PATTERN3@{BAT\_PATTERN3}!main.h@{main.h}}\index{main.h@{main.h}!BAT\_PATTERN3@{BAT\_PATTERN3}}}\mbox{\Hypertarget{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3fa647811b95b418920282c218609cf4e0e}\label{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3fa647811b95b418920282c218609cf4e0e}} 
-B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N3&$<$スイング2 \\
+B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N3&スイング3 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{BAT\_PATTERN4@{BAT\_PATTERN4}!main.h@{main.h}}\index{main.h@{main.h}!BAT\_PATTERN4@{BAT\_PATTERN4}}}\mbox{\Hypertarget{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3fa525efaaa79a3d681dcfdf138d519ed61}\label{main_8h_a3ec1a2c2a0749e2d5395dda5e36b2f3fa525efaaa79a3d681dcfdf138d519ed61}} 
-B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N4&$<$スイング3 $<$アイドリング \\
+B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N4&アイドリング \\
 \hline
 
 \end{DoxyEnumFields}
@@ -2395,11 +2399,11 @@ B\+A\+T\+\_\+\+P\+A\+T\+T\+E\+R\+N4&$<$スイング3 $<$アイドリング \\
 
 ボールエフェクトの種類 \begin{DoxyEnumFields}{列挙値}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{BALL\_EFFECT1@{BALL\_EFFECT1}!main.h@{main.h}}\index{main.h@{main.h}!BALL\_EFFECT1@{BALL\_EFFECT1}}}\mbox{\Hypertarget{main_8h_a2066931aadc122e8c892fd6334c7cfa1a0741e128ffd063680b6a219b8a11965d}\label{main_8h_a2066931aadc122e8c892fd6334c7cfa1a0741e128ffd063680b6a219b8a11965d}} 
-B\+A\+L\+L\+\_\+\+E\+F\+F\+E\+C\+T1&\\
+B\+A\+L\+L\+\_\+\+E\+F\+F\+E\+C\+T1&ボールエフェクト1 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{BALL\_EFFECT2@{BALL\_EFFECT2}!main.h@{main.h}}\index{main.h@{main.h}!BALL\_EFFECT2@{BALL\_EFFECT2}}}\mbox{\Hypertarget{main_8h_a2066931aadc122e8c892fd6334c7cfa1ab9d1cb8d653d358de9921490acc31d42}\label{main_8h_a2066931aadc122e8c892fd6334c7cfa1ab9d1cb8d653d358de9921490acc31d42}} 
-B\+A\+L\+L\+\_\+\+E\+F\+F\+E\+C\+T2&$<$ボールエフェクト1 $<$ボールエフェクト2 \\
+B\+A\+L\+L\+\_\+\+E\+F\+F\+E\+C\+T2&ボールエフェクト2 \\
 \hline
 
 \end{DoxyEnumFields}
@@ -2459,75 +2463,75 @@ D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+R\+I\+G\+H\+T\+D\+O\+WN&\\
 
 画面遷移定数 \begin{DoxyEnumFields}{列挙値}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_TITLE@{SCENE\_TITLE}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_TITLE@{SCENE\_TITLE}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a96f75e824fdc81751dcfc4f447390853}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a96f75e824fdc81751dcfc4f447390853}} 
-S\+C\+E\+N\+E\+\_\+\+T\+I\+T\+LE&\\
+S\+C\+E\+N\+E\+\_\+\+T\+I\+T\+LE&0。1つめだから0。列挙型の列挙定数名。定義した名前をシンボルっていうのが一般らしい。 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_TUTORIAL@{SCENE\_TUTORIAL}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_TUTORIAL@{SCENE\_TUTORIAL}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a7a29e83222b959f5d06cfd97c4a742c4}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a7a29e83222b959f5d06cfd97c4a742c4}} 
-S\+C\+E\+N\+E\+\_\+\+T\+U\+T\+O\+R\+I\+AL&$<$0。1つめだから0。列挙型の列挙定数名。定義した名前をシンボルっていうのが一般らしい。 \\
+S\+C\+E\+N\+E\+\_\+\+T\+U\+T\+O\+R\+I\+AL&1チュートリアル \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_TUTORIALMENU@{SCENE\_TUTORIALMENU}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_TUTORIALMENU@{SCENE\_TUTORIALMENU}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5ab9a3ed3650c455fb9211d9e14905ac6f}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5ab9a3ed3650c455fb9211d9e14905ac6f}} 
-S\+C\+E\+N\+E\+\_\+\+T\+U\+T\+O\+R\+I\+A\+L\+M\+E\+NU&$<$1チュートリアル \\
+S\+C\+E\+N\+E\+\_\+\+T\+U\+T\+O\+R\+I\+A\+L\+M\+E\+NU&2チュートリアル \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_SELECT@{SCENE\_SELECT}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_SELECT@{SCENE\_SELECT}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5ab4680fbfc1b3e7011f10db561faf12ea}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5ab4680fbfc1b3e7011f10db561faf12ea}} 
-S\+C\+E\+N\+E\+\_\+\+S\+E\+L\+E\+CT&$<$2チュートリアル \\
+S\+C\+E\+N\+E\+\_\+\+S\+E\+L\+E\+CT&3難易度選択 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_GAMECOUNTDOWN@{SCENE\_GAMECOUNTDOWN}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_GAMECOUNTDOWN@{SCENE\_GAMECOUNTDOWN}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5ac60e58d136d988b62eabe637699ba27c}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5ac60e58d136d988b62eabe637699ba27c}} 
-S\+C\+E\+N\+E\+\_\+\+G\+A\+M\+E\+C\+O\+U\+N\+T\+D\+O\+WN&$<$3難易度選択 \\
+S\+C\+E\+N\+E\+\_\+\+G\+A\+M\+E\+C\+O\+U\+N\+T\+D\+O\+WN&4ゲーム開始前のカウントダウン \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_GAME@{SCENE\_GAME}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_GAME@{SCENE\_GAME}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a632ce01f7c0a512b4d5f8be8272f624f}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a632ce01f7c0a512b4d5f8be8272f624f}} 
-S\+C\+E\+N\+E\+\_\+\+G\+A\+ME&$<$4ゲーム開始前のカウントダウン \\
+S\+C\+E\+N\+E\+\_\+\+G\+A\+ME&5ゲーム \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_PAUSE@{SCENE\_PAUSE}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_PAUSE@{SCENE\_PAUSE}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a00eea72b7b67ca4988abf439d54c89f8}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a00eea72b7b67ca4988abf439d54c89f8}} 
-S\+C\+E\+N\+E\+\_\+\+P\+A\+U\+SE&$<$5ゲーム \\
+S\+C\+E\+N\+E\+\_\+\+P\+A\+U\+SE&6ポーズ \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_OPTION@{SCENE\_OPTION}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_OPTION@{SCENE\_OPTION}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a0f9780115a16fe78e8ea89c06b05a927}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a0f9780115a16fe78e8ea89c06b05a927}} 
-S\+C\+E\+N\+E\+\_\+\+O\+P\+T\+I\+ON&$<$6ポーズ \\
+S\+C\+E\+N\+E\+\_\+\+O\+P\+T\+I\+ON&7オプション \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_R18SELECT@{SCENE\_R18SELECT}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_R18SELECT@{SCENE\_R18SELECT}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a84a187e42325978e02a19ec85e663115}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a84a187e42325978e02a19ec85e663115}} 
-S\+C\+E\+N\+E\+\_\+\+R18\+S\+E\+L\+E\+CT&$<$7オプション \\
+S\+C\+E\+N\+E\+\_\+\+R18\+S\+E\+L\+E\+CT&8R18画像選択 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_SENSITIVITY@{SCENE\_SENSITIVITY}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_SENSITIVITY@{SCENE\_SENSITIVITY}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5aad429b81c763788cc2781c223f9f7eff}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5aad429b81c763788cc2781c223f9f7eff}} 
-S\+C\+E\+N\+E\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY&$<$8R18画像選択 \\
+S\+C\+E\+N\+E\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY&9オプション \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_TUTOSENSITIVITY@{SCENE\_TUTOSENSITIVITY}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_TUTOSENSITIVITY@{SCENE\_TUTOSENSITIVITY}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a76b78f9ca46653f9e00fd702231d92f0}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a76b78f9ca46653f9e00fd702231d92f0}} 
-S\+C\+E\+N\+E\+\_\+\+T\+U\+T\+O\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY&$<$9オプション \\
+S\+C\+E\+N\+E\+\_\+\+T\+U\+T\+O\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY&10オプション \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_CONTYPE@{SCENE\_CONTYPE}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_CONTYPE@{SCENE\_CONTYPE}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5ae3909716b82f5196c6501fb104ad0926}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5ae3909716b82f5196c6501fb104ad0926}} 
-S\+C\+E\+N\+E\+\_\+\+C\+O\+N\+T\+Y\+PE&$<$10オプション \\
+S\+C\+E\+N\+E\+\_\+\+C\+O\+N\+T\+Y\+PE&11オプション \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_TUTOCONTYPE@{SCENE\_TUTOCONTYPE}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_TUTOCONTYPE@{SCENE\_TUTOCONTYPE}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a0925f70069577e81c82684114dc838dd}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a0925f70069577e81c82684114dc838dd}} 
-S\+C\+E\+N\+E\+\_\+\+T\+U\+T\+O\+C\+O\+N\+T\+Y\+PE&$<$11オプション \\
+S\+C\+E\+N\+E\+\_\+\+T\+U\+T\+O\+C\+O\+N\+T\+Y\+PE&12チュートリアル中\+A/\+D設定 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_RESULT\_CLEAR@{SCENE\_RESULT\_CLEAR}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_RESULT\_CLEAR@{SCENE\_RESULT\_CLEAR}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a875be2003f8cc000586726e110e6fd54}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a875be2003f8cc000586726e110e6fd54}} 
-S\+C\+E\+N\+E\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+C\+L\+E\+AR&$<$12チュートリアル中\+A/\+D設定 \\
+S\+C\+E\+N\+E\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+C\+L\+E\+AR&13クリアスコア \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_RESULT\_FIELD@{SCENE\_RESULT\_FIELD}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_RESULT\_FIELD@{SCENE\_RESULT\_FIELD}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a475ee084205a8ad7772d8ac4450311b0}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a475ee084205a8ad7772d8ac4450311b0}} 
-S\+C\+E\+N\+E\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+F\+I\+E\+LD&$<$13クリアスコア \\
+S\+C\+E\+N\+E\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+F\+I\+E\+LD&14失敗スコア \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_REGISTER@{SCENE\_REGISTER}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_REGISTER@{SCENE\_REGISTER}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a6c1f9c459155a33c3efcb6b1c159aeae}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a6c1f9c459155a33c3efcb6b1c159aeae}} 
-S\+C\+E\+N\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER&$<$14失敗スコア \\
+S\+C\+E\+N\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER&15ランキング登録 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_RANKING@{SCENE\_RANKING}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_RANKING@{SCENE\_RANKING}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a02bd6ee78dad4d3e3381f56881bfe930}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a02bd6ee78dad4d3e3381f56881bfe930}} 
-S\+C\+E\+N\+E\+\_\+\+R\+A\+N\+K\+I\+NG&$<$15ランキング登録 \\
+S\+C\+E\+N\+E\+\_\+\+R\+A\+N\+K\+I\+NG&16ランキング表示 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE\_MAX@{SCENE\_MAX}!main.h@{main.h}}\index{main.h@{main.h}!SCENE\_MAX@{SCENE\_MAX}}}\mbox{\Hypertarget{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a32cc9ea92f2aaa519c3b008737ea7008}\label{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a32cc9ea92f2aaa519c3b008737ea7008}} 
-S\+C\+E\+N\+E\+\_\+\+M\+AX&$<$16ランキング表示 $<$17個 \\
+S\+C\+E\+N\+E\+\_\+\+M\+AX&17個 \\
 \hline
 
 \end{DoxyEnumFields}
@@ -2571,51 +2575,51 @@ T\+Y\+P\+E\+\_\+\+U\+FO&\\
 
 エネミーの描画種類 \begin{DoxyEnumFields}{列挙値}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN0@{ENEMY\_PATTERN0}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN0@{ENEMY\_PATTERN0}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a1cd3925993d1beccfe4b083ad2684a57}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a1cd3925993d1beccfe4b083ad2684a57}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N0&\\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N0&下向き1 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN1@{ENEMY\_PATTERN1}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN1@{ENEMY\_PATTERN1}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a458f0d6a67cced1e8888c44879e9a9d2}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a458f0d6a67cced1e8888c44879e9a9d2}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N1&$<$下向き1 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N1&下向き2 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN2@{ENEMY\_PATTERN2}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN2@{ENEMY\_PATTERN2}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3ad7e84155266431608bc7e0f40e536325}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3ad7e84155266431608bc7e0f40e536325}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N2&$<$下向き2 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N2&下向き3 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN3@{ENEMY\_PATTERN3}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN3@{ENEMY\_PATTERN3}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a695eb8480fda0f50c1b922198a766c8c}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a695eb8480fda0f50c1b922198a766c8c}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N3&$<$下向き3 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N3&左向き1 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN4@{ENEMY\_PATTERN4}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN4@{ENEMY\_PATTERN4}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a148f3c756da759f1d5b33faecc016dc6}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a148f3c756da759f1d5b33faecc016dc6}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N4&$<$左向き1 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N4&左向き2 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN5@{ENEMY\_PATTERN5}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN5@{ENEMY\_PATTERN5}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a3fbffd06a068c37e6c549eadb5f793ee}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a3fbffd06a068c37e6c549eadb5f793ee}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N5&$<$左向き2 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N5&左向き3 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN6@{ENEMY\_PATTERN6}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN6@{ENEMY\_PATTERN6}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3aaf6e2fbd3607cf0224ff9283a386fbb3}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3aaf6e2fbd3607cf0224ff9283a386fbb3}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N6&$<$左向き3 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N6&右向き1 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN7@{ENEMY\_PATTERN7}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN7@{ENEMY\_PATTERN7}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a55ea6784ee096278df4a2bdf00126e87}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a55ea6784ee096278df4a2bdf00126e87}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N7&$<$右向き1 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N7&右向き2 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN8@{ENEMY\_PATTERN8}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN8@{ENEMY\_PATTERN8}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a270bb63107237f8038bdd86596ef2746}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3a270bb63107237f8038bdd86596ef2746}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N8&$<$右向き2 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N8&右向き3 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN9@{ENEMY\_PATTERN9}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN9@{ENEMY\_PATTERN9}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3ab157963c1df6adcd350c8c5dcc21d4cc}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3ab157963c1df6adcd350c8c5dcc21d4cc}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N9&$<$右向き3 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N9&上向き1 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN10@{ENEMY\_PATTERN10}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN10@{ENEMY\_PATTERN10}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3afdc4242d80c03e30f6ffecd7f53786ba}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3afdc4242d80c03e30f6ffecd7f53786ba}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N10&$<$上向き1 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N10&上向き2 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY\_PATTERN11@{ENEMY\_PATTERN11}!main.h@{main.h}}\index{main.h@{main.h}!ENEMY\_PATTERN11@{ENEMY\_PATTERN11}}}\mbox{\Hypertarget{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3ae0a8d02ef37b5969f944c8943083f218}\label{main_8h_a7663d5a3932ccc2bd0ac63df6e4ba3d3ae0a8d02ef37b5969f944c8943083f218}} 
-E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N11&$<$上向き2 $<$上向き3 \\
+E\+N\+E\+M\+Y\+\_\+\+P\+A\+T\+T\+E\+R\+N11&上向き3 \\
 \hline
 
 \end{DoxyEnumFields}
@@ -2840,7 +2844,9 @@ T\+E\+X\+T\+\_\+\+D\+E\+A\+D\+B\+A\+LL&\\
 
 文字を表示する関数 Draw\+Text\+Type 
 
-打球方向判定用 Debugのみで使用 \mbox{\Hypertarget{main_8h_a842e90136051c7017ffc0cd8a009d8e8}\label{main_8h_a842e90136051c7017ffc0cd8a009d8e8}} 
+打球方向判定用 Debugのみで使用 被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{main_8h_a842e90136051c7017ffc0cd8a009d8e8}\label{main_8h_a842e90136051c7017ffc0cd8a009d8e8}} 
 \index{main.h@{main.h}!GetDevice@{GetDevice}}
 \index{GetDevice@{GetDevice}!main.h@{main.h}}
 \doxysubsubsection{\texorpdfstring{GetDevice()}{GetDevice()}}
@@ -2855,8 +2861,10 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9
 \end{DoxyReturn}
 
 
- main.\+cpp の 674 行目に定義があります。
+ main.\+cpp の 673 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 3
 \mbox{\Hypertarget{main_8h_a2f4d5784065e136715f8c631a3047296}\label{main_8h_a2f4d5784065e136715f8c631a3047296}} 
 \index{main.h@{main.h}!GetScene@{GetScene}}
 \index{GetScene@{GetScene}!main.h@{main.h}}
@@ -2872,8 +2880,10 @@ int 現在のゲームシーンを返す
 \end{DoxyReturn}
 ゲームシーンは\+E\+\_\+\+S\+T\+A\+G\+Eを参照 
 
- main.\+cpp の 743 行目に定義があります。
+ main.\+cpp の 742 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{main_8h_ad05ce539d29b849ef066482e2284a93f}\label{main_8h_ad05ce539d29b849ef066482e2284a93f}} 
 \index{main.h@{main.h}!InitGame@{InitGame}}
 \index{InitGame@{InitGame}!main.h@{main.h}}
@@ -2886,8 +2896,12 @@ int 現在のゲームシーンを返す
 
 ゲーム起動時に使用ゲームループ時に使用 
 
- main.\+cpp の 751 行目に定義があります。
+ main.\+cpp の 750 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{main_8h_ab40c9b58d2f95030bed4042b01daa738}\label{main_8h_ab40c9b58d2f95030bed4042b01daa738}} 
 \index{main.h@{main.h}!Random@{Random}}
 \index{Random@{Random}!main.h@{main.h}}
@@ -2908,8 +2922,10 @@ float エネミーの座標を返す
 \end{DoxyReturn}
 エネミーの初期座標で使用 
 
- main.\+cpp の 802 行目に定義があります。
+ main.\+cpp の 801 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 7
 \mbox{\Hypertarget{main_8h_a57ff12b0d1542af6658c910e648708fe}\label{main_8h_a57ff12b0d1542af6658c910e648708fe}} 
 \index{main.h@{main.h}!ReInitTuto@{ReInitTuto}}
 \index{ReInitTuto@{ReInitTuto}!main.h@{main.h}}
@@ -2922,8 +2938,12 @@ float エネミーの座標を返す
 
 ゲームループ時(ゲームループを一周するタイミング)に使用 
 
- main.\+cpp の 770 行目に定義があります。
+ main.\+cpp の 769 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9
 \mbox{\Hypertarget{main_8h_aac9a86ec3e028d2c2b88112484778a91}\label{main_8h_aac9a86ec3e028d2c2b88112484778a91}} 
 \index{main.h@{main.h}!SelectText@{SelectText}}
 \index{SelectText@{SelectText}!main.h@{main.h}}
@@ -2939,7 +2959,9 @@ float エネミーの座標を返す
 \mbox{\texttt{ in}}  & {\em moji} & 表示したい文字を入力\\
 \hline
 \end{DoxyParams}
-打球方向判定用 Debugのみで使用 \mbox{\Hypertarget{main_8h_aea6ddf2fe660e7a828633d13bf701837}\label{main_8h_aea6ddf2fe660e7a828633d13bf701837}} 
+打球方向判定用 Debugのみで使用 被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{main_8h_aea6ddf2fe660e7a828633d13bf701837}\label{main_8h_aea6ddf2fe660e7a828633d13bf701837}} 
 \index{main.h@{main.h}!SetScene@{SetScene}}
 \index{SetScene@{SetScene}!main.h@{main.h}}
 \doxysubsubsection{\texorpdfstring{SetScene()}{SetScene()}}
@@ -2956,8 +2978,10 @@ float エネミーの座標を返す
 \end{DoxyParams}
 ゲームシーンは\+E\+\_\+\+S\+T\+A\+G\+Eを参照 
 
- main.\+cpp の 735 行目に定義があります。
+ main.\+cpp の 734 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 11
 \mbox{\Hypertarget{main_8h_acbfad8d342da0fda946094f261f82d29}\label{main_8h_acbfad8d342da0fda946094f261f82d29}} 
 \index{main.h@{main.h}!UpdateReInit@{UpdateReInit}}
 \index{UpdateReInit@{UpdateReInit}!main.h@{main.h}}
@@ -2970,5 +2994,7 @@ float エネミーの座標を返す
 
 ゲームループ時に使用 
 
- main.\+cpp の 782 行目に定義があります。
+ main.\+cpp の 781 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 12

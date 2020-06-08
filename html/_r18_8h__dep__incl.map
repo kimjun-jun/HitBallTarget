@@ -1,5 +1,5 @@
-<map id="C:/Users/HP/source/Repos/HitBallTarget/R18.h" name="C:/Users/HP/source/Repos/HitBallTarget/R18.h">
-<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="69,5,248,47"/>
-<area shape="rect" id="node2" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,95,147,151"/>
-<area shape="rect" id="node3" href="$_r18_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="171,95,312,151"/>
+<map id="R18.h" name="R18.h">
+<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="63,5,119,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,80,80,107"/>
+<area shape="rect" id="node3" href="$_r18_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="105,80,175,107"/>
 </map>

@@ -2,39 +2,64 @@
 \label{struct_c_o_u_n_t_d_o_w_n}\index{COUNTDOWN@{COUNTDOWN}}
 
 
+2Dポリゴンを定義する構造体  
+
+
+
+
 {\ttfamily \#include $<$countdown.\+h$>$}
 
+
+
+C\+O\+U\+N\+T\+D\+O\+WN 連携図
+% FIG 0
 \doxysubsection*{フィールド}
 \begin{DoxyCompactItemize}
 \item 
 L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a968652fb6e6df6907925e0b3928718ed}{p\+D3\+D\+Texture}} = N\+U\+LL
-\item 
+\begin{DoxyCompactList}\small\item\em テクスチャへのポインタ \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_v_e_r_t_e_x__2_d}{V\+E\+R\+T\+E\+X\+\_\+2D}} \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a1c23b83889ffedf3a407650a9cbd19c0}{texture}} \mbox{[}\mbox{\hyperlink{main_8h_ab722cbfcd174beb57f5473d53f9767f7}{N\+U\+M\+\_\+\+V\+E\+R\+T\+EX}}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点情報格納ワーク \end{DoxyCompactList}\item 
 D3\+D\+X\+V\+E\+C\+T\+O\+R3 \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_aa2f4377dd4c2b687b1332058e7444852}{pos}}
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの座標 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a64e13bf4ce22e2542d46b75acdaa09dc}{n\+Count\+Anim}}
-\item 
+\begin{DoxyCompactList}\small\item\em アニメカウント \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_aa4184876750965413110c81b7fb486e3}{n\+Pattern\+Anim}}
-\item 
+\begin{DoxyCompactList}\small\item\em アニメパターン \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_ab99ee94fcb7fc8878f5bf58f1fc68b59}{changeval}}
-\item 
-int \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a0fd02fb9277ffcb35a75066ffe95e8c7}{color}}
-\item 
+\begin{DoxyCompactList}\small\item\em 変化量 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a98114e5c7c81b3f2003b0a4024bd41f7}{alpha}}
+\begin{DoxyCompactList}\small\item\em アルファ値 \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a5bb68602a18ad3eae31e576c10369fbd}{use}}
-\item 
+\begin{DoxyCompactList}\small\item\em 使用しているかどうか \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af}{signal}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 使用するか判定用フラグ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
+2Dポリゴンを定義する構造体 
 
+　 　 
 
- countdown.\+h の 30 行目に定義があります。
+ countdown.\+h の 35 行目に定義があります。
 
 
 
 \doxysubsection{フィールド詳解}
+\mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_a98114e5c7c81b3f2003b0a4024bd41f7}\label{struct_c_o_u_n_t_d_o_w_n_a98114e5c7c81b3f2003b0a4024bd41f7}} 
+\index{COUNTDOWN@{COUNTDOWN}!alpha@{alpha}}
+\index{alpha@{alpha}!COUNTDOWN@{COUNTDOWN}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily int alpha}
+
+
+
+アルファ値 
+
+
+
+ countdown.\+h の 43 行目に定義があります。
+
 \mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_ab99ee94fcb7fc8878f5bf58f1fc68b59}\label{struct_c_o_u_n_t_d_o_w_n_ab99ee94fcb7fc8878f5bf58f1fc68b59}} 
 \index{COUNTDOWN@{COUNTDOWN}!changeval@{changeval}}
 \index{changeval@{changeval}!COUNTDOWN@{COUNTDOWN}}
@@ -43,17 +68,11 @@ bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af
 
 
 
- countdown.\+h の 37 行目に定義があります。
-
-\mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_a0fd02fb9277ffcb35a75066ffe95e8c7}\label{struct_c_o_u_n_t_d_o_w_n_a0fd02fb9277ffcb35a75066ffe95e8c7}} 
-\index{COUNTDOWN@{COUNTDOWN}!color@{color}}
-\index{color@{color}!COUNTDOWN@{COUNTDOWN}}
-\doxysubsubsection{\texorpdfstring{color}{color}}
-{\footnotesize\ttfamily int color}
+変化量 
 
 
 
- countdown.\+h の 38 行目に定義があります。
+ countdown.\+h の 42 行目に定義があります。
 
 \mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_a64e13bf4ce22e2542d46b75acdaa09dc}\label{struct_c_o_u_n_t_d_o_w_n_a64e13bf4ce22e2542d46b75acdaa09dc}} 
 \index{COUNTDOWN@{COUNTDOWN}!nCountAnim@{nCountAnim}}
@@ -63,7 +82,11 @@ bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af
 
 
 
- countdown.\+h の 35 行目に定義があります。
+アニメカウント 
+
+
+
+ countdown.\+h の 40 行目に定義があります。
 
 \mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_aa4184876750965413110c81b7fb486e3}\label{struct_c_o_u_n_t_d_o_w_n_aa4184876750965413110c81b7fb486e3}} 
 \index{COUNTDOWN@{COUNTDOWN}!nPatternAnim@{nPatternAnim}}
@@ -73,7 +96,11 @@ bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af
 
 
 
- countdown.\+h の 36 行目に定義があります。
+アニメパターン 
+
+
+
+ countdown.\+h の 41 行目に定義があります。
 
 \mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_a968652fb6e6df6907925e0b3928718ed}\label{struct_c_o_u_n_t_d_o_w_n_a968652fb6e6df6907925e0b3928718ed}} 
 \index{COUNTDOWN@{COUNTDOWN}!pD3DTexture@{pD3DTexture}}
@@ -83,7 +110,11 @@ bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af
 
 
 
- countdown.\+h の 32 行目に定義があります。
+テクスチャへのポインタ 
+
+
+
+ countdown.\+h の 37 行目に定義があります。
 
 \mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_aa2f4377dd4c2b687b1332058e7444852}\label{struct_c_o_u_n_t_d_o_w_n_aa2f4377dd4c2b687b1332058e7444852}} 
 \index{COUNTDOWN@{COUNTDOWN}!pos@{pos}}
@@ -93,7 +124,11 @@ bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af
 
 
 
- countdown.\+h の 34 行目に定義があります。
+ポリゴンの座標 
+
+
+
+ countdown.\+h の 39 行目に定義があります。
 
 \mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af}\label{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af}} 
 \index{COUNTDOWN@{COUNTDOWN}!signal@{signal}}
@@ -103,7 +138,11 @@ bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af
 
 
 
- countdown.\+h の 40 行目に定義があります。
+使用するか判定用フラグ 
+
+
+
+ countdown.\+h の 45 行目に定義があります。
 
 \mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_a1c23b83889ffedf3a407650a9cbd19c0}\label{struct_c_o_u_n_t_d_o_w_n_a1c23b83889ffedf3a407650a9cbd19c0}} 
 \index{COUNTDOWN@{COUNTDOWN}!texture@{texture}}
@@ -113,7 +152,11 @@ bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af
 
 
 
- countdown.\+h の 33 行目に定義があります。
+頂点情報格納ワーク 
+
+
+
+ countdown.\+h の 38 行目に定義があります。
 
 \mbox{\Hypertarget{struct_c_o_u_n_t_d_o_w_n_a5bb68602a18ad3eae31e576c10369fbd}\label{struct_c_o_u_n_t_d_o_w_n_a5bb68602a18ad3eae31e576c10369fbd}} 
 \index{COUNTDOWN@{COUNTDOWN}!use@{use}}
@@ -123,7 +166,11 @@ bool \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n_a9f33e1e6178d39642860358c7e1704af
 
 
 
- countdown.\+h の 39 行目に定義があります。
+使用しているかどうか 
+
+
+
+ countdown.\+h の 44 行目に定義があります。
 
 
 

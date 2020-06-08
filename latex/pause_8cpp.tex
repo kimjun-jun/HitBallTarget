@@ -11,32 +11,34 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}pause.\+h\char`\"{}}\newline
+pause.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{pause_8cpp_ae5a9a12029cc4c7de4c205fc369ffcb6}{Make\+Vertex\+Pause}} (void)
-\item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{pause_8cpp_ae66b06f50177086e21533bff7d02a4f4}{Init\+Pause}} (int type)
-\item 
-void \mbox{\hyperlink{pause_8cpp_a537946a43abd9ac7619eb9850d8eaef2}{Re\+Init\+Pause}} (void)
-\item 
-void \mbox{\hyperlink{pause_8cpp_ada83ff87995fd1a4795fd393fed7acb5}{Uninit\+Pause}} (void)
-\item 
-void \mbox{\hyperlink{pause_8cpp_adeaa89ff0495f6a00c3c57f4fbefffe9}{Update\+Pause}} (void)
-\item 
-void \mbox{\hyperlink{pause_8cpp_aaa274a5c9e89219efa96675562b60015}{Update\+In\+Pause}} (void)
-\item 
-void \mbox{\hyperlink{pause_8cpp_a35d57e636bdbd888d0486a7652156a21}{Draw\+Pause}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点生成関数 Make\+Vertex\+Pause \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pause_8cpp_a72550634cd6c6a6291845f91e6437f6e}{Set\+Vertex\+Pause}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点設定関数 Set\+Vertex\+Pause \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{pause_8cpp_ae66b06f50177086e21533bff7d02a4f4}{Init\+Pause}} (int type)
+\begin{DoxyCompactList}\small\item\em Pause初期化関数 Init\+Pause \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8cpp_a537946a43abd9ac7619eb9850d8eaef2}{Re\+Init\+Pause}} (void)
+\begin{DoxyCompactList}\small\item\em Pause再初期化関数 Re\+Init\+Pause \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8cpp_ada83ff87995fd1a4795fd393fed7acb5}{Uninit\+Pause}} (void)
+\begin{DoxyCompactList}\small\item\em Pause開放関数 Uninit\+Pause \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8cpp_adeaa89ff0495f6a00c3c57f4fbefffe9}{Update\+Pause}} (void)
+\begin{DoxyCompactList}\small\item\em Pauseポーズシーン更新関数 Update\+Pause \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8cpp_aaa274a5c9e89219efa96675562b60015}{Update\+In\+Pause}} (void)
+\begin{DoxyCompactList}\small\item\em Pauseゲームシーン更新関数 Update\+In\+Pause \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8cpp_a35d57e636bdbd888d0486a7652156a21}{Draw\+Pause}} (void)
+\begin{DoxyCompactList}\small\item\em Pause描画関数 Draw\+Pause \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_p_a_u_s_e}{P\+A\+U\+SE}} $\ast$ \mbox{\hyperlink{pause_8cpp_a22e1a8e4343af4edbba4b2500b726009}{Get\+Pause}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pause取得関数 Get\+Pause \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_p_a_u_s_e}{P\+A\+U\+SE}} \mbox{\hyperlink{pause_8cpp_a2449c630ee2e7558747fbd2b1d0d634e}{g\+\_\+pause}} \mbox{[}\mbox{\hyperlink{pause_8h_ac0440a0793da9791f7487273d684b561}{P\+A\+U\+S\+E\+M\+AX}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 0はじめから、1あきらめる、2オプション 構造体変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -59,8 +61,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 183 行目に定義があります。
+Pause描画関数 Draw\+Pause 
 
+
+
+ pause.\+cpp の 193 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{pause_8cpp_a22e1a8e4343af4edbba4b2500b726009}\label{pause_8cpp_a22e1a8e4343af4edbba4b2500b726009}} 
 \index{pause.cpp@{pause.cpp}!GetPause@{GetPause}}
 \index{GetPause@{GetPause}!pause.cpp@{pause.cpp}}
@@ -69,7 +79,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 323 行目に定義があります。
+Pause取得関数 Get\+Pause 
+
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_p_a_u_s_e}{P\+A\+U\+SE}} 
+\end{DoxyReturn}
+
+
+ pause.\+cpp の 335 行目に定義があります。
 
 \mbox{\Hypertarget{pause_8cpp_ae66b06f50177086e21533bff7d02a4f4}\label{pause_8cpp_ae66b06f50177086e21533bff7d02a4f4}} 
 \index{pause.cpp@{pause.cpp}!InitPause@{InitPause}}
@@ -79,8 +96,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 29 行目に定義があります。
+Pause初期化関数 Init\+Pause 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ pause.\+cpp の 38 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{pause_8cpp_ae5a9a12029cc4c7de4c205fc369ffcb6}\label{pause_8cpp_ae5a9a12029cc4c7de4c205fc369ffcb6}} 
 \index{pause.cpp@{pause.cpp}!MakeVertexPause@{MakeVertexPause}}
 \index{MakeVertexPause@{MakeVertexPause}!pause.cpp@{pause.cpp}}
@@ -89,7 +122,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 204 行目に定義があります。
+頂点生成関数 Make\+Vertex\+Pause 
+
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ pause.\+cpp の 214 行目に定義があります。
 
 \mbox{\Hypertarget{pause_8cpp_a537946a43abd9ac7619eb9850d8eaef2}\label{pause_8cpp_a537946a43abd9ac7619eb9850d8eaef2}} 
 \index{pause.cpp@{pause.cpp}!ReInitPause@{ReInitPause}}
@@ -99,8 +139,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 61 行目に定義があります。
+Pause再初期化関数 Re\+Init\+Pause 
 
+
+
+ pause.\+cpp の 70 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{pause_8cpp_a72550634cd6c6a6291845f91e6437f6e}\label{pause_8cpp_a72550634cd6c6a6291845f91e6437f6e}} 
 \index{pause.cpp@{pause.cpp}!SetVertexPause@{SetVertexPause}}
 \index{SetVertexPause@{SetVertexPause}!pause.cpp@{pause.cpp}}
@@ -109,7 +155,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 257 行目に定義があります。
+頂点設定関数 Set\+Vertex\+Pause 
+
+
+
+ pause.\+cpp の 267 行目に定義があります。
 
 \mbox{\Hypertarget{pause_8cpp_ada83ff87995fd1a4795fd393fed7acb5}\label{pause_8cpp_ada83ff87995fd1a4795fd393fed7acb5}} 
 \index{pause.cpp@{pause.cpp}!UninitPause@{UninitPause}}
@@ -119,8 +169,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 72 行目に定義があります。
+Pause開放関数 Uninit\+Pause 
 
+
+
+ pause.\+cpp の 81 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{pause_8cpp_aaa274a5c9e89219efa96675562b60015}\label{pause_8cpp_aaa274a5c9e89219efa96675562b60015}} 
 \index{pause.cpp@{pause.cpp}!UpdateInPause@{UpdateInPause}}
 \index{UpdateInPause@{UpdateInPause}!pause.cpp@{pause.cpp}}
@@ -129,8 +185,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 172 行目に定義があります。
+Pauseゲームシーン更新関数 Update\+In\+Pause 
 
+
+
+ pause.\+cpp の 181 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
 \mbox{\Hypertarget{pause_8cpp_adeaa89ff0495f6a00c3c57f4fbefffe9}\label{pause_8cpp_adeaa89ff0495f6a00c3c57f4fbefffe9}} 
 \index{pause.cpp@{pause.cpp}!UpdatePause@{UpdatePause}}
 \index{UpdatePause@{UpdatePause}!pause.cpp@{pause.cpp}}
@@ -139,8 +203,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 87 行目に定義があります。
+Pauseポーズシーン更新関数 Update\+Pause 
 
+
+
+ pause.\+cpp の 96 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10
 
 
 \doxysubsection{変数詳解}
@@ -152,5 +224,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- pause.\+cpp の 22 行目に定義があります。
+0はじめから、1あきらめる、2オプション 構造体変数 
+
+
+
+ pause.\+cpp の 31 行目に定義があります。
 

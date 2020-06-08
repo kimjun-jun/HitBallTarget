@@ -1,4 +1,4 @@
 <map id="ReInitBG" name="ReInitBG">
-<area shape="rect" id="node1" title=" " alt="" coords="149,5,224,32"/>
-<area shape="rect" id="node2" href="$main_8h.html#acbfad8d342da0fda946094f261f82d29" title=" " alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node1" title="BG再初期化関数 ReInitBG" alt="" coords="149,5,224,32"/>
+<area shape="rect" id="node2" href="$main_8h.html#acbfad8d342da0fda946094f261f82d29" title="アップデートを再初期化する関数 UpdateReInit" alt="" coords="5,5,101,32"/>
 </map>

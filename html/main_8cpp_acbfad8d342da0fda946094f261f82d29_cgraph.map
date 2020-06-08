@@ -1,25 +1,24 @@
 <map id="UpdateReInit" name="UpdateReInit">
-<area shape="rect" id="node1" title=" " alt="" coords="5,309,101,336"/>
-<area shape="rect" id="node2" href="$ball_8cpp.html#afbaa27b368e6ea70f5e6914e4d83c8a9" title=" " alt="" coords="170,5,247,32"/>
-<area shape="rect" id="node4" href="$bg_8cpp.html#af2b67a62aedae0afe79fd845316a4860" title=" " alt="" coords="171,56,246,83"/>
-<area shape="rect" id="node5" href="$controltype_8cpp.html#a4321c3af52f5bb9370a1185f0c2ddb91" title=" " alt="" coords="157,107,260,133"/>
-<area shape="rect" id="node6" href="$countdown_8cpp.html#aac192d6b1434916e9549d67b4c0c583c" title=" " alt="" coords="149,157,268,184"/>
-<area shape="rect" id="node7" href="$enemy_8cpp.html#aa4cc6674e21c8a9374fbd4c06ed46cf3" title=" " alt="" coords="161,208,257,235"/>
-<area shape="rect" id="node16" href="$option_8cpp.html#a5ac3758e958820d11205e5f43c3dd271" title=" " alt="" coords="162,259,255,285"/>
-<area shape="rect" id="node17" href="$pause_8cpp.html#a537946a43abd9ac7619eb9850d8eaef2" title=" " alt="" coords="163,309,255,336"/>
-<area shape="rect" id="node18" href="$player_8cpp.html#aec81addf7089fd7ec8344da9df5cbcc1" title=" " alt="" coords="163,360,255,387"/>
-<area shape="rect" id="node19" href="$_r18_8cpp.html#ac76d0676ddcc58c9aaf67f539a937cee" title=" " alt="" coords="152,411,265,437"/>
-<area shape="rect" id="node20" href="$score_8cpp.html#a12066b84969d7a689e032b34d7f1faf3" title=" " alt="" coords="164,461,253,488"/>
-<area shape="rect" id="node21" href="$sensitivity_8cpp.html#a82e894bbae7ea98dd0a514ffa0457248" title=" " alt="" coords="151,512,266,539"/>
-<area shape="rect" id="node22" href="$tutomenu_8cpp.html#af56322473c6154c8b72d1fa732699f70" title=" " alt="" coords="153,563,265,589"/>
-<area shape="rect" id="node23" href="$ui_8cpp.html#a693e48dd0a10a6958c8854a9a39ec3da" title=" " alt="" coords="175,613,242,640"/>
-<area shape="rect" id="node3" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title=" " alt="" coords="331,5,434,32"/>
-<area shape="rect" id="node8" href="$enemy_8cpp.html#a2f85c07c236b613aab7f84d1caa59714" title=" " alt="" coords="351,81,414,108"/>
-<area shape="rect" id="node9" href="$score_8cpp.html#abf881b5949ff5ff570eb4ff26519a9c5" title=" " alt="" coords="344,132,421,159"/>
-<area shape="rect" id="node10" href="$select_8cpp.html#a1a3e897892ccc68c190802d7bfc1771e" title=" " alt="" coords="346,183,419,209"/>
-<area shape="rect" id="node11" href="$enemy_8cpp.html#a77df063189b82e66f7c7834f07e0519d" title=" " alt="" coords="316,233,449,260"/>
-<area shape="rect" id="node14" href="$main_8cpp.html#ab40c9b58d2f95030bed4042b01daa738" title=" " alt="" coords="347,284,418,311"/>
-<area shape="rect" id="node15" href="$enemy_8cpp.html#ac0514dda2a81a53310583c4e53cc155c" title=" " alt="" coords="319,335,446,361"/>
-<area shape="rect" id="node12" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="簡単な説明（〜する関数）" alt="" coords="517,208,599,235"/>
-<area shape="rect" id="node13" href="$enemy_8cpp.html#a646d02d9b20df56edb99b9ff3c7a4890" title=" " alt="" coords="497,259,619,285"/>
+<area shape="rect" id="node1" title="アップデートを再初期化する関数 UpdateReInit" alt="" coords="5,309,101,336"/>
+<area shape="rect" id="node2" href="$ball_8cpp.html#afbaa27b368e6ea70f5e6914e4d83c8a9" title="Ball再初期化関数 ReInitBall" alt="" coords="170,5,247,32"/>
+<area shape="rect" id="node4" href="$bg_8cpp.html#af2b67a62aedae0afe79fd845316a4860" title="BG再初期化関数 ReInitBG" alt="" coords="171,56,246,83"/>
+<area shape="rect" id="node5" href="$controltype_8cpp.html#a4321c3af52f5bb9370a1185f0c2ddb91" title="コントロールタイプ画僧再初期化関数 ReInitContype" alt="" coords="157,107,260,133"/>
+<area shape="rect" id="node6" href="$countdown_8cpp.html#aac192d6b1434916e9549d67b4c0c583c" title="Countdown再初期化関数 ReInitCountdown" alt="" coords="149,157,268,184"/>
+<area shape="rect" id="node7" href="$enemy_8cpp.html#aa4cc6674e21c8a9374fbd4c06ed46cf3" title="Enemy再初期化関数 ReInitEnemy" alt="" coords="161,208,257,235"/>
+<area shape="rect" id="node15" href="$meetstrike_8cpp.html#a74845328d2e102666e16a6025957d352" title="MeetStrike再初期化関数 ReInitMeetStrike" alt="" coords="149,259,268,285"/>
+<area shape="rect" id="node16" href="$option_8cpp.html#a5ac3758e958820d11205e5f43c3dd271" title="Option再初期化関数 ReInitOption" alt="" coords="162,309,255,336"/>
+<area shape="rect" id="node17" href="$pause_8cpp.html#a537946a43abd9ac7619eb9850d8eaef2" title="Pause再初期化関数 ReInitPause" alt="" coords="163,360,255,387"/>
+<area shape="rect" id="node18" href="$player_8cpp.html#aec81addf7089fd7ec8344da9df5cbcc1" title="Player再初期化関数 ReInitPlayer" alt="" coords="163,411,255,437"/>
+<area shape="rect" id="node19" href="$_r18_8cpp.html#ac76d0676ddcc58c9aaf67f539a937cee" title="R18再初期化関数 ReInitR18select" alt="" coords="152,461,265,488"/>
+<area shape="rect" id="node20" href="$score_8cpp.html#a12066b84969d7a689e032b34d7f1faf3" title="Score再初期化関数 ReInitScore" alt="" coords="164,512,253,539"/>
+<area shape="rect" id="node21" href="$sensitivity_8cpp.html#a82e894bbae7ea98dd0a514ffa0457248" title="Sensitivity再初期化関数 ReInitSensitivity" alt="" coords="151,563,266,589"/>
+<area shape="rect" id="node22" href="$tutomenu_8cpp.html#af56322473c6154c8b72d1fa732699f70" title="Tutomenu再初期化関数 ReInitTutomenu" alt="" coords="153,613,265,640"/>
+<area shape="rect" id="node3" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title="ポリゴン頂点設定関数 SetVertexBall" alt="" coords="331,5,434,32"/>
+<area shape="rect" id="node8" href="$enemy_8cpp.html#a2f85c07c236b613aab7f84d1caa59714" title="Enemy取得関数 GetCat" alt="" coords="351,107,414,133"/>
+<area shape="rect" id="node9" href="$score_8cpp.html#abf881b5949ff5ff570eb4ff26519a9c5" title="Score取得関数 GetScore" alt="" coords="344,157,421,184"/>
+<area shape="rect" id="node10" href="$enemy_8cpp.html#aed879684bcba798be3e45016b5c14188" title="ポリゴン頂点生成関数 MakeVertexEnemy" alt="" coords="316,208,449,235"/>
+<area shape="rect" id="node13" href="$main_8cpp.html#ab40c9b58d2f95030bed4042b01daa738" title="任意のランダム数値を決める関数 Random" alt="" coords="347,259,418,285"/>
+<area shape="rect" id="node14" href="$enemy_8cpp.html#a010266340adc7c64ce8d21fd154e405e" title="テクスチャ設定関数 SetTextureEnemy" alt="" coords="319,309,446,336"/>
+<area shape="rect" id="node11" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="517,183,599,209"/>
+<area shape="rect" id="node12" href="$enemy_8cpp.html#a42bbca13b2264d8c6ffd945658e55b2f" title="ポリゴン頂点設定関数 SetVertexEnemy" alt="" coords="497,233,619,260"/>
 </map>

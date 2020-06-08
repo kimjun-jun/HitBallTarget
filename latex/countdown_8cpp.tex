@@ -10,34 +10,36 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}select.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}countdown.\+h\char`\"{}}\newline
+countdown.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{countdown_8cpp_af70c486b3eb8b568e853e60525d53359}{Make\+Vertex\+Countdown}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点生成関数 Make\+Vertex\+Countdown \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{countdown_8cpp_ac6ff1fbe3abe9d43ea582102a75f3e35}{Set\+Texture\+Countdown}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em テクスチャ設定関数 Set\+Texture\+Countdown \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{countdown_8cpp_a1ae8dbebea749b7cdd7b89bb974234ab}{Set\+Vertex\+Countdown}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点設定関数 Set\+Vertex\+Countdown \end{DoxyCompactList}\item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{countdown_8cpp_ad8bce4dc816f260f2c238cb1a887ef97}{Init\+Countdown}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em Countdown初期化関数 Init\+Countdown \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{countdown_8cpp_aac192d6b1434916e9549d67b4c0c583c}{Re\+Init\+Countdown}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Countdown再初期化関数 Re\+Init\+Countdown \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{countdown_8cpp_a2f8e049bd6f1b17ac246d68de55aa8d4}{Uninit\+Countdown}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Countdown開放関数 Uninit\+Countdown \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{countdown_8cpp_aba153798b82da187b7ead867025ea781}{Update\+Countdown}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Countdown更新関数 Update\+Countdown \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{countdown_8cpp_ad09d58695ebf88fae8701621a81e0ab4}{Draw\+Countdown}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Countdown描画関数 Draw\+Countdown \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n}{C\+O\+U\+N\+T\+D\+O\+WN}} $\ast$ \mbox{\hyperlink{countdown_8cpp_adbc48d9966612d88c33a4c30a8a76378}{Get\+Countdown}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Countdown取得関数 Get\+Countdown \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{countdown_8cpp_a1f6b7968a018f0f9ffa47a51e25abc7a}{Add\+Countdown}} (int val)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Countdown取得関数 Add\+Countdown \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n}{C\+O\+U\+N\+T\+D\+O\+WN}} \mbox{\hyperlink{countdown_8cpp_a73f096400e3e0365ab93f9ea78c458fc}{g\+\_\+countdown}} \mbox{[}\mbox{\hyperlink{countdown_8h_a9966c5658e8f666e6528f42d5a1d203e}{C\+O\+U\+N\+T\+D\+O\+W\+N\+\_\+\+G\+O\+U\+K\+EI}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 0カウントダウン値,1スタート\+L\+O\+GO 構造体変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -60,8 +62,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 261 行目に定義があります。
+Countdown取得関数 Add\+Countdown 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em val} & 減算値 \\
+\hline
+\end{DoxyParams}
+
+
+ countdown.\+cpp の 265 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
 \mbox{\Hypertarget{countdown_8cpp_ad09d58695ebf88fae8701621a81e0ab4}\label{countdown_8cpp_ad09d58695ebf88fae8701621a81e0ab4}} 
 \index{countdown.cpp@{countdown.cpp}!DrawCountdown@{DrawCountdown}}
 \index{DrawCountdown@{DrawCountdown}!countdown.cpp@{countdown.cpp}}
@@ -70,8 +83,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 128 行目に定義があります。
+Countdown描画関数 Draw\+Countdown 
 
+
+
+ countdown.\+cpp の 134 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 2
+被呼び出し関係図\+:
+% FIG 3
 \mbox{\Hypertarget{countdown_8cpp_adbc48d9966612d88c33a4c30a8a76378}\label{countdown_8cpp_adbc48d9966612d88c33a4c30a8a76378}} 
 \index{countdown.cpp@{countdown.cpp}!GetCountdown@{GetCountdown}}
 \index{GetCountdown@{GetCountdown}!countdown.cpp@{countdown.cpp}}
@@ -80,7 +101,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 253 行目に定義があります。
+Countdown取得関数 Get\+Countdown 
+
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n}{C\+O\+U\+N\+T\+D\+O\+WN}} 
+\end{DoxyReturn}
+
+
+ countdown.\+cpp の 257 行目に定義があります。
 
 \mbox{\Hypertarget{countdown_8cpp_ad8bce4dc816f260f2c238cb1a887ef97}\label{countdown_8cpp_ad8bce4dc816f260f2c238cb1a887ef97}} 
 \index{countdown.cpp@{countdown.cpp}!InitCountdown@{InitCountdown}}
@@ -90,8 +118,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 36 行目に定義があります。
+Countdown初期化関数 Init\+Countdown 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ countdown.\+cpp の 43 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 4
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{countdown_8cpp_af70c486b3eb8b568e853e60525d53359}\label{countdown_8cpp_af70c486b3eb8b568e853e60525d53359}} 
 \index{countdown.cpp@{countdown.cpp}!MakeVertexCountdown@{MakeVertexCountdown}}
 \index{MakeVertexCountdown@{MakeVertexCountdown}!countdown.cpp@{countdown.cpp}}
@@ -100,8 +144,17 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 149 行目に定義があります。
+頂点生成関数 Make\+Vertex\+Countdown 
 
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ countdown.\+cpp の 155 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{countdown_8cpp_aac192d6b1434916e9549d67b4c0c583c}\label{countdown_8cpp_aac192d6b1434916e9549d67b4c0c583c}} 
 \index{countdown.cpp@{countdown.cpp}!ReInitCountdown@{ReInitCountdown}}
 \index{ReInitCountdown@{ReInitCountdown}!countdown.cpp@{countdown.cpp}}
@@ -110,8 +163,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 73 行目に定義があります。
+Countdown再初期化関数 Re\+Init\+Countdown 
 
+
+
+ countdown.\+cpp の 80 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
 \mbox{\Hypertarget{countdown_8cpp_ac6ff1fbe3abe9d43ea582102a75f3e35}\label{countdown_8cpp_ac6ff1fbe3abe9d43ea582102a75f3e35}} 
 \index{countdown.cpp@{countdown.cpp}!SetTextureCountdown@{SetTextureCountdown}}
 \index{SetTextureCountdown@{SetTextureCountdown}!countdown.cpp@{countdown.cpp}}
@@ -120,8 +179,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 183 行目に定義があります。
+テクスチャ設定関数 Set\+Texture\+Countdown 
 
+
+
+ countdown.\+cpp の 189 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
 \mbox{\Hypertarget{countdown_8cpp_a1ae8dbebea749b7cdd7b89bb974234ab}\label{countdown_8cpp_a1ae8dbebea749b7cdd7b89bb974234ab}} 
 \index{countdown.cpp@{countdown.cpp}!SetVertexCountdown@{SetVertexCountdown}}
 \index{SetVertexCountdown@{SetVertexCountdown}!countdown.cpp@{countdown.cpp}}
@@ -130,8 +195,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 220 行目に定義があります。
+頂点設定関数 Set\+Vertex\+Countdown 
 
+
+
+ countdown.\+cpp の 224 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9
 \mbox{\Hypertarget{countdown_8cpp_a2f8e049bd6f1b17ac246d68de55aa8d4}\label{countdown_8cpp_a2f8e049bd6f1b17ac246d68de55aa8d4}} 
 \index{countdown.cpp@{countdown.cpp}!UninitCountdown@{UninitCountdown}}
 \index{UninitCountdown@{UninitCountdown}!countdown.cpp@{countdown.cpp}}
@@ -140,8 +211,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 96 行目に定義があります。
+Countdown開放関数 Uninit\+Countdown 
 
+
+
+ countdown.\+cpp の 102 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
 \mbox{\Hypertarget{countdown_8cpp_aba153798b82da187b7ead867025ea781}\label{countdown_8cpp_aba153798b82da187b7ead867025ea781}} 
 \index{countdown.cpp@{countdown.cpp}!UpdateCountdown@{UpdateCountdown}}
 \index{UpdateCountdown@{UpdateCountdown}!countdown.cpp@{countdown.cpp}}
@@ -150,8 +227,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 112 行目に定義があります。
+Countdown更新関数 Update\+Countdown 
 
+
+
+ countdown.\+cpp の 118 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12
 
 
 \doxysubsection{変数詳解}
@@ -163,5 +248,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- countdown.\+cpp の 28 行目に定義があります。
+0カウントダウン値,1スタート\+L\+O\+GO 構造体変数 
+
+
+
+ countdown.\+cpp の 35 行目に定義があります。
 

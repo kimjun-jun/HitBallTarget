@@ -1,16 +1,16 @@
 <map id="SetVertexBall" name="SetVertexBall">
-<area shape="rect" id="node1" title=" " alt="" coords="840,81,943,108"/>
-<area shape="rect" id="node2" href="$game_8h.html#a2d18b2f0dfec93f9d693f70e700b0917" title=" " alt="" coords="258,56,317,83"/>
-<area shape="rect" id="node5" href="$ball_8h.html#a70431ba1be68be65354d5c918c50de10" title=" " alt="" coords="677,183,792,209"/>
-<area shape="rect" id="node10" href="$ball_8h.html#afbaa27b368e6ea70f5e6914e4d83c8a9" title=" " alt="" coords="696,107,773,133"/>
-<area shape="rect" id="node14" href="$ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title=" " alt="" coords="393,5,478,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title=" " alt="" coords="127,132,189,159"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,183,79,209"/>
-<area shape="rect" id="node6" href="$ball_8h.html#a038bc4306b19c4f88bb5dfc240f640f8" title=" " alt="" coords="551,208,612,235"/>
-<area shape="rect" id="node7" href="$main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title=" " alt="" coords="139,233,177,260"/>
-<area shape="rect" id="node8" href="$main_8h.html#ad05ce539d29b849ef066482e2284a93f" title=" " alt="" coords="398,208,473,235"/>
-<area shape="rect" id="node9" href="$result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title=" " alt="" coords="237,208,337,235"/>
-<area shape="rect" id="node11" href="$main_8h.html#a57ff12b0d1542af6658c910e648708fe" title=" " alt="" coords="541,157,621,184"/>
-<area shape="rect" id="node13" href="$main_8h.html#acbfad8d342da0fda946094f261f82d29" title=" " alt="" coords="533,107,629,133"/>
-<area shape="rect" id="node12" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title=" " alt="" coords="385,132,485,159"/>
+<area shape="rect" id="node1" title="ポリゴン頂点設定関数 SetVertexBall" alt="" coords="840,81,943,108"/>
+<area shape="rect" id="node2" href="$game_8h.html#a2d18b2f0dfec93f9d693f70e700b0917" title="打球処理関数 Hitball" alt="" coords="258,56,317,83"/>
+<area shape="rect" id="node5" href="$ball_8cpp.html#a70431ba1be68be65354d5c918c50de10" title="ポリゴン頂点生成関数 MakeVertexBall" alt="" coords="677,183,792,209"/>
+<area shape="rect" id="node10" href="$ball_8h.html#afbaa27b368e6ea70f5e6914e4d83c8a9" title="Ball再初期化関数 ReInitBall" alt="" coords="696,107,773,133"/>
+<area shape="rect" id="node14" href="$ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title="Ball更新関数 UpdateBall" alt="" coords="393,5,478,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,132,189,159"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,183,79,209"/>
+<area shape="rect" id="node6" href="$ball_8h.html#a038bc4306b19c4f88bb5dfc240f640f8" title="Ball初期化関数 InitBall" alt="" coords="551,208,612,235"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="139,233,177,260"/>
+<area shape="rect" id="node8" href="$main_8h.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="398,208,473,235"/>
+<area shape="rect" id="node9" href="$result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="237,208,337,235"/>
+<area shape="rect" id="node11" href="$main_8h.html#a57ff12b0d1542af6658c910e648708fe" title="ゲームを再初期化する関数 ReInitTuto" alt="" coords="541,157,621,184"/>
+<area shape="rect" id="node13" href="$main_8h.html#acbfad8d342da0fda946094f261f82d29" title="アップデートを再初期化する関数 UpdateReInit" alt="" coords="533,107,629,133"/>
+<area shape="rect" id="node12" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="385,132,485,159"/>
 </map>

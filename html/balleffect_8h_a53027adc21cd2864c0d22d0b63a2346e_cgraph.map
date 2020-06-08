@@ -1,5 +1,5 @@
 <map id="DrawBalleffect" name="DrawBalleffect">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,109,57"/>
-<area shape="rect" id="node2" href="$ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title=" " alt="" coords="165,5,231,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="簡単な説明（〜する関数）" alt="" coords="157,56,239,83"/>
+<area shape="rect" id="node1" title="Balleffect描画関数 DrawBalleffect" alt="" coords="5,31,109,57"/>
+<area shape="rect" id="node2" href="$ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="165,5,231,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="157,56,239,83"/>
 </map>

@@ -10,24 +10,26 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}input.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}fade.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
+tutorial.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{tutorial_8cpp_af5d076b9f91b74336989c9d3a75e401d}{Make\+Vertex\+Tutorial}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点生成関数 Make\+Vertex\+Tutorial \end{DoxyCompactList}\item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{tutorial_8cpp_aaa2d1b8ac685914afebe3e82c1b1ac2e}{Init\+Tutorial}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em Tutorial初期化関数 Init\+Tutorial \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tutorial_8cpp_a058358e7d137ab70c87afb03e5d7d2b5}{Uninit\+Tutorial}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Tutorial開放関数 Uninit\+Tutorial \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tutorial_8cpp_aae38531299a96a60f0d7910f3f9d4117}{Update\+Tutorial}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Tutorial更新関数 Update\+Tutorial \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tutorial_8cpp_aca6bf215ebf295b3c4f7249e7f9f57f0}{Draw\+Tutorial}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Tutorial描画関数 Draw\+Tutorial \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_t_u_t_o}{T\+U\+TO}} \mbox{\hyperlink{tutorial_8cpp_a392dbf79baf8fc50a846f4fce3bf90ae}{tuto}} \mbox{[}\mbox{\hyperlink{tutorial_8h_acdbcde5c9a9ec6df730ced8fd87a2b42}{T\+U\+T\+O\+R\+I\+A\+L\+\_\+\+G\+O\+U\+K\+EI}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 0ルール,1キーボード操作方法,2ゲームパッド操作方法 構造体変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -50,8 +52,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutorial.\+cpp の 94 行目に定義があります。
+Tutorial描画関数 Draw\+Tutorial 
 
+
+
+ tutorial.\+cpp の 98 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{tutorial_8cpp_aaa2d1b8ac685914afebe3e82c1b1ac2e}\label{tutorial_8cpp_aaa2d1b8ac685914afebe3e82c1b1ac2e}} 
 \index{tutorial.cpp@{tutorial.cpp}!InitTutorial@{InitTutorial}}
 \index{InitTutorial@{InitTutorial}!tutorial.cpp@{tutorial.cpp}}
@@ -60,8 +70,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutorial.\+cpp の 27 行目に定義があります。
+Tutorial初期化関数 Init\+Tutorial 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ tutorial.\+cpp の 31 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{tutorial_8cpp_af5d076b9f91b74336989c9d3a75e401d}\label{tutorial_8cpp_af5d076b9f91b74336989c9d3a75e401d}} 
 \index{tutorial.cpp@{tutorial.cpp}!MakeVertexTutorial@{MakeVertexTutorial}}
 \index{MakeVertexTutorial@{MakeVertexTutorial}!tutorial.cpp@{tutorial.cpp}}
@@ -70,7 +96,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutorial.\+cpp の 127 行目に定義があります。
+頂点生成関数 Make\+Vertex\+Tutorial 
+
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ tutorial.\+cpp の 131 行目に定義があります。
 
 \mbox{\Hypertarget{tutorial_8cpp_a058358e7d137ab70c87afb03e5d7d2b5}\label{tutorial_8cpp_a058358e7d137ab70c87afb03e5d7d2b5}} 
 \index{tutorial.cpp@{tutorial.cpp}!UninitTutorial@{UninitTutorial}}
@@ -80,8 +113,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutorial.\+cpp の 56 行目に定義があります。
+Tutorial開放関数 Uninit\+Tutorial 
 
+
+
+ tutorial.\+cpp の 60 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{tutorial_8cpp_aae38531299a96a60f0d7910f3f9d4117}\label{tutorial_8cpp_aae38531299a96a60f0d7910f3f9d4117}} 
 \index{tutorial.cpp@{tutorial.cpp}!UpdateTutorial@{UpdateTutorial}}
 \index{UpdateTutorial@{UpdateTutorial}!tutorial.cpp@{tutorial.cpp}}
@@ -90,8 +129,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutorial.\+cpp の 78 行目に定義があります。
+Tutorial更新関数 Update\+Tutorial 
 
+
+
+ tutorial.\+cpp の 82 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 6
+被呼び出し関係図\+:
+% FIG 7
 
 
 \doxysubsection{変数詳解}
@@ -103,5 +150,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutorial.\+cpp の 21 行目に定義があります。
+0ルール,1キーボード操作方法,2ゲームパッド操作方法 構造体変数 
+
+
+
+ tutorial.\+cpp の 25 行目に定義があります。
 

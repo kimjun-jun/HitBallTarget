@@ -1,12 +1,12 @@
 <map id="GetPlayerBat" name="GetPlayerBat">
-<area shape="rect" id="node1" title=" " alt="" coords="500,107,600,133"/>
-<area shape="rect" id="node2" href="$game_8h.html#ae81d6a63aece63e1779d8bf648ccd582" title=" " alt="" coords="397,56,441,83"/>
-<area shape="rect" id="node6" href="$game_8h.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title=" " alt="" coords="397,5,440,32"/>
-<area shape="rect" id="node8" href="$collision_8h.html#a102771cfc2ed7cee53e1d05ff7b34d53" title=" " alt="" coords="250,107,325,133"/>
-<area shape="rect" id="node9" href="$game_8h.html#a2d18b2f0dfec93f9d693f70e700b0917" title=" " alt="" coords="258,157,317,184"/>
-<area shape="rect" id="node10" href="$collision_8h.html#a32a68d055020250a22ce0d35107377d3" title=" " alt="" coords="385,107,452,133"/>
-<area shape="rect" id="node3" href="$ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title=" " alt="" coords="245,56,330,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title=" " alt="" coords="127,81,189,108"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,81,79,108"/>
-<area shape="rect" id="node7" href="$player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title=" " alt="" coords="237,5,337,32"/>
+<area shape="rect" id="node1" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="500,107,600,133"/>
+<area shape="rect" id="node2" href="$game_8h.html#ae81d6a63aece63e1779d8bf648ccd582" title="投球処理関数 Ball" alt="" coords="397,107,441,133"/>
+<area shape="rect" id="node6" href="$game_8h.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title="バッター処理関数 Bat" alt="" coords="397,5,440,32"/>
+<area shape="rect" id="node8" href="$collision_8h.html#a102771cfc2ed7cee53e1d05ff7b34d53" title="当たり判定確認関数 CheakHit" alt="" coords="250,56,325,83"/>
+<area shape="rect" id="node9" href="$game_8h.html#a2d18b2f0dfec93f9d693f70e700b0917" title="打球処理関数 Hitball" alt="" coords="258,157,317,184"/>
+<area shape="rect" id="node10" href="$collision_8h.html#a32a68d055020250a22ce0d35107377d3" title="ボールループの初期化関数 LoopInit" alt="" coords="385,157,452,184"/>
+<area shape="rect" id="node3" href="$ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title="Ball更新関数 UpdateBall" alt="" coords="245,107,330,133"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,81,189,108"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,81,79,108"/>
+<area shape="rect" id="node7" href="$player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="237,5,337,32"/>
 </map>

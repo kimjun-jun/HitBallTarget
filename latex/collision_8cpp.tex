@@ -9,23 +9,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}enemy.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}meetstrike.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}fade.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}score.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}effect.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}collision.\+h\char`\"{}}\newline
+collision.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{collision_8cpp_a95f2043194966afc193cb3c2f84b972c}{Collision\+BB}} (D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos1, float h1, float w1, D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos2, float h2, float w2)
-\item 
+\begin{DoxyCompactList}\small\item\em 当たり判定\+B\+B関数 Collision\+BB \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{collision_8cpp_a6045e538566a6d5fc2519a01d636f6ec}{Collision\+BC}} (D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos1, float r1, D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos2, float r2)
-\item 
+\begin{DoxyCompactList}\small\item\em 当たり判定\+B\+C関数 Collision\+BC \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{collision_8cpp_a102771cfc2ed7cee53e1d05ff7b34d53}{Cheak\+Hit}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 当たり判定確認関数 Cheak\+Hit \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{collision_8cpp_a32a68d055020250a22ce0d35107377d3}{Loop\+Init}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ボールループの初期化関数 Loop\+Init \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -48,8 +49,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- collision.\+cpp の 70 行目に定義があります。
+当たり判定確認関数 Cheak\+Hit 
 
+
+
+ collision.\+cpp の 69 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{collision_8cpp_a95f2043194966afc193cb3c2f84b972c}\label{collision_8cpp_a95f2043194966afc193cb3c2f84b972c}} 
 \index{collision.cpp@{collision.cpp}!CollisionBB@{CollisionBB}}
 \index{CollisionBB@{CollisionBB}!collision.cpp@{collision.cpp}}
@@ -58,7 +67,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- collision.\+cpp の 22 行目に定義があります。
+当たり判定\+B\+B関数 Collision\+BB 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em D3\+D\+X\+V\+E\+C\+T\+O\+R3} & pos1, float h1, float w1, D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos2, float h2, float w2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+bool
+\end{DoxyReturn}
+B\+Bで当たり判定したい座標とサイズを渡す 
+
+ collision.\+cpp の 21 行目に定義があります。
 
 \mbox{\Hypertarget{collision_8cpp_a6045e538566a6d5fc2519a01d636f6ec}\label{collision_8cpp_a6045e538566a6d5fc2519a01d636f6ec}} 
 \index{collision.cpp@{collision.cpp}!CollisionBC@{CollisionBC}}
@@ -68,7 +89,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- collision.\+cpp の 39 行目に定義があります。
+当たり判定\+B\+C関数 Collision\+BC 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em D3\+D\+X\+V\+E\+C\+T\+O\+R3} & pos1, float r1, D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos2, float r2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+bool
+\end{DoxyReturn}
+B\+Cで当たり判定したい座標とサイズを渡す 
+
+ collision.\+cpp の 38 行目に定義があります。
 
 \mbox{\Hypertarget{collision_8cpp_a32a68d055020250a22ce0d35107377d3}\label{collision_8cpp_a32a68d055020250a22ce0d35107377d3}} 
 \index{collision.cpp@{collision.cpp}!LoopInit@{LoopInit}}
@@ -78,5 +111,13 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- collision.\+cpp の 538 行目に定義があります。
+ボールループの初期化関数 Loop\+Init 
 
+
+
+ collision.\+cpp の 529 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4

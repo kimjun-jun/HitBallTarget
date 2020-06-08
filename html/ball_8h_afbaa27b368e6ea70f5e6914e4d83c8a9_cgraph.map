@@ -1,4 +1,4 @@
 <map id="ReInitBall" name="ReInitBall">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,83,32"/>
-<area shape="rect" id="node2" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title=" " alt="" coords="131,5,233,32"/>
+<area shape="rect" id="node1" title="Ball再初期化関数 ReInitBall" alt="" coords="5,5,83,32"/>
+<area shape="rect" id="node2" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title="ポリゴン頂点設定関数 SetVertexBall" alt="" coords="131,5,233,32"/>
 </map>

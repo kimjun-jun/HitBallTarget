@@ -11,32 +11,34 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}controltype.\+h\char`\"{}}\newline
+controltype.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{controltype_8cpp_a97e4be8bb76458299f9299dbcdb5a23e}{Make\+Vertex\+Contype}} (void)
-\item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{controltype_8cpp_a35483949ff86fe429bcfc158b6ceebbf}{Init\+Contype}} (int type)
-\item 
-void \mbox{\hyperlink{controltype_8cpp_a4321c3af52f5bb9370a1185f0c2ddb91}{Re\+Init\+Contype}} (void)
-\item 
-void \mbox{\hyperlink{controltype_8cpp_aaf927bb3f168400160b8ad2bd3576980}{Uninit\+Contype}} (void)
-\item 
-void \mbox{\hyperlink{controltype_8cpp_a66d4d69050347e01a105b75c83c0f695}{Update\+Contype}} (void)
-\item 
-void \mbox{\hyperlink{controltype_8cpp_a12e4189971d702cae26075fc235e5e1a}{Update\+T\+U\+T\+O\+Contype}} (void)
-\item 
-void \mbox{\hyperlink{controltype_8cpp_a76e87c0b3ab2556d5f553b7a10eeca45}{Draw\+Contype}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点生成関数 Make\+Vertex\+Contype \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{controltype_8cpp_a38899c0e7988ab18580e50d79330542c}{Set\+Vertex\+Contype}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴン頂点設定関数 Set\+Vertex\+Contype \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{controltype_8cpp_a35483949ff86fe429bcfc158b6ceebbf}{Init\+Contype}} (int type)
+\begin{DoxyCompactList}\small\item\em コントロールタイプ画僧初期化関数 Init\+Contype \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{controltype_8cpp_a4321c3af52f5bb9370a1185f0c2ddb91}{Re\+Init\+Contype}} (void)
+\begin{DoxyCompactList}\small\item\em コントロールタイプ画僧再初期化関数 Re\+Init\+Contype \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{controltype_8cpp_aaf927bb3f168400160b8ad2bd3576980}{Uninit\+Contype}} (void)
+\begin{DoxyCompactList}\small\item\em コントロールタイプ画僧開放関数 Uninit\+Contype \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{controltype_8cpp_a66d4d69050347e01a105b75c83c0f695}{Update\+Contype}} (void)
+\begin{DoxyCompactList}\small\item\em コントロールタイプ画僧更新関数 Update\+Contype \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{controltype_8cpp_a12e4189971d702cae26075fc235e5e1a}{Update\+T\+U\+T\+O\+Contype}} (void)
+\begin{DoxyCompactList}\small\item\em コントロールタイプ画僧更新関数 Update\+T\+U\+T\+O\+Contype \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{controltype_8cpp_a76e87c0b3ab2556d5f553b7a10eeca45}{Draw\+Contype}} (void)
+\begin{DoxyCompactList}\small\item\em コントロールタイプ画僧描画関数 Draw\+Contype \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{controltype_8cpp_ad72284daff16eaa051c2cb705750f440}{Get\+S\+C\+O\+Nkeypos}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em コントロールタイプ画僧カーソルが止まっている場所取得関数 Get\+S\+C\+O\+Nkeypos \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_c_o_n_t_y_p_e}{C\+O\+N\+T\+Y\+PE}} \mbox{\hyperlink{controltype_8cpp_a7026678b3479669a8612e3dcf20526ad}{g\+\_\+contype}} \mbox{[}\mbox{\hyperlink{controltype_8h_a595973a358f6ea1f17c7a2bedcfa2c75}{C\+O\+N\+T\+Y\+P\+E\+M\+AX}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 0はじめから、1あきらめる、2オプション 構造体変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -59,8 +61,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 186 行目に定義があります。
+コントロールタイプ画僧描画関数 Draw\+Contype 
 
+
+
+ controltype.\+cpp の 194 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{controltype_8cpp_ad72284daff16eaa051c2cb705750f440}\label{controltype_8cpp_ad72284daff16eaa051c2cb705750f440}} 
 \index{controltype.cpp@{controltype.cpp}!GetSCONkeypos@{GetSCONkeypos}}
 \index{GetSCONkeypos@{GetSCONkeypos}!controltype.cpp@{controltype.cpp}}
@@ -69,8 +79,17 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 305 行目に定義があります。
+コントロールタイプ画僧カーソルが止まっている場所取得関数 Get\+S\+C\+O\+Nkeypos 
 
+\begin{DoxyReturn}{戻り値}
+int 
+\end{DoxyReturn}
+
+
+ controltype.\+cpp の 316 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
 \mbox{\Hypertarget{controltype_8cpp_a35483949ff86fe429bcfc158b6ceebbf}\label{controltype_8cpp_a35483949ff86fe429bcfc158b6ceebbf}} 
 \index{controltype.cpp@{controltype.cpp}!InitContype@{InitContype}}
 \index{InitContype@{InitContype}!controltype.cpp@{controltype.cpp}}
@@ -79,8 +98,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 31 行目に定義があります。
+コントロールタイプ画僧初期化関数 Init\+Contype 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ controltype.\+cpp の 40 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 4
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{controltype_8cpp_a97e4be8bb76458299f9299dbcdb5a23e}\label{controltype_8cpp_a97e4be8bb76458299f9299dbcdb5a23e}} 
 \index{controltype.cpp@{controltype.cpp}!MakeVertexContype@{MakeVertexContype}}
 \index{MakeVertexContype@{MakeVertexContype}!controltype.cpp@{controltype.cpp}}
@@ -89,7 +124,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 203 行目に定義があります。
+頂点生成関数 Make\+Vertex\+Contype 
+
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ controltype.\+cpp の 211 行目に定義があります。
 
 \mbox{\Hypertarget{controltype_8cpp_a4321c3af52f5bb9370a1185f0c2ddb91}\label{controltype_8cpp_a4321c3af52f5bb9370a1185f0c2ddb91}} 
 \index{controltype.cpp@{controltype.cpp}!ReInitContype@{ReInitContype}}
@@ -99,8 +141,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 63 行目に定義があります。
+コントロールタイプ画僧再初期化関数 Re\+Init\+Contype 
 
+
+
+ controltype.\+cpp の 72 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{controltype_8cpp_a38899c0e7988ab18580e50d79330542c}\label{controltype_8cpp_a38899c0e7988ab18580e50d79330542c}} 
 \index{controltype.cpp@{controltype.cpp}!SetVertexContype@{SetVertexContype}}
 \index{SetVertexContype@{SetVertexContype}!controltype.cpp@{controltype.cpp}}
@@ -109,7 +157,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 256 行目に定義があります。
+ポリゴン頂点設定関数 Set\+Vertex\+Contype 
+
+
+
+ controltype.\+cpp の 264 行目に定義があります。
 
 \mbox{\Hypertarget{controltype_8cpp_aaf927bb3f168400160b8ad2bd3576980}\label{controltype_8cpp_aaf927bb3f168400160b8ad2bd3576980}} 
 \index{controltype.cpp@{controltype.cpp}!UninitContype@{UninitContype}}
@@ -119,8 +171,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 74 行目に定義があります。
+コントロールタイプ画僧開放関数 Uninit\+Contype 
 
+
+
+ controltype.\+cpp の 83 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
 \mbox{\Hypertarget{controltype_8cpp_a66d4d69050347e01a105b75c83c0f695}\label{controltype_8cpp_a66d4d69050347e01a105b75c83c0f695}} 
 \index{controltype.cpp@{controltype.cpp}!UpdateContype@{UpdateContype}}
 \index{UpdateContype@{UpdateContype}!controltype.cpp@{controltype.cpp}}
@@ -129,8 +187,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 89 行目に定義があります。
+コントロールタイプ画僧更新関数 Update\+Contype 
 
+
+
+ controltype.\+cpp の 98 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9
 \mbox{\Hypertarget{controltype_8cpp_a12e4189971d702cae26075fc235e5e1a}\label{controltype_8cpp_a12e4189971d702cae26075fc235e5e1a}} 
 \index{controltype.cpp@{controltype.cpp}!UpdateTUTOContype@{UpdateTUTOContype}}
 \index{UpdateTUTOContype@{UpdateTUTOContype}!controltype.cpp@{controltype.cpp}}
@@ -139,8 +205,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 138 行目に定義があります。
+コントロールタイプ画僧更新関数 Update\+T\+U\+T\+O\+Contype 
 
+
+
+ controltype.\+cpp の 146 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 10
+被呼び出し関係図\+:
+% FIG 11
 
 
 \doxysubsection{変数詳解}
@@ -152,5 +226,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- controltype.\+cpp の 22 行目に定義があります。
+0はじめから、1あきらめる、2オプション 構造体変数 
+
+
+
+ controltype.\+cpp の 31 行目に定義があります。
 

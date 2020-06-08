@@ -5,36 +5,36 @@
 Hit\+Ball\+Target(2\+D)的当てゲーム  
 
 
+被依存関係図\+:
+% FIG 0
 \doxysubsection*{データ構造}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_p_l_a_y_e_r___p_i_t}{P\+L\+A\+Y\+E\+R\+\_\+\+P\+IT}}
-\item 
+\begin{DoxyCompactList}\small\item\em 2Dポリゴンを定義する構造体 \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct_p_l_a_y_e_r___b_a_t}{P\+L\+A\+Y\+E\+R\+\_\+\+B\+AT}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 2Dポリゴンを定義する構造体 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{player_8h_ab37db7bbc65824b1c98f4514747c7c25}{Init\+Player}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em Player初期化関数 Init\+Player \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{player_8h_aec81addf7089fd7ec8344da9df5cbcc1}{Re\+Init\+Player}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Player再初期化関数 Re\+Init\+Player \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{player_8h_ad50044e423acab81254da2bca8597cad}{Uninit\+Player}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Player開放関数 Uninit\+Player \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{player_8h_ab3a456d791fc2bd6c2bd0b1bc44fd6c6}{Update\+Player}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Player更新関数 Update\+Player \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{player_8h_a79eb0d0b3febd0f47c5c1959cc85e33a}{Draw\+Player}} (void)
-\item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{player_8h_a2de60a2e9122a5286fe6a3a3c67d0a6f}{Make\+Vertex\+Player}} (int i)
-\item 
-void \mbox{\hyperlink{player_8h_a2fadda7fdfcff7f35f596fbffa729796}{Set\+Texture\+Player}} (int cnt\+Pattern, int i)
-\item 
-void \mbox{\hyperlink{player_8h_a01aad82d3cb01c79b486912fcc5c0cde}{Set\+Vertex\+Player}} (int i)
-\item 
+\begin{DoxyCompactList}\small\item\em Player描画関数 Draw\+Player \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_p_l_a_y_e_r___p_i_t}{P\+L\+A\+Y\+E\+R\+\_\+\+P\+IT}} $\ast$ \mbox{\hyperlink{player_8h_a33e108ae2585bd33cc1bbc965a00ee95}{Get\+Player\+Pit}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Player\+Pit取得関数 Get\+Player\+Pit \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_p_l_a_y_e_r___b_a_t}{P\+L\+A\+Y\+E\+R\+\_\+\+B\+AT}} $\ast$ \mbox{\hyperlink{player_8h_a2406a202cc0c601004fe35fb56e57f7c}{Get\+Player\+Bat}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Player\+Bat取得関数 Get\+Player\+Bat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_a82f0a902b65506c32ecbdfec0d711b28}{Set\+Texture\+Player}} (int cnt\+Pattern, int P\+L\+Y\+A\+E\+R\+\_\+\+T\+Y\+PE)
+\begin{DoxyCompactList}\small\item\em テクスチャ設定関数 Set\+Texture\+Player \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_a426459bfbcaa9a4141c55d4544ac4e26}{Set\+Vertex\+Player}} (int P\+L\+Y\+A\+E\+R\+\_\+\+T\+Y\+PE)
+\begin{DoxyCompactList}\small\item\em ポリゴン頂点設定関数 Set\+Vertex\+Player \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -57,8 +57,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- player.\+cpp の 163 行目に定義があります。
+Player描画関数 Draw\+Player 
 
+
+
+ player.\+cpp の 157 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{player_8h_a2406a202cc0c601004fe35fb56e57f7c}\label{player_8h_a2406a202cc0c601004fe35fb56e57f7c}} 
 \index{player.h@{player.h}!GetPlayerBat@{GetPlayerBat}}
 \index{GetPlayerBat@{GetPlayerBat}!player.h@{player.h}}
@@ -67,8 +75,17 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- player.\+cpp の 342 行目に定義があります。
+Player\+Bat取得関数 Get\+Player\+Bat 
 
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_p_l_a_y_e_r___b_a_t}{P\+L\+A\+Y\+E\+R\+\_\+\+B\+AT}} 
+\end{DoxyReturn}
+
+
+ player.\+cpp の 337 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
 \mbox{\Hypertarget{player_8h_a33e108ae2585bd33cc1bbc965a00ee95}\label{player_8h_a33e108ae2585bd33cc1bbc965a00ee95}} 
 \index{player.h@{player.h}!GetPlayerPit@{GetPlayerPit}}
 \index{GetPlayerPit@{GetPlayerPit}!player.h@{player.h}}
@@ -77,8 +94,17 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- player.\+cpp の 338 行目に定義があります。
+Player\+Pit取得関数 Get\+Player\+Pit 
 
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_p_l_a_y_e_r___p_i_t}{P\+L\+A\+Y\+E\+R\+\_\+\+P\+IT}} 
+\end{DoxyReturn}
+
+
+ player.\+cpp の 332 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{player_8h_ab37db7bbc65824b1c98f4514747c7c25}\label{player_8h_ab37db7bbc65824b1c98f4514747c7c25}} 
 \index{player.h@{player.h}!InitPlayer@{InitPlayer}}
 \index{InitPlayer@{InitPlayer}!player.h@{player.h}}
@@ -87,18 +113,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- player.\+cpp の 37 行目に定義があります。
-
-\mbox{\Hypertarget{player_8h_a2de60a2e9122a5286fe6a3a3c67d0a6f}\label{player_8h_a2de60a2e9122a5286fe6a3a3c67d0a6f}} 
-\index{player.h@{player.h}!MakeVertexPlayer@{MakeVertexPlayer}}
-\index{MakeVertexPlayer@{MakeVertexPlayer}!player.h@{player.h}}
-\doxysubsubsection{\texorpdfstring{MakeVertexPlayer()}{MakeVertexPlayer()}}
-{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+Player (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+Player初期化関数 Init\+Player 
 
 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
 
- player.\+cpp の 182 行目に定義があります。
 
+ player.\+cpp の 33 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{player_8h_aec81addf7089fd7ec8344da9df5cbcc1}\label{player_8h_aec81addf7089fd7ec8344da9df5cbcc1}} 
 \index{player.h@{player.h}!ReInitPlayer@{ReInitPlayer}}
 \index{ReInitPlayer@{ReInitPlayer}!player.h@{player.h}}
@@ -107,28 +139,56 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- player.\+cpp の 99 行目に定義があります。
+Player再初期化関数 Re\+Init\+Player 
 
-\mbox{\Hypertarget{player_8h_a2fadda7fdfcff7f35f596fbffa729796}\label{player_8h_a2fadda7fdfcff7f35f596fbffa729796}} 
+
+
+ player.\+cpp の 95 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{player_8h_a82f0a902b65506c32ecbdfec0d711b28}\label{player_8h_a82f0a902b65506c32ecbdfec0d711b28}} 
 \index{player.h@{player.h}!SetTexturePlayer@{SetTexturePlayer}}
 \index{SetTexturePlayer@{SetTexturePlayer}!player.h@{player.h}}
 \doxysubsubsection{\texorpdfstring{SetTexturePlayer()}{SetTexturePlayer()}}
-{\footnotesize\ttfamily void Set\+Texture\+Player (\begin{DoxyParamCaption}\item[{int}]{cnt\+Pattern,  }\item[{int}]{i }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Set\+Texture\+Player (\begin{DoxyParamCaption}\item[{int}]{cnt\+Pattern,  }\item[{int}]{P\+L\+Y\+A\+E\+R\+\_\+\+T\+Y\+PE }\end{DoxyParamCaption})}
 
 
 
- player.\+cpp の 246 行目に定義があります。
+テクスチャ設定関数 Set\+Texture\+Player 
 
-\mbox{\Hypertarget{player_8h_a01aad82d3cb01c79b486912fcc5c0cde}\label{player_8h_a01aad82d3cb01c79b486912fcc5c0cde}} 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & cnt\+Pattern アニメパターン, int P\+L\+Y\+A\+E\+R\+\_\+\+T\+Y\+PE プレイヤータイプ \\
+\hline
+\end{DoxyParams}
+
+
+ player.\+cpp の 240 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{player_8h_a426459bfbcaa9a4141c55d4544ac4e26}\label{player_8h_a426459bfbcaa9a4141c55d4544ac4e26}} 
 \index{player.h@{player.h}!SetVertexPlayer@{SetVertexPlayer}}
 \index{SetVertexPlayer@{SetVertexPlayer}!player.h@{player.h}}
 \doxysubsubsection{\texorpdfstring{SetVertexPlayer()}{SetVertexPlayer()}}
-{\footnotesize\ttfamily void Set\+Vertex\+Player (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Set\+Vertex\+Player (\begin{DoxyParamCaption}\item[{int}]{P\+L\+Y\+A\+E\+R\+\_\+\+T\+Y\+PE }\end{DoxyParamCaption})}
 
 
 
- player.\+cpp の 286 行目に定義があります。
+ポリゴン頂点設定関数 Set\+Vertex\+Player 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & P\+L\+Y\+A\+E\+R\+\_\+\+T\+Y\+PE プレイヤータイプ \\
+\hline
+\end{DoxyParams}
+
+
+ player.\+cpp の 280 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9
 \mbox{\Hypertarget{player_8h_ad50044e423acab81254da2bca8597cad}\label{player_8h_ad50044e423acab81254da2bca8597cad}} 
 \index{player.h@{player.h}!UninitPlayer@{UninitPlayer}}
 \index{UninitPlayer@{UninitPlayer}!player.h@{player.h}}
@@ -137,8 +197,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- player.\+cpp の 126 行目に定義があります。
+Player開放関数 Uninit\+Player 
 
+
+
+ player.\+cpp の 121 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
 \mbox{\Hypertarget{player_8h_ab3a456d791fc2bd6c2bd0b1bc44fd6c6}\label{player_8h_ab3a456d791fc2bd6c2bd0b1bc44fd6c6}} 
 \index{player.h@{player.h}!UpdatePlayer@{UpdatePlayer}}
 \index{UpdatePlayer@{UpdatePlayer}!player.h@{player.h}}
@@ -147,5 +213,13 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- player.\+cpp の 148 行目に定義があります。
+Player更新関数 Update\+Player 
 
+
+
+ player.\+cpp の 142 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12

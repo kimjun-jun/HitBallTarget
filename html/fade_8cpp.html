@@ -74,31 +74,61 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fade_8h_source.html">fade.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sound_8h_source.html">sound.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+fade.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp__incl.png" border="0" usemap="#fade_8cpp" alt=""/></div>
+<map name="fade_8cpp" id="fade_8cpp">
+<area shape="rect" title="HitBallTarget(2D)的当てゲーム" alt="" coords="593,5,664,32"/>
+<area shape="rect" href="main_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="399,80,461,107"/>
+<area shape="rect" href="fade_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="600,80,657,107"/>
+<area shape="rect" href="sound_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="753,80,821,107"/>
+<area shape="rect" title=" " alt="" coords="746,155,829,181"/>
+<area shape="rect" title=" " alt="" coords="5,155,73,181"/>
+<area shape="rect" title=" " alt="" coords="97,155,160,181"/>
+<area shape="rect" title=" " alt="" coords="185,155,246,181"/>
+<area shape="rect" title=" " alt="" coords="270,155,334,181"/>
+<area shape="rect" title=" " alt="" coords="358,155,417,181"/>
+<area shape="rect" title=" " alt="" coords="441,155,507,181"/>
+<area shape="rect" title=" " alt="" coords="531,155,599,181"/>
+<area shape="rect" title=" " alt="" coords="623,155,722,181"/>
+<area shape="rect" title=" " alt="" coords="853,155,932,181"/>
+</map>
+</div>
 </div>
 <p><a href="fade_8cpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
 <tr class="memitem:a15228f6ba94ab7352f4fcb31e6e7274c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">FADE_RATE</a>&#160;&#160;&#160;(0.02f)</td></tr>
+<tr class="memdesc:a15228f6ba94ab7352f4fcb31e6e7274c"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェード係数  <a href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">[詳解]</a><br /></td></tr>
 <tr class="separator:a15228f6ba94ab7352f4fcb31e6e7274c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a4a1d94214c70866b5cbda894700674b2"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">MakeVertexFade</a> (void)</td></tr>
+<tr class="memdesc:a4a1d94214c70866b5cbda894700674b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点生成関数 MakeVertexFade  <a href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">[詳解]</a><br /></td></tr>
 <tr class="separator:a4a1d94214c70866b5cbda894700674b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fe9846c8fbf02d66e5a1b6989f0b45e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a> (D3DCOLOR col)</td></tr>
+<tr class="memdesc:a3fe9846c8fbf02d66e5a1b6989f0b45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェードカラー設定関数 SetColor  <a href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">[詳解]</a><br /></td></tr>
 <tr class="separator:a3fe9846c8fbf02d66e5a1b6989f0b45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00f23dbde310ac88a2c2cc41a410d328"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#a00f23dbde310ac88a2c2cc41a410d328">InitFade</a> (int type)</td></tr>
-<tr class="separator:a00f23dbde310ac88a2c2cc41a410d328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14659ccf65247cea04ede6abff5630f"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#ac14659ccf65247cea04ede6abff5630f">InitFade</a> (void)</td></tr>
+<tr class="memdesc:ac14659ccf65247cea04ede6abff5630f"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェード初期化関数 InitFade  <a href="fade_8cpp.html#ac14659ccf65247cea04ede6abff5630f">[詳解]</a><br /></td></tr>
+<tr class="separator:ac14659ccf65247cea04ede6abff5630f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2dfa8d8b36033b4351aa88227c8c4dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#ae2dfa8d8b36033b4351aa88227c8c4dd">UninitFade</a> (void)</td></tr>
+<tr class="memdesc:ae2dfa8d8b36033b4351aa88227c8c4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェードメモリ開放関数 UninitFade  <a href="fade_8cpp.html#ae2dfa8d8b36033b4351aa88227c8c4dd">[詳解]</a><br /></td></tr>
 <tr class="separator:ae2dfa8d8b36033b4351aa88227c8c4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527c4f6a38007a98f667afcdd9e9c8b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#a527c4f6a38007a98f667afcdd9e9c8b3">UpdateFade</a> (void)</td></tr>
+<tr class="memdesc:a527c4f6a38007a98f667afcdd9e9c8b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェード更新関数 UpdateFade  <a href="fade_8cpp.html#a527c4f6a38007a98f667afcdd9e9c8b3">[詳解]</a><br /></td></tr>
 <tr class="separator:a527c4f6a38007a98f667afcdd9e9c8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a366aedf71d0d057d6df9988b0d38f000"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#a366aedf71d0d057d6df9988b0d38f000">DrawFade</a> ()</td></tr>
+<tr class="memdesc:a366aedf71d0d057d6df9988b0d38f000"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェード描画関数 DrawFade  <a href="fade_8cpp.html#a366aedf71d0d057d6df9988b0d38f000">[詳解]</a><br /></td></tr>
 <tr class="separator:a366aedf71d0d057d6df9988b0d38f000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85daf6279275e49d1eee12459cfada0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d">SetFade</a> (<a class="el" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a> fade, <a class="el" href="main_8h.html#aae9a2b94c5f319222ee2e09a5d0f2ae5">E_STAGE</a> next, int sno)</td></tr>
+<tr class="memdesc:a85daf6279275e49d1eee12459cfada0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェード設定関数 SetFade  <a href="fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d">[詳解]</a><br /></td></tr>
 <tr class="separator:a85daf6279275e49d1eee12459cfada0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af15959ae7aa2a4e2bea206607aafbfd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fade_8cpp.html#af15959ae7aa2a4e2bea206607aafbfd7">GetFade</a> (void)</td></tr>
+<tr class="memdesc:af15959ae7aa2a4e2bea206607aafbfd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェード取得関数 GetFade  <a href="fade_8cpp.html#af15959ae7aa2a4e2bea206607aafbfd7">[詳解]</a><br /></td></tr>
 <tr class="separator:af15959ae7aa2a4e2bea206607aafbfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -120,6 +150,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>フェード係数 </p>
+
 <p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00015">15</a> 行目に定義があります。</p>
 
 </div>
@@ -140,7 +172,28 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00113">113</a> 行目に定義があります。</p>
+<p>フェード描画関数 DrawFade </p>
+
+<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00122">122</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp_a366aedf71d0d057d6df9988b0d38f000_cgraph.png" border="0" usemap="#fade_8cpp_a366aedf71d0d057d6df9988b0d38f000_cgraph" alt=""/></div>
+<map name="fade_8cpp_a366aedf71d0d057d6df9988b0d38f000_cgraph" id="fade_8cpp_a366aedf71d0d057d6df9988b0d38f000_cgraph">
+<area shape="rect" title="フェード描画関数 DrawFade" alt="" coords="5,5,85,32"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="133,5,215,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp_a366aedf71d0d057d6df9988b0d38f000_icgraph.png" border="0" usemap="#fade_8cpp_a366aedf71d0d057d6df9988b0d38f000_icgraph" alt=""/></div>
+<map name="fade_8cpp_a366aedf71d0d057d6df9988b0d38f000_icgraph" id="fade_8cpp_a366aedf71d0d057d6df9988b0d38f000_icgraph">
+<area shape="rect" title="フェード描画関数 DrawFade" alt="" coords="225,5,305,32"/>
+<area shape="rect" href="main_8cpp.html#ae39baa177eafe9cad35d363fc683d77f" title="描画関数" alt="" coords="127,5,177,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -160,12 +213,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00188">188</a> 行目に定義があります。</p>
+<p>フェード取得関数 GetFade </p>
+<dl class="section return"><dt>戻り値</dt><dd>FADE</dd></dl>
+<p>現在のフェード状態を取得できる </p>
+
+<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00197">197</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a00f23dbde310ac88a2c2cc41a410d328"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00f23dbde310ac88a2c2cc41a410d328">&#9670;&nbsp;</a></span>InitFade()</h2>
+<a id="ac14659ccf65247cea04ede6abff5630f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14659ccf65247cea04ede6abff5630f">&#9670;&nbsp;</a></span>InitFade()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,14 +230,40 @@ $(function() {
         <tr>
           <td class="memname">HRESULT InitFade </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00036">36</a> 行目に定義があります。</p>
+<p>フェード初期化関数 InitFade </p>
+<dl class="section return"><dt>戻り値</dt><dd>HRESULT </dd></dl>
+
+<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp_ac14659ccf65247cea04ede6abff5630f_cgraph.png" border="0" usemap="#fade_8cpp_ac14659ccf65247cea04ede6abff5630f_cgraph" alt=""/></div>
+<map name="fade_8cpp_ac14659ccf65247cea04ede6abff5630f_cgraph" id="fade_8cpp_ac14659ccf65247cea04ede6abff5630f_cgraph">
+<area shape="rect" title="フェード初期化関数 InitFade" alt="" coords="5,5,73,32"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="291,5,372,32"/>
+<area shape="rect" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2" title="頂点生成関数 MakeVertexFade" alt="" coords="121,31,243,57"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp_ac14659ccf65247cea04ede6abff5630f_icgraph.png" border="0" usemap="#fade_8cpp_ac14659ccf65247cea04ede6abff5630f_icgraph" alt=""/></div>
+<map name="fade_8cpp_ac14659ccf65247cea04ede6abff5630f_icgraph" id="fade_8cpp_ac14659ccf65247cea04ede6abff5630f_icgraph">
+<area shape="rect" title="フェード初期化関数 InitFade" alt="" coords="508,31,576,57"/>
+<area shape="rect" href="main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="268,5,307,32"/>
+<area shape="rect" href="main_8h.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="385,56,460,83"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,31,79,57"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,56,189,83"/>
+<area shape="rect" href="result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="237,107,337,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -200,7 +283,33 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00130">130</a> 行目に定義があります。</p>
+<p>頂点生成関数 MakeVertexFade </p>
+<dl class="section return"><dt>戻り値</dt><dd>HRESULT </dd></dl>
+
+<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00139">139</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp_a4a1d94214c70866b5cbda894700674b2_cgraph.png" border="0" usemap="#fade_8cpp_a4a1d94214c70866b5cbda894700674b2_cgraph" alt=""/></div>
+<map name="fade_8cpp_a4a1d94214c70866b5cbda894700674b2_cgraph" id="fade_8cpp_a4a1d94214c70866b5cbda894700674b2_cgraph">
+<area shape="rect" title="頂点生成関数 MakeVertexFade" alt="" coords="5,5,127,32"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="175,5,256,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp_a4a1d94214c70866b5cbda894700674b2_icgraph.png" border="0" usemap="#fade_8cpp_a4a1d94214c70866b5cbda894700674b2_icgraph" alt=""/></div>
+<map name="fade_8cpp_a4a1d94214c70866b5cbda894700674b2_icgraph" id="fade_8cpp_a4a1d94214c70866b5cbda894700674b2_icgraph">
+<area shape="rect" title="頂点生成関数 MakeVertexFade" alt="" coords="624,31,745,57"/>
+<area shape="rect" href="fade_8h.html#ac14659ccf65247cea04ede6abff5630f" title="フェード初期化関数 InitFade" alt="" coords="508,31,576,57"/>
+<area shape="rect" href="main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="268,5,307,32"/>
+<area shape="rect" href="main_8h.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="385,56,460,83"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,31,79,57"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,56,189,83"/>
+<area shape="rect" href="result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="237,107,337,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -220,7 +329,15 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00165">165</a> 行目に定義があります。</p>
+<p>フェードカラー設定関数 SetColor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">D3DCOLOR</td><td>col カラー値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00174">174</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -256,7 +373,29 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00177">177</a> 行目に定義があります。</p>
+<p>フェード設定関数 SetFade </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">FADE</td><td>fade フェードの種類, E_STAGE next 次のゲームシーン, int sno 流したい音楽 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00186">186</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp_a85daf6279275e49d1eee12459cfada0d_icgraph.png" border="0" usemap="#fade_8cpp_a85daf6279275e49d1eee12459cfada0d_icgraph" alt=""/></div>
+<map name="fade_8cpp_a85daf6279275e49d1eee12459cfada0d_icgraph" id="fade_8cpp_a85daf6279275e49d1eee12459cfada0d_icgraph">
+<area shape="rect" title="フェード設定関数 SetFade" alt="" coords="391,81,461,108"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,81,189,108"/>
+<area shape="rect" href="player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="240,30,340,57"/>
+<area shape="rect" href="result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="240,81,340,108"/>
+<area shape="rect" href="title_8h.html#aa354bb8b39f42a45e2f33fd54e40703b" title="タイトル更新関数 UpdateTitle" alt="" coords="247,132,333,158"/>
+<area shape="rect" href="tutorial_8h.html#aae38531299a96a60f0d7910f3f9d4117" title="Tutorial更新関数 UpdateTutorial" alt="" coords="237,182,343,209"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,81,79,108"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -276,7 +415,19 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
+<p>フェードメモリ開放関数 UninitFade </p>
+
+<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd_icgraph.png" border="0" usemap="#fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd_icgraph" alt=""/></div>
+<map name="fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd_icgraph" id="fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd_icgraph">
+<area shape="rect" title="フェードメモリ開放関数 UninitFade" alt="" coords="229,5,313,32"/>
+<area shape="rect" href="main_8cpp.html#ae43a8873beb00c8038b31c52b8a00edb" title="メモリ開放関数" alt="" coords="127,5,181,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -296,7 +447,20 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+<p>フェード更新関数 UpdateFade </p>
+<p>ゲームシーン切り替え時(<a class="el" href="fade_8h.html#a85daf6279275e49d1eee12459cfada0d" title="フェード設定関数 SetFade">SetFade()</a>を使用するとき)に実行される。 </p>
+
+<p class="definition"> <a class="el" href="fade_8cpp_source.html">fade.cpp</a> の <a class="el" href="fade_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3_icgraph.png" border="0" usemap="#fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3_icgraph" alt=""/></div>
+<map name="fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3_icgraph" id="fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3_icgraph">
+<area shape="rect" title="フェード更新関数 UpdateFade" alt="" coords="237,5,329,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>

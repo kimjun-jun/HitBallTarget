@@ -1,6 +1,6 @@
 <map id="ReInitTuto" name="ReInitTuto">
-<area shape="rect" id="node1" title=" " alt="" coords="385,5,465,32"/>
-<area shape="rect" id="node2" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title=" " alt="" coords="237,5,337,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title=" " alt="" coords="127,5,189,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,5,79,32"/>
+<area shape="rect" id="node1" title="ゲームを再初期化する関数 ReInitTuto" alt="" coords="385,5,465,32"/>
+<area shape="rect" id="node2" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="237,5,337,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
 </map>

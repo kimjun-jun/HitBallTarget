@@ -74,37 +74,76 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="player_8h_source.html">player.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="input_8h_source.html">input.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fade_8h_source.html">fade.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sound_8h_source.html">sound.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+player.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp__incl.png" border="0" usemap="#player_8cpp" alt=""/></div>
+<map name="player_8cpp" id="player_8cpp">
+<area shape="rect" title="HitBallTarget(2D)的当てゲーム" alt="" coords="569,5,651,32"/>
+<area shape="rect" href="main_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="357,80,418,107"/>
+<area shape="rect" href="game_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="443,80,508,107"/>
+<area shape="rect" href="player_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="532,80,600,107"/>
+<area shape="rect" href="input_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="625,80,686,107"/>
+<area shape="rect" href="fade_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="711,80,768,107"/>
+<area shape="rect" href="sound_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="792,80,860,107"/>
+<area shape="rect" title=" " alt="" coords="746,155,829,181"/>
+<area shape="rect" title=" " alt="" coords="5,155,73,181"/>
+<area shape="rect" title=" " alt="" coords="97,155,160,181"/>
+<area shape="rect" title=" " alt="" coords="185,155,246,181"/>
+<area shape="rect" title=" " alt="" coords="270,155,334,181"/>
+<area shape="rect" title=" " alt="" coords="358,155,417,181"/>
+<area shape="rect" title=" " alt="" coords="441,155,507,181"/>
+<area shape="rect" title=" " alt="" coords="531,155,599,181"/>
+<area shape="rect" title=" " alt="" coords="623,155,722,181"/>
+<area shape="rect" title=" " alt="" coords="853,155,932,181"/>
+</map>
+</div>
 </div>
 <p><a href="player_8cpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
+<tr class="memitem:a9b2ef7ad3cd00e1eb682886ff31c787c"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a9b2ef7ad3cd00e1eb682886ff31c787c">MakeVertexPlayer</a> (int PLYAER_TYPE)</td></tr>
+<tr class="memdesc:a9b2ef7ad3cd00e1eb682886ff31c787c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポリゴン頂点生成関数 MakeVertexPlayer  <a href="player_8cpp.html#a9b2ef7ad3cd00e1eb682886ff31c787c">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b2ef7ad3cd00e1eb682886ff31c787c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab37db7bbc65824b1c98f4514747c7c25"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#ab37db7bbc65824b1c98f4514747c7c25">InitPlayer</a> (int type)</td></tr>
+<tr class="memdesc:ab37db7bbc65824b1c98f4514747c7c25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player初期化関数 InitPlayer  <a href="player_8cpp.html#ab37db7bbc65824b1c98f4514747c7c25">[詳解]</a><br /></td></tr>
 <tr class="separator:ab37db7bbc65824b1c98f4514747c7c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec81addf7089fd7ec8344da9df5cbcc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#aec81addf7089fd7ec8344da9df5cbcc1">ReInitPlayer</a> (void)</td></tr>
+<tr class="memdesc:aec81addf7089fd7ec8344da9df5cbcc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player再初期化関数 ReInitPlayer  <a href="player_8cpp.html#aec81addf7089fd7ec8344da9df5cbcc1">[詳解]</a><br /></td></tr>
 <tr class="separator:aec81addf7089fd7ec8344da9df5cbcc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad50044e423acab81254da2bca8597cad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#ad50044e423acab81254da2bca8597cad">UninitPlayer</a> (void)</td></tr>
+<tr class="memdesc:ad50044e423acab81254da2bca8597cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player開放関数 UninitPlayer  <a href="player_8cpp.html#ad50044e423acab81254da2bca8597cad">[詳解]</a><br /></td></tr>
 <tr class="separator:ad50044e423acab81254da2bca8597cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3a456d791fc2bd6c2bd0b1bc44fd6c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6">UpdatePlayer</a> (void)</td></tr>
+<tr class="memdesc:ab3a456d791fc2bd6c2bd0b1bc44fd6c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player更新関数 UpdatePlayer  <a href="player_8cpp.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6">[詳解]</a><br /></td></tr>
 <tr class="separator:ab3a456d791fc2bd6c2bd0b1bc44fd6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79eb0d0b3febd0f47c5c1959cc85e33a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a79eb0d0b3febd0f47c5c1959cc85e33a">DrawPlayer</a> (void)</td></tr>
+<tr class="memdesc:a79eb0d0b3febd0f47c5c1959cc85e33a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player描画関数 DrawPlayer  <a href="player_8cpp.html#a79eb0d0b3febd0f47c5c1959cc85e33a">[詳解]</a><br /></td></tr>
 <tr class="separator:a79eb0d0b3febd0f47c5c1959cc85e33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2de60a2e9122a5286fe6a3a3c67d0a6f"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a2de60a2e9122a5286fe6a3a3c67d0a6f">MakeVertexPlayer</a> (int i)</td></tr>
-<tr class="separator:a2de60a2e9122a5286fe6a3a3c67d0a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fadda7fdfcff7f35f596fbffa729796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a2fadda7fdfcff7f35f596fbffa729796">SetTexturePlayer</a> (int cntPattern, int i)</td></tr>
-<tr class="separator:a2fadda7fdfcff7f35f596fbffa729796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01aad82d3cb01c79b486912fcc5c0cde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a01aad82d3cb01c79b486912fcc5c0cde">SetVertexPlayer</a> (int i)</td></tr>
-<tr class="separator:a01aad82d3cb01c79b486912fcc5c0cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f0a902b65506c32ecbdfec0d711b28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a82f0a902b65506c32ecbdfec0d711b28">SetTexturePlayer</a> (int cntPattern, int PLYAER_TYPE)</td></tr>
+<tr class="memdesc:a82f0a902b65506c32ecbdfec0d711b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ設定関数 SetTexturePlayer  <a href="player_8cpp.html#a82f0a902b65506c32ecbdfec0d711b28">[詳解]</a><br /></td></tr>
+<tr class="separator:a82f0a902b65506c32ecbdfec0d711b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426459bfbcaa9a4141c55d4544ac4e26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a426459bfbcaa9a4141c55d4544ac4e26">SetVertexPlayer</a> (int PLYAER_TYPE)</td></tr>
+<tr class="memdesc:a426459bfbcaa9a4141c55d4544ac4e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポリゴン頂点設定関数 SetVertexPlayer  <a href="player_8cpp.html#a426459bfbcaa9a4141c55d4544ac4e26">[詳解]</a><br /></td></tr>
+<tr class="separator:a426459bfbcaa9a4141c55d4544ac4e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33e108ae2585bd33cc1bbc965a00ee95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_l_a_y_e_r___p_i_t.html">PLAYER_PIT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95">GetPlayerPit</a> (void)</td></tr>
+<tr class="memdesc:a33e108ae2585bd33cc1bbc965a00ee95"><td class="mdescLeft">&#160;</td><td class="mdescRight">PlayerPit取得関数 GetPlayerPit  <a href="player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95">[詳解]</a><br /></td></tr>
 <tr class="separator:a33e108ae2585bd33cc1bbc965a00ee95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2406a202cc0c601004fe35fb56e57f7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_l_a_y_e_r___b_a_t.html">PLAYER_BAT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c">GetPlayerBat</a> (void)</td></tr>
+<tr class="memdesc:a2406a202cc0c601004fe35fb56e57f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">PlayerBat取得関数 GetPlayerBat  <a href="player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c">[詳解]</a><br /></td></tr>
 <tr class="separator:a2406a202cc0c601004fe35fb56e57f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
 <tr class="memitem:af9b8b5d7f3a80496f528590e9a4a1efb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_l_a_y_e_r___p_i_t.html">PLAYER_PIT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#af9b8b5d7f3a80496f528590e9a4a1efb">g_player_pit</a></td></tr>
+<tr class="memdesc:af9b8b5d7f3a80496f528590e9a4a1efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーピッチャーの構造体変数  <a href="player_8cpp.html#af9b8b5d7f3a80496f528590e9a4a1efb">[詳解]</a><br /></td></tr>
 <tr class="separator:af9b8b5d7f3a80496f528590e9a4a1efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e217155416ff3396836beb239cb97cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_l_a_y_e_r___b_a_t.html">PLAYER_BAT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8cpp.html#a1e217155416ff3396836beb239cb97cf">g_player_bat</a></td></tr>
+<tr class="memdesc:a1e217155416ff3396836beb239cb97cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーバッターの構造体変数  <a href="player_8cpp.html#a1e217155416ff3396836beb239cb97cf">[詳解]</a><br /></td></tr>
 <tr class="separator:a1e217155416ff3396836beb239cb97cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -130,7 +169,28 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00163">163</a> 行目に定義があります。</p>
+<p>Player描画関数 DrawPlayer </p>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00157">157</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_a79eb0d0b3febd0f47c5c1959cc85e33a_cgraph.png" border="0" usemap="#player_8cpp_a79eb0d0b3febd0f47c5c1959cc85e33a_cgraph" alt=""/></div>
+<map name="player_8cpp_a79eb0d0b3febd0f47c5c1959cc85e33a_cgraph" id="player_8cpp_a79eb0d0b3febd0f47c5c1959cc85e33a_cgraph">
+<area shape="rect" title="Player描画関数 DrawPlayer" alt="" coords="5,5,93,32"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="141,5,223,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_a79eb0d0b3febd0f47c5c1959cc85e33a_icgraph.png" border="0" usemap="#player_8cpp_a79eb0d0b3febd0f47c5c1959cc85e33a_icgraph" alt=""/></div>
+<map name="player_8cpp_a79eb0d0b3febd0f47c5c1959cc85e33a_icgraph" id="player_8cpp_a79eb0d0b3febd0f47c5c1959cc85e33a_icgraph">
+<area shape="rect" title="Player描画関数 DrawPlayer" alt="" coords="225,5,313,32"/>
+<area shape="rect" href="main_8cpp.html#ae39baa177eafe9cad35d363fc683d77f" title="描画関数" alt="" coords="127,5,177,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -150,7 +210,27 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00342">342</a> 行目に定義があります。</p>
+<p>PlayerBat取得関数 GetPlayerBat </p>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_p_l_a_y_e_r___b_a_t.html" title="2Dポリゴンを定義する構造体">PLAYER_BAT</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00337">337</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_a2406a202cc0c601004fe35fb56e57f7c_icgraph.png" border="0" usemap="#player_8cpp_a2406a202cc0c601004fe35fb56e57f7c_icgraph" alt=""/></div>
+<map name="player_8cpp_a2406a202cc0c601004fe35fb56e57f7c_icgraph" id="player_8cpp_a2406a202cc0c601004fe35fb56e57f7c_icgraph">
+<area shape="rect" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="500,107,600,133"/>
+<area shape="rect" href="game_8h.html#ae81d6a63aece63e1779d8bf648ccd582" title="投球処理関数 Ball" alt="" coords="397,107,441,133"/>
+<area shape="rect" href="game_8h.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title="バッター処理関数 Bat" alt="" coords="397,5,440,32"/>
+<area shape="rect" href="collision_8h.html#a102771cfc2ed7cee53e1d05ff7b34d53" title="当たり判定確認関数 CheakHit" alt="" coords="250,56,325,83"/>
+<area shape="rect" href="game_8h.html#a2d18b2f0dfec93f9d693f70e700b0917" title="打球処理関数 Hitball" alt="" coords="258,157,317,184"/>
+<area shape="rect" href="collision_8h.html#a32a68d055020250a22ce0d35107377d3" title="ボールループの初期化関数 LoopInit" alt="" coords="385,157,452,184"/>
+<area shape="rect" href="ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title="Ball更新関数 UpdateBall" alt="" coords="245,107,330,133"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,81,189,108"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,81,79,108"/>
+<area shape="rect" href="player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="237,5,337,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -170,7 +250,26 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00338">338</a> 行目に定義があります。</p>
+<p>PlayerPit取得関数 GetPlayerPit </p>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_p_l_a_y_e_r___p_i_t.html" title="2Dポリゴンを定義する構造体">PLAYER_PIT</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00332">332</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_a33e108ae2585bd33cc1bbc965a00ee95_icgraph.png" border="0" usemap="#player_8cpp_a33e108ae2585bd33cc1bbc965a00ee95_icgraph" alt=""/></div>
+<map name="player_8cpp_a33e108ae2585bd33cc1bbc965a00ee95_icgraph" id="player_8cpp_a33e108ae2585bd33cc1bbc965a00ee95_icgraph">
+<area shape="rect" title="PlayerPit取得関数 GetPlayerPit" alt="" coords="508,81,604,108"/>
+<area shape="rect" href="collision_8h.html#a102771cfc2ed7cee53e1d05ff7b34d53" title="当たり判定確認関数 CheakHit" alt="" coords="385,5,460,32"/>
+<area shape="rect" href="game_8h.html#a2d18b2f0dfec93f9d693f70e700b0917" title="打球処理関数 Hitball" alt="" coords="258,56,317,83"/>
+<area shape="rect" href="collision_8h.html#a32a68d055020250a22ce0d35107377d3" title="ボールループの初期化関数 LoopInit" alt="" coords="389,107,456,133"/>
+<area shape="rect" href="game_8h.html#a13b39c1bd65ea2255b0910a03f19de8f" title="ピッチャー処理関数 Pit" alt="" coords="403,157,442,184"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,81,189,108"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,81,79,108"/>
+<area shape="rect" href="ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title="Ball更新関数 UpdateBall" alt="" coords="245,107,330,133"/>
+<area shape="rect" href="player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="237,157,337,184"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -190,12 +289,45 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
+<p>Player初期化関数 InitPlayer </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>初期化タイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>HRESULT </dd></dl>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_ab37db7bbc65824b1c98f4514747c7c25_cgraph.png" border="0" usemap="#player_8cpp_ab37db7bbc65824b1c98f4514747c7c25_cgraph" alt=""/></div>
+<map name="player_8cpp_ab37db7bbc65824b1c98f4514747c7c25_cgraph" id="player_8cpp_ab37db7bbc65824b1c98f4514747c7c25_cgraph">
+<area shape="rect" title="Player初期化関数 InitPlayer" alt="" coords="5,31,81,57"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="325,5,406,32"/>
+<area shape="rect" href="player_8cpp.html#a9b2ef7ad3cd00e1eb682886ff31c787c" title="ポリゴン頂点生成関数 MakeVertexPlayer" alt="" coords="129,56,259,83"/>
+<area shape="rect" href="player_8cpp.html#a426459bfbcaa9a4141c55d4544ac4e26" title="ポリゴン頂点設定関数 SetVertexPlayer" alt="" coords="307,56,424,83"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_ab37db7bbc65824b1c98f4514747c7c25_icgraph.png" border="0" usemap="#player_8cpp_ab37db7bbc65824b1c98f4514747c7c25_icgraph" alt=""/></div>
+<map name="player_8cpp_ab37db7bbc65824b1c98f4514747c7c25_icgraph" id="player_8cpp_ab37db7bbc65824b1c98f4514747c7c25_icgraph">
+<area shape="rect" title="Player初期化関数 InitPlayer" alt="" coords="508,31,584,57"/>
+<area shape="rect" href="main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="268,5,307,32"/>
+<area shape="rect" href="main_8h.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="385,56,460,83"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,31,79,57"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,56,189,83"/>
+<area shape="rect" href="result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="237,107,337,133"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a2de60a2e9122a5286fe6a3a3c67d0a6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2de60a2e9122a5286fe6a3a3c67d0a6f">&#9670;&nbsp;</a></span>MakeVertexPlayer()</h2>
+<a id="a9b2ef7ad3cd00e1eb682886ff31c787c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2ef7ad3cd00e1eb682886ff31c787c">&#9670;&nbsp;</a></span>MakeVertexPlayer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,13 +336,46 @@ $(function() {
           <td class="memname">HRESULT MakeVertexPlayer </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
+          <td class="paramname"><em>PLYAER_TYPE</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00182">182</a> 行目に定義があります。</p>
+<p>ポリゴン頂点生成関数 MakeVertexPlayer </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">PLYAER_TYPE</td><td>プレイヤータイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>HRESULT </dd></dl>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00176">176</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_a9b2ef7ad3cd00e1eb682886ff31c787c_cgraph.png" border="0" usemap="#player_8cpp_a9b2ef7ad3cd00e1eb682886ff31c787c_cgraph" alt=""/></div>
+<map name="player_8cpp_a9b2ef7ad3cd00e1eb682886ff31c787c_cgraph" id="player_8cpp_a9b2ef7ad3cd00e1eb682886ff31c787c_cgraph">
+<area shape="rect" title="ポリゴン頂点生成関数 MakeVertexPlayer" alt="" coords="5,31,135,57"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="201,5,282,32"/>
+<area shape="rect" href="player_8cpp.html#a426459bfbcaa9a4141c55d4544ac4e26" title="ポリゴン頂点設定関数 SetVertexPlayer" alt="" coords="183,56,300,83"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_a9b2ef7ad3cd00e1eb682886ff31c787c_icgraph.png" border="0" usemap="#player_8cpp_a9b2ef7ad3cd00e1eb682886ff31c787c_icgraph" alt=""/></div>
+<map name="player_8cpp_a9b2ef7ad3cd00e1eb682886ff31c787c_icgraph" id="player_8cpp_a9b2ef7ad3cd00e1eb682886ff31c787c_icgraph">
+<area shape="rect" title="ポリゴン頂点生成関数 MakeVertexPlayer" alt="" coords="632,31,761,57"/>
+<area shape="rect" href="player_8h.html#ab37db7bbc65824b1c98f4514747c7c25" title="Player初期化関数 InitPlayer" alt="" coords="508,31,584,57"/>
+<area shape="rect" href="main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="268,5,307,32"/>
+<area shape="rect" href="main_8h.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="385,56,460,83"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,31,79,57"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,56,189,83"/>
+<area shape="rect" href="result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="237,107,337,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -230,12 +395,27 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00099">99</a> 行目に定義があります。</p>
+<p>Player再初期化関数 ReInitPlayer </p>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00095">95</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_aec81addf7089fd7ec8344da9df5cbcc1_icgraph.png" border="0" usemap="#player_8cpp_aec81addf7089fd7ec8344da9df5cbcc1_icgraph" alt=""/></div>
+<map name="player_8cpp_aec81addf7089fd7ec8344da9df5cbcc1_icgraph" id="player_8cpp_aec81addf7089fd7ec8344da9df5cbcc1_icgraph">
+<area shape="rect" title="Player再初期化関数 ReInitPlayer" alt="" coords="529,31,621,57"/>
+<area shape="rect" href="main_8h.html#a57ff12b0d1542af6658c910e648708fe" title="ゲームを再初期化する関数 ReInitTuto" alt="" coords="393,5,473,32"/>
+<area shape="rect" href="main_8h.html#acbfad8d342da0fda946094f261f82d29" title="アップデートを再初期化する関数 UpdateReInit" alt="" coords="385,56,481,83"/>
+<area shape="rect" href="select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="237,5,337,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a2fadda7fdfcff7f35f596fbffa729796"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fadda7fdfcff7f35f596fbffa729796">&#9670;&nbsp;</a></span>SetTexturePlayer()</h2>
+<a id="a82f0a902b65506c32ecbdfec0d711b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f0a902b65506c32ecbdfec0d711b28">&#9670;&nbsp;</a></span>SetTexturePlayer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +430,7 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em>&#160;</td>
+          <td class="paramname"><em>PLYAER_TYPE</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -260,12 +440,33 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00246">246</a> 行目に定義があります。</p>
+<p>テクスチャ設定関数 SetTexturePlayer </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>cntPattern アニメパターン, int PLYAER_TYPE プレイヤータイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00240">240</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_a82f0a902b65506c32ecbdfec0d711b28_icgraph.png" border="0" usemap="#player_8cpp_a82f0a902b65506c32ecbdfec0d711b28_icgraph" alt=""/></div>
+<map name="player_8cpp_a82f0a902b65506c32ecbdfec0d711b28_icgraph" id="player_8cpp_a82f0a902b65506c32ecbdfec0d711b28_icgraph">
+<area shape="rect" title="テクスチャ設定関数 SetTexturePlayer" alt="" coords="476,31,599,57"/>
+<area shape="rect" href="game_8h.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title="バッター処理関数 Bat" alt="" coords="385,5,428,32"/>
+<area shape="rect" href="game_8h.html#a13b39c1bd65ea2255b0910a03f19de8f" title="ピッチャー処理関数 Pit" alt="" coords="387,56,426,83"/>
+<area shape="rect" href="player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="237,31,337,57"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,31,189,57"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,31,79,57"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a01aad82d3cb01c79b486912fcc5c0cde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01aad82d3cb01c79b486912fcc5c0cde">&#9670;&nbsp;</a></span>SetVertexPlayer()</h2>
+<a id="a426459bfbcaa9a4141c55d4544ac4e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a426459bfbcaa9a4141c55d4544ac4e26">&#9670;&nbsp;</a></span>SetVertexPlayer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,13 +475,39 @@ $(function() {
           <td class="memname">void SetVertexPlayer </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
+          <td class="paramname"><em>PLYAER_TYPE</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00286">286</a> 行目に定義があります。</p>
+<p>ポリゴン頂点設定関数 SetVertexPlayer </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>PLYAER_TYPE プレイヤータイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00280">280</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_a426459bfbcaa9a4141c55d4544ac4e26_icgraph.png" border="0" usemap="#player_8cpp_a426459bfbcaa9a4141c55d4544ac4e26_icgraph" alt=""/></div>
+<map name="player_8cpp_a426459bfbcaa9a4141c55d4544ac4e26_icgraph" id="player_8cpp_a426459bfbcaa9a4141c55d4544ac4e26_icgraph">
+<area shape="rect" title="ポリゴン頂点設定関数 SetVertexPlayer" alt="" coords="833,56,951,83"/>
+<area shape="rect" href="game_8h.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title="バッター処理関数 Bat" alt="" coords="699,5,742,32"/>
+<area shape="rect" href="player_8cpp.html#a9b2ef7ad3cd00e1eb682886ff31c787c" title="ポリゴン頂点生成関数 MakeVertexPlayer" alt="" coords="656,107,785,133"/>
+<area shape="rect" href="game_8h.html#a13b39c1bd65ea2255b0910a03f19de8f" title="ピッチャー処理関数 Pit" alt="" coords="701,56,740,83"/>
+<area shape="rect" href="player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="508,5,608,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,81,189,108"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,107,79,133"/>
+<area shape="rect" href="player_8h.html#ab37db7bbc65824b1c98f4514747c7c25" title="Player初期化関数 InitPlayer" alt="" coords="520,107,596,133"/>
+<area shape="rect" href="main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="268,157,307,184"/>
+<area shape="rect" href="main_8h.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="385,107,460,133"/>
+<area shape="rect" href="result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="237,107,337,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -300,7 +527,19 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00126">126</a> 行目に定義があります。</p>
+<p>Player開放関数 UninitPlayer </p>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00121">121</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_ad50044e423acab81254da2bca8597cad_icgraph.png" border="0" usemap="#player_8cpp_ad50044e423acab81254da2bca8597cad_icgraph" alt=""/></div>
+<map name="player_8cpp_ad50044e423acab81254da2bca8597cad_icgraph" id="player_8cpp_ad50044e423acab81254da2bca8597cad_icgraph">
+<area shape="rect" title="Player開放関数 UninitPlayer" alt="" coords="229,5,321,32"/>
+<area shape="rect" href="main_8cpp.html#ae43a8873beb00c8038b31c52b8a00edb" title="メモリ開放関数" alt="" coords="127,5,181,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -320,7 +559,45 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00148">148</a> 行目に定義があります。</p>
+<p>Player更新関数 UpdatePlayer </p>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00142">142</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_ab3a456d791fc2bd6c2bd0b1bc44fd6c6_cgraph.png" border="0" usemap="#player_8cpp_ab3a456d791fc2bd6c2bd0b1bc44fd6c6_cgraph" alt=""/></div>
+<map name="player_8cpp_ab3a456d791fc2bd6c2bd0b1bc44fd6c6_cgraph" id="player_8cpp_ab3a456d791fc2bd6c2bd0b1bc44fd6c6_cgraph">
+<area shape="rect" title="Player更新関数 UpdatePlayer" alt="" coords="5,411,105,437"/>
+<area shape="rect" href="game_8cpp.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title="バッター処理関数 Bat" alt="" coords="167,309,210,336"/>
+<area shape="rect" href="input_8cpp.html#a9d43b9f7772ae1c0a5c1f7e6a0c0adc4" title=" " alt="" coords="285,5,417,32"/>
+<area shape="rect" href="game_8cpp.html#a13b39c1bd65ea2255b0910a03f19de8f" title="ピッチャー処理関数 Pit" alt="" coords="169,537,208,564"/>
+<area shape="rect" href="fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d" title="フェード設定関数 SetFade" alt="" coords="153,588,224,615"/>
+<area shape="rect" href="meetstrike_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title="MeetStrike取得関数 Get_Cursor" alt="" coords="307,309,395,336"/>
+<area shape="rect" href="ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="319,461,384,488"/>
+<area shape="rect" href="input_8cpp.html#a51329aebf57af8767b502a8b111fa577" title=" " alt="" coords="283,360,420,387"/>
+<area shape="rect" href="player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="301,411,401,437"/>
+<area shape="rect" href="controltype_8cpp.html#ad72284daff16eaa051c2cb705750f440" title="コントロールタイプ画僧カーソルが止まっている場所取得関数 GetSCONkeypos" alt="" coords="290,56,413,83"/>
+<area shape="rect" href="sensitivity_8cpp.html#aa8041cdc6e4826513785bbc0d26a7671" title="感度画僧カーソルが止まっている場所取得関数 GetSSENSIkey" alt="" coords="295,107,407,133"/>
+<area shape="rect" href="input_8cpp.html#ae73d9f5f454c89246853f39fdd2d20d5" title=" " alt="" coords="272,157,431,184"/>
+<area shape="rect" href="input_8cpp.html#ac697173603d80e79dbaac2b319cca44c" title=" " alt="" coords="274,208,429,235"/>
+<area shape="rect" href="input_8cpp.html#a7951056484ea4c474b1a5f783a1472b2" title=" " alt="" coords="290,259,413,285"/>
+<area shape="rect" href="player_8cpp.html#a82f0a902b65506c32ecbdfec0d711b28" title="テクスチャ設定関数 SetTexturePlayer" alt="" coords="290,512,413,539"/>
+<area shape="rect" href="player_8cpp.html#a426459bfbcaa9a4141c55d4544ac4e26" title="ポリゴン頂点設定関数 SetVertexPlayer" alt="" coords="293,563,410,589"/>
+<area shape="rect" href="player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title="PlayerPit取得関数 GetPlayerPit" alt="" coords="303,613,399,640"/>
+<area shape="rect" href="sound_8cpp.html#a35c57e56563987d661008dbf450de87f" title=" " alt="" coords="309,664,394,691"/>
+<area shape="rect" href="ball_8cpp.html#afb1ecd37c1b5d7730424879558dc4d2a" title="ボール設定関数 SetBall" alt="" coords="319,715,383,741"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="player_8cpp_ab3a456d791fc2bd6c2bd0b1bc44fd6c6_icgraph.png" border="0" usemap="#player_8cpp_ab3a456d791fc2bd6c2bd0b1bc44fd6c6_icgraph" alt=""/></div>
+<map name="player_8cpp_ab3a456d791fc2bd6c2bd0b1bc44fd6c6_icgraph" id="player_8cpp_ab3a456d791fc2bd6c2bd0b1bc44fd6c6_icgraph">
+<area shape="rect" title="Player更新関数 UpdatePlayer" alt="" coords="237,5,337,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -337,7 +614,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00032">32</a> 行目に定義があります。</p>
+<p>プレイヤーバッターの構造体変数 </p>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00028">28</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -353,7 +632,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00031">31</a> 行目に定義があります。</p>
+<p>プレイヤーピッチャーの構造体変数 </p>
+
+<p class="definition"> <a class="el" href="player_8cpp_source.html">player.cpp</a> の <a class="el" href="player_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
 
 </div>
 </div>

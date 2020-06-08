@@ -1,0 +1,466 @@
+\hypertarget{meetstrike_8h}{}\doxysection{meetstrike.\+h ファイル}
+\label{meetstrike_8h}\index{meetstrike.h@{meetstrike.h}}
+
+
+Hit\+Ball\+Target(2\+D)的当てゲーム  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_meet_strike}{Meet\+Strike}}
+\begin{DoxyCompactList}\small\item\em 2Dポリゴンを定義する構造体 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}}
+\begin{DoxyCompactList}\small\item\em 2Dポリゴンを定義する構造体 \mbox{\hyperlink{struct_meet_strike}{Meet\+Strike}} \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}}
+\begin{DoxyCompactList}\small\item\em 2Dポリゴンを定義する構造体 \mbox{\hyperlink{struct_meet_strike}{Meet\+Strike}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a4316e16ca5672e38ec1027d23ae6766f}{M\+E\+E\+T\+S\+T\+R\+I\+K\+E\+\_\+\+G\+O\+U\+K\+EI}}~(2)
+\begin{DoxyCompactList}\small\item\em ミートカーソルとストライク \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a98bf4fefbc61439407eca9f40b5e4157}{T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+R\+I\+KE}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/item/strike.\+png\char`\"{})
+\begin{DoxyCompactList}\small\item\em 読み込むテクスチャファイル名 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(150/2)
+\begin{DoxyCompactList}\small\item\em ポリゴンの幅 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_ad0bde38dcf19ee2758f77670d4e65077}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(180/2)
+\begin{DoxyCompactList}\small\item\em ポリゴンの高さ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_ab0422264886541e4099450820f1f28e5}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+B\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(150/2)
+\begin{DoxyCompactList}\small\item\em 当たり判定 BB ポリゴンの幅 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a47d8ecdc3c90232fa1059bcb1f413452}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+B\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(180/2)
+\begin{DoxyCompactList}\small\item\em 当たり判定 BB ポリゴンの高さ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a419aa744e11ecd8c7126133eb15894fb}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE}}~((\mbox{\hyperlink{meetstrike_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{meetstrike_8h_ad0bde38dcf19ee2758f77670d4e65077}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)
+\begin{DoxyCompactList}\small\item\em 当たり判定 BC テクスチャサイズ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_aef1364577e8d161ec8823caa37d9828e}{S\+T\+R\+I\+K\+E\+\_\+\+G\+O\+U\+K\+EI}}~(1)
+\begin{DoxyCompactList}\small\item\em ストライク構造体合計 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a6f2bca575ed5e97bef629b28ff8d4a32}{T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+C\+U\+R\+S\+OR}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/item/batcursor.\+png\char`\"{})
+\begin{DoxyCompactList}\small\item\em 読み込むテクスチャファイル名 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a38194695d5b610404dc05ceb4d4cc498}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(75/2)
+\begin{DoxyCompactList}\small\item\em ポリゴンの幅 大 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a2911fb2f68e9b1908f501ec407c5f4c1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(75/2)
+\begin{DoxyCompactList}\small\item\em ポリゴンの高さ 大 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_aee439a0fbbd6d9b42a9a0408845cb5ca}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE}}~((\mbox{\hyperlink{meetstrike_8h_a38194695d5b610404dc05ceb4d4cc498}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{meetstrike_8h_a2911fb2f68e9b1908f501ec407c5f4c1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)
+\begin{DoxyCompactList}\small\item\em 当たり判定 BC テクスチャサイズ 大 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a967b4d49de60d2e28116fcbccfa19542}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(30/2)
+\begin{DoxyCompactList}\small\item\em ポリゴンの幅 小 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a12f3b5c83fcc875e19ec0553284c119a}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(30/2)
+\begin{DoxyCompactList}\small\item\em ポリゴンの高さ 小 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_acce142b21cc095d401f48f72d12872b3}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE}}~((\mbox{\hyperlink{meetstrike_8h_a967b4d49de60d2e28116fcbccfa19542}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{meetstrike_8h_a12f3b5c83fcc875e19ec0553284c119a}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)
+\begin{DoxyCompactList}\small\item\em 当たり判定 BC テクスチャサイズ 小 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{meetstrike_8h_a2b946dae9307d5bbf004183e2aad8dde}{C\+U\+R\+S\+O\+R\+\_\+\+G\+O\+U\+K\+EI}}~(1)
+\begin{DoxyCompactList}\small\item\em ミートカーソル構造体合計 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{meetstrike_8h_a37ed1ff532aeaadef3f7b847fbf47258}{Init\+Meet\+Strike}} (int type)
+\begin{DoxyCompactList}\small\item\em Meet\+Strike初期化関数 Init\+Meet\+Strike \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{meetstrike_8h_a74845328d2e102666e16a6025957d352}{Re\+Init\+Meet\+Strike}} (void)
+\begin{DoxyCompactList}\small\item\em Meet\+Strike再初期化関数 Re\+Init\+Meet\+Strike \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{meetstrike_8h_a6dfb7f6a5a72e8d2dc9e22a3590251cd}{Uninit\+Meet\+Strike}} (void)
+\begin{DoxyCompactList}\small\item\em Meet\+Strike開放関数 Uninit\+Meet\+Strike \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{meetstrike_8h_a7bc12c74b219c9919eef7c52da251ecd}{Update\+Meet\+Strike}} (void)
+\begin{DoxyCompactList}\small\item\em Meet\+Strike更新関数 Update\+Meet\+Strike \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{meetstrike_8h_a34a1c452fa9e1b37fbeaebb30e36d319}{Draw\+Meet\+Strike}} (void)
+\begin{DoxyCompactList}\small\item\em Meet\+Strike描画関数 Draw\+Meet\+Strike \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}} $\ast$ \mbox{\hyperlink{meetstrike_8h_a64378fa1372297d3c72ce483c18d10fe}{Get\+Strike}} (void)
+\begin{DoxyCompactList}\small\item\em Meet\+Strike取得関数 Get\+Strike \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}} $\ast$ \mbox{\hyperlink{meetstrike_8h_a7c9aa56d772450fdb3be7f367988a355}{Get\+\_\+\+Cursor}} (void)
+\begin{DoxyCompactList}\small\item\em Meet\+Strike取得関数 Get\+\_\+\+Cursor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{meetstrike_8h_a5890c1ed215900efb97815e1747ad523}{Set\+Vertex\+Meet\+Strike}} (int Cursor\+Type)
+\begin{DoxyCompactList}\small\item\em Meet\+Strike取得関数 Set\+Vertex\+Meet\+Strike \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Hit\+Ball\+Target(2\+D)的当てゲーム 
+
+\begin{DoxyAuthor}{著者}
+キムラジュン 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/09/01 
+\end{DoxyDate}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{meetstrike_8h_a2b946dae9307d5bbf004183e2aad8dde}\label{meetstrike_8h_a2b946dae9307d5bbf004183e2aad8dde}} 
+\index{meetstrike.h@{meetstrike.h}!CURSOR\_GOUKEI@{CURSOR\_GOUKEI}}
+\index{CURSOR\_GOUKEI@{CURSOR\_GOUKEI}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_GOUKEI}{CURSOR\_GOUKEI}}
+{\footnotesize\ttfamily \#define C\+U\+R\+S\+O\+R\+\_\+\+G\+O\+U\+K\+EI~(1)}
+
+
+
+ミートカーソル構造体合計 
+
+
+
+ meetstrike.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a4316e16ca5672e38ec1027d23ae6766f}\label{meetstrike_8h_a4316e16ca5672e38ec1027d23ae6766f}} 
+\index{meetstrike.h@{meetstrike.h}!MEETSTRIKE\_GOUKEI@{MEETSTRIKE\_GOUKEI}}
+\index{MEETSTRIKE\_GOUKEI@{MEETSTRIKE\_GOUKEI}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{MEETSTRIKE\_GOUKEI}{MEETSTRIKE\_GOUKEI}}
+{\footnotesize\ttfamily \#define M\+E\+E\+T\+S\+T\+R\+I\+K\+E\+\_\+\+G\+O\+U\+K\+EI~(2)}
+
+
+
+ミートカーソルとストライク 
+
+
+
+ meetstrike.\+h の 14 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_aef1364577e8d161ec8823caa37d9828e}\label{meetstrike_8h_aef1364577e8d161ec8823caa37d9828e}} 
+\index{meetstrike.h@{meetstrike.h}!STRIKE\_GOUKEI@{STRIKE\_GOUKEI}}
+\index{STRIKE\_GOUKEI@{STRIKE\_GOUKEI}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{STRIKE\_GOUKEI}{STRIKE\_GOUKEI}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+K\+E\+\_\+\+G\+O\+U\+K\+EI~(1)}
+
+
+
+ストライク構造体合計 
+
+
+
+ meetstrike.\+h の 23 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_aee439a0fbbd6d9b42a9a0408845cb5ca}\label{meetstrike_8h_aee439a0fbbd6d9b42a9a0408845cb5ca}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE@{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE}}
+\index{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE@{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE}{TEXTURE\_CURSOR\_BIG\_COLLISION\_BC\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE~((\mbox{\hyperlink{meetstrike_8h_a38194695d5b610404dc05ceb4d4cc498}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{meetstrike_8h_a2911fb2f68e9b1908f501ec407c5f4c1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)}
+
+
+
+当たり判定 BC テクスチャサイズ 大 
+
+
+
+ meetstrike.\+h の 29 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a38194695d5b610404dc05ceb4d4cc498}\label{meetstrike_8h_a38194695d5b610404dc05ceb4d4cc498}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_CURSOR\_BIG\_SIZE\_X@{TEXTURE\_CURSOR\_BIG\_SIZE\_X}}
+\index{TEXTURE\_CURSOR\_BIG\_SIZE\_X@{TEXTURE\_CURSOR\_BIG\_SIZE\_X}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_BIG\_SIZE\_X}{TEXTURE\_CURSOR\_BIG\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+X~(75/2)}
+
+
+
+ポリゴンの幅 大 
+
+
+
+ meetstrike.\+h の 27 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a2911fb2f68e9b1908f501ec407c5f4c1}\label{meetstrike_8h_a2911fb2f68e9b1908f501ec407c5f4c1}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_CURSOR\_BIG\_SIZE\_Y@{TEXTURE\_CURSOR\_BIG\_SIZE\_Y}}
+\index{TEXTURE\_CURSOR\_BIG\_SIZE\_Y@{TEXTURE\_CURSOR\_BIG\_SIZE\_Y}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_BIG\_SIZE\_Y}{TEXTURE\_CURSOR\_BIG\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+B\+I\+G\+\_\+\+S\+I\+Z\+E\+\_\+Y~(75/2)}
+
+
+
+ポリゴンの高さ 大 
+
+
+
+ meetstrike.\+h の 28 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_acce142b21cc095d401f48f72d12872b3}\label{meetstrike_8h_acce142b21cc095d401f48f72d12872b3}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE@{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE}}
+\index{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE@{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE}{TEXTURE\_CURSOR\_SMALL\_COLLISION\_BC\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE~((\mbox{\hyperlink{meetstrike_8h_a967b4d49de60d2e28116fcbccfa19542}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{meetstrike_8h_a12f3b5c83fcc875e19ec0553284c119a}{T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)}
+
+
+
+当たり判定 BC テクスチャサイズ 小 
+
+
+
+ meetstrike.\+h の 32 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a967b4d49de60d2e28116fcbccfa19542}\label{meetstrike_8h_a967b4d49de60d2e28116fcbccfa19542}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_CURSOR\_SMALL\_SIZE\_X@{TEXTURE\_CURSOR\_SMALL\_SIZE\_X}}
+\index{TEXTURE\_CURSOR\_SMALL\_SIZE\_X@{TEXTURE\_CURSOR\_SMALL\_SIZE\_X}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_SMALL\_SIZE\_X}{TEXTURE\_CURSOR\_SMALL\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+X~(30/2)}
+
+
+
+ポリゴンの幅 小 
+
+
+
+ meetstrike.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a12f3b5c83fcc875e19ec0553284c119a}\label{meetstrike_8h_a12f3b5c83fcc875e19ec0553284c119a}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_CURSOR\_SMALL\_SIZE\_Y@{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y}}
+\index{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y@{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y}{TEXTURE\_CURSOR\_SMALL\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+I\+Z\+E\+\_\+Y~(30/2)}
+
+
+
+ポリゴンの高さ 小 
+
+
+
+ meetstrike.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a6f2bca575ed5e97bef629b28ff8d4a32}\label{meetstrike_8h_a6f2bca575ed5e97bef629b28ff8d4a32}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_GAME\_CURSOR@{TEXTURE\_GAME\_CURSOR}}
+\index{TEXTURE\_GAME\_CURSOR@{TEXTURE\_GAME\_CURSOR}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_GAME\_CURSOR}{TEXTURE\_GAME\_CURSOR}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+C\+U\+R\+S\+OR~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/item/batcursor.\+png\char`\"{})}
+
+
+
+読み込むテクスチャファイル名 
+
+
+
+ meetstrike.\+h の 26 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a98bf4fefbc61439407eca9f40b5e4157}\label{meetstrike_8h_a98bf4fefbc61439407eca9f40b5e4157}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_GAME\_STRIKE@{TEXTURE\_GAME\_STRIKE}}
+\index{TEXTURE\_GAME\_STRIKE@{TEXTURE\_GAME\_STRIKE}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_GAME\_STRIKE}{TEXTURE\_GAME\_STRIKE}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+G\+A\+M\+E\+\_\+\+S\+T\+R\+I\+KE~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/item/strike.\+png\char`\"{})}
+
+
+
+読み込むテクスチャファイル名 
+
+
+
+ meetstrike.\+h の 17 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_ab0422264886541e4099450820f1f28e5}\label{meetstrike_8h_ab0422264886541e4099450820f1f28e5}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X@{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X}}
+\index{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X@{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X}{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+B\+\_\+\+S\+I\+Z\+E\+\_\+X~(150/2)}
+
+
+
+当たり判定 BB ポリゴンの幅 
+
+
+
+ meetstrike.\+h の 20 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a47d8ecdc3c90232fa1059bcb1f413452}\label{meetstrike_8h_a47d8ecdc3c90232fa1059bcb1f413452}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y@{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y}}
+\index{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y@{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y}{TEXTURE\_STRIKE\_COLLISION\_BB\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+B\+\_\+\+S\+I\+Z\+E\+\_\+Y~(180/2)}
+
+
+
+当たり判定 BB ポリゴンの高さ 
+
+
+
+ meetstrike.\+h の 21 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a419aa744e11ecd8c7126133eb15894fb}\label{meetstrike_8h_a419aa744e11ecd8c7126133eb15894fb}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE@{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE}}
+\index{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE@{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE}{TEXTURE\_STRIKE\_COLLISION\_BC\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+B\+C\+\_\+\+S\+I\+ZE~((\mbox{\hyperlink{meetstrike_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+X}}+\mbox{\hyperlink{meetstrike_8h_ad0bde38dcf19ee2758f77670d4e65077}{T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y}})/2)}
+
+
+
+当たり判定 BC テクスチャサイズ 
+
+
+
+ meetstrike.\+h の 22 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}\label{meetstrike_8h_a9bfd6ec74e0ac70d76a7afd56c88aaf1}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_STRIKE\_SIZE\_X@{TEXTURE\_STRIKE\_SIZE\_X}}
+\index{TEXTURE\_STRIKE\_SIZE\_X@{TEXTURE\_STRIKE\_SIZE\_X}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_SIZE\_X}{TEXTURE\_STRIKE\_SIZE\_X}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+X~(150/2)}
+
+
+
+ポリゴンの幅 
+
+
+
+ meetstrike.\+h の 18 行目に定義があります。
+
+\mbox{\Hypertarget{meetstrike_8h_ad0bde38dcf19ee2758f77670d4e65077}\label{meetstrike_8h_ad0bde38dcf19ee2758f77670d4e65077}} 
+\index{meetstrike.h@{meetstrike.h}!TEXTURE\_STRIKE\_SIZE\_Y@{TEXTURE\_STRIKE\_SIZE\_Y}}
+\index{TEXTURE\_STRIKE\_SIZE\_Y@{TEXTURE\_STRIKE\_SIZE\_Y}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{TEXTURE\_STRIKE\_SIZE\_Y}{TEXTURE\_STRIKE\_SIZE\_Y}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+T\+R\+I\+K\+E\+\_\+\+S\+I\+Z\+E\+\_\+Y~(180/2)}
+
+
+
+ポリゴンの高さ 
+
+
+
+ meetstrike.\+h の 19 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{meetstrike_8h_a34a1c452fa9e1b37fbeaebb30e36d319}\label{meetstrike_8h_a34a1c452fa9e1b37fbeaebb30e36d319}} 
+\index{meetstrike.h@{meetstrike.h}!DrawMeetStrike@{DrawMeetStrike}}
+\index{DrawMeetStrike@{DrawMeetStrike}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{DrawMeetStrike()}{DrawMeetStrike()}}
+{\footnotesize\ttfamily void Draw\+Meet\+Strike (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Meet\+Strike描画関数 Draw\+Meet\+Strike 
+
+
+
+ meetstrike.\+cpp の 121 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{meetstrike_8h_a7c9aa56d772450fdb3be7f367988a355}\label{meetstrike_8h_a7c9aa56d772450fdb3be7f367988a355}} 
+\index{meetstrike.h@{meetstrike.h}!Get\_Cursor@{Get\_Cursor}}
+\index{Get\_Cursor@{Get\_Cursor}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{Get\_Cursor()}{Get\_Cursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}}$\ast$ Get\+\_\+\+Cursor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Meet\+Strike取得関数 Get\+\_\+\+Cursor 
+
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_c_u_r_s_o_r}{C\+U\+R\+S\+OR}} 
+\end{DoxyReturn}
+
+
+ meetstrike.\+cpp の 257 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{meetstrike_8h_a64378fa1372297d3c72ce483c18d10fe}\label{meetstrike_8h_a64378fa1372297d3c72ce483c18d10fe}} 
+\index{meetstrike.h@{meetstrike.h}!GetStrike@{GetStrike}}
+\index{GetStrike@{GetStrike}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{GetStrike()}{GetStrike()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}}$\ast$ Get\+Strike (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Meet\+Strike取得関数 Get\+Strike 
+
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_s_t_r_i_k_e}{S\+T\+R\+I\+KE}} 
+\end{DoxyReturn}
+
+
+ meetstrike.\+cpp の 249 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{meetstrike_8h_a37ed1ff532aeaadef3f7b847fbf47258}\label{meetstrike_8h_a37ed1ff532aeaadef3f7b847fbf47258}} 
+\index{meetstrike.h@{meetstrike.h}!InitMeetStrike@{InitMeetStrike}}
+\index{InitMeetStrike@{InitMeetStrike}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{InitMeetStrike()}{InitMeetStrike()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Meet\+Strike (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Meet\+Strike初期化関数 Init\+Meet\+Strike 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ meetstrike.\+cpp の 31 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{meetstrike_8h_a74845328d2e102666e16a6025957d352}\label{meetstrike_8h_a74845328d2e102666e16a6025957d352}} 
+\index{meetstrike.h@{meetstrike.h}!ReInitMeetStrike@{ReInitMeetStrike}}
+\index{ReInitMeetStrike@{ReInitMeetStrike}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{ReInitMeetStrike()}{ReInitMeetStrike()}}
+{\footnotesize\ttfamily void Re\+Init\+Meet\+Strike (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Meet\+Strike再初期化関数 Re\+Init\+Meet\+Strike 
+
+
+
+ meetstrike.\+cpp の 77 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{meetstrike_8h_a5890c1ed215900efb97815e1747ad523}\label{meetstrike_8h_a5890c1ed215900efb97815e1747ad523}} 
+\index{meetstrike.h@{meetstrike.h}!SetVertexMeetStrike@{SetVertexMeetStrike}}
+\index{SetVertexMeetStrike@{SetVertexMeetStrike}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{SetVertexMeetStrike()}{SetVertexMeetStrike()}}
+{\footnotesize\ttfamily void Set\+Vertex\+Meet\+Strike (\begin{DoxyParamCaption}\item[{int}]{Cursor\+Type }\end{DoxyParamCaption})}
+
+
+
+Meet\+Strike取得関数 Set\+Vertex\+Meet\+Strike 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em Cursor\+Type} & カーソルタイプ \\
+\hline
+\end{DoxyParams}
+
+
+ meetstrike.\+cpp の 194 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{meetstrike_8h_a6dfb7f6a5a72e8d2dc9e22a3590251cd}\label{meetstrike_8h_a6dfb7f6a5a72e8d2dc9e22a3590251cd}} 
+\index{meetstrike.h@{meetstrike.h}!UninitMeetStrike@{UninitMeetStrike}}
+\index{UninitMeetStrike@{UninitMeetStrike}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{UninitMeetStrike()}{UninitMeetStrike()}}
+{\footnotesize\ttfamily void Uninit\+Meet\+Strike (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Meet\+Strike開放関数 Uninit\+Meet\+Strike 
+
+
+
+ meetstrike.\+cpp の 91 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{meetstrike_8h_a7bc12c74b219c9919eef7c52da251ecd}\label{meetstrike_8h_a7bc12c74b219c9919eef7c52da251ecd}} 
+\index{meetstrike.h@{meetstrike.h}!UpdateMeetStrike@{UpdateMeetStrike}}
+\index{UpdateMeetStrike@{UpdateMeetStrike}!meetstrike.h@{meetstrike.h}}
+\doxysubsubsection{\texorpdfstring{UpdateMeetStrike()}{UpdateMeetStrike()}}
+{\footnotesize\ttfamily void Update\+Meet\+Strike (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Meet\+Strike更新関数 Update\+Meet\+Strike 
+
+
+
+ meetstrike.\+cpp の 108 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 10
+被呼び出し関係図\+:
+% FIG 11

@@ -1,7 +1,7 @@
 <map id="GetSSENSIkey" name="GetSSENSIkey">
-<area shape="rect" id="node1" title=" " alt="" coords="476,5,588,32"/>
-<area shape="rect" id="node2" href="$game_8h.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title=" " alt="" coords="385,5,428,32"/>
-<area shape="rect" id="node3" href="$player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title=" " alt="" coords="237,5,337,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title=" " alt="" coords="127,5,189,32"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,5,79,32"/>
+<area shape="rect" id="node1" title="感度画僧カーソルが止まっている場所取得関数 GetSSENSIkey" alt="" coords="476,5,588,32"/>
+<area shape="rect" id="node2" href="$game_8h.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title="バッター処理関数 Bat" alt="" coords="385,5,428,32"/>
+<area shape="rect" id="node3" href="$player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="237,5,337,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
 </map>

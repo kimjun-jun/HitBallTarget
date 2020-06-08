@@ -88,11 +88,11 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="input_8cpp.html#acffdec32c8240d863bcca339cce38ea1">UninitKeyboard</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;HRESULT <a class="code" href="input_8cpp.html#a7f9e35100bea94e3adb296803d71d0b5">UpdateKeyboard</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;HRESULT <a class="code" href="input_8cpp.html#a3c5c25de2796ff40c1d5d24bed00ac66">InitializeMouse</a>(HINSTANCE hInst, HWND hWindow); <span class="comment">// マウスの初期化</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="input_8cpp.html#af33a96a7320c2c9dbcf876ff22301a41">UninitMouse</a>();                     <span class="comment">// マウスの終了処理</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;HRESULT <a class="code" href="input_8cpp.html#a8ff4747a563eaa95eb1f9a1529ee381f">UpdateMouse</a>();                  <span class="comment">// マウスの更新処理</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;HRESULT <a class="code" href="input_8cpp.html#a3c5c25de2796ff40c1d5d24bed00ac66">InitializeMouse</a>(HINSTANCE hInst, HWND hWindow);             <span class="comment">// マウスの初期化</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="input_8cpp.html#af33a96a7320c2c9dbcf876ff22301a41">UninitMouse</a>();                                                 <span class="comment">// マウスの終了処理</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;HRESULT <a class="code" href="input_8cpp.html#a8ff4747a563eaa95eb1f9a1529ee381f">UpdateMouse</a>();                                              <span class="comment">// マウスの更新処理</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;HRESULT <a class="code" href="input_8cpp.html#ab270d8b3296acbba9149c614c552b40d">InitializePad</a>(<span class="keywordtype">void</span>);            <span class="comment">// パッド初期化</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;HRESULT <a class="code" href="input_8cpp.html#ab270d8b3296acbba9149c614c552b40d">InitializePad</a>(<span class="keywordtype">void</span>);                                        <span class="comment">// パッド初期化</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//BOOL CALLBACK SearchPadCallback(LPDIDEVICEINSTANCE lpddi, LPVOID);    // パッド検査コールバック</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="input_8cpp.html#aff6b507e27330523ccf91d6a54c11168">UpdatePad</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="input_8cpp.html#a6b991763b50ab85e07361b6daea4c74b">UninitPad</a>(<span class="keywordtype">void</span>);</div>
@@ -111,18 +111,18 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="input_8cpp.html#add3955b82390d94f565c5f337dd8ea62">   49</a></span>&#160;<span class="keywordtype">int</span>                     <a class="code" href="input_8cpp.html#add3955b82390d94f565c5f337dd8ea62">g_keyStateRepeatCnt</a>[<a class="code" href="input_8cpp.html#afd005bb5824026329ad3445123d0c712">NUM_KEY_MAX</a>];   <span class="comment">// キーボードのリピートカウンタ</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//--------------------------------- mouse</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">static</span> LPDIRECTINPUTDEVICE8 pMouse = NULL; <span class="comment">// mouse</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">static</span> LPDIRECTINPUTDEVICE8 pMouse = NULL;  <span class="comment">// mouse</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">static</span> DIMOUSESTATE2   mouseState;      <span class="comment">// マウスのダイレクトな状態</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">static</span> DIMOUSESTATE2   mouseTrigger;    <span class="comment">// 押された瞬間だけON</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">static</span> DIMOUSESTATE2   mouseState;          <span class="comment">// マウスのダイレクトな状態</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">static</span> DIMOUSESTATE2   mouseTrigger;        <span class="comment">// 押された瞬間だけON</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//--------------------------------- game pad</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">static</span> LPDIRECTINPUTDEVICE8 pGamePad[<a class="code" href="input_8h.html#aabbcc0c379cb92535dfcd591367b7684">GAMEPADMAX</a>] = { NULL,NULL,NULL,NULL };<span class="comment">// パッドデバイス</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">static</span> DWORD    padState[<a class="code" href="input_8h.html#aabbcc0c379cb92535dfcd591367b7684">GAMEPADMAX</a>];   <span class="comment">// パッド情報（複数対応）</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">static</span> DWORD    padState[<a class="code" href="input_8h.html#aabbcc0c379cb92535dfcd591367b7684">GAMEPADMAX</a>];                   <span class="comment">// パッド情報（複数対応）</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">static</span> DWORD    padTrigger[<a class="code" href="input_8h.html#aabbcc0c379cb92535dfcd591367b7684">GAMEPADMAX</a>];</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>      padCount = 0;           <span class="comment">// 検出したパッドの数</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>      padCount = 0;                           <span class="comment">// 検出したパッドの数</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//=============================================================================</span></div>

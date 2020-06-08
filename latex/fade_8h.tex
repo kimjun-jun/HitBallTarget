@@ -5,6 +5,8 @@
 Hit\+Ball\+Target(2\+D)的当てゲーム  
 
 
+被依存関係図\+:
+% FIG 0
 \doxysubsection*{列挙型}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,18 +22,18 @@ enum \mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} \{ \
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{fade_8h_a00f23dbde310ac88a2c2cc41a410d328}{Init\+Fade}} (int type)
-\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{fade_8h_ac14659ccf65247cea04ede6abff5630f}{Init\+Fade}} (void)
+\begin{DoxyCompactList}\small\item\em フェード初期化関数 Init\+Fade \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{fade_8h_ae2dfa8d8b36033b4351aa88227c8c4dd}{Uninit\+Fade}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em フェードメモリ開放関数 Uninit\+Fade \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{fade_8h_a527c4f6a38007a98f667afcdd9e9c8b3}{Update\+Fade}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em フェード更新関数 Update\+Fade \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{fade_8h_a949fa5fe0973987c1f6063de5468daf0}{Draw\+Fade}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em フェード描画関数 Draw\+Fade \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{fade_8h_a85daf6279275e49d1eee12459cfada0d}{Set\+Fade}} (\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} fade, \mbox{\hyperlink{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5}{E\+\_\+\+S\+T\+A\+GE}} next, int sno)
-\item 
+\begin{DoxyCompactList}\small\item\em フェード設定関数 Set\+Fade \end{DoxyCompactList}\item 
 \mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} \mbox{\hyperlink{fade_8h_af15959ae7aa2a4e2bea206607aafbfd7}{Get\+Fade}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em フェード取得関数 Get\+Fade \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -52,31 +54,31 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 \doxysubsubsection{\texorpdfstring{FADE}{FADE}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}}}
 
-\begin{DoxyEnumFields}{列挙値}
+フェードの状態 \begin{DoxyEnumFields}{列挙値}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_NONE@{FADE\_NONE}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_NONE@{FADE\_NONE}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6}} 
-F\+A\+D\+E\+\_\+\+N\+O\+NE&\\
+F\+A\+D\+E\+\_\+\+N\+O\+NE&何もない状態 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_IN@{FADE\_IN}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_IN@{FADE\_IN}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f}} 
-F\+A\+D\+E\+\_\+\+IN&\\
+F\+A\+D\+E\+\_\+\+IN&フェードイン処理 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_MUSIC\_STOP@{FADE\_MUSIC\_STOP}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_MUSIC\_STOP@{FADE\_MUSIC\_STOP}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f}} 
-F\+A\+D\+E\+\_\+\+M\+U\+S\+I\+C\+\_\+\+S\+T\+OP&\\
+F\+A\+D\+E\+\_\+\+M\+U\+S\+I\+C\+\_\+\+S\+T\+OP&音楽ストップ \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_OUT@{FADE\_OUT}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_OUT@{FADE\_OUT}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3}} 
-F\+A\+D\+E\+\_\+\+O\+UT&\\
+F\+A\+D\+E\+\_\+\+O\+UT&フェードアウト処理 \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FADE\_MAX@{FADE\_MAX}!fade.h@{fade.h}}\index{fade.h@{fade.h}!FADE\_MAX@{FADE\_MAX}}}\mbox{\Hypertarget{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a26bc6b6684f32056033f7429057a189c}\label{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0a26bc6b6684f32056033f7429057a189c}} 
-F\+A\+D\+E\+\_\+\+M\+AX&\\
+F\+A\+D\+E\+\_\+\+M\+AX&マックス \\
 \hline
 
 \end{DoxyEnumFields}
 
 
- fade.\+h の 13 行目に定義があります。
+ fade.\+h の 14 行目に定義があります。
 
 
 
@@ -89,8 +91,16 @@ F\+A\+D\+E\+\_\+\+M\+AX&\\
 
 
 
- fade.\+cpp の 113 行目に定義があります。
+フェード描画関数 Draw\+Fade 
 
+
+
+ fade.\+cpp の 122 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{fade_8h_af15959ae7aa2a4e2bea206607aafbfd7}\label{fade_8h_af15959ae7aa2a4e2bea206607aafbfd7}} 
 \index{fade.h@{fade.h}!GetFade@{GetFade}}
 \index{GetFade@{GetFade}!fade.h@{fade.h}}
@@ -99,18 +109,36 @@ F\+A\+D\+E\+\_\+\+M\+AX&\\
 
 
 
- fade.\+cpp の 188 行目に定義があります。
+フェード取得関数 Get\+Fade 
 
-\mbox{\Hypertarget{fade_8h_a00f23dbde310ac88a2c2cc41a410d328}\label{fade_8h_a00f23dbde310ac88a2c2cc41a410d328}} 
+\begin{DoxyReturn}{戻り値}
+F\+A\+DE
+\end{DoxyReturn}
+現在のフェード状態を取得できる 
+
+ fade.\+cpp の 197 行目に定義があります。
+
+\mbox{\Hypertarget{fade_8h_ac14659ccf65247cea04ede6abff5630f}\label{fade_8h_ac14659ccf65247cea04ede6abff5630f}} 
 \index{fade.h@{fade.h}!InitFade@{InitFade}}
 \index{InitFade@{InitFade}!fade.h@{fade.h}}
 \doxysubsubsection{\texorpdfstring{InitFade()}{InitFade()}}
-{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Fade (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
- fade.\+cpp の 36 行目に定義があります。
+フェード初期化関数 Init\+Fade 
 
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ fade.\+cpp の 45 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{fade_8h_a85daf6279275e49d1eee12459cfada0d}\label{fade_8h_a85daf6279275e49d1eee12459cfada0d}} 
 \index{fade.h@{fade.h}!SetFade@{SetFade}}
 \index{SetFade@{SetFade}!fade.h@{fade.h}}
@@ -119,8 +147,19 @@ F\+A\+D\+E\+\_\+\+M\+AX&\\
 
 
 
- fade.\+cpp の 177 行目に定義があります。
+フェード設定関数 Set\+Fade 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em F\+A\+DE} & fade フェードの種類, E\+\_\+\+S\+T\+A\+GE next 次のゲームシーン, int sno 流したい音楽 \\
+\hline
+\end{DoxyParams}
+
+
+ fade.\+cpp の 186 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{fade_8h_ae2dfa8d8b36033b4351aa88227c8c4dd}\label{fade_8h_ae2dfa8d8b36033b4351aa88227c8c4dd}} 
 \index{fade.h@{fade.h}!UninitFade@{UninitFade}}
 \index{UninitFade@{UninitFade}!fade.h@{fade.h}}
@@ -129,8 +168,14 @@ F\+A\+D\+E\+\_\+\+M\+AX&\\
 
 
 
- fade.\+cpp の 49 行目に定義があります。
+フェードメモリ開放関数 Uninit\+Fade 
 
+
+
+ fade.\+cpp の 58 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{fade_8h_a527c4f6a38007a98f667afcdd9e9c8b3}\label{fade_8h_a527c4f6a38007a98f667afcdd9e9c8b3}} 
 \index{fade.h@{fade.h}!UpdateFade@{UpdateFade}}
 \index{UpdateFade@{UpdateFade}!fade.h@{fade.h}}
@@ -139,5 +184,11 @@ F\+A\+D\+E\+\_\+\+M\+AX&\\
 
 
 
- fade.\+cpp の 60 行目に定義があります。
+フェード更新関数 Update\+Fade 
 
+ゲームシーン切り替え時(\mbox{\hyperlink{fade_8h_a85daf6279275e49d1eee12459cfada0d}{Set\+Fade()}}を使用するとき)に実行される。 
+
+ fade.\+cpp の 69 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7

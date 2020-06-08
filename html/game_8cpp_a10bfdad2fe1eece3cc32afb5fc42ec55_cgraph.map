@@ -1,16 +1,15 @@
 <map id="Bat" name="Bat">
-<area shape="rect" id="node1" title=" " alt="" coords="5,309,48,336"/>
-<area shape="rect" id="node2" href="$ui_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title=" " alt="" coords="131,5,219,32"/>
-<area shape="rect" id="node3" href="$ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title=" " alt="" coords="143,56,208,83"/>
+<area shape="rect" id="node1" title="バッター処理関数 Bat" alt="" coords="5,284,48,311"/>
+<area shape="rect" id="node2" href="$meetstrike_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title="MeetStrike取得関数 Get_Cursor" alt="" coords="131,5,219,32"/>
+<area shape="rect" id="node3" href="$ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="143,56,208,83"/>
 <area shape="rect" id="node4" href="$input_8cpp.html#a9d43b9f7772ae1c0a5c1f7e6a0c0adc4" title=" " alt="" coords="109,107,241,133"/>
 <area shape="rect" id="node5" href="$input_8cpp.html#a51329aebf57af8767b502a8b111fa577" title=" " alt="" coords="107,157,244,184"/>
-<area shape="rect" id="node6" href="$player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title=" " alt="" coords="125,208,225,235"/>
-<area shape="rect" id="node7" href="$controltype_8cpp.html#ad72284daff16eaa051c2cb705750f440" title=" " alt="" coords="114,259,237,285"/>
-<area shape="rect" id="node8" href="$sensitivity_8cpp.html#aa8041cdc6e4826513785bbc0d26a7671" title=" " alt="" coords="119,309,231,336"/>
+<area shape="rect" id="node6" href="$player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="125,208,225,235"/>
+<area shape="rect" id="node7" href="$controltype_8cpp.html#ad72284daff16eaa051c2cb705750f440" title="コントロールタイプ画僧カーソルが止まっている場所取得関数 GetSCONkeypos" alt="" coords="114,259,237,285"/>
+<area shape="rect" id="node8" href="$sensitivity_8cpp.html#aa8041cdc6e4826513785bbc0d26a7671" title="感度画僧カーソルが止まっている場所取得関数 GetSSENSIkey" alt="" coords="119,309,231,336"/>
 <area shape="rect" id="node9" href="$input_8cpp.html#ae73d9f5f454c89246853f39fdd2d20d5" title=" " alt="" coords="96,360,255,387"/>
 <area shape="rect" id="node10" href="$input_8cpp.html#ac697173603d80e79dbaac2b319cca44c" title=" " alt="" coords="98,411,253,437"/>
 <area shape="rect" id="node11" href="$input_8cpp.html#a7951056484ea4c474b1a5f783a1472b2" title=" " alt="" coords="114,461,237,488"/>
-<area shape="rect" id="node12" href="$player_8cpp.html#a2fadda7fdfcff7f35f596fbffa729796" title=" " alt="" coords="114,512,237,539"/>
-<area shape="rect" id="node13" href="$player_8cpp.html#a01aad82d3cb01c79b486912fcc5c0cde" title=" " alt="" coords="117,563,234,589"/>
-<area shape="rect" id="node14" href="$ui_8cpp.html#aad8c0b6bd1326b4aea24bbf5c6590fcb" title=" " alt="" coords="129,613,221,640"/>
+<area shape="rect" id="node12" href="$player_8cpp.html#a82f0a902b65506c32ecbdfec0d711b28" title="テクスチャ設定関数 SetTexturePlayer" alt="" coords="114,512,237,539"/>
+<area shape="rect" id="node13" href="$player_8cpp.html#a426459bfbcaa9a4141c55d4544ac4e26" title="ポリゴン頂点設定関数 SetVertexPlayer" alt="" coords="117,563,234,589"/>
 </map>

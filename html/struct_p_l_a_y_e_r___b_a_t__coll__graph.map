@@ -1,5 +1,5 @@
 <map id="PLAYER_BAT" name="PLAYER_BAT">
-<area shape="rect" id="node1" title=" " alt="" coords="5,184,112,211"/>
-<area shape="rect" id="node2" href="$struct_c_h_a_r_a_c_t_e_r.html" title=" " alt="" coords="8,95,109,121"/>
-<area shape="rect" id="node3" href="$struct_v_e_r_t_e_x__2_d.html" title=" " alt="" coords="11,5,106,32"/>
+<area shape="rect" id="node1" title="2Dポリゴンを定義する構造体" alt="" coords="5,184,112,211"/>
+<area shape="rect" id="node2" href="$struct_c_h_a_r_a_c_t_e_r.html" title="キャラクター標準変数構造体" alt="" coords="8,95,109,121"/>
+<area shape="rect" id="node3" href="$struct_v_e_r_t_e_x__2_d.html" title="2D頂点フォーマットに合わせた構造体を定義" alt="" coords="11,5,106,32"/>
 </map>

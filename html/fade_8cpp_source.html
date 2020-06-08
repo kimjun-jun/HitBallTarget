@@ -73,218 +73,219 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//*****************************************************************************</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// マクロ定義</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//*****************************************************************************</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define FADE_RATE       (0.02f)     // フェード係数</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">   15</a></span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define FADE_RATE       (0.02f)                                 </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">   15</a></span>&#160;<span class="preprocessor"></span> </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//*****************************************************************************</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// プロトタイプ宣言</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//*****************************************************************************</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;HRESULT <a class="code" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">MakeVertexFade</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a>(D3DCOLOR col);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//*****************************************************************************</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// グローバル変数</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//*****************************************************************************</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">static</span> LPDIRECT3DTEXTURE9       g_p3DTextureFade = NULL;        <span class="comment">// テクスチャへのポインタ</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">static</span> <a class="code" href="struct_v_e_r_t_e_x__2_d.html">VERTEX_2D</a>                g_vertexWkFade[<a class="code" href="main_8h.html#ab722cbfcd174beb57f5473d53f9767f7">NUM_VERTEX</a>];     <span class="comment">// 頂点情報格納ワーク</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">static</span> D3DXCOLOR                g_color;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">static</span> <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a>                     g_eFade = <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f">FADE_IN</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>                      g_eScene = <a class="code" href="main_8h.html#aae9a2b94c5f319222ee2e09a5d0f2ae5a96f75e824fdc81751dcfc4f447390853">SCENE_TITLE</a>;         <span class="comment">// 次に飛ぶ予定のScene</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>                      g_sno = -1;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// 初期化処理</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="fade_8h.html#a00f23dbde310ac88a2c2cc41a410d328">   36</a></span>&#160;HRESULT <a class="code" href="fade_8cpp.html#a00f23dbde310ac88a2c2cc41a410d328">InitFade</a>(<span class="keywordtype">int</span> type)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    LPDIRECT3DDEVICE9 pDevice = <a class="code" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8">GetDevice</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// 頂点情報の設定</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">MakeVertexFade</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> S_OK;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// 終了処理</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="fade_8h.html#ae2dfa8d8b36033b4351aa88227c8c4dd">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#ae2dfa8d8b36033b4351aa88227c8c4dd">UninitFade</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (g_p3DTextureFade != NULL)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {<span class="comment">// テクスチャの開放</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        g_p3DTextureFade-&gt;Release();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;HRESULT <a class="code" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">MakeVertexFade</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a>(D3DCOLOR col);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//*****************************************************************************</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// グローバル変数</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//*****************************************************************************</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">static</span> LPDIRECT3DTEXTURE9       g_p3DTextureFade = NULL;        </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">static</span> <a class="code" href="struct_v_e_r_t_e_x__2_d.html">VERTEX_2D</a>                g_vertexWkFade[<a class="code" href="main_8h.html#ab722cbfcd174beb57f5473d53f9767f7">NUM_VERTEX</a>];     </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">static</span> D3DXCOLOR                g_color;                        </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">static</span> <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a>                     g_eFade = <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f">FADE_IN</a>;              </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>                      g_eScene = <a class="code" href="main_8h.html#aae9a2b94c5f319222ee2e09a5d0f2ae5a96f75e824fdc81751dcfc4f447390853">SCENE_TITLE</a>;         </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>                      g_sno = -1;                     </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// 初期化処理</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="fade_8h.html#ac14659ccf65247cea04ede6abff5630f">   45</a></span>&#160;HRESULT <a class="code" href="fade_8cpp.html#ac14659ccf65247cea04ede6abff5630f">InitFade</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    LPDIRECT3DDEVICE9 pDevice = <a class="code" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8">GetDevice</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// 頂点情報の設定</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">MakeVertexFade</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> S_OK;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// 終了処理</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// 更新処理</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="fade_8h.html#a527c4f6a38007a98f667afcdd9e9c8b3">   60</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a527c4f6a38007a98f667afcdd9e9c8b3">UpdateFade</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (g_eFade != <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6">FADE_NONE</a>)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {<span class="comment">// フェード処理中</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span> (g_eFade == <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3">FADE_OUT</a>)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {<span class="comment">// フェードアウト処理</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            g_color.a += <a class="code" href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">FADE_RATE</a>;     <span class="comment">// α値を加算して画面を消していく</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (g_color.a &gt;= 1.0f)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="comment">// 状態を切り替え</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <a class="code" href="main_8cpp.html#aea6ddf2fe660e7a828633d13bf701837">SetScene</a>(g_eScene);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="comment">// フェードイン処理に切り替え</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                g_color.a = 1.0f;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                g_eFade = <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f">FADE_MUSIC_STOP</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="comment">// BGM停止</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <a class="code" href="sound_8cpp.html#ae5df25309eadfa7b724d87ba341a7dde">StopSound</a>();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="comment">// 色を設定</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a>(g_color);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (g_eFade == <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f">FADE_MUSIC_STOP</a>)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="comment">// BGM再生</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (g_sno &gt; -1)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <a class="code" href="sound_8cpp.html#a35c57e56563987d661008dbf450de87f">PlaySound</a>(g_sno);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            g_eFade = <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f">FADE_IN</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (g_eFade == <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f">FADE_IN</a>)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {<span class="comment">// フェードイン処理</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            g_color.a -= <a class="code" href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">FADE_RATE</a>;     <span class="comment">// α値を減算して画面を浮き上がらせる</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">if</span> (g_color.a &lt;= 0.0f)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="comment">// フェード処理終了</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                g_color.a = 0.0f;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                g_eFade = <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6">FADE_NONE</a>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="comment">// 色を設定</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a>(g_color);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">// フェード画面</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="fade_8h.html#a949fa5fe0973987c1f6063de5468daf0">  113</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a366aedf71d0d057d6df9988b0d38f000">DrawFade</a>()</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    LPDIRECT3DDEVICE9 pDevice = <a class="code" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8">GetDevice</a>();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// 頂点フォーマットの設定</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    pDevice-&gt;SetFVF(<a class="code" href="main_8h.html#a253bdfaeb3b8834410e5e94b216630c0">FVF_VERTEX_2D</a>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">// テクスチャの設定</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    pDevice-&gt;SetTexture(0, NULL);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// ポリゴンの描画</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    pDevice-&gt;DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, <a class="code" href="main_8h.html#a76f2100a99233162d34d4283a26332bb">NUM_POLYGON</a>, g_vertexWkFade, <span class="keyword">sizeof</span>(<a class="code" href="struct_v_e_r_t_e_x__2_d.html">VERTEX_2D</a>));</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">// 頂点の作成</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">  130</a></span>&#160;HRESULT <a class="code" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">MakeVertexFade</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    LPDIRECT3DDEVICE9 pDevice = <a class="code" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8">GetDevice</a>();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">// テクスチャのパースペクティブコレクト用</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#ab22ee611f6288cb207087550b6c36746">rhw</a> =</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#ab22ee611f6288cb207087550b6c36746">rhw</a> =</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#ab22ee611f6288cb207087550b6c36746">rhw</a> =</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#ab22ee611f6288cb207087550b6c36746">rhw</a> = 1.0f;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">// 反射光の設定</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    g_color = D3DXCOLOR(1.0f, 1.0f, 1.0f, 1.0f);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = g_color;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = g_color;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = g_color;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = g_color;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// 頂点座標の設定</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a692b54ecb05d41a3c83da680e7c68ea4">vtx</a> = D3DXVECTOR3(0.0f, 0.0f, 0.0f);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a692b54ecb05d41a3c83da680e7c68ea4">vtx</a> = D3DXVECTOR3(<a class="code" href="main_8h.html#a9b6bc9242882d1e758e06ed751a2e8ec">SCREEN_W</a>, 0.0f, 0.0f);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a692b54ecb05d41a3c83da680e7c68ea4">vtx</a> = D3DXVECTOR3(0.0f, <a class="code" href="main_8h.html#a27cddfd509d28b4b2b0b44c093fac090">SCREEN_H</a>, 0.0f);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a692b54ecb05d41a3c83da680e7c68ea4">vtx</a> = D3DXVECTOR3(<a class="code" href="main_8h.html#a9b6bc9242882d1e758e06ed751a2e8ec">SCREEN_W</a>, <a class="code" href="main_8h.html#a27cddfd509d28b4b2b0b44c093fac090">SCREEN_H</a>, 0.0f);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">// テクスチャ座標の設定</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a42a58bce823068d251fe0bf2ecc28f06">tex</a> = D3DXVECTOR2(0.0f, 0.0f);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a42a58bce823068d251fe0bf2ecc28f06">tex</a> = D3DXVECTOR2(1.0f, 0.0f);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a42a58bce823068d251fe0bf2ecc28f06">tex</a> = D3DXVECTOR2(0.0f, 1.0f);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a42a58bce823068d251fe0bf2ecc28f06">tex</a> = D3DXVECTOR2(1.0f, 1.0f);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> S_OK;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="fade_8h.html#ae2dfa8d8b36033b4351aa88227c8c4dd">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#ae2dfa8d8b36033b4351aa88227c8c4dd">UninitFade</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (g_p3DTextureFade != NULL)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {<span class="comment">// テクスチャの開放</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        g_p3DTextureFade-&gt;Release();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// 更新処理</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="fade_8h.html#a527c4f6a38007a98f667afcdd9e9c8b3">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a527c4f6a38007a98f667afcdd9e9c8b3">UpdateFade</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (g_eFade != <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6">FADE_NONE</a>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {<span class="comment">// フェード処理中</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> (g_eFade == <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3">FADE_OUT</a>)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {<span class="comment">// フェードアウト処理</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            g_color.a += <a class="code" href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">FADE_RATE</a>;     <span class="comment">// α値を加算して画面を消していく</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (g_color.a &gt;= 1.0f)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="comment">// 状態を切り替え</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <a class="code" href="main_8cpp.html#aea6ddf2fe660e7a828633d13bf701837">SetScene</a>(g_eScene);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="comment">// フェードイン処理に切り替え</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                g_color.a = 1.0f;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                g_eFade = <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f">FADE_MUSIC_STOP</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="comment">// BGM停止</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <a class="code" href="sound_8cpp.html#ae5df25309eadfa7b724d87ba341a7dde">StopSound</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="comment">// 色を設定</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a>(g_color);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (g_eFade == <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f">FADE_MUSIC_STOP</a>)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">// BGM再生</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">if</span> (g_sno &gt; -1)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <a class="code" href="sound_8cpp.html#a35c57e56563987d661008dbf450de87f">PlaySound</a>(g_sno);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            g_eFade = <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f">FADE_IN</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (g_eFade == <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f">FADE_IN</a>)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        {<span class="comment">// フェードイン処理</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            g_color.a -= <a class="code" href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">FADE_RATE</a>;     <span class="comment">// α値を減算して画面を浮き上がらせる</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">if</span> (g_color.a &lt;= 0.0f)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="comment">// フェード処理終了</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                g_color.a = 0.0f;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                g_eFade = <a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6">FADE_NONE</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">// 色を設定</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <a class="code" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a>(g_color);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">// フェード画面</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="fade_8h.html#a949fa5fe0973987c1f6063de5468daf0">  122</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a366aedf71d0d057d6df9988b0d38f000">DrawFade</a>()</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    LPDIRECT3DDEVICE9 pDevice = <a class="code" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8">GetDevice</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// 頂点フォーマットの設定</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    pDevice-&gt;SetFVF(<a class="code" href="main_8h.html#a253bdfaeb3b8834410e5e94b216630c0">FVF_VERTEX_2D</a>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// テクスチャの設定</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    pDevice-&gt;SetTexture(0, NULL);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">// ポリゴンの描画</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    pDevice-&gt;DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, <a class="code" href="main_8h.html#a76f2100a99233162d34d4283a26332bb">NUM_POLYGON</a>, g_vertexWkFade, <span class="keyword">sizeof</span>(<a class="code" href="struct_v_e_r_t_e_x__2_d.html">VERTEX_2D</a>));</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">// 頂点の作成</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">  139</a></span>&#160;HRESULT <a class="code" href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">MakeVertexFade</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    LPDIRECT3DDEVICE9 pDevice = <a class="code" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8">GetDevice</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">// テクスチャのパースペクティブコレクト用</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#ab22ee611f6288cb207087550b6c36746">rhw</a> =</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#ab22ee611f6288cb207087550b6c36746">rhw</a> =</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#ab22ee611f6288cb207087550b6c36746">rhw</a> =</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#ab22ee611f6288cb207087550b6c36746">rhw</a> = 1.0f;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">// 反射光の設定</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    g_color = D3DXCOLOR(1.0f, 1.0f, 1.0f, 1.0f);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = g_color;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = g_color;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = g_color;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = g_color;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// 頂点座標の設定</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a692b54ecb05d41a3c83da680e7c68ea4">vtx</a> = D3DXVECTOR3(0.0f, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a692b54ecb05d41a3c83da680e7c68ea4">vtx</a> = D3DXVECTOR3(<a class="code" href="main_8h.html#a9b6bc9242882d1e758e06ed751a2e8ec">SCREEN_W</a>, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a692b54ecb05d41a3c83da680e7c68ea4">vtx</a> = D3DXVECTOR3(0.0f, <a class="code" href="main_8h.html#a27cddfd509d28b4b2b0b44c093fac090">SCREEN_H</a>, 0.0f);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a692b54ecb05d41a3c83da680e7c68ea4">vtx</a> = D3DXVECTOR3(<a class="code" href="main_8h.html#a9b6bc9242882d1e758e06ed751a2e8ec">SCREEN_W</a>, <a class="code" href="main_8h.html#a27cddfd509d28b4b2b0b44c093fac090">SCREEN_H</a>, 0.0f);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">// 色を設定</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">  165</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a>(D3DCOLOR col)</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// 反射光の設定</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = col;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = col;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = col;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = col;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">// フェードの状態設定</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="fade_8h.html#a85daf6279275e49d1eee12459cfada0d">  177</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d">SetFade</a>(<a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a> fade, <a class="code" href="main_8h.html#aae9a2b94c5f319222ee2e09a5d0f2ae5">E_STAGE</a> next, <span class="keywordtype">int</span> sno)</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    g_eFade = fade;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    g_eScene = next;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    g_sno = sno;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">// テクスチャ座標の設定</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a42a58bce823068d251fe0bf2ecc28f06">tex</a> = D3DXVECTOR2(0.0f, 0.0f);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a42a58bce823068d251fe0bf2ecc28f06">tex</a> = D3DXVECTOR2(1.0f, 0.0f);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a42a58bce823068d251fe0bf2ecc28f06">tex</a> = D3DXVECTOR2(0.0f, 1.0f);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a42a58bce823068d251fe0bf2ecc28f06">tex</a> = D3DXVECTOR2(1.0f, 1.0f);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">return</span> S_OK;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">// 色を設定</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">  174</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a>(D3DCOLOR col)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">// 反射光の設定</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    g_vertexWkFade[0].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = col;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    g_vertexWkFade[1].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = col;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    g_vertexWkFade[2].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = col;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    g_vertexWkFade[3].<a class="code" href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">diffuse</a> = col;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">// フェードの状態設定</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">// フェードの状態取得</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">//=============================================================================</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="fade_8h.html#af15959ae7aa2a4e2bea206607aafbfd7">  188</a></span>&#160;<a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a> <a class="code" href="fade_8cpp.html#af15959ae7aa2a4e2bea206607aafbfd7">GetFade</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;{</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> g_eFade;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="fade_8h.html#a85daf6279275e49d1eee12459cfada0d">  186</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d">SetFade</a>(<a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a> fade, <a class="code" href="main_8h.html#aae9a2b94c5f319222ee2e09a5d0f2ae5">E_STAGE</a> next, <span class="keywordtype">int</span> sno)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    g_eFade = fade;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    g_eScene = next;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    g_sno = sno;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">// フェードの状態取得</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">//=============================================================================</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="fade_8h.html#af15959ae7aa2a4e2bea206607aafbfd7">  197</a></span>&#160;<a class="code" href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a> <a class="code" href="fade_8cpp.html#af15959ae7aa2a4e2bea206607aafbfd7">GetFade</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">return</span> g_eFade;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f">FADE_MUSIC_STOP</a></div><div class="ttdeci">@ FADE_MUSIC_STOP</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00017">fade.h:17</a></div></div>
+<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0aff961df90d5a9a79cd8b6a169ee3855f">FADE_MUSIC_STOP</a></div><div class="ttdeci">@ FADE_MUSIC_STOP</div><div class="ttdoc">音楽ストップ</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00018">fade.h:18</a></div></div>
 <div class="ttc" id="amain_8h_html_a27cddfd509d28b4b2b0b44c093fac090"><div class="ttname"><a href="main_8h.html#a27cddfd509d28b4b2b0b44c093fac090">SCREEN_H</a></div><div class="ttdeci">#define SCREEN_H</div><div class="ttdoc">ウインドウの高さ</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00047">main.h:46</a></div></div>
-<div class="ttc" id="afade_8cpp_html_a15228f6ba94ab7352f4fcb31e6e7274c"><div class="ttname"><a href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">FADE_RATE</a></div><div class="ttdeci">#define FADE_RATE</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00015">fade.cpp:14</a></div></div>
-<div class="ttc" id="afade_8cpp_html_a4a1d94214c70866b5cbda894700674b2"><div class="ttname"><a href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">MakeVertexFade</a></div><div class="ttdeci">HRESULT MakeVertexFade(void)</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00130">fade.cpp:130</a></div></div>
-<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3">FADE_OUT</a></div><div class="ttdeci">@ FADE_OUT</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00018">fade.h:18</a></div></div>
+<div class="ttc" id="afade_8cpp_html_a15228f6ba94ab7352f4fcb31e6e7274c"><div class="ttname"><a href="fade_8cpp.html#a15228f6ba94ab7352f4fcb31e6e7274c">FADE_RATE</a></div><div class="ttdeci">#define FADE_RATE</div><div class="ttdoc">フェード係数</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00015">fade.cpp:14</a></div></div>
+<div class="ttc" id="afade_8cpp_html_a4a1d94214c70866b5cbda894700674b2"><div class="ttname"><a href="fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2">MakeVertexFade</a></div><div class="ttdeci">HRESULT MakeVertexFade(void)</div><div class="ttdoc">頂点生成関数 MakeVertexFade</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00139">fade.cpp:139</a></div></div>
+<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a74c187b8dc520c7e68406bc511e8fcd3">FADE_OUT</a></div><div class="ttdeci">@ FADE_OUT</div><div class="ttdoc">フェードアウト処理</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00019">fade.h:19</a></div></div>
 <div class="ttc" id="asound_8cpp_html_a35c57e56563987d661008dbf450de87f"><div class="ttname"><a href="sound_8cpp.html#a35c57e56563987d661008dbf450de87f">PlaySound</a></div><div class="ttdeci">void PlaySound(int label)</div><div class="ttdef"><b>Definition:</b> <a href="sound_8cpp_source.html#l00244">sound.cpp:244</a></div></div>
-<div class="ttc" id="afade_8cpp_html_a366aedf71d0d057d6df9988b0d38f000"><div class="ttname"><a href="fade_8cpp.html#a366aedf71d0d057d6df9988b0d38f000">DrawFade</a></div><div class="ttdeci">void DrawFade()</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00113">fade.cpp:113</a></div></div>
-<div class="ttc" id="afade_8cpp_html_a00f23dbde310ac88a2c2cc41a410d328"><div class="ttname"><a href="fade_8cpp.html#a00f23dbde310ac88a2c2cc41a410d328">InitFade</a></div><div class="ttdeci">HRESULT InitFade(int type)</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00036">fade.cpp:36</a></div></div>
+<div class="ttc" id="afade_8cpp_html_a366aedf71d0d057d6df9988b0d38f000"><div class="ttname"><a href="fade_8cpp.html#a366aedf71d0d057d6df9988b0d38f000">DrawFade</a></div><div class="ttdeci">void DrawFade()</div><div class="ttdoc">フェード描画関数 DrawFade</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00122">fade.cpp:122</a></div></div>
 <div class="ttc" id="astruct_v_e_r_t_e_x__2_d_html"><div class="ttname"><a href="struct_v_e_r_t_e_x__2_d.html">VERTEX_2D</a></div><div class="ttdoc">2D頂点フォーマットに合わせた構造体を定義</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00364">main.h:365</a></div></div>
-<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a></div><div class="ttdeci">FADE</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00013">fade.h:14</a></div></div>
-<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6">FADE_NONE</a></div><div class="ttdeci">@ FADE_NONE</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00015">fade.h:15</a></div></div>
+<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0">FADE</a></div><div class="ttdeci">FADE</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00014">fade.h:15</a></div></div>
+<div class="ttc" id="afade_8cpp_html_ac14659ccf65247cea04ede6abff5630f"><div class="ttname"><a href="fade_8cpp.html#ac14659ccf65247cea04ede6abff5630f">InitFade</a></div><div class="ttdeci">HRESULT InitFade(void)</div><div class="ttdoc">フェード初期化関数 InitFade</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00045">fade.cpp:45</a></div></div>
+<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0afdf8c3db568e139b66506363019558b6">FADE_NONE</a></div><div class="ttdeci">@ FADE_NONE</div><div class="ttdoc">何もない状態</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00016">fade.h:16</a></div></div>
 <div class="ttc" id="asound_8cpp_html_ae5df25309eadfa7b724d87ba341a7dde"><div class="ttname"><a href="sound_8cpp.html#ae5df25309eadfa7b724d87ba341a7dde">StopSound</a></div><div class="ttdeci">void StopSound(int label)</div><div class="ttdef"><b>Definition:</b> <a href="sound_8cpp_source.html#l00278">sound.cpp:278</a></div></div>
 <div class="ttc" id="amain_8h_html_ab722cbfcd174beb57f5473d53f9767f7"><div class="ttname"><a href="main_8h.html#ab722cbfcd174beb57f5473d53f9767f7">NUM_VERTEX</a></div><div class="ttdeci">#define NUM_VERTEX</div><div class="ttdoc">標準な頂点数</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00339">main.h:338</a></div></div>
 <div class="ttc" id="astruct_v_e_r_t_e_x__2_d_html_a692b54ecb05d41a3c83da680e7c68ea4"><div class="ttname"><a href="struct_v_e_r_t_e_x__2_d.html#a692b54ecb05d41a3c83da680e7c68ea4">VERTEX_2D::vtx</a></div><div class="ttdeci">D3DXVECTOR3 vtx</div><div class="ttdoc">頂点座標</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00367">main.h:367</a></div></div>
 <div class="ttc" id="astruct_v_e_r_t_e_x__2_d_html_a0718b3e23ac28654f1fe7ae92b584463"><div class="ttname"><a href="struct_v_e_r_t_e_x__2_d.html#a0718b3e23ac28654f1fe7ae92b584463">VERTEX_2D::diffuse</a></div><div class="ttdeci">D3DCOLOR diffuse</div><div class="ttdoc">反射光</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00371">main.h:371</a></div></div>
-<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f">FADE_IN</a></div><div class="ttdeci">@ FADE_IN</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00016">fade.h:16</a></div></div>
+<div class="ttc" id="afade_8h_html_a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f"><div class="ttname"><a href="fade_8h.html#a178ea3baffde6f1f9d27c8b309042aa0a0ae9c7dbcee305e67632855968b0b13f">FADE_IN</a></div><div class="ttdeci">@ FADE_IN</div><div class="ttdoc">フェードイン処理</div><div class="ttdef"><b>Definition:</b> <a href="fade_8h_source.html#l00017">fade.h:17</a></div></div>
 <div class="ttc" id="amain_8h_html_a76f2100a99233162d34d4283a26332bb"><div class="ttname"><a href="main_8h.html#a76f2100a99233162d34d4283a26332bb">NUM_POLYGON</a></div><div class="ttdeci">#define NUM_POLYGON</div><div class="ttdoc">標準ポリゴン数</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00344">main.h:343</a></div></div>
 <div class="ttc" id="amain_8h_html_aae9a2b94c5f319222ee2e09a5d0f2ae5"><div class="ttname"><a href="main_8h.html#aae9a2b94c5f319222ee2e09a5d0f2ae5">E_STAGE</a></div><div class="ttdeci">E_STAGE</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00123">main.h:124</a></div></div>
-<div class="ttc" id="afade_8cpp_html_a527c4f6a38007a98f667afcdd9e9c8b3"><div class="ttname"><a href="fade_8cpp.html#a527c4f6a38007a98f667afcdd9e9c8b3">UpdateFade</a></div><div class="ttdeci">void UpdateFade(void)</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00060">fade.cpp:60</a></div></div>
+<div class="ttc" id="afade_8cpp_html_a527c4f6a38007a98f667afcdd9e9c8b3"><div class="ttname"><a href="fade_8cpp.html#a527c4f6a38007a98f667afcdd9e9c8b3">UpdateFade</a></div><div class="ttdeci">void UpdateFade(void)</div><div class="ttdoc">フェード更新関数 UpdateFade</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00069">fade.cpp:69</a></div></div>
 <div class="ttc" id="astruct_v_e_r_t_e_x__2_d_html_ab22ee611f6288cb207087550b6c36746"><div class="ttname"><a href="struct_v_e_r_t_e_x__2_d.html#ab22ee611f6288cb207087550b6c36746">VERTEX_2D::rhw</a></div><div class="ttdeci">float rhw</div><div class="ttdoc">テクスチャのパースペクティブコレクト用</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00369">main.h:369</a></div></div>
 <div class="ttc" id="afade_8h_html"><div class="ttname"><a href="fade_8h.html">fade.h</a></div><div class="ttdoc">HitBallTarget(2D)的当てゲーム</div></div>
 <div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div><div class="ttdoc">HitBallTarget(2D)的当てゲーム</div></div>
 <div class="ttc" id="astruct_v_e_r_t_e_x__2_d_html_a42a58bce823068d251fe0bf2ecc28f06"><div class="ttname"><a href="struct_v_e_r_t_e_x__2_d.html#a42a58bce823068d251fe0bf2ecc28f06">VERTEX_2D::tex</a></div><div class="ttdeci">D3DXVECTOR2 tex</div><div class="ttdoc">テクスチャ座標</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00373">main.h:373</a></div></div>
-<div class="ttc" id="afade_8cpp_html_a85daf6279275e49d1eee12459cfada0d"><div class="ttname"><a href="fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d">SetFade</a></div><div class="ttdeci">void SetFade(FADE fade, E_STAGE next, int sno)</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00177">fade.cpp:177</a></div></div>
+<div class="ttc" id="afade_8cpp_html_a85daf6279275e49d1eee12459cfada0d"><div class="ttname"><a href="fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d">SetFade</a></div><div class="ttdeci">void SetFade(FADE fade, E_STAGE next, int sno)</div><div class="ttdoc">フェード設定関数 SetFade</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00186">fade.cpp:186</a></div></div>
 <div class="ttc" id="amain_8h_html_a9b6bc9242882d1e758e06ed751a2e8ec"><div class="ttname"><a href="main_8h.html#a9b6bc9242882d1e758e06ed751a2e8ec">SCREEN_W</a></div><div class="ttdeci">#define SCREEN_W</div><div class="ttdoc">ウインドウの幅</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00042">main.h:41</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a842e90136051c7017ffc0cd8a009d8e8"><div class="ttname"><a href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8">GetDevice</a></div><div class="ttdeci">LPDIRECT3DDEVICE9 GetDevice(void)</div><div class="ttdoc">デバイス取得関数 GetDevice</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00674">main.cpp:674</a></div></div>
-<div class="ttc" id="afade_8cpp_html_ae2dfa8d8b36033b4351aa88227c8c4dd"><div class="ttname"><a href="fade_8cpp.html#ae2dfa8d8b36033b4351aa88227c8c4dd">UninitFade</a></div><div class="ttdeci">void UninitFade(void)</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00049">fade.cpp:49</a></div></div>
-<div class="ttc" id="amain_8cpp_html_aea6ddf2fe660e7a828633d13bf701837"><div class="ttname"><a href="main_8cpp.html#aea6ddf2fe660e7a828633d13bf701837">SetScene</a></div><div class="ttdeci">void SetScene(int Scene)</div><div class="ttdoc">ゲームシーンをセットする関数 SetScene</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00735">main.cpp:735</a></div></div>
-<div class="ttc" id="afade_8cpp_html_a3fe9846c8fbf02d66e5a1b6989f0b45e"><div class="ttname"><a href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a></div><div class="ttdeci">void SetColor(D3DCOLOR col)</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00165">fade.cpp:165</a></div></div>
-<div class="ttc" id="afade_8cpp_html_af15959ae7aa2a4e2bea206607aafbfd7"><div class="ttname"><a href="fade_8cpp.html#af15959ae7aa2a4e2bea206607aafbfd7">GetFade</a></div><div class="ttdeci">FADE GetFade(void)</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00188">fade.cpp:188</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a842e90136051c7017ffc0cd8a009d8e8"><div class="ttname"><a href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8">GetDevice</a></div><div class="ttdeci">LPDIRECT3DDEVICE9 GetDevice(void)</div><div class="ttdoc">デバイス取得関数 GetDevice</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00673">main.cpp:673</a></div></div>
+<div class="ttc" id="afade_8cpp_html_ae2dfa8d8b36033b4351aa88227c8c4dd"><div class="ttname"><a href="fade_8cpp.html#ae2dfa8d8b36033b4351aa88227c8c4dd">UninitFade</a></div><div class="ttdeci">void UninitFade(void)</div><div class="ttdoc">フェードメモリ開放関数 UninitFade</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00058">fade.cpp:58</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aea6ddf2fe660e7a828633d13bf701837"><div class="ttname"><a href="main_8cpp.html#aea6ddf2fe660e7a828633d13bf701837">SetScene</a></div><div class="ttdeci">void SetScene(int Scene)</div><div class="ttdoc">ゲームシーンをセットする関数 SetScene</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00734">main.cpp:734</a></div></div>
+<div class="ttc" id="afade_8cpp_html_a3fe9846c8fbf02d66e5a1b6989f0b45e"><div class="ttname"><a href="fade_8cpp.html#a3fe9846c8fbf02d66e5a1b6989f0b45e">SetColor</a></div><div class="ttdeci">void SetColor(D3DCOLOR col)</div><div class="ttdoc">フェードカラー設定関数 SetColor</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00174">fade.cpp:174</a></div></div>
+<div class="ttc" id="afade_8cpp_html_af15959ae7aa2a4e2bea206607aafbfd7"><div class="ttname"><a href="fade_8cpp.html#af15959ae7aa2a4e2bea206607aafbfd7">GetFade</a></div><div class="ttdeci">FADE GetFade(void)</div><div class="ttdoc">フェード取得関数 GetFade</div><div class="ttdef"><b>Definition:</b> <a href="fade_8cpp_source.html#l00197">fade.cpp:197</a></div></div>
 <div class="ttc" id="asound_8h_html"><div class="ttname"><a href="sound_8h.html">sound.h</a></div><div class="ttdoc">HitBallTarget(2D)的当てゲーム</div></div>
 <div class="ttc" id="amain_8h_html_a253bdfaeb3b8834410e5e94b216630c0"><div class="ttname"><a href="main_8h.html#a253bdfaeb3b8834410e5e94b216630c0">FVF_VERTEX_2D</a></div><div class="ttdeci">#define FVF_VERTEX_2D</div><div class="ttdoc">2D頂点フォーマット( 頂点座標[2D] / 反射光 / テクスチャ座標 )</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00359">main.h:358</a></div></div>
-<div class="ttc" id="amain_8h_html_aae9a2b94c5f319222ee2e09a5d0f2ae5a96f75e824fdc81751dcfc4f447390853"><div class="ttname"><a href="main_8h.html#aae9a2b94c5f319222ee2e09a5d0f2ae5a96f75e824fdc81751dcfc4f447390853">SCENE_TITLE</a></div><div class="ttdeci">@ SCENE_TITLE</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00125">main.h:125</a></div></div>
+<div class="ttc" id="amain_8h_html_aae9a2b94c5f319222ee2e09a5d0f2ae5a96f75e824fdc81751dcfc4f447390853"><div class="ttname"><a href="main_8h.html#aae9a2b94c5f319222ee2e09a5d0f2ae5a96f75e824fdc81751dcfc4f447390853">SCENE_TITLE</a></div><div class="ttdeci">@ SCENE_TITLE</div><div class="ttdoc">0。1つめだから0。列挙型の列挙定数名。定義した名前をシンボルっていうのが一般らしい。</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00125">main.h:125</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 構築: &#160;<a href="http://www.doxygen.org/index.html">

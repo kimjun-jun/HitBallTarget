@@ -1,6 +1,6 @@
 <map id="UninitMouse" name="UninitMouse">
 <area shape="rect" id="node1" title=" " alt="" coords="360,5,455,32"/>
 <area shape="rect" id="node2" href="$input_8h.html#abf030db97d84146b69da0d263ef721e5" title=" " alt="" coords="229,5,312,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae43a8873beb00c8038b31c52b8a00edb" title=" " alt="" coords="127,5,181,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,5,79,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae43a8873beb00c8038b31c52b8a00edb" title="メモリ開放関数" alt="" coords="127,5,181,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
 </map>

@@ -5,51 +5,54 @@
 Hit\+Ball\+Target(2\+D)的当てゲーム  
 
 
+被依存関係図\+:
+% FIG 0
 \doxysubsection*{データ構造}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_r18_s_e_l_e_c_t}{R18\+S\+E\+L\+E\+CT}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 2Dポリゴンを定義する構造体 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{_r18_8h_aa3dd1aafe07f23329dcbfb457fd44866}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R18\+S\+E\+L\+E\+C\+T01}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/heart01.\+png\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em 読み込むテクスチャファイル名 ~\newline
+ \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{_r18_8h_a48331cac453dedb72de841d18352e0ca}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R18\+S\+E\+L\+E\+C\+T02}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/heart02.\+png\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em 読み込むテクスチャファイル名 ~\newline
+ \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{_r18_8h_a936f13f7aacf5fa362f023eeb5b34804}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R18\+S\+E\+L\+E\+C\+T03}}~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/Not\+R18.\+png\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em 読み込むテクスチャファイル名 ~\newline
+ \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{_r18_8h_ac3ac831b9641803c0330770858c83a0b}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R18\+S\+E\+L\+E\+C\+T\+\_\+\+S\+I\+Z\+E\+\_\+X}}~(200)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの幅 \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{_r18_8h_aaf990b9dd71db7505c6e56cb6e69243f}{T\+E\+X\+T\+U\+R\+E\+\_\+\+R18\+S\+E\+L\+E\+C\+T\+\_\+\+S\+I\+Z\+E\+\_\+Y}}~(100)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの高さ \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{_r18_8h_aa4015e346828ca7105b6e9dc13912564}{R18\+S\+E\+L\+E\+C\+T\+\_\+\+P\+Y1\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}-\/150)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの初期位置\+Y1 \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{_r18_8h_a4a315ff157923b23ddd8b5f4b8cf9b96}{R18\+S\+E\+L\+E\+C\+T\+\_\+\+P\+Y2\+\_\+\+P\+O\+S\+\_\+Y}}~(\mbox{\hyperlink{main_8h_a8d605dd2d3860073577d63169888ba84}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+Y}}+100)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの初期位置\+Y2 \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{_r18_8h_aa2a2bdf8431d2ea18564f001991110f3}{R18\+S\+E\+L\+E\+C\+T\+\_\+\+P\+X1\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}-\/250)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの初期位置\+X1 \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{_r18_8h_a51c26fb102f6c6c600878ce2e39c4d83}{R18\+S\+E\+L\+E\+C\+T\+\_\+\+P\+X2\+\_\+\+P\+O\+S\+\_\+X}}~(\mbox{\hyperlink{main_8h_a95a8665023499fe96fe4c8eac20c27f4}{S\+C\+R\+E\+E\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+X}}+250)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴンの初期位置\+X2 \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{_r18_8h_a2b4f1408bedff89a255ffa02a928ba72}{R18\+S\+E\+L\+E\+C\+T\+M\+AX}}~(3)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 画面の選択肢数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{_r18_8h_a1b57ae12a36cfd8a3bc1e2164ddd2b7a}{Init\+R18select}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em R18初期化関数 Init\+R18select \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_r18_8h_ac76d0676ddcc58c9aaf67f539a937cee}{Re\+Init\+R18select}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em R18再初期化関数 Re\+Init\+R18select \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_r18_8h_af26f032c3e4324a14379cd6b423d0291}{Uninit\+R18select}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em R18開放関数 Uninit\+R18select \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_r18_8h_afcb3b31f1d17983ccbd4fba452b855cb}{Update\+R18select}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em R18更新関数 Update\+R18select \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_r18_8h_a6d405fbaff062a0c6800541fa4005658}{Draw\+R18select}} (void)
-\item 
-void \mbox{\hyperlink{_r18_8h_aca2da5708bd389587e64d266fb48e444}{Set\+Vertex\+R18select}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em R18描画関数 Draw\+R18select \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_r18_s_e_l_e_c_t}{R18\+S\+E\+L\+E\+CT}} $\ast$ \mbox{\hyperlink{_r18_8h_a4e39f144bf77ab812421e9d1c199554a}{Get\+R18select}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em R18取得関数 Get\+R18select \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -72,7 +75,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+h の 26 行目に定義があります。
+ポリゴンの初期位置\+X1 
+
+
+
+ R18.\+h の 20 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8h_a51c26fb102f6c6c600878ce2e39c4d83}\label{_r18_8h_a51c26fb102f6c6c600878ce2e39c4d83}} 
 \index{R18.h@{R18.h}!R18SELECT\_PX2\_POS\_X@{R18SELECT\_PX2\_POS\_X}}
@@ -82,7 +89,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+h の 27 行目に定義があります。
+ポリゴンの初期位置\+X2 
+
+
+
+ R18.\+h の 21 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8h_aa4015e346828ca7105b6e9dc13912564}\label{_r18_8h_aa4015e346828ca7105b6e9dc13912564}} 
 \index{R18.h@{R18.h}!R18SELECT\_PY1\_POS\_Y@{R18SELECT\_PY1\_POS\_Y}}
@@ -92,7 +103,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+h の 23 行目に定義があります。
+ポリゴンの初期位置\+Y1 
+
+
+
+ R18.\+h の 18 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8h_a4a315ff157923b23ddd8b5f4b8cf9b96}\label{_r18_8h_a4a315ff157923b23ddd8b5f4b8cf9b96}} 
 \index{R18.h@{R18.h}!R18SELECT\_PY2\_POS\_Y@{R18SELECT\_PY2\_POS\_Y}}
@@ -102,7 +117,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+h の 24 行目に定義があります。
+ポリゴンの初期位置\+Y2 
+
+
+
+ R18.\+h の 19 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8h_a2b4f1408bedff89a255ffa02a928ba72}\label{_r18_8h_a2b4f1408bedff89a255ffa02a928ba72}} 
 \index{R18.h@{R18.h}!R18SELECTMAX@{R18SELECTMAX}}
@@ -112,13 +131,22 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+h の 29 行目に定義があります。
+画面の選択肢数 
+
+
+
+ R18.\+h の 22 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8h_aa3dd1aafe07f23329dcbfb457fd44866}\label{_r18_8h_aa3dd1aafe07f23329dcbfb457fd44866}} 
 \index{R18.h@{R18.h}!TEXTURE\_R18SELECT01@{TEXTURE\_R18SELECT01}}
 \index{TEXTURE\_R18SELECT01@{TEXTURE\_R18SELECT01}!R18.h@{R18.h}}
 \doxysubsubsection{\texorpdfstring{TEXTURE\_R18SELECT01}{TEXTURE\_R18SELECT01}}
 {\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R18\+S\+E\+L\+E\+C\+T01~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/heart01.\+png\char`\"{})}
+
+
+
+読み込むテクスチャファイル名 ~\newline
+ 
 
 
 
@@ -132,6 +160,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
+読み込むテクスチャファイル名 ~\newline
+ 
+
+
+
  R18.\+h の 14 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8h_a936f13f7aacf5fa362f023eeb5b34804}\label{_r18_8h_a936f13f7aacf5fa362f023eeb5b34804}} 
@@ -139,6 +172,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 \index{TEXTURE\_R18SELECT03@{TEXTURE\_R18SELECT03}!R18.h@{R18.h}}
 \doxysubsubsection{\texorpdfstring{TEXTURE\_R18SELECT03}{TEXTURE\_R18SELECT03}}
 {\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+R18\+S\+E\+L\+E\+C\+T03~\+\_\+T(\char`\"{}data/T\+E\+X\+T\+U\+RE/sozai/select/Not\+R18.\+png\char`\"{})}
+
+
+
+読み込むテクスチャファイル名 ~\newline
+ 
 
 
 
@@ -152,7 +190,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+h の 18 行目に定義があります。
+ポリゴンの幅 
+
+
+
+ R18.\+h の 16 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8h_aaf990b9dd71db7505c6e56cb6e69243f}\label{_r18_8h_aaf990b9dd71db7505c6e56cb6e69243f}} 
 \index{R18.h@{R18.h}!TEXTURE\_R18SELECT\_SIZE\_Y@{TEXTURE\_R18SELECT\_SIZE\_Y}}
@@ -162,7 +204,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+h の 19 行目に定義があります。
+ポリゴンの高さ 
+
+
+
+ R18.\+h の 17 行目に定義があります。
 
 
 
@@ -175,8 +221,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 155 行目に定義があります。
+R18描画関数 Draw\+R18select 
 
+
+
+ R18.\+cpp の 164 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{_r18_8h_a4e39f144bf77ab812421e9d1c199554a}\label{_r18_8h_a4e39f144bf77ab812421e9d1c199554a}} 
 \index{R18.h@{R18.h}!GetR18select@{GetR18select}}
 \index{GetR18select@{GetR18select}!R18.h@{R18.h}}
@@ -185,7 +239,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 292 行目に定義があります。
+R18取得関数 Get\+R18select 
+
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_r18_s_e_l_e_c_t}{R18\+S\+E\+L\+E\+CT}} 
+\end{DoxyReturn}
+
+
+ R18.\+cpp の 303 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8h_a1b57ae12a36cfd8a3bc1e2164ddd2b7a}\label{_r18_8h_a1b57ae12a36cfd8a3bc1e2164ddd2b7a}} 
 \index{R18.h@{R18.h}!InitR18select@{InitR18select}}
@@ -195,8 +256,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 31 行目に定義があります。
+R18初期化関数 Init\+R18select 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ R18.\+cpp の 40 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{_r18_8h_ac76d0676ddcc58c9aaf67f539a937cee}\label{_r18_8h_ac76d0676ddcc58c9aaf67f539a937cee}} 
 \index{R18.h@{R18.h}!ReInitR18select@{ReInitR18select}}
 \index{ReInitR18select@{ReInitR18select}!R18.h@{R18.h}}
@@ -205,18 +282,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 61 行目に定義があります。
-
-\mbox{\Hypertarget{_r18_8h_aca2da5708bd389587e64d266fb48e444}\label{_r18_8h_aca2da5708bd389587e64d266fb48e444}} 
-\index{R18.h@{R18.h}!SetVertexR18select@{SetVertexR18select}}
-\index{SetVertexR18select@{SetVertexR18select}!R18.h@{R18.h}}
-\doxysubsubsection{\texorpdfstring{SetVertexR18select()}{SetVertexR18select()}}
-{\footnotesize\ttfamily void Set\+Vertex\+R18select (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+R18再初期化関数 Re\+Init\+R18select 
 
 
 
- R18.\+cpp の 226 行目に定義があります。
+ R18.\+cpp の 70 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{_r18_8h_af26f032c3e4324a14379cd6b423d0291}\label{_r18_8h_af26f032c3e4324a14379cd6b423d0291}} 
 \index{R18.h@{R18.h}!UninitR18select@{UninitR18select}}
 \index{UninitR18select@{UninitR18select}!R18.h@{R18.h}}
@@ -225,8 +298,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 71 行目に定義があります。
+R18開放関数 Uninit\+R18select 
 
+
+
+ R18.\+cpp の 80 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{_r18_8h_afcb3b31f1d17983ccbd4fba452b855cb}\label{_r18_8h_afcb3b31f1d17983ccbd4fba452b855cb}} 
 \index{R18.h@{R18.h}!UpdateR18select@{UpdateR18select}}
 \index{UpdateR18select@{UpdateR18select}!R18.h@{R18.h}}
@@ -235,5 +314,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 86 行目に定義があります。
+R18更新関数 Update\+R18select 
 
+
+
+ R18.\+cpp の 95 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7

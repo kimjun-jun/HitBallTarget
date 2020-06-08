@@ -1,26 +1,26 @@
 <map id="Uninit" name="Uninit">
-<area shape="rect" id="node1" title=" " alt="" coords="5,512,60,539"/>
-<area shape="rect" id="node2" href="$ball_8cpp.html#a42cfbac2e69202bdae8156e19397d69f" title=" " alt="" coords="129,5,206,32"/>
-<area shape="rect" id="node3" href="$balleffect_8cpp.html#a9ec46b172dc258cd439971080ed0d41d" title=" " alt="" coords="113,56,221,83"/>
-<area shape="rect" id="node4" href="$bg_8cpp.html#a9d5e0a71826f965870139e8c2ff90778" title=" " alt="" coords="130,107,205,133"/>
-<area shape="rect" id="node5" href="$controltype_8cpp.html#aaf927bb3f168400160b8ad2bd3576980" title=" " alt="" coords="116,157,219,184"/>
-<area shape="rect" id="node6" href="$countdown_8cpp.html#a2f8e049bd6f1b17ac246d68de55aa8d4" title=" " alt="" coords="108,208,227,235"/>
-<area shape="rect" id="node7" href="$enemy_8cpp.html#a8516befbbbd31c6fd6b987573a2c46f0" title=" " alt="" coords="119,259,215,285"/>
-<area shape="rect" id="node8" href="$fade_8cpp.html#ae2dfa8d8b36033b4351aa88227c8c4dd" title=" " alt="" coords="125,309,209,336"/>
+<area shape="rect" id="node1" title="メモリ開放関数" alt="" coords="5,512,60,539"/>
+<area shape="rect" id="node2" href="$ball_8cpp.html#a42cfbac2e69202bdae8156e19397d69f" title="Ball開放関数 UninitBall" alt="" coords="129,5,206,32"/>
+<area shape="rect" id="node3" href="$balleffect_8cpp.html#a9ec46b172dc258cd439971080ed0d41d" title="Balleffect開放関数 UninitBalleffect" alt="" coords="113,56,221,83"/>
+<area shape="rect" id="node4" href="$bg_8cpp.html#a9d5e0a71826f965870139e8c2ff90778" title="BG開放関数 UninitBG" alt="" coords="130,107,205,133"/>
+<area shape="rect" id="node5" href="$controltype_8cpp.html#aaf927bb3f168400160b8ad2bd3576980" title="コントロールタイプ画僧開放関数 UninitContype" alt="" coords="116,157,219,184"/>
+<area shape="rect" id="node6" href="$countdown_8cpp.html#a2f8e049bd6f1b17ac246d68de55aa8d4" title="Countdown開放関数 UninitCountdown" alt="" coords="108,208,227,235"/>
+<area shape="rect" id="node7" href="$enemy_8cpp.html#a8516befbbbd31c6fd6b987573a2c46f0" title="Enemy開放関数 UninitEnemy" alt="" coords="119,259,215,285"/>
+<area shape="rect" id="node8" href="$fade_8cpp.html#ae2dfa8d8b36033b4351aa88227c8c4dd" title="フェードメモリ開放関数 UninitFade" alt="" coords="125,309,209,336"/>
 <area shape="rect" id="node9" href="$input_8cpp.html#abf030db97d84146b69da0d263ef721e5" title=" " alt="" coords="126,360,209,387"/>
-<area shape="rect" id="node13" href="$option_8cpp.html#a40f48c120490c4b280a160ed0f74438f" title=" " alt="" coords="121,411,214,437"/>
-<area shape="rect" id="node14" href="$pause_8cpp.html#ada83ff87995fd1a4795fd393fed7acb5" title=" " alt="" coords="121,461,213,488"/>
-<area shape="rect" id="node15" href="$player_8cpp.html#ad50044e423acab81254da2bca8597cad" title=" " alt="" coords="121,512,213,539"/>
-<area shape="rect" id="node16" href="$_r18_8cpp.html#af26f032c3e4324a14379cd6b423d0291" title=" " alt="" coords="111,563,224,589"/>
-<area shape="rect" id="node17" href="$result_8cpp.html#a02bf21f66e8248010c9eeaf2c3a23df3" title=" " alt="" coords="121,613,213,640"/>
-<area shape="rect" id="node18" href="$score_8cpp.html#abe9d5c9be78c919ed6b5f5ae03785508" title=" " alt="" coords="123,664,212,691"/>
-<area shape="rect" id="node19" href="$select_8cpp.html#aa27a475fe926e3124e9e8d11a168ee99" title=" " alt="" coords="121,715,213,741"/>
-<area shape="rect" id="node20" href="$sensitivity_8cpp.html#aa5db6449c24ec4b1e508f4c497fb9df3" title=" " alt="" coords="110,765,225,792"/>
-<area shape="rect" id="node21" href="$sound_8cpp.html#adb0c5965a285c4f34d2051cbc71b3691" title=" " alt="" coords="121,816,213,843"/>
-<area shape="rect" id="node22" href="$title_8cpp.html#a928c6270669342e0130c32178d323361" title=" " alt="" coords="128,867,207,893"/>
-<area shape="rect" id="node23" href="$tutomenu_8cpp.html#a1e15db587392bc35bfc41da69dff7f6a" title=" " alt="" coords="111,917,223,944"/>
-<area shape="rect" id="node24" href="$tutorial_8cpp.html#a058358e7d137ab70c87afb03e5d7d2b5" title=" " alt="" coords="119,968,216,995"/>
-<area shape="rect" id="node25" href="$ui_8cpp.html#ad78b009c4ed7deda9a09263261f34e00" title=" " alt="" coords="134,1019,201,1045"/>
+<area shape="rect" id="node13" href="$meetstrike_8cpp.html#a6dfb7f6a5a72e8d2dc9e22a3590251cd" title="MeetStrike開放関数 UninitMeetStrike" alt="" coords="108,411,227,437"/>
+<area shape="rect" id="node14" href="$option_8cpp.html#a40f48c120490c4b280a160ed0f74438f" title="Option開放関数 UninitOption" alt="" coords="121,461,214,488"/>
+<area shape="rect" id="node15" href="$pause_8cpp.html#ada83ff87995fd1a4795fd393fed7acb5" title="Pause開放関数 UninitPause" alt="" coords="121,512,213,539"/>
+<area shape="rect" id="node16" href="$player_8cpp.html#ad50044e423acab81254da2bca8597cad" title="Player開放関数 UninitPlayer" alt="" coords="121,563,213,589"/>
+<area shape="rect" id="node17" href="$_r18_8cpp.html#af26f032c3e4324a14379cd6b423d0291" title="R18開放関数 UninitR18select" alt="" coords="111,613,224,640"/>
+<area shape="rect" id="node18" href="$result_8cpp.html#a02bf21f66e8248010c9eeaf2c3a23df3" title="Result開放関数 UninitResult" alt="" coords="121,664,213,691"/>
+<area shape="rect" id="node19" href="$score_8cpp.html#abe9d5c9be78c919ed6b5f5ae03785508" title="Score開放関数 UninitScore" alt="" coords="123,715,212,741"/>
+<area shape="rect" id="node20" href="$select_8cpp.html#aa27a475fe926e3124e9e8d11a168ee99" title="Select開放関数 UninitSelect" alt="" coords="121,765,213,792"/>
+<area shape="rect" id="node21" href="$sensitivity_8cpp.html#aa5db6449c24ec4b1e508f4c497fb9df3" title="Sensitivity開放関数 UninitSensitivity" alt="" coords="110,816,225,843"/>
+<area shape="rect" id="node22" href="$sound_8cpp.html#adb0c5965a285c4f34d2051cbc71b3691" title=" " alt="" coords="121,867,213,893"/>
+<area shape="rect" id="node23" href="$title_8cpp.html#a928c6270669342e0130c32178d323361" title="タイトル開放関数 UninitTitle" alt="" coords="128,917,207,944"/>
+<area shape="rect" id="node24" href="$tutomenu_8cpp.html#a1e15db587392bc35bfc41da69dff7f6a" title="Tutomenu開放関数 UninitTutomenu" alt="" coords="111,968,223,995"/>
+<area shape="rect" id="node25" href="$tutorial_8cpp.html#a058358e7d137ab70c87afb03e5d7d2b5" title="Tutorial開放関数 UninitTutorial" alt="" coords="119,1019,216,1045"/>
 <area shape="rect" id="node10" href="$input_8cpp.html#acffdec32c8240d863bcca339cce38ea1" title=" " alt="" coords="275,309,385,336"/>
 <area shape="rect" id="node11" href="$input_8cpp.html#af33a96a7320c2c9dbcf876ff22301a41" title=" " alt="" coords="283,360,377,387"/>
 <area shape="rect" id="node12" href="$input_8cpp.html#a6b991763b50ab85e07361b6daea4c74b" title=" " alt="" coords="291,411,369,437"/>

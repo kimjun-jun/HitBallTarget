@@ -1,10 +1,10 @@
 <map id="LoopInit" name="LoopInit">
-<area shape="rect" id="node1" title=" " alt="" coords="5,157,72,184"/>
-<area shape="rect" id="node2" href="$ui_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title=" " alt="" coords="131,5,219,32"/>
-<area shape="rect" id="node3" href="$ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title=" " alt="" coords="142,56,207,83"/>
-<area shape="rect" id="node4" href="$ball_8cpp.html#ad6665fe211d0e96c190d6776112a2b47" title=" " alt="" coords="124,107,225,133"/>
-<area shape="rect" id="node5" href="$ball_8cpp.html#a8e3730ea94478cc5a6669a85214207ed" title=" " alt="" coords="120,157,229,184"/>
-<area shape="rect" id="node6" href="$player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title=" " alt="" coords="125,208,225,235"/>
-<area shape="rect" id="node7" href="$player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title=" " alt="" coords="127,259,223,285"/>
-<area shape="rect" id="node8" href="$ui_8cpp.html#a64378fa1372297d3c72ce483c18d10fe" title=" " alt="" coords="136,309,213,336"/>
+<area shape="rect" id="node1" title="ボールループの初期化関数 LoopInit" alt="" coords="5,157,72,184"/>
+<area shape="rect" id="node2" href="$meetstrike_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title="MeetStrike取得関数 Get_Cursor" alt="" coords="131,5,219,32"/>
+<area shape="rect" id="node3" href="$ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="142,56,207,83"/>
+<area shape="rect" id="node4" href="$ball_8cpp.html#ad6665fe211d0e96c190d6776112a2b47" title="Ball取得関数 GetBallcursor" alt="" coords="124,107,225,133"/>
+<area shape="rect" id="node5" href="$ball_8cpp.html#a8e3730ea94478cc5a6669a85214207ed" title="Ball取得関数 GetBallshadow" alt="" coords="120,157,229,184"/>
+<area shape="rect" id="node6" href="$player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="125,208,225,235"/>
+<area shape="rect" id="node7" href="$player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title="PlayerPit取得関数 GetPlayerPit" alt="" coords="127,259,223,285"/>
+<area shape="rect" id="node8" href="$meetstrike_8cpp.html#a64378fa1372297d3c72ce483c18d10fe" title="MeetStrike取得関数 GetStrike" alt="" coords="136,309,213,336"/>
 </map>

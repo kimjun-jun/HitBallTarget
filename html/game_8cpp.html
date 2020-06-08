@@ -73,7 +73,7 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ball_8h_source.html">ball.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="player_8h_source.html">player.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ui_8h_source.html">ui.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="meetstrike_8h_source.html">meetstrike.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="enemy_8h_source.html">enemy.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="input_8h_source.html">input.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="collision_8h_source.html">collision.h</a>&quot;</code><br />
@@ -82,18 +82,52 @@ $(function() {
 <code>#include &quot;<a class="el" href="sensitivity_8h_source.html">sensitivity.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="balleffect_8h_source.html">balleffect.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+game.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8cpp__incl.png" border="0" usemap="#game_8cpp" alt=""/></div>
+<map name="game_8cpp" id="game_8cpp">
+<area shape="rect" title="HitBallTarget(2D)的当てゲーム" alt="" coords="823,5,901,32"/>
+<area shape="rect" href="main_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="314,80,375,107"/>
+<area shape="rect" href="ball_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="399,80,453,107"/>
+<area shape="rect" href="player_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="477,80,545,107"/>
+<area shape="rect" href="meetstrike_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="569,80,664,107"/>
+<area shape="rect" href="enemy_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="689,80,761,107"/>
+<area shape="rect" href="input_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="785,80,846,107"/>
+<area shape="rect" href="collision_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="870,80,950,107"/>
+<area shape="rect" href="sound_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="975,80,1043,107"/>
+<area shape="rect" href="controltype_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1067,80,1164,107"/>
+<area shape="rect" href="sensitivity_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1189,80,1279,107"/>
+<area shape="rect" href="balleffect_8h.html" title="HitBallTarget(2D)的当てゲーム(調整中)" alt="" coords="1304,80,1388,107"/>
+<area shape="rect" href="game_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1412,80,1477,107"/>
+<area shape="rect" title=" " alt="" coords="826,155,909,181"/>
+<area shape="rect" title=" " alt="" coords="5,155,73,181"/>
+<area shape="rect" title=" " alt="" coords="97,155,160,181"/>
+<area shape="rect" title=" " alt="" coords="185,155,246,181"/>
+<area shape="rect" title=" " alt="" coords="270,155,334,181"/>
+<area shape="rect" title=" " alt="" coords="358,155,417,181"/>
+<area shape="rect" title=" " alt="" coords="441,155,507,181"/>
+<area shape="rect" title=" " alt="" coords="531,155,599,181"/>
+<area shape="rect" title=" " alt="" coords="623,155,722,181"/>
+<area shape="rect" title=" " alt="" coords="969,155,1048,181"/>
+</map>
+</div>
 </div>
 <p><a href="game_8cpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a10bfdad2fe1eece3cc32afb5fc42ec55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a10bfdad2fe1eece3cc32afb5fc42ec55">Bat</a> (void)</td></tr>
+<tr class="memdesc:a10bfdad2fe1eece3cc32afb5fc42ec55"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッター処理関数 Bat  <a href="game_8cpp.html#a10bfdad2fe1eece3cc32afb5fc42ec55">[詳解]</a><br /></td></tr>
 <tr class="separator:a10bfdad2fe1eece3cc32afb5fc42ec55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13b39c1bd65ea2255b0910a03f19de8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a13b39c1bd65ea2255b0910a03f19de8f">Pit</a> (void)</td></tr>
+<tr class="memdesc:a13b39c1bd65ea2255b0910a03f19de8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピッチャー処理関数 Pit  <a href="game_8cpp.html#a13b39c1bd65ea2255b0910a03f19de8f">[詳解]</a><br /></td></tr>
 <tr class="separator:a13b39c1bd65ea2255b0910a03f19de8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae81d6a63aece63e1779d8bf648ccd582"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#ae81d6a63aece63e1779d8bf648ccd582">Ball</a> (void)</td></tr>
+<tr class="memdesc:ae81d6a63aece63e1779d8bf648ccd582"><td class="mdescLeft">&#160;</td><td class="mdescRight">投球処理関数 Ball  <a href="game_8cpp.html#ae81d6a63aece63e1779d8bf648ccd582">[詳解]</a><br /></td></tr>
 <tr class="separator:ae81d6a63aece63e1779d8bf648ccd582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d18b2f0dfec93f9d693f70e700b0917"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a2d18b2f0dfec93f9d693f70e700b0917">Hitball</a> (void)</td></tr>
+<tr class="memdesc:a2d18b2f0dfec93f9d693f70e700b0917"><td class="mdescLeft">&#160;</td><td class="mdescRight">打球処理関数 Hitball  <a href="game_8cpp.html#a2d18b2f0dfec93f9d693f70e700b0917">[詳解]</a><br /></td></tr>
 <tr class="separator:a2d18b2f0dfec93f9d693f70e700b0917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -119,7 +153,33 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="game_8cpp_source.html">game.cpp</a> の <a class="el" href="game_8cpp_source.html#l00271">271</a> 行目に定義があります。</p>
+<p>投球処理関数 Ball </p>
+<p>投球されたボールの処理。変化や影、投球地点を処理 </p>
+
+<p class="definition"> <a class="el" href="game_8cpp_source.html">game.cpp</a> の <a class="el" href="game_8cpp_source.html#l00270">270</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8cpp_ae81d6a63aece63e1779d8bf648ccd582_cgraph.png" border="0" usemap="#game_8cpp_ae81d6a63aece63e1779d8bf648ccd582_cgraph" alt=""/></div>
+<map name="game_8cpp_ae81d6a63aece63e1779d8bf648ccd582_cgraph" id="game_8cpp_ae81d6a63aece63e1779d8bf648ccd582_cgraph">
+<area shape="rect" title="投球処理関数 Ball" alt="" coords="5,81,49,108"/>
+<area shape="rect" href="ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="119,5,185,32"/>
+<area shape="rect" href="ball_8cpp.html#ad6665fe211d0e96c190d6776112a2b47" title="Ball取得関数 GetBallcursor" alt="" coords="101,56,203,83"/>
+<area shape="rect" href="ball_8cpp.html#a8e3730ea94478cc5a6669a85214207ed" title="Ball取得関数 GetBallshadow" alt="" coords="97,107,207,133"/>
+<area shape="rect" href="player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="102,157,202,184"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8cpp_ae81d6a63aece63e1779d8bf648ccd582_icgraph.png" border="0" usemap="#game_8cpp_ae81d6a63aece63e1779d8bf648ccd582_icgraph" alt=""/></div>
+<map name="game_8cpp_ae81d6a63aece63e1779d8bf648ccd582_icgraph" id="game_8cpp_ae81d6a63aece63e1779d8bf648ccd582_icgraph">
+<area shape="rect" title="投球処理関数 Ball" alt="" coords="371,5,415,32"/>
+<area shape="rect" href="ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title="Ball更新関数 UpdateBall" alt="" coords="237,5,323,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -139,7 +199,41 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>バッター処理関数 Bat </p>
+<p>バッターアニメーションとミートカーソルを処理する </p>
+
 <p class="definition"> <a class="el" href="game_8cpp_source.html">game.cpp</a> の <a class="el" href="game_8cpp_source.html#l00024">24</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55_cgraph.png" border="0" usemap="#game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55_cgraph" alt=""/></div>
+<map name="game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55_cgraph" id="game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55_cgraph">
+<area shape="rect" title="バッター処理関数 Bat" alt="" coords="5,284,48,311"/>
+<area shape="rect" href="meetstrike_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title="MeetStrike取得関数 Get_Cursor" alt="" coords="131,5,219,32"/>
+<area shape="rect" href="ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="143,56,208,83"/>
+<area shape="rect" href="input_8cpp.html#a9d43b9f7772ae1c0a5c1f7e6a0c0adc4" title=" " alt="" coords="109,107,241,133"/>
+<area shape="rect" href="input_8cpp.html#a51329aebf57af8767b502a8b111fa577" title=" " alt="" coords="107,157,244,184"/>
+<area shape="rect" href="player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="125,208,225,235"/>
+<area shape="rect" href="controltype_8cpp.html#ad72284daff16eaa051c2cb705750f440" title="コントロールタイプ画僧カーソルが止まっている場所取得関数 GetSCONkeypos" alt="" coords="114,259,237,285"/>
+<area shape="rect" href="sensitivity_8cpp.html#aa8041cdc6e4826513785bbc0d26a7671" title="感度画僧カーソルが止まっている場所取得関数 GetSSENSIkey" alt="" coords="119,309,231,336"/>
+<area shape="rect" href="input_8cpp.html#ae73d9f5f454c89246853f39fdd2d20d5" title=" " alt="" coords="96,360,255,387"/>
+<area shape="rect" href="input_8cpp.html#ac697173603d80e79dbaac2b319cca44c" title=" " alt="" coords="98,411,253,437"/>
+<area shape="rect" href="input_8cpp.html#a7951056484ea4c474b1a5f783a1472b2" title=" " alt="" coords="114,461,237,488"/>
+<area shape="rect" href="player_8cpp.html#a82f0a902b65506c32ecbdfec0d711b28" title="テクスチャ設定関数 SetTexturePlayer" alt="" coords="114,512,237,539"/>
+<area shape="rect" href="player_8cpp.html#a426459bfbcaa9a4141c55d4544ac4e26" title="ポリゴン頂点設定関数 SetVertexPlayer" alt="" coords="117,563,234,589"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55_icgraph.png" border="0" usemap="#game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55_icgraph" alt=""/></div>
+<map name="game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55_icgraph" id="game_8cpp_a10bfdad2fe1eece3cc32afb5fc42ec55_icgraph">
+<area shape="rect" title="バッター処理関数 Bat" alt="" coords="385,5,428,32"/>
+<area shape="rect" href="player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="237,5,337,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -159,7 +253,37 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="game_8cpp_source.html">game.cpp</a> の <a class="el" href="game_8cpp_source.html#l00380">380</a> 行目に定義があります。</p>
+<p>打球処理関数 Hitball </p>
+<p>打球方向や移動を処理 </p>
+
+<p class="definition"> <a class="el" href="game_8cpp_source.html">game.cpp</a> の <a class="el" href="game_8cpp_source.html#l00379">379</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917_cgraph.png" border="0" usemap="#game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917_cgraph" alt=""/></div>
+<map name="game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917_cgraph" id="game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917_cgraph">
+<area shape="rect" title="打球処理関数 Hitball" alt="" coords="5,205,64,232"/>
+<area shape="rect" href="meetstrike_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title="MeetStrike取得関数 Get_Cursor" alt="" coords="273,5,361,32"/>
+<area shape="rect" href="ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="285,59,350,85"/>
+<area shape="rect" href="ball_8cpp.html#ad6665fe211d0e96c190d6776112a2b47" title="Ball取得関数 GetBallcursor" alt="" coords="267,116,368,143"/>
+<area shape="rect" href="ball_8cpp.html#a8e3730ea94478cc5a6669a85214207ed" title="Ball取得関数 GetBallshadow" alt="" coords="263,179,372,205"/>
+<area shape="rect" href="player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="267,255,367,281"/>
+<area shape="rect" href="player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title="PlayerPit取得関数 GetPlayerPit" alt="" coords="269,307,365,333"/>
+<area shape="rect" href="meetstrike_8cpp.html#a64378fa1372297d3c72ce483c18d10fe" title="MeetStrike取得関数 GetStrike" alt="" coords="279,357,356,384"/>
+<area shape="rect" href="collision_8cpp.html#a32a68d055020250a22ce0d35107377d3" title="ボールループの初期化関数 LoopInit" alt="" coords="130,205,197,232"/>
+<area shape="rect" href="ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title="ポリゴン頂点設定関数 SetVertexBall" alt="" coords="112,408,215,435"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917_icgraph.png" border="0" usemap="#game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917_icgraph" alt=""/></div>
+<map name="game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917_icgraph" id="game_8cpp_a2d18b2f0dfec93f9d693f70e700b0917_icgraph">
+<area shape="rect" title="打球処理関数 Hitball" alt="" coords="237,5,296,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -179,7 +303,35 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="game_8cpp_source.html">game.cpp</a> の <a class="el" href="game_8cpp_source.html#l00241">241</a> 行目に定義があります。</p>
+<p>ピッチャー処理関数 Pit </p>
+<p>投球を制御→ボールを発射する </p>
+
+<p class="definition"> <a class="el" href="game_8cpp_source.html">game.cpp</a> の <a class="el" href="game_8cpp_source.html#l00240">240</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f_cgraph.png" border="0" usemap="#game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f_cgraph" alt=""/></div>
+<map name="game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f_cgraph" id="game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f_cgraph">
+<area shape="rect" title="ピッチャー処理関数 Pit" alt="" coords="5,132,44,159"/>
+<area shape="rect" href="ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="121,5,186,32"/>
+<area shape="rect" href="player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title="PlayerPit取得関数 GetPlayerPit" alt="" coords="105,56,201,83"/>
+<area shape="rect" href="sound_8cpp.html#a35c57e56563987d661008dbf450de87f" title=" " alt="" coords="111,107,196,133"/>
+<area shape="rect" href="ball_8cpp.html#afb1ecd37c1b5d7730424879558dc4d2a" title="ボール設定関数 SetBall" alt="" coords="121,157,185,184"/>
+<area shape="rect" href="player_8cpp.html#a82f0a902b65506c32ecbdfec0d711b28" title="テクスチャ設定関数 SetTexturePlayer" alt="" coords="92,208,215,235"/>
+<area shape="rect" href="player_8cpp.html#a426459bfbcaa9a4141c55d4544ac4e26" title="ポリゴン頂点設定関数 SetVertexPlayer" alt="" coords="95,259,212,285"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f_icgraph.png" border="0" usemap="#game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f_icgraph" alt=""/></div>
+<map name="game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f_icgraph" id="game_8cpp_a13b39c1bd65ea2255b0910a03f19de8f_icgraph">
+<area shape="rect" title="ピッチャー処理関数 Pit" alt="" coords="385,5,424,32"/>
+<area shape="rect" href="player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="237,5,337,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>

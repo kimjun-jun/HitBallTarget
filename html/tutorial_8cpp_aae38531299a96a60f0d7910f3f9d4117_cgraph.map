@@ -1,7 +1,7 @@
 <map id="UpdateTutorial" name="UpdateTutorial">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,111,108"/>
+<area shape="rect" id="node1" title="Tutorial更新関数 UpdateTutorial" alt="" coords="5,81,111,108"/>
 <area shape="rect" id="node2" href="$input_8cpp.html#a51329aebf57af8767b502a8b111fa577" title=" " alt="" coords="159,5,296,32"/>
 <area shape="rect" id="node3" href="$input_8cpp.html#a7951056484ea4c474b1a5f783a1472b2" title=" " alt="" coords="166,56,289,83"/>
 <area shape="rect" id="node4" href="$sound_8cpp.html#a35c57e56563987d661008dbf450de87f" title=" " alt="" coords="185,107,270,133"/>
-<area shape="rect" id="node5" href="$fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d" title=" " alt="" coords="192,157,263,184"/>
+<area shape="rect" id="node5" href="$fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d" title="フェード設定関数 SetFade" alt="" coords="192,157,263,184"/>
 </map>

@@ -69,11 +69,31 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>HitBallTarget(2D)的当てゲーム  
+<p>HitBallTarget(2D)的当てゲーム(調整中)  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ball_8h_source.html">ball.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="balleffect_8h_source.html">balleffect.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+balleffect.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="balleffect_8cpp__incl.png" border="0" usemap="#balleffect_8cpp" alt=""/></div>
+<map name="balleffect_8cpp" id="balleffect_8cpp">
+<area shape="rect" title="HitBallTarget(2D)的当てゲーム(調整中)" alt="" coords="441,5,540,32"/>
+<area shape="rect" href="main_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="379,80,440,107"/>
+<area shape="rect" href="ball_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="464,80,517,107"/>
+<area shape="rect" href="balleffect_8h.html" title="HitBallTarget(2D)的当てゲーム(調整中)" alt="" coords="542,80,626,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,88,181"/>
+<area shape="rect" title=" " alt="" coords="113,155,181,181"/>
+<area shape="rect" title=" " alt="" coords="205,155,267,181"/>
+<area shape="rect" title=" " alt="" coords="292,155,353,181"/>
+<area shape="rect" title=" " alt="" coords="377,155,441,181"/>
+<area shape="rect" title=" " alt="" coords="465,155,524,181"/>
+<area shape="rect" title=" " alt="" coords="549,155,614,181"/>
+<area shape="rect" title=" " alt="" coords="638,155,706,181"/>
+<area shape="rect" title=" " alt="" coords="731,155,829,181"/>
+</map>
+</div>
 </div>
 <p><a href="balleffect_8cpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -95,18 +115,23 @@ $(function() {
 <tr class="memitem:ab31143f6a693a9a2bc6bcdeac8f2a0c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="balleffect_8cpp.html#ab31143f6a693a9a2bc6bcdeac8f2a0c1">ResetParticle</a> (int i, int n)</td></tr>
 <tr class="separator:ab31143f6a693a9a2bc6bcdeac8f2a0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae79dc5498dcb4c89274505afa0bf08cc"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="balleffect_8cpp.html#ae79dc5498dcb4c89274505afa0bf08cc">InitBalleffect</a> (int type)</td></tr>
+<tr class="memdesc:ae79dc5498dcb4c89274505afa0bf08cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Balleffect初期化関数 InitBalleffect  <a href="balleffect_8cpp.html#ae79dc5498dcb4c89274505afa0bf08cc">[詳解]</a><br /></td></tr>
 <tr class="separator:ae79dc5498dcb4c89274505afa0bf08cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ec46b172dc258cd439971080ed0d41d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="balleffect_8cpp.html#a9ec46b172dc258cd439971080ed0d41d">UninitBalleffect</a> (void)</td></tr>
+<tr class="memdesc:a9ec46b172dc258cd439971080ed0d41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Balleffect開放関数 UninitBalleffect  <a href="balleffect_8cpp.html#a9ec46b172dc258cd439971080ed0d41d">[詳解]</a><br /></td></tr>
 <tr class="separator:a9ec46b172dc258cd439971080ed0d41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10aa951137244d9cdb57cb5b84770bb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="balleffect_8cpp.html#a10aa951137244d9cdb57cb5b84770bb4">UpdateBalleffect</a> (void)</td></tr>
+<tr class="memdesc:a10aa951137244d9cdb57cb5b84770bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Balleffect更新関数 UpdateBalleffect  <a href="balleffect_8cpp.html#a10aa951137244d9cdb57cb5b84770bb4">[詳解]</a><br /></td></tr>
 <tr class="separator:a10aa951137244d9cdb57cb5b84770bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53027adc21cd2864c0d22d0b63a2346e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="balleffect_8cpp.html#a53027adc21cd2864c0d22d0b63a2346e">DrawBalleffect</a> (void)</td></tr>
+<tr class="memdesc:a53027adc21cd2864c0d22d0b63a2346e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Balleffect描画関数 DrawBalleffect  <a href="balleffect_8cpp.html#a53027adc21cd2864c0d22d0b63a2346e">[詳解]</a><br /></td></tr>
 <tr class="separator:a53027adc21cd2864c0d22d0b63a2346e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddec6fc81c53b4a5f7b78dcd97bbcbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="balleffect_8cpp.html#a0ddec6fc81c53b4a5f7b78dcd97bbcbb">SetBalleffect</a> (D3DXVECTOR3 pos, int duration)</td></tr>
+<tr class="memdesc:a0ddec6fc81c53b4a5f7b78dcd97bbcbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Balleffect設定関数 SetBalleffect  <a href="balleffect_8cpp.html#a0ddec6fc81c53b4a5f7b78dcd97bbcbb">[詳解]</a><br /></td></tr>
 <tr class="separator:a0ddec6fc81c53b4a5f7b78dcd97bbcbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>HitBallTarget(2D)的当てゲーム </p>
+<div class="textblock"><p>HitBallTarget(2D)的当てゲーム(調整中) </p>
 <dl class="section author"><dt>著者</dt><dd>キムラジュン </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2019/09/01 </dd></dl>
 
@@ -124,7 +149,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00016">16</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00015">15</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -140,7 +165,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00017">17</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00016">16</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -161,7 +186,29 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00216">216</a> 行目に定義があります。</p>
+<p>Balleffect描画関数 DrawBalleffect </p>
+
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00215">215</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="balleffect_8cpp_a53027adc21cd2864c0d22d0b63a2346e_cgraph.png" border="0" usemap="#balleffect_8cpp_a53027adc21cd2864c0d22d0b63a2346e_cgraph" alt=""/></div>
+<map name="balleffect_8cpp_a53027adc21cd2864c0d22d0b63a2346e_cgraph" id="balleffect_8cpp_a53027adc21cd2864c0d22d0b63a2346e_cgraph">
+<area shape="rect" title="Balleffect描画関数 DrawBalleffect" alt="" coords="5,31,109,57"/>
+<area shape="rect" href="ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="165,5,231,32"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="157,56,239,83"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="balleffect_8cpp_a53027adc21cd2864c0d22d0b63a2346e_icgraph.png" border="0" usemap="#balleffect_8cpp_a53027adc21cd2864c0d22d0b63a2346e_icgraph" alt=""/></div>
+<map name="balleffect_8cpp_a53027adc21cd2864c0d22d0b63a2346e_icgraph" id="balleffect_8cpp_a53027adc21cd2864c0d22d0b63a2346e_icgraph">
+<area shape="rect" title="Balleffect描画関数 DrawBalleffect" alt="" coords="225,5,329,32"/>
+<area shape="rect" href="main_8cpp.html#ae39baa177eafe9cad35d363fc683d77f" title="描画関数" alt="" coords="127,5,177,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -181,7 +228,35 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
+<p>Balleffect初期化関数 InitBalleffect </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>初期化タイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>HRESULT </dd></dl>
+
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00036">36</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="balleffect_8cpp_ae79dc5498dcb4c89274505afa0bf08cc_cgraph.png" border="0" usemap="#balleffect_8cpp_ae79dc5498dcb4c89274505afa0bf08cc_cgraph" alt=""/></div>
+<map name="balleffect_8cpp_ae79dc5498dcb4c89274505afa0bf08cc_cgraph" id="balleffect_8cpp_ae79dc5498dcb4c89274505afa0bf08cc_cgraph">
+<area shape="rect" title="Balleffect初期化関数 InitBalleffect" alt="" coords="5,5,97,32"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="145,5,227,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="balleffect_8cpp_ae79dc5498dcb4c89274505afa0bf08cc_icgraph.png" border="0" usemap="#balleffect_8cpp_ae79dc5498dcb4c89274505afa0bf08cc_icgraph" alt=""/></div>
+<map name="balleffect_8cpp_ae79dc5498dcb4c89274505afa0bf08cc_icgraph" id="balleffect_8cpp_ae79dc5498dcb4c89274505afa0bf08cc_icgraph">
+<area shape="rect" title="Balleffect初期化関数 InitBalleffect" alt="" coords="213,5,305,32"/>
+<area shape="rect" href="main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="127,5,165,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -201,7 +276,18 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00264">264</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00263">263</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="balleffect_8cpp_a81974986fc270d2f29228df735331811_cgraph.png" border="0" usemap="#balleffect_8cpp_a81974986fc270d2f29228df735331811_cgraph" alt=""/></div>
+<map name="balleffect_8cpp_a81974986fc270d2f29228df735331811_cgraph" id="balleffect_8cpp_a81974986fc270d2f29228df735331811_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,151,83"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="227,5,309,32"/>
+<area shape="rect" href="balleffect_8cpp.html#a7ec525caa8e88b5475fdd59a5753bec0" title=" " alt="" coords="199,56,337,83"/>
+<area shape="rect" href="balleffect_8cpp.html#a88f77e667883e83523314264fdb1652b" title=" " alt="" coords="201,107,335,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -231,7 +317,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00075">75</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00074">74</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -261,7 +347,15 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00334">334</a> 行目に定義があります。</p>
+<p>Balleffect設定関数 SetBalleffect </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">D3DXVECTOR3</td><td>pos, int duration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00333">333</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -297,7 +391,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00294">294</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00293">293</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="balleffect_8cpp_a7ec525caa8e88b5475fdd59a5753bec0_icgraph.png" border="0" usemap="#balleffect_8cpp_a7ec525caa8e88b5475fdd59a5753bec0_icgraph" alt=""/></div>
+<map name="balleffect_8cpp_a7ec525caa8e88b5475fdd59a5753bec0_icgraph" id="balleffect_8cpp_a7ec525caa8e88b5475fdd59a5753bec0_icgraph">
+<area shape="rect" title=" " alt="" coords="199,5,337,32"/>
+<area shape="rect" href="balleffect_8cpp.html#a81974986fc270d2f29228df735331811" title=" " alt="" coords="5,5,151,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -327,7 +430,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00311">311</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00310">310</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="balleffect_8cpp_a88f77e667883e83523314264fdb1652b_icgraph.png" border="0" usemap="#balleffect_8cpp_a88f77e667883e83523314264fdb1652b_icgraph" alt=""/></div>
+<map name="balleffect_8cpp_a88f77e667883e83523314264fdb1652b_icgraph" id="balleffect_8cpp_a88f77e667883e83523314264fdb1652b_icgraph">
+<area shape="rect" title=" " alt="" coords="199,5,332,32"/>
+<area shape="rect" href="balleffect_8cpp.html#a81974986fc270d2f29228df735331811" title=" " alt="" coords="5,5,151,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -347,7 +459,19 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00089">89</a> 行目に定義があります。</p>
+<p>Balleffect開放関数 UninitBalleffect </p>
+
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00088">88</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="balleffect_8cpp_a9ec46b172dc258cd439971080ed0d41d_icgraph.png" border="0" usemap="#balleffect_8cpp_a9ec46b172dc258cd439971080ed0d41d_icgraph" alt=""/></div>
+<map name="balleffect_8cpp_a9ec46b172dc258cd439971080ed0d41d_icgraph" id="balleffect_8cpp_a9ec46b172dc258cd439971080ed0d41d_icgraph">
+<area shape="rect" title="Balleffect開放関数 UninitBalleffect" alt="" coords="229,5,337,32"/>
+<area shape="rect" href="main_8cpp.html#ae43a8873beb00c8038b31c52b8a00edb" title="メモリ開放関数" alt="" coords="127,5,181,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -367,7 +491,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00106">106</a> 行目に定義があります。</p>
+<p>Balleffect更新関数 UpdateBalleffect </p>
+
+<p class="definition"> <a class="el" href="balleffect_8cpp_source.html">balleffect.cpp</a> の <a class="el" href="balleffect_8cpp_source.html#l00105">105</a> 行目に定義があります。</p>
 
 </div>
 </div>

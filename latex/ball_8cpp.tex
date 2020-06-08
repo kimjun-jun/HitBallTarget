@@ -9,40 +9,42 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}collision.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
+ball.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{ball_8cpp_a038bc4306b19c4f88bb5dfc240f640f8}{Init\+Ball}} (int type)
-\item 
-void \mbox{\hyperlink{ball_8cpp_afbaa27b368e6ea70f5e6914e4d83c8a9}{Re\+Init\+Ball}} (void)
-\item 
-void \mbox{\hyperlink{ball_8cpp_a42cfbac2e69202bdae8156e19397d69f}{Uninit\+Ball}} (void)
-\item 
-void \mbox{\hyperlink{ball_8cpp_af787b6d3fac0fcd0427c493a8a415901}{Update\+Ball}} (void)
-\item 
-void \mbox{\hyperlink{ball_8cpp_ad1d9d3fafa534c5af7a591950b3a38b5}{Draw\+Ball}} (void)
-\item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{ball_8cpp_a70431ba1be68be65354d5c918c50de10}{Make\+Vertex\+Ball}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴン頂点生成関数 Make\+Vertex\+Ball \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{ball_8cpp_a038bc4306b19c4f88bb5dfc240f640f8}{Init\+Ball}} (int type)
+\begin{DoxyCompactList}\small\item\em Ball初期化関数 Init\+Ball \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ball_8cpp_afbaa27b368e6ea70f5e6914e4d83c8a9}{Re\+Init\+Ball}} (void)
+\begin{DoxyCompactList}\small\item\em Ball再初期化関数 Re\+Init\+Ball \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ball_8cpp_a42cfbac2e69202bdae8156e19397d69f}{Uninit\+Ball}} (void)
+\begin{DoxyCompactList}\small\item\em Ball開放関数 Uninit\+Ball \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ball_8cpp_af787b6d3fac0fcd0427c493a8a415901}{Update\+Ball}} (void)
+\begin{DoxyCompactList}\small\item\em Ball更新関数 Update\+Ball \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ball_8cpp_ad1d9d3fafa534c5af7a591950b3a38b5}{Draw\+Ball}} (void)
+\begin{DoxyCompactList}\small\item\em Ball描画関数 Draw\+Ball \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ball_8cpp_a7b41cc94d73e430a4c923edf25c10f1c}{Set\+Vertex\+Ball}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴン頂点設定関数 Set\+Vertex\+Ball \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_b_a_l_l}{B\+A\+LL}} $\ast$ \mbox{\hyperlink{ball_8cpp_a3c91420785b577996ebc30b65b0143c1}{Get\+Ball}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Ball取得関数 Get\+Ball \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_b_a_l_l_c_u_r_s_o_r}{B\+A\+L\+L\+C\+U\+R\+S\+OR}} $\ast$ \mbox{\hyperlink{ball_8cpp_ad6665fe211d0e96c190d6776112a2b47}{Get\+Ballcursor}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Ball取得関数 Get\+Ballcursor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_b_a_l_l_s_h_a_d_o_w}{B\+A\+L\+L\+S\+H\+A\+D\+OW}} $\ast$ \mbox{\hyperlink{ball_8cpp_a8e3730ea94478cc5a6669a85214207ed}{Get\+Ballshadow}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Ball取得関数 Get\+Ballshadow \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ball_8cpp_afb1ecd37c1b5d7730424879558dc4d2a}{Set\+Ball}} (D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ボール設定関数 Set\+Ball \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_b_a_l_l}{B\+A\+LL}} \mbox{\hyperlink{ball_8cpp_a2f8c9a9a4e7ef9eb62533aaf186dd887}{g\+\_\+ball}} \mbox{[}\mbox{\hyperlink{ball_8h_a547e11e67cc69311fd099e8688a0e5c8}{B\+A\+L\+L\+\_\+\+M\+AX}}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em ボール構造体変数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_b_a_l_l_c_u_r_s_o_r}{B\+A\+L\+L\+C\+U\+R\+S\+OR}} \mbox{\hyperlink{ball_8cpp_a153e1ac19c642e672ef4fd4d34393f58}{g\+\_\+ballcursor}}
-\item 
+\begin{DoxyCompactList}\small\item\em ボール着地点構造体変数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_b_a_l_l_s_h_a_d_o_w}{B\+A\+L\+L\+S\+H\+A\+D\+OW}} \mbox{\hyperlink{ball_8cpp_a98b7b4d59d3aee83c512315d0fb4b69c}{g\+\_\+ballshadow}} \mbox{[}\mbox{\hyperlink{ball_8h_a547e11e67cc69311fd099e8688a0e5c8}{B\+A\+L\+L\+\_\+\+M\+AX}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ボール影構造体変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -65,8 +67,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 234 行目に定義があります。
+Ball描画関数 Draw\+Ball 
 
+
+
+ ball.\+cpp の 228 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{ball_8cpp_a3c91420785b577996ebc30b65b0143c1}\label{ball_8cpp_a3c91420785b577996ebc30b65b0143c1}} 
 \index{ball.cpp@{ball.cpp}!GetBall@{GetBall}}
 \index{GetBall@{GetBall}!ball.cpp@{ball.cpp}}
@@ -75,8 +85,17 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 392 行目に定義があります。
+Ball取得関数 Get\+Ball 
 
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_b_a_l_l_c_u_r_s_o_r}{B\+A\+L\+L\+C\+U\+R\+S\+OR}} 
+\end{DoxyReturn}
+
+
+ ball.\+cpp の 368 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
 \mbox{\Hypertarget{ball_8cpp_ad6665fe211d0e96c190d6776112a2b47}\label{ball_8cpp_ad6665fe211d0e96c190d6776112a2b47}} 
 \index{ball.cpp@{ball.cpp}!GetBallcursor@{GetBallcursor}}
 \index{GetBallcursor@{GetBallcursor}!ball.cpp@{ball.cpp}}
@@ -85,8 +104,17 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 400 行目に定義があります。
+Ball取得関数 Get\+Ballcursor 
 
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_b_a_l_l_c_u_r_s_o_r}{B\+A\+L\+L\+C\+U\+R\+S\+OR}} 
+\end{DoxyReturn}
+
+
+ ball.\+cpp の 376 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{ball_8cpp_a8e3730ea94478cc5a6669a85214207ed}\label{ball_8cpp_a8e3730ea94478cc5a6669a85214207ed}} 
 \index{ball.cpp@{ball.cpp}!GetBallshadow@{GetBallshadow}}
 \index{GetBallshadow@{GetBallshadow}!ball.cpp@{ball.cpp}}
@@ -95,8 +123,17 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 408 行目に定義があります。
+Ball取得関数 Get\+Ballshadow 
 
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_b_a_l_l_s_h_a_d_o_w}{B\+A\+L\+L\+S\+H\+A\+D\+OW}} 
+\end{DoxyReturn}
+
+
+ ball.\+cpp の 384 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{ball_8cpp_a038bc4306b19c4f88bb5dfc240f640f8}\label{ball_8cpp_a038bc4306b19c4f88bb5dfc240f640f8}} 
 \index{ball.cpp@{ball.cpp}!InitBall@{InitBall}}
 \index{InitBall@{InitBall}!ball.cpp@{ball.cpp}}
@@ -105,8 +142,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 31 行目に定義があります。
+Ball初期化関数 Init\+Ball 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ ball.\+cpp の 32 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 6
+被呼び出し関係図\+:
+% FIG 7
 \mbox{\Hypertarget{ball_8cpp_a70431ba1be68be65354d5c918c50de10}\label{ball_8cpp_a70431ba1be68be65354d5c918c50de10}} 
 \index{ball.cpp@{ball.cpp}!MakeVertexBall@{MakeVertexBall}}
 \index{MakeVertexBall@{MakeVertexBall}!ball.cpp@{ball.cpp}}
@@ -115,8 +168,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 268 行目に定義があります。
+ポリゴン頂点生成関数 Make\+Vertex\+Ball 
 
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ ball.\+cpp の 260 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9
 \mbox{\Hypertarget{ball_8cpp_afbaa27b368e6ea70f5e6914e4d83c8a9}\label{ball_8cpp_afbaa27b368e6ea70f5e6914e4d83c8a9}} 
 \index{ball.cpp@{ball.cpp}!ReInitBall@{ReInitBall}}
 \index{ReInitBall@{ReInitBall}!ball.cpp@{ball.cpp}}
@@ -125,8 +189,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
+Ball再初期化関数 Re\+Init\+Ball 
+
+
+
  ball.\+cpp の 119 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 10
+被呼び出し関係図\+:
+% FIG 11
 \mbox{\Hypertarget{ball_8cpp_afb1ecd37c1b5d7730424879558dc4d2a}\label{ball_8cpp_afb1ecd37c1b5d7730424879558dc4d2a}} 
 \index{ball.cpp@{ball.cpp}!SetBall@{SetBall}}
 \index{SetBall@{SetBall}!ball.cpp@{ball.cpp}}
@@ -135,8 +207,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 416 行目に定義があります。
+ボール設定関数 Set\+Ball 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em D3\+D\+X\+V\+E\+C\+T\+O\+R3} & pos セットする座標 \\
+\hline
+\end{DoxyParams}
+
+
+ ball.\+cpp の 392 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 12
 \mbox{\Hypertarget{ball_8cpp_a7b41cc94d73e430a4c923edf25c10f1c}\label{ball_8cpp_a7b41cc94d73e430a4c923edf25c10f1c}} 
 \index{ball.cpp@{ball.cpp}!SetVertexBall@{SetVertexBall}}
 \index{SetVertexBall@{SetVertexBall}!ball.cpp@{ball.cpp}}
@@ -145,8 +228,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 326 行目に定義があります。
+ポリゴン頂点設定関数 Set\+Vertex\+Ball 
 
+
+
+ ball.\+cpp の 317 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 13
 \mbox{\Hypertarget{ball_8cpp_a42cfbac2e69202bdae8156e19397d69f}\label{ball_8cpp_a42cfbac2e69202bdae8156e19397d69f}} 
 \index{ball.cpp@{ball.cpp}!UninitBall@{UninitBall}}
 \index{UninitBall@{UninitBall}!ball.cpp@{ball.cpp}}
@@ -155,8 +244,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
+Ball開放関数 Uninit\+Ball 
+
+
+
  ball.\+cpp の 170 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 14
 \mbox{\Hypertarget{ball_8cpp_af787b6d3fac0fcd0427c493a8a415901}\label{ball_8cpp_af787b6d3fac0fcd0427c493a8a415901}} 
 \index{ball.cpp@{ball.cpp}!UpdateBall@{UpdateBall}}
 \index{UpdateBall@{UpdateBall}!ball.cpp@{ball.cpp}}
@@ -165,8 +260,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 206 行目に定義があります。
+Ball更新関数 Update\+Ball 
 
+
+
+ ball.\+cpp の 200 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 15
+被呼び出し関係図\+:
+% FIG 16
 
 
 \doxysubsection{変数詳解}
@@ -178,7 +281,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 24 行目に定義があります。
+ボール構造体変数 
+
+
+
+ ball.\+cpp の 25 行目に定義があります。
 
 \mbox{\Hypertarget{ball_8cpp_a153e1ac19c642e672ef4fd4d34393f58}\label{ball_8cpp_a153e1ac19c642e672ef4fd4d34393f58}} 
 \index{ball.cpp@{ball.cpp}!g\_ballcursor@{g\_ballcursor}}
@@ -188,7 +295,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 25 行目に定義があります。
+ボール着地点構造体変数 
+
+
+
+ ball.\+cpp の 26 行目に定義があります。
 
 \mbox{\Hypertarget{ball_8cpp_a98b7b4d59d3aee83c512315d0fb4b69c}\label{ball_8cpp_a98b7b4d59d3aee83c512315d0fb4b69c}} 
 \index{ball.cpp@{ball.cpp}!g\_ballshadow@{g\_ballshadow}}
@@ -198,5 +309,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- ball.\+cpp の 26 行目に定義があります。
+ボール影構造体変数 
+
+
+
+ ball.\+cpp の 27 行目に定義があります。
 

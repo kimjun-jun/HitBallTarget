@@ -1,12 +1,12 @@
 <map id="Hitball" name="Hitball">
-<area shape="rect" id="node1" title=" " alt="" coords="5,205,64,232"/>
-<area shape="rect" id="node2" href="$ui_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title=" " alt="" coords="273,5,361,32"/>
-<area shape="rect" id="node3" href="$ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title=" " alt="" coords="285,59,350,85"/>
-<area shape="rect" id="node4" href="$ball_8cpp.html#ad6665fe211d0e96c190d6776112a2b47" title=" " alt="" coords="267,116,368,143"/>
-<area shape="rect" id="node5" href="$ball_8cpp.html#a8e3730ea94478cc5a6669a85214207ed" title=" " alt="" coords="263,179,372,205"/>
-<area shape="rect" id="node6" href="$player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title=" " alt="" coords="267,255,367,281"/>
-<area shape="rect" id="node7" href="$player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title=" " alt="" coords="269,307,365,333"/>
-<area shape="rect" id="node8" href="$ui_8cpp.html#a64378fa1372297d3c72ce483c18d10fe" title=" " alt="" coords="279,357,356,384"/>
-<area shape="rect" id="node9" href="$collision_8cpp.html#a32a68d055020250a22ce0d35107377d3" title=" " alt="" coords="130,205,197,232"/>
-<area shape="rect" id="node10" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title=" " alt="" coords="112,408,215,435"/>
+<area shape="rect" id="node1" title="打球処理関数 Hitball" alt="" coords="5,205,64,232"/>
+<area shape="rect" id="node2" href="$meetstrike_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title="MeetStrike取得関数 Get_Cursor" alt="" coords="273,5,361,32"/>
+<area shape="rect" id="node3" href="$ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="285,59,350,85"/>
+<area shape="rect" id="node4" href="$ball_8cpp.html#ad6665fe211d0e96c190d6776112a2b47" title="Ball取得関数 GetBallcursor" alt="" coords="267,116,368,143"/>
+<area shape="rect" id="node5" href="$ball_8cpp.html#a8e3730ea94478cc5a6669a85214207ed" title="Ball取得関数 GetBallshadow" alt="" coords="263,179,372,205"/>
+<area shape="rect" id="node6" href="$player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="267,255,367,281"/>
+<area shape="rect" id="node7" href="$player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title="PlayerPit取得関数 GetPlayerPit" alt="" coords="269,307,365,333"/>
+<area shape="rect" id="node8" href="$meetstrike_8cpp.html#a64378fa1372297d3c72ce483c18d10fe" title="MeetStrike取得関数 GetStrike" alt="" coords="279,357,356,384"/>
+<area shape="rect" id="node9" href="$collision_8cpp.html#a32a68d055020250a22ce0d35107377d3" title="ボールループの初期化関数 LoopInit" alt="" coords="130,205,197,232"/>
+<area shape="rect" id="node10" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title="ポリゴン頂点設定関数 SetVertexBall" alt="" coords="112,408,215,435"/>
 </map>

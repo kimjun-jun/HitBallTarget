@@ -1,4 +1,4 @@
 <map id="UpdateBG" name="UpdateBG">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,88,32"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a2f4d5784065e136715f8c631a3047296" title=" " alt="" coords="136,5,216,32"/>
+<area shape="rect" id="node1" title="BG更新関数 UpdateBG" alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a2f4d5784065e136715f8c631a3047296" title="現在のゲームシーンを入手する関数 GetScene" alt="" coords="136,5,216,32"/>
 </map>

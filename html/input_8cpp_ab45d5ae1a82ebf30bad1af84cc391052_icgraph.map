@@ -1,5 +1,5 @@
 <map id="InitKeyboard" name="InitKeyboard">
 <area shape="rect" id="node1" title=" " alt="" coords="241,5,336,32"/>
 <area shape="rect" id="node2" href="$input_8h.html#a47be2ef4096c7e7e1c35687d86ff7a85" title=" " alt="" coords="127,5,193,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,5,79,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
 </map>

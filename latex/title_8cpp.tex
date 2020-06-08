@@ -10,24 +10,26 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}fade.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}title.\+h\char`\"{}}\newline
+title.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{title_8cpp_ac74b9b3ba08c5f9c6fa53f2b9f1a16cf}{Make\+Vertex\+Title}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点生成関数 Make\+Vertex\+Title \end{DoxyCompactList}\item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{title_8cpp_a61c5b4d5836f268cb5e6562b329a2f0e}{Init\+Title}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em タイトル初期化関数 Init\+Title \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{title_8cpp_a928c6270669342e0130c32178d323361}{Uninit\+Title}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em タイトル開放関数 Uninit\+Title \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{title_8cpp_aa354bb8b39f42a45e2f33fd54e40703b}{Update\+Title}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em タイトル更新関数 Update\+Title \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{title_8cpp_a2ce9092026f2c9c2d759702a47b953c7}{Draw\+Title}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em タイトル描画関数 Draw\+Title \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{struct_t_i_t_l_e}{T\+I\+T\+LE}} \mbox{\hyperlink{title_8cpp_a0eb15eb26284d28a06e85136823bfe59}{g\+\_\+title}} \mbox{[}\mbox{\hyperlink{title_8h_a668ce556d27da2e4a6520731b6c12fd2}{T\+I\+T\+L\+E\+\_\+\+G\+O\+U\+K\+EI}}\mbox{]}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{struct_t_i_t_l_e}{T\+I\+T\+LE}} \mbox{\hyperlink{title_8cpp_a7afcd1b580d4150170dba764d18eced1}{g\+\_\+title}}
+\begin{DoxyCompactList}\small\item\em タイトル構造体変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -50,8 +52,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+cpp の 73 行目に定義があります。
+タイトル描画関数 Draw\+Title 
 
+
+
+ title.\+cpp の 77 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{title_8cpp_a61c5b4d5836f268cb5e6562b329a2f0e}\label{title_8cpp_a61c5b4d5836f268cb5e6562b329a2f0e}} 
 \index{title.cpp@{title.cpp}!InitTitle@{InitTitle}}
 \index{InitTitle@{InitTitle}!title.cpp@{title.cpp}}
@@ -60,8 +70,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+cpp の 26 行目に定義があります。
+タイトル初期化関数 Init\+Title 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ title.\+cpp の 30 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{title_8cpp_ac74b9b3ba08c5f9c6fa53f2b9f1a16cf}\label{title_8cpp_ac74b9b3ba08c5f9c6fa53f2b9f1a16cf}} 
 \index{title.cpp@{title.cpp}!MakeVertexTitle@{MakeVertexTitle}}
 \index{MakeVertexTitle@{MakeVertexTitle}!title.cpp@{title.cpp}}
@@ -70,8 +96,17 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+cpp の 90 行目に定義があります。
+頂点生成関数 Make\+Vertex\+Title 
 
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ title.\+cpp の 94 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{title_8cpp_a928c6270669342e0130c32178d323361}\label{title_8cpp_a928c6270669342e0130c32178d323361}} 
 \index{title.cpp@{title.cpp}!UninitTitle@{UninitTitle}}
 \index{UninitTitle@{UninitTitle}!title.cpp@{title.cpp}}
@@ -80,8 +115,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+cpp の 45 行目に定義があります。
+タイトル開放関数 Uninit\+Title 
 
+
+
+ title.\+cpp の 49 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{title_8cpp_aa354bb8b39f42a45e2f33fd54e40703b}\label{title_8cpp_aa354bb8b39f42a45e2f33fd54e40703b}} 
 \index{title.cpp@{title.cpp}!UpdateTitle@{UpdateTitle}}
 \index{UpdateTitle@{UpdateTitle}!title.cpp@{title.cpp}}
@@ -90,18 +131,30 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- title.\+cpp の 60 行目に定義があります。
+タイトル更新関数 Update\+Title 
 
+
+
+ title.\+cpp の 64 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
 
 
 \doxysubsection{変数詳解}
-\mbox{\Hypertarget{title_8cpp_a0eb15eb26284d28a06e85136823bfe59}\label{title_8cpp_a0eb15eb26284d28a06e85136823bfe59}} 
+\mbox{\Hypertarget{title_8cpp_a7afcd1b580d4150170dba764d18eced1}\label{title_8cpp_a7afcd1b580d4150170dba764d18eced1}} 
 \index{title.cpp@{title.cpp}!g\_title@{g\_title}}
 \index{g\_title@{g\_title}!title.cpp@{title.cpp}}
 \doxysubsubsection{\texorpdfstring{g\_title}{g\_title}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_t_l_e}{T\+I\+T\+LE}} g\+\_\+title\mbox{[}\mbox{\hyperlink{title_8h_a668ce556d27da2e4a6520731b6c12fd2}{T\+I\+T\+L\+E\+\_\+\+G\+O\+U\+K\+EI}}\mbox{]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_t_l_e}{T\+I\+T\+LE}} g\+\_\+title}
 
 
 
- title.\+cpp の 21 行目に定義があります。
+タイトル構造体変数 
+
+
+
+ title.\+cpp の 25 行目に定義があります。
 

@@ -8,30 +8,32 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}fade.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
+fade.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{fade_8cpp_a15228f6ba94ab7352f4fcb31e6e7274c}{F\+A\+D\+E\+\_\+\+R\+A\+TE}}~(0.\+02f)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em フェード係数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{fade_8cpp_a4a1d94214c70866b5cbda894700674b2}{Make\+Vertex\+Fade}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点生成関数 Make\+Vertex\+Fade \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{fade_8cpp_a3fe9846c8fbf02d66e5a1b6989f0b45e}{Set\+Color}} (D3\+D\+C\+O\+L\+OR col)
-\item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{fade_8cpp_a00f23dbde310ac88a2c2cc41a410d328}{Init\+Fade}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em フェードカラー設定関数 Set\+Color \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{fade_8cpp_ac14659ccf65247cea04ede6abff5630f}{Init\+Fade}} (void)
+\begin{DoxyCompactList}\small\item\em フェード初期化関数 Init\+Fade \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd}{Uninit\+Fade}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em フェードメモリ開放関数 Uninit\+Fade \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3}{Update\+Fade}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em フェード更新関数 Update\+Fade \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{fade_8cpp_a366aedf71d0d057d6df9988b0d38f000}{Draw\+Fade}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em フェード描画関数 Draw\+Fade \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{fade_8cpp_a85daf6279275e49d1eee12459cfada0d}{Set\+Fade}} (\mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} fade, \mbox{\hyperlink{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5}{E\+\_\+\+S\+T\+A\+GE}} next, int sno)
-\item 
+\begin{DoxyCompactList}\small\item\em フェード設定関数 Set\+Fade \end{DoxyCompactList}\item 
 \mbox{\hyperlink{fade_8h_a178ea3baffde6f1f9d27c8b309042aa0}{F\+A\+DE}} \mbox{\hyperlink{fade_8cpp_af15959ae7aa2a4e2bea206607aafbfd7}{Get\+Fade}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em フェード取得関数 Get\+Fade \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -54,6 +56,10 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
+フェード係数 
+
+
+
  fade.\+cpp の 15 行目に定義があります。
 
 
@@ -67,8 +73,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- fade.\+cpp の 113 行目に定義があります。
+フェード描画関数 Draw\+Fade 
 
+
+
+ fade.\+cpp の 122 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{fade_8cpp_af15959ae7aa2a4e2bea206607aafbfd7}\label{fade_8cpp_af15959ae7aa2a4e2bea206607aafbfd7}} 
 \index{fade.cpp@{fade.cpp}!GetFade@{GetFade}}
 \index{GetFade@{GetFade}!fade.cpp@{fade.cpp}}
@@ -77,18 +91,36 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- fade.\+cpp の 188 行目に定義があります。
+フェード取得関数 Get\+Fade 
 
-\mbox{\Hypertarget{fade_8cpp_a00f23dbde310ac88a2c2cc41a410d328}\label{fade_8cpp_a00f23dbde310ac88a2c2cc41a410d328}} 
+\begin{DoxyReturn}{戻り値}
+F\+A\+DE
+\end{DoxyReturn}
+現在のフェード状態を取得できる 
+
+ fade.\+cpp の 197 行目に定義があります。
+
+\mbox{\Hypertarget{fade_8cpp_ac14659ccf65247cea04ede6abff5630f}\label{fade_8cpp_ac14659ccf65247cea04ede6abff5630f}} 
 \index{fade.cpp@{fade.cpp}!InitFade@{InitFade}}
 \index{InitFade@{InitFade}!fade.cpp@{fade.cpp}}
 \doxysubsubsection{\texorpdfstring{InitFade()}{InitFade()}}
-{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Fade (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+Fade (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
- fade.\+cpp の 36 行目に定義があります。
+フェード初期化関数 Init\+Fade 
 
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ fade.\+cpp の 45 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{fade_8cpp_a4a1d94214c70866b5cbda894700674b2}\label{fade_8cpp_a4a1d94214c70866b5cbda894700674b2}} 
 \index{fade.cpp@{fade.cpp}!MakeVertexFade@{MakeVertexFade}}
 \index{MakeVertexFade@{MakeVertexFade}!fade.cpp@{fade.cpp}}
@@ -97,8 +129,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- fade.\+cpp の 130 行目に定義があります。
+頂点生成関数 Make\+Vertex\+Fade 
 
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ fade.\+cpp の 139 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{fade_8cpp_a3fe9846c8fbf02d66e5a1b6989f0b45e}\label{fade_8cpp_a3fe9846c8fbf02d66e5a1b6989f0b45e}} 
 \index{fade.cpp@{fade.cpp}!SetColor@{SetColor}}
 \index{SetColor@{SetColor}!fade.cpp@{fade.cpp}}
@@ -107,7 +150,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- fade.\+cpp の 165 行目に定義があります。
+フェードカラー設定関数 Set\+Color 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em D3\+D\+C\+O\+L\+OR} & col カラー値 \\
+\hline
+\end{DoxyParams}
+
+
+ fade.\+cpp の 174 行目に定義があります。
 
 \mbox{\Hypertarget{fade_8cpp_a85daf6279275e49d1eee12459cfada0d}\label{fade_8cpp_a85daf6279275e49d1eee12459cfada0d}} 
 \index{fade.cpp@{fade.cpp}!SetFade@{SetFade}}
@@ -117,8 +169,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- fade.\+cpp の 177 行目に定義があります。
+フェード設定関数 Set\+Fade 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em F\+A\+DE} & fade フェードの種類, E\+\_\+\+S\+T\+A\+GE next 次のゲームシーン, int sno 流したい音楽 \\
+\hline
+\end{DoxyParams}
+
+
+ fade.\+cpp の 186 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
 \mbox{\Hypertarget{fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd}\label{fade_8cpp_ae2dfa8d8b36033b4351aa88227c8c4dd}} 
 \index{fade.cpp@{fade.cpp}!UninitFade@{UninitFade}}
 \index{UninitFade@{UninitFade}!fade.cpp@{fade.cpp}}
@@ -127,8 +190,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- fade.\+cpp の 49 行目に定義があります。
+フェードメモリ開放関数 Uninit\+Fade 
 
+
+
+ fade.\+cpp の 58 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
 \mbox{\Hypertarget{fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3}\label{fade_8cpp_a527c4f6a38007a98f667afcdd9e9c8b3}} 
 \index{fade.cpp@{fade.cpp}!UpdateFade@{UpdateFade}}
 \index{UpdateFade@{UpdateFade}!fade.cpp@{fade.cpp}}
@@ -137,5 +206,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- fade.\+cpp の 60 行目に定義があります。
+フェード更新関数 Update\+Fade 
 
+ゲームシーン切り替え時(\mbox{\hyperlink{fade_8h_a85daf6279275e49d1eee12459cfada0d}{Set\+Fade()}}を使用するとき)に実行される。 
+
+ fade.\+cpp の 69 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9

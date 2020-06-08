@@ -13,30 +13,32 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}option.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}bg.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}R18.\+h\char`\"{}}\newline
+R18.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{_r18_8cpp_a7f1a23b2ff608d998ff38b3c636ea858}{Make\+Vertex\+R18select}} (void)
-\item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{_r18_8cpp_a1b57ae12a36cfd8a3bc1e2164ddd2b7a}{Init\+R18select}} (int type)
-\item 
-void \mbox{\hyperlink{_r18_8cpp_ac76d0676ddcc58c9aaf67f539a937cee}{Re\+Init\+R18select}} (void)
-\item 
-void \mbox{\hyperlink{_r18_8cpp_af26f032c3e4324a14379cd6b423d0291}{Uninit\+R18select}} (void)
-\item 
-void \mbox{\hyperlink{_r18_8cpp_afcb3b31f1d17983ccbd4fba452b855cb}{Update\+R18select}} (void)
-\item 
-void \mbox{\hyperlink{_r18_8cpp_a6d405fbaff062a0c6800541fa4005658}{Draw\+R18select}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴン頂点生成関数 Make\+Vertex\+R18select \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_r18_8cpp_aca2da5708bd389587e64d266fb48e444}{Set\+Vertex\+R18select}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em ポリゴン頂点設定関数 Set\+Vertex\+R18select \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{_r18_8cpp_a1b57ae12a36cfd8a3bc1e2164ddd2b7a}{Init\+R18select}} (int type)
+\begin{DoxyCompactList}\small\item\em R18初期化関数 Init\+R18select \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_r18_8cpp_ac76d0676ddcc58c9aaf67f539a937cee}{Re\+Init\+R18select}} (void)
+\begin{DoxyCompactList}\small\item\em R18再初期化関数 Re\+Init\+R18select \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_r18_8cpp_af26f032c3e4324a14379cd6b423d0291}{Uninit\+R18select}} (void)
+\begin{DoxyCompactList}\small\item\em R18開放関数 Uninit\+R18select \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_r18_8cpp_afcb3b31f1d17983ccbd4fba452b855cb}{Update\+R18select}} (void)
+\begin{DoxyCompactList}\small\item\em R18更新関数 Update\+R18select \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_r18_8cpp_a6d405fbaff062a0c6800541fa4005658}{Draw\+R18select}} (void)
+\begin{DoxyCompactList}\small\item\em R18描画関数 Draw\+R18select \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_r18_s_e_l_e_c_t}{R18\+S\+E\+L\+E\+CT}} $\ast$ \mbox{\hyperlink{_r18_8cpp_a4e39f144bf77ab812421e9d1c199554a}{Get\+R18select}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em R18取得関数 Get\+R18select \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_r18_s_e_l_e_c_t}{R18\+S\+E\+L\+E\+CT}} \mbox{\hyperlink{_r18_8cpp_aec0aa5db113f2a81f79ed10d8c9f4b00}{g\+\_\+r18select}} \mbox{[}\mbox{\hyperlink{_r18_8h_a2b4f1408bedff89a255ffa02a928ba72}{R18\+S\+E\+L\+E\+C\+T\+M\+AX}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 0感度、1キャンセル、2コントローラー、3\+R18 構造体変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -59,8 +61,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 155 行目に定義があります。
+R18描画関数 Draw\+R18select 
 
+
+
+ R18.\+cpp の 164 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{_r18_8cpp_a4e39f144bf77ab812421e9d1c199554a}\label{_r18_8cpp_a4e39f144bf77ab812421e9d1c199554a}} 
 \index{R18.cpp@{R18.cpp}!GetR18select@{GetR18select}}
 \index{GetR18select@{GetR18select}!R18.cpp@{R18.cpp}}
@@ -69,7 +79,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 292 行目に定義があります。
+R18取得関数 Get\+R18select 
+
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_r18_s_e_l_e_c_t}{R18\+S\+E\+L\+E\+CT}} 
+\end{DoxyReturn}
+
+
+ R18.\+cpp の 303 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8cpp_a1b57ae12a36cfd8a3bc1e2164ddd2b7a}\label{_r18_8cpp_a1b57ae12a36cfd8a3bc1e2164ddd2b7a}} 
 \index{R18.cpp@{R18.cpp}!InitR18select@{InitR18select}}
@@ -79,8 +96,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 31 行目に定義があります。
+R18初期化関数 Init\+R18select 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ R18.\+cpp の 40 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{_r18_8cpp_a7f1a23b2ff608d998ff38b3c636ea858}\label{_r18_8cpp_a7f1a23b2ff608d998ff38b3c636ea858}} 
 \index{R18.cpp@{R18.cpp}!MakeVertexR18select@{MakeVertexR18select}}
 \index{MakeVertexR18select@{MakeVertexR18select}!R18.cpp@{R18.cpp}}
@@ -89,7 +122,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 173 行目に定義があります。
+ポリゴン頂点生成関数 Make\+Vertex\+R18select 
+
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ R18.\+cpp の 182 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8cpp_ac76d0676ddcc58c9aaf67f539a937cee}\label{_r18_8cpp_ac76d0676ddcc58c9aaf67f539a937cee}} 
 \index{R18.cpp@{R18.cpp}!ReInitR18select@{ReInitR18select}}
@@ -99,8 +139,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 61 行目に定義があります。
+R18再初期化関数 Re\+Init\+R18select 
 
+
+
+ R18.\+cpp の 70 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{_r18_8cpp_aca2da5708bd389587e64d266fb48e444}\label{_r18_8cpp_aca2da5708bd389587e64d266fb48e444}} 
 \index{R18.cpp@{R18.cpp}!SetVertexR18select@{SetVertexR18select}}
 \index{SetVertexR18select@{SetVertexR18select}!R18.cpp@{R18.cpp}}
@@ -109,7 +155,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 226 行目に定義があります。
+ポリゴン頂点設定関数 Set\+Vertex\+R18select 
+
+
+
+ R18.\+cpp の 235 行目に定義があります。
 
 \mbox{\Hypertarget{_r18_8cpp_af26f032c3e4324a14379cd6b423d0291}\label{_r18_8cpp_af26f032c3e4324a14379cd6b423d0291}} 
 \index{R18.cpp@{R18.cpp}!UninitR18select@{UninitR18select}}
@@ -119,8 +169,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 71 行目に定義があります。
+R18開放関数 Uninit\+R18select 
 
+
+
+ R18.\+cpp の 80 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{_r18_8cpp_afcb3b31f1d17983ccbd4fba452b855cb}\label{_r18_8cpp_afcb3b31f1d17983ccbd4fba452b855cb}} 
 \index{R18.cpp@{R18.cpp}!UpdateR18select@{UpdateR18select}}
 \index{UpdateR18select@{UpdateR18select}!R18.cpp@{R18.cpp}}
@@ -129,8 +185,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 86 行目に定義があります。
+R18更新関数 Update\+R18select 
 
+
+
+ R18.\+cpp の 95 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
 
 
 \doxysubsection{変数詳解}
@@ -142,5 +204,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- R18.\+cpp の 24 行目に定義があります。
+0感度、1キャンセル、2コントローラー、3\+R18 構造体変数 
+
+
+
+ R18.\+cpp の 33 行目に定義があります。
 

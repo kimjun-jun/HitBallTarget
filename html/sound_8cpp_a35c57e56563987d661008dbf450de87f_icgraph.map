@@ -1,12 +1,11 @@
 <map id="PlaySound" name="PlaySound">
-<area shape="rect" id="node1" title=" " alt="" coords="565,137,651,164"/>
-<area shape="rect" id="node2" href="$collision_8h.html#a102771cfc2ed7cee53e1d05ff7b34d53" title=" " alt="" coords="263,36,338,63"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,61,79,88"/>
-<area shape="rect" id="node5" href="$game_8h.html#a13b39c1bd65ea2255b0910a03f19de8f" title=" " alt="" coords="445,137,484,164"/>
-<area shape="rect" id="node7" href="$countdown_8h.html#aba153798b82da187b7ead867025ea781" title=" " alt="" coords="237,188,364,215"/>
-<area shape="rect" id="node8" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title=" " alt="" coords="251,239,351,265"/>
-<area shape="rect" id="node9" href="$title_8h.html#aa354bb8b39f42a45e2f33fd54e40703b" title=" " alt="" coords="421,289,508,316"/>
-<area shape="rect" id="node10" href="$tutorial_8h.html#aae38531299a96a60f0d7910f3f9d4117" title=" " alt="" coords="412,87,517,113"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title=" " alt="" coords="127,137,189,164"/>
-<area shape="rect" id="node6" href="$player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title=" " alt="" coords="251,137,351,164"/>
+<area shape="rect" id="node1" title=" " alt="" coords="565,127,651,153"/>
+<area shape="rect" id="node2" href="$game_8h.html#a13b39c1bd65ea2255b0910a03f19de8f" title="ピッチャー処理関数 Pit" alt="" coords="445,51,484,77"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,51,79,77"/>
+<area shape="rect" id="node6" href="$countdown_8h.html#aba153798b82da187b7ead867025ea781" title="Countdown更新関数 UpdateCountdown" alt="" coords="237,152,364,179"/>
+<area shape="rect" id="node7" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="251,203,351,229"/>
+<area shape="rect" id="node8" href="$title_8h.html#aa354bb8b39f42a45e2f33fd54e40703b" title="タイトル更新関数 UpdateTitle" alt="" coords="421,253,508,280"/>
+<area shape="rect" id="node9" href="$tutorial_8h.html#aae38531299a96a60f0d7910f3f9d4117" title="Tutorial更新関数 UpdateTutorial" alt="" coords="412,101,517,128"/>
+<area shape="rect" id="node3" href="$player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="251,51,351,77"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,127,189,153"/>
 </map>

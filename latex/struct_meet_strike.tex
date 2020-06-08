@@ -1,0 +1,147 @@
+\hypertarget{struct_meet_strike}{}\doxysection{Meet\+Strike 構造体}
+\label{struct_meet_strike}\index{MeetStrike@{MeetStrike}}
+
+
+2Dポリゴンを定義する構造体  
+
+
+
+
+{\ttfamily \#include $<$meetstrike.\+h$>$}
+
+
+
+Meet\+Strike 連携図
+% FIG 0
+\doxysubsection*{フィールド}
+\begin{DoxyCompactItemize}
+\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{struct_meet_strike_a968652fb6e6df6907925e0b3928718ed}{p\+D3\+D\+Texture}} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em テクスチャへのポインタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_v_e_r_t_e_x__2_d}{V\+E\+R\+T\+E\+X\+\_\+2D}} \mbox{\hyperlink{struct_meet_strike_a3c69f530ea34372aa84382513bf482d6}{vertex\+Wk}} \mbox{[}\mbox{\hyperlink{main_8h_ab722cbfcd174beb57f5473d53f9767f7}{N\+U\+M\+\_\+\+V\+E\+R\+T\+EX}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 頂点情報格納ワーク \end{DoxyCompactList}\item 
+D3\+D\+X\+V\+E\+C\+T\+O\+R3 \mbox{\hyperlink{struct_meet_strike_aa2f4377dd4c2b687b1332058e7444852}{pos}}
+\begin{DoxyCompactList}\small\item\em ポリゴンの移動量 \end{DoxyCompactList}\item 
+D3\+D\+X\+V\+E\+C\+T\+O\+R3 \mbox{\hyperlink{struct_meet_strike_a841a6cf0bb498a618689dcedcd0dbeb1}{rot}}
+\begin{DoxyCompactList}\small\item\em ポリゴンの回転量 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_meet_strike_a886d551d5381dc3e53f17825ffc51641}{direction}}
+\begin{DoxyCompactList}\small\item\em ポリゴンの移動方向 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_meet_strike_aeb43e2603c99c913203823269b8a1922}{meet}}
+\begin{DoxyCompactList}\small\item\em 大か小か \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_meet_strike_a5bb68602a18ad3eae31e576c10369fbd}{use}}
+\begin{DoxyCompactList}\small\item\em 使用しているかどうか \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+2Dポリゴンを定義する構造体 
+
+　 　 
+
+ meetstrike.\+h の 42 行目に定義があります。
+
+
+
+\doxysubsection{フィールド詳解}
+\mbox{\Hypertarget{struct_meet_strike_a886d551d5381dc3e53f17825ffc51641}\label{struct_meet_strike_a886d551d5381dc3e53f17825ffc51641}} 
+\index{MeetStrike@{MeetStrike}!direction@{direction}}
+\index{direction@{direction}!MeetStrike@{MeetStrike}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily int direction}
+
+
+
+ポリゴンの移動方向 
+
+
+
+ meetstrike.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{struct_meet_strike_aeb43e2603c99c913203823269b8a1922}\label{struct_meet_strike_aeb43e2603c99c913203823269b8a1922}} 
+\index{MeetStrike@{MeetStrike}!meet@{meet}}
+\index{meet@{meet}!MeetStrike@{MeetStrike}}
+\doxysubsubsection{\texorpdfstring{meet}{meet}}
+{\footnotesize\ttfamily int meet}
+
+
+
+大か小か 
+
+
+
+ meetstrike.\+h の 49 行目に定義があります。
+
+\mbox{\Hypertarget{struct_meet_strike_a968652fb6e6df6907925e0b3928718ed}\label{struct_meet_strike_a968652fb6e6df6907925e0b3928718ed}} 
+\index{MeetStrike@{MeetStrike}!pD3DTexture@{pD3DTexture}}
+\index{pD3DTexture@{pD3DTexture}!MeetStrike@{MeetStrike}}
+\doxysubsubsection{\texorpdfstring{pD3DTexture}{pD3DTexture}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 p\+D3\+D\+Texture = N\+U\+LL}
+
+
+
+テクスチャへのポインタ 
+
+
+
+ meetstrike.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{struct_meet_strike_aa2f4377dd4c2b687b1332058e7444852}\label{struct_meet_strike_aa2f4377dd4c2b687b1332058e7444852}} 
+\index{MeetStrike@{MeetStrike}!pos@{pos}}
+\index{pos@{pos}!MeetStrike@{MeetStrike}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily D3\+D\+X\+V\+E\+C\+T\+O\+R3 pos}
+
+
+
+ポリゴンの移動量 
+
+
+
+ meetstrike.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{struct_meet_strike_a841a6cf0bb498a618689dcedcd0dbeb1}\label{struct_meet_strike_a841a6cf0bb498a618689dcedcd0dbeb1}} 
+\index{MeetStrike@{MeetStrike}!rot@{rot}}
+\index{rot@{rot}!MeetStrike@{MeetStrike}}
+\doxysubsubsection{\texorpdfstring{rot}{rot}}
+{\footnotesize\ttfamily D3\+D\+X\+V\+E\+C\+T\+O\+R3 rot}
+
+
+
+ポリゴンの回転量 
+
+
+
+ meetstrike.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{struct_meet_strike_a5bb68602a18ad3eae31e576c10369fbd}\label{struct_meet_strike_a5bb68602a18ad3eae31e576c10369fbd}} 
+\index{MeetStrike@{MeetStrike}!use@{use}}
+\index{use@{use}!MeetStrike@{MeetStrike}}
+\doxysubsubsection{\texorpdfstring{use}{use}}
+{\footnotesize\ttfamily bool use}
+
+
+
+使用しているかどうか 
+
+
+
+ meetstrike.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{struct_meet_strike_a3c69f530ea34372aa84382513bf482d6}\label{struct_meet_strike_a3c69f530ea34372aa84382513bf482d6}} 
+\index{MeetStrike@{MeetStrike}!vertexWk@{vertexWk}}
+\index{vertexWk@{vertexWk}!MeetStrike@{MeetStrike}}
+\doxysubsubsection{\texorpdfstring{vertexWk}{vertexWk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_v_e_r_t_e_x__2_d}{V\+E\+R\+T\+E\+X\+\_\+2D}} vertex\+Wk\mbox{[}\mbox{\hyperlink{main_8h_ab722cbfcd174beb57f5473d53f9767f7}{N\+U\+M\+\_\+\+V\+E\+R\+T\+EX}}\mbox{]}}
+
+
+
+頂点情報格納ワーク 
+
+
+
+ meetstrike.\+h の 45 行目に定義があります。
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{meetstrike_8h}{meetstrike.\+h}}\end{DoxyCompactItemize}

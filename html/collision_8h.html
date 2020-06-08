@@ -70,18 +70,34 @@ $(function() {
 
 <p>HitBallTarget(2D)的当てゲーム  
 <a href="#details">[詳解]</a></p>
-
+<div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="collision_8h__dep__incl.png" border="0" usemap="#collision_8hdep" alt=""/></div>
+<map name="collision_8hdep" id="collision_8hdep">
+<area shape="rect" title="HitBallTarget(2D)的当てゲーム" alt="" coords="159,5,239,32"/>
+<area shape="rect" href="ball_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,80,72,107"/>
+<area shape="rect" href="collision_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="97,80,191,107"/>
+<area shape="rect" href="game_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="215,80,294,107"/>
+<area shape="rect" href="main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="319,80,393,107"/>
+</map>
+</div>
+</div>
 <p><a href="collision_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a95f2043194966afc193cb3c2f84b972c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="collision_8h.html#a95f2043194966afc193cb3c2f84b972c">CollisionBB</a> (D3DXVECTOR3 pos1, float h1, float w1, D3DXVECTOR3 pos2, float h2, float w2)</td></tr>
+<tr class="memdesc:a95f2043194966afc193cb3c2f84b972c"><td class="mdescLeft">&#160;</td><td class="mdescRight">当たり判定BB関数 CollisionBB  <a href="collision_8h.html#a95f2043194966afc193cb3c2f84b972c">[詳解]</a><br /></td></tr>
 <tr class="separator:a95f2043194966afc193cb3c2f84b972c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6045e538566a6d5fc2519a01d636f6ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="collision_8h.html#a6045e538566a6d5fc2519a01d636f6ec">CollisionBC</a> (D3DXVECTOR3 pos1, float r1, D3DXVECTOR3 pos2, float r2)</td></tr>
+<tr class="memdesc:a6045e538566a6d5fc2519a01d636f6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">当たり判定BC関数 CollisionBC  <a href="collision_8h.html#a6045e538566a6d5fc2519a01d636f6ec">[詳解]</a><br /></td></tr>
 <tr class="separator:a6045e538566a6d5fc2519a01d636f6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a102771cfc2ed7cee53e1d05ff7b34d53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="collision_8h.html#a102771cfc2ed7cee53e1d05ff7b34d53">CheakHit</a> (void)</td></tr>
+<tr class="memdesc:a102771cfc2ed7cee53e1d05ff7b34d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">当たり判定確認関数 CheakHit  <a href="collision_8h.html#a102771cfc2ed7cee53e1d05ff7b34d53">[詳解]</a><br /></td></tr>
 <tr class="separator:a102771cfc2ed7cee53e1d05ff7b34d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32a68d055020250a22ce0d35107377d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="collision_8h.html#a32a68d055020250a22ce0d35107377d3">LoopInit</a> (void)</td></tr>
+<tr class="memdesc:a32a68d055020250a22ce0d35107377d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボールループの初期化関数 LoopInit  <a href="collision_8h.html#a32a68d055020250a22ce0d35107377d3">[詳解]</a><br /></td></tr>
 <tr class="separator:a32a68d055020250a22ce0d35107377d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -107,7 +123,29 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="collision_8cpp_source.html">collision.cpp</a> の <a class="el" href="collision_8cpp_source.html#l00070">70</a> 行目に定義があります。</p>
+<p>当たり判定確認関数 CheakHit </p>
+
+<p class="definition"> <a class="el" href="collision_8cpp_source.html">collision.cpp</a> の <a class="el" href="collision_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="collision_8h_a102771cfc2ed7cee53e1d05ff7b34d53_cgraph.png" border="0" usemap="#collision_8h_a102771cfc2ed7cee53e1d05ff7b34d53_cgraph" alt=""/></div>
+<map name="collision_8h_a102771cfc2ed7cee53e1d05ff7b34d53_cgraph" id="collision_8h_a102771cfc2ed7cee53e1d05ff7b34d53_cgraph">
+<area shape="rect" title="当たり判定確認関数 CheakHit" alt="" coords="5,31,80,57"/>
+<area shape="rect" href="player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="128,5,228,32"/>
+<area shape="rect" href="player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title="PlayerPit取得関数 GetPlayerPit" alt="" coords="130,56,226,83"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="collision_8h_a102771cfc2ed7cee53e1d05ff7b34d53_icgraph.png" border="0" usemap="#collision_8h_a102771cfc2ed7cee53e1d05ff7b34d53_icgraph" alt=""/></div>
+<map name="collision_8h_a102771cfc2ed7cee53e1d05ff7b34d53_icgraph" id="collision_8h_a102771cfc2ed7cee53e1d05ff7b34d53_icgraph">
+<area shape="rect" title="当たり判定確認関数 CheakHit" alt="" coords="237,5,312,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -161,7 +199,17 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="collision_8cpp_source.html">collision.cpp</a> の <a class="el" href="collision_8cpp_source.html#l00022">22</a> 行目に定義があります。</p>
+<p>当たり判定BB関数 CollisionBB </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">D3DXVECTOR3</td><td>pos1, float h1, float w1, D3DXVECTOR3 pos2, float h2, float w2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>bool</dd></dl>
+<p>BBで当たり判定したい座標とサイズを渡す </p>
+
+<p class="definition"> <a class="el" href="collision_8cpp_source.html">collision.cpp</a> の <a class="el" href="collision_8cpp_source.html#l00021">21</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -203,7 +251,17 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="collision_8cpp_source.html">collision.cpp</a> の <a class="el" href="collision_8cpp_source.html#l00039">39</a> 行目に定義があります。</p>
+<p>当たり判定BC関数 CollisionBC </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">D3DXVECTOR3</td><td>pos1, float r1, D3DXVECTOR3 pos2, float r2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>bool</dd></dl>
+<p>BCで当たり判定したい座標とサイズを渡す </p>
+
+<p class="definition"> <a class="el" href="collision_8cpp_source.html">collision.cpp</a> の <a class="el" href="collision_8cpp_source.html#l00038">38</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -223,7 +281,36 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="collision_8cpp_source.html">collision.cpp</a> の <a class="el" href="collision_8cpp_source.html#l00538">538</a> 行目に定義があります。</p>
+<p>ボールループの初期化関数 LoopInit </p>
+
+<p class="definition"> <a class="el" href="collision_8cpp_source.html">collision.cpp</a> の <a class="el" href="collision_8cpp_source.html#l00529">529</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="collision_8h_a32a68d055020250a22ce0d35107377d3_cgraph.png" border="0" usemap="#collision_8h_a32a68d055020250a22ce0d35107377d3_cgraph" alt=""/></div>
+<map name="collision_8h_a32a68d055020250a22ce0d35107377d3_cgraph" id="collision_8h_a32a68d055020250a22ce0d35107377d3_cgraph">
+<area shape="rect" title="ボールループの初期化関数 LoopInit" alt="" coords="5,157,72,184"/>
+<area shape="rect" href="meetstrike_8cpp.html#a7c9aa56d772450fdb3be7f367988a355" title="MeetStrike取得関数 Get_Cursor" alt="" coords="131,5,219,32"/>
+<area shape="rect" href="ball_8cpp.html#a3c91420785b577996ebc30b65b0143c1" title="Ball取得関数 GetBall" alt="" coords="142,56,207,83"/>
+<area shape="rect" href="ball_8cpp.html#ad6665fe211d0e96c190d6776112a2b47" title="Ball取得関数 GetBallcursor" alt="" coords="124,107,225,133"/>
+<area shape="rect" href="ball_8cpp.html#a8e3730ea94478cc5a6669a85214207ed" title="Ball取得関数 GetBallshadow" alt="" coords="120,157,229,184"/>
+<area shape="rect" href="player_8cpp.html#a2406a202cc0c601004fe35fb56e57f7c" title="PlayerBat取得関数 GetPlayerBat" alt="" coords="125,208,225,235"/>
+<area shape="rect" href="player_8cpp.html#a33e108ae2585bd33cc1bbc965a00ee95" title="PlayerPit取得関数 GetPlayerPit" alt="" coords="127,259,223,285"/>
+<area shape="rect" href="meetstrike_8cpp.html#a64378fa1372297d3c72ce483c18d10fe" title="MeetStrike取得関数 GetStrike" alt="" coords="136,309,213,336"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="collision_8h_a32a68d055020250a22ce0d35107377d3_icgraph.png" border="0" usemap="#collision_8h_a32a68d055020250a22ce0d35107377d3_icgraph" alt=""/></div>
+<map name="collision_8h_a32a68d055020250a22ce0d35107377d3_icgraph" id="collision_8h_a32a68d055020250a22ce0d35107377d3_icgraph">
+<area shape="rect" title="ボールループの初期化関数 LoopInit" alt="" coords="371,31,437,57"/>
+<area shape="rect" href="game_8h.html#a2d18b2f0dfec93f9d693f70e700b0917" title="打球処理関数 Hitball" alt="" coords="251,5,309,32"/>
+<area shape="rect" href="ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title="Ball更新関数 UpdateBall" alt="" coords="237,56,323,83"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,31,189,57"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,31,79,57"/>
+</map>
+</div>
 
 </div>
 </div>

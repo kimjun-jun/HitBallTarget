@@ -9,7 +9,7 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}enemy.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}meetstrike.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}collision.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}score.\+h\char`\"{}}\newline
@@ -32,6 +32,8 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}tutomenu.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}balleffect.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
+main.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
@@ -75,6 +77,8 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D9 \mbox{\hyperlink{main_8cpp_a862bd08191ae26aba8915252
 \begin{DoxyCompactList}\small\item\em Direct3\+Dオブジェクト \end{DoxyCompactList}\item 
 L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{main_8cpp_a9462d5e797abc31d9b4b1ca7672a824a}{g\+\_\+p\+D3\+D\+Device}} = N\+U\+LL
 \begin{DoxyCompactList}\small\item\em Deviceオブジェクト(描画に必要) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a6c0af9f2e97842405fb15ed952ef2976}{stop}} = 0
+\begin{DoxyCompactList}\small\item\em 一時停止変数 \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{main_8cpp_aba84de12340d46bde126543478bbf2fe}{g\+\_\+text}} \mbox{[}256\mbox{]} = \{ 0 \}
 \begin{DoxyCompactList}\small\item\em 表示させるテキスト \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8cpp_a685f7d6558d1f7c58a2dd7e87031e3e7}{g\+\_\+n\+Scene}} = \mbox{\hyperlink{main_8h_aae9a2b94c5f319222ee2e09a5d0f2ae5a96f75e824fdc81751dcfc4f447390853}{S\+C\+E\+N\+E\+\_\+\+T\+I\+T\+LE}}
@@ -140,8 +144,12 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 オブジェクトを描画する 
 
- main.\+cpp の 569 行目に定義があります。
+ main.\+cpp の 568 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{main_8cpp_a842e90136051c7017ffc0cd8a009d8e8}\label{main_8cpp_a842e90136051c7017ffc0cd8a009d8e8}} 
 \index{main.cpp@{main.cpp}!GetDevice@{GetDevice}}
 \index{GetDevice@{GetDevice}!main.cpp@{main.cpp}}
@@ -157,8 +165,10 @@ L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9
 \end{DoxyReturn}
 
 
- main.\+cpp の 674 行目に定義があります。
+ main.\+cpp の 673 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 3
 \mbox{\Hypertarget{main_8cpp_a2f4d5784065e136715f8c631a3047296}\label{main_8cpp_a2f4d5784065e136715f8c631a3047296}} 
 \index{main.cpp@{main.cpp}!GetScene@{GetScene}}
 \index{GetScene@{GetScene}!main.cpp@{main.cpp}}
@@ -174,8 +184,10 @@ int 現在のゲームシーンを返す
 \end{DoxyReturn}
 ゲームシーンは\+E\+\_\+\+S\+T\+A\+G\+Eを参照 
 
- main.\+cpp の 743 行目に定義があります。
+ main.\+cpp の 742 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{main_8cpp_a93e37d33930b82ad41bc9c9cb472f300}\label{main_8cpp_a93e37d33930b82ad41bc9c9cb472f300}} 
 \index{main.cpp@{main.cpp}!Init@{Init}}
 \index{Init@{Init}!main.cpp@{main.cpp}}
@@ -193,8 +205,12 @@ int 現在のゲームシーンを返す
 \end{DoxyParams}
 
 
- main.\+cpp の 294 行目に定義があります。
+ main.\+cpp の 295 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{main_8cpp_ad05ce539d29b849ef066482e2284a93f}\label{main_8cpp_ad05ce539d29b849ef066482e2284a93f}} 
 \index{main.cpp@{main.cpp}!InitGame@{InitGame}}
 \index{InitGame@{InitGame}!main.cpp@{main.cpp}}
@@ -207,8 +223,12 @@ int 現在のゲームシーンを返す
 
 ゲーム起動時に使用ゲームループ時に使用 
 
- main.\+cpp の 751 行目に定義があります。
+ main.\+cpp の 750 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
 \mbox{\Hypertarget{main_8cpp_ab40c9b58d2f95030bed4042b01daa738}\label{main_8cpp_ab40c9b58d2f95030bed4042b01daa738}} 
 \index{main.cpp@{main.cpp}!Random@{Random}}
 \index{Random@{Random}!main.cpp@{main.cpp}}
@@ -229,8 +249,10 @@ float エネミーの座標を返す
 \end{DoxyReturn}
 エネミーの初期座標で使用 
 
- main.\+cpp の 802 行目に定義があります。
+ main.\+cpp の 801 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 9
 \mbox{\Hypertarget{main_8cpp_a57ff12b0d1542af6658c910e648708fe}\label{main_8cpp_a57ff12b0d1542af6658c910e648708fe}} 
 \index{main.cpp@{main.cpp}!ReInitTuto@{ReInitTuto}}
 \index{ReInitTuto@{ReInitTuto}!main.cpp@{main.cpp}}
@@ -243,8 +265,12 @@ float エネミーの座標を返す
 
 ゲームループ時(ゲームループを一周するタイミング)に使用 
 
- main.\+cpp の 770 行目に定義があります。
+ main.\+cpp の 769 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 10
+被呼び出し関係図\+:
+% FIG 11
 \mbox{\Hypertarget{main_8cpp_aea6ddf2fe660e7a828633d13bf701837}\label{main_8cpp_aea6ddf2fe660e7a828633d13bf701837}} 
 \index{main.cpp@{main.cpp}!SetScene@{SetScene}}
 \index{SetScene@{SetScene}!main.cpp@{main.cpp}}
@@ -262,8 +288,10 @@ float エネミーの座標を返す
 \end{DoxyParams}
 ゲームシーンは\+E\+\_\+\+S\+T\+A\+G\+Eを参照 
 
- main.\+cpp の 735 行目に定義があります。
+ main.\+cpp の 734 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 12
 \mbox{\Hypertarget{main_8cpp_ae43a8873beb00c8038b31c52b8a00edb}\label{main_8cpp_ae43a8873beb00c8038b31c52b8a00edb}} 
 \index{main.cpp@{main.cpp}!Uninit@{Uninit}}
 \index{Uninit@{Uninit}!main.cpp@{main.cpp}}
@@ -276,8 +304,12 @@ float エネミーの座標を返す
 
 ゲーム終了時にメモリ開放する 
 
- main.\+cpp の 428 行目に定義があります。
+ main.\+cpp の 429 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 13
+被呼び出し関係図\+:
+% FIG 14
 \mbox{\Hypertarget{main_8cpp_af8375debd1361b3f1f2154df2a07924c}\label{main_8cpp_af8375debd1361b3f1f2154df2a07924c}} 
 \index{main.cpp@{main.cpp}!Update@{Update}}
 \index{Update@{Update}!main.cpp@{main.cpp}}
@@ -290,8 +322,12 @@ float エネミーの座標を返す
 
 オブジェクトを更新する 
 
- main.\+cpp の 469 行目に定義があります。
+ main.\+cpp の 470 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 15
+被呼び出し関係図\+:
+% FIG 16
 \mbox{\Hypertarget{main_8cpp_acbfad8d342da0fda946094f261f82d29}\label{main_8cpp_acbfad8d342da0fda946094f261f82d29}} 
 \index{main.cpp@{main.cpp}!UpdateReInit@{UpdateReInit}}
 \index{UpdateReInit@{UpdateReInit}!main.cpp@{main.cpp}}
@@ -304,8 +340,10 @@ float エネミーの座標を返す
 
 ゲームループ時に使用 
 
- main.\+cpp の 782 行目に定義があります。
+ main.\+cpp の 781 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 17
 \mbox{\Hypertarget{main_8cpp_a1122673f59be78a3997ec7dd1c4688f9}\label{main_8cpp_a1122673f59be78a3997ec7dd1c4688f9}} 
 \index{main.cpp@{main.cpp}!WinMain@{WinMain}}
 \index{WinMain@{WinMain}!main.cpp@{main.cpp}}
@@ -326,8 +364,10 @@ int
 \end{DoxyReturn}
 
 
- main.\+cpp の 124 行目に定義があります。
+ main.\+cpp の 125 行目に定義があります。
 
+呼び出し関係図\+:
+% FIG 18
 \mbox{\Hypertarget{main_8cpp_a30a1e3b0304f1b083637664cbda94e72}\label{main_8cpp_a30a1e3b0304f1b083637664cbda94e72}} 
 \index{main.cpp@{main.cpp}!WndProc@{WndProc}}
 \index{WndProc@{WndProc}!main.cpp@{main.cpp}}
@@ -348,8 +388,10 @@ L\+R\+E\+S\+U\+LT
 \end{DoxyReturn}
 
 
- main.\+cpp の 267 行目に定義があります。
+ main.\+cpp の 268 行目に定義があります。
 
+被呼び出し関係図\+:
+% FIG 19
 
 
 \doxysubsection{変数詳解}
@@ -365,7 +407,7 @@ L\+R\+E\+S\+U\+LT
 
 
 
- main.\+cpp の 116 行目に定義があります。
+ main.\+cpp の 117 行目に定義があります。
 
 \mbox{\Hypertarget{main_8cpp_a685f7d6558d1f7c58a2dd7e87031e3e7}\label{main_8cpp_a685f7d6558d1f7c58a2dd7e87031e3e7}} 
 \index{main.cpp@{main.cpp}!g\_nScene@{g\_nScene}}
@@ -379,7 +421,7 @@ L\+R\+E\+S\+U\+LT
 
 
 
- main.\+cpp の 110 行目に定義があります。
+ main.\+cpp の 111 行目に定義があります。
 
 \mbox{\Hypertarget{main_8cpp_a862bd08191ae26aba8915252a8bd5d91}\label{main_8cpp_a862bd08191ae26aba8915252a8bd5d91}} 
 \index{main.cpp@{main.cpp}!g\_pD3D@{g\_pD3D}}
@@ -421,7 +463,7 @@ Deviceオブジェクト(描画に必要)
 
 
 
- main.\+cpp の 113 行目に定義があります。
+ main.\+cpp の 114 行目に定義があります。
 
 \mbox{\Hypertarget{main_8cpp_aba84de12340d46bde126543478bbf2fe}\label{main_8cpp_aba84de12340d46bde126543478bbf2fe}} 
 \index{main.cpp@{main.cpp}!g\_text@{g\_text}}
@@ -435,5 +477,19 @@ Deviceオブジェクト(描画に必要)
 
 
 
- main.\+cpp の 107 行目に定義があります。
+ main.\+cpp の 108 行目に定義があります。
+
+\mbox{\Hypertarget{main_8cpp_a6c0af9f2e97842405fb15ed952ef2976}\label{main_8cpp_a6c0af9f2e97842405fb15ed952ef2976}} 
+\index{main.cpp@{main.cpp}!stop@{stop}}
+\index{stop@{stop}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{stop}{stop}}
+{\footnotesize\ttfamily int stop = 0}
+
+
+
+一時停止変数 
+
+
+
+ main.\+cpp の 105 行目に定義があります。
 

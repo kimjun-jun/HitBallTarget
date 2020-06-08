@@ -68,54 +68,88 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>2Dポリゴンを定義する構造体(enemy)  
+ <a href="struct_c_a_t.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="enemy_8h_source.html">enemy.h</a>&gt;</code></p>
+<div class="dynheader">
+CAT 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_c_a_t__coll__graph.png" border="0" usemap="#_c_a_t_coll__map" alt="Collaboration graph"/></div>
+<map name="_c_a_t_coll__map" id="_c_a_t_coll__map">
+<area shape="rect" title="2Dポリゴンを定義する構造体(enemy)" alt="" coords="29,95,76,121"/>
+<area shape="rect" href="struct_v_e_r_t_e_x__2_d.html" title="2D頂点フォーマットに合わせた構造体を定義" alt="" coords="5,5,100,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 フィールド</h2></td></tr>
 <tr class="memitem:a968652fb6e6df6907925e0b3928718ed"><td class="memItemLeft" align="right" valign="top">LPDIRECT3DTEXTURE9&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a968652fb6e6df6907925e0b3928718ed">pD3DTexture</a> = NULL</td></tr>
+<tr class="memdesc:a968652fb6e6df6907925e0b3928718ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャへのポインタ  <a href="struct_c_a_t.html#a968652fb6e6df6907925e0b3928718ed">[詳解]</a><br /></td></tr>
 <tr class="separator:a968652fb6e6df6907925e0b3928718ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8005c1db1a52fd978655ca223f40d8ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_v_e_r_t_e_x__2_d.html">VERTEX_2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a8005c1db1a52fd978655ca223f40d8ce">vertexWk</a> [<a class="el" href="main_8h.html#abaf08b68b90232ff4c5a52cab130aa78">NUM_ENEMY</a>]</td></tr>
+<tr class="memdesc:a8005c1db1a52fd978655ca223f40d8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点情報格納ワーク  <a href="struct_c_a_t.html#a8005c1db1a52fd978655ca223f40d8ce">[詳解]</a><br /></td></tr>
 <tr class="separator:a8005c1db1a52fd978655ca223f40d8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2f4377dd4c2b687b1332058e7444852"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#aa2f4377dd4c2b687b1332058e7444852">pos</a></td></tr>
+<tr class="memdesc:aa2f4377dd4c2b687b1332058e7444852"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標  <a href="struct_c_a_t.html#aa2f4377dd4c2b687b1332058e7444852">[詳解]</a><br /></td></tr>
 <tr class="separator:aa2f4377dd4c2b687b1332058e7444852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a841a6cf0bb498a618689dcedcd0dbeb1"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a841a6cf0bb498a618689dcedcd0dbeb1">rot</a></td></tr>
+<tr class="memdesc:a841a6cf0bb498a618689dcedcd0dbeb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転角  <a href="struct_c_a_t.html#a841a6cf0bb498a618689dcedcd0dbeb1">[詳解]</a><br /></td></tr>
 <tr class="separator:a841a6cf0bb498a618689dcedcd0dbeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9f993edcdac163690b657ad021f4c90"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#ac9f993edcdac163690b657ad021f4c90">move</a></td></tr>
+<tr class="memdesc:ac9f993edcdac163690b657ad021f4c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">移動量  <a href="struct_c_a_t.html#ac9f993edcdac163690b657ad021f4c90">[詳解]</a><br /></td></tr>
 <tr class="separator:ac9f993edcdac163690b657ad021f4c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24512c8bd752f39c098e1d7c579a44a8"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a24512c8bd752f39c098e1d7c579a44a8">oldmove</a></td></tr>
+<tr class="memdesc:a24512c8bd752f39c098e1d7c579a44a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">古い移動量  <a href="struct_c_a_t.html#a24512c8bd752f39c098e1d7c579a44a8">[詳解]</a><br /></td></tr>
 <tr class="separator:a24512c8bd752f39c098e1d7c579a44a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25ef67feaec5fd919cb95d5b311ad3a4"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a25ef67feaec5fd919cb95d5b311ad3a4">oldpos</a></td></tr>
+<tr class="memdesc:a25ef67feaec5fd919cb95d5b311ad3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">古い座標  <a href="struct_c_a_t.html#a25ef67feaec5fd919cb95d5b311ad3a4">[詳解]</a><br /></td></tr>
 <tr class="separator:a25ef67feaec5fd919cb95d5b311ad3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab30e203e6d155ad137ffd5cf77f5b0b0"><td class="memItemLeft" align="right" valign="top">D3DXVECTOR3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#ab30e203e6d155ad137ffd5cf77f5b0b0">ppos</a> [4]</td></tr>
+<tr class="memdesc:ab30e203e6d155ad137ffd5cf77f5b0b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">4分割ポリゴンの各ポリゴン中心座標  <a href="struct_c_a_t.html#ab30e203e6d155ad137ffd5cf77f5b0b0">[詳解]</a><br /></td></tr>
 <tr class="separator:ab30e203e6d155ad137ffd5cf77f5b0b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a809f4c0e41371524d41d077f63216b9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a809f4c0e41371524d41d077f63216b9d">colori</a></td></tr>
+<tr class="memdesc:a809f4c0e41371524d41d077f63216b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">変色値(int)  <a href="struct_c_a_t.html#a809f4c0e41371524d41d077f63216b9d">[詳解]</a><br /></td></tr>
 <tr class="separator:a809f4c0e41371524d41d077f63216b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e13bf4ce22e2542d46b75acdaa09dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a64e13bf4ce22e2542d46b75acdaa09dc">nCountAnim</a></td></tr>
+<tr class="memdesc:a64e13bf4ce22e2542d46b75acdaa09dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメカウント  <a href="struct_c_a_t.html#a64e13bf4ce22e2542d46b75acdaa09dc">[詳解]</a><br /></td></tr>
 <tr class="separator:a64e13bf4ce22e2542d46b75acdaa09dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4184876750965413110c81b7fb486e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#aa4184876750965413110c81b7fb486e3">nPatternAnim</a></td></tr>
+<tr class="memdesc:aa4184876750965413110c81b7fb486e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメパターン  <a href="struct_c_a_t.html#aa4184876750965413110c81b7fb486e3">[詳解]</a><br /></td></tr>
 <tr class="separator:aa4184876750965413110c81b7fb486e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a886d551d5381dc3e53f17825ffc51641"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a886d551d5381dc3e53f17825ffc51641">direction</a></td></tr>
+<tr class="memdesc:a886d551d5381dc3e53f17825ffc51641"><td class="mdescLeft">&#160;</td><td class="mdescRight">移動方向  <a href="struct_c_a_t.html#a886d551d5381dc3e53f17825ffc51641">[詳解]</a><br /></td></tr>
 <tr class="separator:a886d551d5381dc3e53f17825ffc51641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a2eb852f2b72e55c7c2cede13ab414b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a6a2eb852f2b72e55c7c2cede13ab414b">movecount</a></td></tr>
+<tr class="memdesc:a6a2eb852f2b72e55c7c2cede13ab414b"><td class="mdescLeft">&#160;</td><td class="mdescRight">移動カウント  <a href="struct_c_a_t.html#a6a2eb852f2b72e55c7c2cede13ab414b">[詳解]</a><br /></td></tr>
 <tr class="separator:a6a2eb852f2b72e55c7c2cede13ab414b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dee8b7fcecc7c2d190e9304b43ea886"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a2dee8b7fcecc7c2d190e9304b43ea886">point</a></td></tr>
+<tr class="memdesc:a2dee8b7fcecc7c2d190e9304b43ea886"><td class="mdescLeft">&#160;</td><td class="mdescRight">得点  <a href="struct_c_a_t.html#a2dee8b7fcecc7c2d190e9304b43ea886">[詳解]</a><br /></td></tr>
 <tr class="separator:a2dee8b7fcecc7c2d190e9304b43ea886"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ec5b7ece5fb03654ede0ed748296acf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a4ec5b7ece5fb03654ede0ed748296acf">chengeval</a></td></tr>
+<tr class="memdesc:a4ec5b7ece5fb03654ede0ed748296acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">変化量  <a href="struct_c_a_t.html#a4ec5b7ece5fb03654ede0ed748296acf">[詳解]</a><br /></td></tr>
 <tr class="separator:a4ec5b7ece5fb03654ede0ed748296acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aa21f25a92844e97fb2f6d92e754084"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a6aa21f25a92844e97fb2f6d92e754084">oldchengeval</a></td></tr>
+<tr class="memdesc:a6aa21f25a92844e97fb2f6d92e754084"><td class="mdescLeft">&#160;</td><td class="mdescRight">古い変化量  <a href="struct_c_a_t.html#a6aa21f25a92844e97fb2f6d92e754084">[詳解]</a><br /></td></tr>
 <tr class="separator:a6aa21f25a92844e97fb2f6d92e754084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a139823716662625b18597ba6a3476e4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a139823716662625b18597ba6a3476e4f">motion</a></td></tr>
+<tr class="memdesc:a139823716662625b18597ba6a3476e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">モーションしているかどうか  <a href="struct_c_a_t.html#a139823716662625b18597ba6a3476e4f">[詳解]</a><br /></td></tr>
 <tr class="separator:a139823716662625b18597ba6a3476e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bb68602a18ad3eae31e576c10369fbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a5bb68602a18ad3eae31e576c10369fbd">use</a></td></tr>
+<tr class="memdesc:a5bb68602a18ad3eae31e576c10369fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用しているかどうか  <a href="struct_c_a_t.html#a5bb68602a18ad3eae31e576c10369fbd">[詳解]</a><br /></td></tr>
 <tr class="separator:a5bb68602a18ad3eae31e576c10369fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeba4cf126198b3d0726d1f54b9c322d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#adeba4cf126198b3d0726d1f54b9c322d">color</a></td></tr>
+<tr class="memdesc:adeba4cf126198b3d0726d1f54b9c322d"><td class="mdescLeft">&#160;</td><td class="mdescRight">変色判定  <a href="struct_c_a_t.html#adeba4cf126198b3d0726d1f54b9c322d">[詳解]</a><br /></td></tr>
 <tr class="separator:adeba4cf126198b3d0726d1f54b9c322d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9489fa370a377ba313da8d1b77059a43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_t.html#a9489fa370a377ba313da8d1b77059a43">effect</a></td></tr>
+<tr class="memdesc:a9489fa370a377ba313da8d1b77059a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">エフェクト判定  <a href="struct_c_a_t.html#a9489fa370a377ba313da8d1b77059a43">[詳解]</a><br /></td></tr>
 <tr class="separator:a9489fa370a377ba313da8d1b77059a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00012">12</a> 行目に定義があります。</p>
+<div class="textblock"><p>2Dポリゴンを定義する構造体(enemy) </p>
+<p>　 　 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00016">16</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">フィールド詳解</h2>
 <a id="a4ec5b7ece5fb03654ede0ed748296acf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ec5b7ece5fb03654ede0ed748296acf">&#9670;&nbsp;</a></span>chengeval</h2>
@@ -129,7 +163,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00028">28</a> 行目に定義があります。</p>
+<p>変化量 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00032">32</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -145,7 +181,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+<p>変色判定 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00036">36</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -161,7 +199,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00022">22</a> 行目に定義があります。</p>
+<p>変色値(int) </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00026">26</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -177,7 +217,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00025">25</a> 行目に定義があります。</p>
+<p>移動方向 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00029">29</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -193,7 +235,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+<p>エフェクト判定 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -209,7 +253,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+<p>モーションしているかどうか </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00034">34</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -225,7 +271,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00018">18</a> 行目に定義があります。</p>
+<p>移動量 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00022">22</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -241,7 +289,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+<p>移動カウント </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -257,7 +307,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00023">23</a> 行目に定義があります。</p>
+<p>アニメカウント </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00027">27</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -273,7 +325,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+<p>アニメパターン </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00028">28</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -289,7 +343,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+<p>古い変化量 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00033">33</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -305,7 +361,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00019">19</a> 行目に定義があります。</p>
+<p>古い移動量 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00023">23</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -321,7 +379,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00020">20</a> 行目に定義があります。</p>
+<p>古い座標 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -337,7 +397,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+<p>テクスチャへのポインタ </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00018">18</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -353,7 +415,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00027">27</a> 行目に定義があります。</p>
+<p>得点 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00031">31</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -369,7 +433,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+<p>座標 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00020">20</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -385,7 +451,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+<p>4分割ポリゴンの各ポリゴン中心座標 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00025">25</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -401,7 +469,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00017">17</a> 行目に定義があります。</p>
+<p>回転角 </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00021">21</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -417,7 +487,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+<p>使用しているかどうか </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00035">35</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -433,7 +505,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00015">15</a> 行目に定義があります。</p>
+<p>頂点情報格納ワーク </p>
+
+<p class="definition"> <a class="el" href="enemy_8h_source.html">enemy.h</a> の <a class="el" href="enemy_8h_source.html#l00019">19</a> 行目に定義があります。</p>
 
 </div>
 </div>

@@ -73,52 +73,93 @@ $(function() {
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ball_8h_source.html">ball.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ui_8h_source.html">ui.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="meetstrike_8h_source.html">meetstrike.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="effect_8h_source.html">effect.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="score_8h_source.html">score.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="select_8h_source.html">select.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="enemy_8h_source.html">enemy.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+enemy.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp__incl.png" border="0" usemap="#enemy_8cpp" alt=""/></div>
+<map name="enemy_8cpp" id="enemy_8cpp">
+<area shape="rect" title="HitBallTarget(2D)的当てゲーム" alt="" coords="650,5,737,32"/>
+<area shape="rect" href="main_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="379,80,440,107"/>
+<area shape="rect" href="ball_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="464,80,517,107"/>
+<area shape="rect" href="meetstrike_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="542,80,637,107"/>
+<area shape="rect" href="effect_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="661,80,725,107"/>
+<area shape="rect" href="score_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="750,80,815,107"/>
+<area shape="rect" href="select_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="839,80,907,107"/>
+<area shape="rect" href="enemy_8h.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="932,80,1004,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,88,181"/>
+<area shape="rect" title=" " alt="" coords="113,155,181,181"/>
+<area shape="rect" title=" " alt="" coords="205,155,267,181"/>
+<area shape="rect" title=" " alt="" coords="292,155,353,181"/>
+<area shape="rect" title=" " alt="" coords="377,155,441,181"/>
+<area shape="rect" title=" " alt="" coords="465,155,524,181"/>
+<area shape="rect" title=" " alt="" coords="549,155,614,181"/>
+<area shape="rect" title=" " alt="" coords="638,155,706,181"/>
+<area shape="rect" title=" " alt="" coords="731,155,829,181"/>
+</map>
+</div>
 </div>
 <p><a href="enemy_8cpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
+<tr class="memitem:aed879684bcba798be3e45016b5c14188"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#aed879684bcba798be3e45016b5c14188">MakeVertexEnemy</a> (int EnemyNum, int EnemyType)</td></tr>
+<tr class="memdesc:aed879684bcba798be3e45016b5c14188"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポリゴン頂点生成関数 MakeVertexEnemy  <a href="enemy_8cpp.html#aed879684bcba798be3e45016b5c14188">[詳解]</a><br /></td></tr>
+<tr class="separator:aed879684bcba798be3e45016b5c14188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a010266340adc7c64ce8d21fd154e405e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a010266340adc7c64ce8d21fd154e405e">SetTextureEnemy</a> (int cntPattern, int EnemyNum, int EnemyType)</td></tr>
+<tr class="memdesc:a010266340adc7c64ce8d21fd154e405e"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ設定関数 SetTextureEnemy  <a href="enemy_8cpp.html#a010266340adc7c64ce8d21fd154e405e">[詳解]</a><br /></td></tr>
+<tr class="separator:a010266340adc7c64ce8d21fd154e405e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bbca13b2264d8c6ffd945658e55b2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a42bbca13b2264d8c6ffd945658e55b2f">SetVertexEnemy</a> (int EnemyNum, int EnemyType)</td></tr>
+<tr class="memdesc:a42bbca13b2264d8c6ffd945658e55b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポリゴン頂点設定関数 SetVertexEnemy  <a href="enemy_8cpp.html#a42bbca13b2264d8c6ffd945658e55b2f">[詳解]</a><br /></td></tr>
+<tr class="separator:a42bbca13b2264d8c6ffd945658e55b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fca2e181266a139bc9f793a449718c8"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a2fca2e181266a139bc9f793a449718c8">InitEnemy</a> (int type)</td></tr>
+<tr class="memdesc:a2fca2e181266a139bc9f793a449718c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy初期化関数 InitEnemy  <a href="enemy_8cpp.html#a2fca2e181266a139bc9f793a449718c8">[詳解]</a><br /></td></tr>
 <tr class="separator:a2fca2e181266a139bc9f793a449718c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4cc6674e21c8a9374fbd4c06ed46cf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#aa4cc6674e21c8a9374fbd4c06ed46cf3">ReInitEnemy</a> (void)</td></tr>
+<tr class="memdesc:aa4cc6674e21c8a9374fbd4c06ed46cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy再初期化関数 ReInitEnemy  <a href="enemy_8cpp.html#aa4cc6674e21c8a9374fbd4c06ed46cf3">[詳解]</a><br /></td></tr>
 <tr class="separator:aa4cc6674e21c8a9374fbd4c06ed46cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8516befbbbd31c6fd6b987573a2c46f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a8516befbbbd31c6fd6b987573a2c46f0">UninitEnemy</a> (void)</td></tr>
+<tr class="memdesc:a8516befbbbd31c6fd6b987573a2c46f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy開放関数 UninitEnemy  <a href="enemy_8cpp.html#a8516befbbbd31c6fd6b987573a2c46f0">[詳解]</a><br /></td></tr>
 <tr class="separator:a8516befbbbd31c6fd6b987573a2c46f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfb104c41674f038a1f395041670b1f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#adfb104c41674f038a1f395041670b1f1">UpdateEnemy</a> (void)</td></tr>
+<tr class="memdesc:adfb104c41674f038a1f395041670b1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy更新関数 UpdateEnemy  <a href="enemy_8cpp.html#adfb104c41674f038a1f395041670b1f1">[詳解]</a><br /></td></tr>
 <tr class="separator:adfb104c41674f038a1f395041670b1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2f569f9ca315a7ca1a924bca86cf574"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#ae2f569f9ca315a7ca1a924bca86cf574">DrawEnemy</a> (void)</td></tr>
+<tr class="memdesc:ae2f569f9ca315a7ca1a924bca86cf574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy描画関数 DrawEnemy  <a href="enemy_8cpp.html#ae2f569f9ca315a7ca1a924bca86cf574">[詳解]</a><br /></td></tr>
 <tr class="separator:ae2f569f9ca315a7ca1a924bca86cf574"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77df063189b82e66f7c7834f07e0519d"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a77df063189b82e66f7c7834f07e0519d">MakeVertexEnemy</a> (int i, int type)</td></tr>
-<tr class="separator:a77df063189b82e66f7c7834f07e0519d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0514dda2a81a53310583c4e53cc155c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#ac0514dda2a81a53310583c4e53cc155c">SetTextureEnemy</a> (int cntPattern, int i, int type)</td></tr>
-<tr class="separator:ac0514dda2a81a53310583c4e53cc155c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a646d02d9b20df56edb99b9ff3c7a4890"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a646d02d9b20df56edb99b9ff3c7a4890">SetVertexEnemy</a> (int i, int type)</td></tr>
-<tr class="separator:a646d02d9b20df56edb99b9ff3c7a4890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f85c07c236b613aab7f84d1caa59714"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_a_t.html">CAT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a2f85c07c236b613aab7f84d1caa59714">GetCat</a> (int i)</td></tr>
+<tr class="memdesc:a2f85c07c236b613aab7f84d1caa59714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy取得関数 GetCat  <a href="enemy_8cpp.html#a2f85c07c236b613aab7f84d1caa59714">[詳解]</a><br /></td></tr>
 <tr class="separator:a2f85c07c236b613aab7f84d1caa59714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c35fc5d2b47b2b3cfff834f31d7e55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_u_r_a_i_m_u.html">SURAIMU</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a11c35fc5d2b47b2b3cfff834f31d7e55">GetSuraimu</a> (int i)</td></tr>
+<tr class="memdesc:a11c35fc5d2b47b2b3cfff834f31d7e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy取得関数 GetSuraimu  <a href="enemy_8cpp.html#a11c35fc5d2b47b2b3cfff834f31d7e55">[詳解]</a><br /></td></tr>
 <tr class="separator:a11c35fc5d2b47b2b3cfff834f31d7e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4365841971b350b100867e258b90889c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_h_i_n_o_t_a_m_a.html">HINOTAMA</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a4365841971b350b100867e258b90889c">GetHinotama</a> (int i)</td></tr>
+<tr class="memdesc:a4365841971b350b100867e258b90889c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy取得関数 GetHinotama  <a href="enemy_8cpp.html#a4365841971b350b100867e258b90889c">[詳解]</a><br /></td></tr>
 <tr class="separator:a4365841971b350b100867e258b90889c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadc4a714942b66dfb74ae0a42d169a69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_u_f_o.html">UFO</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#aadc4a714942b66dfb74ae0a42d169a69">GetUfo</a> (int i)</td></tr>
+<tr class="memdesc:aadc4a714942b66dfb74ae0a42d169a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy取得関数 GetUfo  <a href="enemy_8cpp.html#aadc4a714942b66dfb74ae0a42d169a69">[詳解]</a><br /></td></tr>
 <tr class="separator:aadc4a714942b66dfb74ae0a42d169a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
 <tr class="memitem:a7aee2e14e82dae5cc88e07f7d768d62e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a7aee2e14e82dae5cc88e07f7d768d62e">catmax</a></td></tr>
+<tr class="memdesc:a7aee2e14e82dae5cc88e07f7d768d62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネコの合計  <a href="enemy_8cpp.html#a7aee2e14e82dae5cc88e07f7d768d62e">[詳解]</a><br /></td></tr>
 <tr class="separator:a7aee2e14e82dae5cc88e07f7d768d62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95e4c62a46cdbd8af80bc51540ebe90a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_a_t.html">CAT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a95e4c62a46cdbd8af80bc51540ebe90a">g_cat</a> [<a class="el" href="main_8h.html#a986e89210ae569831f0a2593c5f74087">CAT_GOUKEI</a>]</td></tr>
+<tr class="memdesc:a95e4c62a46cdbd8af80bc51540ebe90a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネコ構造体変数  <a href="enemy_8cpp.html#a95e4c62a46cdbd8af80bc51540ebe90a">[詳解]</a><br /></td></tr>
 <tr class="separator:a95e4c62a46cdbd8af80bc51540ebe90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af975992dcaf21ac598ad42a38ff9086d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_u_r_a_i_m_u.html">SURAIMU</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#af975992dcaf21ac598ad42a38ff9086d">g_suraimu</a> [<a class="el" href="main_8h.html#aeed27a858795b08cd164f217b14e3bb5">SURAIMU_GOUKEI</a>]</td></tr>
+<tr class="memdesc:af975992dcaf21ac598ad42a38ff9086d"><td class="mdescLeft">&#160;</td><td class="mdescRight">スライム構造体変数  <a href="enemy_8cpp.html#af975992dcaf21ac598ad42a38ff9086d">[詳解]</a><br /></td></tr>
 <tr class="separator:af975992dcaf21ac598ad42a38ff9086d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d617a902a1306290f806845098bdea0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_h_i_n_o_t_a_m_a.html">HINOTAMA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#a3d617a902a1306290f806845098bdea0">g_hinotama</a> [<a class="el" href="main_8h.html#a0bef8ba88970913cc7f929e92f8595e8">HINOTAMA_GOUKEI</a>]</td></tr>
+<tr class="memdesc:a3d617a902a1306290f806845098bdea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">火の玉構造体変数  <a href="enemy_8cpp.html#a3d617a902a1306290f806845098bdea0">[詳解]</a><br /></td></tr>
 <tr class="separator:a3d617a902a1306290f806845098bdea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfad74f34cc8c5cbda39837184314157"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_u_f_o.html">UFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enemy_8cpp.html#abfad74f34cc8c5cbda39837184314157">g_ufo</a> [<a class="el" href="main_8h.html#a837f16e4e7613382f6267b804bca78ff">UFO_GOUKEI</a>]</td></tr>
+<tr class="memdesc:abfad74f34cc8c5cbda39837184314157"><td class="mdescLeft">&#160;</td><td class="mdescRight">UFO構造体変数  <a href="enemy_8cpp.html#abfad74f34cc8c5cbda39837184314157">[詳解]</a><br /></td></tr>
 <tr class="separator:abfad74f34cc8c5cbda39837184314157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -144,7 +185,28 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00817">817</a> 行目に定義があります。</p>
+<p>Enemy描画関数 DrawEnemy </p>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00820">820</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_ae2f569f9ca315a7ca1a924bca86cf574_cgraph.png" border="0" usemap="#enemy_8cpp_ae2f569f9ca315a7ca1a924bca86cf574_cgraph" alt=""/></div>
+<map name="enemy_8cpp_ae2f569f9ca315a7ca1a924bca86cf574_cgraph" id="enemy_8cpp_ae2f569f9ca315a7ca1a924bca86cf574_cgraph">
+<area shape="rect" title="Enemy描画関数 DrawEnemy" alt="" coords="5,5,97,32"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="145,5,227,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_ae2f569f9ca315a7ca1a924bca86cf574_icgraph.png" border="0" usemap="#enemy_8cpp_ae2f569f9ca315a7ca1a924bca86cf574_icgraph" alt=""/></div>
+<map name="enemy_8cpp_ae2f569f9ca315a7ca1a924bca86cf574_icgraph" id="enemy_8cpp_ae2f569f9ca315a7ca1a924bca86cf574_icgraph">
+<area shape="rect" title="Enemy描画関数 DrawEnemy" alt="" coords="225,5,317,32"/>
+<area shape="rect" href="main_8cpp.html#ae39baa177eafe9cad35d363fc683d77f" title="描画関数" alt="" coords="127,5,177,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -164,7 +226,30 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01531">1531</a> 行目に定義があります。</p>
+<p>Enemy取得関数 GetCat </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>i アドレス番地指定 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_c_a_t.html" title="2Dポリゴンを定義する構造体(enemy)">CAT</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01526">1526</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_a2f85c07c236b613aab7f84d1caa59714_icgraph.png" border="0" usemap="#enemy_8cpp_a2f85c07c236b613aab7f84d1caa59714_icgraph" alt=""/></div>
+<map name="enemy_8cpp_a2f85c07c236b613aab7f84d1caa59714_icgraph" id="enemy_8cpp_a2f85c07c236b613aab7f84d1caa59714_icgraph">
+<area shape="rect" title="Enemy取得関数 GetCat" alt="" coords="673,81,736,108"/>
+<area shape="rect" href="enemy_8h.html#aa4cc6674e21c8a9374fbd4c06ed46cf3" title="Enemy再初期化関数 ReInitEnemy" alt="" coords="529,56,625,83"/>
+<area shape="rect" href="select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="237,56,337,83"/>
+<area shape="rect" href="main_8h.html#a57ff12b0d1542af6658c910e648708fe" title="ゲームを再初期化する関数 ReInitTuto" alt="" coords="393,5,473,32"/>
+<area shape="rect" href="main_8h.html#acbfad8d342da0fda946094f261f82d29" title="アップデートを再初期化する関数 UpdateReInit" alt="" coords="385,56,481,83"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,56,189,83"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,56,79,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -184,7 +269,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01539">1539</a> 行目に定義があります。</p>
+<p>Enemy取得関数 GetHinotama </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>i アドレス番地指定 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_h_i_n_o_t_a_m_a.html" title="2Dポリゴンを定義する構造体(enemy)">HINOTAMA</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01534">1534</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -204,7 +298,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01535">1535</a> 行目に定義があります。</p>
+<p>Enemy取得関数 GetSuraimu </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>i アドレス番地指定 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_s_u_r_a_i_m_u.html" title="2Dポリゴンを定義する構造体(enemy)">SURAIMU</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01530">1530</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -224,7 +327,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01543">1543</a> 行目に定義があります。</p>
+<p>Enemy取得関数 GetUfo </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>i アドレス番地指定 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_u_f_o.html" title="2Dポリゴンを定義する構造体(enemy)">UFO</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01538">1538</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -244,12 +356,46 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00039">39</a> 行目に定義があります。</p>
+<p>Enemy初期化関数 InitEnemy </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>初期化タイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>HRESULT </dd></dl>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00050">50</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_a2fca2e181266a139bc9f793a449718c8_cgraph.png" border="0" usemap="#enemy_8cpp_a2fca2e181266a139bc9f793a449718c8_cgraph" alt=""/></div>
+<map name="enemy_8cpp_a2fca2e181266a139bc9f793a449718c8_cgraph" id="enemy_8cpp_a2fca2e181266a139bc9f793a449718c8_cgraph">
+<area shape="rect" title="Enemy初期化関数 InitEnemy" alt="" coords="5,56,85,83"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="335,5,416,32"/>
+<area shape="rect" href="enemy_8cpp.html#aed879684bcba798be3e45016b5c14188" title="ポリゴン頂点生成関数 MakeVertexEnemy" alt="" coords="133,56,267,83"/>
+<area shape="rect" href="main_8cpp.html#ab40c9b58d2f95030bed4042b01daa738" title="任意のランダム数値を決める関数 Random" alt="" coords="165,107,235,133"/>
+<area shape="rect" href="enemy_8cpp.html#a42bbca13b2264d8c6ffd945658e55b2f" title="ポリゴン頂点設定関数 SetVertexEnemy" alt="" coords="315,56,436,83"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_a2fca2e181266a139bc9f793a449718c8_icgraph.png" border="0" usemap="#enemy_8cpp_a2fca2e181266a139bc9f793a449718c8_icgraph" alt=""/></div>
+<map name="enemy_8cpp_a2fca2e181266a139bc9f793a449718c8_icgraph" id="enemy_8cpp_a2fca2e181266a139bc9f793a449718c8_icgraph">
+<area shape="rect" title="Enemy初期化関数 InitEnemy" alt="" coords="508,31,588,57"/>
+<area shape="rect" href="main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="268,5,307,32"/>
+<area shape="rect" href="main_8h.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="385,56,460,83"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,31,79,57"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,56,189,83"/>
+<area shape="rect" href="result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="237,107,337,133"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a77df063189b82e66f7c7834f07e0519d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77df063189b82e66f7c7834f07e0519d">&#9670;&nbsp;</a></span>MakeVertexEnemy()</h2>
+<a id="aed879684bcba798be3e45016b5c14188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed879684bcba798be3e45016b5c14188">&#9670;&nbsp;</a></span>MakeVertexEnemy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,13 +404,13 @@ $(function() {
           <td class="memname">HRESULT MakeVertexEnemy </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
+          <td class="paramname"><em>EnemyNum</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
+          <td class="paramname"><em>EnemyType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -274,7 +420,44 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00884">884</a> 行目に定義があります。</p>
+<p>ポリゴン頂点生成関数 MakeVertexEnemy </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>EnemyNum エネミー添え字, int EnemyType エネミータイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>HRESULT </dd></dl>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00879">879</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_aed879684bcba798be3e45016b5c14188_cgraph.png" border="0" usemap="#enemy_8cpp_aed879684bcba798be3e45016b5c14188_cgraph" alt=""/></div>
+<map name="enemy_8cpp_aed879684bcba798be3e45016b5c14188_cgraph" id="enemy_8cpp_aed879684bcba798be3e45016b5c14188_cgraph">
+<area shape="rect" title="ポリゴン頂点生成関数 MakeVertexEnemy" alt="" coords="5,31,139,57"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="207,5,288,32"/>
+<area shape="rect" href="enemy_8cpp.html#a42bbca13b2264d8c6ffd945658e55b2f" title="ポリゴン頂点設定関数 SetVertexEnemy" alt="" coords="187,56,308,83"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_aed879684bcba798be3e45016b5c14188_icgraph.png" border="0" usemap="#enemy_8cpp_aed879684bcba798be3e45016b5c14188_icgraph" alt=""/></div>
+<map name="enemy_8cpp_aed879684bcba798be3e45016b5c14188_icgraph" id="enemy_8cpp_aed879684bcba798be3e45016b5c14188_icgraph">
+<area shape="rect" title="ポリゴン頂点生成関数 MakeVertexEnemy" alt="" coords="673,93,807,120"/>
+<area shape="rect" href="enemy_8h.html#a2fca2e181266a139bc9f793a449718c8" title="Enemy初期化関数 InitEnemy" alt="" coords="537,55,617,81"/>
+<area shape="rect" href="enemy_8h.html#aa4cc6674e21c8a9374fbd4c06ed46cf3" title="Enemy再初期化関数 ReInitEnemy" alt="" coords="529,131,625,157"/>
+<area shape="rect" href="main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="139,5,177,32"/>
+<area shape="rect" href="main_8h.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="396,55,471,81"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,44,79,71"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,81,189,108"/>
+<area shape="rect" href="result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="237,93,337,120"/>
+<area shape="rect" href="main_8h.html#a57ff12b0d1542af6658c910e648708fe" title="ゲームを再初期化する関数 ReInitTuto" alt="" coords="393,131,473,157"/>
+<area shape="rect" href="main_8h.html#acbfad8d342da0fda946094f261f82d29" title="アップデートを再初期化する関数 UpdateReInit" alt="" coords="385,181,481,208"/>
+<area shape="rect" href="select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="237,144,337,171"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -294,12 +477,42 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00193">193</a> 行目に定義があります。</p>
+<p>Enemy再初期化関数 ReInitEnemy </p>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00200">200</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3_cgraph.png" border="0" usemap="#enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3_cgraph" alt=""/></div>
+<map name="enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3_cgraph" id="enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3_cgraph">
+<area shape="rect" title="Enemy再初期化関数 ReInitEnemy" alt="" coords="5,107,101,133"/>
+<area shape="rect" href="enemy_8cpp.html#a2f85c07c236b613aab7f84d1caa59714" title="Enemy取得関数 GetCat" alt="" coords="185,5,247,32"/>
+<area shape="rect" href="score_8cpp.html#abf881b5949ff5ff570eb4ff26519a9c5" title="Score取得関数 GetScore" alt="" coords="177,56,255,83"/>
+<area shape="rect" href="enemy_8cpp.html#aed879684bcba798be3e45016b5c14188" title="ポリゴン頂点生成関数 MakeVertexEnemy" alt="" coords="149,107,283,133"/>
+<area shape="rect" href="main_8cpp.html#ab40c9b58d2f95030bed4042b01daa738" title="任意のランダム数値を決める関数 Random" alt="" coords="181,157,251,184"/>
+<area shape="rect" href="enemy_8cpp.html#a010266340adc7c64ce8d21fd154e405e" title="テクスチャ設定関数 SetTextureEnemy" alt="" coords="153,208,279,235"/>
+<area shape="rect" href="main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="351,81,432,108"/>
+<area shape="rect" href="enemy_8cpp.html#a42bbca13b2264d8c6ffd945658e55b2f" title="ポリゴン頂点設定関数 SetVertexEnemy" alt="" coords="331,132,452,159"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3_icgraph.png" border="0" usemap="#enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3_icgraph" alt=""/></div>
+<map name="enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3_icgraph" id="enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3_icgraph">
+<area shape="rect" title="Enemy再初期化関数 ReInitEnemy" alt="" coords="529,31,625,57"/>
+<area shape="rect" href="main_8h.html#a57ff12b0d1542af6658c910e648708fe" title="ゲームを再初期化する関数 ReInitTuto" alt="" coords="393,5,473,32"/>
+<area shape="rect" href="main_8h.html#acbfad8d342da0fda946094f261f82d29" title="アップデートを再初期化する関数 UpdateReInit" alt="" coords="385,56,481,83"/>
+<area shape="rect" href="select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="237,5,337,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="ac0514dda2a81a53310583c4e53cc155c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0514dda2a81a53310583c4e53cc155c">&#9670;&nbsp;</a></span>SetTextureEnemy()</h2>
+<a id="a010266340adc7c64ce8d21fd154e405e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a010266340adc7c64ce8d21fd154e405e">&#9670;&nbsp;</a></span>SetTextureEnemy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,13 +527,13 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
+          <td class="paramname"><em>EnemyNum</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
+          <td class="paramname"><em>EnemyType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -330,12 +543,35 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01118">1118</a> 行目に定義があります。</p>
+<p>テクスチャ設定関数 SetTextureEnemy </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>cntPattern アニメパターン, int EnemyNum エネミー添え字, int EnemyType エネミータイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01113">1113</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_a010266340adc7c64ce8d21fd154e405e_icgraph.png" border="0" usemap="#enemy_8cpp_a010266340adc7c64ce8d21fd154e405e_icgraph" alt=""/></div>
+<map name="enemy_8cpp_a010266340adc7c64ce8d21fd154e405e_icgraph" id="enemy_8cpp_a010266340adc7c64ce8d21fd154e405e_icgraph">
+<area shape="rect" title="テクスチャ設定関数 SetTextureEnemy" alt="" coords="677,81,804,108"/>
+<area shape="rect" href="enemy_8h.html#aa4cc6674e21c8a9374fbd4c06ed46cf3" title="Enemy再初期化関数 ReInitEnemy" alt="" coords="533,56,629,83"/>
+<area shape="rect" href="enemy_8h.html#adfb104c41674f038a1f395041670b1f1" title="Enemy更新関数 UpdateEnemy" alt="" coords="237,81,341,108"/>
+<area shape="rect" href="main_8h.html#a57ff12b0d1542af6658c910e648708fe" title="ゲームを再初期化する関数 ReInitTuto" alt="" coords="397,5,477,32"/>
+<area shape="rect" href="main_8h.html#acbfad8d342da0fda946094f261f82d29" title="アップデートを再初期化する関数 UpdateReInit" alt="" coords="389,56,485,83"/>
+<area shape="rect" href="select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="239,19,339,45"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,51,189,77"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,51,79,77"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a646d02d9b20df56edb99b9ff3c7a4890"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a646d02d9b20df56edb99b9ff3c7a4890">&#9670;&nbsp;</a></span>SetVertexEnemy()</h2>
+<a id="a42bbca13b2264d8c6ffd945658e55b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42bbca13b2264d8c6ffd945658e55b2f">&#9670;&nbsp;</a></span>SetVertexEnemy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,13 +580,13 @@ $(function() {
           <td class="memname">void SetVertexEnemy </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
+          <td class="paramname"><em>EnemyNum</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
+          <td class="paramname"><em>EnemyType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -360,7 +596,35 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01309">1309</a> 行目に定義があります。</p>
+<p>ポリゴン頂点設定関数 SetVertexEnemy </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>EnemyNum エネミー添え字, int EnemyType エネミータイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l01304">1304</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_a42bbca13b2264d8c6ffd945658e55b2f_icgraph.png" border="0" usemap="#enemy_8cpp_a42bbca13b2264d8c6ffd945658e55b2f_icgraph" alt=""/></div>
+<map name="enemy_8cpp_a42bbca13b2264d8c6ffd945658e55b2f_icgraph" id="enemy_8cpp_a42bbca13b2264d8c6ffd945658e55b2f_icgraph">
+<area shape="rect" title="ポリゴン頂点設定関数 SetVertexEnemy" alt="" coords="855,132,976,159"/>
+<area shape="rect" href="enemy_8cpp.html#aed879684bcba798be3e45016b5c14188" title="ポリゴン頂点生成関数 MakeVertexEnemy" alt="" coords="673,93,807,120"/>
+<area shape="rect" href="enemy_8h.html#adfb104c41674f038a1f395041670b1f1" title="Enemy更新関数 UpdateEnemy" alt="" coords="688,169,792,196"/>
+<area shape="rect" href="enemy_8h.html#a2fca2e181266a139bc9f793a449718c8" title="Enemy初期化関数 InitEnemy" alt="" coords="537,31,617,57"/>
+<area shape="rect" href="enemy_8h.html#aa4cc6674e21c8a9374fbd4c06ed46cf3" title="Enemy再初期化関数 ReInitEnemy" alt="" coords="529,93,625,120"/>
+<area shape="rect" href="main_8cpp.html#a93e37d33930b82ad41bc9c9cb472f300" title="初期化関数" alt="" coords="139,5,177,32"/>
+<area shape="rect" href="main_8h.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="396,31,471,57"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,44,79,71"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,81,189,108"/>
+<area shape="rect" href="result_8h.html#a9bf81118c41af248fdb4c894a7fded14" title="Result更新関数 UpdateResult" alt="" coords="237,81,337,108"/>
+<area shape="rect" href="main_8h.html#a57ff12b0d1542af6658c910e648708fe" title="ゲームを再初期化する関数 ReInitTuto" alt="" coords="393,81,473,108"/>
+<area shape="rect" href="main_8h.html#acbfad8d342da0fda946094f261f82d29" title="アップデートを再初期化する関数 UpdateReInit" alt="" coords="385,132,481,159"/>
+<area shape="rect" href="select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="237,132,337,159"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -380,7 +644,19 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00351">351</a> 行目に定義があります。</p>
+<p>Enemy開放関数 UninitEnemy </p>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00355">355</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_a8516befbbbd31c6fd6b987573a2c46f0_icgraph.png" border="0" usemap="#enemy_8cpp_a8516befbbbd31c6fd6b987573a2c46f0_icgraph" alt=""/></div>
+<map name="enemy_8cpp_a8516befbbbd31c6fd6b987573a2c46f0_icgraph" id="enemy_8cpp_a8516befbbbd31c6fd6b987573a2c46f0_icgraph">
+<area shape="rect" title="Enemy開放関数 UninitEnemy" alt="" coords="229,5,325,32"/>
+<area shape="rect" href="main_8cpp.html#ae43a8873beb00c8038b31c52b8a00edb" title="メモリ開放関数" alt="" coords="127,5,181,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -400,7 +676,31 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00391">391</a> 行目に定義があります。</p>
+<p>Enemy更新関数 UpdateEnemy </p>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00394">394</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_adfb104c41674f038a1f395041670b1f1_cgraph.png" border="0" usemap="#enemy_8cpp_adfb104c41674f038a1f395041670b1f1_cgraph" alt=""/></div>
+<map name="enemy_8cpp_adfb104c41674f038a1f395041670b1f1_cgraph" id="enemy_8cpp_adfb104c41674f038a1f395041670b1f1_cgraph">
+<area shape="rect" title="Enemy更新関数 UpdateEnemy" alt="" coords="5,81,109,108"/>
+<area shape="rect" href="effect_8cpp.html#a75497dff4d23f37415c7008fb2867e73" title="Effect設定関数 DeadEffect" alt="" coords="178,5,263,32"/>
+<area shape="rect" href="meetstrike_8cpp.html#a64378fa1372297d3c72ce483c18d10fe" title="MeetStrike取得関数 GetStrike" alt="" coords="182,56,259,83"/>
+<area shape="rect" href="enemy_8cpp.html#a010266340adc7c64ce8d21fd154e405e" title="テクスチャ設定関数 SetTextureEnemy" alt="" coords="157,107,284,133"/>
+<area shape="rect" href="enemy_8cpp.html#a42bbca13b2264d8c6ffd945658e55b2f" title="ポリゴン頂点設定関数 SetVertexEnemy" alt="" coords="160,157,281,184"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="enemy_8cpp_adfb104c41674f038a1f395041670b1f1_icgraph.png" border="0" usemap="#enemy_8cpp_adfb104c41674f038a1f395041670b1f1_icgraph" alt=""/></div>
+<map name="enemy_8cpp_adfb104c41674f038a1f395041670b1f1_icgraph" id="enemy_8cpp_adfb104c41674f038a1f395041670b1f1_icgraph">
+<area shape="rect" title="Enemy更新関数 UpdateEnemy" alt="" coords="237,5,341,32"/>
+<area shape="rect" href="main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,5,189,32"/>
+<area shape="rect" href="main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,5,79,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -417,7 +717,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00030">30</a> 行目に定義があります。</p>
+<p>ネコの合計 </p>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -433,7 +735,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00031">31</a> 行目に定義があります。</p>
+<p>ネコ構造体変数 </p>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00042">42</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -449,7 +753,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+<p>火の玉構造体変数 </p>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00044">44</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -465,7 +771,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00032">32</a> 行目に定義があります。</p>
+<p>スライム構造体変数 </p>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00043">43</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -481,7 +789,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+<p>UFO構造体変数 </p>
+
+<p class="definition"> <a class="el" href="enemy_8cpp_source.html">enemy.cpp</a> の <a class="el" href="enemy_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
 
 </div>
 </div>

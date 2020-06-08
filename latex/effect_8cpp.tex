@@ -8,39 +8,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}enemy.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}score.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ui.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}effect.\+h\char`\"{}}\newline
+effect.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{effect_8cpp_a5e847db0db732ba19b1c277799a8ee72}{Init\+BE}} (int type)
-\item 
-void \mbox{\hyperlink{effect_8cpp_a35f73f7d066d204934194813033056df}{Re\+Init\+BE}} (void)
-\item 
-void \mbox{\hyperlink{effect_8cpp_ae9e6c16abcbf430d11d6d1dc966cfa49}{Uninit\+BE}} (void)
-\item 
-void \mbox{\hyperlink{effect_8cpp_aa86029b6cfa9992a9dba0d06658be487}{Update\+BE}} (void)
-\item 
-void \mbox{\hyperlink{effect_8cpp_a513f7d70853acc89071079f4a8d4e955}{Draw\+BE}} (void)
-\item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{effect_8cpp_ab9a2f3cf0cb758743d9cd87adbf6d3b9}{Make\+Vertex\+BE}} (void)
-\item 
-void \mbox{\hyperlink{effect_8cpp_a71e9281168eb4fc4b0c9635647dcf5a4}{Set\+Texture\+Be}} (int cnt\+Pattern)
-\item 
-void \mbox{\hyperlink{effect_8cpp_afef759e58d94ae94bf6fdb26e5f3eaf3}{Set\+Vertex\+BE}} (void)
-\item 
-void \mbox{\hyperlink{effect_8cpp_ada0e46bb8f8be7cc4ce8218720a9ed04}{Select\+BE}} (int type)
-\item 
-void \mbox{\hyperlink{effect_8cpp_a3b69502bf5baef66675a6325e6ee2049}{Dead\+Effect}} (int i, int type)
-\item 
-\mbox{\hyperlink{struct_b_e}{BE}} $\ast$ \mbox{\hyperlink{effect_8cpp_abb8a409a678f1e2cb76256578ebb2978}{Get\+BE}} (int i)
-\end{DoxyCompactItemize}
-\doxysubsection*{変数}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{struct_b_e}{BE}} \mbox{\hyperlink{effect_8cpp_a6e5b0f7ddb34164979a0e564a3b77c8b}{g\+\_\+be}} \mbox{[}\mbox{\hyperlink{ball_8h_a710d57cd5c2d1e0dd6886e0cb7585830}{B\+A\+L\+L\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+AX}}\mbox{]}
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{effect_8cpp_a75497dff4d23f37415c7008fb2867e73}{Dead\+Effect}} (int Enemy\+Num, int type)
+\begin{DoxyCompactList}\small\item\em Effect設定関数 Dead\+Effect \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -55,7 +30,7 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 \doxysubsection{関数詳解}
-\mbox{\Hypertarget{effect_8cpp_a3b69502bf5baef66675a6325e6ee2049}\label{effect_8cpp_a3b69502bf5baef66675a6325e6ee2049}} 
+\mbox{\Hypertarget{effect_8cpp_a75497dff4d23f37415c7008fb2867e73}\label{effect_8cpp_a75497dff4d23f37415c7008fb2867e73}} 
 \index{effect.cpp@{effect.cpp}!DeadEffect@{DeadEffect}}
 \index{DeadEffect@{DeadEffect}!effect.cpp@{effect.cpp}}
 \doxysubsubsection{\texorpdfstring{DeadEffect()}{DeadEffect()}}
@@ -63,118 +38,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- effect.\+cpp の 202 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_a513f7d70853acc89071079f4a8d4e955}\label{effect_8cpp_a513f7d70853acc89071079f4a8d4e955}} 
-\index{effect.cpp@{effect.cpp}!DrawBE@{DrawBE}}
-\index{DrawBE@{DrawBE}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{DrawBE()}{DrawBE()}}
-{\footnotesize\ttfamily void Draw\+BE (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+Effect設定関数 Dead\+Effect 
 
 
-
- effect.\+cpp の 105 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_abb8a409a678f1e2cb76256578ebb2978}\label{effect_8cpp_abb8a409a678f1e2cb76256578ebb2978}} 
-\index{effect.cpp@{effect.cpp}!GetBE@{GetBE}}
-\index{GetBE@{GetBE}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{GetBE()}{GetBE()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_e}{BE}}$\ast$ Get\+BE (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & i, int type \\
+\hline
+\end{DoxyParams}
 
 
+ effect.\+cpp の 15 行目に定義があります。
 
- effect.\+cpp の 339 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_a5e847db0db732ba19b1c277799a8ee72}\label{effect_8cpp_a5e847db0db732ba19b1c277799a8ee72}} 
-\index{effect.cpp@{effect.cpp}!InitBE@{InitBE}}
-\index{InitBE@{InitBE}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{InitBE()}{InitBE()}}
-{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Init\+BE (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
-
-
-
- effect.\+cpp の 24 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_ab9a2f3cf0cb758743d9cd87adbf6d3b9}\label{effect_8cpp_ab9a2f3cf0cb758743d9cd87adbf6d3b9}} 
-\index{effect.cpp@{effect.cpp}!MakeVertexBE@{MakeVertexBE}}
-\index{MakeVertexBE@{MakeVertexBE}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{MakeVertexBE()}{MakeVertexBE()}}
-{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+BE (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
- effect.\+cpp の 126 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_a35f73f7d066d204934194813033056df}\label{effect_8cpp_a35f73f7d066d204934194813033056df}} 
-\index{effect.cpp@{effect.cpp}!ReInitBE@{ReInitBE}}
-\index{ReInitBE@{ReInitBE}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{ReInitBE()}{ReInitBE()}}
-{\footnotesize\ttfamily void Re\+Init\+BE (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
- effect.\+cpp の 54 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_ada0e46bb8f8be7cc4ce8218720a9ed04}\label{effect_8cpp_ada0e46bb8f8be7cc4ce8218720a9ed04}} 
-\index{effect.cpp@{effect.cpp}!SelectBE@{SelectBE}}
-\index{SelectBE@{SelectBE}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{SelectBE()}{SelectBE()}}
-{\footnotesize\ttfamily void Select\+BE (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
-
-
-
- effect.\+cpp の 192 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_a71e9281168eb4fc4b0c9635647dcf5a4}\label{effect_8cpp_a71e9281168eb4fc4b0c9635647dcf5a4}} 
-\index{effect.cpp@{effect.cpp}!SetTextureBe@{SetTextureBe}}
-\index{SetTextureBe@{SetTextureBe}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{SetTextureBe()}{SetTextureBe()}}
-{\footnotesize\ttfamily void Set\+Texture\+Be (\begin{DoxyParamCaption}\item[{int}]{cnt\+Pattern }\end{DoxyParamCaption})}
-
-
-
- effect.\+cpp の 155 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_afef759e58d94ae94bf6fdb26e5f3eaf3}\label{effect_8cpp_afef759e58d94ae94bf6fdb26e5f3eaf3}} 
-\index{effect.cpp@{effect.cpp}!SetVertexBE@{SetVertexBE}}
-\index{SetVertexBE@{SetVertexBE}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{SetVertexBE()}{SetVertexBE()}}
-{\footnotesize\ttfamily void Set\+Vertex\+BE (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
- effect.\+cpp の 172 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_ae9e6c16abcbf430d11d6d1dc966cfa49}\label{effect_8cpp_ae9e6c16abcbf430d11d6d1dc966cfa49}} 
-\index{effect.cpp@{effect.cpp}!UninitBE@{UninitBE}}
-\index{UninitBE@{UninitBE}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{UninitBE()}{UninitBE()}}
-{\footnotesize\ttfamily void Uninit\+BE (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
- effect.\+cpp の 70 行目に定義があります。
-
-\mbox{\Hypertarget{effect_8cpp_aa86029b6cfa9992a9dba0d06658be487}\label{effect_8cpp_aa86029b6cfa9992a9dba0d06658be487}} 
-\index{effect.cpp@{effect.cpp}!UpdateBE@{UpdateBE}}
-\index{UpdateBE@{UpdateBE}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{UpdateBE()}{UpdateBE()}}
-{\footnotesize\ttfamily void Update\+BE (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
- effect.\+cpp の 85 行目に定義があります。
-
-
-
-\doxysubsection{変数詳解}
-\mbox{\Hypertarget{effect_8cpp_a6e5b0f7ddb34164979a0e564a3b77c8b}\label{effect_8cpp_a6e5b0f7ddb34164979a0e564a3b77c8b}} 
-\index{effect.cpp@{effect.cpp}!g\_be@{g\_be}}
-\index{g\_be@{g\_be}!effect.cpp@{effect.cpp}}
-\doxysubsubsection{\texorpdfstring{g\_be}{g\_be}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_e}{BE}} g\+\_\+be\mbox{[}\mbox{\hyperlink{ball_8h_a710d57cd5c2d1e0dd6886e0cb7585830}{B\+A\+L\+L\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+AX}}\mbox{]}}
-
-
-
- effect.\+cpp の 18 行目に定義があります。
-
+被呼び出し関係図\+:
+% FIG 1

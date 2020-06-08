@@ -1,18 +1,16 @@
 <map id="GetBall" name="GetBall">
-<area shape="rect" id="node1" title=" " alt="" coords="537,220,603,247"/>
-<area shape="rect" id="node2" href="$game_8h.html#ae81d6a63aece63e1779d8bf648ccd582" title=" " alt="" coords="415,296,459,323"/>
-<area shape="rect" id="node6" href="$game_8h.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title=" " alt="" coords="416,144,459,171"/>
-<area shape="rect" id="node8" href="$collision_8h.html#a102771cfc2ed7cee53e1d05ff7b34d53" title=" " alt="" coords="250,296,325,323"/>
-<area shape="rect" id="node9" href="$balleffect_8h.html#a53027adc21cd2864c0d22d0b63a2346e" title=" " alt="" coords="385,397,489,424"/>
-<area shape="rect" id="node11" href="$effect_8h.html#a513f7d70853acc89071079f4a8d4e955" title=" " alt="" coords="403,448,472,475"/>
-<area shape="rect" id="node12" href="$game_8h.html#a2d18b2f0dfec93f9d693f70e700b0917" title=" " alt="" coords="258,195,317,221"/>
-<area shape="rect" id="node13" href="$collision_8h.html#a32a68d055020250a22ce0d35107377d3" title=" " alt="" coords="404,245,471,272"/>
-<area shape="rect" id="node14" href="$game_8h.html#a13b39c1bd65ea2255b0910a03f19de8f" title=" " alt="" coords="418,93,457,120"/>
-<area shape="rect" id="node15" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title=" " alt="" coords="237,5,337,32"/>
-<area shape="rect" id="node16" href="$ui_8h.html#a014481bffd4b282975575ed486cbd1a2" title=" " alt="" coords="250,81,325,108"/>
-<area shape="rect" id="node3" href="$ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title=" " alt="" coords="245,245,330,272"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title=" " alt="" coords="127,195,189,221"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,259,79,285"/>
-<area shape="rect" id="node7" href="$player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title=" " alt="" coords="237,144,337,171"/>
-<area shape="rect" id="node10" href="$main_8cpp.html#ae39baa177eafe9cad35d363fc683d77f" title=" " alt="" coords="262,397,313,424"/>
+<area shape="rect" id="node1" title="Ball取得関数 GetBall" alt="" coords="560,176,625,203"/>
+<area shape="rect" id="node2" href="$game_8h.html#ae81d6a63aece63e1779d8bf648ccd582" title="投球処理関数 Ball" alt="" coords="440,100,484,127"/>
+<area shape="rect" id="node6" href="$game_8h.html#a10bfdad2fe1eece3cc32afb5fc42ec55" title="バッター処理関数 Bat" alt="" coords="441,303,483,329"/>
+<area shape="rect" id="node8" href="$balleffect_8h.html#a53027adc21cd2864c0d22d0b63a2346e" title="Balleffect描画関数 DrawBalleffect" alt="" coords="249,5,353,32"/>
+<area shape="rect" id="node10" href="$game_8h.html#a2d18b2f0dfec93f9d693f70e700b0917" title="打球処理関数 Hitball" alt="" coords="271,195,330,221"/>
+<area shape="rect" id="node11" href="$collision_8h.html#a32a68d055020250a22ce0d35107377d3" title="ボールループの初期化関数 LoopInit" alt="" coords="429,151,495,177"/>
+<area shape="rect" id="node12" href="$game_8h.html#a13b39c1bd65ea2255b0910a03f19de8f" title="ピッチャー処理関数 Pit" alt="" coords="443,252,481,279"/>
+<area shape="rect" id="node13" href="$meetstrike_8h.html#a7bc12c74b219c9919eef7c52da251ecd" title="MeetStrike更新関数 UpdateMeetStrike" alt="" coords="237,328,364,355"/>
+<area shape="rect" id="node14" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="412,49,512,76"/>
+<area shape="rect" id="node3" href="$ball_8h.html#af787b6d3fac0fcd0427c493a8a415901" title="Ball更新関数 UpdateBall" alt="" coords="258,144,343,171"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,169,189,196"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,109,79,136"/>
+<area shape="rect" id="node7" href="$player_8h.html#ab3a456d791fc2bd6c2bd0b1bc44fd6c6" title="Player更新関数 UpdatePlayer" alt="" coords="251,252,351,279"/>
+<area shape="rect" id="node9" href="$main_8cpp.html#ae39baa177eafe9cad35d363fc683d77f" title="描画関数" alt="" coords="133,49,183,76"/>
 </map>

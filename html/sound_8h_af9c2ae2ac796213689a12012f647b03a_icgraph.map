@@ -1,10 +1,10 @@
 <map id="MasterVolumeChange" name="MasterVolumeChange">
 <area shape="rect" id="node1" title=" " alt="" coords="412,110,563,137"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title=" " alt="" coords="127,110,189,137"/>
-<area shape="rect" id="node4" href="$countdown_8h.html#aba153798b82da187b7ead867025ea781" title=" " alt="" coords="237,34,364,61"/>
-<area shape="rect" id="node5" href="$pause_8h.html#adeaa89ff0495f6a00c3c57f4fbefffe9" title=" " alt="" coords="251,85,351,112"/>
-<area shape="rect" id="node6" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title=" " alt="" coords="251,136,351,162"/>
-<area shape="rect" id="node7" href="$title_8h.html#aa354bb8b39f42a45e2f33fd54e40703b" title=" " alt="" coords="257,186,344,213"/>
-<area shape="rect" id="node8" href="$tutomenu_8h.html#a869ff4a10965429f52625f46122fd8f8" title=" " alt="" coords="241,237,361,264"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,110,79,137"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,110,189,137"/>
+<area shape="rect" id="node4" href="$countdown_8h.html#aba153798b82da187b7ead867025ea781" title="Countdown更新関数 UpdateCountdown" alt="" coords="237,34,364,61"/>
+<area shape="rect" id="node5" href="$pause_8h.html#adeaa89ff0495f6a00c3c57f4fbefffe9" title="Pauseポーズシーン更新関数 UpdatePause" alt="" coords="251,85,351,112"/>
+<area shape="rect" id="node6" href="$select_8h.html#a2ab6639c2a09570c7005849604dfd590" title="Select更新関数 UpdateSelect" alt="" coords="251,136,351,162"/>
+<area shape="rect" id="node7" href="$title_8h.html#aa354bb8b39f42a45e2f33fd54e40703b" title="タイトル更新関数 UpdateTitle" alt="" coords="257,186,344,213"/>
+<area shape="rect" id="node8" href="$tutomenu_8h.html#a869ff4a10965429f52625f46122fd8f8" title="Tutomenu更新関数 UpdateTutomenu" alt="" coords="241,237,361,264"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,110,79,137"/>
 </map>

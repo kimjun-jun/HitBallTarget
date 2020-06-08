@@ -11,32 +11,34 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}tutomenu.\+h\char`\"{}}\newline
+tutomenu.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{tutomenu_8cpp_a0b486c349f8b542852b3aacdfaa03847}{Make\+Vertex\+Tutomenu}} (void)
-\item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{tutomenu_8cpp_a03803c4500674c7032621d3c4ce252e8}{Init\+Tutomenu}} (int type)
-\item 
-void \mbox{\hyperlink{tutomenu_8cpp_af56322473c6154c8b72d1fa732699f70}{Re\+Init\+Tutomenu}} (void)
-\item 
-void \mbox{\hyperlink{tutomenu_8cpp_a1e15db587392bc35bfc41da69dff7f6a}{Uninit\+Tutomenu}} (void)
-\item 
-void \mbox{\hyperlink{tutomenu_8cpp_a869ff4a10965429f52625f46122fd8f8}{Update\+Tutomenu}} (void)
-\item 
-void \mbox{\hyperlink{tutomenu_8cpp_a2232a2b7227cef6db126605345d85bbb}{Update\+In\+Tutomenu}} (void)
-\item 
-void \mbox{\hyperlink{tutomenu_8cpp_ac32da7323a9e7c4a35c5ba259e46cb95}{Draw\+Tutomenu}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点生成関数 Make\+Vertex\+Tutomenu \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tutomenu_8cpp_a9c7a334ad0557075f3272d4bf7610119}{Set\+Vertex\+Tutomenu}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点設定関数 Set\+Vertex\+Tutomenu \end{DoxyCompactList}\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{tutomenu_8cpp_a03803c4500674c7032621d3c4ce252e8}{Init\+Tutomenu}} (int type)
+\begin{DoxyCompactList}\small\item\em Tutomenu初期化関数 Init\+Tutomenu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tutomenu_8cpp_af56322473c6154c8b72d1fa732699f70}{Re\+Init\+Tutomenu}} (void)
+\begin{DoxyCompactList}\small\item\em Tutomenu再初期化関数 Re\+Init\+Tutomenu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tutomenu_8cpp_a1e15db587392bc35bfc41da69dff7f6a}{Uninit\+Tutomenu}} (void)
+\begin{DoxyCompactList}\small\item\em Tutomenu開放関数 Uninit\+Tutomenu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tutomenu_8cpp_a869ff4a10965429f52625f46122fd8f8}{Update\+Tutomenu}} (void)
+\begin{DoxyCompactList}\small\item\em Tutomenu更新関数 Update\+Tutomenu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tutomenu_8cpp_a2232a2b7227cef6db126605345d85bbb}{Update\+In\+Tutomenu}} (void)
+\begin{DoxyCompactList}\small\item\em Tutomenu更新関数 Update\+In\+Tutomenu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tutomenu_8cpp_ac32da7323a9e7c4a35c5ba259e46cb95}{Draw\+Tutomenu}} (void)
+\begin{DoxyCompactList}\small\item\em Tutomenu描画関数 Draw\+Tutomenu \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_t_u_t_o_m_e_n_u}{T\+U\+T\+O\+M\+E\+NU}} $\ast$ \mbox{\hyperlink{tutomenu_8cpp_a2d36f1e2dae8de9c9ae68b7928900870}{Get\+Tutomenu}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Tutomenu取得関数 Get\+Tutomenu \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_t_u_t_o_m_e_n_u}{T\+U\+T\+O\+M\+E\+NU}} \mbox{\hyperlink{tutomenu_8cpp_a93ec933039ae0e1808dcd0ce2d276410}{g\+\_\+tutomenu}} \mbox{[}\mbox{\hyperlink{tutomenu_8h_a0714a475e9e5f0563b1a7c113e81f76f}{T\+U\+T\+O\+M\+E\+N\+U\+M\+AX}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 0感度,1Analog/\+Digital 構造体変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -59,8 +61,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 140 行目に定義があります。
+Tutomenu描画関数 Draw\+Tutomenu 
 
+
+
+ tutomenu.\+cpp の 148 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{tutomenu_8cpp_a2d36f1e2dae8de9c9ae68b7928900870}\label{tutomenu_8cpp_a2d36f1e2dae8de9c9ae68b7928900870}} 
 \index{tutomenu.cpp@{tutomenu.cpp}!GetTutomenu@{GetTutomenu}}
 \index{GetTutomenu@{GetTutomenu}!tutomenu.cpp@{tutomenu.cpp}}
@@ -69,7 +79,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 252 行目に定義があります。
+Tutomenu取得関数 Get\+Tutomenu 
+
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_t_u_t_o_m_e_n_u}{T\+U\+T\+O\+M\+E\+NU}} 
+\end{DoxyReturn}
+
+
+ tutomenu.\+cpp の 262 行目に定義があります。
 
 \mbox{\Hypertarget{tutomenu_8cpp_a03803c4500674c7032621d3c4ce252e8}\label{tutomenu_8cpp_a03803c4500674c7032621d3c4ce252e8}} 
 \index{tutomenu.cpp@{tutomenu.cpp}!InitTutomenu@{InitTutomenu}}
@@ -79,8 +96,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 28 行目に定義があります。
+Tutomenu初期化関数 Init\+Tutomenu 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ tutomenu.\+cpp の 38 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{tutomenu_8cpp_a0b486c349f8b542852b3aacdfaa03847}\label{tutomenu_8cpp_a0b486c349f8b542852b3aacdfaa03847}} 
 \index{tutomenu.cpp@{tutomenu.cpp}!MakeVertexTutomenu@{MakeVertexTutomenu}}
 \index{MakeVertexTutomenu@{MakeVertexTutomenu}!tutomenu.cpp@{tutomenu.cpp}}
@@ -89,7 +122,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 161 行目に定義があります。
+頂点生成関数 Make\+Vertex\+Tutomenu 
+
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ tutomenu.\+cpp の 169 行目に定義があります。
 
 \mbox{\Hypertarget{tutomenu_8cpp_af56322473c6154c8b72d1fa732699f70}\label{tutomenu_8cpp_af56322473c6154c8b72d1fa732699f70}} 
 \index{tutomenu.cpp@{tutomenu.cpp}!ReInitTutomenu@{ReInitTutomenu}}
@@ -99,8 +139,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 55 行目に定義があります。
+Tutomenu再初期化関数 Re\+Init\+Tutomenu 
 
+
+
+ tutomenu.\+cpp の 64 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{tutomenu_8cpp_a9c7a334ad0557075f3272d4bf7610119}\label{tutomenu_8cpp_a9c7a334ad0557075f3272d4bf7610119}} 
 \index{tutomenu.cpp@{tutomenu.cpp}!SetVertexTutomenu@{SetVertexTutomenu}}
 \index{SetVertexTutomenu@{SetVertexTutomenu}!tutomenu.cpp@{tutomenu.cpp}}
@@ -109,7 +155,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 201 行目に定義があります。
+頂点設定関数 Set\+Vertex\+Tutomenu 
+
+
+
+ tutomenu.\+cpp の 209 行目に定義があります。
 
 \mbox{\Hypertarget{tutomenu_8cpp_a1e15db587392bc35bfc41da69dff7f6a}\label{tutomenu_8cpp_a1e15db587392bc35bfc41da69dff7f6a}} 
 \index{tutomenu.cpp@{tutomenu.cpp}!UninitTutomenu@{UninitTutomenu}}
@@ -119,8 +169,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 65 行目に定義があります。
+Tutomenu開放関数 Uninit\+Tutomenu 
 
+
+
+ tutomenu.\+cpp の 74 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{tutomenu_8cpp_a2232a2b7227cef6db126605345d85bbb}\label{tutomenu_8cpp_a2232a2b7227cef6db126605345d85bbb}} 
 \index{tutomenu.cpp@{tutomenu.cpp}!UpdateInTutomenu@{UpdateInTutomenu}}
 \index{UpdateInTutomenu@{UpdateInTutomenu}!tutomenu.cpp@{tutomenu.cpp}}
@@ -129,8 +185,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 129 行目に定義があります。
+Tutomenu更新関数 Update\+In\+Tutomenu 
 
+
+
+ tutomenu.\+cpp の 137 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
 \mbox{\Hypertarget{tutomenu_8cpp_a869ff4a10965429f52625f46122fd8f8}\label{tutomenu_8cpp_a869ff4a10965429f52625f46122fd8f8}} 
 \index{tutomenu.cpp@{tutomenu.cpp}!UpdateTutomenu@{UpdateTutomenu}}
 \index{UpdateTutomenu@{UpdateTutomenu}!tutomenu.cpp@{tutomenu.cpp}}
@@ -139,8 +203,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 80 行目に定義があります。
+Tutomenu更新関数 Update\+Tutomenu 
 
+
+
+ tutomenu.\+cpp の 89 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10
 
 
 \doxysubsection{変数詳解}
@@ -152,5 +224,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- tutomenu.\+cpp の 22 行目に定義があります。
+0感度,1Analog/\+Digital 構造体変数 
+
+
+
+ tutomenu.\+cpp の 32 行目に定義があります。
 

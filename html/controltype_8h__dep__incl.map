@@ -1,6 +1,6 @@
-<map id="C:/Users/HP/source/Repos/HitBallTarget/controltype.h" name="C:/Users/HP/source/Repos/HitBallTarget/controltype.h">
-<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="171,5,312,61"/>
-<area shape="rect" id="node2" href="$controltype_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,109,147,165"/>
-<area shape="rect" id="node3" href="$game_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="171,109,312,165"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="336,109,477,165"/>
+<map id="controltype.h" name="controltype.h">
+<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="131,5,228,32"/>
+<area shape="rect" id="node2" href="$controltype_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node3" href="$game_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="140,80,219,107"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="243,80,318,107"/>
 </map>

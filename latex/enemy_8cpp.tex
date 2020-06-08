@@ -7,51 +7,53 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 {\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ball.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}meetstrike.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}effect.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}score.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}select.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}enemy.\+h\char`\"{}}\newline
+enemy.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{enemy_8cpp_aed879684bcba798be3e45016b5c14188}{Make\+Vertex\+Enemy}} (int Enemy\+Num, int Enemy\+Type)
+\begin{DoxyCompactList}\small\item\em ポリゴン頂点生成関数 Make\+Vertex\+Enemy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy_8cpp_a010266340adc7c64ce8d21fd154e405e}{Set\+Texture\+Enemy}} (int cnt\+Pattern, int Enemy\+Num, int Enemy\+Type)
+\begin{DoxyCompactList}\small\item\em テクスチャ設定関数 Set\+Texture\+Enemy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy_8cpp_a42bbca13b2264d8c6ffd945658e55b2f}{Set\+Vertex\+Enemy}} (int Enemy\+Num, int Enemy\+Type)
+\begin{DoxyCompactList}\small\item\em ポリゴン頂点設定関数 Set\+Vertex\+Enemy \end{DoxyCompactList}\item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{enemy_8cpp_a2fca2e181266a139bc9f793a449718c8}{Init\+Enemy}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em Enemy初期化関数 Init\+Enemy \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3}{Re\+Init\+Enemy}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Enemy再初期化関数 Re\+Init\+Enemy \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{enemy_8cpp_a8516befbbbd31c6fd6b987573a2c46f0}{Uninit\+Enemy}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Enemy開放関数 Uninit\+Enemy \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{enemy_8cpp_adfb104c41674f038a1f395041670b1f1}{Update\+Enemy}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Enemy更新関数 Update\+Enemy \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{enemy_8cpp_ae2f569f9ca315a7ca1a924bca86cf574}{Draw\+Enemy}} (void)
-\item 
-H\+R\+E\+S\+U\+LT \mbox{\hyperlink{enemy_8cpp_a77df063189b82e66f7c7834f07e0519d}{Make\+Vertex\+Enemy}} (int i, int type)
-\item 
-void \mbox{\hyperlink{enemy_8cpp_ac0514dda2a81a53310583c4e53cc155c}{Set\+Texture\+Enemy}} (int cnt\+Pattern, int i, int type)
-\item 
-void \mbox{\hyperlink{enemy_8cpp_a646d02d9b20df56edb99b9ff3c7a4890}{Set\+Vertex\+Enemy}} (int i, int type)
-\item 
+\begin{DoxyCompactList}\small\item\em Enemy描画関数 Draw\+Enemy \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_c_a_t}{C\+AT}} $\ast$ \mbox{\hyperlink{enemy_8cpp_a2f85c07c236b613aab7f84d1caa59714}{Get\+Cat}} (int i)
-\item 
+\begin{DoxyCompactList}\small\item\em Enemy取得関数 Get\+Cat \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_s_u_r_a_i_m_u}{S\+U\+R\+A\+I\+MU}} $\ast$ \mbox{\hyperlink{enemy_8cpp_a11c35fc5d2b47b2b3cfff834f31d7e55}{Get\+Suraimu}} (int i)
-\item 
+\begin{DoxyCompactList}\small\item\em Enemy取得関数 Get\+Suraimu \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_h_i_n_o_t_a_m_a}{H\+I\+N\+O\+T\+A\+MA}} $\ast$ \mbox{\hyperlink{enemy_8cpp_a4365841971b350b100867e258b90889c}{Get\+Hinotama}} (int i)
-\item 
+\begin{DoxyCompactList}\small\item\em Enemy取得関数 Get\+Hinotama \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_u_f_o}{U\+FO}} $\ast$ \mbox{\hyperlink{enemy_8cpp_aadc4a714942b66dfb74ae0a42d169a69}{Get\+Ufo}} (int i)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enemy取得関数 Get\+Ufo \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{enemy_8cpp_a7aee2e14e82dae5cc88e07f7d768d62e}{catmax}}
-\item 
+\begin{DoxyCompactList}\small\item\em ネコの合計 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_c_a_t}{C\+AT}} \mbox{\hyperlink{enemy_8cpp_a95e4c62a46cdbd8af80bc51540ebe90a}{g\+\_\+cat}} \mbox{[}\mbox{\hyperlink{main_8h_a986e89210ae569831f0a2593c5f74087}{C\+A\+T\+\_\+\+G\+O\+U\+K\+EI}}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em ネコ構造体変数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_s_u_r_a_i_m_u}{S\+U\+R\+A\+I\+MU}} \mbox{\hyperlink{enemy_8cpp_af975992dcaf21ac598ad42a38ff9086d}{g\+\_\+suraimu}} \mbox{[}\mbox{\hyperlink{main_8h_aeed27a858795b08cd164f217b14e3bb5}{S\+U\+R\+A\+I\+M\+U\+\_\+\+G\+O\+U\+K\+EI}}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em スライム構造体変数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_h_i_n_o_t_a_m_a}{H\+I\+N\+O\+T\+A\+MA}} \mbox{\hyperlink{enemy_8cpp_a3d617a902a1306290f806845098bdea0}{g\+\_\+hinotama}} \mbox{[}\mbox{\hyperlink{main_8h_a0bef8ba88970913cc7f929e92f8595e8}{H\+I\+N\+O\+T\+A\+M\+A\+\_\+\+G\+O\+U\+K\+EI}}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em 火の玉構造体変数 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_u_f_o}{U\+FO}} \mbox{\hyperlink{enemy_8cpp_abfad74f34cc8c5cbda39837184314157}{g\+\_\+ufo}} \mbox{[}\mbox{\hyperlink{main_8h_a837f16e4e7613382f6267b804bca78ff}{U\+F\+O\+\_\+\+G\+O\+U\+K\+EI}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em U\+F\+O構造体変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -74,8 +76,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 817 行目に定義があります。
+Enemy描画関数 Draw\+Enemy 
 
+
+
+ enemy.\+cpp の 820 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{enemy_8cpp_a2f85c07c236b613aab7f84d1caa59714}\label{enemy_8cpp_a2f85c07c236b613aab7f84d1caa59714}} 
 \index{enemy.cpp@{enemy.cpp}!GetCat@{GetCat}}
 \index{GetCat@{GetCat}!enemy.cpp@{enemy.cpp}}
@@ -84,8 +94,22 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 1531 行目に定義があります。
+Enemy取得関数 Get\+Cat 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & i アドレス番地指定 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_c_a_t}{C\+AT}} 
+\end{DoxyReturn}
+
+
+ enemy.\+cpp の 1526 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 3
 \mbox{\Hypertarget{enemy_8cpp_a4365841971b350b100867e258b90889c}\label{enemy_8cpp_a4365841971b350b100867e258b90889c}} 
 \index{enemy.cpp@{enemy.cpp}!GetHinotama@{GetHinotama}}
 \index{GetHinotama@{GetHinotama}!enemy.cpp@{enemy.cpp}}
@@ -94,7 +118,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 1539 行目に定義があります。
+Enemy取得関数 Get\+Hinotama 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & i アドレス番地指定 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_h_i_n_o_t_a_m_a}{H\+I\+N\+O\+T\+A\+MA}} 
+\end{DoxyReturn}
+
+
+ enemy.\+cpp の 1534 行目に定義があります。
 
 \mbox{\Hypertarget{enemy_8cpp_a11c35fc5d2b47b2b3cfff834f31d7e55}\label{enemy_8cpp_a11c35fc5d2b47b2b3cfff834f31d7e55}} 
 \index{enemy.cpp@{enemy.cpp}!GetSuraimu@{GetSuraimu}}
@@ -104,7 +140,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 1535 行目に定義があります。
+Enemy取得関数 Get\+Suraimu 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & i アドレス番地指定 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_s_u_r_a_i_m_u}{S\+U\+R\+A\+I\+MU}} 
+\end{DoxyReturn}
+
+
+ enemy.\+cpp の 1530 行目に定義があります。
 
 \mbox{\Hypertarget{enemy_8cpp_aadc4a714942b66dfb74ae0a42d169a69}\label{enemy_8cpp_aadc4a714942b66dfb74ae0a42d169a69}} 
 \index{enemy.cpp@{enemy.cpp}!GetUfo@{GetUfo}}
@@ -114,7 +162,19 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 1543 行目に定義があります。
+Enemy取得関数 Get\+Ufo 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & i アドレス番地指定 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+\mbox{\hyperlink{struct_u_f_o}{U\+FO}} 
+\end{DoxyReturn}
+
+
+ enemy.\+cpp の 1538 行目に定義があります。
 
 \mbox{\Hypertarget{enemy_8cpp_a2fca2e181266a139bc9f793a449718c8}\label{enemy_8cpp_a2fca2e181266a139bc9f793a449718c8}} 
 \index{enemy.cpp@{enemy.cpp}!InitEnemy@{InitEnemy}}
@@ -124,18 +184,50 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 39 行目に定義があります。
+Enemy初期化関数 Init\+Enemy 
 
-\mbox{\Hypertarget{enemy_8cpp_a77df063189b82e66f7c7834f07e0519d}\label{enemy_8cpp_a77df063189b82e66f7c7834f07e0519d}} 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ enemy.\+cpp の 50 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 4
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{enemy_8cpp_aed879684bcba798be3e45016b5c14188}\label{enemy_8cpp_aed879684bcba798be3e45016b5c14188}} 
 \index{enemy.cpp@{enemy.cpp}!MakeVertexEnemy@{MakeVertexEnemy}}
 \index{MakeVertexEnemy@{MakeVertexEnemy}!enemy.cpp@{enemy.cpp}}
 \doxysubsubsection{\texorpdfstring{MakeVertexEnemy()}{MakeVertexEnemy()}}
-{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+Enemy (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Make\+Vertex\+Enemy (\begin{DoxyParamCaption}\item[{int}]{Enemy\+Num,  }\item[{int}]{Enemy\+Type }\end{DoxyParamCaption})}
 
 
 
- enemy.\+cpp の 884 行目に定義があります。
+ポリゴン頂点生成関数 Make\+Vertex\+Enemy 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & Enemy\+Num エネミー添え字, int Enemy\+Type エネミータイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ enemy.\+cpp の 879 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 6
+被呼び出し関係図\+:
+% FIG 7
 \mbox{\Hypertarget{enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3}\label{enemy_8cpp_aa4cc6674e21c8a9374fbd4c06ed46cf3}} 
 \index{enemy.cpp@{enemy.cpp}!ReInitEnemy@{ReInitEnemy}}
 \index{ReInitEnemy@{ReInitEnemy}!enemy.cpp@{enemy.cpp}}
@@ -144,28 +236,58 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 193 行目に定義があります。
+Enemy再初期化関数 Re\+Init\+Enemy 
 
-\mbox{\Hypertarget{enemy_8cpp_ac0514dda2a81a53310583c4e53cc155c}\label{enemy_8cpp_ac0514dda2a81a53310583c4e53cc155c}} 
+
+
+ enemy.\+cpp の 200 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{enemy_8cpp_a010266340adc7c64ce8d21fd154e405e}\label{enemy_8cpp_a010266340adc7c64ce8d21fd154e405e}} 
 \index{enemy.cpp@{enemy.cpp}!SetTextureEnemy@{SetTextureEnemy}}
 \index{SetTextureEnemy@{SetTextureEnemy}!enemy.cpp@{enemy.cpp}}
 \doxysubsubsection{\texorpdfstring{SetTextureEnemy()}{SetTextureEnemy()}}
-{\footnotesize\ttfamily void Set\+Texture\+Enemy (\begin{DoxyParamCaption}\item[{int}]{cnt\+Pattern,  }\item[{int}]{i,  }\item[{int}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Set\+Texture\+Enemy (\begin{DoxyParamCaption}\item[{int}]{cnt\+Pattern,  }\item[{int}]{Enemy\+Num,  }\item[{int}]{Enemy\+Type }\end{DoxyParamCaption})}
 
 
 
- enemy.\+cpp の 1118 行目に定義があります。
+テクスチャ設定関数 Set\+Texture\+Enemy 
 
-\mbox{\Hypertarget{enemy_8cpp_a646d02d9b20df56edb99b9ff3c7a4890}\label{enemy_8cpp_a646d02d9b20df56edb99b9ff3c7a4890}} 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & cnt\+Pattern アニメパターン, int Enemy\+Num エネミー添え字, int Enemy\+Type エネミータイプ \\
+\hline
+\end{DoxyParams}
+
+
+ enemy.\+cpp の 1113 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{enemy_8cpp_a42bbca13b2264d8c6ffd945658e55b2f}\label{enemy_8cpp_a42bbca13b2264d8c6ffd945658e55b2f}} 
 \index{enemy.cpp@{enemy.cpp}!SetVertexEnemy@{SetVertexEnemy}}
 \index{SetVertexEnemy@{SetVertexEnemy}!enemy.cpp@{enemy.cpp}}
 \doxysubsubsection{\texorpdfstring{SetVertexEnemy()}{SetVertexEnemy()}}
-{\footnotesize\ttfamily void Set\+Vertex\+Enemy (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Set\+Vertex\+Enemy (\begin{DoxyParamCaption}\item[{int}]{Enemy\+Num,  }\item[{int}]{Enemy\+Type }\end{DoxyParamCaption})}
 
 
 
- enemy.\+cpp の 1309 行目に定義があります。
+ポリゴン頂点設定関数 Set\+Vertex\+Enemy 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em int} & Enemy\+Num エネミー添え字, int Enemy\+Type エネミータイプ \\
+\hline
+\end{DoxyParams}
+
+
+ enemy.\+cpp の 1304 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 11
 \mbox{\Hypertarget{enemy_8cpp_a8516befbbbd31c6fd6b987573a2c46f0}\label{enemy_8cpp_a8516befbbbd31c6fd6b987573a2c46f0}} 
 \index{enemy.cpp@{enemy.cpp}!UninitEnemy@{UninitEnemy}}
 \index{UninitEnemy@{UninitEnemy}!enemy.cpp@{enemy.cpp}}
@@ -174,8 +296,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 351 行目に定義があります。
+Enemy開放関数 Uninit\+Enemy 
 
+
+
+ enemy.\+cpp の 355 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 12
 \mbox{\Hypertarget{enemy_8cpp_adfb104c41674f038a1f395041670b1f1}\label{enemy_8cpp_adfb104c41674f038a1f395041670b1f1}} 
 \index{enemy.cpp@{enemy.cpp}!UpdateEnemy@{UpdateEnemy}}
 \index{UpdateEnemy@{UpdateEnemy}!enemy.cpp@{enemy.cpp}}
@@ -184,8 +312,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 391 行目に定義があります。
+Enemy更新関数 Update\+Enemy 
 
+
+
+ enemy.\+cpp の 394 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 13
+被呼び出し関係図\+:
+% FIG 14
 
 
 \doxysubsection{変数詳解}
@@ -197,7 +333,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 30 行目に定義があります。
+ネコの合計 
+
+
+
+ enemy.\+cpp の 41 行目に定義があります。
 
 \mbox{\Hypertarget{enemy_8cpp_a95e4c62a46cdbd8af80bc51540ebe90a}\label{enemy_8cpp_a95e4c62a46cdbd8af80bc51540ebe90a}} 
 \index{enemy.cpp@{enemy.cpp}!g\_cat@{g\_cat}}
@@ -207,7 +347,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 31 行目に定義があります。
+ネコ構造体変数 
+
+
+
+ enemy.\+cpp の 42 行目に定義があります。
 
 \mbox{\Hypertarget{enemy_8cpp_a3d617a902a1306290f806845098bdea0}\label{enemy_8cpp_a3d617a902a1306290f806845098bdea0}} 
 \index{enemy.cpp@{enemy.cpp}!g\_hinotama@{g\_hinotama}}
@@ -217,7 +361,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 33 行目に定義があります。
+火の玉構造体変数 
+
+
+
+ enemy.\+cpp の 44 行目に定義があります。
 
 \mbox{\Hypertarget{enemy_8cpp_af975992dcaf21ac598ad42a38ff9086d}\label{enemy_8cpp_af975992dcaf21ac598ad42a38ff9086d}} 
 \index{enemy.cpp@{enemy.cpp}!g\_suraimu@{g\_suraimu}}
@@ -227,7 +375,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 32 行目に定義があります。
+スライム構造体変数 
+
+
+
+ enemy.\+cpp の 43 行目に定義があります。
 
 \mbox{\Hypertarget{enemy_8cpp_abfad74f34cc8c5cbda39837184314157}\label{enemy_8cpp_abfad74f34cc8c5cbda39837184314157}} 
 \index{enemy.cpp@{enemy.cpp}!g\_ufo@{g\_ufo}}
@@ -237,5 +389,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- enemy.\+cpp の 34 行目に定義があります。
+U\+F\+O構造体変数 
+
+
+
+ enemy.\+cpp の 45 行目に定義があります。
 

@@ -1,33 +1,32 @@
 <map id="UpdateResult" name="UpdateResult">
-<area shape="rect" id="node1" title=" " alt="" coords="5,563,105,589"/>
-<area shape="rect" id="node2" href="$input_8cpp.html#a51329aebf57af8767b502a8b111fa577" title=" " alt="" coords="153,487,291,513"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ad05ce539d29b849ef066482e2284a93f" title=" " alt="" coords="185,537,259,564"/>
-<area shape="rect" id="node30" href="$input_8cpp.html#a7951056484ea4c474b1a5f783a1472b2" title=" " alt="" coords="161,588,283,615"/>
-<area shape="rect" id="node31" href="$fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d" title=" " alt="" coords="187,639,257,665"/>
-<area shape="rect" id="node4" href="$ball_8cpp.html#a038bc4306b19c4f88bb5dfc240f640f8" title=" " alt="" coords="349,208,410,235"/>
-<area shape="rect" id="node8" href="$bg_8cpp.html#a3c2fcbcda8f4ce32f817ab9b74ab4ddf" title=" " alt="" coords="505,563,564,589"/>
-<area shape="rect" id="node9" href="$countdown_8cpp.html#ad8bce4dc816f260f2c238cb1a887ef97" title=" " alt="" coords="483,360,586,387"/>
-<area shape="rect" id="node10" href="$enemy_8cpp.html#a2fca2e181266a139bc9f793a449718c8" title=" " alt="" coords="339,81,419,108"/>
-<area shape="rect" id="node14" href="$fade_8cpp.html#a00f23dbde310ac88a2c2cc41a410d328" title=" " alt="" coords="345,715,413,741"/>
-<area shape="rect" id="node16" href="$player_8cpp.html#ab37db7bbc65824b1c98f4514747c7c25" title=" " alt="" coords="341,309,417,336"/>
-<area shape="rect" id="node19" href="$result_8cpp.html#a6412cda0b296b48bb8810b8aea07513f" title=" " alt="" coords="341,613,417,640"/>
-<area shape="rect" id="node21" href="$score_8cpp.html#a2877d8d2165bef980ae915b2cd05dac8" title=" " alt="" coords="343,892,416,919"/>
-<area shape="rect" id="node22" href="$select_8cpp.html#a268119fc30b523a85496a7e32e121380" title=" " alt="" coords="341,816,417,843"/>
-<area shape="rect" id="node24" href="$title_8cpp.html#a61c5b4d5836f268cb5e6562b329a2f0e" title=" " alt="" coords="348,512,411,539"/>
-<area shape="rect" id="node26" href="$tutorial_8cpp.html#aaa2d1b8ac685914afebe3e82c1b1ac2e" title=" " alt="" coords="339,448,420,475"/>
-<area shape="rect" id="node27" href="$ui_8cpp.html#accae1e726bfc998ff6df9736d5400585" title=" " alt="" coords="354,968,405,995"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="簡単な説明（〜する関数）" alt="" coords="669,512,751,539"/>
-<area shape="rect" id="node6" href="$ball_8cpp.html#a70431ba1be68be65354d5c918c50de10" title=" " alt="" coords="477,157,592,184"/>
-<area shape="rect" id="node7" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title=" " alt="" coords="659,157,761,184"/>
-<area shape="rect" id="node11" href="$enemy_8cpp.html#a77df063189b82e66f7c7834f07e0519d" title=" " alt="" coords="468,5,601,32"/>
-<area shape="rect" id="node13" href="$main_8cpp.html#ab40c9b58d2f95030bed4042b01daa738" title=" " alt="" coords="499,56,570,83"/>
-<area shape="rect" id="node12" href="$enemy_8cpp.html#a646d02d9b20df56edb99b9ff3c7a4890" title=" " alt="" coords="649,5,771,32"/>
-<area shape="rect" id="node15" href="$fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2" title=" " alt="" coords="474,765,595,792"/>
-<area shape="rect" id="node17" href="$player_8cpp.html#a2de60a2e9122a5286fe6a3a3c67d0a6f" title=" " alt="" coords="470,259,599,285"/>
-<area shape="rect" id="node18" href="$player_8cpp.html#a01aad82d3cb01c79b486912fcc5c0cde" title=" " alt="" coords="651,259,769,285"/>
-<area shape="rect" id="node20" href="$result_8cpp.html#a1b90ddc0245a485bcfc5aec334b84160" title=" " alt="" coords="470,613,599,640"/>
-<area shape="rect" id="node23" href="$select_8cpp.html#acdeb09215b0999caad1d72ca5d2353c3" title=" " alt="" coords="470,816,599,843"/>
-<area shape="rect" id="node25" href="$title_8cpp.html#ac74b9b3ba08c5f9c6fa53f2b9f1a16cf" title=" " alt="" coords="477,512,593,539"/>
-<area shape="rect" id="node28" href="$ui_8cpp.html#a5097066d134843b098a060000c069472" title=" " alt="" coords="483,1019,587,1045"/>
-<area shape="rect" id="node29" href="$ui_8cpp.html#aad8c0b6bd1326b4aea24bbf5c6590fcb" title=" " alt="" coords="664,1019,756,1045"/>
+<area shape="rect" id="node1" title="Result更新関数 UpdateResult" alt="" coords="5,512,105,539"/>
+<area shape="rect" id="node2" href="$input_8cpp.html#a51329aebf57af8767b502a8b111fa577" title=" " alt="" coords="153,436,291,463"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ad05ce539d29b849ef066482e2284a93f" title="ゲームを初期化する関数 InitGame" alt="" coords="185,487,259,513"/>
+<area shape="rect" id="node29" href="$input_8cpp.html#a7951056484ea4c474b1a5f783a1472b2" title=" " alt="" coords="161,537,283,564"/>
+<area shape="rect" id="node30" href="$fade_8cpp.html#a85daf6279275e49d1eee12459cfada0d" title="フェード設定関数 SetFade" alt="" coords="187,588,257,615"/>
+<area shape="rect" id="node4" href="$ball_8cpp.html#a038bc4306b19c4f88bb5dfc240f640f8" title="Ball初期化関数 InitBall" alt="" coords="359,208,421,235"/>
+<area shape="rect" id="node8" href="$bg_8cpp.html#a3c2fcbcda8f4ce32f817ab9b74ab4ddf" title="R18初期化関数 InitBG" alt="" coords="537,360,596,387"/>
+<area shape="rect" id="node9" href="$countdown_8cpp.html#ad8bce4dc816f260f2c238cb1a887ef97" title="Countdown初期化関数 InitCountdown" alt="" coords="515,715,618,741"/>
+<area shape="rect" id="node10" href="$enemy_8cpp.html#a2fca2e181266a139bc9f793a449718c8" title="Enemy初期化関数 InitEnemy" alt="" coords="350,81,430,108"/>
+<area shape="rect" id="node14" href="$fade_8cpp.html#ac14659ccf65247cea04ede6abff5630f" title="フェード初期化関数 InitFade" alt="" coords="356,512,424,539"/>
+<area shape="rect" id="node16" href="$meetstrike_8cpp.html#a37ed1ff532aeaadef3f7b847fbf47258" title="MeetStrike初期化関数 InitMeetStrike" alt="" coords="339,816,441,843"/>
+<area shape="rect" id="node19" href="$player_8cpp.html#ab37db7bbc65824b1c98f4514747c7c25" title="Player初期化関数 InitPlayer" alt="" coords="352,917,428,944"/>
+<area shape="rect" id="node22" href="$result_8cpp.html#a6412cda0b296b48bb8810b8aea07513f" title="Result初期化関数 InitResult" alt="" coords="352,613,428,640"/>
+<area shape="rect" id="node24" href="$score_8cpp.html#a2877d8d2165bef980ae915b2cd05dac8" title="Score初期化関数 InitScore" alt="" coords="353,265,427,292"/>
+<area shape="rect" id="node25" href="$select_8cpp.html#a268119fc30b523a85496a7e32e121380" title="Select初期化関数 InitSelect" alt="" coords="352,328,428,355"/>
+<area shape="rect" id="node26" href="$title_8cpp.html#a61c5b4d5836f268cb5e6562b329a2f0e" title="タイトル初期化関数 InitTitle" alt="" coords="359,461,421,488"/>
+<area shape="rect" id="node28" href="$tutorial_8cpp.html#aaa2d1b8ac685914afebe3e82c1b1ac2e" title="Tutorial初期化関数 InitTutorial" alt="" coords="349,752,431,779"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="723,537,804,564"/>
+<area shape="rect" id="node6" href="$ball_8cpp.html#a70431ba1be68be65354d5c918c50de10" title="ポリゴン頂点生成関数 MakeVertexBall" alt="" coords="509,157,624,184"/>
+<area shape="rect" id="node7" href="$ball_8cpp.html#a7b41cc94d73e430a4c923edf25c10f1c" title="ポリゴン頂点設定関数 SetVertexBall" alt="" coords="712,157,815,184"/>
+<area shape="rect" id="node11" href="$enemy_8cpp.html#aed879684bcba798be3e45016b5c14188" title="ポリゴン頂点生成関数 MakeVertexEnemy" alt="" coords="500,5,633,32"/>
+<area shape="rect" id="node13" href="$main_8cpp.html#ab40c9b58d2f95030bed4042b01daa738" title="任意のランダム数値を決める関数 Random" alt="" coords="531,107,602,133"/>
+<area shape="rect" id="node12" href="$enemy_8cpp.html#a42bbca13b2264d8c6ffd945658e55b2f" title="ポリゴン頂点設定関数 SetVertexEnemy" alt="" coords="703,5,824,32"/>
+<area shape="rect" id="node15" href="$fade_8cpp.html#a4a1d94214c70866b5cbda894700674b2" title="頂点生成関数 MakeVertexFade" alt="" coords="506,512,627,539"/>
+<area shape="rect" id="node17" href="$meetstrike_8cpp.html#aef50d770f3f6981292d264baf2f4999b" title="頂点生成関数 MakeVertexMeetStrike" alt="" coords="489,867,644,893"/>
+<area shape="rect" id="node18" href="$meetstrike_8cpp.html#a5890c1ed215900efb97815e1747ad523" title="MeetStrike取得関数 SetVertexMeetStrike" alt="" coords="692,867,835,893"/>
+<area shape="rect" id="node20" href="$player_8cpp.html#a9b2ef7ad3cd00e1eb682886ff31c787c" title="ポリゴン頂点生成関数 MakeVertexPlayer" alt="" coords="502,968,631,995"/>
+<area shape="rect" id="node21" href="$player_8cpp.html#a426459bfbcaa9a4141c55d4544ac4e26" title="ポリゴン頂点設定関数 SetVertexPlayer" alt="" coords="705,968,822,995"/>
+<area shape="rect" id="node23" href="$result_8cpp.html#a1b90ddc0245a485bcfc5aec334b84160" title="頂点生成関数 MakeVertexResult" alt="" coords="502,664,631,691"/>
+<area shape="rect" id="node27" href="$title_8cpp.html#ac74b9b3ba08c5f9c6fa53f2b9f1a16cf" title="頂点生成関数 MakeVertexTitle" alt="" coords="509,461,625,488"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="UpdatePause" name="UpdatePause">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,105,32"/>
+<area shape="rect" id="node1" title="Pauseポーズシーン更新関数 UpdatePause" alt="" coords="5,5,105,32"/>
 <area shape="rect" id="node2" href="$sound_8cpp.html#af9c2ae2ac796213689a12012f647b03a" title=" " alt="" coords="153,5,304,32"/>
 </map>

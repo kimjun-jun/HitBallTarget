@@ -10,30 +10,32 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}input.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}fade.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
+result.\+cpp の依存先関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{result_8cpp_a1b90ddc0245a485bcfc5aec334b84160}{Make\+Vertex\+Result}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点生成関数 Make\+Vertex\+Result \end{DoxyCompactList}\item 
 H\+R\+E\+S\+U\+LT \mbox{\hyperlink{result_8cpp_a6412cda0b296b48bb8810b8aea07513f}{Init\+Result}} (int type)
-\item 
+\begin{DoxyCompactList}\small\item\em Result初期化関数 Init\+Result \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{result_8cpp_a02bf21f66e8248010c9eeaf2c3a23df3}{Uninit\+Result}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Result開放関数 Uninit\+Result \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{result_8cpp_a9bf81118c41af248fdb4c894a7fded14}{Update\+Result}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Result更新関数 Update\+Result \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{result_8cpp_a5dc7fd8053e2c2ad0c71675f1ee5d9b0}{Draw\+Result}} (int type)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Result描画関数 Draw\+Result \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
 L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{result_8cpp_ae245d2cd0c3f7dfa82b531fd4cf50c05}{g\+\_\+p\+D3\+D\+Texture\+Resultok}} = N\+U\+LL
-\item 
+\begin{DoxyCompactList}\small\item\em テクスチャへのポインタ \end{DoxyCompactList}\item 
 L\+P\+D\+I\+R\+E\+C\+T3\+D\+T\+E\+X\+T\+U\+R\+E9 \mbox{\hyperlink{result_8cpp_abda81c747837ec445a0735889d54cf9f}{g\+\_\+p\+D3\+D\+Texture\+Resultno}} = N\+U\+LL
-\item 
+\begin{DoxyCompactList}\small\item\em テクスチャへのポインタ \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_v_e_r_t_e_x__2_d}{V\+E\+R\+T\+E\+X\+\_\+2D}} \mbox{\hyperlink{result_8cpp_a4942ef62ac74325e89413e39f51529c7}{g\+\_\+vertex\+Wk\+Resultok}} \mbox{[}\mbox{\hyperlink{main_8h_ab722cbfcd174beb57f5473d53f9767f7}{N\+U\+M\+\_\+\+V\+E\+R\+T\+EX}}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em 頂点情報格納ワーク \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_v_e_r_t_e_x__2_d}{V\+E\+R\+T\+E\+X\+\_\+2D}} \mbox{\hyperlink{result_8cpp_a99055cad5207d1a6294f23ad3dd03ff9}{g\+\_\+vertex\+Wk\+Resultno}} \mbox{[}\mbox{\hyperlink{main_8h_ab722cbfcd174beb57f5473d53f9767f7}{N\+U\+M\+\_\+\+V\+E\+R\+T\+EX}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 頂点情報格納ワーク \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -56,8 +58,21 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- result.\+cpp の 85 行目に定義があります。
+Result描画関数 Draw\+Result 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 描画タイプ \\
+\hline
+\end{DoxyParams}
+
+
+ result.\+cpp の 88 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{result_8cpp_a6412cda0b296b48bb8810b8aea07513f}\label{result_8cpp_a6412cda0b296b48bb8810b8aea07513f}} 
 \index{result.cpp@{result.cpp}!InitResult@{InitResult}}
 \index{InitResult@{InitResult}!result.cpp@{result.cpp}}
@@ -66,8 +81,24 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- result.\+cpp の 30 行目に定義があります。
+Result初期化関数 Init\+Result 
 
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ result.\+cpp の 33 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{result_8cpp_a1b90ddc0245a485bcfc5aec334b84160}\label{result_8cpp_a1b90ddc0245a485bcfc5aec334b84160}} 
 \index{result.cpp@{result.cpp}!MakeVertexResult@{MakeVertexResult}}
 \index{MakeVertexResult@{MakeVertexResult}!result.cpp@{result.cpp}}
@@ -76,8 +107,17 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- result.\+cpp の 117 行目に定義があります。
+頂点生成関数 Make\+Vertex\+Result 
 
+\begin{DoxyReturn}{戻り値}
+H\+R\+E\+S\+U\+LT 
+\end{DoxyReturn}
+
+
+ result.\+cpp の 118 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{result_8cpp_a02bf21f66e8248010c9eeaf2c3a23df3}\label{result_8cpp_a02bf21f66e8248010c9eeaf2c3a23df3}} 
 \index{result.cpp@{result.cpp}!UninitResult@{UninitResult}}
 \index{UninitResult@{UninitResult}!result.cpp@{result.cpp}}
@@ -86,8 +126,14 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- result.\+cpp の 55 行目に定義があります。
+Result開放関数 Uninit\+Result 
 
+
+
+ result.\+cpp の 58 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{result_8cpp_a9bf81118c41af248fdb4c894a7fded14}\label{result_8cpp_a9bf81118c41af248fdb4c894a7fded14}} 
 \index{result.cpp@{result.cpp}!UpdateResult@{UpdateResult}}
 \index{UpdateResult@{UpdateResult}!result.cpp@{result.cpp}}
@@ -96,8 +142,16 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- result.\+cpp の 73 行目に定義があります。
+Result更新関数 Update\+Result 
 
+
+
+ result.\+cpp の 76 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
 
 
 \doxysubsection{変数詳解}
@@ -109,7 +163,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- result.\+cpp の 22 行目に定義があります。
+テクスチャへのポインタ 
+
+
+
+ result.\+cpp の 26 行目に定義があります。
 
 \mbox{\Hypertarget{result_8cpp_ae245d2cd0c3f7dfa82b531fd4cf50c05}\label{result_8cpp_ae245d2cd0c3f7dfa82b531fd4cf50c05}} 
 \index{result.cpp@{result.cpp}!g\_pD3DTextureResultok@{g\_pD3DTextureResultok}}
@@ -119,7 +177,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- result.\+cpp の 21 行目に定義があります。
+テクスチャへのポインタ 
+
+
+
+ result.\+cpp の 25 行目に定義があります。
 
 \mbox{\Hypertarget{result_8cpp_a99055cad5207d1a6294f23ad3dd03ff9}\label{result_8cpp_a99055cad5207d1a6294f23ad3dd03ff9}} 
 \index{result.cpp@{result.cpp}!g\_vertexWkResultno@{g\_vertexWkResultno}}
@@ -129,7 +191,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- result.\+cpp の 25 行目に定義があります。
+頂点情報格納ワーク 
+
+
+
+ result.\+cpp の 28 行目に定義があります。
 
 \mbox{\Hypertarget{result_8cpp_a4942ef62ac74325e89413e39f51529c7}\label{result_8cpp_a4942ef62ac74325e89413e39f51529c7}} 
 \index{result.cpp@{result.cpp}!g\_vertexWkResultok@{g\_vertexWkResultok}}
@@ -139,5 +205,9 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 
- result.\+cpp の 24 行目に定義があります。
+頂点情報格納ワーク 
+
+
+
+ result.\+cpp の 27 行目に定義があります。
 

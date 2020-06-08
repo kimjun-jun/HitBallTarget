@@ -1,4 +1,4 @@
 <map id="DrawRanking" name="DrawRanking">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,104,32"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="簡単な説明（〜する関数）" alt="" coords="152,5,233,32"/>
+<area shape="rect" id="node1" title="Ranking描画関数 DrawRanking" alt="" coords="5,5,104,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a842e90136051c7017ffc0cd8a009d8e8" title="デバイス取得関数 GetDevice" alt="" coords="152,5,233,32"/>
 </map>

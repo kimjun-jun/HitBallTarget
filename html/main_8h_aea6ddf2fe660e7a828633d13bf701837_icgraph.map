@@ -1,8 +1,8 @@
 <map id="SetScene" name="SetScene">
-<area shape="rect" id="node1" title=" " alt="" coords="416,56,495,83"/>
-<area shape="rect" id="node2" href="$countdown_8h.html#aba153798b82da187b7ead867025ea781" title=" " alt="" coords="239,5,366,32"/>
-<area shape="rect" id="node5" href="$pause_8h.html#aaa274a5c9e89219efa96675562b60015" title=" " alt="" coords="247,56,358,83"/>
-<area shape="rect" id="node6" href="$tutomenu_8h.html#a2232a2b7227cef6db126605345d85bbb" title=" " alt="" coords="237,107,368,133"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title=" " alt="" coords="127,56,189,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title=" " alt="" coords="5,56,79,83"/>
+<area shape="rect" id="node1" title="ゲームシーンをセットする関数 SetScene" alt="" coords="416,56,495,83"/>
+<area shape="rect" id="node2" href="$countdown_8h.html#aba153798b82da187b7ead867025ea781" title="Countdown更新関数 UpdateCountdown" alt="" coords="239,5,366,32"/>
+<area shape="rect" id="node5" href="$pause_8h.html#aaa274a5c9e89219efa96675562b60015" title="Pauseゲームシーン更新関数 UpdateInPause" alt="" coords="247,56,358,83"/>
+<area shape="rect" id="node6" href="$tutomenu_8h.html#a2232a2b7227cef6db126605345d85bbb" title="Tutomenu更新関数 UpdateInTutomenu" alt="" coords="237,107,368,133"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#af8375debd1361b3f1f2154df2a07924c" title="アップデート関数" alt="" coords="127,56,189,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a1122673f59be78a3997ec7dd1c4688f9" title="メイン関数" alt="" coords="5,56,79,83"/>
 </map>

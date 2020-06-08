@@ -1,12 +1,12 @@
-<map id="C:/Users/HP/source/Repos/HitBallTarget/main.h" name="C:/Users/HP/source/Repos/HitBallTarget/main.h">
-<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="339,5,480,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,109,88,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="113,109,181,136"/>
-<area shape="rect" id="node4" title=" " alt="" coords="205,109,267,136"/>
-<area shape="rect" id="node5" title=" " alt="" coords="292,109,353,136"/>
-<area shape="rect" id="node6" title=" " alt="" coords="377,109,441,136"/>
-<area shape="rect" id="node7" title=" " alt="" coords="465,109,524,136"/>
-<area shape="rect" id="node8" title=" " alt="" coords="549,109,614,136"/>
-<area shape="rect" id="node9" title=" " alt="" coords="638,109,706,136"/>
-<area shape="rect" id="node10" title=" " alt="" coords="731,109,829,136"/>
+<map id="main.h" name="main.h">
+<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="379,5,440,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,88,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="113,80,181,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="205,80,267,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="292,80,353,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="377,80,441,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="465,80,524,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="549,80,614,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="638,80,706,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="731,80,829,107"/>
 </map>

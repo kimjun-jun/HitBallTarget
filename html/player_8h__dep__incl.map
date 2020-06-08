@@ -1,7 +1,7 @@
-<map id="C:/Users/HP/source/Repos/HitBallTarget/player.h" name="C:/Users/HP/source/Repos/HitBallTarget/player.h">
-<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="253,5,395,61"/>
-<area shape="rect" id="node2" href="$collision_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,109,147,165"/>
-<area shape="rect" id="node3" href="$game_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="171,109,312,165"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="336,109,477,165"/>
-<area shape="rect" id="node5" href="$player_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="501,109,643,165"/>
+<map id="player.h" name="player.h">
+<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="180,5,248,32"/>
+<area shape="rect" id="node2" href="$collision_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,80,100,107"/>
+<area shape="rect" id="node3" href="$game_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="124,80,203,107"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="227,80,302,107"/>
+<area shape="rect" id="node5" href="$player_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="326,80,409,107"/>
 </map>

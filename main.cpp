@@ -99,9 +99,10 @@ LPDIRECT3DDEVICE9		g_pD3DDevice = NULL;
 LPD3DXFONT				g_pD3DXFont = NULL;		
 //! FPSカウンタ
 int						g_nCountFPS;			
+#endif
+
 //! 一時停止変数
 int						stop = 0;
-#endif
 
 //! 表示させるテキスト
 char					g_text[256] = { 0 };	

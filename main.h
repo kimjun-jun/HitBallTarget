@@ -124,17 +124,17 @@ enum E_STAGE//列挙型。defineの番号を自動で割り当ててくれる。
 {
 	SCENE_TITLE,					//!< 0。1つめだから0。列挙型の列挙定数名。定義した名前をシンボルっていうのが一般らしい。
 	SCENE_TUTORIAL,					//!< 1チュートリアル
-	SCENE_TUTORIALMENU,				//!< 2チュートリアル
+	SCENE_TUTORIALMENU,				//!< 2チュートリアルのメニューシーン
 	SCENE_SELECT,					//!< 3難易度選択
 	SCENE_GAMECOUNTDOWN,			//!< 4ゲーム開始前のカウントダウン
 	SCENE_GAME,						//!< 5ゲーム
 	SCENE_PAUSE,					//!< 6ポーズ
 	SCENE_OPTION,					//!< 7オプション
 	SCENE_R18SELECT,				//!< 8R18画像選択
-	SCENE_SENSITIVITY,				//!< 9オプション
-	SCENE_TUTOSENSITIVITY,			//!< 10オプション
-	SCENE_CONTYPE,					//!< 11オプション
-	SCENE_TUTOCONTYPE,				//!< 12チュートリアル中A/D設定
+	SCENE_SENSITIVITY,				//!< 9感度調整
+	SCENE_TUTOSENSITIVITY,			//!< 10感度調整　チュートリアル時
+	SCENE_CONTYPE,					//!< 11A/D設定
+	SCENE_TUTOCONTYPE,				//!< 12A/D設定　チュートリアル時
 	SCENE_RESULT_CLEAR,				//!< 13クリアスコア
 	SCENE_RESULT_FIELD,				//!< 14失敗スコア
 	SCENE_REGISTER,					//!< 15ランキング登録
@@ -173,6 +173,16 @@ enum RAND
 };
 
 /**
+ * @enum INIT_TIME
+ * ランダムの種類
+ */
+enum INIT_TIME
+{
+	FIRST_TIME,
+	SECOND_TIME
+};
+
+/**
  * @enum MEET
  * ミートカーソルの種類
  */
@@ -199,9 +209,9 @@ enum SCORETYPE
  */
 enum GAMETYPE
 {
-	L,
-	M,
-	H
+	L,				   //!< Low
+	M,				   //!< Middle
+	H				   //!< High
 };
 
 /**
@@ -1024,7 +1034,7 @@ void UpdateReInit(void);
 
 /**
 * @brief 任意のランダム数値を決める関数 Random
-* @param[in] type どのエネミータイプか入力
+* @param[in] type どのエネミータイプか入力 	ENEMY_TYPEを利用
 * @return float エネミーの座標を返す
 * @details エネミーの初期座標で使用
 */

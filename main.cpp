@@ -401,25 +401,25 @@ HRESULT Init(HWND hWnd, BOOL bWindow)
 	// ポリゴンとサウンドの初期化処理
 	InitSound(hWnd);
 	//InitKey();
-	InitPlayer(0);
-	InitEnemy(0);
-	InitBall(0);
-	InitMeetStrike(0);
-	InitScore(0);
-	InitBG(0);
-	InitTitle(0);
-	InitResult(0);
+	InitPlayer(FIRST_TIME);
+	InitEnemy(FIRST_TIME);
+	InitBall(FIRST_TIME);
+	InitMeetStrike(FIRST_TIME);
+	InitScore(FIRST_TIME);
+	InitBG(FIRST_TIME);
+	InitTitle(FIRST_TIME);
+	InitResult(FIRST_TIME);
 	InitFade();
-	InitTutorial(0);
-	InitSelect(0);
-	InitPause(0);
-	InitCountdown(0);
-	InitOption(0);
-	InitR18select(0);
-	InitContype(0);
-	InitSensitivity(0);
-	InitTutomenu(0);
-	InitBalleffect(0);
+	InitTutorial(FIRST_TIME);
+	InitSelect(FIRST_TIME);
+	InitPause(FIRST_TIME);
+	InitCountdown(FIRST_TIME);
+	InitOption(FIRST_TIME);
+	InitR18select(FIRST_TIME);
+	InitContype(FIRST_TIME);
+	InitSensitivity(FIRST_TIME);
+	InitTutomenu(FIRST_TIME);
+	InitBalleffect(FIRST_TIME);
 	return S_OK;
 }
 
@@ -749,22 +749,22 @@ int GetScene(void)
 //=============================================================================
 void InitGame(void)
 {
-	InitPlayer(1);
-	InitEnemy(1);
-	InitBall(1);		
-	InitScore(1);		
-	InitBG(1);			
-	InitMeetStrike(1);
-	InitTitle(1);
-	InitResult(1);
+	InitPlayer(SECOND_TIME);
+	InitEnemy(SECOND_TIME);
+	InitBall(SECOND_TIME);		
+	InitScore(SECOND_TIME);		
+	InitBG(SECOND_TIME);			
+	InitMeetStrike(SECOND_TIME);
+	InitTitle(SECOND_TIME);
+	InitResult(SECOND_TIME);
 	InitFade();
-	InitTutorial(1);
-	InitSelect(1);
-	InitCountdown(1);
+	InitTutorial(SECOND_TIME);
+	InitSelect(SECOND_TIME);
+	InitCountdown(SECOND_TIME);
 }
 
 //=============================================================================
-// チュートリアル後の最初期化
+// チュートリアル後の再初期化
 //=============================================================================
 void ReInitTuto(void)
 {
@@ -776,7 +776,7 @@ void ReInitTuto(void)
 }
 
 //=============================================================================
-// はじめからの最初期化
+// はじめからの再初期化
 //=============================================================================
 void UpdateReInit(void)
 {

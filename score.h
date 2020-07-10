@@ -68,7 +68,7 @@ typedef struct
 	D3DXVECTOR3				rot;																				//!< ポリゴンの回転角
 	int						nCountAnim;																			//!< アニメカウント
 	int						nPatternAnim;																		//!< アニメパターン
-	int						level;																				//!< 生きてるエネミーの数
+	int						level;																				//!< 存在させるエネミーの数
 } SCORE;
 
 /**
@@ -109,7 +109,7 @@ typedef struct
 //*****************************************************************************
 /**
 * @brief Score初期化関数 InitScore
-* @param[in] type 初期化タイプ
+* @param[in] type 初期化タイプ　INIT_TIME利用。0:初回　0以外: 2回目以降
 * @return HRESULT
 */
 HRESULT InitScore(int type);
@@ -136,6 +136,7 @@ void DrawScore(void);
 
 /**
 * @brief Score取得関数 GetScore
+* @return SCORE
 */
 SCORE *GetScore(void);
 
@@ -153,7 +154,8 @@ int *GetScoremaneger(void);
 
 /**
 * @brief スコア、タイムを加減算する関数 AddScore
-* @param[in] type 加算するタイプ,val 数値
+* @param[in] type 加算するタイプ SCORETYPE参照
+* @param[in] val 数値
 */
 void AddScore(int val,int type);
 

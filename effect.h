@@ -11,6 +11,8 @@
 //*****************************************************************************
 /**
 * @brief Effect設定関数 DeadEffect
-* @param[in] int i, int type
+* @param[in] EnemyNum	エネミー添え字
+* @param[in] EnemyType	エネミー種類(TYPE_CAT=0,TYPE_SURAIMU=1,TYPE_HINOTAMA=2,	TYPE_UFO=3)
+)
 */
-void DeadEffect(int i, int type);
+void DeadEffect(int EnemyNum, int EnemyType);

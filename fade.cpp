@@ -25,7 +25,7 @@ HRESULT MakeVertexFade(void);
 
 /**
 * @brief フェードカラー設定関数 SetColor
-* @param[in] D3DCOLOR col カラー値
+* @param[in] D3DCOLOR col カラー値　画面がフェードする色を設定
 */
 void SetColor(D3DCOLOR col);
 

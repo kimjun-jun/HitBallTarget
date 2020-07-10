@@ -50,13 +50,14 @@ typedef struct
 //*****************************************************************************
 /**
 * @brief Countdown初期化関数 InitCountdown
-* @param[in] type 初期化タイプ
+* @param[in] type 初期化タイプ　INIT_TIME利用。0:初回　0以外: 2回目以降
 * @return HRESULT
 */
 HRESULT InitCountdown(int type);
 
 /**
 * @brief Countdown再初期化関数 ReInitCountdown
+* @details ゲームループ後の初期化などで使用。多重でテクスチャ等の読み込みを防ぐためこの関数で初期化している
 */
 void ReInitCountdown(void);
 

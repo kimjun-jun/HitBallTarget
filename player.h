@@ -34,13 +34,14 @@ typedef struct
 //*****************************************************************************
 /**
 * @brief Player初期化関数 InitPlayer
-* @param[in] type 初期化タイプ
+* @param[in] type 初期化タイプ　INIT_TIME利用。0:初回　0以外: 2回目以降
 * @return HRESULT
 */
 HRESULT InitPlayer(int type);
 
 /**
 * @brief Player再初期化関数 ReInitPlayer
+* @details ゲームループ後の初期化などで使用。多重でテクスチャ等の読み込みを防ぐためこの関数で初期化している
 */
 void ReInitPlayer(void);
 

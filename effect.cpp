@@ -12,9 +12,9 @@
 //=============================================================================
 // エフェクト関数(update)
 //=============================================================================
-void DeadEffect(int EnemyNum,int type)
+void DeadEffect(int EnemyNum, int EnemyType)
 {
-	switch (type)
+	switch (EnemyType)
 	{
 	case TYPE_CAT:
 	{

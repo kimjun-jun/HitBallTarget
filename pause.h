@@ -33,7 +33,7 @@ typedef struct
 //*****************************************************************************
 /**
 * @brief Pause初期化関数 InitPause
-* @param[in] type 初期化タイプ
+* @param[in] type 初期化タイプ　INIT_TIME利用。0:初回　0以外: 2回目以降
 * @return HRESULT
 */
 HRESULT InitPause(int type);

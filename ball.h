@@ -109,13 +109,14 @@ typedef struct
 //*****************************************************************************
 /**
 * @brief Ball初期化関数 InitBall
-* @param[in] type 初期化タイプ
+* @param[in] type 初期化タイプ　INIT_TIME利用。0:初回　0以外: 2回目以降
 * @return HRESULT
 */
 HRESULT InitBall(int type);
 
 /**
 * @brief Ball再初期化関数 ReInitBall
+* @details ゲームループ後の初期化などで使用。多重でテクスチャ等の読み込みを防ぐためこの関数で初期化している
 */
 void ReInitBall(void);
 

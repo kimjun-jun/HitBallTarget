@@ -1,5 +1,5 @@
-\hypertarget{countdown_8cpp}{}\doxysection{countdown.\+cpp ファイル}
-\label{countdown_8cpp}\index{countdown.cpp@{countdown.cpp}}
+\hypertarget{countdown_8cpp}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/countdown.cpp ファイル}
+\label{countdown_8cpp}\index{C:/Users/HP/source/Repos/HitBallTarget/countdown.cpp@{C:/Users/HP/source/Repos/HitBallTarget/countdown.cpp}}
 
 
 Hit\+Ball\+Target(2\+D)的当てゲーム  
@@ -11,7 +11,13 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 {\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}countdown.\+h\char`\"{}}\newline
 countdown.\+cpp の依存先関係図\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{countdown_8cpp__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,12 +75,6 @@ Countdown取得関数 Add\+Countdown
 \mbox{\texttt{ in}}  & {\em val} & 減算値 \\
 \hline
 \end{DoxyParams}
-
-
- countdown.\+cpp の 265 行目に定義があります。
-
-被呼び出し関係図\+:
-% FIG 1
 \mbox{\Hypertarget{countdown_8cpp_ad09d58695ebf88fae8701621a81e0ab4}\label{countdown_8cpp_ad09d58695ebf88fae8701621a81e0ab4}} 
 \index{countdown.cpp@{countdown.cpp}!DrawCountdown@{DrawCountdown}}
 \index{DrawCountdown@{DrawCountdown}!countdown.cpp@{countdown.cpp}}
@@ -85,14 +85,6 @@ Countdown取得関数 Add\+Countdown
 
 Countdown描画関数 Draw\+Countdown 
 
-
-
- countdown.\+cpp の 134 行目に定義があります。
-
-呼び出し関係図\+:
-% FIG 2
-被呼び出し関係図\+:
-% FIG 3
 \mbox{\Hypertarget{countdown_8cpp_adbc48d9966612d88c33a4c30a8a76378}\label{countdown_8cpp_adbc48d9966612d88c33a4c30a8a76378}} 
 \index{countdown.cpp@{countdown.cpp}!GetCountdown@{GetCountdown}}
 \index{GetCountdown@{GetCountdown}!countdown.cpp@{countdown.cpp}}
@@ -106,10 +98,6 @@ Countdown取得関数 Get\+Countdown
 \begin{DoxyReturn}{戻り値}
 \mbox{\hyperlink{struct_c_o_u_n_t_d_o_w_n}{C\+O\+U\+N\+T\+D\+O\+WN}} 
 \end{DoxyReturn}
-
-
- countdown.\+cpp の 257 行目に定義があります。
-
 \mbox{\Hypertarget{countdown_8cpp_ad8bce4dc816f260f2c238cb1a887ef97}\label{countdown_8cpp_ad8bce4dc816f260f2c238cb1a887ef97}} 
 \index{countdown.cpp@{countdown.cpp}!InitCountdown@{InitCountdown}}
 \index{InitCountdown@{InitCountdown}!countdown.cpp@{countdown.cpp}}
@@ -122,20 +110,12 @@ Countdown初期化関数 Init\+Countdown
 
 
 \begin{DoxyParams}[1]{引数}
-\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ \\
+\mbox{\texttt{ in}}  & {\em type} & 初期化タイプ　\+I\+N\+I\+T\+\_\+\+T\+I\+M\+E利用。0\+:初回　0以外\+: 2回目以降 \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{戻り値}
 H\+R\+E\+S\+U\+LT 
 \end{DoxyReturn}
-
-
- countdown.\+cpp の 43 行目に定義があります。
-
-呼び出し関係図\+:
-% FIG 4
-被呼び出し関係図\+:
-% FIG 5
 \mbox{\Hypertarget{countdown_8cpp_af70c486b3eb8b568e853e60525d53359}\label{countdown_8cpp_af70c486b3eb8b568e853e60525d53359}} 
 \index{countdown.cpp@{countdown.cpp}!MakeVertexCountdown@{MakeVertexCountdown}}
 \index{MakeVertexCountdown@{MakeVertexCountdown}!countdown.cpp@{countdown.cpp}}
@@ -149,12 +129,6 @@ H\+R\+E\+S\+U\+LT
 \begin{DoxyReturn}{戻り値}
 H\+R\+E\+S\+U\+LT 
 \end{DoxyReturn}
-
-
- countdown.\+cpp の 155 行目に定義があります。
-
-呼び出し関係図\+:
-% FIG 6
 \mbox{\Hypertarget{countdown_8cpp_aac192d6b1434916e9549d67b4c0c583c}\label{countdown_8cpp_aac192d6b1434916e9549d67b4c0c583c}} 
 \index{countdown.cpp@{countdown.cpp}!ReInitCountdown@{ReInitCountdown}}
 \index{ReInitCountdown@{ReInitCountdown}!countdown.cpp@{countdown.cpp}}
@@ -165,13 +139,7 @@ H\+R\+E\+S\+U\+LT
 
 Countdown再初期化関数 Re\+Init\+Countdown 
 
-
-
- countdown.\+cpp の 80 行目に定義があります。
-
-被呼び出し関係図\+:
-% FIG 7
-\mbox{\Hypertarget{countdown_8cpp_ac6ff1fbe3abe9d43ea582102a75f3e35}\label{countdown_8cpp_ac6ff1fbe3abe9d43ea582102a75f3e35}} 
+ゲームループ後の初期化などで使用。多重でテクスチャ等の読み込みを防ぐためこの関数で初期化している \mbox{\Hypertarget{countdown_8cpp_ac6ff1fbe3abe9d43ea582102a75f3e35}\label{countdown_8cpp_ac6ff1fbe3abe9d43ea582102a75f3e35}} 
 \index{countdown.cpp@{countdown.cpp}!SetTextureCountdown@{SetTextureCountdown}}
 \index{SetTextureCountdown@{SetTextureCountdown}!countdown.cpp@{countdown.cpp}}
 \doxysubsubsection{\texorpdfstring{SetTextureCountdown()}{SetTextureCountdown()}}
@@ -181,12 +149,6 @@ Countdown再初期化関数 Re\+Init\+Countdown
 
 テクスチャ設定関数 Set\+Texture\+Countdown 
 
-
-
- countdown.\+cpp の 189 行目に定義があります。
-
-被呼び出し関係図\+:
-% FIG 8
 \mbox{\Hypertarget{countdown_8cpp_a1ae8dbebea749b7cdd7b89bb974234ab}\label{countdown_8cpp_a1ae8dbebea749b7cdd7b89bb974234ab}} 
 \index{countdown.cpp@{countdown.cpp}!SetVertexCountdown@{SetVertexCountdown}}
 \index{SetVertexCountdown@{SetVertexCountdown}!countdown.cpp@{countdown.cpp}}
@@ -197,12 +159,6 @@ Countdown再初期化関数 Re\+Init\+Countdown
 
 頂点設定関数 Set\+Vertex\+Countdown 
 
-
-
- countdown.\+cpp の 224 行目に定義があります。
-
-被呼び出し関係図\+:
-% FIG 9
 \mbox{\Hypertarget{countdown_8cpp_a2f8e049bd6f1b17ac246d68de55aa8d4}\label{countdown_8cpp_a2f8e049bd6f1b17ac246d68de55aa8d4}} 
 \index{countdown.cpp@{countdown.cpp}!UninitCountdown@{UninitCountdown}}
 \index{UninitCountdown@{UninitCountdown}!countdown.cpp@{countdown.cpp}}
@@ -213,12 +169,6 @@ Countdown再初期化関数 Re\+Init\+Countdown
 
 Countdown開放関数 Uninit\+Countdown 
 
-
-
- countdown.\+cpp の 102 行目に定義があります。
-
-被呼び出し関係図\+:
-% FIG 10
 \mbox{\Hypertarget{countdown_8cpp_aba153798b82da187b7ead867025ea781}\label{countdown_8cpp_aba153798b82da187b7ead867025ea781}} 
 \index{countdown.cpp@{countdown.cpp}!UpdateCountdown@{UpdateCountdown}}
 \index{UpdateCountdown@{UpdateCountdown}!countdown.cpp@{countdown.cpp}}
@@ -231,14 +181,6 @@ Countdown更新関数 Update\+Countdown
 
 
 
- countdown.\+cpp の 118 行目に定義があります。
-
-呼び出し関係図\+:
-% FIG 11
-被呼び出し関係図\+:
-% FIG 12
-
-
 \doxysubsection{変数詳解}
 \mbox{\Hypertarget{countdown_8cpp_a73f096400e3e0365ab93f9ea78c458fc}\label{countdown_8cpp_a73f096400e3e0365ab93f9ea78c458fc}} 
 \index{countdown.cpp@{countdown.cpp}!g\_countdown@{g\_countdown}}
@@ -249,8 +191,4 @@ Countdown更新関数 Update\+Countdown
 
 
 0カウントダウン値,1スタート\+L\+O\+GO 構造体変数 
-
-
-
- countdown.\+cpp の 35 行目に定義があります。
 

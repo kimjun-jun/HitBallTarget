@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['deadeffect_176',['DeadEffect',['../effect_8cpp.html#a75497dff4d23f37415c7008fb2867e73',1,'DeadEffect(int EnemyNum, int type):&#160;effect.cpp'],['../effect_8h.html#a3b69502bf5baef66675a6325e6ee2049',1,'DeadEffect(int i, int type):&#160;effect.cpp']]],
+  ['deadeffect_176',['DeadEffect',['../effect_8cpp.html#a296269a7262ebc8888a89ab671675eac',1,'DeadEffect(int EnemyNum, int EnemyType):&#160;effect.cpp'],['../effect_8h.html#a296269a7262ebc8888a89ab671675eac',1,'DeadEffect(int EnemyNum, int EnemyType):&#160;effect.cpp']]],
   ['deadzone_177',['DEADZONE',['../input_8cpp.html#a08308e05fa7bbbfcf4ffb7a08aa68fa1',1,'input.cpp']]],
   ['diffcount_178',['diffcount',['../struct_b_a_l_l.html#a5cf6f00e04c71486d2a561af811b493d',1,'BALL']]],
   ['diffflag_179',['diffflag',['../struct_b_a_l_l.html#a02698b80affaacb4d8632ea1bdda87b7',1,'BALL']]],

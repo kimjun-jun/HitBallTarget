@@ -1,17 +1,17 @@
-<map id="ball.h" name="ball.h">
-<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="755,5,808,32"/>
-<area shape="rect" id="node2" href="$ball_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,80,72,107"/>
-<area shape="rect" id="node3" href="$balleffect_8cpp.html" title="HitBallTarget(2D)的当てゲーム(調整中)" alt="" coords="96,80,195,107"/>
-<area shape="rect" id="node4" href="$collision_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="219,80,314,107"/>
-<area shape="rect" id="node5" href="$controltype_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="338,80,449,107"/>
-<area shape="rect" id="node6" href="$enemy_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="473,80,559,107"/>
-<area shape="rect" id="node7" href="$game_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="583,80,662,107"/>
-<area shape="rect" id="node8" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="687,80,761,107"/>
-<area shape="rect" id="node9" href="$meetstrike_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="786,80,894,107"/>
-<area shape="rect" id="node10" href="$option_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="919,80,1001,107"/>
-<area shape="rect" id="node11" href="$pause_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1025,80,1108,107"/>
-<area shape="rect" id="node12" href="$ranking_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1133,80,1222,107"/>
-<area shape="rect" id="node13" href="$select_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1247,80,1329,107"/>
-<area shape="rect" id="node14" href="$sensitivity_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1353,80,1457,107"/>
-<area shape="rect" id="node15" href="$tutomenu_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1481,80,1583,107"/>
+<map id="C:/Users/HP/source/Repos/HitBallTarget/ball.h" name="C:/Users/HP/source/Repos/HitBallTarget/ball.h">
+<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1080,5,1221,61"/>
+<area shape="rect" id="node2" href="$ball_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,109,147,165"/>
+<area shape="rect" id="node3" href="$balleffect_8cpp.html" title="HitBallTarget(2D)的当てゲーム(調整中)" alt="" coords="171,109,312,165"/>
+<area shape="rect" id="node4" href="$collision_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="336,109,477,165"/>
+<area shape="rect" id="node5" href="$controltype_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="501,109,643,165"/>
+<area shape="rect" id="node6" href="$enemy_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="667,109,808,165"/>
+<area shape="rect" id="node7" href="$game_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="832,109,973,165"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="997,109,1139,165"/>
+<area shape="rect" id="node9" href="$meetstrike_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1163,109,1304,165"/>
+<area shape="rect" id="node10" href="$option_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1328,109,1469,165"/>
+<area shape="rect" id="node11" href="$pause_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1493,109,1635,165"/>
+<area shape="rect" id="node12" href="$ranking_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1659,109,1800,165"/>
+<area shape="rect" id="node13" href="$select_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1824,109,1965,165"/>
+<area shape="rect" id="node14" href="$sensitivity_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="1989,109,2131,165"/>
+<area shape="rect" id="node15" href="$tutomenu_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="2155,109,2296,165"/>
 </map>

@@ -1,16 +1,22 @@
-\hypertarget{effect_8h}{}\doxysection{effect.\+h ファイル}
-\label{effect_8h}\index{effect.h@{effect.h}}
+\hypertarget{effect_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/effect.h ファイル}
+\label{effect_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/effect.h@{C:/Users/HP/source/Repos/HitBallTarget/effect.h}}
 
 
 Hit\+Ball\+Target(2\+D)的当てゲーム  
 
 
 被依存関係図\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{effect_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{effect_8h_a3b69502bf5baef66675a6325e6ee2049}{Dead\+Effect}} (int i, int type)
+void \mbox{\hyperlink{effect_8h_a296269a7262ebc8888a89ab671675eac}{Dead\+Effect}} (int Enemy\+Num, int Enemy\+Type)
 \begin{DoxyCompactList}\small\item\em Effect設定関数 Dead\+Effect \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -26,11 +32,11 @@ Hit\+Ball\+Target(2\+D)的当てゲーム
 
 
 \doxysubsection{関数詳解}
-\mbox{\Hypertarget{effect_8h_a3b69502bf5baef66675a6325e6ee2049}\label{effect_8h_a3b69502bf5baef66675a6325e6ee2049}} 
+\mbox{\Hypertarget{effect_8h_a296269a7262ebc8888a89ab671675eac}\label{effect_8h_a296269a7262ebc8888a89ab671675eac}} 
 \index{effect.h@{effect.h}!DeadEffect@{DeadEffect}}
 \index{DeadEffect@{DeadEffect}!effect.h@{effect.h}}
 \doxysubsubsection{\texorpdfstring{DeadEffect()}{DeadEffect()}}
-{\footnotesize\ttfamily void Dead\+Effect (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Dead\+Effect (\begin{DoxyParamCaption}\item[{int}]{Enemy\+Num,  }\item[{int}]{Enemy\+Type }\end{DoxyParamCaption})}
 
 
 
@@ -38,12 +44,8 @@ Effect設定関数 Dead\+Effect
 
 
 \begin{DoxyParams}[1]{引数}
-\mbox{\texttt{ in}}  & {\em int} & i, int type \\
+\mbox{\texttt{ in}}  & {\em Enemy\+Num} & エネミー添え字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em Enemy\+Type} & エネミー種類(T\+Y\+P\+E\+\_\+\+C\+AT=0,T\+Y\+P\+E\+\_\+\+S\+U\+R\+A\+I\+MU=1,T\+Y\+P\+E\+\_\+\+H\+I\+N\+O\+T\+A\+MA=2, T\+Y\+P\+E\+\_\+\+U\+FO=3) ) \\
 \hline
 \end{DoxyParams}
-
-
- effect.\+cpp の 15 行目に定義があります。
-
-被呼び出し関係図\+:
-% FIG 1

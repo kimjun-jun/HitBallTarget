@@ -1,5 +1,5 @@
-<map id="tutorial.h" name="tutorial.h">
-<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="59,5,131,32"/>
-<area shape="rect" id="node2" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,80,80,107"/>
-<area shape="rect" id="node3" href="$tutorial_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="105,80,191,107"/>
+<map id="C:/Users/HP/source/Repos/HitBallTarget/tutorial.h" name="C:/Users/HP/source/Repos/HitBallTarget/tutorial.h">
+<area shape="rect" id="node1" title="HitBallTarget(2D)的当てゲーム" alt="" coords="88,5,229,61"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="5,109,147,165"/>
+<area shape="rect" id="node3" href="$tutorial_8cpp.html" title="HitBallTarget(2D)的当てゲーム" alt="" coords="171,109,312,165"/>
 </map>

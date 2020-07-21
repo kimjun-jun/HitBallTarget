@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['text_1439',['TEXT',['../main_8h.html#af665980481c66cfefaa0be993cdae7f3',1,'main.h']]]
+  ['scoretype_1442',['SCORETYPE',['../main_8h.html#a7e6413f704e496db3239caf735efa405',1,'main.h']]]
 ];

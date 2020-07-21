@@ -1,12 +1,18 @@
-\hypertarget{fade_8h}{}\doxysection{fade.\+h ファイル}
-\label{fade_8h}\index{fade.h@{fade.h}}
+\hypertarget{fade_8h}{}\doxysection{C\+:/\+Users/\+H\+P/source/\+Repos/\+Hit\+Ball\+Target/fade.h ファイル}
+\label{fade_8h}\index{C:/Users/HP/source/Repos/HitBallTarget/fade.h@{C:/Users/HP/source/Repos/HitBallTarget/fade.h}}
 
 
 Hit\+Ball\+Target(2\+D)的当てゲーム  
 
 
 被依存関係図\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fade_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{列挙型}
 \begin{DoxyCompactItemize}
 \item 
@@ -78,10 +84,6 @@ F\+A\+D\+E\+\_\+\+M\+AX&マックス \\
 \end{DoxyEnumFields}
 
 
- fade.\+h の 14 行目に定義があります。
-
-
-
 \doxysubsection{関数詳解}
 \mbox{\Hypertarget{fade_8h_a949fa5fe0973987c1f6063de5468daf0}\label{fade_8h_a949fa5fe0973987c1f6063de5468daf0}} 
 \index{fade.h@{fade.h}!DrawFade@{DrawFade}}
@@ -93,14 +95,6 @@ F\+A\+D\+E\+\_\+\+M\+AX&マックス \\
 
 フェード描画関数 Draw\+Fade 
 
-
-
- fade.\+cpp の 122 行目に定義があります。
-
-呼び出し関係図\+:
-% FIG 1
-被呼び出し関係図\+:
-% FIG 2
 \mbox{\Hypertarget{fade_8h_af15959ae7aa2a4e2bea206607aafbfd7}\label{fade_8h_af15959ae7aa2a4e2bea206607aafbfd7}} 
 \index{fade.h@{fade.h}!GetFade@{GetFade}}
 \index{GetFade@{GetFade}!fade.h@{fade.h}}
@@ -114,11 +108,7 @@ F\+A\+D\+E\+\_\+\+M\+AX&マックス \\
 \begin{DoxyReturn}{戻り値}
 F\+A\+DE
 \end{DoxyReturn}
-現在のフェード状態を取得できる 
-
- fade.\+cpp の 197 行目に定義があります。
-
-\mbox{\Hypertarget{fade_8h_ac14659ccf65247cea04ede6abff5630f}\label{fade_8h_ac14659ccf65247cea04ede6abff5630f}} 
+現在のフェード状態を取得できる \mbox{\Hypertarget{fade_8h_ac14659ccf65247cea04ede6abff5630f}\label{fade_8h_ac14659ccf65247cea04ede6abff5630f}} 
 \index{fade.h@{fade.h}!InitFade@{InitFade}}
 \index{InitFade@{InitFade}!fade.h@{fade.h}}
 \doxysubsubsection{\texorpdfstring{InitFade()}{InitFade()}}
@@ -131,14 +121,6 @@ F\+A\+DE
 \begin{DoxyReturn}{戻り値}
 H\+R\+E\+S\+U\+LT 
 \end{DoxyReturn}
-
-
- fade.\+cpp の 45 行目に定義があります。
-
-呼び出し関係図\+:
-% FIG 3
-被呼び出し関係図\+:
-% FIG 4
 \mbox{\Hypertarget{fade_8h_a85daf6279275e49d1eee12459cfada0d}\label{fade_8h_a85daf6279275e49d1eee12459cfada0d}} 
 \index{fade.h@{fade.h}!SetFade@{SetFade}}
 \index{SetFade@{SetFade}!fade.h@{fade.h}}
@@ -151,15 +133,13 @@ H\+R\+E\+S\+U\+LT
 
 
 \begin{DoxyParams}[1]{引数}
-\mbox{\texttt{ in}}  & {\em F\+A\+DE} & fade フェードの種類, E\+\_\+\+S\+T\+A\+GE next 次のゲームシーン, int sno 流したい音楽 \\
+\mbox{\texttt{ in}}  & {\em F\+A\+DE} & fade フェードの種類 enum F\+A\+D\+E参照 \\
+\hline
+\mbox{\texttt{ in}}  & {\em E\+\_\+\+S\+T\+A\+GE} & next 次のゲームシーン　enum E\+\_\+\+S\+T\+A\+G\+E参照 \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & sno 流したい音楽 enum S\+O\+U\+N\+D\+\_\+\+T\+R\+A\+C\+K参照 \\
 \hline
 \end{DoxyParams}
-
-
- fade.\+cpp の 186 行目に定義があります。
-
-被呼び出し関係図\+:
-% FIG 5
 \mbox{\Hypertarget{fade_8h_ae2dfa8d8b36033b4351aa88227c8c4dd}\label{fade_8h_ae2dfa8d8b36033b4351aa88227c8c4dd}} 
 \index{fade.h@{fade.h}!UninitFade@{UninitFade}}
 \index{UninitFade@{UninitFade}!fade.h@{fade.h}}
@@ -170,12 +150,6 @@ H\+R\+E\+S\+U\+LT
 
 フェードメモリ開放関数 Uninit\+Fade 
 
-
-
- fade.\+cpp の 58 行目に定義があります。
-
-被呼び出し関係図\+:
-% FIG 6
 \mbox{\Hypertarget{fade_8h_a527c4f6a38007a98f667afcdd9e9c8b3}\label{fade_8h_a527c4f6a38007a98f667afcdd9e9c8b3}} 
 \index{fade.h@{fade.h}!UpdateFade@{UpdateFade}}
 \index{UpdateFade@{UpdateFade}!fade.h@{fade.h}}
@@ -187,8 +161,3 @@ H\+R\+E\+S\+U\+LT
 フェード更新関数 Update\+Fade 
 
 ゲームシーン切り替え時(\mbox{\hyperlink{fade_8h_a85daf6279275e49d1eee12459cfada0d}{Set\+Fade()}}を使用するとき)に実行される。 
-
- fade.\+cpp の 69 行目に定義があります。
-
-被呼び出し関係図\+:
-% FIG 7

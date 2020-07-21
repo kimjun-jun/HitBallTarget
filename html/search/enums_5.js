@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mastervolumeolchenge_1433',['MASTERVOLUMEOLCHENGE',['../main_8h.html#a36dc915e2e75c390be6437493296fdf0',1,'main.h']]],
-  ['meet_1434',['MEET',['../main_8h.html#a2d7c51debe0cbe9ffcce3446767693fd',1,'main.h']]]
+  ['init_5ftime_1436',['INIT_TIME',['../main_8h.html#a533578cdfce00f488ef4da6b582c8fcc',1,'main.h']]]
 ];

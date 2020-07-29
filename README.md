@@ -1,4 +1,4 @@
-# HitBallTarget
+# HitBallTarget(2D作品)
 この度は[HitBallTarget]をお手に取っていただき誠にありがとうございます。
 この作品に対するコメントを明記します。
 
